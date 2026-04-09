@@ -1,0 +1,25 @@
+(venv_tesis) carlos-a-cicconi@carlos-a-cicconi-ThinkPad-T470:/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD$ source activar_entorno.sh
+python src/scraping/indeed_diagnostico.py
+✅ Entorno activado. Estás en: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD
+   Python: Python 3.12.3
+   Para desactivar: deactivate
+
+🔍 Ejecutando diagnóstico de Indeed con Playwright...
+2026-03-30 19:38:29,487 [INFO] Warmup en la home de Indeed...
+2026-03-30 19:38:33,600 [INFO] Home guardada (622540 chars) → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/diagnostico/home.html
+2026-03-30 19:38:33,600 [INFO] Navegando a búsqueda: https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 19:38:38,937 [INFO] Búsqueda guardada (74118 chars) → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/diagnostico/search_result.html
+2026-03-30 19:38:39,053 [INFO] Screenshot guardado → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/diagnostico/screenshot_search.png
+2026-03-30 19:38:39,158 [INFO] 
+===== ANÁLISIS DEL HTML =====
+2026-03-30 19:38:39,158 [INFO]   [data-jk]            : 0 elementos
+2026-03-30 19:38:39,159 [INFO]   <title> de la página : Security Check - Indeed.com
+2026-03-30 19:38:39,160 [INFO]   Inicio del body      : Additional Verification Required Please enable JavaScript to complete the security check. Return home Buscar empleos Evaluaciones de empresa Buscar sueldos Iniciar sesión Subir CV Iniciar sesión Empresas/Publicar empleos Buscar empleos Evaluaciones de empresa Buscar sueldos Verificación adicional requerida Tu ID de Ray para esta solicitud es 9e4a9af50a64b861. Verificación correcta. Esperando a que ar.indeed.com responda Enable JavaScript and cookies to continue Volver a página de inicio → Resolu
+2026-03-30 19:38:39,160 [INFO]   Scripts JSON-LD      : 0 encontrados
+2026-03-30 19:38:39,216 [INFO] 
+✅ Diagnóstico completo.
+2026-03-30 19:38:39,216 [INFO]    Revisá los archivos en: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/diagnostico
+2026-03-30 19:38:39,216 [INFO]    Archivos generados:
+2026-03-30 19:38:39,216 [INFO]      - home.html           → HTML de la home de Indeed
+2026-03-30 19:38:39,216 [INFO]      - search_result.html  → HTML de la página de resultados
+2026-03-30 19:38:39,216 [INFO]      - screenshot_search.png → Captura visual de lo que ve Playwright

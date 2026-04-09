@@ -1,0 +1,152 @@
+2026-03-27 20:14:55,007 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin.db
+2026-03-27 20:14:55,008 [INFO] LinkedInScraper inicializado correctamente
+2026-03-27 20:14:55,009 [INFO] ============================================================
+2026-03-27 20:14:55,010 [INFO] INICIO DEL SCRAPING - LinkedIn Jobs
+2026-03-27 20:14:55,010 [INFO] Búsquedas: 10 | Páginas por búsqueda: 5
+2026-03-27 20:14:55,011 [INFO] ============================================================
+2026-03-27 20:14:55,011 [INFO] 
+🔍 Buscando: 'Data Scientist' en 'Argentina'
+2026-03-27 20:14:55,012 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Scientist&location=Argentina&start=0&f_WT=2
+2026-03-27 20:14:59,674 [INFO]    → 10 ofertas nuevas encontradas
+2026-03-27 20:15:43,123 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Scientist&location=Argentina&start=25&f_WT=2
+2026-03-27 20:15:48,529 [INFO]    → 10 ofertas nuevas encontradas
+2026-03-27 20:16:31,989 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Scientist&location=Argentina&start=50&f_WT=2
+2026-03-27 20:16:36,669 [INFO]    → 10 ofertas nuevas encontradas
+2026-03-27 20:17:15,218 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Scientist&location=Argentina&start=75&f_WT=2
+2026-03-27 20:17:20,448 [INFO]    → 10 ofertas nuevas encontradas
+2026-03-27 20:18:04,451 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Scientist&location=Argentina&start=100&f_WT=2
+2026-03-27 20:18:10,322 [INFO]    → 10 ofertas nuevas encontradas
+2026-03-27 20:18:50,928 [INFO] Exportadas 50 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_20260327.csv
+2026-03-27 20:18:50,928 [INFO] ✅ 'Data Scientist': 50 ofertas guardadas
+2026-03-27 20:18:50,928 [INFO] 
+🔍 Buscando: 'Data Analyst' en 'Argentina'
+2026-03-27 20:18:50,928 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Analyst&location=Argentina&start=0&f_WT=2
+2026-03-27 20:18:54,911 [INFO]    → 10 ofertas nuevas encontradas
+2026-03-27 20:19:41,272 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Analyst&location=Argentina&start=25&f_WT=2
+2026-03-27 20:19:45,232 [INFO]    → 10 ofertas nuevas encontradas
+2026-03-27 20:20:29,370 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Analyst&location=Argentina&start=50&f_WT=2
+2026-03-27 20:20:34,861 [INFO]    → 9 ofertas nuevas encontradas
+2026-03-27 20:21:12,078 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Analyst&location=Argentina&start=75&f_WT=2
+2026-03-27 20:21:15,621 [INFO]    → 10 ofertas nuevas encontradas
+2026-03-27 20:21:54,134 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Analyst&location=Argentina&start=100&f_WT=2
+2026-03-27 20:21:58,364 [INFO]    → 10 ofertas nuevas encontradas
+2026-03-27 20:22:39,127 [INFO] Exportadas 49 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_20260327.csv
+2026-03-27 20:22:39,127 [INFO] ✅ 'Data Analyst': 49 ofertas guardadas
+2026-03-27 20:22:39,127 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer' en 'Argentina'
+2026-03-27 20:22:39,127 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Machine%20Learning%20Engineer&location=Argentina&start=0&f_WT=2
+2026-03-27 20:22:44,291 [INFO]    → 6 ofertas nuevas encontradas
+2026-03-27 20:23:10,949 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Machine%20Learning%20Engineer&location=Argentina&start=25&f_WT=2
+2026-03-27 20:23:15,124 [INFO]    → 9 ofertas nuevas encontradas
+2026-03-27 20:23:53,860 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Machine%20Learning%20Engineer&location=Argentina&start=50&f_WT=2
+2026-03-27 20:23:59,323 [INFO]    → 8 ofertas nuevas encontradas
+2026-03-27 20:24:32,560 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Machine%20Learning%20Engineer&location=Argentina&start=75&f_WT=2
+2026-03-27 20:24:38,187 [INFO]    → 8 ofertas nuevas encontradas
+2026-03-27 20:25:12,089 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Machine%20Learning%20Engineer&location=Argentina&start=100&f_WT=2
+2026-03-27 20:25:15,743 [INFO]    → 8 ofertas nuevas encontradas
+2026-03-27 20:25:44,453 [INFO] Exportadas 39 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_20260327.csv
+2026-03-27 20:25:44,453 [INFO] ✅ 'Machine Learning Engineer': 39 ofertas guardadas
+2026-03-27 20:25:44,453 [INFO] 
+🔍 Buscando: 'NLP Engineer' en 'Argentina'
+2026-03-27 20:25:44,453 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=NLP%20Engineer&location=Argentina&start=0&f_WT=2
+2026-03-27 20:25:48,821 [INFO]    → 8 ofertas nuevas encontradas
+2026-03-27 20:26:23,470 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=NLP%20Engineer&location=Argentina&start=25&f_WT=2
+2026-03-27 20:26:27,939 [INFO]    → 10 ofertas nuevas encontradas
+2026-03-27 20:27:12,420 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=NLP%20Engineer&location=Argentina&start=50&f_WT=2
+2026-03-27 20:27:15,427 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-27 20:27:15,427 [INFO]    → No hay más resultados para esta búsqueda.
+2026-03-27 20:27:15,435 [INFO] Exportadas 18 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_20260327.csv
+2026-03-27 20:27:15,436 [INFO] ✅ 'NLP Engineer': 18 ofertas guardadas
+2026-03-27 20:27:15,436 [INFO] 
+🔍 Buscando: 'Data Engineer' en 'Argentina'
+2026-03-27 20:27:15,436 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Engineer&location=Argentina&start=0&f_WT=2
+2026-03-27 20:27:18,624 [INFO]    → 4 ofertas nuevas encontradas
+2026-03-27 20:27:37,303 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Engineer&location=Argentina&start=25&f_WT=2
+2026-03-27 20:27:41,801 [INFO]    → 7 ofertas nuevas encontradas
+2026-03-27 20:28:12,215 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Engineer&location=Argentina&start=50&f_WT=2
+2026-03-27 20:28:17,495 [INFO]    → 9 ofertas nuevas encontradas
+2026-03-27 20:28:56,286 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Engineer&location=Argentina&start=75&f_WT=2
+2026-03-27 20:29:00,709 [INFO]    → 5 ofertas nuevas encontradas
+2026-03-27 20:29:21,781 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Engineer&location=Argentina&start=100&f_WT=2
+2026-03-27 20:29:25,702 [INFO]    → 6 ofertas nuevas encontradas
+2026-03-27 20:29:49,200 [INFO] Exportadas 31 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_20260327.csv
+2026-03-27 20:29:49,201 [INFO] ✅ 'Data Engineer': 31 ofertas guardadas
+2026-03-27 20:29:49,201 [INFO] 
+🔍 Buscando: 'Software Engineer' en 'Argentina'
+2026-03-27 20:29:49,201 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Software%20Engineer&location=Argentina&start=0&f_WT=2
+2026-03-27 20:29:53,979 [INFO]    → 4 ofertas nuevas encontradas
+2026-03-27 20:30:08,624 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Software%20Engineer&location=Argentina&start=25&f_WT=2
+2026-03-27 20:30:13,829 [INFO]    → 7 ofertas nuevas encontradas
+2026-03-27 20:30:44,498 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Software%20Engineer&location=Argentina&start=50&f_WT=2
+2026-03-27 20:30:48,559 [INFO]    → 7 ofertas nuevas encontradas
+2026-03-27 20:31:21,348 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Software%20Engineer&location=Argentina&start=75&f_WT=2
+2026-03-27 20:31:26,648 [INFO]    → 8 ofertas nuevas encontradas
+2026-03-27 20:32:00,960 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Software%20Engineer&location=Argentina&start=100&f_WT=2
+2026-03-27 20:32:06,172 [INFO]    → 7 ofertas nuevas encontradas
+2026-03-27 20:32:36,503 [INFO] Exportadas 33 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_20260327.csv
+2026-03-27 20:32:36,503 [INFO] ✅ 'Software Engineer': 33 ofertas guardadas
+2026-03-27 20:32:36,503 [INFO] 
+🔍 Buscando: 'Python Developer' en 'Argentina'
+2026-03-27 20:32:36,503 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python%20Developer&location=Argentina&start=0&f_WT=2
+2026-03-27 20:32:41,714 [INFO]    → 9 ofertas nuevas encontradas
+2026-03-27 20:33:19,479 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python%20Developer&location=Argentina&start=25&f_WT=2
+2026-03-27 20:33:22,875 [INFO]    → 8 ofertas nuevas encontradas
+2026-03-27 20:33:56,080 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python%20Developer&location=Argentina&start=50&f_WT=2
+2026-03-27 20:34:00,550 [INFO]    → 8 ofertas nuevas encontradas
+2026-03-27 20:34:34,068 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python%20Developer&location=Argentina&start=75&f_WT=2
+2026-03-27 20:34:37,424 [INFO]    → 9 ofertas nuevas encontradas
+2026-03-27 20:35:17,070 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python%20Developer&location=Argentina&start=100&f_WT=2
+2026-03-27 20:35:21,341 [INFO]    → 7 ofertas nuevas encontradas
+2026-03-27 20:35:51,302 [INFO] Exportadas 41 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_20260327.csv
+2026-03-27 20:35:51,302 [INFO] ✅ 'Python Developer': 41 ofertas guardadas
+2026-03-27 20:35:51,302 [INFO] 
+🔍 Buscando: 'Desarrollador Backend' en 'Argentina'
+2026-03-27 20:35:51,302 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Argentina&start=0&f_WT=2
+2026-03-27 20:35:56,758 [INFO]    → 6 ofertas nuevas encontradas
+2026-03-27 20:36:21,214 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Argentina&start=25&f_WT=2
+2026-03-27 20:36:26,018 [INFO]    → 8 ofertas nuevas encontradas
+2026-03-27 20:36:58,818 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Argentina&start=50&f_WT=2
+2026-03-27 20:37:03,847 [INFO]    → 9 ofertas nuevas encontradas
+2026-03-27 20:37:36,619 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Argentina&start=75&f_WT=2
+2026-03-27 20:37:42,042 [INFO]    → 9 ofertas nuevas encontradas
+2026-03-27 20:38:19,859 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Argentina&start=100&f_WT=2
+2026-03-27 20:38:25,257 [INFO]    → 10 ofertas nuevas encontradas
+2026-03-27 20:39:09,838 [INFO] Exportadas 42 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_20260327.csv
+2026-03-27 20:39:09,838 [INFO] ✅ 'Desarrollador Backend': 42 ofertas guardadas
+2026-03-27 20:39:09,838 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack' en 'Argentina'
+2026-03-27 20:39:09,838 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Full%20Stack&location=Argentina&start=0&f_WT=2
+2026-03-27 20:39:15,316 [INFO]    → 5 ofertas nuevas encontradas
+2026-03-27 20:39:35,848 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Full%20Stack&location=Argentina&start=25&f_WT=2
+2026-03-27 20:39:39,912 [INFO]    → 7 ofertas nuevas encontradas
+2026-03-27 20:40:10,049 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Full%20Stack&location=Argentina&start=50&f_WT=2
+2026-03-27 20:40:14,827 [INFO]    → 6 ofertas nuevas encontradas
+2026-03-27 20:40:37,794 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Full%20Stack&location=Argentina&start=75&f_WT=2
+2026-03-27 20:40:41,144 [INFO]    → 5 ofertas nuevas encontradas
+2026-03-27 20:41:01,690 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Full%20Stack&location=Argentina&start=100&f_WT=2
+2026-03-27 20:41:07,157 [INFO]    → 7 ofertas nuevas encontradas
+2026-03-27 20:41:35,764 [INFO] Exportadas 30 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_20260327.csv
+2026-03-27 20:41:35,764 [INFO] ✅ 'Desarrollador Full Stack': 30 ofertas guardadas
+2026-03-27 20:41:35,764 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos' en 'Argentina'
+2026-03-27 20:41:35,765 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingeniero%20de%20Datos&location=Argentina&start=0&f_WT=2
+2026-03-27 20:41:40,743 [INFO]    → 3 ofertas nuevas encontradas
+2026-03-27 20:41:53,365 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingeniero%20de%20Datos&location=Argentina&start=25&f_WT=2
+2026-03-27 20:41:56,500 [INFO]    → 4 ofertas nuevas encontradas
+2026-03-27 20:42:11,576 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingeniero%20de%20Datos&location=Argentina&start=50&f_WT=2
+2026-03-27 20:42:15,869 [INFO]    → 5 ofertas nuevas encontradas
+2026-03-27 20:42:38,742 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingeniero%20de%20Datos&location=Argentina&start=75&f_WT=2
+2026-03-27 20:42:43,932 [INFO]    → 8 ofertas nuevas encontradas
+2026-03-27 20:43:19,776 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingeniero%20de%20Datos&location=Argentina&start=100&f_WT=2
+2026-03-27 20:43:23,236 [INFO]    → 9 ofertas nuevas encontradas
+2026-03-27 20:44:01,990 [INFO] Exportadas 29 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_20260327.csv
+2026-03-27 20:44:01,990 [INFO] ✅ 'Ingeniero de Datos': 29 ofertas guardadas
+2026-03-27 20:44:01,990 [INFO] 
+============================================================
+2026-03-27 20:44:01,990 [INFO] SCRAPING FINALIZADO
+2026-03-27 20:44:01,991 [INFO] Total de ofertas únicas recopiladas: 362
+2026-03-27 20:44:01,991 [INFO] Base de datos: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin.db
+2026-03-27 20:44:01,991 [INFO] CSV exportado: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_20260327.csv
+2026-03-27 20:44:01,991 [INFO] Log guardado:  /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/scraper_20260327_201454.log
+2026-03-27 20:44:01,991 [INFO] ============================================================
+2026-03-27 20:44:01,991 [INFO] Estadísticas guardadas: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/stats_20260327_204401.json

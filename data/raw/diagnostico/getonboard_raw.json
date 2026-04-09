@@ -1,0 +1,466 @@
+{
+  "data": [
+    {
+      "id": "data-scientist-senior-aws-sagemaker-python-coyanservices-remote",
+      "type": "job",
+      "attributes": {
+        "title": "Data Scientist Senior – AWS / Sagemaker / Python",
+        "description_headline": "Responsabilidades:",
+        "description": "<ul><li>Ingeniería de datos: Pipelines en S3, Glue, Lambda, Athena. Feature engineering, validación y monitoreo de calidad.</li><li>Modelado estadístico y ML: Regresión, clasificación, series de tiempo, NLP. Evaluación rigurosa y documentación técnica.</li><li>Deployment y MLOps: Productización en SageMaker/Lambda. CI/CD, versionamiento y monitoreo de modelos.</li><li>Análisis y comunicación: Dashboards, storytelling y soporte a decisiones estratégicas.</li><li>Gobierno y ética de datos: Mejores prácticas, documentación, reproducibilidad y cumplimiento normativo.</li></ul>",
+        "projects": "<p> Una empresa tecnológica privada, con foco en proyectos estratégicos de datos e inteligencia artificial para clientes de la región, busca incorporar un/a Data Scientist Senior Freelance para liderar iniciativas de analítica avanzada y machine learning sobre infraestructura AWS. La posición está orientada a profesionales de Latinoamérica con sólida experiencia en diseño, entrenamiento y despliegue de modelos end-to-end, construcción de pipelines de datos en entornos cloud y aplicación de técnicas estadísticas para resolver problemas reales de negocio. En este contexto, se requiere dominio de herramientas como Python, SQL, SageMaker, S3, Glue, Lambda y Athena, además de capacidad para traducir resultados técnicos en productos analíticos útiles para la toma de decisiones.</p><p>Tecnologías Python | AWS | SageMaker | ML/AI | Estadística | SQL</p>",
+        "functions_headline": "Objetivos del rol: ",
+        "functions": "<p>ss- Diseñar y ejecutar análisis exploratorios de datos para identificar patrones y calidad de información.<br>- Construir y optimizar procesos de feature engineering para preparar datasets de entrenamiento.<br>- Desarrollar y entrenar modelos de machine learning utilizando AWS, principalmente SageMaker.<br>- Desarrollar y entrenar modelos de analítica avanzada utilizando AWS, principalmente SageMaker.<br>- Evaluar el desempeño de modelos mediante métricas y técnicas de validación adecuadas.<br>- Implementar pipelines de machine learning reproducibles para entrenamiento y despliegue.<br>- Desplegar modelos en producción mediante endpoints de inferencia en tiempo real o batch.<br>- Monitorear el desempeño de los modelos en producción y gestionar reentrenamientos.<br>- Traducir insights técnicos en productos de analítica avanzada para la toma de decisiones.<br>- Colaborar con equipos técnicos y de negocio para definir soluciones analíticas escalables.</p>",
+        "benefits_headline": "Habilidades blandas:",
+        "benefits": "<ul><li>Pensamiento crítico y enfoque científico.</li><li>Autonomía, comunicación efectiva y colaboración.</li><li>Curiosidad y aprendizaje continuo.</li></ul>",
+        "desirable_headline": "Requisitos Técnicos:",
+        "desirable": "<ul><li>Formación en Ingeniería, Estadística, Matemáticas, Ciencias de la Computación o afines.</li><li>Python avanzado (pandas, numpy, scikit-learn, PyTorch/TensorFlow deseable).</li><li>Experiencia comprobable con AWS: S3, Athena, Data Lake, Lambda, SageMaker Studio.</li><li>Sólida base en estadística aplicada e inferencia. • Experiencia completa en ciclos de vida ML/AI.</li><li>SQL avanzado (Athena, Presto, Redshift).</li><li>Control de versiones, documentación y testing de modelos/datos.</li><li>Deseables: Conocimientos en PySpark o SparkSQL. • Visualización con herramientas como Power BI.</li></ul>",
+        "remote": true,
+        "remote_modality": "remote_local",
+        "remote_zone": null,
+        "countries": [
+          "Remoto"
+        ],
+        "lang": "es",
+        "rejected_reasons": [
+          {
+            "mismatch_title_description": {
+              "title": "El título y la descripción del cargo no coinciden",
+              "description": "La descripción de las funciones y requerimientos del cargo parecen no estar en concordancia con el título del perfil. Para que tu empleo tenga mayor éxito te recomendamos revisar que las exigencias de conocimientos y experiencia estén en concordancia, y que el título del empleo describa con precisión el perfil que buscas."
+            }
+          }
+        ],
+        "category_name": "Programación",
+        "perks": [],
+        "min_salary": 2500,
+        "max_salary": 3200,
+        "published_at": 1774720113,
+        "response_time_in_days": {
+          "min": null,
+          "max": null
+        },
+        "applications_count": 25,
+        "location_regions": {
+          "data": [
+            {
+              "id": 9,
+              "type": "location_region"
+            },
+            {
+              "id": 6,
+              "type": "location_region"
+            }
+          ]
+        },
+        "location_tenants": {
+          "data": []
+        },
+        "location_cities": {
+          "data": []
+        },
+        "modality": {
+          "data": {
+            "id": 1,
+            "type": "modality"
+          }
+        },
+        "seniority": {
+          "data": {
+            "id": 4,
+            "type": "seniority"
+          }
+        },
+        "tags": {
+          "data": [
+            {
+              "id": 163,
+              "type": "tag"
+            },
+            {
+              "id": 2777,
+              "type": "tag"
+            },
+            {
+              "id": 18,
+              "type": "tag"
+            },
+            {
+              "id": 3180,
+              "type": "tag"
+            },
+            {
+              "id": 8540,
+              "type": "tag"
+            },
+            {
+              "id": 64,
+              "type": "tag"
+            },
+            {
+              "id": 10195,
+              "type": "tag"
+            },
+            {
+              "id": 37128,
+              "type": "tag"
+            },
+            {
+              "id": 11520,
+              "type": "tag"
+            },
+            {
+              "id": 5479,
+              "type": "tag"
+            }
+          ]
+        },
+        "company": {
+          "data": {
+            "id": 17546,
+            "type": "company"
+          }
+        }
+      },
+      "links": {
+        "public_url": "https://www.getonbrd.com/jobs/data-scientist-senior-aws-sagemaker-python-coyanservices-remote"
+      }
+    },
+    {
+      "id": "data-ai-pipeline-engineer-tritone-analytics-inc-remote",
+      "type": "job",
+      "attributes": {
+        "title": "Data Pipeline Engineer",
+        "description_headline": "What You’ll Need",
+        "description": "<p><strong>Core Requirements (Must Have)</strong>: Strong Python for data processing and scripting with real datasets; strong SQL skills (joins, aggregations, validation queries, debugging data issues); proven experience working with messy or inconsistent data; understanding of ETL pipelines and data transformation workflows; ability to debug data issues and explain root causes. </p><p>We value curiosity, collaboration, and a bias toward shipping reliable data products. Candidates who enjoy digging into messy datasets, communicating data issues clearly, and partnering with data scientists and engineers to operationalize AI workflows will excel. Prior experience in music rights or financial data domains is a plus.</p>",
+        "projects": "<p><strong>About Tritone Analytics</strong>: Tritone Analytics is a music-technology startup building a forensic royalty auditing platform for the music industry. We help artists, managers, and rights-holders identify unpaid or misreported royalties by combining deterministic data systems with modern AI workflows. </p><p>We work with messy, real-world data — distributor reports, royalty statements, contracts — and turn it into structured, queryable systems that power financial analysis and AI-assisted auditing. </p><p><strong>Project scope</strong>: You will contribute to the core data infrastructure that underpins our platform, focusing on data ingestion, transformation, validation, and the preparation of data for AI workflows. This role sits at the intersection of data engineering, analytical systems, and AI pipelines, ensuring reliable, scalable data processing from messy sources to structured datasets.</p>",
+        "functions_headline": "What You’ll Work On",
+        "functions": "<ul><li>Build and maintain pipelines that transform messy CSVs, metadata exports, and contracts into structured datasets.</li><li>Design and enforce canonical schemas across inconsistent data sources to enable reliable analytics.</li><li>Write SQL to validate outputs, reconcile datasets, and support financial analysis.</li><li>Debug and improve data quality across ingestion and transformation stages.</li><li>Support document ingestion workflows (chunking, preprocessing, metadata tagging).</li><li>Help prepare structured inputs for LLM-based workflows (RAG, extraction, classification).</li><li>Improve reliability of pipelines (error handling, logging, testing).</li></ul>",
+        "benefits_headline": "Benefits",
+        "benefits": "<p>Benefits to be discussed at time of conversion to a full-time role.</p><p>We offer a collaborative, founder-led culture with an emphasis on curiosity, continuous learning, and shipping impactful data products. Competitive compensation, flexible work hours, and opportunities for professional growth in a rapidly evolving music-tech space. Our team is distributed; we value autonomy and ownership over your projects. We support conference attendance, training, and peer knowledge sharing. We look forward to discussing how Tritone can support your career trajectory.</p>",
+        "desirable_headline": "Desirable but Not Required",
+        "desirable": "<p><strong>Nice to Have</strong>: Experience with DuckDB, Polars, Pandas, or PyArrow; familiarity with Parquet or columnar data formats; exposure to vector databases or RAG systems; experience handling large CSV datasets or financial data; basic understanding of LLM workflows.</p>",
+        "remote": true,
+        "remote_modality": "remote_local",
+        "remote_zone": null,
+        "countries": [
+          "Remoto"
+        ],
+        "lang": "en",
+        "rejected_reasons": [],
+        "category_name": "Data Science / Analytics",
+        "perks": [],
+        "min_salary": 400,
+        "max_salary": 600,
+        "published_at": 1774026794,
+        "response_time_in_days": {
+          "min": null,
+          "max": null
+        },
+        "applications_count": 96,
+        "location_regions": {
+          "data": [
+            {
+              "id": 9,
+              "type": "location_region"
+            },
+            {
+              "id": 6,
+              "type": "location_region"
+            }
+          ]
+        },
+        "location_tenants": {
+          "data": [
+            {
+              "id": 7,
+              "type": "location_tenant"
+            }
+          ]
+        },
+        "location_cities": {
+          "data": []
+        },
+        "modality": {
+          "data": {
+            "id": 4,
+            "type": "modality"
+          }
+        },
+        "seniority": {
+          "data": {
+            "id": 3,
+            "type": "seniority"
+          }
+        },
+        "tags": {
+          "data": [
+            {
+              "id": 18,
+              "type": "tag"
+            },
+            {
+              "id": 64,
+              "type": "tag"
+            },
+            {
+              "id": 175,
+              "type": "tag"
+            },
+            {
+              "id": 164,
+              "type": "tag"
+            },
+            {
+              "id": 57,
+              "type": "tag"
+            },
+            {
+              "id": 650,
+              "type": "tag"
+            },
+            {
+              "id": 299,
+              "type": "tag"
+            },
+            {
+              "id": 913,
+              "type": "tag"
+            },
+            {
+              "id": 3369,
+              "type": "tag"
+            },
+            {
+              "id": 4257,
+              "type": "tag"
+            },
+            {
+              "id": 3564,
+              "type": "tag"
+            },
+            {
+              "id": 37036,
+              "type": "tag"
+            },
+            {
+              "id": 5617,
+              "type": "tag"
+            },
+            {
+              "id": 7806,
+              "type": "tag"
+            },
+            {
+              "id": 8540,
+              "type": "tag"
+            },
+            {
+              "id": 76357,
+              "type": "tag"
+            },
+            {
+              "id": 40071,
+              "type": "tag"
+            },
+            {
+              "id": 26527,
+              "type": "tag"
+            },
+            {
+              "id": 29252,
+              "type": "tag"
+            }
+          ]
+        },
+        "company": {
+          "data": {
+            "id": 18057,
+            "type": "company"
+          }
+        }
+      },
+      "links": {
+        "public_url": "https://www.getonbrd.com/jobs/data-ai-pipeline-engineer-tritone-analytics-inc-remote"
+      }
+    },
+    {
+      "id": "ingeniero-de-datos-devaid-remote-41ba",
+      "type": "job",
+      "attributes": {
+        "title": "Ingeniero de Datos",
+        "description_headline": "Requerimientos del cargo",
+        "description": "<div>Los requisitos para un buen desempeño de las funciones son:</div><ul><li>1 año de experiencia como Data Engineer. </li><li>Programación en lenguaje Python, NodeJS o Java (al menos uno de los 3). </li><li>Conocimiento de soluciones de Data Warehouse y ETL. </li><li>Conocimiento de plataformas de procesamiento de datos como Apache Spark, Dataflow o similares. </li><li>Haber trabajado previamente con alguna nube pública (AWS, Azure o GCP).</li></ul><div><strong><em>Si no cumples alguno de estos puntos no te desanimes, queremos conocerte igualmente.</em></strong></div><div>El trabajo es 100% remoto, pero es necesario que tengas RUT y/o papeles al día en Chile.</div>",
+        "projects": "<div>En &lt;<strong>Devaid&gt;</strong> nos apasionan los desafíos tecnológicos y nuestros clientes lo saben. Por lo anterior, nos plantean problemáticas que nos obligan a estar constantemente probando e implementando nuevas tecnologías.</div><div>Trabajamos fuertemente en la nube ya que somos Partner Premier de Google Cloud en Chile, por lo que tendrás la oportunidad de formarte como un profesional cloud.</div><div>Dependiendo de las necesidades del cliente, <strong>&lt;Devaid&gt; </strong>ofrece soluciones web, móviles, integración de sistemas, entre otros. Esto permite acceder a la herramienta sin importar el dispositivo ni el lugar dónde se encuentra. Permitimos el trabajo colaborativo entre múltiples usuarios manteniendo una base centralizada de información.</div>",
+        "functions_headline": "Funciones del cargo",
+        "functions": "<div>Esperamos que puedas desempeñarte en las siguientes actividades:</div><ul><li>Creación de pipelines de carga y transformación de datos.</li><li>Modelamiento de datos y creación de Data Warehouse y Data Lakes.</li><li>Integración de sistemas.</li><li>Creación de modelos de machine learning con herramientas low code autoML.</li></ul><div>Vas a participar como ingeniero de datos en equipos de consultores que prestan servicios a empresas importantes en Chile. En estos equipos participan distintos perfiles, tales como desarrolladores de software, arquitectos de datos y data scientists. Los servicios se prestan de forma remota y son prestados por proyecto (no es outsourcing de recursos), por lo que puedes trabajar desde tu casa sin problemas. Diariamente vas a tener reuniones con tu equipo para coordinar actividades y resolver temas complejos que vayan surgiendo.</div>",
+        "benefits_headline": "Beneficios",
+        "benefits": "<div>Prometemos un ambiente muy grato de trabajo, lleno de desafíos y donde podrás ver los proyectos en los que estas involucrada/o siendo utilizados en un corto tiempo activamente por nuestros clientes, lo que siempre es muy gratificante.</div><div>Otras actividades:</div><ul><li>Actividades mensuales (Cupones de Food delivery, juegos en línea, actividades grupales).</li><li>Actividad paseo anual: La empresa se junta por 2 días en algún lugar turístico para realizar actividades grupales y unir al equipo.</li><li>Día libre flexible en tu cumpleaños.</li><li>Capacitaciones en lo que más te guste.</li><li>Certificaciones Google Cloud: Programa de certificación en distintas ramas profesionales de GCP, gracias a que somos Partner Premier de Google Cloud en Chile.</li></ul>",
+        "desirable_headline": "Deseables",
+        "desirable": "<div>Suman puntos en tu postulación si cumples alguna de las siguientes habilidades, ninguno de estos son excluyentes:</div><ul><li>Conocimiento de herramientas Google Cloud, entre ellas Google BigQuery, Dataflow, Data Fusion y Pub Sub. </li><li>Experiencia en plataformas de deployment de infraestructura como Terraform. </li><li>Experiencia utilizando la herramienta de consola gcloud. </li></ul>",
+        "remote": true,
+        "remote_modality": "remote_local",
+        "remote_zone": "Chile",
+        "countries": [
+          "Remoto"
+        ],
+        "lang": "es",
+        "rejected_reasons": [
+          {
+            "insufficient_project_info": {
+              "title": "Poca información del área o proyecto",
+              "description": "Es importante para quién postula a un empleo tener total claridad sobre el área a la que eventualmente pertenecerá o proyecto en el que colaborará. Te recomendamos incluir detalles sobre el tipo de proyectos que se le asignarán, con qué roles o personas le tocará trabajar, si estos proyectos incluyen trato con el cliente y qué tipo de clientes. Los anuncios que detallan esto, tienen un mayor porcentaje de éxito."
+            }
+          }
+        ],
+        "category_name": "Data Science / Analytics",
+        "perks": [
+          "flexible_hours",
+          "health_coverage",
+          "company_retreats",
+          "education_stipend",
+          "performance_bonus",
+          "vacation_on_birthday"
+        ],
+        "min_salary": null,
+        "max_salary": null,
+        "published_at": 1774465762,
+        "response_time_in_days": {
+          "min": 14,
+          "max": 26
+        },
+        "applications_count": 125,
+        "location_regions": {
+          "data": []
+        },
+        "location_tenants": {
+          "data": [
+            {
+              "id": 1,
+              "type": "location_tenant"
+            }
+          ]
+        },
+        "location_cities": {
+          "data": []
+        },
+        "modality": {
+          "data": {
+            "id": 1,
+            "type": "modality"
+          }
+        },
+        "seniority": {
+          "data": {
+            "id": 3,
+            "type": "seniority"
+          }
+        },
+        "tags": {
+          "data": [
+            {
+              "id": 2,
+              "type": "tag"
+            },
+            {
+              "id": 18,
+              "type": "tag"
+            },
+            {
+              "id": 58,
+              "type": "tag"
+            },
+            {
+              "id": 175,
+              "type": "tag"
+            },
+            {
+              "id": 236,
+              "type": "tag"
+            },
+            {
+              "id": 355,
+              "type": "tag"
+            },
+            {
+              "id": 1031,
+              "type": "tag"
+            },
+            {
+              "id": 36813,
+              "type": "tag"
+            },
+            {
+              "id": 131,
+              "type": "tag"
+            },
+            {
+              "id": 155,
+              "type": "tag"
+            },
+            {
+              "id": 227,
+              "type": "tag"
+            },
+            {
+              "id": 582,
+              "type": "tag"
+            },
+            {
+              "id": 887,
+              "type": "tag"
+            },
+            {
+              "id": 883,
+              "type": "tag"
+            },
+            {
+              "id": 880,
+              "type": "tag"
+            },
+            {
+              "id": 1000,
+              "type": "tag"
+            },
+            {
+              "id": 299,
+              "type": "tag"
+            },
+            {
+              "id": 235,
+              "type": "tag"
+            },
+            {
+              "id": 119,
+              "type": "tag"
+            },
+            {
+              "id": 84,
+              "type": "tag"
+            },
+            {
+              "id": 583,
+              "type": "tag"
+            },
+            {
+              "id": 1,
+              "type": "tag"
+            }
+          ]
+        },
+        "company": {
+          "data": {
+            "id": 3115,
+            "type": "company"
+          }
+        }
+      },
+      "links": {
+        "public_url": "https://www.getonbrd.com/jobs/ingeniero-de-datos-devaid-remote-41ba"
+      }
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "per_page": 3,
+    "total_pages": 6
+  }
+}

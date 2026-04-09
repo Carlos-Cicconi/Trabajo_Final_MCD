@@ -1,0 +1,88 @@
+2026-03-30 17:25:54,150 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_computrabajo.db
+2026-03-30 17:25:54,151 [INFO] ComputrabajoScraper inicializado correctamente
+2026-03-30 17:25:54,151 [INFO] ============================================================
+2026-03-30 17:25:54,151 [INFO] INICIO DEL SCRAPING - Computrabajo Argentina
+2026-03-30 17:25:54,151 [INFO] Búsquedas: 10 | Páginas por búsqueda: 5
+2026-03-30 17:25:54,151 [INFO] ============================================================
+2026-03-30 17:25:54,151 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-03-30 17:25:54,151 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-data-scientist
+2026-03-30 17:26:00,463 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 17:26:00,463 [INFO]    → Sin más resultados para esta búsqueda.
+2026-03-30 17:26:00,464 [INFO] ✅ 'Data Scientist': 0 ofertas guardadas
+2026-03-30 17:26:00,464 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-03-30 17:26:00,464 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-data-analyst
+2026-03-30 17:26:07,221 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 17:26:07,221 [INFO]    → Sin más resultados para esta búsqueda.
+2026-03-30 17:26:07,221 [INFO] ✅ 'Data Analyst': 0 ofertas guardadas
+2026-03-30 17:26:07,221 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer'
+2026-03-30 17:26:07,222 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-machine-learning
+2026-03-30 17:26:12,640 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 17:26:12,641 [INFO]    → Sin más resultados para esta búsqueda.
+2026-03-30 17:26:12,641 [INFO] ✅ 'Machine Learning Engineer': 0 ofertas guardadas
+2026-03-30 17:26:12,641 [INFO] 
+🔍 Buscando: 'NLP Engineer'
+2026-03-30 17:26:12,641 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-nlp-engineer
+2026-03-30 17:26:18,436 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 17:26:18,436 [INFO]    → Sin más resultados para esta búsqueda.
+2026-03-30 17:26:18,437 [INFO] ✅ 'NLP Engineer': 0 ofertas guardadas
+2026-03-30 17:26:18,437 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-03-30 17:26:18,437 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-data-engineer
+2026-03-30 17:26:23,620 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 17:26:23,620 [INFO]    → Sin más resultados para esta búsqueda.
+2026-03-30 17:26:23,620 [INFO] ✅ 'Data Engineer': 0 ofertas guardadas
+2026-03-30 17:26:23,621 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-03-30 17:26:23,621 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-software-engineer
+2026-03-30 17:26:30,143 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 17:26:30,143 [INFO]    → Sin más resultados para esta búsqueda.
+2026-03-30 17:26:30,143 [INFO] ✅ 'Software Engineer': 0 ofertas guardadas
+2026-03-30 17:26:30,143 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-03-30 17:26:30,143 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-python
+2026-03-30 17:26:36,530 [INFO]    → 20 ofertas nuevas encontradas
+2026-03-30 17:28:21,384 [INFO]    Página 2/5 → https://www.computrabajo.com.ar/trabajo-de-python?p=2
+2026-03-30 17:28:26,313 [INFO]    → 20 ofertas nuevas encontradas
+2026-03-30 17:30:06,922 [INFO]    Página 3/5 → https://www.computrabajo.com.ar/trabajo-de-python?p=3
+2026-03-30 17:30:12,865 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 17:30:12,865 [INFO]    → Sin más resultados para esta búsqueda.
+2026-03-30 17:30:12,866 [INFO] Exportadas 40 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/computrabajo_20260330.csv
+2026-03-30 17:30:12,866 [INFO] ✅ 'Python Developer': 40 ofertas guardadas
+2026-03-30 17:30:12,866 [INFO] 
+🔍 Buscando: 'Desarrollador Backend'
+2026-03-30 17:30:12,866 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-desarrollador-backend
+2026-03-30 17:30:18,511 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 17:30:18,511 [INFO]    → Sin más resultados para esta búsqueda.
+2026-03-30 17:30:18,511 [INFO] ✅ 'Desarrollador Backend': 0 ofertas guardadas
+2026-03-30 17:30:18,511 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack'
+2026-03-30 17:30:18,511 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-desarrollador-full-stack
+2026-03-30 17:30:24,546 [INFO]    → 20 ofertas nuevas encontradas
+2026-03-30 17:32:06,421 [INFO]    Página 2/5 → https://www.computrabajo.com.ar/trabajo-de-desarrollador-full-stack?p=2
+2026-03-30 17:32:12,798 [INFO]    → 20 ofertas nuevas encontradas
+2026-03-30 17:33:55,646 [INFO]    Página 3/5 → https://www.computrabajo.com.ar/trabajo-de-desarrollador-full-stack?p=3
+2026-03-30 17:33:59,408 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 17:33:59,408 [INFO]    → Sin más resultados para esta búsqueda.
+2026-03-30 17:33:59,409 [INFO] Exportadas 40 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/computrabajo_20260330.csv
+2026-03-30 17:33:59,409 [INFO] ✅ 'Desarrollador Full Stack': 40 ofertas guardadas
+2026-03-30 17:33:59,409 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-03-30 17:33:59,409 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-ingeniero-de-datos
+2026-03-30 17:34:05,752 [INFO]    → 20 ofertas nuevas encontradas
+2026-03-30 17:35:50,348 [INFO]    Página 2/5 → https://www.computrabajo.com.ar/trabajo-de-ingeniero-de-datos?p=2
+2026-03-30 17:35:54,820 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 17:35:54,820 [INFO]    → Sin más resultados para esta búsqueda.
+2026-03-30 17:35:54,821 [INFO] Exportadas 20 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/computrabajo_20260330.csv
+2026-03-30 17:35:54,821 [INFO] ✅ 'Ingeniero de Datos': 20 ofertas guardadas
+2026-03-30 17:35:54,821 [INFO] 
+============================================================
+2026-03-30 17:35:54,821 [INFO] SCRAPING FINALIZADO - Computrabajo
+2026-03-30 17:35:54,821 [INFO] Total de ofertas únicas recopiladas: 100
+2026-03-30 17:35:54,821 [INFO] Base de datos : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_computrabajo.db
+2026-03-30 17:35:54,821 [INFO] CSV exportado : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/computrabajo_20260330.csv
+2026-03-30 17:35:54,821 [INFO] Log guardado  : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/computrabajo_scraper_20260330_172553.log
+2026-03-30 17:35:54,821 [INFO] ============================================================
+2026-03-30 17:35:54,822 [INFO] Estadísticas guardadas: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/stats_computrabajo_20260330_173554.json

@@ -1,0 +1,79 @@
+2026-03-30 19:30:13,775 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_indeed.db
+2026-03-30 19:30:13,775 [INFO] IndeedScraper (Playwright) inicializado
+2026-03-30 19:30:14,703 [INFO] Inicializando sesión en Indeed...
+2026-03-30 19:30:20,533 [INFO] 
+🔍 Buscando: 'Data Scientist' en 'Argentina'
+2026-03-30 19:30:20,534 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 19:30:35,414 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 19:30:35,414 [INFO]    → Sin más resultados.
+2026-03-30 19:30:35,414 [INFO] ✅ 'Data Scientist': 0 ofertas guardadas
+2026-03-30 19:30:35,414 [INFO]    💤 Pausa entre búsquedas: 12.8s
+2026-03-30 19:30:48,246 [INFO] 
+🔍 Buscando: 'Data Analyst' en 'Argentina'
+2026-03-30 19:30:48,246 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 19:31:01,592 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 19:31:01,593 [INFO]    → Sin más resultados.
+2026-03-30 19:31:01,593 [INFO] ✅ 'Data Analyst': 0 ofertas guardadas
+2026-03-30 19:31:01,593 [INFO]    💤 Pausa entre búsquedas: 11.3s
+2026-03-30 19:31:12,897 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer' en 'Argentina'
+2026-03-30 19:31:12,897 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 19:31:28,112 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 19:31:28,113 [INFO]    → Sin más resultados.
+2026-03-30 19:31:28,113 [INFO] ✅ 'Machine Learning Engineer': 0 ofertas guardadas
+2026-03-30 19:31:28,113 [INFO]    💤 Pausa entre búsquedas: 10.7s
+2026-03-30 19:31:38,791 [INFO] 
+🔍 Buscando: 'NLP Engineer' en 'Argentina'
+2026-03-30 19:31:38,791 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 19:31:54,072 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 19:31:54,072 [INFO]    → Sin más resultados.
+2026-03-30 19:31:54,072 [INFO] ✅ 'NLP Engineer': 0 ofertas guardadas
+2026-03-30 19:31:54,072 [INFO]    💤 Pausa entre búsquedas: 12.9s
+2026-03-30 19:32:07,029 [INFO] 
+🔍 Buscando: 'Data Engineer' en 'Argentina'
+2026-03-30 19:32:07,029 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 19:32:21,984 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 19:32:21,984 [INFO]    → Sin más resultados.
+2026-03-30 19:32:21,984 [INFO] ✅ 'Data Engineer': 0 ofertas guardadas
+2026-03-30 19:32:21,985 [INFO]    💤 Pausa entre búsquedas: 12.7s
+2026-03-30 19:32:34,746 [INFO] 
+🔍 Buscando: 'Software Engineer' en 'Argentina'
+2026-03-30 19:32:34,746 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 19:32:49,511 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 19:32:49,511 [INFO]    → Sin más resultados.
+2026-03-30 19:32:49,511 [INFO] ✅ 'Software Engineer': 0 ofertas guardadas
+2026-03-30 19:32:49,511 [INFO]    💤 Pausa entre búsquedas: 8.0s
+2026-03-30 19:32:57,522 [INFO] 
+🔍 Buscando: 'Python Developer' en 'Argentina'
+2026-03-30 19:32:57,522 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 19:33:10,717 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 19:33:10,718 [INFO]    → Sin más resultados.
+2026-03-30 19:33:10,718 [INFO] ✅ 'Python Developer': 0 ofertas guardadas
+2026-03-30 19:33:10,718 [INFO]    💤 Pausa entre búsquedas: 11.5s
+2026-03-30 19:33:22,274 [INFO] 
+🔍 Buscando: 'Desarrollador Backend' en 'Argentina'
+2026-03-30 19:33:22,274 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 19:33:37,096 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 19:33:37,097 [INFO]    → Sin más resultados.
+2026-03-30 19:33:37,097 [INFO] ✅ 'Desarrollador Backend': 0 ofertas guardadas
+2026-03-30 19:33:37,097 [INFO]    💤 Pausa entre búsquedas: 13.9s
+2026-03-30 19:33:51,055 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack' en 'Argentina'
+2026-03-30 19:33:51,055 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 19:34:05,850 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 19:34:05,850 [INFO]    → Sin más resultados.
+2026-03-30 19:34:05,850 [INFO] ✅ 'Desarrollador Full Stack': 0 ofertas guardadas
+2026-03-30 19:34:05,850 [INFO]    💤 Pausa entre búsquedas: 14.0s
+2026-03-30 19:34:19,860 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos' en 'Argentina'
+2026-03-30 19:34:19,860 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 19:34:36,760 [INFO]    → 0 ofertas nuevas encontradas
+2026-03-30 19:34:36,761 [INFO]    → Sin más resultados.
+2026-03-30 19:34:36,761 [INFO] ✅ 'Ingeniero de Datos': 0 ofertas guardadas
+2026-03-30 19:34:36,761 [INFO]    💤 Pausa entre búsquedas: 9.3s
+2026-03-30 19:34:46,096 [INFO] 
+============================================================
+2026-03-30 19:34:46,096 [INFO] SCRAPING FINALIZADO - Indeed Argentina
+2026-03-30 19:34:46,096 [INFO] Total de ofertas únicas: 0
+2026-03-30 19:34:46,096 [INFO] DB: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_indeed.db | CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/indeed_20260330.csv | Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/indeed_scraper_20260330_193013.log
+2026-03-30 19:34:46,096 [INFO] ============================================================

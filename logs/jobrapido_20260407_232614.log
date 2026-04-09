@@ -1,0 +1,164 @@
+2026-04-07 23:26:14,919 [INFO] DB lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_jobrapido.db
+2026-04-07 23:26:14,919 [INFO] Ejecutando diagnóstico de Jobrapido...
+2026-04-07 23:26:17,390 [INFO]   https://ar.jobrapido.com/Ofertas-de-trabajo-para-Python?l=Argentina → HTTP 200 | 404,975 chars
+2026-04-07 23:26:17,517 [INFO]   <title>: Bolsa trabajo para Python, ofertas empleo | Jobrapido.com
+2026-04-07 23:26:17,519 [INFO]   JS-only:False
+2026-04-07 23:26:17,536 [INFO]   Clase 'job': 56 | ejemplo: search google-one-tap-enabled smartphone-banner-enabled not-
+2026-04-07 23:26:17,561 [INFO]   Clase 'result': 261 | ejemplo: wrapper result-list
+2026-04-07 23:26:17,606 [INFO]   Clase 'item': 289 | ejemplo: suggested-locations-item
+2026-04-07 23:26:17,652 [INFO]   Links de oferta: 20
+2026-04-07 23:26:17,653 [INFO]     https://open.app.jobrapido.com/ar/6672802003715883008/?w=python&l=&oc=sponsored&k=web.1.1.0&uuid=arF0019d6ae96fa9bd51&page_item_id=-1031721427 | Open job preview for: Python/ArcGIS developer  - Mendoza
+2026-04-07 23:26:17,653 [INFO]     https://open.app.jobrapido.com/ar/5396407542333046784/?w=python&l=&oc=sponsored&k=web.1.1.1&uuid=arF0019d6ae96fa9bd51&page_item_id=-15254845 | Open job preview for: Sr/Lead Odoo (Python) Engineer  - Mend
+2026-04-07 23:26:17,653 [INFO]     https://open.app.jobrapido.com/ar/6036539127510335488/?w=python&l=&oc=sponsored&k=web.1.1.2&uuid=arF0019d6ae96fa9bd51&page_item_id=-1094861376 | Open job preview for: Software Engineer - Python/Django  - M
+2026-04-07 23:26:17,661 [INFO]   Paginación: 1
+2026-04-07 23:26:17,662 [INFO] JobrapidoScraper inicializado
+2026-04-07 23:26:17,662 [INFO] ============================================================
+2026-04-07 23:26:17,662 [INFO] INICIO - Jobrapido Argentina
+2026-04-07 23:26:17,662 [INFO] 
+🔍 'Data Scientist'
+2026-04-07 23:26:17,662 [INFO]    Página 1/5
+2026-04-07 23:26:23,069 [INFO]    → 15 encontradas
+2026-04-07 23:27:54,683 [INFO]    Página 2/5
+2026-04-07 23:27:58,884 [INFO]    → 20 encontradas
+2026-04-07 23:30:00,420 [INFO]    Página 3/5
+2026-04-07 23:30:03,704 [INFO]    → 5 encontradas
+2026-04-07 23:30:38,305 [INFO]    Página 4/5
+2026-04-07 23:30:43,564 [INFO]    → 20 encontradas
+2026-04-07 23:32:47,115 [INFO]    Página 5/5
+2026-04-07 23:32:52,894 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-04-07 23:32:52,894 [INFO]    → 0 encontradas
+2026-04-07 23:32:52,896 [INFO] CSV: 60 exportadas
+2026-04-07 23:32:52,896 [INFO] ✅ 'Data Scientist': 60 guardadas
+2026-04-07 23:33:00,691 [INFO] 
+🔍 'Data Analyst'
+2026-04-07 23:33:00,692 [INFO]    Página 1/5
+2026-04-07 23:33:06,195 [INFO]    → 20 encontradas
+2026-04-07 23:35:03,499 [INFO]    Página 2/5
+2026-04-07 23:35:07,330 [INFO]    → 19 encontradas
+2026-04-07 23:37:05,966 [INFO]    Página 3/5
+2026-04-07 23:37:11,147 [INFO]    → 5 encontradas
+2026-04-07 23:37:40,876 [INFO]    Página 4/5
+2026-04-07 23:37:46,065 [INFO]    → 20 encontradas
+2026-04-07 23:39:50,824 [INFO]    Página 5/5
+2026-04-07 23:39:56,361 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-04-07 23:39:56,361 [INFO]    → 0 encontradas
+2026-04-07 23:39:56,366 [INFO] CSV: 64 exportadas
+2026-04-07 23:39:56,366 [INFO] ✅ 'Data Analyst': 64 guardadas
+2026-04-07 23:40:05,241 [INFO] 
+🔍 'Machine Learning Engineer'
+2026-04-07 23:40:05,242 [INFO]    Página 1/5
+2026-04-07 23:40:08,894 [INFO]    → 20 encontradas
+2026-04-07 23:42:18,374 [INFO]    Página 2/5
+2026-04-07 23:42:22,332 [INFO]    → 20 encontradas
+2026-04-07 23:44:28,214 [INFO]    Página 3/5
+2026-04-07 23:44:33,330 [INFO]    → 20 encontradas
+2026-04-07 23:46:42,560 [INFO]    Página 4/5
+2026-04-07 23:46:46,697 [INFO]    → 20 encontradas
+2026-04-07 23:48:48,303 [INFO]    Página 5/5
+2026-04-07 23:48:53,987 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-04-07 23:48:53,987 [INFO]    → 0 encontradas
+2026-04-07 23:48:53,992 [INFO] CSV: 80 exportadas
+2026-04-07 23:48:53,992 [INFO] ✅ 'Machine Learning Engineer': 80 guardadas
+2026-04-07 23:49:00,549 [INFO] 
+🔍 'NLP Engineer'
+2026-04-07 23:49:00,550 [INFO]    Página 1/5
+2026-04-07 23:49:05,573 [INFO]    → 20 encontradas
+2026-04-07 23:51:08,900 [INFO]    Página 2/5
+2026-04-07 23:51:13,713 [INFO]    → 20 encontradas
+2026-04-07 23:53:12,287 [INFO]    Página 3/5
+2026-04-07 23:53:15,570 [INFO]    → 5 encontradas
+2026-04-07 23:53:48,434 [INFO]    Página 4/5
+2026-04-07 23:53:52,259 [INFO]    → 19 encontradas
+2026-04-07 23:55:52,231 [INFO]    Página 5/5
+2026-04-07 23:55:57,188 [INFO]    → 13 encontradas
+2026-04-07 23:57:19,737 [INFO] CSV: 77 exportadas
+2026-04-07 23:57:19,737 [INFO] ✅ 'NLP Engineer': 77 guardadas
+2026-04-07 23:57:28,582 [INFO] 
+🔍 'Data Engineer'
+2026-04-07 23:57:28,583 [INFO]    Página 1/5
+2026-04-07 23:57:33,030 [INFO]    → 18 encontradas
+2026-04-07 23:59:30,752 [INFO]    Página 2/5
+2026-04-07 23:59:34,572 [INFO]    → 9 encontradas
+2026-04-08 00:00:26,250 [INFO]    Página 3/5
+2026-04-08 00:00:31,338 [INFO]    → 20 encontradas
+2026-04-08 00:02:37,424 [INFO]    Página 4/5
+2026-04-08 00:02:42,322 [INFO]    → 18 encontradas
+2026-04-08 00:04:32,516 [INFO]    Página 5/5
+2026-04-08 00:04:39,087 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-04-08 00:04:39,087 [INFO]    → 0 encontradas
+2026-04-08 00:04:39,089 [INFO] CSV: 65 exportadas
+2026-04-08 00:04:39,089 [INFO] ✅ 'Data Engineer': 65 guardadas
+2026-04-08 00:04:44,847 [INFO] 
+🔍 'Software Engineer'
+2026-04-08 00:04:44,848 [INFO]    Página 1/5
+2026-04-08 00:04:49,892 [INFO]    → 12 encontradas
+2026-04-08 00:06:05,600 [INFO]    Página 2/5
+2026-04-08 00:06:10,630 [INFO]    → 4 encontradas
+2026-04-08 00:06:37,238 [INFO]    Página 3/5
+2026-04-08 00:06:42,092 [INFO]    → 9 encontradas
+2026-04-08 00:07:38,678 [INFO]    Página 4/5
+2026-04-08 00:07:43,464 [INFO]    → 16 encontradas
+2026-04-08 00:09:17,590 [INFO]    Página 5/5
+2026-04-08 00:09:22,703 [INFO]    → 6 encontradas
+2026-04-08 00:09:56,612 [INFO] CSV: 47 exportadas
+2026-04-08 00:09:56,612 [INFO] ✅ 'Software Engineer': 47 guardadas
+2026-04-08 00:10:04,217 [INFO] 
+🔍 'Python Developer'
+2026-04-08 00:10:04,218 [INFO]    Página 1/5
+2026-04-08 00:10:08,035 [INFO]    → 8 encontradas
+2026-04-08 00:10:56,199 [INFO]    Página 2/5
+2026-04-08 00:11:01,466 [INFO]    → 7 encontradas
+2026-04-08 00:11:41,672 [INFO]    Página 3/5
+2026-04-08 00:11:45,320 [INFO]    → 8 encontradas
+2026-04-08 00:12:33,073 [INFO]    Página 4/5
+2026-04-08 00:12:38,082 [INFO]    → 16 encontradas
+2026-04-08 00:14:18,653 [INFO]    Página 5/5
+2026-04-08 00:14:22,587 [INFO]    → 14 encontradas
+2026-04-08 00:15:42,821 [INFO] CSV: 53 exportadas
+2026-04-08 00:15:42,822 [INFO] ✅ 'Python Developer': 53 guardadas
+2026-04-08 00:15:48,280 [INFO] 
+🔍 'Desarrollador Backend'
+2026-04-08 00:15:48,280 [INFO]    Página 1/5
+2026-04-08 00:15:52,414 [INFO]    → 20 encontradas
+2026-04-08 00:17:58,701 [INFO]    Página 2/5
+2026-04-08 00:18:04,121 [INFO]    → 19 encontradas
+2026-04-08 00:20:08,542 [INFO]    Página 3/5
+2026-04-08 00:20:11,769 [INFO]    → 5 encontradas
+2026-04-08 00:20:46,416 [INFO]    Página 4/5
+2026-04-08 00:20:51,817 [INFO]    → 19 encontradas
+2026-04-08 00:22:54,051 [INFO]    Página 5/5
+2026-04-08 00:22:57,926 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-04-08 00:22:57,926 [INFO]    → 0 encontradas
+2026-04-08 00:22:57,927 [INFO] CSV: 63 exportadas
+2026-04-08 00:22:57,927 [INFO] ✅ 'Desarrollador Backend': 63 guardadas
+2026-04-08 00:23:05,007 [INFO] 
+🔍 'Desarrollador Full Stack'
+2026-04-08 00:23:05,007 [INFO]    Página 1/5
+2026-04-08 00:23:10,214 [INFO]    → 19 encontradas
+2026-04-08 00:25:05,665 [INFO]    Página 2/5
+2026-04-08 00:25:10,780 [INFO]    → 20 encontradas
+2026-04-08 00:27:17,160 [INFO]    Página 3/5
+2026-04-08 00:27:25,684 [INFO]    → 5 encontradas
+2026-04-08 00:27:57,726 [INFO]    Página 4/5
+2026-04-08 00:28:02,902 [INFO]    → 20 encontradas
+2026-04-08 00:30:08,081 [INFO]    Página 5/5
+2026-04-08 00:30:11,893 [INFO]    → 20 encontradas
+2026-04-08 00:32:19,381 [INFO] CSV: 84 exportadas
+2026-04-08 00:32:19,382 [INFO] ✅ 'Desarrollador Full Stack': 84 guardadas
+2026-04-08 00:32:26,463 [INFO] 
+🔍 'Ingeniero de Datos'
+2026-04-08 00:32:26,464 [INFO]    Página 1/5
+2026-04-08 00:32:30,627 [INFO]    → 18 encontradas
+2026-04-08 00:34:23,186 [INFO]    Página 2/5
+2026-04-08 00:34:27,951 [INFO]    → 10 encontradas
+2026-04-08 00:35:26,574 [INFO]    Página 3/5
+2026-04-08 00:35:30,467 [INFO]    → 15 encontradas
+2026-04-08 00:37:06,111 [INFO]    Página 4/5
+2026-04-08 00:37:11,582 [INFO]    → 14 encontradas
+2026-04-08 00:38:32,536 [INFO]    Página 5/5
+2026-04-08 00:38:36,214 [INFO]    → 20 encontradas
+2026-04-08 00:40:36,761 [INFO] CSV: 77 exportadas
+2026-04-08 00:40:36,761 [INFO] ✅ 'Ingeniero de Datos': 77 guardadas
+2026-04-08 00:40:43,759 [INFO] 
+============================================================
+FINALIZADO — 670 ofertas

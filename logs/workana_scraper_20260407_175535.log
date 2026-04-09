@@ -1,0 +1,98 @@
+2026-04-07 17:55:35,998 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_workana.db
+2026-04-07 17:55:36,003 [INFO] WorkanaScraper (Playwright) inicializado
+2026-04-07 17:55:38,234 [INFO] Inicializando sesión en Workana...
+2026-04-07 17:55:55,270 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-04-07 17:55:55,271 [INFO]    Página 1/5 → https://www.workana.com/jobs?category=it-programming&language=es&country=AR&search=data+scientist&page=1
+2026-04-07 17:56:04,898 [INFO]    → 8 ofertas nuevas encontradas
+2026-04-07 17:58:34,304 [INFO]    Página 2/5 → https://www.workana.com/jobs?category=it-programming&language=es&country=AR&search=data+scientist&page=2
+2026-04-07 17:58:44,462 [INFO]    → 7 ofertas nuevas encontradas
+2026-04-07 18:00:57,571 [INFO]    Página 3/5 → https://www.workana.com/jobs?category=it-programming&language=es&country=AR&search=data+scientist&page=3
+2026-04-07 18:01:07,308 [INFO]    → 7 ofertas nuevas encontradas
+2026-04-07 18:03:20,257 [INFO]    Página 4/5 → https://www.workana.com/jobs?category=it-programming&language=es&country=AR&search=data+scientist&page=4
+2026-04-07 18:03:30,481 [INFO]    → 7 ofertas nuevas encontradas
+2026-04-07 18:05:40,928 [INFO]    Página 5/5 → https://www.workana.com/jobs?category=it-programming&language=es&country=AR&search=data+scientist&page=5
+2026-04-07 18:05:51,351 [INFO]    → 7 ofertas nuevas encontradas
+2026-04-07 18:08:01,758 [INFO] Exportadas 36 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/workana_20260407.csv
+2026-04-07 18:08:01,759 [INFO] ✅ 'Data Scientist': 36 ofertas guardadas
+2026-04-07 18:08:01,759 [INFO]    💤 Pausa: 10.8s
+2026-04-07 18:08:12,602 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-04-07 18:08:12,603 [INFO]    Página 1/5 → https://www.workana.com/jobs?category=it-programming&language=es&country=AR&search=data+analyst&page=1
+2026-04-07 18:08:21,034 [WARNING]    ⚠️  Sin ofertas parseadas.
+2026-04-07 18:08:21,035 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-07 18:08:21,035 [INFO]    → Sin más resultados.
+2026-04-07 18:08:21,035 [INFO] ✅ 'Data Analyst': 0 ofertas guardadas
+2026-04-07 18:08:21,036 [INFO]    💤 Pausa: 8.3s
+2026-04-07 18:08:29,355 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer'
+2026-04-07 18:08:29,356 [INFO]    Página 1/5 → https://www.workana.com/jobs?category=it-programming&language=es&country=AR&search=machine+learning&page=1
+2026-04-07 18:08:38,044 [WARNING]    ⚠️  Sin ofertas parseadas.
+2026-04-07 18:08:38,045 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-07 18:08:38,045 [INFO]    → Sin más resultados.
+2026-04-07 18:08:38,045 [INFO] ✅ 'Machine Learning Engineer': 0 ofertas guardadas
+2026-04-07 18:08:38,045 [INFO]    💤 Pausa: 8.6s
+2026-04-07 18:08:46,648 [INFO] 
+🔍 Buscando: 'NLP Engineer'
+2026-04-07 18:08:46,649 [INFO]    Página 1/5 → https://www.workana.com/jobs?category=it-programming&language=es&country=AR&search=nlp&page=1
+2026-04-07 18:08:57,593 [WARNING]    ⚠️  Sin ofertas parseadas.
+2026-04-07 18:08:57,593 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-07 18:08:57,593 [INFO]    → Sin más resultados.
+2026-04-07 18:08:57,593 [INFO] ✅ 'NLP Engineer': 0 ofertas guardadas
+2026-04-07 18:08:57,593 [INFO]    💤 Pausa: 6.7s
+2026-04-07 18:09:04,334 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-04-07 18:09:04,335 [INFO]    Página 1/5 → https://www.workana.com/jobs?category=it-programming&language=es&country=AR&search=data+engineer&page=1
+2026-04-07 18:09:13,410 [WARNING]    ⚠️  Sin ofertas parseadas.
+2026-04-07 18:09:13,410 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-07 18:09:13,410 [INFO]    → Sin más resultados.
+2026-04-07 18:09:13,410 [INFO] ✅ 'Data Engineer': 0 ofertas guardadas
+2026-04-07 18:09:13,411 [INFO]    💤 Pausa: 8.3s
+2026-04-07 18:09:21,743 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-04-07 18:09:21,744 [INFO]    Página 1/5 → https://www.workana.com/jobs?category=it-programming&language=es&country=AR&search=python&page=1
+2026-04-07 18:09:32,704 [WARNING]    ⚠️  Sin ofertas parseadas.
+2026-04-07 18:09:32,705 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-07 18:09:32,705 [INFO]    → Sin más resultados.
+2026-04-07 18:09:32,705 [INFO] ✅ 'Python Developer': 0 ofertas guardadas
+2026-04-07 18:09:32,705 [INFO]    💤 Pausa: 7.4s
+2026-04-07 18:09:40,070 [INFO] 
+🔍 Buscando: 'Desarrollador Backend'
+2026-04-07 18:09:40,070 [INFO]    Página 1/5 → https://www.workana.com/jobs?category=it-programming&language=es&country=AR&search=backend&page=1
+2026-04-07 18:09:49,667 [WARNING]    ⚠️  Sin ofertas parseadas.
+2026-04-07 18:09:49,667 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-07 18:09:49,667 [INFO]    → Sin más resultados.
+2026-04-07 18:09:49,668 [INFO] ✅ 'Desarrollador Backend': 0 ofertas guardadas
+2026-04-07 18:09:49,668 [INFO]    💤 Pausa: 8.7s
+2026-04-07 18:09:58,367 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack'
+2026-04-07 18:09:58,368 [INFO]    Página 1/5 → https://www.workana.com/jobs?category=it-programming&language=es&country=AR&search=full+stack&page=1
+2026-04-07 18:10:08,295 [WARNING]    ⚠️  Sin ofertas parseadas.
+2026-04-07 18:10:08,295 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-07 18:10:08,296 [INFO]    → Sin más resultados.
+2026-04-07 18:10:08,296 [INFO] ✅ 'Desarrollador Full Stack': 0 ofertas guardadas
+2026-04-07 18:10:08,296 [INFO]    💤 Pausa: 7.6s
+2026-04-07 18:10:15,858 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-04-07 18:10:15,859 [INFO]    Página 1/5 → https://www.workana.com/jobs?category=it-programming&language=es&country=AR&search=software+engineer&page=1
+2026-04-07 18:10:25,385 [WARNING]    ⚠️  Sin ofertas parseadas.
+2026-04-07 18:10:25,386 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-07 18:10:25,386 [INFO]    → Sin más resultados.
+2026-04-07 18:10:25,386 [INFO] ✅ 'Software Engineer': 0 ofertas guardadas
+2026-04-07 18:10:25,386 [INFO]    💤 Pausa: 6.9s
+2026-04-07 18:10:32,244 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-04-07 18:10:32,245 [INFO]    Página 1/5 → https://www.workana.com/jobs?category=it-programming&language=es&country=AR&search=ingeniero+de+datos&page=1
+2026-04-07 18:10:41,081 [WARNING]    ⚠️  Sin ofertas parseadas.
+2026-04-07 18:10:41,082 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-07 18:10:41,082 [INFO]    → Sin más resultados.
+2026-04-07 18:10:41,082 [INFO] ✅ 'Ingeniero de Datos': 0 ofertas guardadas
+2026-04-07 18:10:41,082 [INFO]    💤 Pausa: 9.2s
+2026-04-07 18:10:50,353 [INFO] 
+============================================================
+2026-04-07 18:10:50,353 [INFO] SCRAPING FINALIZADO - Workana
+2026-04-07 18:10:50,353 [INFO] Total ofertas únicas: 36
+2026-04-07 18:10:50,353 [INFO] DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_workana.db
+2026-04-07 18:10:50,353 [INFO] CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/workana_20260407.csv
+2026-04-07 18:10:50,353 [INFO] Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/workana_scraper_20260407_175535.log
+2026-04-07 18:10:50,353 [INFO] ============================================================

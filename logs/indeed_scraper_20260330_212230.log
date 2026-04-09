@@ -1,0 +1,353 @@
+2026-03-30 21:22:30,751 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_indeed.db
+2026-03-30 21:22:30,752 [INFO] Calentando sesión en Indeed (curl_cffi)...
+2026-03-30 21:22:33,567 [INFO] IndeedScraper (curl_cffi) inicializado
+2026-03-30 21:22:33,567 [INFO] ============================================================
+2026-03-30 21:22:33,568 [INFO] INICIO DEL SCRAPING - Indeed Argentina (curl_cffi)
+2026-03-30 21:22:33,568 [INFO] Búsquedas: 10 | Páginas: 5
+2026-03-30 21:22:33,568 [INFO] ============================================================
+2026-03-30 21:22:33,569 [INFO] 
+🔍 Buscando: 'Data Scientist' en 'Argentina'
+2026-03-30 21:22:33,569 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:22:41,463 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:23:06,887 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:23:53,870 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:24:53,871 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:24:53,871 [WARNING]    ⚠️  Sin respuesta. Saltando página 1.
+2026-03-30 21:24:53,872 [INFO]    Página 2/5 → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 21:25:01,857 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 21:25:26,012 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 21:26:11,169 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 21:27:11,169 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 21:27:11,170 [WARNING]    ⚠️  Sin respuesta. Saltando página 2.
+2026-03-30 21:27:11,170 [INFO]    Página 3/5 → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 21:27:16,955 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 21:27:43,427 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 21:28:29,883 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 21:29:29,883 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 21:29:29,884 [WARNING]    ⚠️  Sin respuesta. Saltando página 3.
+2026-03-30 21:29:29,884 [INFO]    Página 4/5 → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 21:29:34,281 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 21:29:59,998 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 21:30:46,665 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 21:31:46,666 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 21:31:46,667 [WARNING]    ⚠️  Sin respuesta. Saltando página 4.
+2026-03-30 21:31:46,668 [INFO]    Página 5/5 → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 21:31:54,215 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 21:32:20,523 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 21:33:05,561 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 21:34:05,561 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 21:34:05,562 [WARNING]    ⚠️  Sin respuesta. Saltando página 5.
+2026-03-30 21:34:05,562 [INFO] ✅ 'Data Scientist': 0 ofertas guardadas
+2026-03-30 21:34:05,563 [INFO]    💤 Pausa entre búsquedas: 11.5s
+2026-03-30 21:34:17,033 [INFO] 
+🔍 Buscando: 'Data Analyst' en 'Argentina'
+2026-03-30 21:34:17,034 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:34:24,200 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:34:50,665 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:35:36,324 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:36:36,325 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:36:36,325 [WARNING]    ⚠️  Sin respuesta. Saltando página 1.
+2026-03-30 21:36:36,326 [INFO]    Página 2/5 → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 21:36:40,803 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 21:37:08,575 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 21:37:54,451 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 21:38:54,452 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 21:38:54,453 [WARNING]    ⚠️  Sin respuesta. Saltando página 2.
+2026-03-30 21:38:54,453 [INFO]    Página 3/5 → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 21:39:02,042 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 21:39:28,374 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 21:40:14,870 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 21:41:14,870 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 21:41:14,871 [WARNING]    ⚠️  Sin respuesta. Saltando página 3.
+2026-03-30 21:41:14,871 [INFO]    Página 4/5 → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 21:41:20,777 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 21:41:46,814 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 21:42:31,600 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 21:43:31,601 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 21:43:31,601 [WARNING]    ⚠️  Sin respuesta. Saltando página 4.
+2026-03-30 21:43:31,602 [INFO]    Página 5/5 → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 21:43:35,979 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 21:44:03,816 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 21:44:48,089 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 21:45:48,090 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Data+Analyst&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 21:45:48,090 [WARNING]    ⚠️  Sin respuesta. Saltando página 5.
+2026-03-30 21:45:48,091 [INFO] ✅ 'Data Analyst': 0 ofertas guardadas
+2026-03-30 21:45:48,091 [INFO]    💤 Pausa entre búsquedas: 11.4s
+2026-03-30 21:45:59,538 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer' en 'Argentina'
+2026-03-30 21:45:59,539 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:46:03,951 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:46:31,763 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:47:17,463 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:48:17,464 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:48:17,464 [WARNING]    ⚠️  Sin respuesta. Saltando página 1.
+2026-03-30 21:48:17,465 [INFO]    Página 2/5 → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 21:48:22,973 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 21:48:47,124 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 21:49:31,775 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 21:50:31,775 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 21:50:31,776 [WARNING]    ⚠️  Sin respuesta. Saltando página 2.
+2026-03-30 21:50:31,777 [INFO]    Página 3/5 → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 21:50:38,699 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 21:51:03,432 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 21:51:47,757 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 21:52:47,758 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 21:52:47,758 [WARNING]    ⚠️  Sin respuesta. Saltando página 3.
+2026-03-30 21:52:47,759 [INFO]    Página 4/5 → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 21:52:53,700 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 21:53:20,639 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 21:54:07,076 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 21:55:07,077 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 21:55:07,077 [WARNING]    ⚠️  Sin respuesta. Saltando página 4.
+2026-03-30 21:55:07,078 [INFO]    Página 5/5 → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 21:55:13,711 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 21:55:41,047 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 21:56:27,049 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 21:57:27,050 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Machine+Learning+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 21:57:27,051 [WARNING]    ⚠️  Sin respuesta. Saltando página 5.
+2026-03-30 21:57:27,051 [INFO] ✅ 'Machine Learning Engineer': 0 ofertas guardadas
+2026-03-30 21:57:27,052 [INFO]    💤 Pausa entre búsquedas: 12.9s
+2026-03-30 21:57:40,002 [INFO] 
+🔍 Buscando: 'NLP Engineer' en 'Argentina'
+2026-03-30 21:57:40,002 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:57:44,474 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:58:12,186 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:58:57,387 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:59:57,388 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 21:59:57,388 [WARNING]    ⚠️  Sin respuesta. Saltando página 1.
+2026-03-30 21:59:57,389 [INFO]    Página 2/5 → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:00:03,638 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:00:29,340 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:01:15,011 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:02:15,011 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:02:15,012 [WARNING]    ⚠️  Sin respuesta. Saltando página 2.
+2026-03-30 22:02:15,013 [INFO]    Página 3/5 → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:02:19,805 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:02:45,041 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:03:29,289 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:04:29,289 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:04:29,290 [WARNING]    ⚠️  Sin respuesta. Saltando página 3.
+2026-03-30 22:04:29,290 [INFO]    Página 4/5 → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:04:34,359 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:05:00,500 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:05:47,811 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:06:47,812 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:06:47,813 [WARNING]    ⚠️  Sin respuesta. Saltando página 4.
+2026-03-30 22:06:47,813 [INFO]    Página 5/5 → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:06:52,975 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:07:19,194 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:08:03,473 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:09:03,474 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=NLP+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:09:03,474 [WARNING]    ⚠️  Sin respuesta. Saltando página 5.
+2026-03-30 22:09:03,475 [INFO] ✅ 'NLP Engineer': 0 ofertas guardadas
+2026-03-30 22:09:03,475 [INFO]    💤 Pausa entre búsquedas: 12.1s
+2026-03-30 22:09:15,559 [INFO] 
+🔍 Buscando: 'Data Engineer' en 'Argentina'
+2026-03-30 22:09:15,559 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:09:22,877 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:09:50,795 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:10:35,126 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:11:35,127 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:11:35,127 [WARNING]    ⚠️  Sin respuesta. Saltando página 1.
+2026-03-30 22:11:35,128 [INFO]    Página 2/5 → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:11:39,925 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:12:04,916 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:12:52,796 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:13:52,797 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:13:52,797 [WARNING]    ⚠️  Sin respuesta. Saltando página 2.
+2026-03-30 22:13:52,798 [INFO]    Página 3/5 → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:13:59,084 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:14:25,598 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:15:10,919 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:16:10,919 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:16:10,920 [WARNING]    ⚠️  Sin respuesta. Saltando página 3.
+2026-03-30 22:16:10,921 [INFO]    Página 4/5 → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:16:17,612 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:16:43,946 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:17:30,957 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:18:30,957 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:18:30,958 [WARNING]    ⚠️  Sin respuesta. Saltando página 4.
+2026-03-30 22:18:30,958 [INFO]    Página 5/5 → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:18:36,976 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:19:04,590 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:19:50,080 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:20:50,081 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Data+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:20:50,081 [WARNING]    ⚠️  Sin respuesta. Saltando página 5.
+2026-03-30 22:20:50,081 [INFO] ✅ 'Data Engineer': 0 ofertas guardadas
+2026-03-30 22:20:50,082 [INFO]    💤 Pausa entre búsquedas: 16.6s
+2026-03-30 22:21:06,650 [INFO] 
+🔍 Buscando: 'Software Engineer' en 'Argentina'
+2026-03-30 22:21:06,651 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:21:14,316 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:21:39,137 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:22:26,628 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:23:26,629 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:23:26,629 [WARNING]    ⚠️  Sin respuesta. Saltando página 1.
+2026-03-30 22:23:26,630 [INFO]    Página 2/5 → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:23:34,388 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:24:00,933 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:24:48,812 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:25:48,813 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:25:48,813 [WARNING]    ⚠️  Sin respuesta. Saltando página 2.
+2026-03-30 22:25:48,814 [INFO]    Página 3/5 → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:25:56,658 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:26:24,105 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:27:11,760 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:28:11,761 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:28:11,761 [WARNING]    ⚠️  Sin respuesta. Saltando página 3.
+2026-03-30 22:28:11,762 [INFO]    Página 4/5 → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:28:17,705 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:28:42,927 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:29:29,629 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:30:29,630 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:30:29,630 [WARNING]    ⚠️  Sin respuesta. Saltando página 4.
+2026-03-30 22:30:29,631 [INFO]    Página 5/5 → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:30:34,256 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:30:58,410 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:31:45,696 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:32:45,697 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Software+Engineer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:32:45,697 [WARNING]    ⚠️  Sin respuesta. Saltando página 5.
+2026-03-30 22:32:45,697 [INFO] ✅ 'Software Engineer': 0 ofertas guardadas
+2026-03-30 22:32:45,698 [INFO]    💤 Pausa entre búsquedas: 12.4s
+2026-03-30 22:32:58,060 [INFO] 
+🔍 Buscando: 'Python Developer' en 'Argentina'
+2026-03-30 22:32:58,061 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:33:04,434 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:33:31,929 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:34:16,709 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:35:16,709 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:35:16,710 [WARNING]    ⚠️  Sin respuesta. Saltando página 1.
+2026-03-30 22:35:16,711 [INFO]    Página 2/5 → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:35:22,516 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:35:47,751 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:36:32,337 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:37:32,339 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:37:32,339 [WARNING]    ⚠️  Sin respuesta. Saltando página 2.
+2026-03-30 22:37:32,339 [INFO]    Página 3/5 → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:37:38,174 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:38:04,385 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:38:50,574 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:39:50,575 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:39:50,575 [WARNING]    ⚠️  Sin respuesta. Saltando página 3.
+2026-03-30 22:39:50,576 [INFO]    Página 4/5 → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:39:57,995 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:40:25,386 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:41:11,071 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:42:11,072 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:42:11,073 [WARNING]    ⚠️  Sin respuesta. Saltando página 4.
+2026-03-30 22:42:11,073 [INFO]    Página 5/5 → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:42:17,802 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:42:44,139 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:43:31,766 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:44:31,767 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Python+Developer&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:44:31,767 [WARNING]    ⚠️  Sin respuesta. Saltando página 5.
+2026-03-30 22:44:31,767 [INFO] ✅ 'Python Developer': 0 ofertas guardadas
+2026-03-30 22:44:31,768 [INFO]    💤 Pausa entre búsquedas: 17.5s
+2026-03-30 22:44:49,304 [INFO] 
+🔍 Buscando: 'Desarrollador Backend' en 'Argentina'
+2026-03-30 22:44:49,304 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:44:56,221 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:45:22,545 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:46:10,361 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:47:10,362 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:47:10,362 [WARNING]    ⚠️  Sin respuesta. Saltando página 1.
+2026-03-30 22:47:10,362 [INFO]    Página 2/5 → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:47:17,066 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:47:41,377 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:48:27,683 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:49:27,684 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:49:27,684 [WARNING]    ⚠️  Sin respuesta. Saltando página 2.
+2026-03-30 22:49:27,685 [INFO]    Página 3/5 → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:49:35,029 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:49:59,290 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:50:45,666 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:51:45,666 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 22:51:45,667 [WARNING]    ⚠️  Sin respuesta. Saltando página 3.
+2026-03-30 22:51:45,668 [INFO]    Página 4/5 → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:51:51,827 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:52:16,567 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:53:01,803 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:54:01,804 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 22:54:01,804 [WARNING]    ⚠️  Sin respuesta. Saltando página 4.
+2026-03-30 22:54:01,805 [INFO]    Página 5/5 → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:54:06,998 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:54:33,757 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:55:19,624 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:56:19,624 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Desarrollador+Backend&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 22:56:19,625 [WARNING]    ⚠️  Sin respuesta. Saltando página 5.
+2026-03-30 22:56:19,625 [INFO] ✅ 'Desarrollador Backend': 0 ofertas guardadas
+2026-03-30 22:56:19,625 [INFO]    💤 Pausa entre búsquedas: 16.4s
+2026-03-30 22:56:36,047 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack' en 'Argentina'
+2026-03-30 22:56:36,047 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:56:43,824 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:57:11,726 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:57:57,867 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:58:57,868 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 22:58:57,869 [WARNING]    ⚠️  Sin respuesta. Saltando página 1.
+2026-03-30 22:58:57,869 [INFO]    Página 2/5 → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:59:02,160 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 22:59:29,338 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 23:00:16,064 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 23:01:16,065 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 23:01:16,065 [WARNING]    ⚠️  Sin respuesta. Saltando página 2.
+2026-03-30 23:01:16,066 [INFO]    Página 3/5 → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 23:01:20,908 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 23:01:46,077 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 23:02:30,388 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 23:03:30,389 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 23:03:30,389 [WARNING]    ⚠️  Sin respuesta. Saltando página 3.
+2026-03-30 23:03:30,390 [INFO]    Página 4/5 → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 23:03:34,798 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 23:04:01,065 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 23:04:46,884 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 23:05:46,885 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 23:05:46,885 [WARNING]    ⚠️  Sin respuesta. Saltando página 4.
+2026-03-30 23:05:46,886 [INFO]    Página 5/5 → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 23:05:54,646 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 23:06:22,394 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 23:07:08,157 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 23:08:08,157 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Desarrollador+Full+Stack&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 23:08:08,158 [WARNING]    ⚠️  Sin respuesta. Saltando página 5.
+2026-03-30 23:08:08,158 [INFO] ✅ 'Desarrollador Full Stack': 0 ofertas guardadas
+2026-03-30 23:08:08,159 [INFO]    💤 Pausa entre búsquedas: 15.6s
+2026-03-30 23:08:23,801 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos' en 'Argentina'
+2026-03-30 23:08:23,802 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 23:08:31,537 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 23:08:57,271 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 23:09:44,068 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 23:10:44,069 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=0&sort=date&fromage=30
+2026-03-30 23:10:44,069 [WARNING]    ⚠️  Sin respuesta. Saltando página 1.
+2026-03-30 23:10:44,070 [INFO]    Página 2/5 → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 23:10:50,548 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 23:11:17,707 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 23:12:03,369 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 23:13:03,370 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=10&sort=date&fromage=30
+2026-03-30 23:13:03,370 [WARNING]    ⚠️  Sin respuesta. Saltando página 2.
+2026-03-30 23:13:03,371 [INFO]    Página 3/5 → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 23:13:08,303 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 23:13:36,041 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 23:14:20,474 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 23:15:20,474 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=20&sort=date&fromage=30
+2026-03-30 23:15:20,475 [WARNING]    ⚠️  Sin respuesta. Saltando página 3.
+2026-03-30 23:15:20,475 [INFO]    Página 4/5 → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 23:15:27,508 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 23:15:51,669 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 23:16:36,882 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 23:17:36,882 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=30&sort=date&fromage=30
+2026-03-30 23:17:36,883 [WARNING]    ⚠️  Sin respuesta. Saltando página 4.
+2026-03-30 23:17:36,883 [INFO]    Página 5/5 → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 23:17:41,051 [WARNING] HTTP 403 (intento 1) → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 23:18:08,894 [WARNING] HTTP 403 (intento 2) → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 23:18:54,107 [WARNING] HTTP 403 (intento 3) → https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 23:19:54,108 [ERROR] Fallaron todos los intentos para: https://ar.indeed.com/jobs?q=Ingeniero+de+Datos&l=Argentina&start=40&sort=date&fromage=30
+2026-03-30 23:19:54,108 [WARNING]    ⚠️  Sin respuesta. Saltando página 5.
+2026-03-30 23:19:54,109 [INFO] ✅ 'Ingeniero de Datos': 0 ofertas guardadas
+2026-03-30 23:19:54,109 [INFO]    💤 Pausa entre búsquedas: 13.0s
+2026-03-30 23:20:07,089 [INFO] 
+============================================================
+2026-03-30 23:20:07,089 [INFO] SCRAPING FINALIZADO - Indeed Argentina
+2026-03-30 23:20:07,090 [INFO] Total ofertas únicas: 0
+2026-03-30 23:20:07,090 [INFO] DB: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_indeed.db | CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/indeed_20260330.csv
+2026-03-30 23:20:07,091 [INFO] ============================================================

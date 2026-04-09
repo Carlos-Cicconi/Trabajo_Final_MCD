@@ -1,0 +1,48 @@
+{
+  "fuente": "jobleads",
+  "modo": "requests",
+  "fecha": "2026-04-08T08:46:32.029871",
+  "total": 11,
+  "detalle": [
+    {
+      "keyword": "Data Scientist",
+      "ofertas": 1
+    },
+    {
+      "keyword": "Data Analyst",
+      "ofertas": 1
+    },
+    {
+      "keyword": "Machine Learning Engineer",
+      "ofertas": 1
+    },
+    {
+      "keyword": "NLP Engineer",
+      "ofertas": 1
+    },
+    {
+      "keyword": "Data Engineer",
+      "ofertas": 1
+    },
+    {
+      "keyword": "Software Engineer",
+      "ofertas": 1
+    },
+    {
+      "keyword": "Python Developer",
+      "ofertas": 2
+    },
+    {
+      "keyword": "Desarrollador Backend",
+      "ofertas": 1
+    },
+    {
+      "keyword": "Desarrollador Full Stack",
+      "ofertas": 1
+    },
+    {
+      "keyword": "Ingeniero de Datos",
+      "ofertas": 1
+    }
+  ]
+}

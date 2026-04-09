@@ -1,0 +1,142 @@
+2026-04-08 08:29:11,038 [INFO] DB lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_jobleads.db
+2026-04-08 08:29:11,038 [INFO] Ejecutando diagnóstico de JobLeads...
+2026-04-08 08:29:13,350 [INFO]   https://www.jobleads.com/ar/jobs?q=python → HTTP 200 | 468,447 chars | Final: https://www.jobleads.com/ar/jobs?q=python
+2026-04-08 08:29:13,403 [INFO]   <title>: Puestos: python | Argentina | JobLeads
+2026-04-08 08:29:13,404 [INFO]   __NEXT_DATA__:False | JS-only:False
+2026-04-08 08:29:13,411 [INFO]   Clase 'job': 2 | countryCode-jobs-canonical lang-es
+2026-04-08 08:29:13,451 [INFO]   Links oferta: 25
+2026-04-08 08:29:13,451 [INFO]     https://www.jobleads.com/ar/job/python-developer-ssr-sr-hibrido-amba-id-00246--buenos-aires--ef8bc6f0ab4d523380add8ebfeff62540 | 
+2026-04-08 08:29:13,451 [INFO]     https://www.jobleads.com/ar/job/senior-python-engineer-api-aws-data-warehousing-remote--argentina--e84040a3461eff7d89d12bb4672fc15ba | 
+2026-04-08 08:29:13,451 [INFO]     https://www.jobleads.com/ar/job/remote-python-app-engineer-investor-data-sync-platform--rosario--e1fd24444159b949628a538f00eb49b6c | 
+2026-04-08 08:29:13,451 [INFO] JobleadsScraper inicializado (modo: requests)
+2026-04-08 08:29:13,452 [INFO] ============================================================
+2026-04-08 08:29:13,452 [INFO] INICIO - JobLeads (modo: requests)
+2026-04-08 08:29:13,452 [INFO] 
+🔍 'Data Scientist'
+2026-04-08 08:29:13,452 [INFO]    Página 1/5
+2026-04-08 08:29:17,897 [INFO]    → 1 encontradas
+2026-04-08 08:29:25,121 [WARNING] HTTP 403 (intento 1)
+2026-04-08 08:29:38,233 [WARNING] HTTP 403 (intento 2)
+2026-04-08 08:30:00,821 [WARNING] HTTP 403 (intento 3)
+2026-04-08 08:30:30,834 [INFO]    Página 2/5
+2026-04-08 08:30:37,334 [WARNING]    Sin ofertas HTML — guardado en diagnostico/
+2026-04-08 08:30:37,335 [INFO]    → 0 encontradas
+2026-04-08 08:30:37,335 [INFO] CSV: 1 exportadas
+2026-04-08 08:30:37,335 [INFO] ✅ 'Data Scientist': 1 guardadas
+2026-04-08 08:30:44,680 [INFO] 
+🔍 'Data Analyst'
+2026-04-08 08:30:44,680 [INFO]    Página 1/5
+2026-04-08 08:30:50,119 [INFO]    → 1 encontradas
+2026-04-08 08:30:56,266 [WARNING] HTTP 403 (intento 1)
+2026-04-08 08:31:11,557 [WARNING] HTTP 403 (intento 2)
+2026-04-08 08:31:35,994 [WARNING] HTTP 403 (intento 3)
+2026-04-08 08:32:06,008 [INFO]    Página 2/5
+2026-04-08 08:32:11,233 [WARNING] HTTP 500 (intento 1)
+2026-04-08 08:32:25,591 [WARNING]    Sin ofertas HTML — guardado en diagnostico/
+2026-04-08 08:32:25,592 [INFO]    → 0 encontradas
+2026-04-08 08:32:25,592 [INFO] CSV: 1 exportadas
+2026-04-08 08:32:25,592 [INFO] ✅ 'Data Analyst': 1 guardadas
+2026-04-08 08:32:36,458 [INFO] 
+🔍 'Machine Learning Engineer'
+2026-04-08 08:32:36,459 [INFO]    Página 1/5
+2026-04-08 08:32:41,888 [INFO]    → 1 encontradas
+2026-04-08 08:32:49,127 [WARNING] HTTP 403 (intento 1)
+2026-04-08 08:33:04,511 [WARNING] HTTP 403 (intento 2)
+2026-04-08 08:33:29,418 [WARNING] HTTP 403 (intento 3)
+2026-04-08 08:33:59,432 [INFO]    Página 2/5
+2026-04-08 08:34:05,056 [WARNING]    Sin ofertas HTML — guardado en diagnostico/
+2026-04-08 08:34:05,057 [INFO]    → 0 encontradas
+2026-04-08 08:34:05,057 [INFO] CSV: 1 exportadas
+2026-04-08 08:34:05,057 [INFO] ✅ 'Machine Learning Engineer': 1 guardadas
+2026-04-08 08:34:14,015 [INFO] 
+🔍 'NLP Engineer'
+2026-04-08 08:34:14,016 [INFO]    Página 1/5
+2026-04-08 08:34:18,803 [INFO]    → 1 encontradas
+2026-04-08 08:34:25,718 [WARNING] HTTP 403 (intento 1)
+2026-04-08 08:34:39,064 [WARNING] HTTP 403 (intento 2)
+2026-04-08 08:35:03,695 [WARNING] HTTP 403 (intento 3)
+2026-04-08 08:35:33,710 [INFO]    Página 2/5
+2026-04-08 08:35:39,712 [WARNING]    Sin ofertas HTML — guardado en diagnostico/
+2026-04-08 08:35:39,712 [INFO]    → 0 encontradas
+2026-04-08 08:35:39,713 [INFO] CSV: 1 exportadas
+2026-04-08 08:35:39,713 [INFO] ✅ 'NLP Engineer': 1 guardadas
+2026-04-08 08:35:50,246 [INFO] 
+🔍 'Data Engineer'
+2026-04-08 08:35:50,247 [INFO]    Página 1/5
+2026-04-08 08:35:55,922 [INFO]    → 1 encontradas
+2026-04-08 08:36:01,175 [WARNING] HTTP 403 (intento 1)
+2026-04-08 08:36:15,434 [WARNING] HTTP 403 (intento 2)
+2026-04-08 08:36:39,445 [WARNING] HTTP 403 (intento 3)
+2026-04-08 08:37:09,452 [INFO]    Página 2/5
+2026-04-08 08:37:14,450 [WARNING]    Sin ofertas HTML — guardado en diagnostico/
+2026-04-08 08:37:14,450 [INFO]    → 0 encontradas
+2026-04-08 08:37:14,450 [INFO] CSV: 1 exportadas
+2026-04-08 08:37:14,450 [INFO] ✅ 'Data Engineer': 1 guardadas
+2026-04-08 08:37:22,781 [INFO] 
+🔍 'Software Engineer'
+2026-04-08 08:37:22,782 [INFO]    Página 1/5
+2026-04-08 08:37:28,255 [INFO]    → 1 encontradas
+2026-04-08 08:37:36,765 [WARNING] HTTP 403 (intento 1)
+2026-04-08 08:37:51,712 [WARNING] HTTP 403 (intento 2)
+2026-04-08 08:38:15,479 [WARNING] HTTP 403 (intento 3)
+2026-04-08 08:38:45,492 [INFO]    Página 2/5
+2026-04-08 08:38:50,985 [WARNING]    Sin ofertas HTML — guardado en diagnostico/
+2026-04-08 08:38:50,985 [INFO]    → 0 encontradas
+2026-04-08 08:38:50,986 [INFO] CSV: 1 exportadas
+2026-04-08 08:38:50,986 [INFO] ✅ 'Software Engineer': 1 guardadas
+2026-04-08 08:39:00,040 [INFO] 
+🔍 'Python Developer'
+2026-04-08 08:39:00,041 [INFO]    Página 1/5
+2026-04-08 08:39:05,162 [INFO]    → 1 encontradas
+2026-04-08 08:39:10,062 [WARNING] HTTP 403 (intento 1)
+2026-04-08 08:39:24,652 [WARNING] HTTP 403 (intento 2)
+2026-04-08 08:39:48,323 [WARNING] HTTP 403 (intento 3)
+2026-04-08 08:40:18,337 [INFO]    Página 2/5
+2026-04-08 08:40:23,644 [INFO]    → 1 encontradas
+2026-04-08 08:40:29,865 [WARNING] HTTP 403 (intento 1)
+2026-04-08 08:40:44,460 [WARNING] HTTP 403 (intento 2)
+2026-04-08 08:41:08,999 [WARNING] HTTP 403 (intento 3)
+2026-04-08 08:41:39,013 [INFO]    Página 3/5
+2026-04-08 08:41:44,115 [WARNING]    Sin ofertas HTML — guardado en diagnostico/
+2026-04-08 08:41:44,115 [INFO]    → 0 encontradas
+2026-04-08 08:41:44,116 [INFO] CSV: 2 exportadas
+2026-04-08 08:41:44,116 [INFO] ✅ 'Python Developer': 2 guardadas
+2026-04-08 08:41:52,384 [INFO] 
+🔍 'Desarrollador Backend'
+2026-04-08 08:41:52,385 [INFO]    Página 1/5
+2026-04-08 08:41:58,718 [INFO]    → 1 encontradas
+2026-04-08 08:42:05,534 [WARNING] HTTP 403 (intento 1)
+2026-04-08 08:42:19,779 [WARNING] HTTP 403 (intento 2)
+2026-04-08 08:42:44,797 [WARNING] HTTP 403 (intento 3)
+2026-04-08 08:43:14,811 [INFO]    Página 2/5
+2026-04-08 08:43:20,765 [WARNING]    Sin ofertas HTML — guardado en diagnostico/
+2026-04-08 08:43:20,765 [INFO]    → 0 encontradas
+2026-04-08 08:43:20,765 [INFO] CSV: 1 exportadas
+2026-04-08 08:43:20,765 [INFO] ✅ 'Desarrollador Backend': 1 guardadas
+2026-04-08 08:43:26,887 [INFO] 
+🔍 'Desarrollador Full Stack'
+2026-04-08 08:43:26,887 [INFO]    Página 1/5
+2026-04-08 08:43:32,248 [INFO]    → 1 encontradas
+2026-04-08 08:43:39,836 [WARNING] HTTP 403 (intento 1)
+2026-04-08 08:43:53,429 [WARNING] HTTP 403 (intento 2)
+2026-04-08 08:44:18,103 [WARNING] HTTP 403 (intento 3)
+2026-04-08 08:44:48,118 [INFO]    Página 2/5
+2026-04-08 08:44:52,331 [WARNING]    Sin ofertas HTML — guardado en diagnostico/
+2026-04-08 08:44:52,332 [INFO]    → 0 encontradas
+2026-04-08 08:44:52,332 [INFO] CSV: 1 exportadas
+2026-04-08 08:44:52,332 [INFO] ✅ 'Desarrollador Full Stack': 1 guardadas
+2026-04-08 08:45:01,537 [INFO] 
+🔍 'Ingeniero de Datos'
+2026-04-08 08:45:01,537 [INFO]    Página 1/5
+2026-04-08 08:45:05,807 [INFO]    → 1 encontradas
+2026-04-08 08:45:11,327 [WARNING] HTTP 403 (intento 1)
+2026-04-08 08:45:24,585 [WARNING] HTTP 403 (intento 2)
+2026-04-08 08:45:49,211 [WARNING] HTTP 403 (intento 3)
+2026-04-08 08:46:19,225 [INFO]    Página 2/5
+2026-04-08 08:46:23,221 [WARNING]    Sin ofertas HTML — guardado en diagnostico/
+2026-04-08 08:46:23,221 [INFO]    → 0 encontradas
+2026-04-08 08:46:23,222 [INFO] CSV: 1 exportadas
+2026-04-08 08:46:23,222 [INFO] ✅ 'Ingeniero de Datos': 1 guardadas
+2026-04-08 08:46:32,029 [INFO] 
+============================================================
+FINALIZADO — 11 ofertas

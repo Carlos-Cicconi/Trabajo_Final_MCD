@@ -1,0 +1,147 @@
+2026-03-30 23:42:56,029 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard.db
+2026-03-30 23:42:56,029 [INFO] GetOnBoardScraper inicializado
+2026-03-30 23:42:56,029 [INFO] ============================================================
+2026-03-30 23:42:56,029 [INFO] INICIO DEL SCRAPING - GetOnBoard (API JSON pública)
+2026-03-30 23:42:56,029 [INFO] Búsquedas: 10 | Páginas: 5
+2026-03-30 23:42:56,029 [INFO] ============================================================
+2026-03-30 23:42:56,029 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-03-30 23:42:56,029 [INFO]    Página 1/5
+2026-03-30 23:43:02,944 [INFO]    → 16 items recibidos de la API
+2026-03-30 23:43:02,945 [INFO]    Página 2/5
+2026-03-30 23:43:05,905 [INFO]    → 0 items recibidos de la API
+2026-03-30 23:43:05,905 [INFO]    → Sin más resultados.
+2026-03-30 23:43:05,905 [INFO] ✅ 'Data Scientist': 0 ofertas guardadas
+2026-03-30 23:43:05,906 [INFO]    💤 Pausa: 7.6s
+2026-03-30 23:43:13,549 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-03-30 23:43:13,549 [INFO]    Página 1/5
+2026-03-30 23:43:17,073 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:43:17,074 [INFO]    Página 2/5
+2026-03-30 23:43:19,224 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:43:19,225 [INFO]    Página 3/5
+2026-03-30 23:43:22,807 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:43:22,808 [INFO]    Página 4/5
+2026-03-30 23:43:26,085 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:43:26,086 [INFO]    Página 5/5
+2026-03-30 23:43:29,155 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:43:29,155 [INFO] ✅ 'Data Analyst': 0 ofertas guardadas
+2026-03-30 23:43:29,155 [INFO]    💤 Pausa: 4.3s
+2026-03-30 23:43:33,428 [INFO] 
+🔍 Buscando: 'Machine Learning'
+2026-03-30 23:43:33,428 [INFO]    Página 1/5
+2026-03-30 23:43:35,606 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:43:35,606 [INFO]    Página 2/5
+2026-03-30 23:43:38,681 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:43:38,682 [INFO]    Página 3/5
+2026-03-30 23:43:41,438 [INFO]    → 13 items recibidos de la API
+2026-03-30 23:43:41,439 [INFO]    Página 4/5
+2026-03-30 23:43:43,794 [INFO]    → 0 items recibidos de la API
+2026-03-30 23:43:43,794 [INFO]    → Sin más resultados.
+2026-03-30 23:43:43,794 [INFO] ✅ 'Machine Learning': 0 ofertas guardadas
+2026-03-30 23:43:43,795 [INFO]    💤 Pausa: 7.1s
+2026-03-30 23:43:50,910 [INFO] 
+🔍 Buscando: 'NLP'
+2026-03-30 23:43:50,911 [INFO]    Página 1/5
+2026-03-30 23:43:54,346 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:43:54,346 [INFO]    Página 2/5
+2026-03-30 23:43:57,727 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:43:57,728 [INFO]    Página 3/5
+2026-03-30 23:44:01,820 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:44:01,821 [INFO]    Página 4/5
+2026-03-30 23:44:04,382 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:44:04,383 [INFO]    Página 5/5
+2026-03-30 23:44:08,064 [INFO]    → 6 items recibidos de la API
+2026-03-30 23:44:08,065 [INFO] ✅ 'NLP': 0 ofertas guardadas
+2026-03-30 23:44:08,065 [INFO]    💤 Pausa: 7.9s
+2026-03-30 23:44:15,975 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-03-30 23:44:15,976 [INFO]    Página 1/5
+2026-03-30 23:44:19,537 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:44:19,538 [INFO]    Página 2/5
+2026-03-30 23:44:22,405 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:44:22,406 [INFO]    Página 3/5
+2026-03-30 23:44:25,066 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:44:25,066 [INFO]    Página 4/5
+2026-03-30 23:44:28,139 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:44:28,140 [INFO]    Página 5/5
+2026-03-30 23:44:32,025 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:44:32,025 [INFO] ✅ 'Data Engineer': 0 ofertas guardadas
+2026-03-30 23:44:32,025 [INFO]    💤 Pausa: 7.1s
+2026-03-30 23:44:39,106 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-03-30 23:44:39,106 [INFO]    Página 1/5
+2026-03-30 23:44:42,780 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:44:42,780 [INFO]    Página 2/5
+2026-03-30 23:44:46,777 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:44:46,778 [INFO]    Página 3/5
+2026-03-30 23:44:50,363 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:44:50,363 [INFO]    Página 4/5
+2026-03-30 23:44:54,356 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:44:54,357 [INFO]    Página 5/5
+2026-03-30 23:44:57,530 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:44:57,531 [INFO] ✅ 'Software Engineer': 0 ofertas guardadas
+2026-03-30 23:44:57,531 [INFO]    💤 Pausa: 6.4s
+2026-03-30 23:45:03,913 [INFO] 
+🔍 Buscando: 'Python'
+2026-03-30 23:45:03,914 [INFO]    Página 1/5
+2026-03-30 23:45:06,538 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:45:06,538 [INFO]    Página 2/5
+2026-03-30 23:45:08,690 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:45:08,690 [INFO]    Página 3/5
+2026-03-30 23:45:10,943 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:45:10,944 [INFO]    Página 4/5
+2026-03-30 23:45:13,606 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:45:13,607 [INFO]    Página 5/5
+2026-03-30 23:45:17,396 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:45:17,396 [INFO] ✅ 'Python': 0 ofertas guardadas
+2026-03-30 23:45:17,397 [INFO]    💤 Pausa: 6.1s
+2026-03-30 23:45:23,545 [INFO] 
+🔍 Buscando: 'Backend'
+2026-03-30 23:45:23,545 [INFO]    Página 1/5
+2026-03-30 23:45:26,818 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:45:26,819 [INFO]    Página 2/5
+2026-03-30 23:45:30,091 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:45:30,091 [INFO]    Página 3/5
+2026-03-30 23:45:33,574 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:45:33,575 [INFO]    Página 4/5
+2026-03-30 23:45:37,052 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:45:37,052 [INFO]    Página 5/5
+2026-03-30 23:45:39,114 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:45:39,115 [INFO] ✅ 'Backend': 0 ofertas guardadas
+2026-03-30 23:45:39,115 [INFO]    💤 Pausa: 5.0s
+2026-03-30 23:45:44,146 [INFO] 
+🔍 Buscando: 'Full Stack'
+2026-03-30 23:45:44,146 [INFO]    Página 1/5
+2026-03-30 23:45:47,296 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:45:47,296 [INFO]    Página 2/5
+2026-03-30 23:45:49,346 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:45:49,346 [INFO]    Página 3/5
+2026-03-30 23:45:53,236 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:45:53,237 [INFO]    Página 4/5
+2026-03-30 23:45:55,283 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:45:55,283 [INFO]    Página 5/5
+2026-03-30 23:45:59,073 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:45:59,074 [INFO] ✅ 'Full Stack': 0 ofertas guardadas
+2026-03-30 23:45:59,074 [INFO]    💤 Pausa: 5.1s
+2026-03-30 23:46:04,163 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-03-30 23:46:04,163 [INFO]    Página 1/5
+2026-03-30 23:46:06,445 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:46:06,446 [INFO]    Página 2/5
+2026-03-30 23:46:08,494 [INFO]    → 20 items recibidos de la API
+2026-03-30 23:46:08,494 [INFO]    Página 3/5
+2026-03-30 23:46:11,665 [INFO]    → 10 items recibidos de la API
+2026-03-30 23:46:11,665 [INFO]    Página 4/5
+2026-03-30 23:46:14,427 [INFO]    → 0 items recibidos de la API
+2026-03-30 23:46:14,428 [INFO]    → Sin más resultados.
+2026-03-30 23:46:14,428 [INFO] ✅ 'Ingeniero de Datos': 0 ofertas guardadas
+2026-03-30 23:46:14,428 [INFO]    💤 Pausa: 4.7s
+2026-03-30 23:46:19,100 [INFO] 
+============================================================
+2026-03-30 23:46:19,100 [INFO] SCRAPING FINALIZADO - GetOnBoard
+2026-03-30 23:46:19,100 [INFO] Total ofertas únicas: 0
+2026-03-30 23:46:19,101 [INFO] DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard.db
+2026-03-30 23:46:19,101 [INFO] CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/getonboard_20260330.csv
+2026-03-30 23:46:19,101 [INFO] Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/getonboard_scraper_20260330_234256.log
+2026-03-30 23:46:19,102 [INFO] ============================================================

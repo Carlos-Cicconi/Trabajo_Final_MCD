@@ -1,0 +1,103 @@
+2026-04-06 22:44:16,295 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_workana.db
+2026-04-06 22:44:16,295 [INFO] Detectando modo de acceso a Workana...
+2026-04-06 22:44:16,633 [INFO]   API https://www.workana.com/api/jobs → HTTP 404 | CT: text/html; charset=UTF-8
+2026-04-06 22:44:18,360 [INFO]   API https://www.workana.com/api/projects → HTTP 404 | CT: text/html; charset=UTF-8
+2026-04-06 22:44:20,136 [INFO]   API https://www.workana.com/api/v1/jobs → HTTP 404 | CT: text/html; charset=UTF-8
+2026-04-06 22:44:22,116 [INFO]   HTML jobs → HTTP 200 | 137,641 chars
+2026-04-06 22:44:22,118 [INFO]   HTML guardado en diagnostico/workana_html_test.html
+2026-04-06 22:44:22,119 [INFO]   JS-only:False | __NUXT__:False | __NEXT_DATA__:False
+2026-04-06 22:44:22,119 [INFO]   Fallback: usando Playwright.
+2026-04-06 22:44:22,120 [INFO] WorkanaScraper inicializado — modo: playwright
+2026-04-06 22:44:22,120 [INFO] ============================================================
+2026-04-06 22:44:22,120 [INFO] INICIO DEL SCRAPING - Workana (Playwright)
+2026-04-06 22:44:22,121 [INFO] ============================================================
+2026-04-06 22:44:23,201 [INFO] Inicializando sesión en Workana...
+2026-04-06 22:44:26,465 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-04-06 22:44:26,466 [INFO]    Página 1/5
+2026-04-06 22:44:45,641 [INFO]    HTML renderizado guardado en diagnostico/
+2026-04-06 22:44:45,683 [WARNING]    ⚠️  Sin ofertas. HTML guardado en diagnostico/
+2026-04-06 22:44:45,683 [INFO]    → 0 ofertas encontradas
+2026-04-06 22:44:45,683 [INFO]    → Sin más resultados.
+2026-04-06 22:44:45,683 [INFO] ✅ 'Data Scientist': 0 ofertas guardadas
+2026-04-06 22:44:45,683 [INFO]    💤 Pausa: 10.9s
+2026-04-06 22:44:56,589 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-04-06 22:44:56,590 [INFO]    Página 1/5
+2026-04-06 22:45:15,002 [WARNING]    ⚠️  Sin ofertas. HTML guardado en diagnostico/
+2026-04-06 22:45:15,003 [INFO]    → 0 ofertas encontradas
+2026-04-06 22:45:15,003 [INFO]    → Sin más resultados.
+2026-04-06 22:45:15,003 [INFO] ✅ 'Data Analyst': 0 ofertas guardadas
+2026-04-06 22:45:15,003 [INFO]    💤 Pausa: 9.7s
+2026-04-06 22:45:24,666 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer'
+2026-04-06 22:45:24,667 [INFO]    Página 1/5
+2026-04-06 22:45:45,153 [WARNING]    ⚠️  Sin ofertas. HTML guardado en diagnostico/
+2026-04-06 22:45:45,153 [INFO]    → 0 ofertas encontradas
+2026-04-06 22:45:45,153 [INFO]    → Sin más resultados.
+2026-04-06 22:45:45,153 [INFO] ✅ 'Machine Learning Engineer': 0 ofertas guardadas
+2026-04-06 22:45:45,153 [INFO]    💤 Pausa: 7.1s
+2026-04-06 22:45:52,291 [INFO] 
+🔍 Buscando: 'NLP Engineer'
+2026-04-06 22:45:52,291 [INFO]    Página 1/5
+2026-04-06 22:46:11,772 [WARNING]    ⚠️  Sin ofertas. HTML guardado en diagnostico/
+2026-04-06 22:46:11,772 [INFO]    → 0 ofertas encontradas
+2026-04-06 22:46:11,772 [INFO]    → Sin más resultados.
+2026-04-06 22:46:11,772 [INFO] ✅ 'NLP Engineer': 0 ofertas guardadas
+2026-04-06 22:46:11,773 [INFO]    💤 Pausa: 8.9s
+2026-04-06 22:46:20,634 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-04-06 22:46:20,634 [INFO]    Página 1/5
+2026-04-06 22:46:38,690 [WARNING]    ⚠️  Sin ofertas. HTML guardado en diagnostico/
+2026-04-06 22:46:38,690 [INFO]    → 0 ofertas encontradas
+2026-04-06 22:46:38,690 [INFO]    → Sin más resultados.
+2026-04-06 22:46:38,690 [INFO] ✅ 'Data Engineer': 0 ofertas guardadas
+2026-04-06 22:46:38,690 [INFO]    💤 Pausa: 7.2s
+2026-04-06 22:46:45,924 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-04-06 22:46:45,924 [INFO]    Página 1/5
+2026-04-06 22:47:04,916 [WARNING]    ⚠️  Sin ofertas. HTML guardado en diagnostico/
+2026-04-06 22:47:04,916 [INFO]    → 0 ofertas encontradas
+2026-04-06 22:47:04,916 [INFO]    → Sin más resultados.
+2026-04-06 22:47:04,916 [INFO] ✅ 'Python Developer': 0 ofertas guardadas
+2026-04-06 22:47:04,917 [INFO]    💤 Pausa: 10.8s
+2026-04-06 22:47:15,706 [INFO] 
+🔍 Buscando: 'Desarrollador Backend'
+2026-04-06 22:47:15,707 [INFO]    Página 1/5
+2026-04-06 22:47:35,569 [WARNING]    ⚠️  Sin ofertas. HTML guardado en diagnostico/
+2026-04-06 22:47:35,569 [INFO]    → 0 ofertas encontradas
+2026-04-06 22:47:35,570 [INFO]    → Sin más resultados.
+2026-04-06 22:47:35,570 [INFO] ✅ 'Desarrollador Backend': 0 ofertas guardadas
+2026-04-06 22:47:35,570 [INFO]    💤 Pausa: 7.2s
+2026-04-06 22:47:42,778 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack'
+2026-04-06 22:47:42,778 [INFO]    Página 1/5
+2026-04-06 22:48:02,477 [WARNING]    ⚠️  Sin ofertas. HTML guardado en diagnostico/
+2026-04-06 22:48:02,477 [INFO]    → 0 ofertas encontradas
+2026-04-06 22:48:02,477 [INFO]    → Sin más resultados.
+2026-04-06 22:48:02,477 [INFO] ✅ 'Desarrollador Full Stack': 0 ofertas guardadas
+2026-04-06 22:48:02,477 [INFO]    💤 Pausa: 9.7s
+2026-04-06 22:48:12,235 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-04-06 22:48:12,236 [INFO]    Página 1/5
+2026-04-06 22:48:30,275 [WARNING]    ⚠️  Sin ofertas. HTML guardado en diagnostico/
+2026-04-06 22:48:30,275 [INFO]    → 0 ofertas encontradas
+2026-04-06 22:48:30,276 [INFO]    → Sin más resultados.
+2026-04-06 22:48:30,276 [INFO] ✅ 'Software Engineer': 0 ofertas guardadas
+2026-04-06 22:48:30,276 [INFO]    💤 Pausa: 7.7s
+2026-04-06 22:48:37,938 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-04-06 22:48:37,939 [INFO]    Página 1/5
+2026-04-06 22:48:56,764 [WARNING]    ⚠️  Sin ofertas. HTML guardado en diagnostico/
+2026-04-06 22:48:56,764 [INFO]    → 0 ofertas encontradas
+2026-04-06 22:48:56,764 [INFO]    → Sin más resultados.
+2026-04-06 22:48:56,765 [INFO] ✅ 'Ingeniero de Datos': 0 ofertas guardadas
+2026-04-06 22:48:56,765 [INFO]    💤 Pausa: 8.4s
+2026-04-06 22:49:05,272 [INFO] 
+============================================================
+2026-04-06 22:49:05,273 [INFO] SCRAPING FINALIZADO - Workana
+2026-04-06 22:49:05,273 [INFO] Total ofertas únicas: 0
+2026-04-06 22:49:05,273 [INFO] DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_workana.db
+2026-04-06 22:49:05,273 [INFO] CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/workana_20260406.csv
+2026-04-06 22:49:05,273 [INFO] Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/workana_scraper_20260406_224416.log
+2026-04-06 22:49:05,273 [INFO] ============================================================

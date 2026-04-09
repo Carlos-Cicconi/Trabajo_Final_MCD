@@ -1,0 +1,115 @@
+2026-04-06 00:06:57,831 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs.db
+2026-04-06 00:06:57,832 [INFO] ZonaJobsScraper (Playwright) inicializado
+2026-04-06 00:06:59,916 [INFO] Inicializando sesión en ZonaJobs...
+2026-04-06 00:07:06,510 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-04-06 00:07:06,510 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-data-scientist.html
+2026-04-06 00:07:16,912 [INFO]    → 3 ofertas encontradas
+2026-04-06 00:07:42,381 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-data-scientist.html?page=2
+2026-04-06 00:08:04,160 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Data_Scientist.html
+2026-04-06 00:08:04,160 [INFO]    → 0 ofertas encontradas
+2026-04-06 00:08:04,160 [INFO]    → Sin más resultados.
+2026-04-06 00:08:04,161 [INFO] Exportadas 3 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/zonajobs_20260406.csv
+2026-04-06 00:08:04,161 [INFO] ✅ 'Data Scientist': 3 ofertas guardadas
+2026-04-06 00:08:04,161 [INFO]    💤 Pausa: 8.6s
+2026-04-06 00:08:12,773 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-04-06 00:08:12,773 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-data-analyst.html
+2026-04-06 00:08:22,843 [INFO]    → 2 ofertas encontradas
+2026-04-06 00:08:38,373 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-data-analyst.html?page=2
+2026-04-06 00:08:59,290 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Data_Analyst.html
+2026-04-06 00:08:59,291 [INFO]    → 0 ofertas encontradas
+2026-04-06 00:08:59,291 [INFO]    → Sin más resultados.
+2026-04-06 00:08:59,292 [INFO] Exportadas 2 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/zonajobs_20260406.csv
+2026-04-06 00:08:59,292 [INFO] ✅ 'Data Analyst': 2 ofertas guardadas
+2026-04-06 00:08:59,292 [INFO]    💤 Pausa: 8.0s
+2026-04-06 00:09:07,301 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer'
+2026-04-06 00:09:07,301 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-machine-learning.html
+2026-04-06 00:09:16,351 [INFO]    → 2 ofertas encontradas
+2026-04-06 00:09:34,508 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-machine-learning.html?page=2
+2026-04-06 00:09:55,613 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Machine_Learning_Engineer.html
+2026-04-06 00:09:55,614 [INFO]    → 0 ofertas encontradas
+2026-04-06 00:09:55,614 [INFO]    → Sin más resultados.
+2026-04-06 00:09:55,614 [INFO] Exportadas 2 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/zonajobs_20260406.csv
+2026-04-06 00:09:55,614 [INFO] ✅ 'Machine Learning Engineer': 2 ofertas guardadas
+2026-04-06 00:09:55,614 [INFO]    💤 Pausa: 9.4s
+2026-04-06 00:10:05,021 [INFO] 
+🔍 Buscando: 'NLP Engineer'
+2026-04-06 00:10:05,022 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-nlp.html
+2026-04-06 00:10:24,643 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_NLP_Engineer.html
+2026-04-06 00:10:24,643 [INFO]    → 0 ofertas encontradas
+2026-04-06 00:10:24,643 [INFO]    → Sin más resultados.
+2026-04-06 00:10:24,643 [INFO] ✅ 'NLP Engineer': 0 ofertas guardadas
+2026-04-06 00:10:24,643 [INFO]    💤 Pausa: 9.9s
+2026-04-06 00:10:34,570 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-04-06 00:10:34,570 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-data-engineer.html
+2026-04-06 00:10:43,692 [INFO]    → 6 ofertas encontradas
+2026-04-06 00:11:38,854 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-data-engineer.html?page=2
+2026-04-06 00:12:01,271 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Data_Engineer.html
+2026-04-06 00:12:01,271 [INFO]    → 0 ofertas encontradas
+2026-04-06 00:12:01,271 [INFO]    → Sin más resultados.
+2026-04-06 00:12:01,272 [INFO] Exportadas 6 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/zonajobs_20260406.csv
+2026-04-06 00:12:01,272 [INFO] ✅ 'Data Engineer': 6 ofertas guardadas
+2026-04-06 00:12:01,272 [INFO]    💤 Pausa: 11.5s
+2026-04-06 00:12:12,827 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-04-06 00:12:12,827 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-software-engineer.html
+2026-04-06 00:12:22,629 [INFO]    → 13 ofertas encontradas
+2026-04-06 00:14:08,956 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-software-engineer.html?page=2
+2026-04-06 00:14:29,856 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Software_Engineer.html
+2026-04-06 00:14:29,856 [INFO]    → 0 ofertas encontradas
+2026-04-06 00:14:29,856 [INFO]    → Sin más resultados.
+2026-04-06 00:14:29,857 [INFO] Exportadas 13 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/zonajobs_20260406.csv
+2026-04-06 00:14:29,857 [INFO] ✅ 'Software Engineer': 13 ofertas guardadas
+2026-04-06 00:14:29,858 [INFO]    💤 Pausa: 7.7s
+2026-04-06 00:14:37,572 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-04-06 00:14:37,572 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-python.html
+2026-04-06 00:14:48,411 [INFO]    → 7 ofertas encontradas
+2026-04-06 00:15:50,015 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-python.html?page=2
+2026-04-06 00:16:10,654 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Python_Developer.html
+2026-04-06 00:16:10,654 [INFO]    → 0 ofertas encontradas
+2026-04-06 00:16:10,654 [INFO]    → Sin más resultados.
+2026-04-06 00:16:10,655 [INFO] Exportadas 7 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/zonajobs_20260406.csv
+2026-04-06 00:16:10,655 [INFO] ✅ 'Python Developer': 7 ofertas guardadas
+2026-04-06 00:16:10,655 [INFO]    💤 Pausa: 9.7s
+2026-04-06 00:16:20,407 [INFO] 
+🔍 Buscando: 'Desarrollador Backend'
+2026-04-06 00:16:20,407 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-desarrollador-backend.html
+2026-04-06 00:16:42,076 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Desarrollador_Backend.html
+2026-04-06 00:16:42,076 [INFO]    → 0 ofertas encontradas
+2026-04-06 00:16:42,076 [INFO]    → Sin más resultados.
+2026-04-06 00:16:42,076 [INFO] ✅ 'Desarrollador Backend': 0 ofertas guardadas
+2026-04-06 00:16:42,077 [INFO]    💤 Pausa: 7.6s
+2026-04-06 00:16:49,698 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack'
+2026-04-06 00:16:49,699 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-desarrollador-full-stack.html
+2026-04-06 00:16:59,720 [INFO]    → 1 ofertas encontradas
+2026-04-06 00:17:09,185 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-desarrollador-full-stack.html?page=2
+2026-04-06 00:17:29,329 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Desarrollador_Full_Stack.html
+2026-04-06 00:17:29,329 [INFO]    → 0 ofertas encontradas
+2026-04-06 00:17:29,329 [INFO]    → Sin más resultados.
+2026-04-06 00:17:29,330 [INFO] Exportadas 1 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/zonajobs_20260406.csv
+2026-04-06 00:17:29,330 [INFO] ✅ 'Desarrollador Full Stack': 1 ofertas guardadas
+2026-04-06 00:17:29,330 [INFO]    💤 Pausa: 7.8s
+2026-04-06 00:17:37,144 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-04-06 00:17:37,145 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-ingeniero-de-datos.html
+2026-04-06 00:17:48,298 [INFO]    → 2 ofertas encontradas
+2026-04-06 00:18:05,773 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-ingeniero-de-datos.html?page=2
+2026-04-06 00:18:28,457 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Ingeniero_de_Datos.html
+2026-04-06 00:18:28,457 [INFO]    → 0 ofertas encontradas
+2026-04-06 00:18:28,457 [INFO]    → Sin más resultados.
+2026-04-06 00:18:28,458 [INFO] Exportadas 2 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/zonajobs_20260406.csv
+2026-04-06 00:18:28,458 [INFO] ✅ 'Ingeniero de Datos': 2 ofertas guardadas
+2026-04-06 00:18:28,458 [INFO]    💤 Pausa: 12.3s
+2026-04-06 00:18:40,838 [INFO] 
+============================================================
+2026-04-06 00:18:40,838 [INFO] SCRAPING FINALIZADO - ZonaJobs Argentina
+2026-04-06 00:18:40,838 [INFO] Total ofertas únicas: 36
+2026-04-06 00:18:40,839 [INFO] DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs.db
+2026-04-06 00:18:40,839 [INFO] CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/zonajobs_20260406.csv
+2026-04-06 00:18:40,839 [INFO] Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/zonajobs_scraper_20260406_000657.log
+2026-04-06 00:18:40,839 [INFO] ============================================================

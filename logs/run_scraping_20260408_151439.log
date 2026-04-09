@@ -1,0 +1,85 @@
+2026-04-08 15:14:39,765 [INFO] 
+=================================================================
+2026-04-08 15:14:39,766 [INFO]   ORQUESTADOR DE SCRAPING — Tesis MCD
+2026-04-08 15:14:39,766 [INFO]   Alumno: Cicconi, Carlos Alberto
+2026-04-08 15:14:39,766 [INFO]   Universidad Austral — Maestría en Explotación de Datos
+2026-04-08 15:14:39,766 [INFO] =================================================================
+2026-04-08 15:14:39,766 [INFO]   Fecha/hora inicio : 2026-04-08 15:14:39
+2026-04-08 15:14:39,766 [INFO]   Ventana temporal  : 90 días
+2026-04-08 15:14:39,766 [INFO]   Scrapers activos  : 10
+2026-04-08 15:14:39,766 [INFO]   Solo consolidar   : True
+2026-04-08 15:14:39,766 [INFO] 
+=================================================================
+2026-04-08 15:14:39,766 [INFO]   FASE 2: CONSOLIDACIÓN
+2026-04-08 15:14:39,766 [INFO] =================================================================
+2026-04-08 15:14:39,792 [INFO] Consolidado DB lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.db
+2026-04-08 15:14:39,792 [INFO] 
+  📂 Procesando: linkedin (ofertas_linkedin.db)
+2026-04-08 15:14:39,806 [INFO]   Leídas 362 ofertas de ofertas_linkedin.db
+2026-04-08 15:14:39,852 [INFO]   ✅ linkedin: leídas=362 | nuevas=317 | dup=0 | old=45
+2026-04-08 15:14:39,852 [INFO] 
+  📂 Procesando: computrabajo (ofertas_computrabajo.db)
+2026-04-08 15:14:39,855 [INFO]   Leídas 100 ofertas de ofertas_computrabajo.db
+2026-04-08 15:14:39,872 [INFO]   ✅ computrabajo: leídas=100 | nuevas=100 | dup=0 | old=0
+2026-04-08 15:14:39,872 [INFO] 
+  📂 Procesando: getonboard (ofertas_getonboard.db)
+2026-04-08 15:14:39,890 [INFO]   Leídas 427 ofertas de ofertas_getonboard.db
+2026-04-08 15:14:39,944 [INFO]   ✅ getonboard: leídas=427 | nuevas=382 | dup=0 | old=45
+2026-04-08 15:14:39,944 [INFO] 
+  📂 Procesando: bumeran (ofertas_bumeran.db)
+2026-04-08 15:14:39,947 [INFO]   Leídas 40 ofertas de ofertas_bumeran.db
+2026-04-08 15:14:39,964 [INFO]   ✅ bumeran: leídas=40 | nuevas=40 | dup=0 | old=0
+2026-04-08 15:14:39,964 [INFO] 
+  📂 Procesando: zonajobs (ofertas_zonajobs.db)
+2026-04-08 15:14:39,966 [INFO]   Leídas 36 ofertas de ofertas_zonajobs.db
+2026-04-08 15:14:39,981 [INFO]   ✅ zonajobs: leídas=36 | nuevas=36 | dup=0 | old=0
+2026-04-08 15:14:39,981 [INFO] 
+  📂 Procesando: workana (ofertas_workana.db)
+2026-04-08 15:14:39,983 [INFO]   Leídas 36 ofertas de ofertas_workana.db
+2026-04-08 15:14:39,990 [INFO]   ✅ workana: leídas=36 | nuevas=36 | dup=0 | old=0
+2026-04-08 15:14:39,991 [INFO] 
+  📂 Procesando: opcionempleo (ofertas_opcionempleo.db)
+2026-04-08 15:14:40,019 [INFO]   Leídas 941 ofertas de ofertas_opcionempleo.db
+2026-04-08 15:14:40,104 [INFO]   ✅ opcionempleo: leídas=941 | nuevas=941 | dup=0 | old=0
+2026-04-08 15:14:40,104 [INFO] 
+  📂 Procesando: jobomas (ofertas_jobomas.db)
+2026-04-08 15:14:40,105 [INFO]   Leídas 6 ofertas de ofertas_jobomas.db
+2026-04-08 15:14:40,116 [INFO]   ✅ jobomas: leídas=6 | nuevas=6 | dup=0 | old=0
+2026-04-08 15:14:40,116 [INFO] 
+  📂 Procesando: jobrapido (ofertas_jobrapido.db)
+2026-04-08 15:14:40,133 [INFO]   Leídas 670 ofertas de ofertas_jobrapido.db
+2026-04-08 15:14:40,163 [INFO]   ✅ jobrapido: leídas=670 | nuevas=670 | dup=0 | old=0
+2026-04-08 15:14:40,163 [INFO] 
+  📂 Procesando: jobleads (ofertas_jobleads.db)
+2026-04-08 15:14:40,166 [INFO]   Leídas 11 ofertas de ofertas_jobleads.db
+2026-04-08 15:14:40,173 [INFO]   ✅ jobleads: leídas=11 | nuevas=11 | dup=0 | old=0
+2026-04-08 15:14:40,395 [INFO]   CSV consolidado actualizado: +2,539 filas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.csv
+2026-04-08 15:14:40,395 [INFO] 
+=================================================================
+2026-04-08 15:14:40,395 [INFO]   RESUMEN FINAL
+2026-04-08 15:14:40,396 [INFO] =================================================================
+2026-04-08 15:14:40,396 [INFO]   Ofertas nuevas incorporadas : 2,539
+2026-04-08 15:14:40,396 [INFO]   Descartadas (antigüedad)    : 90
+2026-04-08 15:14:40,397 [INFO]   Descartadas (duplicado)     : 0
+2026-04-08 15:14:40,397 [INFO]   Total acumulado en DB       : 2,539
+2026-04-08 15:14:40,397 [INFO]   Ventana temporal aplicada   : últimos 90 días (desde 2026-01-08)
+2026-04-08 15:14:40,397 [INFO]   Duración total              : 0m 0s
+2026-04-08 15:14:40,397 [INFO] 
+  Archivos de salida:
+2026-04-08 15:14:40,397 [INFO]     DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.db
+2026-04-08 15:14:40,397 [INFO]     CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.csv
+2026-04-08 15:14:40,397 [INFO]     Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/run_scraping_20260408_151439.log
+2026-04-08 15:14:40,397 [INFO] 
+  Por fuente (consolidación):
+2026-04-08 15:14:40,397 [INFO]     linkedin       : nuevas=317 | dup=0 | old=45
+2026-04-08 15:14:40,397 [INFO]     computrabajo   : nuevas=100 | dup=0 | old=0
+2026-04-08 15:14:40,397 [INFO]     getonboard     : nuevas=382 | dup=0 | old=45
+2026-04-08 15:14:40,398 [INFO]     bumeran        : nuevas=40 | dup=0 | old=0
+2026-04-08 15:14:40,398 [INFO]     zonajobs       : nuevas=36 | dup=0 | old=0
+2026-04-08 15:14:40,398 [INFO]     workana        : nuevas=36 | dup=0 | old=0
+2026-04-08 15:14:40,398 [INFO]     opcionempleo   : nuevas=941 | dup=0 | old=0
+2026-04-08 15:14:40,398 [INFO]     jobomas        : nuevas=6 | dup=0 | old=0
+2026-04-08 15:14:40,398 [INFO]     jobrapido      : nuevas=670 | dup=0 | old=0
+2026-04-08 15:14:40,398 [INFO]     jobleads       : nuevas=11 | dup=0 | old=0
+2026-04-08 15:14:40,398 [INFO]     Reporte: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/run_20260408_151440.json
+2026-04-08 15:14:40,399 [INFO] =================================================================

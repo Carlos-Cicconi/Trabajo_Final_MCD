@@ -1,0 +1,102 @@
+2026-04-05 11:22:15,550 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_bumeran.db
+2026-04-05 11:22:15,551 [INFO] BumeranScraper (Playwright) inicializado
+2026-04-05 11:22:16,196 [INFO] Inicializando sesión en Bumeran...
+2026-04-05 11:22:34,367 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-04-05 11:22:34,368 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-data-scientist.html
+2026-04-05 11:22:54,414 [INFO]    → 0 ofertas encontradas
+2026-04-05 11:22:54,415 [INFO]    → Sin más resultados.
+2026-04-05 11:22:54,415 [INFO] ✅ 'Data Scientist': 0 ofertas guardadas
+2026-04-05 11:22:54,415 [INFO]    💤 Pausa: 8.7s
+2026-04-05 11:23:03,134 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-04-05 11:23:03,135 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-data-analyst.html
+2026-04-05 11:23:13,826 [INFO]    → 5 ofertas encontradas
+2026-04-05 11:23:58,121 [INFO]    Página 2/5 → https://www.bumeran.com.ar/empleos-busqueda-data-analyst.html?page=2
+2026-04-05 11:24:20,356 [INFO]    → 0 ofertas encontradas
+2026-04-05 11:24:20,356 [INFO]    → Sin más resultados.
+2026-04-05 11:24:20,357 [INFO] Exportadas 5 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/bumeran_20260405.csv
+2026-04-05 11:24:20,357 [INFO] ✅ 'Data Analyst': 5 ofertas guardadas
+2026-04-05 11:24:20,357 [INFO]    💤 Pausa: 8.0s
+2026-04-05 11:24:28,363 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer'
+2026-04-05 11:24:28,364 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-machine-learning.html
+2026-04-05 11:24:37,834 [INFO]    → 2 ofertas encontradas
+2026-04-05 11:24:55,155 [INFO]    Página 2/5 → https://www.bumeran.com.ar/empleos-busqueda-machine-learning.html?page=2
+2026-04-05 11:25:14,996 [INFO]    → 0 ofertas encontradas
+2026-04-05 11:25:14,996 [INFO]    → Sin más resultados.
+2026-04-05 11:25:14,997 [INFO] Exportadas 2 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/bumeran_20260405.csv
+2026-04-05 11:25:14,997 [INFO] ✅ 'Machine Learning Engineer': 2 ofertas guardadas
+2026-04-05 11:25:14,997 [INFO]    💤 Pausa: 10.1s
+2026-04-05 11:25:25,120 [INFO] 
+🔍 Buscando: 'NLP Engineer'
+2026-04-05 11:25:25,121 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-nlp.html
+2026-04-05 11:25:47,829 [INFO]    → 0 ofertas encontradas
+2026-04-05 11:25:47,830 [INFO]    → Sin más resultados.
+2026-04-05 11:25:47,830 [INFO] ✅ 'NLP Engineer': 0 ofertas guardadas
+2026-04-05 11:25:47,830 [INFO]    💤 Pausa: 7.9s
+2026-04-05 11:25:55,750 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-04-05 11:25:55,750 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-data-engineer.html
+2026-04-05 11:26:05,672 [INFO]    → 10 ofertas encontradas
+2026-04-05 11:27:27,135 [INFO]    Página 2/5 → https://www.bumeran.com.ar/empleos-busqueda-data-engineer.html?page=2
+2026-04-05 11:27:47,415 [INFO]    → 0 ofertas encontradas
+2026-04-05 11:27:47,415 [INFO]    → Sin más resultados.
+2026-04-05 11:27:47,416 [INFO] Exportadas 10 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/bumeran_20260405.csv
+2026-04-05 11:27:47,416 [INFO] ✅ 'Data Engineer': 10 ofertas guardadas
+2026-04-05 11:27:47,416 [INFO]    💤 Pausa: 12.3s
+2026-04-05 11:27:59,719 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-04-05 11:27:59,720 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-software-engineer.html
+2026-04-05 11:28:09,506 [INFO]    → 13 ofertas encontradas
+2026-04-05 11:30:01,574 [INFO]    Página 2/5 → https://www.bumeran.com.ar/empleos-busqueda-software-engineer.html?page=2
+2026-04-05 11:30:21,754 [INFO]    → 0 ofertas encontradas
+2026-04-05 11:30:21,754 [INFO]    → Sin más resultados.
+2026-04-05 11:30:21,755 [INFO] Exportadas 13 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/bumeran_20260405.csv
+2026-04-05 11:30:21,756 [INFO] ✅ 'Software Engineer': 13 ofertas guardadas
+2026-04-05 11:30:21,756 [INFO]    💤 Pausa: 9.5s
+2026-04-05 11:30:31,280 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-04-05 11:30:31,281 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-python.html
+2026-04-05 11:30:41,576 [INFO]    → 7 ofertas encontradas
+2026-04-05 11:31:39,572 [INFO]    Página 2/5 → https://www.bumeran.com.ar/empleos-busqueda-python.html?page=2
+2026-04-05 11:32:01,431 [INFO]    → 0 ofertas encontradas
+2026-04-05 11:32:01,431 [INFO]    → Sin más resultados.
+2026-04-05 11:32:01,432 [INFO] Exportadas 7 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/bumeran_20260405.csv
+2026-04-05 11:32:01,432 [INFO] ✅ 'Python Developer': 7 ofertas guardadas
+2026-04-05 11:32:01,433 [INFO]    💤 Pausa: 8.6s
+2026-04-05 11:32:10,049 [INFO] 
+🔍 Buscando: 'Desarrollador Backend'
+2026-04-05 11:32:10,049 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-desarrollador-backend.html
+2026-04-05 11:32:30,379 [INFO]    → 0 ofertas encontradas
+2026-04-05 11:32:30,379 [INFO]    → Sin más resultados.
+2026-04-05 11:32:30,380 [INFO] ✅ 'Desarrollador Backend': 0 ofertas guardadas
+2026-04-05 11:32:30,380 [INFO]    💤 Pausa: 11.3s
+2026-04-05 11:32:41,692 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack'
+2026-04-05 11:32:41,693 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-desarrollador-full-stack.html
+2026-04-05 11:32:52,408 [INFO]    → 1 ofertas encontradas
+2026-04-05 11:32:59,567 [INFO]    Página 2/5 → https://www.bumeran.com.ar/empleos-busqueda-desarrollador-full-stack.html?page=2
+2026-04-05 11:33:20,473 [INFO]    → 0 ofertas encontradas
+2026-04-05 11:33:20,474 [INFO]    → Sin más resultados.
+2026-04-05 11:33:20,474 [INFO] Exportadas 1 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/bumeran_20260405.csv
+2026-04-05 11:33:20,474 [INFO] ✅ 'Desarrollador Full Stack': 1 ofertas guardadas
+2026-04-05 11:33:20,475 [INFO]    💤 Pausa: 12.9s
+2026-04-05 11:33:33,410 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-04-05 11:33:33,411 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-ingeniero-de-datos.html
+2026-04-05 11:33:43,660 [INFO]    → 2 ofertas encontradas
+2026-04-05 11:34:00,211 [INFO]    Página 2/5 → https://www.bumeran.com.ar/empleos-busqueda-ingeniero-de-datos.html?page=2
+2026-04-05 11:34:22,147 [INFO]    → 0 ofertas encontradas
+2026-04-05 11:34:22,147 [INFO]    → Sin más resultados.
+2026-04-05 11:34:22,148 [INFO] Exportadas 2 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/bumeran_20260405.csv
+2026-04-05 11:34:22,148 [INFO] ✅ 'Ingeniero de Datos': 2 ofertas guardadas
+2026-04-05 11:34:22,148 [INFO]    💤 Pausa: 12.5s
+2026-04-05 11:34:34,709 [INFO] 
+============================================================
+2026-04-05 11:34:34,710 [INFO] SCRAPING FINALIZADO - Bumeran Argentina
+2026-04-05 11:34:34,710 [INFO] Total ofertas únicas: 40
+2026-04-05 11:34:34,710 [INFO] DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_bumeran.db
+2026-04-05 11:34:34,710 [INFO] CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/bumeran_20260405.csv
+2026-04-05 11:34:34,710 [INFO] Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/bumeran_scraper_20260405_112215.log
+2026-04-05 11:34:34,710 [INFO] ============================================================

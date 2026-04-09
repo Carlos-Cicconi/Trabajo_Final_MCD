@@ -1,0 +1,91 @@
+2026-04-05 11:06:08,212 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_bumeran.db
+2026-04-05 11:06:08,212 [INFO] BumeranScraper (Playwright) inicializado
+2026-04-05 11:06:09,311 [INFO] Inicializando sesión en Bumeran...
+2026-04-05 11:06:14,138 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-04-05 11:06:14,138 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-data-scientist.html
+2026-04-05 11:06:38,296 [WARNING]    ⚠️  Sin ofertas. HTML renderizado guardado en diagnostico/
+2026-04-05 11:06:38,296 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-05 11:06:38,297 [INFO]    → Sin más resultados.
+2026-04-05 11:06:38,297 [INFO] ✅ 'Data Scientist': 0 ofertas guardadas
+2026-04-05 11:06:38,297 [INFO]    💤 Pausa: 7.3s
+2026-04-05 11:06:45,646 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-04-05 11:06:45,646 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-data-analyst.html
+2026-04-05 11:07:09,532 [WARNING]    ⚠️  Sin ofertas. HTML renderizado guardado en diagnostico/
+2026-04-05 11:07:09,532 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-05 11:07:09,532 [INFO]    → Sin más resultados.
+2026-04-05 11:07:09,533 [INFO] ✅ 'Data Analyst': 0 ofertas guardadas
+2026-04-05 11:07:09,533 [INFO]    💤 Pausa: 7.8s
+2026-04-05 11:07:17,308 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer'
+2026-04-05 11:07:17,309 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-machine-learning.html
+2026-04-05 11:07:39,791 [WARNING]    ⚠️  Sin ofertas. HTML renderizado guardado en diagnostico/
+2026-04-05 11:07:39,791 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-05 11:07:39,792 [INFO]    → Sin más resultados.
+2026-04-05 11:07:39,792 [INFO] ✅ 'Machine Learning Engineer': 0 ofertas guardadas
+2026-04-05 11:07:39,792 [INFO]    💤 Pausa: 12.3s
+2026-04-05 11:07:52,086 [INFO] 
+🔍 Buscando: 'NLP Engineer'
+2026-04-05 11:07:52,087 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-nlp.html
+2026-04-05 11:08:14,777 [WARNING]    ⚠️  Sin ofertas. HTML renderizado guardado en diagnostico/
+2026-04-05 11:08:14,777 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-05 11:08:14,777 [INFO]    → Sin más resultados.
+2026-04-05 11:08:14,777 [INFO] ✅ 'NLP Engineer': 0 ofertas guardadas
+2026-04-05 11:08:14,777 [INFO]    💤 Pausa: 11.5s
+2026-04-05 11:08:26,318 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-04-05 11:08:26,319 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-data-engineer.html
+2026-04-05 11:08:49,644 [WARNING]    ⚠️  Sin ofertas. HTML renderizado guardado en diagnostico/
+2026-04-05 11:08:49,644 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-05 11:08:49,644 [INFO]    → Sin más resultados.
+2026-04-05 11:08:49,644 [INFO] ✅ 'Data Engineer': 0 ofertas guardadas
+2026-04-05 11:08:49,645 [INFO]    💤 Pausa: 12.8s
+2026-04-05 11:09:02,442 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-04-05 11:09:02,442 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-software-engineer.html
+2026-04-05 11:09:26,857 [WARNING]    ⚠️  Sin ofertas. HTML renderizado guardado en diagnostico/
+2026-04-05 11:09:26,858 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-05 11:09:26,858 [INFO]    → Sin más resultados.
+2026-04-05 11:09:26,858 [INFO] ✅ 'Software Engineer': 0 ofertas guardadas
+2026-04-05 11:09:26,858 [INFO]    💤 Pausa: 8.0s
+2026-04-05 11:09:34,829 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-04-05 11:09:34,829 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-python.html
+2026-04-05 11:09:59,329 [WARNING]    ⚠️  Sin ofertas. HTML renderizado guardado en diagnostico/
+2026-04-05 11:09:59,330 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-05 11:09:59,330 [INFO]    → Sin más resultados.
+2026-04-05 11:09:59,330 [INFO] ✅ 'Python Developer': 0 ofertas guardadas
+2026-04-05 11:09:59,330 [INFO]    💤 Pausa: 9.4s
+2026-04-05 11:10:08,720 [INFO] 
+🔍 Buscando: 'Desarrollador Backend'
+2026-04-05 11:10:08,720 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-desarrollador-backend.html
+2026-04-05 11:10:31,870 [WARNING]    ⚠️  Sin ofertas. HTML renderizado guardado en diagnostico/
+2026-04-05 11:10:31,870 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-05 11:10:31,870 [INFO]    → Sin más resultados.
+2026-04-05 11:10:31,870 [INFO] ✅ 'Desarrollador Backend': 0 ofertas guardadas
+2026-04-05 11:10:31,870 [INFO]    💤 Pausa: 9.1s
+2026-04-05 11:10:41,015 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack'
+2026-04-05 11:10:41,015 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-desarrollador-full-stack.html
+2026-04-05 11:11:06,014 [WARNING]    ⚠️  Sin ofertas. HTML renderizado guardado en diagnostico/
+2026-04-05 11:11:06,014 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-05 11:11:06,014 [INFO]    → Sin más resultados.
+2026-04-05 11:11:06,016 [INFO] ✅ 'Desarrollador Full Stack': 0 ofertas guardadas
+2026-04-05 11:11:06,016 [INFO]    💤 Pausa: 10.8s
+2026-04-05 11:11:16,869 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-04-05 11:11:16,869 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-ingeniero-de-datos.html
+2026-04-05 11:11:40,499 [WARNING]    ⚠️  Sin ofertas. HTML renderizado guardado en diagnostico/
+2026-04-05 11:11:40,499 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-05 11:11:40,499 [INFO]    → Sin más resultados.
+2026-04-05 11:11:40,499 [INFO] ✅ 'Ingeniero de Datos': 0 ofertas guardadas
+2026-04-05 11:11:40,499 [INFO]    💤 Pausa: 9.1s
+2026-04-05 11:11:49,623 [INFO] 
+============================================================
+2026-04-05 11:11:49,623 [INFO] SCRAPING FINALIZADO - Bumeran Argentina
+2026-04-05 11:11:49,623 [INFO] Total ofertas únicas: 0
+2026-04-05 11:11:49,623 [INFO] DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_bumeran.db
+2026-04-05 11:11:49,624 [INFO] CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/bumeran_20260405.csv
+2026-04-05 11:11:49,624 [INFO] Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/bumeran_scraper_20260405_110608.log
+2026-04-05 11:11:49,624 [INFO] ============================================================

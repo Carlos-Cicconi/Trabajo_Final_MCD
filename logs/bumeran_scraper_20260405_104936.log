@@ -1,0 +1,91 @@
+2026-04-05 10:49:36,543 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_bumeran.db
+2026-04-05 10:49:36,543 [INFO] Detectando modo de acceso a Bumeran...
+2026-04-05 10:49:36,871 [INFO]   API test → HTTP 404 | Content-Type: application/json; charset=utf-8
+2026-04-05 10:49:37,051 [INFO]   Alt API https://www.bumeran.com.ar/api/search?keyword=python&page=1 → HTTP 404
+2026-04-05 10:49:37,230 [INFO]   Alt API https://www.bumeran.com.ar/api/jobs?q=python&country=AR → HTTP 404
+2026-04-05 10:49:37,258 [INFO]   API no disponible. Usando modo HTML.
+2026-04-05 10:49:37,618 [INFO]   HTML test → HTTP 200 | 63740 chars
+2026-04-05 10:49:37,619 [INFO]   HTML de prueba guardado en: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/diagnostico/bumeran_html_test.html
+2026-04-05 10:49:37,620 [INFO] BumeranScraper inicializado — modo: html
+2026-04-05 10:49:37,622 [INFO] ============================================================
+2026-04-05 10:49:37,623 [INFO] INICIO DEL SCRAPING - Bumeran Argentina (modo: html)
+2026-04-05 10:49:37,625 [INFO] Búsquedas: 10 | Páginas: 5
+2026-04-05 10:49:37,626 [INFO] ============================================================
+2026-04-05 10:49:37,626 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-04-05 10:49:37,626 [INFO]    Página 1/5
+2026-04-05 10:49:40,675 [INFO]    → 0 ofertas parseadas del HTML
+2026-04-05 10:49:40,675 [INFO]    → Sin más resultados.
+2026-04-05 10:49:40,675 [INFO] ✅ 'Data Scientist': 0 ofertas guardadas
+2026-04-05 10:49:40,676 [INFO]    💤 Pausa: 10.9s
+2026-04-05 10:49:51,541 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-04-05 10:49:51,541 [INFO]    Página 1/5
+2026-04-05 10:49:55,410 [INFO]    → 0 ofertas parseadas del HTML
+2026-04-05 10:49:55,410 [INFO]    → Sin más resultados.
+2026-04-05 10:49:55,410 [INFO] ✅ 'Data Analyst': 0 ofertas guardadas
+2026-04-05 10:49:55,411 [INFO]    💤 Pausa: 9.9s
+2026-04-05 10:50:05,318 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer'
+2026-04-05 10:50:05,318 [INFO]    Página 1/5
+2026-04-05 10:50:09,541 [INFO]    → 0 ofertas parseadas del HTML
+2026-04-05 10:50:09,542 [INFO]    → Sin más resultados.
+2026-04-05 10:50:09,542 [INFO] ✅ 'Machine Learning Engineer': 0 ofertas guardadas
+2026-04-05 10:50:09,542 [INFO]    💤 Pausa: 10.2s
+2026-04-05 10:50:19,706 [INFO] 
+🔍 Buscando: 'NLP Engineer'
+2026-04-05 10:50:19,706 [INFO]    Página 1/5
+2026-04-05 10:50:24,640 [INFO]    → 0 ofertas parseadas del HTML
+2026-04-05 10:50:24,640 [INFO]    → Sin más resultados.
+2026-04-05 10:50:24,641 [INFO] ✅ 'NLP Engineer': 0 ofertas guardadas
+2026-04-05 10:50:24,641 [INFO]    💤 Pausa: 11.0s
+2026-04-05 10:50:35,641 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-04-05 10:50:35,642 [INFO]    Página 1/5
+2026-04-05 10:50:40,977 [INFO]    → 0 ofertas parseadas del HTML
+2026-04-05 10:50:40,978 [INFO]    → Sin más resultados.
+2026-04-05 10:50:40,978 [INFO] ✅ 'Data Engineer': 0 ofertas guardadas
+2026-04-05 10:50:40,978 [INFO]    💤 Pausa: 9.5s
+2026-04-05 10:50:50,441 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-04-05 10:50:50,441 [INFO]    Página 1/5
+2026-04-05 10:50:54,427 [INFO]    → 0 ofertas parseadas del HTML
+2026-04-05 10:50:54,427 [INFO]    → Sin más resultados.
+2026-04-05 10:50:54,428 [INFO] ✅ 'Software Engineer': 0 ofertas guardadas
+2026-04-05 10:50:54,428 [INFO]    💤 Pausa: 9.7s
+2026-04-05 10:51:04,124 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-04-05 10:51:04,124 [INFO]    Página 1/5
+2026-04-05 10:51:07,031 [INFO]    → 0 ofertas parseadas del HTML
+2026-04-05 10:51:07,031 [INFO]    → Sin más resultados.
+2026-04-05 10:51:07,031 [INFO] ✅ 'Python Developer': 0 ofertas guardadas
+2026-04-05 10:51:07,031 [INFO]    💤 Pausa: 9.1s
+2026-04-05 10:51:16,150 [INFO] 
+🔍 Buscando: 'Desarrollador Backend'
+2026-04-05 10:51:16,150 [INFO]    Página 1/5
+2026-04-05 10:51:19,522 [INFO]    → 0 ofertas parseadas del HTML
+2026-04-05 10:51:19,523 [INFO]    → Sin más resultados.
+2026-04-05 10:51:19,523 [INFO] ✅ 'Desarrollador Backend': 0 ofertas guardadas
+2026-04-05 10:51:19,523 [INFO]    💤 Pausa: 7.5s
+2026-04-05 10:51:27,018 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack'
+2026-04-05 10:51:27,018 [INFO]    Página 1/5
+2026-04-05 10:51:31,845 [INFO]    → 0 ofertas parseadas del HTML
+2026-04-05 10:51:31,846 [INFO]    → Sin más resultados.
+2026-04-05 10:51:31,846 [INFO] ✅ 'Desarrollador Full Stack': 0 ofertas guardadas
+2026-04-05 10:51:31,846 [INFO]    💤 Pausa: 7.8s
+2026-04-05 10:51:39,655 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-04-05 10:51:39,656 [INFO]    Página 1/5
+2026-04-05 10:51:44,261 [INFO]    → 0 ofertas parseadas del HTML
+2026-04-05 10:51:44,262 [INFO]    → Sin más resultados.
+2026-04-05 10:51:44,262 [INFO] ✅ 'Ingeniero de Datos': 0 ofertas guardadas
+2026-04-05 10:51:44,262 [INFO]    💤 Pausa: 7.9s
+2026-04-05 10:51:52,159 [INFO] 
+============================================================
+2026-04-05 10:51:52,160 [INFO] SCRAPING FINALIZADO - Bumeran Argentina
+2026-04-05 10:51:52,160 [INFO] Total ofertas únicas: 0
+2026-04-05 10:51:52,161 [INFO] DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_bumeran.db
+2026-04-05 10:51:52,161 [INFO] CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/bumeran_20260405.csv
+2026-04-05 10:51:52,162 [INFO] Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/bumeran_scraper_20260405_104936.log
+2026-04-05 10:51:52,162 [INFO] ============================================================

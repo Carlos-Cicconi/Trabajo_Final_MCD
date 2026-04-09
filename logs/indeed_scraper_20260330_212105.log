@@ -1,0 +1,6 @@
+2026-03-30 21:21:05,909 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_indeed.db
+2026-03-30 21:21:05,909 [INFO] IndeedScraper (Playwright) inicializado
+2026-03-30 21:21:06,688 [INFO] Inicializando sesión en Indeed...
+2026-03-30 21:21:13,531 [INFO] 
+🔍 Buscando: 'Data Scientist' en 'Argentina'
+2026-03-30 21:21:13,532 [INFO]    Página 1/5 → https://ar.indeed.com/jobs?q=Data+Scientist&l=Argentina&start=0&sort=date&fromage=30

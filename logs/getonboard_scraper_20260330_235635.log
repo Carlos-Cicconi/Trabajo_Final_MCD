@@ -1,0 +1,199 @@
+2026-03-30 23:56:35,147 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard.db
+2026-03-30 23:56:35,147 [INFO] GetOnBoardScraper inicializado
+2026-03-30 23:56:35,148 [INFO] ============================================================
+2026-03-30 23:56:35,148 [INFO] INICIO DEL SCRAPING - GetOnBoard (API JSON)
+2026-03-30 23:56:35,148 [INFO] Búsquedas: 10 | Páginas: 5
+2026-03-30 23:56:35,148 [INFO] ============================================================
+2026-03-30 23:56:35,148 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-03-30 23:56:35,148 [INFO]    Página 1/5
+2026-03-30 23:56:38,471 [INFO]    → 16 items recibidos
+2026-03-30 23:56:38,558 [INFO]    → 16 ofertas nuevas guardadas en esta página
+2026-03-30 23:56:38,558 [INFO]    Página 2/5
+2026-03-30 23:56:41,333 [INFO]    → 0 items recibidos
+2026-03-30 23:56:41,333 [INFO]    → Sin más resultados.
+2026-03-30 23:56:41,339 [INFO] Exportadas 16 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/getonboard_20260330.csv
+2026-03-30 23:56:41,339 [INFO] ✅ 'Data Scientist': 16 ofertas guardadas
+2026-03-30 23:56:41,340 [INFO]    💤 Pausa: 7.9s
+2026-03-30 23:56:49,250 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-03-30 23:56:49,251 [INFO]    Página 1/5
+2026-03-30 23:56:51,274 [INFO]    → 20 items recibidos
+2026-03-30 23:56:51,378 [INFO]    → 17 ofertas nuevas guardadas en esta página
+2026-03-30 23:56:51,378 [INFO]    Página 2/5
+2026-03-30 23:56:54,137 [INFO]    → 20 items recibidos
+2026-03-30 23:56:54,244 [INFO]    → 20 ofertas nuevas guardadas en esta página
+2026-03-30 23:56:54,245 [INFO]    Página 3/5
+2026-03-30 23:56:57,824 [INFO]    → 20 items recibidos
+2026-03-30 23:56:57,929 [INFO]    → 20 ofertas nuevas guardadas en esta página
+2026-03-30 23:56:57,929 [INFO]    Página 4/5
+2026-03-30 23:57:01,204 [INFO]    → 20 items recibidos
+2026-03-30 23:57:01,294 [INFO]    → 17 ofertas nuevas guardadas en esta página
+2026-03-30 23:57:01,295 [INFO]    Página 5/5
+2026-03-30 23:57:04,074 [INFO]    → 20 items recibidos
+2026-03-30 23:57:04,188 [INFO]    → 20 ofertas nuevas guardadas en esta página
+2026-03-30 23:57:04,198 [INFO] Exportadas 94 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/getonboard_20260330.csv
+2026-03-30 23:57:04,198 [INFO] ✅ 'Data Analyst': 94 ofertas guardadas
+2026-03-30 23:57:04,198 [INFO]    💤 Pausa: 4.4s
+2026-03-30 23:57:08,637 [INFO] 
+🔍 Buscando: 'Machine Learning'
+2026-03-30 23:57:08,638 [INFO]    Página 1/5
+2026-03-30 23:57:11,040 [INFO]    → 20 items recibidos
+2026-03-30 23:57:11,111 [INFO]    → 11 ofertas nuevas guardadas en esta página
+2026-03-30 23:57:11,112 [INFO]    Página 2/5
+2026-03-30 23:57:13,700 [INFO]    → 20 items recibidos
+2026-03-30 23:57:13,771 [INFO]    → 11 ofertas nuevas guardadas en esta página
+2026-03-30 23:57:13,771 [INFO]    Página 3/5
+2026-03-30 23:57:16,052 [INFO]    → 13 items recibidos
+2026-03-30 23:57:16,127 [INFO]    → 12 ofertas nuevas guardadas en esta página
+2026-03-30 23:57:16,127 [INFO]    Página 4/5
+2026-03-30 23:57:19,528 [INFO]    → 0 items recibidos
+2026-03-30 23:57:19,529 [INFO]    → Sin más resultados.
+2026-03-30 23:57:19,532 [INFO] Exportadas 34 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/getonboard_20260330.csv
+2026-03-30 23:57:19,532 [INFO] ✅ 'Machine Learning': 34 ofertas guardadas
+2026-03-30 23:57:19,533 [INFO]    💤 Pausa: 4.7s
+2026-03-30 23:57:24,192 [INFO] 
+🔍 Buscando: 'NLP'
+2026-03-30 23:57:24,192 [INFO]    Página 1/5
+2026-03-30 23:57:27,724 [INFO]    → 20 items recibidos
+2026-03-30 23:57:27,784 [INFO]    → 9 ofertas nuevas guardadas en esta página
+2026-03-30 23:57:27,785 [INFO]    Página 2/5
+2026-03-30 23:57:30,179 [INFO]    → 20 items recibidos
+2026-03-30 23:57:30,255 [INFO]    → 14 ofertas nuevas guardadas en esta página
+2026-03-30 23:57:30,255 [INFO]    Página 3/5
+2026-03-30 23:57:32,948 [INFO]    → 20 items recibidos
+2026-03-30 23:57:33,030 [INFO]    → 16 ofertas nuevas guardadas en esta página
+2026-03-30 23:57:33,030 [INFO]    Página 4/5
+2026-03-30 23:57:36,739 [INFO]    → 20 items recibidos
+2026-03-30 23:57:36,854 [INFO]    → 20 ofertas nuevas guardadas en esta página
+2026-03-30 23:57:36,854 [INFO]    Página 5/5
+2026-03-30 23:57:40,725 [INFO]    → 6 items recibidos
+2026-03-30 23:57:40,761 [INFO]    → 4 ofertas nuevas guardadas en esta página
+2026-03-30 23:57:40,772 [INFO] Exportadas 63 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/getonboard_20260330.csv
+2026-03-30 23:57:40,772 [INFO] ✅ 'NLP': 63 ofertas guardadas
+2026-03-30 23:57:40,773 [INFO]    💤 Pausa: 4.1s
+2026-03-30 23:57:44,850 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-03-30 23:57:44,850 [INFO]    Página 1/5
+2026-03-30 23:57:47,591 [INFO]    → 20 items recibidos
+2026-03-30 23:57:47,612 [INFO]    → 4 ofertas nuevas guardadas en esta página
+2026-03-30 23:57:47,613 [INFO]    Página 2/5
+2026-03-30 23:57:49,740 [INFO]    → 20 items recibidos
+2026-03-30 23:57:49,767 [INFO]    → 4 ofertas nuevas guardadas en esta página
+2026-03-30 23:57:49,767 [INFO]    Página 3/5
+2026-03-30 23:57:52,813 [INFO]    → 20 items recibidos
+2026-03-30 23:57:52,845 [INFO]    → 5 ofertas nuevas guardadas en esta página
+2026-03-30 23:57:52,845 [INFO]    Página 4/5
+2026-03-30 23:57:55,885 [INFO]    → 20 items recibidos
+2026-03-30 23:57:55,949 [INFO]    → 10 ofertas nuevas guardadas en esta página
+2026-03-30 23:57:55,950 [INFO]    Página 5/5
+2026-03-30 23:57:59,458 [INFO]    → 20 items recibidos
+2026-03-30 23:57:59,522 [INFO]    → 12 ofertas nuevas guardadas en esta página
+2026-03-30 23:57:59,525 [INFO] Exportadas 35 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/getonboard_20260330.csv
+2026-03-30 23:57:59,525 [INFO] ✅ 'Data Engineer': 35 ofertas guardadas
+2026-03-30 23:57:59,526 [INFO]    💤 Pausa: 8.0s
+2026-03-30 23:58:07,521 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-03-30 23:58:07,521 [INFO]    Página 1/5
+2026-03-30 23:58:10,224 [INFO]    → 20 items recibidos
+2026-03-30 23:58:10,301 [INFO]    → 13 ofertas nuevas guardadas en esta página
+2026-03-30 23:58:10,301 [INFO]    Página 2/5
+2026-03-30 23:58:14,013 [INFO]    → 20 items recibidos
+2026-03-30 23:58:14,072 [INFO]    → 8 ofertas nuevas guardadas en esta página
+2026-03-30 23:58:14,072 [INFO]    Página 3/5
+2026-03-30 23:58:18,004 [INFO]    → 20 items recibidos
+2026-03-30 23:58:18,051 [INFO]    → 9 ofertas nuevas guardadas en esta página
+2026-03-30 23:58:18,052 [INFO]    Página 4/5
+2026-03-30 23:58:20,361 [INFO]    → 20 items recibidos
+2026-03-30 23:58:20,430 [INFO]    → 11 ofertas nuevas guardadas en esta página
+2026-03-30 23:58:20,431 [INFO]    Página 5/5
+2026-03-30 23:58:23,435 [INFO]    → 20 items recibidos
+2026-03-30 23:58:23,510 [INFO]    → 11 ofertas nuevas guardadas en esta página
+2026-03-30 23:58:23,518 [INFO] Exportadas 52 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/getonboard_20260330.csv
+2026-03-30 23:58:23,519 [INFO] ✅ 'Software Engineer': 52 ofertas guardadas
+2026-03-30 23:58:23,519 [INFO]    💤 Pausa: 4.6s
+2026-03-30 23:58:28,117 [INFO] 
+🔍 Buscando: 'Python'
+2026-03-30 23:58:28,118 [INFO]    Página 1/5
+2026-03-30 23:58:30,297 [INFO]    → 20 items recibidos
+2026-03-30 23:58:30,358 [INFO]    → 10 ofertas nuevas guardadas en esta página
+2026-03-30 23:58:30,358 [INFO]    Página 2/5
+2026-03-30 23:58:32,647 [INFO]    → 20 items recibidos
+2026-03-30 23:58:32,679 [INFO]    → 5 ofertas nuevas guardadas en esta página
+2026-03-30 23:58:32,679 [INFO]    Página 3/5
+2026-03-30 23:58:36,437 [INFO]    → 20 items recibidos
+2026-03-30 23:58:36,478 [INFO]    → 5 ofertas nuevas guardadas en esta página
+2026-03-30 23:58:36,478 [INFO]    Página 4/5
+2026-03-30 23:58:38,996 [INFO]    → 20 items recibidos
+2026-03-30 23:58:39,033 [INFO]    → 6 ofertas nuevas guardadas en esta página
+2026-03-30 23:58:39,033 [INFO]    Página 5/5
+2026-03-30 23:58:42,068 [INFO]    → 20 items recibidos
+2026-03-30 23:58:42,104 [INFO]    → 6 ofertas nuevas guardadas en esta página
+2026-03-30 23:58:42,107 [INFO] Exportadas 32 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/getonboard_20260330.csv
+2026-03-30 23:58:42,107 [INFO] ✅ 'Python': 32 ofertas guardadas
+2026-03-30 23:58:42,108 [INFO]    💤 Pausa: 6.0s
+2026-03-30 23:58:48,146 [INFO] 
+🔍 Buscando: 'Backend'
+2026-03-30 23:58:48,146 [INFO]    Página 1/5
+2026-03-30 23:58:50,160 [INFO]    → 20 items recibidos
+2026-03-30 23:58:50,221 [INFO]    → 9 ofertas nuevas guardadas en esta página
+2026-03-30 23:58:50,222 [INFO]    Página 2/5
+2026-03-30 23:58:52,412 [INFO]    → 20 items recibidos
+2026-03-30 23:58:52,463 [INFO]    → 8 ofertas nuevas guardadas en esta página
+2026-03-30 23:58:52,463 [INFO]    Página 3/5
+2026-03-30 23:58:56,406 [INFO]    → 20 items recibidos
+2026-03-30 23:58:56,460 [INFO]    → 7 ofertas nuevas guardadas en esta página
+2026-03-30 23:58:56,460 [INFO]    Página 4/5
+2026-03-30 23:59:00,292 [INFO]    → 20 items recibidos
+2026-03-30 23:59:00,334 [INFO]    → 8 ofertas nuevas guardadas en esta página
+2026-03-30 23:59:00,334 [INFO]    Página 5/5
+2026-03-30 23:59:02,869 [INFO]    → 20 items recibidos
+2026-03-30 23:59:02,904 [INFO]    → 7 ofertas nuevas guardadas en esta página
+2026-03-30 23:59:02,907 [INFO] Exportadas 39 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/getonboard_20260330.csv
+2026-03-30 23:59:02,907 [INFO] ✅ 'Backend': 39 ofertas guardadas
+2026-03-30 23:59:02,907 [INFO]    💤 Pausa: 6.3s
+2026-03-30 23:59:09,215 [INFO] 
+🔍 Buscando: 'Full Stack'
+2026-03-30 23:59:09,215 [INFO]    Página 1/5
+2026-03-30 23:59:11,252 [INFO]    → 20 items recibidos
+2026-03-30 23:59:11,252 [INFO]    → 0 ofertas nuevas guardadas en esta página
+2026-03-30 23:59:11,253 [INFO]    Página 2/5
+2026-03-30 23:59:14,428 [INFO]    → 20 items recibidos
+2026-03-30 23:59:14,435 [INFO]    → 1 ofertas nuevas guardadas en esta página
+2026-03-30 23:59:14,436 [INFO]    Página 3/5
+2026-03-30 23:59:18,114 [INFO]    → 20 items recibidos
+2026-03-30 23:59:18,169 [INFO]    → 10 ofertas nuevas guardadas en esta página
+2026-03-30 23:59:18,169 [INFO]    Página 4/5
+2026-03-30 23:59:21,188 [INFO]    → 20 items recibidos
+2026-03-30 23:59:21,311 [INFO]    → 17 ofertas nuevas guardadas en esta página
+2026-03-30 23:59:21,312 [INFO]    Página 5/5
+2026-03-30 23:59:24,357 [INFO]    → 20 items recibidos
+2026-03-30 23:59:24,442 [INFO]    → 17 ofertas nuevas guardadas en esta página
+2026-03-30 23:59:24,447 [INFO] Exportadas 45 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/getonboard_20260330.csv
+2026-03-30 23:59:24,447 [INFO] ✅ 'Full Stack': 45 ofertas guardadas
+2026-03-30 23:59:24,448 [INFO]    💤 Pausa: 5.7s
+2026-03-30 23:59:30,143 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-03-30 23:59:30,144 [INFO]    Página 1/5
+2026-03-30 23:59:33,170 [INFO]    → 20 items recibidos
+2026-03-30 23:59:33,192 [INFO]    → 3 ofertas nuevas guardadas en esta página
+2026-03-30 23:59:33,193 [INFO]    Página 2/5
+2026-03-30 23:59:36,854 [INFO]    → 20 items recibidos
+2026-03-30 23:59:36,918 [INFO]    → 10 ofertas nuevas guardadas en esta página
+2026-03-30 23:59:36,918 [INFO]    Página 3/5
+2026-03-30 23:59:40,436 [INFO]    → 10 items recibidos
+2026-03-30 23:59:40,468 [INFO]    → 4 ofertas nuevas guardadas en esta página
+2026-03-30 23:59:40,469 [INFO]    Página 4/5
+2026-03-30 23:59:43,402 [INFO]    → 0 items recibidos
+2026-03-30 23:59:43,402 [INFO]    → Sin más resultados.
+2026-03-30 23:59:43,406 [INFO] Exportadas 17 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/getonboard_20260330.csv
+2026-03-30 23:59:43,406 [INFO] ✅ 'Ingeniero de Datos': 17 ofertas guardadas
+2026-03-30 23:59:43,406 [INFO]    💤 Pausa: 7.7s
+2026-03-30 23:59:51,122 [INFO] 
+============================================================
+2026-03-30 23:59:51,122 [INFO] SCRAPING FINALIZADO - GetOnBoard
+2026-03-30 23:59:51,122 [INFO] Total ofertas únicas: 427
+2026-03-30 23:59:51,123 [INFO] DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard.db
+2026-03-30 23:59:51,123 [INFO] CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/getonboard_20260330.csv
+2026-03-30 23:59:51,123 [INFO] Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/getonboard_scraper_20260330_235635.log
+2026-03-30 23:59:51,123 [INFO] ============================================================
