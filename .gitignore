@@ -1,0 +1,23 @@
+# Git no puede filtrar por tamaño de archivo de forma dinámica: estas reglas
+# excluyen por ruta/patrón las carpetas donde hoy viven los archivos >100MB
+# del repo (entorno virtual y modelos NLP descargados), más patrones genéricos
+# para no volver a versionar binarios grandes de ese tipo.
+
+# Entorno virtual (contiene binarios de torch, llvmlite, playwright, etc. de cientos de MB)
+venv_tesis/
+.venv/
+
+# Modelos NLP descargados (SentenceTransformer, spaCy, HuggingFace cache)
+data/modelos/
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+
+# Bytecode Python
+__pycache__/
+*.pyc
+
+# Archivos grandes en general (por si se agregan a mano)
+*.so
