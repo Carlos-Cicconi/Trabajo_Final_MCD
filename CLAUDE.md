@@ -1,0 +1,83 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project overview
+
+Master's thesis project ("Sistema de Recomendación Laboral - Motor de Matching Inteligente", Maestría en Explotación de Datos, Universidad Austral — Carlos Cicconi). It's an end-to-end pipeline that scrapes job postings from multiple Argentine/LatAm job boards, cleans and vectorizes them (TF-IDF and SBERT embeddings), matches them against a candidate's CV, and presents results in a Streamlit dashboard. The work plan is organized into numbered tasks (T2–T9) that map directly to `src/` modules and notebooks.
+
+## Environment setup
+
+```bash
+source activar_entorno.sh      # activates venv_tesis and cds into the project root
+```
+
+`setup_entorno.sh` is the from-scratch installer (creates `venv_tesis`, installs pinned deps from `requirements.txt`, downloads the spaCy `es_core_news_md` model, NLTK resources, and the `paraphrase-multilingual-MiniLM-L12-v2` SentenceTransformer model into `data/modelos/`). Re-running it deletes and recreates `venv_tesis`, so don't run it casually.
+
+There are no lint/test/build commands configured — this is a research/thesis pipeline, not a packaged application. Validate changes by running the relevant script/notebook manually.
+
+## Architecture
+
+### 1. Scraping (`src/scraping/`, task T2)
+
+One scraper module per job board (`bumeran_scraper.py`, `computrabajo_scraper.py`, `getonboard_scraper.py`, `jobleads_scraper.py`, `jobomas_scraper.py`, `jobrapido_scraper.py`, `linkedin_scraper.py`, `opcionempleo_scraper.py`, `workana_scraper.py`, `zonajobs_scraper.py`). Each is runnable standalone (`if __name__ == "__main__"`) and independently logs to `logs/<scraper>_<timestamp>.log`.
+
+`run_scraping.py` is the orchestrator that runs all (or a subset of) scrapers in sequence and consolidates their output:
+
+```bash
+python src/scraping/run_scraping.py                        # run all scrapers with default queries
+python src/scraping/run_scraping.py --cv data/cvs/keywords.json   # derive queries + location from a CV
+python src/scraping/run_scraping.py --solo linkedin         # run a single scraper
+python src/scraping/run_scraping.py --skip workana          # skip one or more scrapers
+python src/scraping/run_scraping.py --solo-consolidar       # re-consolidate without scraping
+python src/scraping/run_scraping.py --max-dias 60           # change the "max age" window (default 90 days)
+```
+
+Consolidation rules enforced by the orchestrator: postings older than `--max-dias` are dropped, and duplicates (by `id_consolidado` = hash of fuente + job_id) are never re-inserted. Outputs are cumulative, not overwritten:
+- `data/raw/consolidado/ofertas_consolidadas.csv` / `.db` (SQLite) — master consolidated dataset, canonical columns defined in `COLUMNAS` in `run_scraping.py`.
+- `data/raw/consolidado/run_<timestamp>.json` — per-run report.
+- `data/raw/diagnostico/` — raw HTML snapshots per source/query, kept for debugging scraper breakage.
+
+`cv_keyword_extractor.py` reads a CV PDF and produces the `keywords.json` consumed by `run_scraping.py --cv`: it extracts search keywords (curated vocabulary matching, or via `--llm` calling the Claude API) and the candidate's location (regex + Argentina province/city dictionary) to bias/filter searches.
+
+Note: several scripts (e.g. `run_scraping.py`) hardcode `BASE_DIR` as the absolute path of this repo rather than deriving it from `__file__` — keep that in mind if the repo is ever moved or cloned elsewhere.
+
+### 2. Preprocessing, modeling, matching (`src/preprocessing/`, `src/models/`, `src/matching/`, tasks T4–T6)
+
+Currently empty/placeholder directories — the corresponding logic lives in the notebooks (see below) and has not yet been extracted into reusable modules. When productionizing notebook logic, this is where it belongs.
+
+### 3. Notebooks (`notebooks/`, tasks T3–T9)
+
+Sequential, each corresponding to a thesis chapter/deliverable:
+- `T3_Limpieza_y_EDA.ipynb` — cleaning and exploratory analysis of the consolidated scraped data.
+- `T4_Preprocesamiento_TF-IDF.ipynb` — text preprocessing and TF-IDF vectorization.
+- `T5_Embeddings_SBERT.ipynb` — SBERT embedding generation (writes to `data/embeddings/`).
+- `T6_Motor_Matching.ipynb` — the CV-to-job matching/similarity engine.
+- `T7_Benchmark.ipynb` — benchmarking of matching approaches.
+- `T8_Analisis_Tuning.ipynb` — analysis and hyperparameter tuning.
+- `T9_Prototipo_Dashboard.ipynb` — prototyping for the Streamlit dashboard.
+
+Downstream artifacts from these notebooks land in `data/processed/`, `data/embeddings/`, and `outputs/` (`models/`, `rankings/`, `reports/`, `figures/`, `resultados/`).
+
+### 4. Dashboard (`dashboard/app.py`, task T9)
+
+Streamlit prototype for demoing the matching engine.
+
+```bash
+streamlit run dashboard/app.py
+```
+
+Paths are resolved relative to `dashboard/app.py`'s parent (`_ROOT`), reading from `data/processed/`, `data/embeddings/`, `outputs/models/`, `outputs/rankings/`, `outputs/reports/`. Uses TF-IDF + PCA + cosine similarity (scikit-learn) alongside Plotly for visualization.
+
+### Data flow summary
+
+```
+scrapers (src/scraping/*_scraper.py)
+  → run_scraping.py consolidates → data/raw/consolidado/ofertas_consolidadas.{csv,db}
+  → notebooks T3 (clean/EDA) → data/processed/
+  → notebooks T4/T5 (TF-IDF, SBERT) → data/embeddings/, outputs/models/
+  → notebook T6 (matching engine) → outputs/rankings/, outputs/reports/
+  → dashboard/app.py reads data/processed/, data/embeddings/, outputs/
+```
+
+CV input side: `cv_keyword_extractor.py` (PDF → `data/cvs/keywords.json`) feeds both `run_scraping.py --cv` (search queries/location) and the matching engine (candidate profile).
