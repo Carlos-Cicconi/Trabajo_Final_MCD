@@ -1,0 +1,3 @@
+2026-04-10 17:31:44,342 [ERROR] Archivo de keywords no encontrado: data/cvs/keywords.json
+2026-04-10 17:31:44,342 [ERROR]   Generalo con: python src/scraping/cv_keyword_extractor.py <CV.pdf> --output data/cvs/keywords.json
+2026-04-10 17:31:44,343 [ERROR] No se pudieron cargar las queries del CV. Abortando.

@@ -1,0 +1,134 @@
+{
+  "cv_path": "data/cvs/CarlosA.Cicconi_CV.pdf",
+  "ubicacion": {
+    "ciudad": "Rosario",
+    "provincia": "Santa Fe",
+    "pais": "Argentina",
+    "linkedin_location": "Rosario, Santa Fe, Argentina"
+  },
+  "keywords": [
+    "Data Scientist",
+    "BI / Analytics",
+    "Python Developer",
+    "Control de Gestión",
+    "Gerente de Operaciones",
+    "Compras / Procurement",
+    "Ingeniero Industrial",
+    "Finanzas / CAPEX",
+    "Excel / VBA",
+    "Supply Chain",
+    "Continuous Improvement"
+  ],
+  "search_queries": [
+    {
+      "keyword": "data-scientist",
+      "label": "Data Scientist",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "business-intelligence",
+      "label": "BI / Analytics",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "python",
+      "label": "Python Developer",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "control-de-gestion",
+      "label": "Control de Gestión",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "gerente-operaciones",
+      "label": "Gerente de Operaciones",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "compras",
+      "label": "Compras / Procurement",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "ingeniero-industrial",
+      "label": "Ingeniero Industrial",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "finanzas",
+      "label": "Finanzas / CAPEX",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "excel",
+      "label": "Excel / VBA",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "supply-chain",
+      "label": "Supply Chain",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "continuous-improvement",
+      "label": "Continuous Improvement",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "data-scientist",
+      "label": "Data Scientist (Remoto)",
+      "location": "Remoto"
+    },
+    {
+      "keyword": "business-intelligence",
+      "label": "BI / Analytics (Remoto)",
+      "location": "Remoto"
+    },
+    {
+      "keyword": "python",
+      "label": "Python Developer (Remoto)",
+      "location": "Remoto"
+    },
+    {
+      "keyword": "control-de-gestion",
+      "label": "Control de Gestión (Remoto)",
+      "location": "Remoto"
+    },
+    {
+      "keyword": "gerente-operaciones",
+      "label": "Gerente de Operaciones (Remoto)",
+      "location": "Remoto"
+    },
+    {
+      "keyword": "compras",
+      "label": "Compras / Procurement (Remoto)",
+      "location": "Remoto"
+    },
+    {
+      "keyword": "ingeniero-industrial",
+      "label": "Ingeniero Industrial (Remoto)",
+      "location": "Remoto"
+    },
+    {
+      "keyword": "finanzas",
+      "label": "Finanzas / CAPEX (Remoto)",
+      "location": "Remoto"
+    },
+    {
+      "keyword": "excel",
+      "label": "Excel / VBA (Remoto)",
+      "location": "Remoto"
+    },
+    {
+      "keyword": "supply-chain",
+      "label": "Supply Chain (Remoto)",
+      "location": "Remoto"
+    },
+    {
+      "keyword": "continuous-improvement",
+      "label": "Continuous Improvement (Remoto)",
+      "location": "Remoto"
+    }
+  ]
+}

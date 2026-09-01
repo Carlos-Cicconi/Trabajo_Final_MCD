@@ -1,0 +1,98 @@
+2026-04-10 17:32:04,222 [INFO] ✅ SEARCH_QUERIES cargadas desde CV: 14 keywords
+2026-04-10 17:32:04,222 [INFO]    • Data Scientist (data-scientist)
+2026-04-10 17:32:04,222 [INFO]    • BI / Analytics (business-intelligence)
+2026-04-10 17:32:04,222 [INFO]    • Python Developer (python)
+2026-04-10 17:32:04,222 [INFO]    • R Developer (r)
+2026-04-10 17:32:04,223 [INFO]    • Julia Developer (julia)
+2026-04-10 17:32:04,223 [INFO]    • Control de Gestión (control-de-gestion)
+2026-04-10 17:32:04,223 [INFO]    • Consultor (consultor)
+2026-04-10 17:32:04,223 [INFO]    • Gerente de Operaciones (gerente-operaciones)
+2026-04-10 17:32:04,223 [INFO]    • Compras / Procurement (compras)
+2026-04-10 17:32:04,223 [INFO]    • Ingeniero Industrial (ingeniero-industrial)
+2026-04-10 17:32:04,223 [INFO]    • Finanzas / CAPEX (finanzas)
+2026-04-10 17:32:04,223 [INFO]    • SAP (sap)
+2026-04-10 17:32:04,223 [INFO]    • Excel / VBA (excel)
+2026-04-10 17:32:04,223 [INFO]    • Google Apps Script (automatizacion)
+2026-04-10 17:32:04,223 [INFO] 
+=================================================================
+2026-04-10 17:32:04,223 [INFO]   ORQUESTADOR DE SCRAPING — Tesis MCD
+2026-04-10 17:32:04,223 [INFO]   Alumno: Cicconi, Carlos Alberto
+2026-04-10 17:32:04,223 [INFO]   Universidad Austral — Maestría en Explotación de Datos
+2026-04-10 17:32:04,224 [INFO] =================================================================
+2026-04-10 17:32:04,224 [INFO]   Fecha/hora inicio : 2026-04-10 17:32:04
+2026-04-10 17:32:04,224 [INFO]   Ventana temporal  : 90 días
+2026-04-10 17:32:04,224 [INFO]   Scrapers activos  : 10
+2026-04-10 17:32:04,224 [INFO]   Solo consolidar   : False
+2026-04-10 17:32:04,224 [INFO]   Origen de queries : CV → keywords.json
+2026-04-10 17:32:04,224 [INFO] 
+  Scrapers a ejecutar: ['linkedin', 'computrabajo', 'getonboard', 'bumeran', 'zonajobs', 'workana', 'opcionempleo', 'jobomas', 'jobrapido', 'jobleads']
+2026-04-10 17:32:04,224 [INFO] 
+============================================================
+2026-04-10 17:32:04,224 [INFO]   EJECUTANDO: linkedin (LinkedInScraper)
+2026-04-10 17:32:04,224 [INFO]   Queries: 14 keywords del CV
+2026-04-10 17:32:04,224 [INFO] ============================================================
+2026-04-10 17:32:04,669 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin.db
+2026-04-10 17:32:04,669 [INFO] LinkedInScraper inicializado correctamente
+2026-04-10 17:32:04,670 [INFO]   ✅ Queries del CV inyectadas correctamente en linkedin
+2026-04-10 17:32:04,670 [INFO] ============================================================
+2026-04-10 17:32:04,670 [INFO] INICIO DEL SCRAPING - LinkedIn Jobs
+2026-04-10 17:32:04,670 [INFO] Búsquedas: 14 | Páginas por búsqueda: 5
+2026-04-10 17:32:04,670 [INFO] ============================================================
+2026-04-10 17:32:04,671 [ERROR]   ❌ linkedin falló: 'location'
+2026-04-10 17:32:04,676 [INFO] 
+============================================================
+2026-04-10 17:32:04,676 [INFO]   EJECUTANDO: computrabajo (ComputrabajoScraper)
+2026-04-10 17:32:04,676 [INFO]   Queries: 14 keywords del CV
+2026-04-10 17:32:04,677 [INFO] ============================================================
+2026-04-10 17:32:04,718 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_computrabajo.db
+2026-04-10 17:32:04,718 [INFO] ComputrabajoScraper inicializado correctamente
+2026-04-10 17:32:04,718 [INFO]   ✅ Queries del CV inyectadas correctamente en computrabajo
+2026-04-10 17:32:04,718 [INFO] ============================================================
+2026-04-10 17:32:04,718 [INFO] INICIO DEL SCRAPING - Computrabajo Argentina
+2026-04-10 17:32:04,718 [INFO] Búsquedas: 14 | Páginas por búsqueda: 5
+2026-04-10 17:32:04,718 [INFO] ============================================================
+2026-04-10 17:32:04,718 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-04-10 17:32:04,718 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-data-scientist
+2026-04-10 17:32:11,932 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-10 17:32:11,932 [INFO]    → Sin más resultados para esta búsqueda.
+2026-04-10 17:32:11,932 [INFO] ✅ 'Data Scientist': 0 ofertas guardadas
+2026-04-10 17:32:11,932 [INFO] 
+🔍 Buscando: 'BI / Analytics'
+2026-04-10 17:32:11,932 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-business-intelligence
+2026-04-10 17:32:17,438 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-10 17:32:17,438 [INFO]    → Sin más resultados para esta búsqueda.
+2026-04-10 17:32:17,438 [INFO] ✅ 'BI / Analytics': 0 ofertas guardadas
+2026-04-10 17:32:17,438 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-04-10 17:32:17,439 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-python
+2026-04-10 17:32:24,022 [INFO]    → 20 ofertas nuevas encontradas
+2026-04-10 17:34:09,075 [INFO]    Página 2/5 → https://www.computrabajo.com.ar/trabajo-de-python?p=2
+2026-04-10 17:34:12,960 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-10 17:34:12,960 [INFO]    → Sin más resultados para esta búsqueda.
+2026-04-10 17:34:12,961 [INFO] Exportadas 20 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/computrabajo_20260410.csv
+2026-04-10 17:34:12,961 [INFO] ✅ 'Python Developer': 20 ofertas guardadas
+2026-04-10 17:34:12,961 [INFO] 
+🔍 Buscando: 'R Developer'
+2026-04-10 17:34:12,961 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-r
+2026-04-10 17:34:18,999 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-10 17:34:18,999 [INFO]    → Sin más resultados para esta búsqueda.
+2026-04-10 17:34:18,999 [INFO] ✅ 'R Developer': 0 ofertas guardadas
+2026-04-10 17:34:18,999 [INFO] 
+🔍 Buscando: 'Julia Developer'
+2026-04-10 17:34:18,999 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-julia
+2026-04-10 17:34:24,791 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-10 17:34:24,791 [INFO]    → Sin más resultados para esta búsqueda.
+2026-04-10 17:34:24,791 [INFO] ✅ 'Julia Developer': 0 ofertas guardadas
+2026-04-10 17:34:24,791 [INFO] 
+🔍 Buscando: 'Control de Gestión'
+2026-04-10 17:34:24,791 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-control-de-gestion
+2026-04-10 17:34:31,287 [INFO]    → 0 ofertas nuevas encontradas
+2026-04-10 17:34:31,287 [INFO]    → Sin más resultados para esta búsqueda.
+2026-04-10 17:34:31,287 [INFO] ✅ 'Control de Gestión': 0 ofertas guardadas
+2026-04-10 17:34:31,287 [INFO] 
+🔍 Buscando: 'Consultor'
+2026-04-10 17:34:31,287 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-consultor
+2026-04-10 17:34:34,976 [INFO]    → 20 ofertas nuevas encontradas
+2026-04-10 17:36:16,361 [INFO]    Página 2/5 → https://www.computrabajo.com.ar/trabajo-de-consultor?p=2
+2026-04-10 17:36:21,238 [INFO]    → 20 ofertas nuevas encontradas

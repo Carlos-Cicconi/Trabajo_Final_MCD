@@ -1,0 +1,32 @@
+2026-04-11 11:32:40,995 [INFO] ✅ Keywords cargadas desde CV: 42 búsquedas
+2026-04-11 11:32:40,995 [INFO]    Ubicación del candidato: Rosario, Santa Fe, Argentina
+2026-04-11 11:32:40,995 [INFO] 
+=================================================================
+2026-04-11 11:32:40,995 [INFO]   ORQUESTADOR DE SCRAPING — Tesis MCD
+2026-04-11 11:32:40,995 [INFO]   Alumno: Cicconi, Carlos Alberto
+2026-04-11 11:32:40,995 [INFO]   Universidad Austral — Maestría en Explotación de Datos
+2026-04-11 11:32:40,996 [INFO] =================================================================
+2026-04-11 11:32:40,996 [INFO]   Fecha/hora inicio : 2026-04-11 11:32:40
+2026-04-11 11:32:40,996 [INFO]   Ventana temporal  : 90 días
+2026-04-11 11:32:40,996 [INFO]   Scrapers activos  : 10
+2026-04-11 11:32:40,996 [INFO]   Solo consolidar   : False
+2026-04-11 11:32:40,996 [INFO]   Origen de queries : CV → keywords.json
+2026-04-11 11:32:40,996 [INFO] 
+  Scrapers a ejecutar: ['linkedin', 'computrabajo', 'getonboard', 'bumeran', 'zonajobs', 'workana', 'opcionempleo', 'jobomas', 'jobrapido', 'jobleads']
+2026-04-11 11:32:40,996 [INFO] 
+============================================================
+2026-04-11 11:32:40,996 [INFO]   EJECUTANDO: linkedin (LinkedInScraper)
+2026-04-11 11:32:40,996 [INFO]   Queries: desde CV (42 búsquedas)
+2026-04-11 11:32:40,996 [INFO] ============================================================
+2026-04-11 11:32:41,353 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin.db
+2026-04-11 11:32:41,353 [INFO] LinkedInScraper inicializado correctamente
+2026-04-11 11:32:41,354 [INFO]   ✅ Queries del CV inyectadas en linkedin
+2026-04-11 11:32:41,355 [INFO] ============================================================
+2026-04-11 11:32:41,355 [INFO] INICIO DEL SCRAPING - LinkedIn Jobs
+2026-04-11 11:32:41,356 [INFO] Búsquedas: 42 | Páginas por búsqueda: 5
+2026-04-11 11:32:41,356 [INFO] ============================================================
+2026-04-11 11:32:41,356 [INFO] 
+🔍 Buscando: 'data-scientist' en 'Rosario, Santa Fe, Argentina'
+2026-04-11 11:32:41,357 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=data-scientist&location=Rosario%2C%20Santa%20Fe%2C%20Argentina&start=0&f_WT=2
+2026-04-11 11:32:46,088 [INFO]    → 10 ofertas nuevas encontradas
+2026-04-11 11:33:30,101 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=data-scientist&location=Rosario%2C%20Santa%20Fe%2C%20Argentina&start=25&f_WT=2

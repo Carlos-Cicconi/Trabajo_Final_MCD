@@ -211,7 +211,8 @@ class JobrapidoScraper:
             except Exception as e: logger.debug(f"Card error: {e}")
 
         if not ofertas:
-            (DIAG_DIR / f"jobrapido_{keyword.replace(' ','_')}.html"
+            safe_kw = re.sub(r"[^\w\s-]", "", keyword).replace(" ", "_")[:60]
+            (DIAG_DIR / f"jobrapido_{safe_kw}.html"
              ).write_text(html, encoding="utf-8")
             logger.warning("   Sin ofertas — HTML guardado en diagnostico/")
         return ofertas

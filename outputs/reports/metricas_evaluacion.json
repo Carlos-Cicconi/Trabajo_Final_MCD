@@ -1,0 +1,53 @@
+{
+  "fecha_evaluacion": "2026-04-23T23:33:07.297882",
+  "n_documentos": 1279,
+  "umbral_relevancia": 0.4161,
+  "config_principal": "Híbrido 70/30",
+  "modelo_embed": "paraphrase-multilingual-MiniLM-L12-v2",
+  "configuraciones": {
+    "Solo SBERT": {
+      "P@5": 1.0,
+      "nDCG@5": 1.0,
+      "P@10": 1.0,
+      "nDCG@10": 1.0,
+      "P@20": 1.0,
+      "nDCG@20": 1.0,
+      "P@50": 1.0,
+      "nDCG@50": 1.0,
+      "MRR": 1.0
+    },
+    "Híbrido 70/30": {
+      "P@5": 1.0,
+      "nDCG@5": 1.0,
+      "P@10": 1.0,
+      "nDCG@10": 1.0,
+      "P@20": 1.0,
+      "nDCG@20": 1.0,
+      "P@50": 1.0,
+      "nDCG@50": 1.0,
+      "MRR": 1.0
+    },
+    "Híbrido 50/50": {
+      "P@5": 1.0,
+      "nDCG@5": 1.0,
+      "P@10": 1.0,
+      "nDCG@10": 1.0,
+      "P@20": 1.0,
+      "nDCG@20": 1.0,
+      "P@50": 1.0,
+      "nDCG@50": 1.0,
+      "MRR": 1.0
+    },
+    "Solo TF-IDF": {
+      "P@5": 1.0,
+      "nDCG@5": 1.0,
+      "P@10": 1.0,
+      "nDCG@10": 1.0,
+      "P@20": 1.0,
+      "nDCG@20": 1.0,
+      "P@50": 1.0,
+      "nDCG@50": 1.0,
+      "MRR": 1.0
+    }
+  }
+}

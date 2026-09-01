@@ -1,0 +1,330 @@
+<!DOCTYPE html><html lang="es" dir="ltr"><head>
+<meta charset="utf-8">
+<title>Opcionempleo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+<style>
+@keyframes svg_wait_rotation {
+  0% {
+    transform:translate3d(-50%, -50%, 0) rotate(0deg);
+    //transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform:translate3d(-50%, -50%, 0) rotate(360deg);
+    //transform: rotate(360deg) translate3d(0, 0, 0);
+  }
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+html{
+  line-height:1.4;
+}
+body{
+  font-size:16px;
+  font-family:sans-serif;
+  padding-top:8rem;
+}
+@media all and (max-width: 768px) {
+  body{
+    padding-top:6rem;
+  }
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 5.5rem;
+  background: #fff;
+  z-index: 99;
+  display: flex;
+  border-bottom: 1px solid #e1e3eb;
+  transition:border-color .2s ease-out;
+  align-items:center;
+  padding:0 2rem;
+}
+@media all and (max-width: 768px) {
+  header{
+    height:4rem;
+    padding:0 1rem;
+  }
+}
+header svg {
+  display: block;
+  fill: #2062af;
+  max-width:100%;
+  width:100%;
+  height:3rem;
+}
+@media all and (max-width: 768px) {
+  header svg{
+    height: 2rem;
+  }
+}
+@media all and (min-width: 769px)  and (max-width: 1024px) {
+  header svg{
+    height: 3rem;
+  }
+}
+
+body > svg{
+  height:74px;
+  width:74px;
+  display:block;
+  margin:0 auto;
+}
+
+#verify{
+  width:100%;
+  max-width:500px;
+  text-align:center;
+  padding:1rem;
+  margin:0 auto;
+}
+#verify h1{
+  font-weight:700;
+  font-size:1.5rem;
+  margin:0 0 1rem 0;
+}
+@media all and (max-width: 768px) {
+  #verify h1{
+    font-size:1.25rem;
+  }
+}
+.cf-turnstile{
+  height:65px;
+  max-width:300px;
+  margin:2rem auto 2.5rem auto;
+}
+#verify .ip{
+  margin-top:2rem;
+  padding-top:1rem;
+  border-top:1px solid #e8eaf0;
+  color:#74737e;
+  font-size:.875rem;
+}
+#report-problem{
+  background:none;
+  border:none;
+  padding:none;
+  color:#f6462d;
+  font-weight:500;
+  text-decoration:none;
+  cursor:pointer;
+}
+#report-problem.hide{
+  display:none;
+}
+#report-problem:hover{
+  text-decoration:underline;
+}
+#report-problem-thx{
+  display:none;
+  color:#33af7a;
+  padding:.5rem 0 0 0;
+  font-weight:500;
+}
+#report-problem-thx.show{
+  display:block;
+  color:#4b4956;
+  font-weight:500;
+}
+#cj-wait{
+  //display:none;
+  margin:2rem auto 2.5rem auto;
+  height:48px;
+  width:48px;
+  position:relative;
+}
+#cj-wait > svg{
+  fill:#d4d6de;
+  animation:svg_wait_rotation 1.8s infinite linear;
+  height:48px;
+  width:48px;
+  display:block;
+  position:absolute;
+  top:50%;
+  left:50%;
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+  <header id="header" role="banner">
+    
+    <a href="/" rel="home" title="Opcionempleo"><svg viewBox="0 0 698 130" xmlns="http://www.w3.org/2000/svg"><path d="M667 32c4.6 0 8.8.8 12.6 2.4a28.5 28.5 0 0 1 16.1 17 40.5 40.5 0 0 1 .1 27 28 28 0 0 1-16 17.2c-3.8 1.6-8 2.4-12.7 2.4-4.7 0-8.9-.8-12.7-2.4a28 28 0 0 1-16.1-17.2c-1.5-4-2.3-8.6-2.3-13.5 0-5 .8-9.4 2.3-13.5a29 29 0 0 1 16.3-17 32 32 0 0 1 12.5-2.4Zm0 16a14 14 0 0 0-11 4.5c-2.7 3-4 7.1-4 12.4 0 5.2 1.3 9.4 4 12.5 2.6 3 6.3 4.6 11 4.6 4.9 0 8.5-1.5 11.1-4.6 2.6-3.1 3.9-7.3 3.9-12.5 0-5.3-1.3-9.4-3.9-12.4-2.6-3-6.2-4.5-11-4.5Zm-62-16c4.3 0 13 1.7 19.5 9.2a32.4 32.4 0 0 1 6.5 20.4v.4a40.7 40.7 0 0 1-1 9h-38c0 3.6 2.4 7 4.9 8.9a23 23 0 0 0 11.6 3.1 43.7 43.7 0 0 0 13.8-2.2l6.1 13.3a35 35 0 0 1-8.8 2.6A78 78 0 0 1 607 98c-2.3 0-15.6-.6-23.7-10a34 34 0 0 1-8.3-21.8V66a34.8 34.8 0 0 1 7.6-23.3A27.3 27.3 0 0 1 605 32Zm-2 15a10.3 10.3 0 0 0-8.4 3.7 11 11 0 0 0-2.6 7.6v.7h22c0-1.2 0-3-.4-4.5a10.8 10.8 0 0 0-5.3-6.4c-1.4-.7-3.3-1.1-5.3-1.1Zm-30 35c-.8 0-2.6.1-4.6-1.4a6.2 6.2 0 0 1-2.3-4c-.2-1-.1-2-.1-2.6V0l-16 9v70a19 19 0 0 0 19 19h4V82Zm-62-50c4.6 0 9.8.8 13.6 2.4a28.5 28.5 0 0 1 16.1 17c1.5 4 2.3 8.7 2.3 13.6 0 5-.7 9.3-2.2 13.4a28 28 0 0 1-16 17.2A32.1 32.1 0 0 1 512 98c-1.3 0-5-.3-11-1v24l-16 9V35a184 184 0 0 1 17.2-2.7l5.7-.3h3.1Zm1.5 16c-3 0-7 .3-11.5 1v32c4.6.7 8.4 1 11.5 1a13 13 0 0 0 10.7-4.6c2.5-3.1 3.8-7.3 3.8-12.5 0-5.3-1.3-9.4-3.8-12.4s-6-4.5-10.7-4.5ZM393 35a139.6 139.6 0 0 1 25-3c2.5 0 4.4.1 6.6.5a21.8 21.8 0 0 1 6 1.8 236.1 236.1 0 0 1 17-2.2c4-.2 8.2-.1 11.2.4s5.5 1.6 7.1 2.5c3.3 1.8 6.8 4.6 9.5 10.7 1.1 2.6 1.6 7 1.6 13.3v38h-16V59a10 10 0 0 0-4.5-9.4c-2-1.2-4-1.8-7.7-1.6-1.5.1-3.4.4-5.8 1v48h-16V56.9a9.7 9.7 0 0 0-2-4.9 10.6 10.6 0 0 0-5.5-3.7 17.4 17.4 0 0 0-3-.3c-3.5 0-5.6.6-7.5 1v48h-16V35Zm-32-3c4.3 0 13.1 1.7 19.5 9.2C386.9 48.6 387 59 387 63c0 2.7-.3 5.3-1 8h-38c0 3.6 2.4 7 4.9 8.9a23 23 0 0 0 11.6 3.1 43.7 43.7 0 0 0 13.8-2.2l6.1 13.3a35 35 0 0 1-8.8 2.6A78 78 0 0 1 363 98c-2.3 0-15.6-.6-23.7-10a34 34 0 0 1-8.3-21.8V66a34.8 34.8 0 0 1 7.6-23.3A27.3 27.3 0 0 1 361 32Zm-2 15a10.3 10.3 0 0 0-8.4 3.7 11 11 0 0 0-2.6 7.6v.7h22c0-1.2 0-3-.4-4.5a10.8 10.8 0 0 0-5.3-6.4c-1.4-.7-3.3-1.1-5.3-1.1ZM275 35a139.6 139.6 0 0 1 25-3c2.5 0 4.4.1 6.6.5a21.8 21.8 0 0 1 16 11.7c.7 1.1 1 2.3 1.5 3.8.8 3 .9 9.1.9 13.6V97h-16V56.9a9.7 9.7 0 0 0-2-4.9 10.6 10.6 0 0 0-5.5-3.7 17.4 17.4 0 0 0-3-.3c-3.5 0-5.6.6-7.5 1v48h-16V35ZM239 32c4.6 0 8.8.8 12.6 2.4a28.5 28.5 0 0 1 16.1 17 40.5 40.5 0 0 1 .1 27 28 28 0 0 1-16 17.2c-3.8 1.6-8 2.4-12.7 2.4-4.7 0-8.9-.8-12.7-2.4a28 28 0 0 1-16.1-17.2c-1.5-4-2.3-8.6-2.3-13.5 0-5 .8-9.4 2.3-13.5a29 29 0 0 1 16.3-17 32 32 0 0 1 12.5-2.4Zm0 16a14 14 0 0 0-11 4.5c-2.7 3-4 7.1-4 12.4 0 5.2 1.3 9.4 4 12.5 2.6 3 6.3 4.6 11 4.6 4.9 0 8.5-1.5 11.1-4.6 2.6-3.1 3.9-7.3 3.9-12.5 0-5.3-1.3-9.4-3.9-12.4-2.6-3-6.2-4.5-11-4.5ZM203 97h-16V33h16zM205 16a10 10 0 0 1-10 10 10 10 0 0 1-10-10 10 10 0 0 1 10-10 10 10 0 0 1 10 10ZM180 39c-5.2-4.4-11.8-7-19-7-17.1 0-31 14.8-31 33a34 34 0 0 0 9.6 23.9 30 30 0 0 0 20.4 9l1 .1a30.1 30.1 0 0 0 19-7l-10-12c-2.3 2-5.3 3-9 3-6 0-15-5-15-17s9-17 15-17c3.7 0 6.7 1 9 3l10-12ZM93 32c4.6 0 9.8.8 13.6 2.4a28.5 28.5 0 0 1 16.1 17c1.5 4 2.3 8.7 2.3 13.6 0 5-.7 9.3-2.2 13.4a28 28 0 0 1-16 17.2A32.1 32.1 0 0 1 94 98c-1.3 0-5-.3-11-1v24l-16 9V35a184 184 0 0 1 17.2-2.7L90 32h3Zm1.5 16c-3 0-7 .3-11.5 1v32c4.6.7 8.4 1 11.5 1a13 13 0 0 0 10.7-4.6c2.5-3.1 3.8-7.3 3.8-12.5 0-5.3-1.3-9.4-3.8-12.4s-6-4.5-10.7-4.5ZM31 32c4.6 0 8.8.8 12.6 2.4a28.5 28.5 0 0 1 16.1 17 40.5 40.5 0 0 1 .1 27 28 28 0 0 1-16 17.2c-3.8 1.6-8 2.4-12.7 2.4-4.7 0-8.9-.8-12.7-2.4A28 28 0 0 1 2.3 78.4C.8 74.4 0 69.8 0 64.9c0-5 .8-9.4 2.3-13.5a29 29 0 0 1 16.3-17A32 32 0 0 1 31.1 32Zm0 16a14 14 0 0 0-11 4.5c-2.7 3-4 7.1-4 12.4 0 5.2 1.3 9.4 4 12.5 2.6 3 6.3 4.6 11 4.6 4.9 0 8.5-1.5 11.1-4.6A19 19 0 0 0 46 64.9c0-5.3-1.3-9.4-3.9-12.4-2.6-3-6.2-4.5-11-4.5Z"></path></svg></a>
+  </header>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><g fill="none" fill-rule="evenodd"><circle cx="40" cy="40" r="40" fill="#f2f4f8" fill-rule="nonzero"></circle><path fill="#fff" d="M40 58c5 0 17-7 17-19q0-6-2-11c-9 0-13-6-15-6s-6 6-15 6q-2 5-2 11c0 12 12 19 17 19"></path><path fill="#c6e0ff" d="M40 58V22c-2 0-6 6-15 6q-2 5-2 11c0 12 12 19 17 19"></path><path fill="#2062af" fill-rule="nonzero" d="M40 22c.38 0 .83.22 1.37.57l.31.2.16.11 1.67 1.2.43.3.46.31.47.31c2.38 1.5 5.63 3 10.13 3q2 5 2 11c0 8.4-5.88 14.35-11.12 17.16l-.5.26q-.24.14-.5.24l-.48.22-.71.3-.47.17C42 57.78 40.9 58 40 58c-.94 0-2.14-.25-3.45-.74l-.47-.18-.72-.3-.5-.24-.49-.24-.5-.27q-.5-.28-1-.6l-.5-.32C27.64 52 23 46.47 23 39q0-6 2-11c4.5 0 7.75-1.5 10.13-3l.47-.31.46-.3.43-.3 1.67-1.21.32-.22c.6-.4 1.1-.66 1.52-.66m0 3.25-.37.27-1.13.82c-.64.45-1.19.83-1.77 1.2a21 21 0 0 1-9.3 3.33l-.27.03-.11.36q-.98 3.3-1.04 7.1L26 39c0 4.53 2.08 8.58 5.63 11.77C34.5 53.34 38.09 55 40 55s5.5-1.66 8.37-4.24C51.92 47.59 54 43.54 54 39q0-4.17-1.04-7.74l-.12-.36-.27-.03a21 21 0 0 1-8.9-3.1l-.4-.23a33 33 0 0 1-1.4-.94l-.43-.31-1.32-.95z"></path><path fill="#2062af" fill-rule="nonzero" d="M44.4 34.43c.26-.3.64-.43 1.03-.43a1.7 1.7 0 0 1 1.14.45q.42.41.43 1 .01.55-.43 1.15l-6.97 8.9c-.28.3-.6.5-1.1.5s-.83-.22-1.1-.5l-3.96-4.44a1.5 1.5 0 0 1 0-2.12c.55-.55 1.65-.55 2.12 0l2.94 3.46z"></path></g></svg>
+  
+  <div id="verify">
+    <h1>
+      Verificación requerida
+      
+    </h1>
+    <p>Nuestros sistemas detectaron tráfico inusual desde su red informática. Esta página verifica si realmente es usted quien envía las solicitudes y no un robot.</p>
+    
+    
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAAVTrpYUkZmyEavS" data-language="es" data-size="flexible" data-callback="cf_callback" data-error-callback="cloudflare_turnstile_error_callback"><div><div></div><input type="hidden" name="cf-turnstile-response" id="cf-chl-widget-sha3v_response"></div></div>
+    
+    
+    <p class="ip">Dirección IP: 190.137.98.96</p>
+    
+    
+    <div id="birp"></div>
+  </div>
+  
+  
+  
+    
+    
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+    
+    
+    <script src="https://captcha.careerjet.net/v1/api.js"></script>
+    
+
+    
+    <script>
+    const turnstile_el = document.querySelector('.cf-turnstile');
+    window.cf_callback = function(token){
+      var data = new FormData();
+      data.set('r', token);
+      fetch(
+        '/bi-verify',
+        {
+          method: 'post',
+          body: data,
+          cache: 'no-cache',
+        }
+      ).then(function(response) {
+        if (!response.ok) {
+          throw new Error('403');
+        }
+        return response.json();
+      }).then(function(json) {
+        
+        cj_captcha_trigger('27f68965d328063be74cd7b88ee72226', 'cj_captcha_callback');
+        
+      }).catch(function(error){
+      });
+    };
+    
+    window.cloudflare_turnstile_error_callback = function(error_code){
+      if(!navigator.sendBeacon){
+        return 0;
+      }
+      
+      
+      const cf_el = document.querySelector('.cf-turnstile');
+      if(!cf_el){
+        return 0;
+      }
+      
+      cf_el.innerHTML = `<div class="alert alert-error alert-flat"><svg class="icon" viewBox="0 0 18 18"><path d="M9 0a8.94 8.94 0 016.364 2.636A8.94 8.94 0 0118 9a8.94 8.94 0 01-2.636 6.364A8.94 8.94 0 019 18a8.94 8.94 0 01-6.364-2.636A8.94 8.94 0 010 9a8.94 8.94 0 012.636-6.364A8.94 8.94 0 019 0zm2.156 5.5L5.5 11.156 6.844 12.5 12.5 6.844z"/></svg><p>Cloudflare error.</p></div>`;
+      
+      var f = new FormData();
+      f.append('e', error_code);
+      f.append('p', window.location.pathname);
+      if(cf_el.dataset.sitekey){
+        f.append('sk', cf_el.dataset.sitekey);
+      }
+      else{
+        f.append('sk', 'NO_SITEKEY');
+      }
+      
+      navigator.sendBeacon('/cfttecb', f);
+      
+      return 0;
+    };
+    </script>
+    
+    
+    
+    <script>
+    window.cj_captcha_callback = function(result_token) {
+      var data = new FormData();
+      data.set('r', result_token);
+      data.set('i', '00decdbc00d36ab223b81e599949991329d2f77e7cdb37dcbaf8340270edd45c569272d0c11f1633d1e5e124a1c7ba9279b50fd676fbcb27');
+      fetch(
+        '/bi-verifycc',
+        {
+          method: 'post',
+          body: data,
+          cache: 'no-cache',
+        }
+      ).then(function(response) {
+        
+        if(response.status === 409){
+          window.location.reload();
+          return;
+        }
+        else if (response.status === 403) {
+          return response.json().then(function(json) {
+            const c = json.c || null;
+            if(c){
+              try {eval(c);}
+              catch(e){}
+            }
+
+            if (json.birp) {
+              document.querySelector('#birp').innerHTML = json.birp;
+            }
+            return null; 
+          });
+        }
+        return response.json();
+      }).then(function(json) {
+        if (json === null) {
+          return;
+        }
+        window.location.reload();
+      }).catch(function(error){
+        
+        document.querySelector('#report-problem').classList.add('show');
+      });
+    };
+    </script>
+    <script>
+    document.addEventListener('click', function(e){
+      const t = e.target;
+      
+      if(
+        t.id == 'report-problem'
+        || t.closest('#report-problem')
+      ){
+        e.preventDefault();
+        fetch(
+          t.dataset.url,
+          {
+            method: 'get',
+            cache: 'no-cache',
+          }
+        ).then(function(response) {
+          return response.json();
+        }).then(function(json) {
+          t.classList.add('hide');
+          document.querySelector('#report-problem-thx').classList.add('show');
+        });
+      }
+      
+    }, false);
+    </script>
+    
+  
+  
+  
+
+
+
+</body></html>

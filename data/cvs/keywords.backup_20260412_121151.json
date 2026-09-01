@@ -1,0 +1,237 @@
+{
+  "cv_path": "data/cvs/CarlosA.Cicconi_CV.pdf",
+  "ubicacion": {
+    "ciudad": "Rosario",
+    "provincia": "Santa Fe",
+    "pais": "Argentina",
+    "linkedin_location": "Rosario, Santa Fe, Argentina"
+  },
+  "keywords": [
+    "Data Scientist",
+    "BI / Analytics",
+    "Python Developer",
+    "R Developer",
+    "Julia Developer",
+    "Control de Gestión",
+    "Consultor",
+    "Gerente de Operaciones",
+    "Compras / Procurement",
+    "Ingeniero Industrial",
+    "Finanzas / CAPEX",
+    "SAP",
+    "Excel / VBA",
+    "Google Apps Script"
+  ],
+  "search_queries": [
+    {
+      "keyword": "data-scientist",
+      "label": "Data Scientist",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "data-scientist",
+      "label": "Data Scientist (Remoto AR)",
+      "location": "Argentina"
+    },
+    {
+      "keyword": "data-scientist",
+      "label": "Data Scientist (Remoto)",
+      "location": "Worldwide"
+    },
+    {
+      "keyword": "business-intelligence",
+      "label": "BI / Analytics",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "business-intelligence",
+      "label": "BI / Analytics (Remoto AR)",
+      "location": "Argentina"
+    },
+    {
+      "keyword": "business-intelligence",
+      "label": "BI / Analytics (Remoto)",
+      "location": "Worldwide"
+    },
+    {
+      "keyword": "python",
+      "label": "Python Developer",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "python",
+      "label": "Python Developer (Remoto AR)",
+      "location": "Argentina"
+    },
+    {
+      "keyword": "python",
+      "label": "Python Developer (Remoto)",
+      "location": "Worldwide"
+    },
+    {
+      "keyword": "r",
+      "label": "R Developer",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "r",
+      "label": "R Developer (Remoto AR)",
+      "location": "Argentina"
+    },
+    {
+      "keyword": "r",
+      "label": "R Developer (Remoto)",
+      "location": "Worldwide"
+    },
+    {
+      "keyword": "julia",
+      "label": "Julia Developer",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "julia",
+      "label": "Julia Developer (Remoto AR)",
+      "location": "Argentina"
+    },
+    {
+      "keyword": "julia",
+      "label": "Julia Developer (Remoto)",
+      "location": "Worldwide"
+    },
+    {
+      "keyword": "control-de-gestion",
+      "label": "Control de Gestión",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "control-de-gestion",
+      "label": "Control de Gestión (Remoto AR)",
+      "location": "Argentina"
+    },
+    {
+      "keyword": "control-de-gestion",
+      "label": "Control de Gestión (Remoto)",
+      "location": "Worldwide"
+    },
+    {
+      "keyword": "consultor",
+      "label": "Consultor",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "consultor",
+      "label": "Consultor (Remoto AR)",
+      "location": "Argentina"
+    },
+    {
+      "keyword": "consultor",
+      "label": "Consultor (Remoto)",
+      "location": "Worldwide"
+    },
+    {
+      "keyword": "gerente-operaciones",
+      "label": "Gerente de Operaciones",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "gerente-operaciones",
+      "label": "Gerente de Operaciones (Remoto AR)",
+      "location": "Argentina"
+    },
+    {
+      "keyword": "gerente-operaciones",
+      "label": "Gerente de Operaciones (Remoto)",
+      "location": "Worldwide"
+    },
+    {
+      "keyword": "compras",
+      "label": "Compras / Procurement",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "compras",
+      "label": "Compras / Procurement (Remoto AR)",
+      "location": "Argentina"
+    },
+    {
+      "keyword": "compras",
+      "label": "Compras / Procurement (Remoto)",
+      "location": "Worldwide"
+    },
+    {
+      "keyword": "ingeniero-industrial",
+      "label": "Ingeniero Industrial",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "ingeniero-industrial",
+      "label": "Ingeniero Industrial (Remoto AR)",
+      "location": "Argentina"
+    },
+    {
+      "keyword": "ingeniero-industrial",
+      "label": "Ingeniero Industrial (Remoto)",
+      "location": "Worldwide"
+    },
+    {
+      "keyword": "finanzas",
+      "label": "Finanzas / CAPEX",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "finanzas",
+      "label": "Finanzas / CAPEX (Remoto AR)",
+      "location": "Argentina"
+    },
+    {
+      "keyword": "finanzas",
+      "label": "Finanzas / CAPEX (Remoto)",
+      "location": "Worldwide"
+    },
+    {
+      "keyword": "sap",
+      "label": "SAP",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "sap",
+      "label": "SAP (Remoto AR)",
+      "location": "Argentina"
+    },
+    {
+      "keyword": "sap",
+      "label": "SAP (Remoto)",
+      "location": "Worldwide"
+    },
+    {
+      "keyword": "excel",
+      "label": "Excel / VBA",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "excel",
+      "label": "Excel / VBA (Remoto AR)",
+      "location": "Argentina"
+    },
+    {
+      "keyword": "excel",
+      "label": "Excel / VBA (Remoto)",
+      "location": "Worldwide"
+    },
+    {
+      "keyword": "automatizacion",
+      "label": "Google Apps Script",
+      "location": "Rosario, Santa Fe, Argentina"
+    },
+    {
+      "keyword": "automatizacion",
+      "label": "Google Apps Script (Remoto AR)",
+      "location": "Argentina"
+    },
+    {
+      "keyword": "automatizacion",
+      "label": "Google Apps Script (Remoto)",
+      "location": "Worldwide"
+    }
+  ]
+}

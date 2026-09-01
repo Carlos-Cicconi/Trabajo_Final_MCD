@@ -1,0 +1,157 @@
+2026-06-12 01:31:24,704 [INFO] 
+=================================================================
+2026-06-12 01:31:25,537 [INFO]   ORQUESTADOR DE SCRAPING — Tesis MCD
+2026-06-12 01:31:26,124 [INFO]   Alumno: Cicconi, Carlos Alberto
+2026-06-12 01:31:27,263 [INFO]   Universidad Austral — Maestría en Explotación de Datos
+2026-06-12 01:31:27,999 [INFO] =================================================================
+2026-06-12 01:31:28,667 [INFO]   Fecha/hora inicio : 2026-06-12 01:31:20
+2026-06-12 01:31:29,368 [INFO]   Ventana temporal  : 90 días
+2026-06-12 01:31:30,110 [INFO]   Scrapers activos  : 10
+2026-06-12 01:31:30,667 [INFO]   Solo consolidar   : False
+2026-06-12 01:31:31,558 [INFO]   Origen de queries : módulos (por defecto)
+2026-06-12 01:31:54,811 [INFO] 
+  Scrapers a ejecutar: ['linkedin', 'computrabajo', 'getonboard', 'bumeran', 'zonajobs', 'workana', 'opcionempleo', 'jobomas', 'jobrapido', 'jobleads']
+2026-06-12 01:31:54,815 [INFO] 
+============================================================
+2026-06-12 01:31:54,815 [INFO]   EJECUTANDO: linkedin (LinkedInScraper)
+2026-06-12 01:31:54,816 [INFO]   Queries: definidas en el módulo
+2026-06-12 01:31:54,817 [INFO] ============================================================
+2026-06-12 01:31:55,777 [ERROR]   ❌ linkedin falló: [Errno 5] Input/output error: '/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/scraper_20260612_013155.log'
+2026-06-12 01:31:55,781 [INFO] 
+============================================================
+2026-06-12 01:31:55,782 [INFO]   EJECUTANDO: computrabajo (ComputrabajoScraper)
+2026-06-12 01:31:55,782 [INFO]   Queries: definidas en el módulo
+2026-06-12 01:31:55,782 [INFO] ============================================================
+2026-06-12 01:31:55,785 [ERROR]   ❌ computrabajo falló: [Errno 5] Input/output error: '/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/computrabajo_scraper_20260612_013155.log'
+2026-06-12 01:31:55,786 [INFO] 
+============================================================
+2026-06-12 01:31:55,786 [INFO]   EJECUTANDO: getonboard (GetOnBoardScraper)
+2026-06-12 01:31:55,786 [INFO]   Queries: definidas en el módulo
+2026-06-12 01:31:55,787 [INFO] ============================================================
+2026-06-12 01:31:55,788 [ERROR]   ❌ getonboard falló: [Errno 5] Input/output error: '/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/getonboard_scraper_20260612_013155.log'
+2026-06-12 01:31:55,789 [INFO] 
+============================================================
+2026-06-12 01:31:55,790 [INFO]   EJECUTANDO: bumeran (BumeranScraper)
+2026-06-12 01:31:55,790 [INFO]   Queries: definidas en el módulo
+2026-06-12 01:31:55,790 [INFO] ============================================================
+2026-06-12 01:31:55,974 [ERROR]   ❌ bumeran falló: [Errno 5] Input/output error: '/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/bumeran_scraper_20260612_013155.log'
+2026-06-12 01:31:55,976 [INFO] 
+============================================================
+2026-06-12 01:31:55,976 [INFO]   EJECUTANDO: zonajobs (ZonaJobsScraper)
+2026-06-12 01:31:55,976 [INFO]   Queries: definidas en el módulo
+2026-06-12 01:31:55,976 [INFO] ============================================================
+2026-06-12 01:31:55,978 [ERROR]   ❌ zonajobs falló: [Errno 5] Input/output error: '/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/zonajobs_scraper_20260612_013155.log'
+2026-06-12 01:31:55,979 [INFO] 
+============================================================
+2026-06-12 01:31:55,979 [INFO]   EJECUTANDO: workana (WorkanaScraper)
+2026-06-12 01:31:55,979 [INFO]   Queries: definidas en el módulo
+2026-06-12 01:31:55,979 [INFO] ============================================================
+2026-06-12 01:31:55,981 [ERROR]   ❌ workana falló: [Errno 5] Input/output error: '/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/workana_scraper_20260612_013155.log'
+2026-06-12 01:31:55,983 [INFO] 
+============================================================
+2026-06-12 01:31:55,983 [INFO]   EJECUTANDO: opcionempleo (OpcionempleoScraper)
+2026-06-12 01:31:55,983 [INFO]   Queries: definidas en el módulo
+2026-06-12 01:31:55,984 [INFO] ============================================================
+2026-06-12 01:31:55,986 [ERROR]   ❌ opcionempleo falló: [Errno 5] Input/output error: '/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/opcionempleo_20260612_013155.log'
+2026-06-12 01:31:55,987 [INFO] 
+============================================================
+2026-06-12 01:31:55,988 [INFO]   EJECUTANDO: jobomas (JobomasScraper)
+2026-06-12 01:31:55,988 [INFO]   Queries: definidas en el módulo
+2026-06-12 01:31:55,988 [INFO] ============================================================
+2026-06-12 01:31:55,990 [ERROR]   ❌ jobomas falló: [Errno 5] Input/output error: '/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/jobomas_20260612_013155.log'
+2026-06-12 01:31:55,991 [INFO] 
+============================================================
+2026-06-12 01:31:55,992 [INFO]   EJECUTANDO: jobrapido (JobrapidoScraper)
+2026-06-12 01:31:55,992 [INFO]   Queries: definidas en el módulo
+2026-06-12 01:31:55,992 [INFO] ============================================================
+2026-06-12 01:31:55,997 [ERROR]   ❌ jobrapido falló: [Errno 5] Input/output error: '/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/jobrapido_20260612_013155.log'
+2026-06-12 01:31:55,998 [INFO] 
+============================================================
+2026-06-12 01:31:55,998 [INFO]   EJECUTANDO: jobleads (JobleadsScraper)
+2026-06-12 01:31:55,999 [INFO]   Queries: definidas en el módulo
+2026-06-12 01:31:55,999 [INFO] ============================================================
+2026-06-12 01:31:56,001 [ERROR]   ❌ jobleads falló: [Errno 5] Input/output error: '/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/jobleads_20260612_013156.log'
+2026-06-12 01:31:56,002 [INFO] 
+=================================================================
+2026-06-12 01:31:56,002 [INFO]   FASE 2: CONSOLIDACIÓN
+2026-06-12 01:31:56,002 [INFO] =================================================================
+2026-06-12 01:31:56,003 [INFO] Consolidado DB lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.db
+2026-06-12 01:31:56,015 [INFO] 
+  📂 Procesando: linkedin (ofertas_linkedin.db)
+2026-06-12 01:31:56,028 [INFO]   Leídas 787 ofertas de ofertas_linkedin.db
+2026-06-12 01:31:56,037 [INFO]   ✅ linkedin: leídas=787 | nuevas=0 | dup=746 | old=41
+2026-06-12 01:31:56,038 [INFO] 
+  📂 Procesando: computrabajo (ofertas_computrabajo.db)
+2026-06-12 01:31:56,041 [INFO]   Leídas 78 ofertas de ofertas_computrabajo.db
+2026-06-12 01:31:56,042 [INFO]   ✅ computrabajo: leídas=78 | nuevas=0 | dup=78 | old=0
+2026-06-12 01:31:56,043 [INFO] 
+  📂 Procesando: getonboard (ofertas_getonboard.db)
+2026-06-12 01:31:56,051 [INFO]   Leídas 479 ofertas de ofertas_getonboard.db
+2026-06-12 01:31:56,053 [INFO]   ✅ getonboard: leídas=479 | nuevas=0 | dup=439 | old=40
+2026-06-12 01:31:56,054 [INFO] 
+  📂 Procesando: bumeran (ofertas_bumeran.db)
+2026-06-12 01:31:56,059 [INFO]   Leídas 306 ofertas de ofertas_bumeran.db
+2026-06-12 01:31:56,061 [INFO]   ✅ bumeran: leídas=306 | nuevas=0 | dup=306 | old=0
+2026-06-12 01:31:56,061 [INFO] 
+  📂 Procesando: zonajobs (ofertas_zonajobs.db)
+2026-06-12 01:31:56,063 [INFO]   Leídas 44 ofertas de ofertas_zonajobs.db
+2026-06-12 01:31:56,063 [INFO]   ✅ zonajobs: leídas=44 | nuevas=0 | dup=44 | old=0
+2026-06-12 01:31:56,064 [INFO] 
+  📂 Procesando: workana (ofertas_workana.db)
+2026-06-12 01:31:56,065 [INFO]   Leídas 72 ofertas de ofertas_workana.db
+2026-06-12 01:31:56,066 [INFO]   ✅ workana: leídas=72 | nuevas=0 | dup=72 | old=0
+2026-06-12 01:31:56,066 [INFO] 
+  📂 Procesando: opcionempleo (ofertas_opcionempleo.db)
+2026-06-12 01:31:56,085 [INFO]   Leídas 1,074 ofertas de ofertas_opcionempleo.db
+2026-06-12 01:31:56,087 [INFO]   ✅ opcionempleo: leídas=1,074 | nuevas=0 | dup=1,074 | old=0
+2026-06-12 01:31:56,087 [INFO] 
+  📂 Procesando: jobomas (ofertas_jobomas.db)
+2026-06-12 01:31:56,088 [INFO]   Leídas 3 ofertas de ofertas_jobomas.db
+2026-06-12 01:31:56,089 [INFO]   ✅ jobomas: leídas=3 | nuevas=0 | dup=3 | old=0
+2026-06-12 01:31:56,089 [INFO] 
+  📂 Procesando: jobrapido (ofertas_jobrapido.db)
+2026-06-12 01:31:56,100 [INFO]   Leídas 1,326 ofertas de ofertas_jobrapido.db
+2026-06-12 01:31:56,102 [INFO]   ✅ jobrapido: leídas=1,326 | nuevas=0 | dup=1,326 | old=0
+2026-06-12 01:31:56,102 [INFO] 
+  📂 Procesando: jobleads (ofertas_jobleads.db)
+2026-06-12 01:31:56,103 [INFO]   Leídas 22 ofertas de ofertas_jobleads.db
+2026-06-12 01:31:56,104 [INFO]   ✅ jobleads: leídas=22 | nuevas=0 | dup=22 | old=0
+2026-06-12 01:31:56,104 [INFO] 
+=================================================================
+2026-06-12 01:31:56,105 [INFO]   RESUMEN FINAL
+2026-06-12 01:31:56,105 [INFO] =================================================================
+2026-06-12 01:31:56,110 [INFO]   Ofertas nuevas incorporadas : 0
+2026-06-12 01:31:56,110 [INFO]   Descartadas (antigüedad)    : 81
+2026-06-12 01:31:56,111 [INFO]   Descartadas (duplicado)     : 4,110
+2026-06-12 01:31:56,111 [INFO]   Total acumulado en DB       : 4,110
+2026-06-12 01:31:56,111 [INFO]   Ventana temporal aplicada   : últimos 90 días (desde 2026-03-14)
+2026-06-12 01:31:56,111 [INFO]   Duración total              : 0m 35s
+2026-06-12 01:31:56,111 [INFO] 
+  Archivos de salida:
+2026-06-12 01:31:56,111 [INFO]     DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.db
+2026-06-12 01:31:56,112 [INFO]     CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.csv
+2026-06-12 01:31:56,112 [INFO]     Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/run_scraping_20260612_012946.log
+2026-06-12 01:31:56,112 [INFO] 
+  Resultado por scraper:
+2026-06-12 01:31:56,112 [INFO]     ❌ linkedin        | 🔧mod | ofertas=0 | tiempo=0s | error=[Errno 5] Input/output error: '/media/carlos-a-cicconi/Commo
+2026-06-12 01:31:56,113 [INFO]     ❌ computrabajo    | 🔧mod | ofertas=0 | tiempo=0s | error=[Errno 5] Input/output error: '/media/carlos-a-cicconi/Commo
+2026-06-12 01:31:56,113 [INFO]     ❌ getonboard      | 🔧mod | ofertas=0 | tiempo=0s | error=[Errno 5] Input/output error: '/media/carlos-a-cicconi/Commo
+2026-06-12 01:31:56,113 [INFO]     ❌ bumeran         | 🔧mod | ofertas=0 | tiempo=0s | error=[Errno 5] Input/output error: '/media/carlos-a-cicconi/Commo
+2026-06-12 01:31:56,113 [INFO]     ❌ zonajobs        | 🔧mod | ofertas=0 | tiempo=0s | error=[Errno 5] Input/output error: '/media/carlos-a-cicconi/Commo
+2026-06-12 01:31:56,113 [INFO]     ❌ workana         | 🔧mod | ofertas=0 | tiempo=0s | error=[Errno 5] Input/output error: '/media/carlos-a-cicconi/Commo
+2026-06-12 01:31:56,113 [INFO]     ❌ opcionempleo    | 🔧mod | ofertas=0 | tiempo=0s | error=[Errno 5] Input/output error: '/media/carlos-a-cicconi/Commo
+2026-06-12 01:31:56,114 [INFO]     ❌ jobomas         | 🔧mod | ofertas=0 | tiempo=0s | error=[Errno 5] Input/output error: '/media/carlos-a-cicconi/Commo
+2026-06-12 01:31:56,114 [INFO]     ❌ jobrapido       | 🔧mod | ofertas=0 | tiempo=0s | error=[Errno 5] Input/output error: '/media/carlos-a-cicconi/Commo
+2026-06-12 01:31:56,114 [INFO]     ❌ jobleads        | 🔧mod | ofertas=0 | tiempo=0s | error=[Errno 5] Input/output error: '/media/carlos-a-cicconi/Commo
+2026-06-12 01:31:56,114 [INFO] 
+  Por fuente (consolidación):
+2026-06-12 01:31:56,114 [INFO]     linkedin       : nuevas=0 | dup=746 | old=41
+2026-06-12 01:31:56,115 [INFO]     computrabajo   : nuevas=0 | dup=78 | old=0
+2026-06-12 01:31:56,115 [INFO]     getonboard     : nuevas=0 | dup=439 | old=40
+2026-06-12 01:31:56,115 [INFO]     bumeran        : nuevas=0 | dup=306 | old=0
+2026-06-12 01:31:56,115 [INFO]     zonajobs       : nuevas=0 | dup=44 | old=0
+2026-06-12 01:31:56,115 [INFO]     workana        : nuevas=0 | dup=72 | old=0
+2026-06-12 01:31:56,116 [INFO]     opcionempleo   : nuevas=0 | dup=1,074 | old=0
+2026-06-12 01:31:56,116 [INFO]     jobomas        : nuevas=0 | dup=3 | old=0
+2026-06-12 01:31:56,116 [INFO]     jobrapido      : nuevas=0 | dup=1,326 | old=0
+2026-06-12 01:31:56,116 [INFO]     jobleads       : nuevas=0 | dup=22 | old=0

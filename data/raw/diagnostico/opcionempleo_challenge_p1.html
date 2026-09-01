@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="es" dir="ltr"><head>
+<meta charset="utf-8">
+<title>Opcionempleo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-size:16px;
+  font-family:sans-serif;
+}
+#cj{
+  margin:4rem auto;
+  width:100%;
+  max-width:300px;
+}
+h1{
+  font-size:1.25rem;
+  font-weight:700;
+  margin:1rem 0;
+}
+p{
+  font-size:.875rem;
+  margin:0 0 1rem 0;
+}
+#logo{
+  margin:0 auto 1rem auto;
+  max-width:230px;
+}
+#logo svg{
+  fill:#2062af;
+}
+#cjgre{
+  margin:0 auto;
+  max-width:300px;
+}
+.cf-turnstile{
+  height:65px;
+}
+#report-problem{
+  background:none;
+  border:none;
+  padding:none;
+  color:#4b4956;
+  font-weight:500;
+  text-decoration:none;
+  cursor:pointer;
+}
+#report-problem.hide{
+  display:none;
+}
+#report-problem:hover{
+  text-decoration:underline;
+}
+#report-problem-thx{
+  display:none;
+}
+#report-problem-thx.show{
+  display:block;
+  color:#4b4956;
+  font-weight:500;
+}
+</style>
+</head>
+<body>
+  <div id="cj">
+    <div id="logo"><svg viewBox="0 0 698 130" xmlns="http://www.w3.org/2000/svg"><path d="M667 32c4.6 0 8.8.8 12.6 2.4a28.5 28.5 0 0 1 16.1 17 40.5 40.5 0 0 1 .1 27 28 28 0 0 1-16 17.2c-3.8 1.6-8 2.4-12.7 2.4-4.7 0-8.9-.8-12.7-2.4a28 28 0 0 1-16.1-17.2c-1.5-4-2.3-8.6-2.3-13.5 0-5 .8-9.4 2.3-13.5a29 29 0 0 1 16.3-17 32 32 0 0 1 12.5-2.4Zm0 16a14 14 0 0 0-11 4.5c-2.7 3-4 7.1-4 12.4 0 5.2 1.3 9.4 4 12.5 2.6 3 6.3 4.6 11 4.6 4.9 0 8.5-1.5 11.1-4.6 2.6-3.1 3.9-7.3 3.9-12.5 0-5.3-1.3-9.4-3.9-12.4-2.6-3-6.2-4.5-11-4.5Zm-62-16c4.3 0 13 1.7 19.5 9.2a32.4 32.4 0 0 1 6.5 20.4v.4a40.7 40.7 0 0 1-1 9h-38c0 3.6 2.4 7 4.9 8.9a23 23 0 0 0 11.6 3.1 43.7 43.7 0 0 0 13.8-2.2l6.1 13.3a35 35 0 0 1-8.8 2.6A78 78 0 0 1 607 98c-2.3 0-15.6-.6-23.7-10a34 34 0 0 1-8.3-21.8V66a34.8 34.8 0 0 1 7.6-23.3A27.3 27.3 0 0 1 605 32Zm-2 15a10.3 10.3 0 0 0-8.4 3.7 11 11 0 0 0-2.6 7.6v.7h22c0-1.2 0-3-.4-4.5a10.8 10.8 0 0 0-5.3-6.4c-1.4-.7-3.3-1.1-5.3-1.1Zm-30 35c-.8 0-2.6.1-4.6-1.4a6.2 6.2 0 0 1-2.3-4c-.2-1-.1-2-.1-2.6V0l-16 9v70a19 19 0 0 0 19 19h4V82Zm-62-50c4.6 0 9.8.8 13.6 2.4a28.5 28.5 0 0 1 16.1 17c1.5 4 2.3 8.7 2.3 13.6 0 5-.7 9.3-2.2 13.4a28 28 0 0 1-16 17.2A32.1 32.1 0 0 1 512 98c-1.3 0-5-.3-11-1v24l-16 9V35a184 184 0 0 1 17.2-2.7l5.7-.3h3.1Zm1.5 16c-3 0-7 .3-11.5 1v32c4.6.7 8.4 1 11.5 1a13 13 0 0 0 10.7-4.6c2.5-3.1 3.8-7.3 3.8-12.5 0-5.3-1.3-9.4-3.8-12.4s-6-4.5-10.7-4.5ZM393 35a139.6 139.6 0 0 1 25-3c2.5 0 4.4.1 6.6.5a21.8 21.8 0 0 1 6 1.8 236.1 236.1 0 0 1 17-2.2c4-.2 8.2-.1 11.2.4s5.5 1.6 7.1 2.5c3.3 1.8 6.8 4.6 9.5 10.7 1.1 2.6 1.6 7 1.6 13.3v38h-16V59a10 10 0 0 0-4.5-9.4c-2-1.2-4-1.8-7.7-1.6-1.5.1-3.4.4-5.8 1v48h-16V56.9a9.7 9.7 0 0 0-2-4.9 10.6 10.6 0 0 0-5.5-3.7 17.4 17.4 0 0 0-3-.3c-3.5 0-5.6.6-7.5 1v48h-16V35Zm-32-3c4.3 0 13.1 1.7 19.5 9.2C386.9 48.6 387 59 387 63c0 2.7-.3 5.3-1 8h-38c0 3.6 2.4 7 4.9 8.9a23 23 0 0 0 11.6 3.1 43.7 43.7 0 0 0 13.8-2.2l6.1 13.3a35 35 0 0 1-8.8 2.6A78 78 0 0 1 363 98c-2.3 0-15.6-.6-23.7-10a34 34 0 0 1-8.3-21.8V66a34.8 34.8 0 0 1 7.6-23.3A27.3 27.3 0 0 1 361 32Zm-2 15a10.3 10.3 0 0 0-8.4 3.7 11 11 0 0 0-2.6 7.6v.7h22c0-1.2 0-3-.4-4.5a10.8 10.8 0 0 0-5.3-6.4c-1.4-.7-3.3-1.1-5.3-1.1ZM275 35a139.6 139.6 0 0 1 25-3c2.5 0 4.4.1 6.6.5a21.8 21.8 0 0 1 16 11.7c.7 1.1 1 2.3 1.5 3.8.8 3 .9 9.1.9 13.6V97h-16V56.9a9.7 9.7 0 0 0-2-4.9 10.6 10.6 0 0 0-5.5-3.7 17.4 17.4 0 0 0-3-.3c-3.5 0-5.6.6-7.5 1v48h-16V35ZM239 32c4.6 0 8.8.8 12.6 2.4a28.5 28.5 0 0 1 16.1 17 40.5 40.5 0 0 1 .1 27 28 28 0 0 1-16 17.2c-3.8 1.6-8 2.4-12.7 2.4-4.7 0-8.9-.8-12.7-2.4a28 28 0 0 1-16.1-17.2c-1.5-4-2.3-8.6-2.3-13.5 0-5 .8-9.4 2.3-13.5a29 29 0 0 1 16.3-17 32 32 0 0 1 12.5-2.4Zm0 16a14 14 0 0 0-11 4.5c-2.7 3-4 7.1-4 12.4 0 5.2 1.3 9.4 4 12.5 2.6 3 6.3 4.6 11 4.6 4.9 0 8.5-1.5 11.1-4.6 2.6-3.1 3.9-7.3 3.9-12.5 0-5.3-1.3-9.4-3.9-12.4-2.6-3-6.2-4.5-11-4.5ZM203 97h-16V33h16zM205 16a10 10 0 0 1-10 10 10 10 0 0 1-10-10 10 10 0 0 1 10-10 10 10 0 0 1 10 10ZM180 39c-5.2-4.4-11.8-7-19-7-17.1 0-31 14.8-31 33a34 34 0 0 0 9.6 23.9 30 30 0 0 0 20.4 9l1 .1a30.1 30.1 0 0 0 19-7l-10-12c-2.3 2-5.3 3-9 3-6 0-15-5-15-17s9-17 15-17c3.7 0 6.7 1 9 3l10-12ZM93 32c4.6 0 9.8.8 13.6 2.4a28.5 28.5 0 0 1 16.1 17c1.5 4 2.3 8.7 2.3 13.6 0 5-.7 9.3-2.2 13.4a28 28 0 0 1-16 17.2A32.1 32.1 0 0 1 94 98c-1.3 0-5-.3-11-1v24l-16 9V35a184 184 0 0 1 17.2-2.7L90 32h3Zm1.5 16c-3 0-7 .3-11.5 1v32c4.6.7 8.4 1 11.5 1a13 13 0 0 0 10.7-4.6c2.5-3.1 3.8-7.3 3.8-12.5 0-5.3-1.3-9.4-3.8-12.4s-6-4.5-10.7-4.5ZM31 32c4.6 0 8.8.8 12.6 2.4a28.5 28.5 0 0 1 16.1 17 40.5 40.5 0 0 1 .1 27 28 28 0 0 1-16 17.2c-3.8 1.6-8 2.4-12.7 2.4-4.7 0-8.9-.8-12.7-2.4A28 28 0 0 1 2.3 78.4C.8 74.4 0 69.8 0 64.9c0-5 .8-9.4 2.3-13.5a29 29 0 0 1 16.3-17A32 32 0 0 1 31.1 32Zm0 16a14 14 0 0 0-11 4.5c-2.7 3-4 7.1-4 12.4 0 5.2 1.3 9.4 4 12.5 2.6 3 6.3 4.6 11 4.6 4.9 0 8.5-1.5 11.1-4.6A19 19 0 0 0 46 64.9c0-5.3-1.3-9.4-3.9-12.4-2.6-3-6.2-4.5-11-4.5Z"></path></svg></div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAAVTrpYUkZmyEavS" data-language="es" data-size="flexible" data-callback="cf_callback" data-error-callback="cloudflare_turnstile_error_callback"><div><input type="hidden" name="cf-turnstile-response" id="cf-chl-widget-nrk8m_response"></div></div>
+    
+    
+    <h1>Sobre esta página</h1>
+    <p>Nuestros sistemas detectaron tráfico inusual desde su red informática. Esta página verifica si realmente es usted quien envía las solicitudes y no un robot.</p>
+    <p>Dirección IP: 181.95.146.54</p>
+    <div id="birp"></div>
+  </div>
+  
+  
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+  
+  
+  <script src="https://captcha.careerjet.net/v1/api.js"></script>
+  
+
+  
+  <script>
+  const turnstile_el = document.querySelector('.cf-turnstile');
+  window.cf_callback = function(token){
+    var data = new FormData();
+    data.set('r', token);
+    fetch(
+      '/bi-verify',
+      {
+        method: 'post',
+        body: data,
+        cache: 'no-cache',
+      }
+    ).then(function(response) {
+      if (!response.ok) {
+        throw new Error('403');
+      }
+      return response.json();
+    }).then(function(json) {
+      
+      cj_captcha_trigger('27f68965d328063be74cd7b88ee72226', 'cj_captcha_callback');
+      
+    }).catch(function(error){
+    });
+  };
+  
+  window.cloudflare_turnstile_error_callback = function(error_code){
+    if(!navigator.sendBeacon){
+      return 0;
+    }
+    
+    
+    const cf_el = document.querySelector('.cf-turnstile');
+    if(!cf_el){
+      return 0;
+    }
+    
+    cf_el.innerHTML = `<div class="alert alert-error alert-flat"><svg class="icon" viewBox="0 0 18 18"><path d="M9 0a8.94 8.94 0 016.364 2.636A8.94 8.94 0 0118 9a8.94 8.94 0 01-2.636 6.364A8.94 8.94 0 019 18a8.94 8.94 0 01-6.364-2.636A8.94 8.94 0 010 9a8.94 8.94 0 012.636-6.364A8.94 8.94 0 019 0zm2.156 5.5L5.5 11.156 6.844 12.5 12.5 6.844z"/></svg><p>Cloudflare error.</p></div>`;
+    
+    var f = new FormData();
+    f.append('e', error_code);
+    f.append('p', window.location.pathname);
+    if(cf_el.dataset.sitekey){
+      f.append('sk', cf_el.dataset.sitekey);
+    }
+    else{
+      f.append('sk', 'NO_SITEKEY');
+    }
+    
+    nav.sendBeacon('/cfttecb', f);
+    
+    return 0;
+  };
+  </script>
+  
+  
+  
+  <script>
+  window.cj_captcha_callback = function(result_token) {
+    var data = new FormData();
+    data.set('r', result_token);
+    fetch(
+      '/bi-verifycc',
+      {
+        method: 'post',
+        body: data,
+        cache: 'no-cache',
+      }
+    ).then(function(response) {
+      if (response.status === 403) {
+        return response.json().then(function(json) {
+          if (json.birp) {
+            document.querySelector('#birp').innerHTML = json.birp;
+          }
+          return null; 
+        });
+      }
+      return response.json();
+    }).then(function(json) {
+      if (json === null) {
+        return;
+      }
+      window.location.reload();
+    }).catch(function(error){
+      console.log(error);
+      
+    });
+  };
+  </script>
+  <script>
+  document.addEventListener('click', function(e){
+    const t = e.target;
+    
+    if(
+      t.id == 'report-problem'
+      || t.closest('#report-problem')
+    ){
+      e.preventDefault();
+      fetch(
+        t.dataset.url,
+        {
+          method: 'get',
+          cache: 'no-cache',
+        }
+      ).then(function(response) {
+        return response.json();
+      }).then(function(json) {
+        t.classList.add('hide');
+        document.querySelector('#report-problem-thx').classList.add('show');
+      });
+    }
+    
+  }, false);
+  </script>
+  
+
+  
+  
+  
+
+
+</body></html>

@@ -1,0 +1,21 @@
+{
+  "fecha_tuning": "2026-04-26T22:54:33.832116",
+  "tuning_A": {
+    "descripcion": "Ponderación híbrida óptima",
+    "w_embed": 0.7,
+    "w_tfidf": 0.3,
+    "metrica_opt": "nDCG@10"
+  },
+  "tuning_B": {
+    "descripcion": "Umbral de relevancia",
+    "theta_pct": 0.75,
+    "notas": "Sistema robusto — variación < 10% en rango p50-p90"
+  },
+  "tuning_C": {
+    "descripcion": "Hiperparámetros TF-IDF óptimos",
+    "ngram_range": "(1, 2)",
+    "min_df": 3,
+    "max_features": 15000,
+    "metrica_opt": "nDCG@10"
+  }
+}
