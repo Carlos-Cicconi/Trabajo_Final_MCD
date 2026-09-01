@@ -79,8 +79,8 @@ MAX_RETRIES      = 3
 PAGE_TIMEOUT     = 30000
 WAIT_TIMEOUT     = 12000
 
-DB_FILENAME  = DATA_RAW_DIR / "ofertas_jobleads.db"
-CSV_FILENAME = DATA_RAW_DIR / f"jobleads_{datetime.now().strftime('%Y%m%d')}.csv"
+DB_FILENAME  = DATA_RAW_DIR / "jobleads.db"
+CSV_FILENAME = DATA_RAW_DIR / f"ofertas_jobleads_{datetime.now().strftime('%Y%m%d')}.csv"
 BASE_URL     = "https://www.jobleads.com"
 
 # FIX: regex ampliado para capturar /ar/job/{slug} además de /empleo/ y numéricos

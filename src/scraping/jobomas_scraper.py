@@ -68,8 +68,8 @@ DELAY_DETAIL_MIN = 2.0; DELAY_DETAIL_MAX = 4.0
 DELAY_QUERY_MIN  = 5.0; DELAY_QUERY_MAX  = 10.0
 MAX_RETRIES      = 3
 
-DB_FILENAME  = DATA_RAW_DIR / "ofertas_jobomas.db"
-CSV_FILENAME = DATA_RAW_DIR / f"jobomas_{datetime.now().strftime('%Y%m%d')}.csv"
+DB_FILENAME  = DATA_RAW_DIR / "jobomas.db"
+CSV_FILENAME = DATA_RAW_DIR / f"ofertas_jobomas_{datetime.now().strftime('%Y%m%d')}.csv"
 BASE_URL     = "https://ar.jobomas.com"
 
 # Patrón de hrefs de oferta en Jobomas:

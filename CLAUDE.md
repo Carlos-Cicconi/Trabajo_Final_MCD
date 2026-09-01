@@ -35,6 +35,8 @@ python src/scraping/run_scraping.py --solo-consolidar       # re-consolidate wit
 python src/scraping/run_scraping.py --max-dias 60           # change the "max age" window (default 90 days)
 ```
 
+Each per-source scraper writes its raw output directly into `data/raw/` following a fixed naming convention: `ofertas_<sitio>_<fecha>.csv` (daily snapshot), `<sitio>.db` (cumulative SQLite, read by the orchestrator to consolidate), and `stats_<sitio>_<fecha_hora>.json` (per-run stats). `run_scraping.py`'s `SCRAPERS_REGISTRO` maps each scraper module to its `<sitio>.db` filename.
+
 Consolidation rules enforced by the orchestrator: postings older than `--max-dias` are dropped, and duplicates (by `id_consolidado` = hash of fuente + job_id) are never re-inserted. Outputs are cumulative, not overwritten:
 - `data/raw/consolidado/ofertas_consolidadas.csv` / `.db` (SQLite) — master consolidated dataset, canonical columns defined in `COLUMNAS` in `run_scraping.py`.
 - `data/raw/consolidado/run_<timestamp>.json` — per-run report.

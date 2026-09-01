@@ -90,8 +90,8 @@ DELAY_DETAIL_MAX = 5.5
 DELAY_QUERY_MIN  = 8.0
 DELAY_QUERY_MAX  = 14.0
 
-DB_FILENAME  = DATA_RAW_DIR / "ofertas_opcionempleo.db"
-CSV_FILENAME = DATA_RAW_DIR / f"opcionempleo_{datetime.now().strftime('%Y%m%d')}.csv"
+DB_FILENAME  = DATA_RAW_DIR / "opcionempleo.db"
+CSV_FILENAME = DATA_RAW_DIR / f"ofertas_opcionempleo_{datetime.now().strftime('%Y%m%d')}.csv"
 BASE_URL     = "https://www.opcionempleo.com.ar"
 
 # Selector que confirma que el Turnstile fue resuelto y hay contenido real

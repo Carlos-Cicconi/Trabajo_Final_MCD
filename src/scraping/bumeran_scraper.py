@@ -99,8 +99,8 @@ DELAY_DETAIL_MAX = 4.5
 DELAY_QUERY_MIN  = 7.0
 DELAY_QUERY_MAX  = 13.0
 
-DB_FILENAME  = DATA_RAW_DIR / "ofertas_bumeran.db"
-CSV_FILENAME = DATA_RAW_DIR / f"bumeran_{datetime.now().strftime('%Y%m%d')}.csv"
+DB_FILENAME  = DATA_RAW_DIR / "bumeran.db"
+CSV_FILENAME = DATA_RAW_DIR / f"ofertas_bumeran_{datetime.now().strftime('%Y%m%d')}.csv"
 BASE_URL     = "https://www.bumeran.com.ar"
 
 # Selector CSS que identifica cada card de oferta en el DOM renderizado

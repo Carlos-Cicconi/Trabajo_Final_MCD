@@ -89,16 +89,16 @@ COLUMNAS = [
 # Registro de todos los scrapers disponibles
 # Formato: (módulo, clase, nombre_fuente, db_filename)
 SCRAPERS_REGISTRO = [
-    ("linkedin_scraper",     "LinkedInScraper",     "linkedin",     "ofertas_linkedin.db"),
-    ("computrabajo_scraper", "ComputrabajoScraper", "computrabajo", "ofertas_computrabajo.db"),
-    ("getonboard_scraper",   "GetOnBoardScraper",   "getonboard",   "ofertas_getonboard.db"),
-    ("bumeran_scraper",      "BumeranScraper",      "bumeran",      "ofertas_bumeran.db"),
-    ("zonajobs_scraper",     "ZonaJobsScraper",     "zonajobs",     "ofertas_zonajobs.db"),
-    ("workana_scraper",      "WorkanaScraper",      "workana",      "ofertas_workana.db"),
-    ("opcionempleo_scraper", "OpcionempleoScraper", "opcionempleo", "ofertas_opcionempleo.db"),
-    ("jobomas_scraper",      "JobomasScraper",      "jobomas",      "ofertas_jobomas.db"),
-    ("jobrapido_scraper",    "JobrapidoScraper",    "jobrapido",    "ofertas_jobrapido.db"),
-    ("jobleads_scraper",     "JobleadsScraper",     "jobleads",     "ofertas_jobleads.db"),
+    ("linkedin_scraper",     "LinkedInScraper",     "linkedin",     "linkedin.db"),
+    ("computrabajo_scraper", "ComputrabajoScraper", "computrabajo", "computrabajo.db"),
+    ("getonboard_scraper",   "GetOnBoardScraper",   "getonboard",   "getonboard.db"),
+    ("bumeran_scraper",      "BumeranScraper",      "bumeran",      "bumeran.db"),
+    ("zonajobs_scraper",     "ZonaJobsScraper",     "zonajobs",     "zonajobs.db"),
+    ("workana_scraper",      "WorkanaScraper",      "workana",      "workana.db"),
+    ("opcionempleo_scraper", "OpcionempleoScraper", "opcionempleo", "opcionempleo.db"),
+    ("jobomas_scraper",      "JobomasScraper",      "jobomas",      "jobomas.db"),
+    ("jobrapido_scraper",    "JobrapidoScraper",    "jobrapido",    "jobrapido.db"),
+    ("jobleads_scraper",     "JobleadsScraper",     "jobleads",     "jobleads.db"),
 ]
 
 

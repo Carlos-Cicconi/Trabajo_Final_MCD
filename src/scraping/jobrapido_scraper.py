@@ -56,8 +56,8 @@ DELAY_DETAIL_MIN = 1.5; DELAY_DETAIL_MAX = 3.5
 DELAY_QUERY_MIN  = 5.0; DELAY_QUERY_MAX  = 9.0
 MAX_RETRIES      = 3
 
-DB_FILENAME  = DATA_RAW_DIR / "ofertas_jobrapido.db"
-CSV_FILENAME = DATA_RAW_DIR / f"jobrapido_{datetime.now().strftime('%Y%m%d')}.csv"
+DB_FILENAME  = DATA_RAW_DIR / "jobrapido.db"
+CSV_FILENAME = DATA_RAW_DIR / f"ofertas_jobrapido_{datetime.now().strftime('%Y%m%d')}.csv"
 BASE_URL     = "https://ar.jobrapido.com"
 
 # =============================================================================
