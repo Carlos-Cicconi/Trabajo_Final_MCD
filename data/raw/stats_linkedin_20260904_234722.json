@@ -1,0 +1,46 @@
+{
+  "fecha": "2026-09-04T23:47:22.481272",
+  "total_ofertas": 397,
+  "detalle_por_keyword": [
+    {
+      "keyword": "Data Scientist",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Data Analyst",
+      "ofertas": 46
+    },
+    {
+      "keyword": "Machine Learning Engineer",
+      "ofertas": 37
+    },
+    {
+      "keyword": "NLP Engineer",
+      "ofertas": 28
+    },
+    {
+      "keyword": "Data Engineer",
+      "ofertas": 43
+    },
+    {
+      "keyword": "Software Engineer",
+      "ofertas": 47
+    },
+    {
+      "keyword": "Python Developer",
+      "ofertas": 37
+    },
+    {
+      "keyword": "Desarrollador Backend",
+      "ofertas": 38
+    },
+    {
+      "keyword": "Desarrollador Full Stack",
+      "ofertas": 42
+    },
+    {
+      "keyword": "Ingeniero de Datos",
+      "ofertas": 29
+    }
+  ]
+}

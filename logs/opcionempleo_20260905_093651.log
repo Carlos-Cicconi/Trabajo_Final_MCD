@@ -1,0 +1,81 @@
+2026-09-05 09:36:51,028 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/opcionempleo.db
+2026-09-05 09:36:51,029 [INFO] OpcionempleoScraper (Playwright) inicializado
+2026-09-05 09:36:51,996 [INFO] Inicializando sesión en OpcionEmpleo...
+2026-09-05 09:36:51,997 [INFO] (Puede tardar hasta 20s mientras se resuelve el Turnstile)
+2026-09-05 09:36:55,521 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-05 09:37:15,538 [WARNING]    ⚠️  Turnstile no se resolvió a tiempo — continuando igual
+2026-09-05 09:37:20,625 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-09-05 09:37:20,625 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-data-scientist.html
+2026-09-05 09:37:29,486 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-05 09:37:49,492 [WARNING]    ⚠️  Turnstile no se resolvió a tiempo — continuando igual
+2026-09-05 09:37:53,614 [WARNING]    ⚠️  Sin cards — HTML renderizado guardado en diagnostico/
+2026-09-05 09:37:53,615 [INFO]    <title>: Opcionempleo
+2026-09-05 09:37:53,615 [INFO]    Body (300 chars): Opcionempleo Verificación requerida Nuestros sistemas detectaron tráfico inusual desde su red informática. Esta página verifica si realmente es usted quien envía las solicitudes y no un robot. Dirección IP: 190.137.98.96
+2026-09-05 09:37:53,615 [INFO]    → 0 ofertas encontradas
+2026-09-05 09:37:53,616 [INFO]    → Sin más resultados.
+2026-09-05 09:37:53,616 [INFO] ✅ 'Data Scientist': 0 ofertas guardadas
+2026-09-05 09:37:53,616 [INFO]    💤 Pausa: 12.7s
+2026-09-05 09:38:06,357 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-09-05 09:38:06,357 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-data-analyst.html
+2026-09-05 09:38:14,881 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-05 09:38:34,888 [WARNING]    ⚠️  Turnstile no se resolvió a tiempo — continuando igual
+2026-09-05 09:38:39,291 [WARNING]    ⚠️  Sin cards — HTML renderizado guardado en diagnostico/
+2026-09-05 09:38:39,292 [INFO]    <title>: Opcionempleo
+2026-09-05 09:38:39,293 [INFO]    Body (300 chars): Opcionempleo Verificación requerida Nuestros sistemas detectaron tráfico inusual desde su red informática. Esta página verifica si realmente es usted quien envía las solicitudes y no un robot. Dirección IP: 190.137.98.96
+2026-09-05 09:38:39,293 [INFO]    → 0 ofertas encontradas
+2026-09-05 09:38:39,293 [INFO]    → Sin más resultados.
+2026-09-05 09:38:39,294 [INFO] ✅ 'Data Analyst': 0 ofertas guardadas
+2026-09-05 09:38:39,294 [INFO]    💤 Pausa: 11.2s
+2026-09-05 09:38:50,544 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer'
+2026-09-05 09:38:50,544 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-machine-learning.html
+2026-09-05 09:38:57,942 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-05 09:39:17,947 [WARNING]    ⚠️  Turnstile no se resolvió a tiempo — continuando igual
+2026-09-05 09:39:21,668 [WARNING]    ⚠️  Sin cards — HTML renderizado guardado en diagnostico/
+2026-09-05 09:39:21,668 [INFO]    <title>: Opcionempleo
+2026-09-05 09:39:21,668 [INFO]    Body (300 chars): Opcionempleo Verificación requerida Nuestros sistemas detectaron tráfico inusual desde su red informática. Esta página verifica si realmente es usted quien envía las solicitudes y no un robot. Dirección IP: 190.137.98.96
+2026-09-05 09:39:21,668 [INFO]    → 0 ofertas encontradas
+2026-09-05 09:39:21,669 [INFO]    → Sin más resultados.
+2026-09-05 09:39:21,669 [INFO] ✅ 'Machine Learning Engineer': 0 ofertas guardadas
+2026-09-05 09:39:21,669 [INFO]    💤 Pausa: 12.2s
+2026-09-05 09:39:33,883 [INFO] 
+🔍 Buscando: 'NLP Engineer'
+2026-09-05 09:39:33,883 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-nlp.html
+2026-09-05 09:39:41,809 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-05 09:40:01,817 [WARNING]    ⚠️  Turnstile no se resolvió a tiempo — continuando igual
+2026-09-05 09:40:05,893 [WARNING]    ⚠️  Sin cards — HTML renderizado guardado en diagnostico/
+2026-09-05 09:40:05,894 [INFO]    <title>: Opcionempleo
+2026-09-05 09:40:05,894 [INFO]    Body (300 chars): Opcionempleo Verificación requerida Nuestros sistemas detectaron tráfico inusual desde su red informática. Esta página verifica si realmente es usted quien envía las solicitudes y no un robot. Dirección IP: 190.137.98.96
+2026-09-05 09:40:05,894 [INFO]    → 0 ofertas encontradas
+2026-09-05 09:40:05,894 [INFO]    → Sin más resultados.
+2026-09-05 09:40:05,895 [INFO] ✅ 'NLP Engineer': 0 ofertas guardadas
+2026-09-05 09:40:05,895 [INFO]    💤 Pausa: 9.1s
+2026-09-05 09:40:15,054 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-09-05 09:40:15,055 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-data-engineer.html
+2026-09-05 09:40:24,581 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-05 09:40:44,592 [WARNING]    ⚠️  Turnstile no se resolvió a tiempo — continuando igual
+2026-09-05 09:40:48,982 [WARNING]    ⚠️  Sin cards — HTML renderizado guardado en diagnostico/
+2026-09-05 09:40:48,982 [INFO]    <title>: Opcionempleo
+2026-09-05 09:40:48,983 [INFO]    Body (300 chars): Opcionempleo Verificación requerida Nuestros sistemas detectaron tráfico inusual desde su red informática. Esta página verifica si realmente es usted quien envía las solicitudes y no un robot. Dirección IP: 190.137.98.96
+2026-09-05 09:40:48,983 [INFO]    → 0 ofertas encontradas
+2026-09-05 09:40:48,983 [INFO]    → Sin más resultados.
+2026-09-05 09:40:48,983 [INFO] ✅ 'Data Engineer': 0 ofertas guardadas
+2026-09-05 09:40:48,983 [INFO]    💤 Pausa: 11.7s
+2026-09-05 09:41:00,653 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-09-05 09:41:00,654 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-software-engineer.html
+2026-09-05 09:41:09,941 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-05 09:41:29,948 [WARNING]    ⚠️  Turnstile no se resolvió a tiempo — continuando igual
+2026-09-05 09:41:33,623 [WARNING]    ⚠️  Sin cards — HTML renderizado guardado en diagnostico/
+2026-09-05 09:41:33,624 [INFO]    <title>: Opcionempleo
+2026-09-05 09:41:33,624 [INFO]    Body (300 chars): Opcionempleo Verificación requerida Nuestros sistemas detectaron tráfico inusual desde su red informática. Esta página verifica si realmente es usted quien envía las solicitudes y no un robot. Dirección IP: 190.137.98.96
+2026-09-05 09:41:33,624 [INFO]    → 0 ofertas encontradas
+2026-09-05 09:41:33,624 [INFO]    → Sin más resultados.
+2026-09-05 09:41:33,624 [INFO] ✅ 'Software Engineer': 0 ofertas guardadas
+2026-09-05 09:41:33,625 [INFO]    💤 Pausa: 9.9s
+2026-09-05 09:41:43,579 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-09-05 09:41:43,579 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-python.html

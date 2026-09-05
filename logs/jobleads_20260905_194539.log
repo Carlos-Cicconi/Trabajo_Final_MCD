@@ -1,0 +1,80 @@
+2026-09-05 19:45:39,642 [INFO] DB lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/jobleads.db
+2026-09-05 19:45:39,642 [INFO] Ejecutando diagnóstico de JobLeads...
+2026-09-05 19:45:43,290 [INFO]   https://www.jobleads.com/ar/jobs?q=python → HTTP 200 | 330,777 chars | Final: https://www.jobleads.com/ar/jobs?q=python
+2026-09-05 19:45:43,361 [INFO]   <title>: Trabajos en Argentina | JobLeads
+2026-09-05 19:45:43,364 [INFO]   Links oferta detectados: 25
+2026-09-05 19:45:43,364 [INFO]     /ar/job/software-engineer-qb-net-20260713--buenos-aires--e5a0da3494f286c6f4d4832bc3497a135 | Software Engineer (QB - .Net - 20260713)
+2026-09-05 19:45:43,364 [INFO]     /ar/job/software-engineer-mobile-id76367--rosario--e8b8fb006cc4c78dfa5f5dbb4fb9e21c1 | Software Engineer (Mobile) Id76367
+2026-09-05 19:45:43,364 [INFO]     /es/job/frontend-engineer-sr-id-00103--san-telmo--efb22739831726d7091b5771e5b06b75b | Frontend Engineer SR – ID #00103
+2026-09-05 19:45:43,364 [INFO] JobleadsScraper inicializado (modo híbrido: requests + Playwright)
+2026-09-05 19:45:43,364 [INFO] ============================================================
+2026-09-05 19:45:43,365 [INFO] INICIO - JobLeads (modo híbrido: requests + Playwright)
+2026-09-05 19:45:43,892 [INFO] Inicializando sesión Playwright en JobLeads...
+2026-09-05 19:45:48,907 [INFO] 
+🔍 'Data Scientist'
+2026-09-05 19:45:48,908 [INFO]    Página 1/5
+2026-09-05 19:45:56,364 [INFO]    → 23 encontradas
+2026-09-05 19:47:59,018 [INFO]    Página 2/5
+2026-09-05 19:48:05,861 [INFO]    → 2 encontradas
+2026-09-05 19:48:17,719 [INFO]    Página 3/5
+2026-09-05 19:48:24,738 [WARNING]    Sin ofertas HTML — guardado en diagnostico/jobleads_Data_Scientist.html
+2026-09-05 19:48:24,738 [INFO]    → 0 encontradas
+2026-09-05 19:48:24,739 [INFO] CSV: 25 exportadas
+2026-09-05 19:48:24,739 [INFO] ✅ 'Data Scientist': 25 guardadas
+2026-09-05 19:48:32,054 [INFO] 
+🔍 'Data Analyst'
+2026-09-05 19:48:32,055 [INFO]    Página 1/5
+2026-09-05 19:48:39,078 [WARNING]    Sin ofertas HTML — guardado en diagnostico/jobleads_Data_Analyst.html
+2026-09-05 19:48:39,078 [INFO]    → 0 encontradas
+2026-09-05 19:48:39,078 [INFO] ✅ 'Data Analyst': 0 guardadas
+2026-09-05 19:48:45,875 [INFO] 
+🔍 'Machine Learning Engineer'
+2026-09-05 19:48:45,876 [INFO]    Página 1/5
+2026-09-05 19:48:52,196 [WARNING]    Sin ofertas HTML — guardado en diagnostico/jobleads_Machine_Learning_Engineer.html
+2026-09-05 19:48:52,197 [INFO]    → 0 encontradas
+2026-09-05 19:48:52,197 [INFO] ✅ 'Machine Learning Engineer': 0 guardadas
+2026-09-05 19:48:59,911 [INFO] 
+🔍 'NLP Engineer'
+2026-09-05 19:48:59,911 [INFO]    Página 1/5
+2026-09-05 19:49:07,384 [WARNING]    Sin ofertas HTML — guardado en diagnostico/jobleads_NLP_Engineer.html
+2026-09-05 19:49:07,384 [INFO]    → 0 encontradas
+2026-09-05 19:49:07,385 [INFO] ✅ 'NLP Engineer': 0 guardadas
+2026-09-05 19:49:15,502 [INFO] 
+🔍 'Data Engineer'
+2026-09-05 19:49:15,503 [INFO]    Página 1/5
+2026-09-05 19:49:21,701 [WARNING]    Sin ofertas HTML — guardado en diagnostico/jobleads_Data_Engineer.html
+2026-09-05 19:49:21,701 [INFO]    → 0 encontradas
+2026-09-05 19:49:21,701 [INFO] ✅ 'Data Engineer': 0 guardadas
+2026-09-05 19:49:28,201 [INFO] 
+🔍 'Software Engineer'
+2026-09-05 19:49:28,202 [INFO]    Página 1/5
+2026-09-05 19:49:32,287 [WARNING]    Sin ofertas HTML — guardado en diagnostico/jobleads_Software_Engineer.html
+2026-09-05 19:49:32,288 [INFO]    → 0 encontradas
+2026-09-05 19:49:32,288 [INFO] ✅ 'Software Engineer': 0 guardadas
+2026-09-05 19:49:41,054 [INFO] 
+🔍 'Python Developer'
+2026-09-05 19:49:41,054 [INFO]    Página 1/5
+2026-09-05 19:49:50,639 [WARNING]    Sin ofertas HTML — guardado en diagnostico/jobleads_Python_Developer.html
+2026-09-05 19:49:50,639 [INFO]    → 0 encontradas
+2026-09-05 19:49:50,639 [INFO] ✅ 'Python Developer': 0 guardadas
+2026-09-05 19:49:59,168 [INFO] 
+🔍 'Desarrollador Backend'
+2026-09-05 19:49:59,168 [INFO]    Página 1/5
+2026-09-05 19:50:07,386 [WARNING]    Sin ofertas HTML — guardado en diagnostico/jobleads_Desarrollador_Backend.html
+2026-09-05 19:50:07,386 [INFO]    → 0 encontradas
+2026-09-05 19:50:07,386 [INFO] ✅ 'Desarrollador Backend': 0 guardadas
+2026-09-05 19:50:17,494 [INFO] 
+🔍 'Desarrollador Full Stack'
+2026-09-05 19:50:17,495 [INFO]    Página 1/5
+2026-09-05 19:50:26,498 [WARNING]    Sin ofertas HTML — guardado en diagnostico/jobleads_Desarrollador_Full_Stack.html
+2026-09-05 19:50:26,498 [INFO]    → 0 encontradas
+2026-09-05 19:50:26,498 [INFO] ✅ 'Desarrollador Full Stack': 0 guardadas
+2026-09-05 19:50:37,490 [INFO] 
+🔍 'Ingeniero de Datos'
+2026-09-05 19:50:37,491 [INFO]    Página 1/5
+2026-09-05 19:50:45,606 [WARNING]    Sin ofertas HTML — guardado en diagnostico/jobleads_Ingeniero_de_Datos.html
+2026-09-05 19:50:45,606 [INFO]    → 0 encontradas
+2026-09-05 19:50:45,606 [INFO] ✅ 'Ingeniero de Datos': 0 guardadas
+2026-09-05 19:50:52,314 [INFO] 
+============================================================
+FINALIZADO — 25 ofertas

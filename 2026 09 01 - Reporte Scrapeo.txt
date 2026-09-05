@@ -1,0 +1,85 @@
+2026-09-01 04:09:36,554 [INFO]   FASE 2: CONSOLIDACIÓN
+2026-09-01 04:09:36,554 [INFO] =================================================================
+2026-09-01 04:09:36,554 [INFO] Consolidado DB lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.db
+2026-09-01 04:09:36,560 [INFO] 
+  📂 Procesando: linkedin (linkedin.db)
+2026-09-01 04:09:36,583 [INFO]   Leídas 738 ofertas de linkedin.db
+2026-09-01 04:09:36,611 [INFO]   ✅ linkedin: leídas=738 | nuevas=171 | dup=514 | old=53
+2026-09-01 04:09:36,611 [INFO] 
+  📂 Procesando: computrabajo (computrabajo.db)
+2026-09-01 04:09:36,613 [INFO]   Leídas 281 ofertas de computrabajo.db
+2026-09-01 04:09:36,622 [INFO]   ✅ computrabajo: leídas=281 | nuevas=77 | dup=204 | old=0
+2026-09-01 04:09:36,622 [INFO] 
+  📂 Procesando: getonboard (getonboard.db)
+2026-09-01 04:09:36,632 [INFO]   Leídas 494 ofertas de getonboard.db
+2026-09-01 04:09:36,639 [INFO]   ✅ getonboard: leídas=494 | nuevas=15 | dup=474 | old=5
+2026-09-01 04:09:36,639 [INFO] 
+  📂 Procesando: bumeran (bumeran.db)
+2026-09-01 04:09:36,639 [WARNING]   DB no encontrada: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/bumeran.db
+2026-09-01 04:09:36,640 [INFO]   ✅ bumeran: leídas=0 | nuevas=0 | dup=0 | old=0
+2026-09-01 04:09:36,640 [INFO] 
+  📂 Procesando: zonajobs (zonajobs.db)
+2026-09-01 04:09:36,640 [WARNING]   DB no encontrada: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/zonajobs.db
+2026-09-01 04:09:36,640 [INFO]   ✅ zonajobs: leídas=0 | nuevas=0 | dup=0 | old=0
+2026-09-01 04:09:36,641 [INFO] 
+  📂 Procesando: workana (workana.db)
+2026-09-01 04:09:36,641 [WARNING]   DB no encontrada: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/workana.db
+2026-09-01 04:09:36,641 [INFO]   ✅ workana: leídas=0 | nuevas=0 | dup=0 | old=0
+2026-09-01 04:09:36,641 [INFO] 
+  📂 Procesando: opcionempleo (opcionempleo.db)
+2026-09-01 04:09:36,641 [WARNING]   DB no encontrada: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/opcionempleo.db
+2026-09-01 04:09:36,641 [INFO]   ✅ opcionempleo: leídas=0 | nuevas=0 | dup=0 | old=0
+2026-09-01 04:09:36,641 [INFO] 
+  📂 Procesando: jobomas (jobomas.db)
+2026-09-01 04:09:36,642 [INFO]   Leídas 12 ofertas de jobomas.db
+2026-09-01 04:09:36,647 [INFO]   ✅ jobomas: leídas=12 | nuevas=6 | dup=6 | old=0
+2026-09-01 04:09:36,648 [INFO] 
+  📂 Procesando: jobrapido (jobrapido.db)
+2026-09-01 04:09:36,655 [INFO]   Leídas 967 ofertas de jobrapido.db
+2026-09-01 04:09:36,668 [INFO]   ✅ jobrapido: leídas=967 | nuevas=61 | dup=906 | old=0
+2026-09-01 04:09:36,668 [INFO] 
+  📂 Procesando: jobleads (jobleads.db)
+2026-09-01 04:09:36,669 [INFO]   Leídas 0 ofertas de jobleads.db
+2026-09-01 04:09:36,669 [INFO]   ✅ jobleads: leídas=0 | nuevas=0 | dup=0 | old=0
+2026-09-01 04:09:36,697 [INFO]   CSV consolidado actualizado: +330 filas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.csv
+2026-09-01 04:09:36,698 [INFO] 
+=================================================================
+2026-09-01 04:09:36,698 [INFO]   RESUMEN FINAL
+2026-09-01 04:09:36,698 [INFO] =================================================================
+2026-09-01 04:09:36,698 [INFO]   Ofertas nuevas incorporadas : 330
+2026-09-01 04:09:36,698 [INFO]   Descartadas (antigüedad)    : 58
+2026-09-01 04:09:36,699 [INFO]   Descartadas (duplicado)     : 2,104
+2026-09-01 04:09:36,699 [INFO]   Total acumulado en DB       : 7,754
+2026-09-01 04:09:36,699 [INFO]   Ventana temporal aplicada   : últimos 90 días (desde 2026-06-03)
+2026-09-01 04:09:36,699 [INFO]   Duración total              : 122m 48s
+2026-09-01 04:09:36,699 [INFO] 
+  Archivos de salida:
+2026-09-01 04:09:36,699 [INFO]     DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.db
+2026-09-01 04:09:36,699 [INFO]     CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.csv
+2026-09-01 04:09:36,699 [INFO]     Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/run_scraping_20260901_020648.log
+2026-09-01 04:09:36,699 [INFO] 
+  Resultado por scraper:
+2026-09-01 04:09:36,699 [INFO]     ✅ linkedin        | 🔧mod | ofertas=400 | tiempo=1885s
+2026-09-01 04:09:36,699 [INFO]     ✅ computrabajo    | 🔧mod | ofertas=88 | tiempo=535s
+2026-09-01 04:09:36,699 [INFO]     ✅ getonboard      | 🔧mod | ofertas=429 | tiempo=199s
+2026-09-01 04:09:36,699 [INFO]     ❌ bumeran         | 🔧mod | ofertas=0 | tiempo=0s | error=No module named 'playwright'
+2026-09-01 04:09:36,700 [INFO]     ❌ zonajobs        | 🔧mod | ofertas=0 | tiempo=0s | error=No module named 'playwright'
+2026-09-01 04:09:36,700 [INFO]     ❌ workana         | 🔧mod | ofertas=0 | tiempo=0s | error=No module named 'playwright'
+2026-09-01 04:09:36,700 [INFO]     ❌ opcionempleo    | 🔧mod | ofertas=0 | tiempo=0s | error=No module named 'playwright'
+2026-09-01 04:09:36,700 [INFO]     ✅ jobomas         | 🔧mod | ofertas=8 | tiempo=226s
+2026-09-01 04:09:36,700 [INFO]     ✅ jobrapido       | 🔧mod | ofertas=665 | tiempo=4514s
+2026-09-01 04:09:36,700 [INFO]     ✅ jobleads        | 🔧mod | ofertas=0 | tiempo=8s
+2026-09-01 04:09:36,700 [INFO] 
+  Por fuente (consolidación):
+2026-09-01 04:09:36,700 [INFO]     linkedin       : nuevas=171 | dup=514 | old=53
+2026-09-01 04:09:36,700 [INFO]     computrabajo   : nuevas=77 | dup=204 | old=0
+2026-09-01 04:09:36,700 [INFO]     getonboard     : nuevas=15 | dup=474 | old=5
+2026-09-01 04:09:36,700 [INFO]     bumeran        : nuevas=0 | dup=0 | old=0
+2026-09-01 04:09:36,700 [INFO]     zonajobs       : nuevas=0 | dup=0 | old=0
+2026-09-01 04:09:36,700 [INFO]     workana        : nuevas=0 | dup=0 | old=0
+2026-09-01 04:09:36,700 [INFO]     opcionempleo   : nuevas=0 | dup=0 | old=0
+2026-09-01 04:09:36,701 [INFO]     jobomas        : nuevas=6 | dup=6 | old=0
+2026-09-01 04:09:36,701 [INFO]     jobrapido      : nuevas=61 | dup=906 | old=0
+2026-09-01 04:09:36,701 [INFO]     jobleads       : nuevas=0 | dup=0 | old=0
+2026-09-01 04:09:36,701 [INFO]     Reporte: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/run_20260901_040936.json
+2026-09-01 04:09:36,701 [INFO] =================================================================

@@ -1,0 +1,154 @@
+{
+  "fecha_ejecucion": "2026-09-05T19:31:47.094963",
+  "max_dias": 90,
+  "limite_temporal": "2026-06-07",
+  "duracion_segundos": 19756,
+  "total_acumulado_db": 9718,
+  "nuevas_incorporadas": 1188,
+  "descartadas_fecha": 68,
+  "descartadas_dup": 3223,
+  "scrapers_ejecutados": [
+    {
+      "fuente": "linkedin",
+      "exito": true,
+      "ofertas": 400,
+      "error": null,
+      "duracion_s": 1885,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "computrabajo",
+      "exito": true,
+      "ofertas": 98,
+      "error": null,
+      "duracion_s": 572,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "getonboard",
+      "exito": true,
+      "ofertas": 430,
+      "error": null,
+      "duracion_s": 194,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "bumeran",
+      "exito": true,
+      "ofertas": 0,
+      "error": null,
+      "duracion_s": 325,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "zonajobs",
+      "exito": true,
+      "ofertas": 0,
+      "error": null,
+      "duracion_s": 328,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "workana",
+      "exito": true,
+      "ofertas": 35,
+      "error": null,
+      "duracion_s": 886,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "opcionempleo",
+      "exito": true,
+      "ofertas": 855,
+      "error": null,
+      "duracion_s": 10562,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "jobomas",
+      "exito": true,
+      "ofertas": 8,
+      "error": null,
+      "duracion_s": 201,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "jobrapido",
+      "exito": true,
+      "ofertas": 645,
+      "error": null,
+      "duracion_s": 4645,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "jobleads",
+      "exito": true,
+      "ofertas": 0,
+      "error": null,
+      "duracion_s": 151,
+      "queries_origen": "modulo"
+    }
+  ],
+  "consolidacion_fuentes": {
+    "linkedin": {
+      "leidas": 982,
+      "descartadas_fecha": 62,
+      "descartadas_dup": 832,
+      "nuevas": 88
+    },
+    "computrabajo": {
+      "leidas": 667,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 576,
+      "nuevas": 91
+    },
+    "getonboard": {
+      "leidas": 556,
+      "descartadas_fecha": 6,
+      "descartadas_dup": 548,
+      "nuevas": 2
+    },
+    "bumeran": {
+      "leidas": 0,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "nuevas": 0
+    },
+    "zonajobs": {
+      "leidas": 0,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "nuevas": 0
+    },
+    "workana": {
+      "leidas": 40,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "nuevas": 40
+    },
+    "opcionempleo": {
+      "leidas": 921,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 1,
+      "nuevas": 920
+    },
+    "jobomas": {
+      "leidas": 16,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 16,
+      "nuevas": 0
+    },
+    "jobrapido": {
+      "leidas": 1297,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 1250,
+      "nuevas": 47
+    },
+    "jobleads": {
+      "leidas": 0,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "nuevas": 0
+    }
+  }
+}

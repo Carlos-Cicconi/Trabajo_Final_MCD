@@ -1,0 +1,154 @@
+{
+  "fecha_ejecucion": "2026-09-04T20:25:27.707162",
+  "max_dias": 90,
+  "limite_temporal": "2026-06-06",
+  "duracion_segundos": 7735,
+  "total_acumulado_db": 8346,
+  "nuevas_incorporadas": 592,
+  "descartadas_fecha": 62,
+  "descartadas_dup": 2443,
+  "scrapers_ejecutados": [
+    {
+      "fuente": "linkedin",
+      "exito": true,
+      "ofertas": 407,
+      "error": null,
+      "duracion_s": 1913,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "computrabajo",
+      "exito": true,
+      "ofertas": 202,
+      "error": null,
+      "duracion_s": 1504,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "getonboard",
+      "exito": true,
+      "ofertas": 431,
+      "error": null,
+      "duracion_s": 210,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "bumeran",
+      "exito": false,
+      "ofertas": 0,
+      "error": "No module named 'playwright'",
+      "duracion_s": 0,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "zonajobs",
+      "exito": false,
+      "ofertas": 0,
+      "error": "No module named 'playwright'",
+      "duracion_s": 0,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "workana",
+      "exito": false,
+      "ofertas": 0,
+      "error": "No module named 'playwright'",
+      "duracion_s": 0,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "opcionempleo",
+      "exito": false,
+      "ofertas": 0,
+      "error": "No module named 'playwright'",
+      "duracion_s": 0,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "jobomas",
+      "exito": true,
+      "ofertas": 8,
+      "error": null,
+      "duracion_s": 194,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "jobrapido",
+      "exito": true,
+      "ofertas": 575,
+      "error": null,
+      "duracion_s": 3908,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "jobleads",
+      "exito": true,
+      "ofertas": 0,
+      "error": null,
+      "duracion_s": 2,
+      "queries_origen": "modulo"
+    }
+  ],
+  "consolidacion_fuentes": {
+    "linkedin": {
+      "leidas": 879,
+      "descartadas_fecha": 56,
+      "descartadas_dup": 689,
+      "nuevas": 134
+    },
+    "computrabajo": {
+      "leidas": 472,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 281,
+      "nuevas": 191
+    },
+    "getonboard": {
+      "leidas": 552,
+      "descartadas_fecha": 6,
+      "descartadas_dup": 494,
+      "nuevas": 52
+    },
+    "bumeran": {
+      "leidas": 0,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "nuevas": 0
+    },
+    "zonajobs": {
+      "leidas": 0,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "nuevas": 0
+    },
+    "workana": {
+      "leidas": 0,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "nuevas": 0
+    },
+    "opcionempleo": {
+      "leidas": 0,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "nuevas": 0
+    },
+    "jobomas": {
+      "leidas": 16,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 12,
+      "nuevas": 4
+    },
+    "jobrapido": {
+      "leidas": 1178,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 967,
+      "nuevas": 211
+    },
+    "jobleads": {
+      "leidas": 0,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "nuevas": 0
+    }
+  }
+}

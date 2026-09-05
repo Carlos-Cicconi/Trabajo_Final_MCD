@@ -1,0 +1,865 @@
+2026-09-04 18:16:32,666 [INFO] 
+=================================================================
+2026-09-04 18:16:32,666 [INFO]   ORQUESTADOR DE SCRAPING — Tesis MCD
+2026-09-04 18:16:32,666 [INFO]   Alumno: Cicconi, Carlos Alberto
+2026-09-04 18:16:32,666 [INFO]   Universidad Austral — Maestría en Explotación de Datos
+2026-09-04 18:16:32,666 [INFO] =================================================================
+2026-09-04 18:16:32,667 [INFO]   Fecha/hora inicio : 2026-09-04 18:16:32
+2026-09-04 18:16:32,667 [INFO]   Ventana temporal  : 90 días
+2026-09-04 18:16:32,667 [INFO]   Scrapers activos  : 10
+2026-09-04 18:16:32,667 [INFO]   Solo consolidar   : False
+2026-09-04 18:16:32,667 [INFO]   Origen de queries : módulos (por defecto)
+2026-09-04 18:16:32,667 [INFO] 
+  Scrapers a ejecutar: ['linkedin', 'computrabajo', 'getonboard', 'bumeran', 'zonajobs', 'workana', 'opcionempleo', 'jobomas', 'jobrapido', 'jobleads']
+2026-09-04 18:16:32,667 [INFO] 
+============================================================
+2026-09-04 18:16:32,667 [INFO]   EJECUTANDO: linkedin (LinkedInScraper)
+2026-09-04 18:16:32,667 [INFO]   Queries: definidas en el módulo
+2026-09-04 18:16:32,667 [INFO] ============================================================
+2026-09-04 18:16:33,114 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/linkedin.db
+2026-09-04 18:16:33,114 [INFO] LinkedInScraper inicializado correctamente
+2026-09-04 18:16:33,114 [INFO] ============================================================
+2026-09-04 18:16:33,114 [INFO] INICIO DEL SCRAPING - LinkedIn Jobs
+2026-09-04 18:16:33,114 [INFO] Búsquedas: 10 | Páginas por búsqueda: 5
+2026-09-04 18:16:33,114 [INFO] ============================================================
+2026-09-04 18:16:33,114 [INFO] 
+🔍 Buscando: 'Data Scientist' en 'Argentina'
+2026-09-04 18:16:33,115 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Scientist&location=Argentina&start=0&f_WT=2
+2026-09-04 18:16:37,170 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:17:15,136 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Scientist&location=Argentina&start=25&f_WT=2
+2026-09-04 18:17:18,987 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:17:58,328 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Scientist&location=Argentina&start=50&f_WT=2
+2026-09-04 18:18:02,237 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:18:43,616 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Scientist&location=Argentina&start=75&f_WT=2
+2026-09-04 18:18:46,888 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:19:26,539 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Scientist&location=Argentina&start=100&f_WT=2
+2026-09-04 18:19:29,690 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:20:14,254 [INFO] Exportadas 50 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260904.csv
+2026-09-04 18:20:14,254 [INFO] ✅ 'Data Scientist': 50 ofertas guardadas
+2026-09-04 18:20:14,254 [INFO] 
+🔍 Buscando: 'Data Analyst' en 'Argentina'
+2026-09-04 18:20:14,254 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Analyst&location=Argentina&start=0&f_WT=2
+2026-09-04 18:20:19,143 [INFO]    → 8 ofertas nuevas encontradas
+2026-09-04 18:20:52,870 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Analyst&location=Argentina&start=25&f_WT=2
+2026-09-04 18:20:57,646 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:21:40,449 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Analyst&location=Argentina&start=50&f_WT=2
+2026-09-04 18:21:45,079 [INFO]    → 8 ofertas nuevas encontradas
+2026-09-04 18:22:19,100 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Analyst&location=Argentina&start=75&f_WT=2
+2026-09-04 18:22:23,541 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:23:03,910 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Analyst&location=Argentina&start=100&f_WT=2
+2026-09-04 18:23:07,893 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:23:48,125 [INFO] Exportadas 46 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260904.csv
+2026-09-04 18:23:48,125 [INFO] ✅ 'Data Analyst': 46 ofertas guardadas
+2026-09-04 18:23:48,125 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer' en 'Argentina'
+2026-09-04 18:23:48,125 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Machine%20Learning%20Engineer&location=Argentina&start=0&f_WT=2
+2026-09-04 18:23:51,454 [INFO]    → 5 ofertas nuevas encontradas
+2026-09-04 18:24:10,857 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Machine%20Learning%20Engineer&location=Argentina&start=25&f_WT=2
+2026-09-04 18:24:14,909 [INFO]    → 6 ofertas nuevas encontradas
+2026-09-04 18:24:42,600 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Machine%20Learning%20Engineer&location=Argentina&start=50&f_WT=2
+2026-09-04 18:24:46,770 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:25:32,952 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Machine%20Learning%20Engineer&location=Argentina&start=75&f_WT=2
+2026-09-04 18:25:36,457 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:26:21,006 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Machine%20Learning%20Engineer&location=Argentina&start=100&f_WT=2
+2026-09-04 18:26:26,398 [INFO]    → 9 ofertas nuevas encontradas
+2026-09-04 18:27:02,197 [INFO] Exportadas 40 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260904.csv
+2026-09-04 18:27:02,198 [INFO] ✅ 'Machine Learning Engineer': 40 ofertas guardadas
+2026-09-04 18:27:02,198 [INFO] 
+🔍 Buscando: 'NLP Engineer' en 'Argentina'
+2026-09-04 18:27:02,198 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=NLP%20Engineer&location=Argentina&start=0&f_WT=2
+2026-09-04 18:27:06,974 [INFO]    → 5 ofertas nuevas encontradas
+2026-09-04 18:27:26,756 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=NLP%20Engineer&location=Argentina&start=25&f_WT=2
+2026-09-04 18:27:31,943 [INFO]    → 6 ofertas nuevas encontradas
+2026-09-04 18:27:57,223 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=NLP%20Engineer&location=Argentina&start=50&f_WT=2
+2026-09-04 18:28:02,218 [INFO]    → 4 ofertas nuevas encontradas
+2026-09-04 18:28:19,415 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=NLP%20Engineer&location=Argentina&start=75&f_WT=2
+2026-09-04 18:28:24,503 [INFO]    → 6 ofertas nuevas encontradas
+2026-09-04 18:28:50,532 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=NLP%20Engineer&location=Argentina&start=100&f_WT=2
+2026-09-04 18:28:55,863 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:29:34,417 [INFO] Exportadas 31 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260904.csv
+2026-09-04 18:29:34,417 [INFO] ✅ 'NLP Engineer': 31 ofertas guardadas
+2026-09-04 18:29:34,418 [INFO] 
+🔍 Buscando: 'Data Engineer' en 'Argentina'
+2026-09-04 18:29:34,418 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Engineer&location=Argentina&start=0&f_WT=2
+2026-09-04 18:29:38,267 [INFO]    → 5 ofertas nuevas encontradas
+2026-09-04 18:29:59,727 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Engineer&location=Argentina&start=25&f_WT=2
+2026-09-04 18:30:04,709 [INFO]    → 9 ofertas nuevas encontradas
+2026-09-04 18:30:44,754 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Engineer&location=Argentina&start=50&f_WT=2
+2026-09-04 18:30:50,049 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:31:34,207 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Engineer&location=Argentina&start=75&f_WT=2
+2026-09-04 18:31:37,770 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:32:21,010 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Engineer&location=Argentina&start=100&f_WT=2
+2026-09-04 18:32:25,283 [INFO]    → 9 ofertas nuevas encontradas
+2026-09-04 18:33:02,419 [INFO] Exportadas 43 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260904.csv
+2026-09-04 18:33:02,419 [INFO] ✅ 'Data Engineer': 43 ofertas guardadas
+2026-09-04 18:33:02,419 [INFO] 
+🔍 Buscando: 'Software Engineer' en 'Argentina'
+2026-09-04 18:33:02,420 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Software%20Engineer&location=Argentina&start=0&f_WT=2
+2026-09-04 18:33:06,552 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:33:53,975 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Software%20Engineer&location=Argentina&start=25&f_WT=2
+2026-09-04 18:33:58,468 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:34:43,470 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Software%20Engineer&location=Argentina&start=50&f_WT=2
+2026-09-04 18:34:46,792 [INFO]    → 9 ofertas nuevas encontradas
+2026-09-04 18:35:21,042 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Software%20Engineer&location=Argentina&start=75&f_WT=2
+2026-09-04 18:35:24,592 [INFO]    → 9 ofertas nuevas encontradas
+2026-09-04 18:35:59,432 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Software%20Engineer&location=Argentina&start=100&f_WT=2
+2026-09-04 18:36:02,678 [INFO]    → 9 ofertas nuevas encontradas
+2026-09-04 18:36:38,233 [INFO] Exportadas 47 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260904.csv
+2026-09-04 18:36:38,233 [INFO] ✅ 'Software Engineer': 47 ofertas guardadas
+2026-09-04 18:36:38,233 [INFO] 
+🔍 Buscando: 'Python Developer' en 'Argentina'
+2026-09-04 18:36:38,234 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python%20Developer&location=Argentina&start=0&f_WT=2
+2026-09-04 18:36:43,748 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:37:24,955 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python%20Developer&location=Argentina&start=25&f_WT=2
+2026-09-04 18:37:28,290 [INFO]    → 9 ofertas nuevas encontradas
+2026-09-04 18:38:03,660 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python%20Developer&location=Argentina&start=50&f_WT=2
+2026-09-04 18:38:08,126 [INFO]    → 8 ofertas nuevas encontradas
+2026-09-04 18:38:45,152 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python%20Developer&location=Argentina&start=75&f_WT=2
+2026-09-04 18:38:49,415 [INFO]    → 7 ofertas nuevas encontradas
+2026-09-04 18:39:18,729 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python%20Developer&location=Argentina&start=100&f_WT=2
+2026-09-04 18:39:23,282 [INFO]    → 7 ofertas nuevas encontradas
+2026-09-04 18:39:51,169 [INFO] Exportadas 41 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260904.csv
+2026-09-04 18:39:51,169 [INFO] ✅ 'Python Developer': 41 ofertas guardadas
+2026-09-04 18:39:51,169 [INFO] 
+🔍 Buscando: 'Desarrollador Backend' en 'Argentina'
+2026-09-04 18:39:51,169 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Argentina&start=0&f_WT=2
+2026-09-04 18:39:55,758 [INFO]    → 6 ofertas nuevas encontradas
+2026-09-04 18:40:18,302 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Argentina&start=25&f_WT=2
+2026-09-04 18:40:21,427 [INFO]    → 7 ofertas nuevas encontradas
+2026-09-04 18:40:49,672 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Argentina&start=50&f_WT=2
+2026-09-04 18:40:53,460 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:41:31,584 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Argentina&start=75&f_WT=2
+2026-09-04 18:41:35,342 [INFO]    → 6 ofertas nuevas encontradas
+2026-09-04 18:42:00,101 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Argentina&start=100&f_WT=2
+2026-09-04 18:42:03,238 [INFO]    → 9 ofertas nuevas encontradas
+2026-09-04 18:42:38,685 [INFO] Exportadas 38 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260904.csv
+2026-09-04 18:42:38,685 [INFO] ✅ 'Desarrollador Backend': 38 ofertas guardadas
+2026-09-04 18:42:38,685 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack' en 'Argentina'
+2026-09-04 18:42:38,686 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Full%20Stack&location=Argentina&start=0&f_WT=2
+2026-09-04 18:42:43,789 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-04 18:43:28,056 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Full%20Stack&location=Argentina&start=25&f_WT=2
+2026-09-04 18:43:32,230 [INFO]    → 8 ofertas nuevas encontradas
+2026-09-04 18:44:06,220 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Full%20Stack&location=Argentina&start=50&f_WT=2
+2026-09-04 18:44:11,727 [INFO]    → 8 ofertas nuevas encontradas
+2026-09-04 18:44:48,158 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Full%20Stack&location=Argentina&start=75&f_WT=2
+2026-09-04 18:44:51,279 [INFO]    → 9 ofertas nuevas encontradas
+2026-09-04 18:45:27,565 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Full%20Stack&location=Argentina&start=100&f_WT=2
+2026-09-04 18:45:31,828 [INFO]    → 7 ofertas nuevas encontradas
+2026-09-04 18:46:03,307 [INFO] Exportadas 42 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260904.csv
+2026-09-04 18:46:03,307 [INFO] ✅ 'Desarrollador Full Stack': 42 ofertas guardadas
+2026-09-04 18:46:03,307 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos' en 'Argentina'
+2026-09-04 18:46:03,308 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingeniero%20de%20Datos&location=Argentina&start=0&f_WT=2
+2026-09-04 18:46:08,484 [INFO]    → 3 ofertas nuevas encontradas
+2026-09-04 18:46:23,540 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingeniero%20de%20Datos&location=Argentina&start=25&f_WT=2
+2026-09-04 18:46:27,026 [INFO]    → 8 ofertas nuevas encontradas
+2026-09-04 18:46:58,148 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingeniero%20de%20Datos&location=Argentina&start=50&f_WT=2
+2026-09-04 18:47:02,652 [INFO]    → 7 ofertas nuevas encontradas
+2026-09-04 18:47:31,136 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingeniero%20de%20Datos&location=Argentina&start=75&f_WT=2
+2026-09-04 18:47:34,395 [INFO]    → 7 ofertas nuevas encontradas
+2026-09-04 18:48:05,223 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingeniero%20de%20Datos&location=Argentina&start=100&f_WT=2
+2026-09-04 18:48:09,315 [INFO]    → 4 ofertas nuevas encontradas
+2026-09-04 18:48:26,606 [INFO] Exportadas 29 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260904.csv
+2026-09-04 18:48:26,606 [INFO] ✅ 'Ingeniero de Datos': 29 ofertas guardadas
+2026-09-04 18:48:26,606 [INFO] 
+============================================================
+2026-09-04 18:48:26,607 [INFO] SCRAPING FINALIZADO
+2026-09-04 18:48:26,607 [INFO] Total de ofertas únicas recopiladas: 407
+2026-09-04 18:48:26,607 [INFO] Base de datos: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/linkedin.db
+2026-09-04 18:48:26,607 [INFO] CSV exportado: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260904.csv
+2026-09-04 18:48:26,607 [INFO] Log guardado:  /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/scraper_20260904_181633.log
+2026-09-04 18:48:26,608 [INFO] ============================================================
+2026-09-04 18:48:26,609 [INFO] Estadísticas guardadas: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/stats_linkedin_20260904_184826.json
+2026-09-04 18:48:26,609 [INFO]   ✅ linkedin: 407 ofertas recopiladas
+2026-09-04 18:48:26,620 [INFO] 
+============================================================
+2026-09-04 18:48:26,621 [INFO]   EJECUTANDO: computrabajo (ComputrabajoScraper)
+2026-09-04 18:48:26,621 [INFO]   Queries: definidas en el módulo
+2026-09-04 18:48:26,621 [INFO] ============================================================
+2026-09-04 18:48:26,708 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/computrabajo.db
+2026-09-04 18:48:26,708 [INFO] ComputrabajoScraper inicializado correctamente
+2026-09-04 18:48:26,708 [INFO] ============================================================
+2026-09-04 18:48:26,708 [INFO] INICIO DEL SCRAPING - Computrabajo Argentina
+2026-09-04 18:48:26,708 [INFO] Búsquedas: 10 | Páginas por búsqueda: 5
+2026-09-04 18:48:26,708 [INFO] ============================================================
+2026-09-04 18:48:26,708 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-09-04 18:48:26,708 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-data-scientist
+2026-09-04 18:48:32,950 [INFO]    → 2 ofertas nuevas encontradas
+2026-09-04 18:48:40,868 [INFO]    Página 2/5 → https://www.computrabajo.com.ar/trabajo-de-data-scientist?p=2
+2026-09-04 18:48:45,687 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-04 18:48:45,688 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-04 18:48:45,696 [INFO] Exportadas 2 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_computrabajo_20260904.csv
+2026-09-04 18:48:45,697 [INFO] ✅ 'Data Scientist': 2 ofertas guardadas
+2026-09-04 18:48:45,697 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-09-04 18:48:45,697 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-data-analyst
+2026-09-04 18:48:51,013 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-04 18:48:51,013 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-04 18:48:51,013 [INFO] ✅ 'Data Analyst': 0 ofertas guardadas
+2026-09-04 18:48:51,014 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer'
+2026-09-04 18:48:51,014 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-machine-learning
+2026-09-04 18:48:56,842 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-04 18:48:56,842 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-04 18:48:56,842 [INFO] ✅ 'Machine Learning Engineer': 0 ofertas guardadas
+2026-09-04 18:48:56,842 [INFO] 
+🔍 Buscando: 'NLP Engineer'
+2026-09-04 18:48:56,843 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-nlp-engineer
+2026-09-04 18:49:00,894 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-04 18:49:00,895 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-04 18:49:00,895 [INFO] ✅ 'NLP Engineer': 0 ofertas guardadas
+2026-09-04 18:49:00,895 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-09-04 18:49:00,896 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-data-engineer
+2026-09-04 18:49:06,477 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-04 18:49:06,477 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-04 18:49:06,478 [INFO] ✅ 'Data Engineer': 0 ofertas guardadas
+2026-09-04 18:49:06,478 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-09-04 18:49:06,478 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-software-engineer
+2026-09-04 18:49:11,391 [INFO]    → 20 ofertas nuevas encontradas
+2026-09-04 18:50:56,637 [INFO]    Página 2/5 → https://www.computrabajo.com.ar/trabajo-de-software-engineer?p=2
+2026-09-04 18:51:03,252 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-04 18:51:03,252 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-04 18:51:03,261 [INFO] Exportadas 20 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_computrabajo_20260904.csv
+2026-09-04 18:51:03,261 [INFO] ✅ 'Software Engineer': 20 ofertas guardadas
+2026-09-04 18:51:03,261 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-09-04 18:51:03,262 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-python
+2026-09-04 18:51:08,550 [INFO]    → 20 ofertas nuevas encontradas
+2026-09-04 18:58:01,874 [ERROR] Error de conexión (intento 1/3): ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-09-04 18:58:15,660 [ERROR] Error de conexión (intento 2/3): ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-09-04 18:58:52,283 [INFO]    Página 2/5 → https://www.computrabajo.com.ar/trabajo-de-python?p=2
+2026-09-04 18:58:55,966 [INFO]    → 20 ofertas nuevas encontradas
+2026-09-04 19:00:41,404 [INFO]    Página 3/5 → https://www.computrabajo.com.ar/trabajo-de-python?p=3
+2026-09-04 19:00:46,224 [INFO]    → 20 ofertas nuevas encontradas
+2026-09-04 19:02:38,393 [INFO]    Página 4/5 → https://www.computrabajo.com.ar/trabajo-de-python?p=4
+2026-09-04 19:02:43,967 [INFO]    → 20 ofertas nuevas encontradas
+2026-09-04 19:04:20,613 [INFO]    Página 5/5 → https://www.computrabajo.com.ar/trabajo-de-python?p=5
+2026-09-04 19:04:25,322 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-04 19:04:25,322 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-04 19:04:25,333 [INFO] Exportadas 80 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_computrabajo_20260904.csv
+2026-09-04 19:04:25,333 [INFO] ✅ 'Python Developer': 80 ofertas guardadas
+2026-09-04 19:04:25,333 [INFO] 
+🔍 Buscando: 'Desarrollador Backend'
+2026-09-04 19:04:25,333 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-desarrollador-backend
+2026-09-04 19:04:31,664 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-04 19:04:31,664 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-04 19:04:31,664 [INFO] ✅ 'Desarrollador Backend': 0 ofertas guardadas
+2026-09-04 19:04:31,664 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack'
+2026-09-04 19:04:31,664 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-desarrollador-full-stack
+2026-09-04 19:04:35,526 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-04 19:04:35,526 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-04 19:04:35,527 [INFO] ✅ 'Desarrollador Full Stack': 0 ofertas guardadas
+2026-09-04 19:04:35,527 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-09-04 19:04:35,527 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-ingeniero-de-datos
+2026-09-04 19:04:39,333 [INFO]    → 20 ofertas nuevas encontradas
+2026-09-04 19:06:17,784 [INFO]    Página 2/5 → https://www.computrabajo.com.ar/trabajo-de-ingeniero-de-datos?p=2
+2026-09-04 19:06:22,439 [INFO]    → 20 ofertas nuevas encontradas
+2026-09-04 19:08:02,216 [INFO]    Página 3/5 → https://www.computrabajo.com.ar/trabajo-de-ingeniero-de-datos?p=3
+2026-09-04 19:08:06,237 [INFO]    → 20 ofertas nuevas encontradas
+2026-09-04 19:09:47,648 [INFO]    Página 4/5 → https://www.computrabajo.com.ar/trabajo-de-ingeniero-de-datos?p=4
+2026-09-04 19:09:52,023 [INFO]    → 20 ofertas nuevas encontradas
+2026-09-04 19:11:38,006 [INFO]    Página 5/5 → https://www.computrabajo.com.ar/trabajo-de-ingeniero-de-datos?p=5
+2026-09-04 19:11:43,381 [INFO]    → 20 ofertas nuevas encontradas
+2026-09-04 19:13:31,057 [INFO] Exportadas 100 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_computrabajo_20260904.csv
+2026-09-04 19:13:31,057 [INFO] ✅ 'Ingeniero de Datos': 100 ofertas guardadas
+2026-09-04 19:13:31,057 [INFO] 
+============================================================
+2026-09-04 19:13:31,057 [INFO] SCRAPING FINALIZADO - Computrabajo
+2026-09-04 19:13:31,058 [INFO] Total de ofertas únicas recopiladas: 202
+2026-09-04 19:13:31,058 [INFO] Base de datos : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/computrabajo.db
+2026-09-04 19:13:31,058 [INFO] CSV exportado : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_computrabajo_20260904.csv
+2026-09-04 19:13:31,058 [INFO] Log guardado  : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/computrabajo_scraper_20260904_184826.log
+2026-09-04 19:13:31,058 [INFO] ============================================================
+2026-09-04 19:13:31,059 [INFO] Estadísticas guardadas: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/stats_computrabajo_20260904_191331.json
+2026-09-04 19:13:31,059 [INFO]   ✅ computrabajo: 202 ofertas recopiladas
+2026-09-04 19:13:31,061 [INFO] 
+============================================================
+2026-09-04 19:13:31,061 [INFO]   EJECUTANDO: getonboard (GetOnBoardScraper)
+2026-09-04 19:13:31,061 [INFO]   Queries: definidas en el módulo
+2026-09-04 19:13:31,061 [INFO] ============================================================
+2026-09-04 19:13:31,064 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/getonboard.db
+2026-09-04 19:13:31,064 [INFO] GetOnBoardScraper inicializado
+2026-09-04 19:13:31,064 [INFO] ============================================================
+2026-09-04 19:13:31,064 [INFO] INICIO DEL SCRAPING - GetOnBoard (API JSON)
+2026-09-04 19:13:31,064 [INFO] Búsquedas: 10 | Páginas: 5
+2026-09-04 19:13:31,064 [INFO] ============================================================
+2026-09-04 19:13:31,065 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-09-04 19:13:31,065 [INFO]    Página 1/5
+2026-09-04 19:13:34,354 [INFO]    → 20 items recibidos
+2026-09-04 19:13:34,377 [INFO]    → 20 ofertas nuevas guardadas en esta página
+2026-09-04 19:13:34,377 [INFO]    Página 2/5
+2026-09-04 19:13:37,530 [INFO]    → 2 items recibidos
+2026-09-04 19:13:37,534 [INFO]    → 2 ofertas nuevas guardadas en esta página
+2026-09-04 19:13:37,535 [INFO]    Página 3/5
+2026-09-04 19:13:39,559 [INFO]    → 0 items recibidos
+2026-09-04 19:13:39,559 [INFO]    → Sin más resultados.
+2026-09-04 19:13:39,564 [INFO] Exportadas 22 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260904.csv
+2026-09-04 19:13:39,564 [INFO] ✅ 'Data Scientist': 22 ofertas guardadas
+2026-09-04 19:13:39,564 [INFO]    💤 Pausa: 6.2s
+2026-09-04 19:13:45,741 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-09-04 19:13:45,742 [INFO]    Página 1/5
+2026-09-04 19:13:49,749 [INFO]    → 20 items recibidos
+2026-09-04 19:13:49,845 [INFO]    → 20 ofertas nuevas guardadas en esta página
+2026-09-04 19:13:49,846 [INFO]    Página 2/5
+2026-09-04 19:13:52,263 [INFO]    → 20 items recibidos
+2026-09-04 19:13:52,319 [INFO]    → 19 ofertas nuevas guardadas en esta página
+2026-09-04 19:13:52,319 [INFO]    Página 3/5
+2026-09-04 19:13:55,263 [INFO]    → 20 items recibidos
+2026-09-04 19:13:55,288 [INFO]    → 19 ofertas nuevas guardadas en esta página
+2026-09-04 19:13:55,288 [INFO]    Página 4/5
+2026-09-04 19:13:58,101 [INFO]    → 20 items recibidos
+2026-09-04 19:13:58,108 [INFO]    → 15 ofertas nuevas guardadas en esta página
+2026-09-04 19:13:58,108 [INFO]    Página 5/5
+2026-09-04 19:14:00,666 [INFO]    → 20 items recibidos
+2026-09-04 19:14:00,671 [INFO]    → 16 ofertas nuevas guardadas en esta página
+2026-09-04 19:14:00,684 [INFO] Exportadas 89 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260904.csv
+2026-09-04 19:14:00,685 [INFO] ✅ 'Data Analyst': 89 ofertas guardadas
+2026-09-04 19:14:00,685 [INFO]    💤 Pausa: 7.9s
+2026-09-04 19:14:08,588 [INFO] 
+🔍 Buscando: 'Machine Learning'
+2026-09-04 19:14:08,588 [INFO]    Página 1/5
+2026-09-04 19:14:11,930 [INFO]    → 20 items recibidos
+2026-09-04 19:14:11,952 [INFO]    → 11 ofertas nuevas guardadas en esta página
+2026-09-04 19:14:11,952 [INFO]    Página 2/5
+2026-09-04 19:14:14,177 [INFO]    → 20 items recibidos
+2026-09-04 19:14:14,180 [INFO]    → 11 ofertas nuevas guardadas en esta página
+2026-09-04 19:14:14,181 [INFO]    Página 3/5
+2026-09-04 19:14:16,850 [INFO]    → 20 items recibidos
+2026-09-04 19:14:16,874 [INFO]    → 15 ofertas nuevas guardadas en esta página
+2026-09-04 19:14:16,875 [INFO]    Página 4/5
+2026-09-04 19:14:20,028 [INFO]    → 4 items recibidos
+2026-09-04 19:14:20,030 [INFO]    → 2 ofertas nuevas guardadas en esta página
+2026-09-04 19:14:20,030 [INFO]    Página 5/5
+2026-09-04 19:14:22,786 [INFO]    → 0 items recibidos
+2026-09-04 19:14:22,786 [INFO]    → Sin más resultados.
+2026-09-04 19:14:22,799 [INFO] Exportadas 39 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260904.csv
+2026-09-04 19:14:22,799 [INFO] ✅ 'Machine Learning': 39 ofertas guardadas
+2026-09-04 19:14:22,799 [INFO]    💤 Pausa: 7.9s
+2026-09-04 19:14:30,750 [INFO] 
+🔍 Buscando: 'NLP'
+2026-09-04 19:14:30,750 [INFO]    Página 1/5
+2026-09-04 19:14:34,672 [INFO]    → 20 items recibidos
+2026-09-04 19:14:34,724 [INFO]    → 14 ofertas nuevas guardadas en esta página
+2026-09-04 19:14:34,725 [INFO]    Página 2/5
+2026-09-04 19:14:37,018 [INFO]    → 20 items recibidos
+2026-09-04 19:14:37,023 [INFO]    → 16 ofertas nuevas guardadas en esta página
+2026-09-04 19:14:37,023 [INFO]    Página 3/5
+2026-09-04 19:14:40,193 [INFO]    → 20 items recibidos
+2026-09-04 19:14:40,217 [INFO]    → 15 ofertas nuevas guardadas en esta página
+2026-09-04 19:14:40,217 [INFO]    Página 4/5
+2026-09-04 19:14:43,066 [INFO]    → 20 items recibidos
+2026-09-04 19:14:43,080 [INFO]    → 14 ofertas nuevas guardadas en esta página
+2026-09-04 19:14:43,082 [INFO]    Página 5/5
+2026-09-04 19:14:46,035 [INFO]    → 20 items recibidos
+2026-09-04 19:14:46,040 [INFO]    → 13 ofertas nuevas guardadas en esta página
+2026-09-04 19:14:46,053 [INFO] Exportadas 72 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260904.csv
+2026-09-04 19:14:46,053 [INFO] ✅ 'NLP': 72 ofertas guardadas
+2026-09-04 19:14:46,053 [INFO]    💤 Pausa: 7.9s
+2026-09-04 19:14:53,978 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-09-04 19:14:53,978 [INFO]    Página 1/5
+2026-09-04 19:14:57,398 [INFO]    → 20 items recibidos
+2026-09-04 19:14:57,400 [INFO]    → 2 ofertas nuevas guardadas en esta página
+2026-09-04 19:14:57,400 [INFO]    Página 2/5
+2026-09-04 19:15:00,366 [INFO]    → 20 items recibidos
+2026-09-04 19:15:00,402 [INFO]    → 6 ofertas nuevas guardadas en esta página
+2026-09-04 19:15:00,402 [INFO]    Página 3/5
+2026-09-04 19:15:02,926 [INFO]    → 20 items recibidos
+2026-09-04 19:15:02,930 [INFO]    → 2 ofertas nuevas guardadas en esta página
+2026-09-04 19:15:02,930 [INFO]    Página 4/5
+2026-09-04 19:15:05,095 [INFO]    → 20 items recibidos
+2026-09-04 19:15:05,100 [INFO]    → 15 ofertas nuevas guardadas en esta página
+2026-09-04 19:15:05,100 [INFO]    Página 5/5
+2026-09-04 19:15:07,433 [INFO]    → 20 items recibidos
+2026-09-04 19:15:07,438 [INFO]    → 12 ofertas nuevas guardadas en esta página
+2026-09-04 19:15:07,448 [INFO] Exportadas 37 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260904.csv
+2026-09-04 19:15:07,448 [INFO] ✅ 'Data Engineer': 37 ofertas guardadas
+2026-09-04 19:15:07,448 [INFO]    💤 Pausa: 6.6s
+2026-09-04 19:15:14,004 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-09-04 19:15:14,004 [INFO]    Página 1/5
+2026-09-04 19:15:18,403 [INFO]    → 20 items recibidos
+2026-09-04 19:15:18,441 [INFO]    → 11 ofertas nuevas guardadas en esta página
+2026-09-04 19:15:18,442 [INFO]    Página 2/5
+2026-09-04 19:15:21,572 [INFO]    → 20 items recibidos
+2026-09-04 19:15:21,605 [INFO]    → 10 ofertas nuevas guardadas en esta página
+2026-09-04 19:15:21,605 [INFO]    Página 3/5
+2026-09-04 19:15:25,064 [INFO]    → 20 items recibidos
+2026-09-04 19:15:25,067 [INFO]    → 7 ofertas nuevas guardadas en esta página
+2026-09-04 19:15:25,067 [INFO]    Página 4/5
+2026-09-04 19:15:27,672 [INFO]    → 20 items recibidos
+2026-09-04 19:15:27,674 [INFO]    → 6 ofertas nuevas guardadas en esta página
+2026-09-04 19:15:27,675 [INFO]    Página 5/5
+2026-09-04 19:15:31,375 [INFO]    → 20 items recibidos
+2026-09-04 19:15:31,380 [INFO]    → 12 ofertas nuevas guardadas en esta página
+2026-09-04 19:15:31,392 [INFO] Exportadas 46 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260904.csv
+2026-09-04 19:15:31,392 [INFO] ✅ 'Software Engineer': 46 ofertas guardadas
+2026-09-04 19:15:31,392 [INFO]    💤 Pausa: 5.3s
+2026-09-04 19:15:36,694 [INFO] 
+🔍 Buscando: 'Python'
+2026-09-04 19:15:36,695 [INFO]    Página 1/5
+2026-09-04 19:15:38,839 [INFO]    → 20 items recibidos
+2026-09-04 19:15:38,873 [INFO]    → 5 ofertas nuevas guardadas en esta página
+2026-09-04 19:15:38,874 [INFO]    Página 2/5
+2026-09-04 19:15:40,984 [INFO]    → 20 items recibidos
+2026-09-04 19:15:41,005 [INFO]    → 4 ofertas nuevas guardadas en esta página
+2026-09-04 19:15:41,005 [INFO]    Página 3/5
+2026-09-04 19:15:43,849 [INFO]    → 20 items recibidos
+2026-09-04 19:15:43,851 [INFO]    → 8 ofertas nuevas guardadas en esta página
+2026-09-04 19:15:43,851 [INFO]    Página 4/5
+2026-09-04 19:15:47,749 [INFO]    → 20 items recibidos
+2026-09-04 19:15:47,751 [INFO]    → 5 ofertas nuevas guardadas en esta página
+2026-09-04 19:15:47,751 [INFO]    Página 5/5
+2026-09-04 19:15:50,827 [INFO]    → 20 items recibidos
+2026-09-04 19:15:50,837 [INFO]    → 6 ofertas nuevas guardadas en esta página
+2026-09-04 19:15:50,857 [INFO] Exportadas 28 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260904.csv
+2026-09-04 19:15:50,857 [INFO] ✅ 'Python': 28 ofertas guardadas
+2026-09-04 19:15:50,857 [INFO]    💤 Pausa: 6.9s
+2026-09-04 19:15:57,761 [INFO] 
+🔍 Buscando: 'Backend'
+2026-09-04 19:15:57,761 [INFO]    Página 1/5
+2026-09-04 19:16:00,260 [INFO]    → 20 items recibidos
+2026-09-04 19:16:00,296 [INFO]    → 7 ofertas nuevas guardadas en esta página
+2026-09-04 19:16:00,296 [INFO]    Página 2/5
+2026-09-04 19:16:04,026 [INFO]    → 20 items recibidos
+2026-09-04 19:16:04,043 [INFO]    → 8 ofertas nuevas guardadas en esta página
+2026-09-04 19:16:04,043 [INFO]    Página 3/5
+2026-09-04 19:16:06,920 [INFO]    → 20 items recibidos
+2026-09-04 19:16:06,945 [INFO]    → 8 ofertas nuevas guardadas en esta página
+2026-09-04 19:16:06,945 [INFO]    Página 4/5
+2026-09-04 19:16:10,512 [INFO]    → 20 items recibidos
+2026-09-04 19:16:10,521 [INFO]    → 7 ofertas nuevas guardadas en esta página
+2026-09-04 19:16:10,522 [INFO]    Página 5/5
+2026-09-04 19:16:14,022 [INFO]    → 20 items recibidos
+2026-09-04 19:16:14,024 [INFO]    → 8 ofertas nuevas guardadas en esta página
+2026-09-04 19:16:14,036 [INFO] Exportadas 38 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260904.csv
+2026-09-04 19:16:14,036 [INFO] ✅ 'Backend': 38 ofertas guardadas
+2026-09-04 19:16:14,036 [INFO]    💤 Pausa: 7.4s
+2026-09-04 19:16:21,409 [INFO] 
+🔍 Buscando: 'Full Stack'
+2026-09-04 19:16:21,410 [INFO]    Página 1/5
+2026-09-04 19:16:25,034 [INFO]    → 20 items recibidos
+2026-09-04 19:16:25,045 [INFO]    → 1 ofertas nuevas guardadas en esta página
+2026-09-04 19:16:25,046 [INFO]    Página 2/5
+2026-09-04 19:16:28,761 [INFO]    → 20 items recibidos
+2026-09-04 19:16:28,762 [INFO]    → 3 ofertas nuevas guardadas en esta página
+2026-09-04 19:16:28,763 [INFO]    Página 3/5
+2026-09-04 19:16:31,292 [INFO]    → 20 items recibidos
+2026-09-04 19:16:31,293 [INFO]    → 1 ofertas nuevas guardadas en esta página
+2026-09-04 19:16:31,293 [INFO]    Página 4/5
+2026-09-04 19:16:33,969 [INFO]    → 20 items recibidos
+2026-09-04 19:16:33,972 [INFO]    → 11 ofertas nuevas guardadas en esta página
+2026-09-04 19:16:33,972 [INFO]    Página 5/5
+2026-09-04 19:16:36,133 [INFO]    → 20 items recibidos
+2026-09-04 19:16:36,154 [INFO]    → 17 ofertas nuevas guardadas en esta página
+2026-09-04 19:16:36,157 [INFO] Exportadas 33 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260904.csv
+2026-09-04 19:16:36,157 [INFO] ✅ 'Full Stack': 33 ofertas guardadas
+2026-09-04 19:16:36,158 [INFO]    💤 Pausa: 6.8s
+2026-09-04 19:16:42,956 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-09-04 19:16:42,956 [INFO]    Página 1/5
+2026-09-04 19:16:46,070 [INFO]    → 20 items recibidos
+2026-09-04 19:16:46,075 [INFO]    → 4 ofertas nuevas guardadas en esta página
+2026-09-04 19:16:46,076 [INFO]    Página 2/5
+2026-09-04 19:16:48,733 [INFO]    → 20 items recibidos
+2026-09-04 19:16:48,771 [INFO]    → 13 ofertas nuevas guardadas en esta página
+2026-09-04 19:16:48,771 [INFO]    Página 3/5
+2026-09-04 19:16:51,397 [INFO]    → 11 items recibidos
+2026-09-04 19:16:51,415 [INFO]    → 10 ofertas nuevas guardadas en esta página
+2026-09-04 19:16:51,415 [INFO]    Página 4/5
+2026-09-04 19:16:54,497 [INFO]    → 0 items recibidos
+2026-09-04 19:16:54,498 [INFO]    → Sin más resultados.
+2026-09-04 19:16:54,517 [INFO] Exportadas 27 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260904.csv
+2026-09-04 19:16:54,517 [INFO] ✅ 'Ingeniero de Datos': 27 ofertas guardadas
+2026-09-04 19:16:54,518 [INFO]    💤 Pausa: 7.4s
+2026-09-04 19:17:01,961 [INFO] 
+============================================================
+2026-09-04 19:17:01,962 [INFO] SCRAPING FINALIZADO - GetOnBoard
+2026-09-04 19:17:01,962 [INFO] Total ofertas únicas: 431
+2026-09-04 19:17:01,970 [INFO] DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/getonboard.db
+2026-09-04 19:17:01,970 [INFO] CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260904.csv
+2026-09-04 19:17:01,971 [INFO] Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/getonboard_scraper_20260904_191331.log
+2026-09-04 19:17:01,971 [INFO] ============================================================
+2026-09-04 19:17:01,972 [INFO]   ✅ getonboard: 431 ofertas recopiladas
+2026-09-04 19:17:01,973 [INFO] 
+============================================================
+2026-09-04 19:17:01,974 [INFO]   EJECUTANDO: bumeran (BumeranScraper)
+2026-09-04 19:17:01,974 [INFO]   Queries: definidas en el módulo
+2026-09-04 19:17:01,974 [INFO] ============================================================
+2026-09-04 19:17:02,002 [ERROR]   ❌ bumeran falló: No module named 'playwright'
+2026-09-04 19:17:02,003 [INFO] 
+============================================================
+2026-09-04 19:17:02,003 [INFO]   EJECUTANDO: zonajobs (ZonaJobsScraper)
+2026-09-04 19:17:02,003 [INFO]   Queries: definidas en el módulo
+2026-09-04 19:17:02,004 [INFO] ============================================================
+2026-09-04 19:17:02,004 [ERROR]   ❌ zonajobs falló: No module named 'playwright'
+2026-09-04 19:17:02,005 [INFO] 
+============================================================
+2026-09-04 19:17:02,005 [INFO]   EJECUTANDO: workana (WorkanaScraper)
+2026-09-04 19:17:02,005 [INFO]   Queries: definidas en el módulo
+2026-09-04 19:17:02,005 [INFO] ============================================================
+2026-09-04 19:17:02,006 [ERROR]   ❌ workana falló: No module named 'playwright'
+2026-09-04 19:17:02,007 [INFO] 
+============================================================
+2026-09-04 19:17:02,007 [INFO]   EJECUTANDO: opcionempleo (OpcionempleoScraper)
+2026-09-04 19:17:02,007 [INFO]   Queries: definidas en el módulo
+2026-09-04 19:17:02,008 [INFO] ============================================================
+2026-09-04 19:17:02,008 [ERROR]   ❌ opcionempleo falló: No module named 'playwright'
+2026-09-04 19:17:02,009 [INFO] 
+============================================================
+2026-09-04 19:17:02,009 [INFO]   EJECUTANDO: jobomas (JobomasScraper)
+2026-09-04 19:17:02,009 [INFO]   Queries: definidas en el módulo
+2026-09-04 19:17:02,009 [INFO] ============================================================
+2026-09-04 19:17:02,041 [INFO] DB lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/jobomas.db
+2026-09-04 19:17:02,041 [INFO] Ejecutando diagnóstico de Jobomas...
+2026-09-04 19:17:04,375 [INFO]   https://ar.jobomas.com/python → HTTP 404 | 6,586 | CT:text/html; charset=utf-8
+2026-09-04 19:17:05,634 [INFO]   https://ar.jobomas.com/trabajo/python → HTTP 404 | 6,586 | CT:text/html; charset=utf-8
+2026-09-04 19:17:07,612 [INFO]   https://ar.jobomas.com/ → HTTP 200 | 90,382 | CT:text/html; charset=utf-8
+2026-09-04 19:17:07,645 [INFO]   <title>: Empleos y ofertas de trabajo en Argentina
+2026-09-04 19:17:07,677 [INFO]   Links de oferta: 16
+2026-09-04 19:17:07,677 [INFO]     /moldeador-p-r-f-v-con-experiencia_iid_392253134 | Moldeador P.R.F.V | Con Experiencia
+2026-09-04 19:17:07,677 [INFO]     https://wa.me/?text=%C2%A1Hola%21%20He%20encontrado%20esta%20oferta%20de%20trabajo%20en%20jobomas%20y%20creo%20que%20puede%20interesarte%3A%0A%0AMoldeador%20P.R.F.V%20%7C%20Con%20Experiencia%0Ahttps%3A%2F%2Far.jobomas.com%2Fmoldeador-p-r-f-v-con-experiencia_iid_392253134 | Compartir este empleo
+2026-09-04 19:17:07,677 [INFO]     /asesor-de-ventas-part-time-turno-tarde_iid_392254556 | Asesor de Ventas | Part Time Turno Tarde
+2026-09-04 19:17:07,677 [INFO] JobomasScraper inicializado (modo: params)
+2026-09-04 19:17:07,678 [INFO] ============================================================
+2026-09-04 19:17:07,678 [INFO] INICIO - Jobomas Argentina
+2026-09-04 19:17:07,678 [INFO] 
+🔍 'Data Scientist'
+2026-09-04 19:17:07,678 [INFO]    Página 1/5
+2026-09-04 19:17:13,371 [INFO]    → 8 encontradas
+2026-09-04 19:18:15,344 [INFO]    Página 2/5
+2026-09-04 19:18:19,898 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-04 19:18:19,898 [INFO]    → 0 encontradas
+2026-09-04 19:18:19,899 [INFO] CSV: 8 exportadas
+2026-09-04 19:18:19,899 [INFO] ✅ 'Data Scientist': 8 guardadas
+2026-09-04 19:18:28,505 [INFO] 
+🔍 'Data Analyst'
+2026-09-04 19:18:28,505 [INFO]    Página 1/5
+2026-09-04 19:18:32,110 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-04 19:18:32,110 [INFO]    → 0 encontradas
+2026-09-04 19:18:32,110 [INFO] ✅ 'Data Analyst': 0 guardadas
+2026-09-04 19:18:39,252 [INFO] 
+🔍 'Machine Learning Engineer'
+2026-09-04 19:18:39,252 [INFO]    Página 1/5
+2026-09-04 19:18:44,353 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-04 19:18:44,354 [INFO]    → 0 encontradas
+2026-09-04 19:18:44,354 [INFO] ✅ 'Machine Learning Engineer': 0 guardadas
+2026-09-04 19:18:52,610 [INFO] 
+🔍 'NLP Engineer'
+2026-09-04 19:18:52,610 [INFO]    Página 1/5
+2026-09-04 19:18:56,123 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-04 19:18:56,123 [INFO]    → 0 encontradas
+2026-09-04 19:18:56,123 [INFO] ✅ 'NLP Engineer': 0 guardadas
+2026-09-04 19:19:01,506 [INFO] 
+🔍 'Data Engineer'
+2026-09-04 19:19:01,506 [INFO]    Página 1/5
+2026-09-04 19:19:05,836 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-04 19:19:05,837 [INFO]    → 0 encontradas
+2026-09-04 19:19:05,837 [INFO] ✅ 'Data Engineer': 0 guardadas
+2026-09-04 19:19:13,490 [INFO] 
+🔍 'Software Engineer'
+2026-09-04 19:19:13,491 [INFO]    Página 1/5
+2026-09-04 19:19:17,999 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-04 19:19:17,999 [INFO]    → 0 encontradas
+2026-09-04 19:19:17,999 [INFO] ✅ 'Software Engineer': 0 guardadas
+2026-09-04 19:19:26,517 [INFO] 
+🔍 'Python Developer'
+2026-09-04 19:19:26,518 [INFO]    Página 1/5
+2026-09-04 19:19:31,930 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-04 19:19:31,931 [INFO]    → 0 encontradas
+2026-09-04 19:19:31,931 [INFO] ✅ 'Python Developer': 0 guardadas
+2026-09-04 19:19:38,757 [INFO] 
+🔍 'Desarrollador Backend'
+2026-09-04 19:19:38,758 [INFO]    Página 1/5
+2026-09-04 19:19:42,842 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-04 19:19:42,842 [INFO]    → 0 encontradas
+2026-09-04 19:19:42,842 [INFO] ✅ 'Desarrollador Backend': 0 guardadas
+2026-09-04 19:19:50,037 [INFO] 
+🔍 'Desarrollador Full Stack'
+2026-09-04 19:19:50,037 [INFO]    Página 1/5
+2026-09-04 19:19:54,349 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-04 19:19:54,349 [INFO]    → 0 encontradas
+2026-09-04 19:19:54,349 [INFO] ✅ 'Desarrollador Full Stack': 0 guardadas
+2026-09-04 19:20:03,882 [INFO] 
+🔍 'Ingeniero de Datos'
+2026-09-04 19:20:03,882 [INFO]    Página 1/5
+2026-09-04 19:20:08,470 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-04 19:20:08,471 [INFO]    → 0 encontradas
+2026-09-04 19:20:08,471 [INFO] ✅ 'Ingeniero de Datos': 0 guardadas
+2026-09-04 19:20:16,949 [INFO] 
+============================================================
+FINALIZADO — 8 ofertas
+2026-09-04 19:20:16,957 [INFO]   ✅ jobomas: 8 ofertas recopiladas
+2026-09-04 19:20:16,962 [INFO] 
+============================================================
+2026-09-04 19:20:16,962 [INFO]   EJECUTANDO: jobrapido (JobrapidoScraper)
+2026-09-04 19:20:16,962 [INFO]   Queries: definidas en el módulo
+2026-09-04 19:20:16,962 [INFO] ============================================================
+2026-09-04 19:20:16,999 [INFO] DB lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/jobrapido.db
+2026-09-04 19:20:16,999 [INFO] Ejecutando diagnóstico de Jobrapido...
+2026-09-04 19:20:19,627 [INFO]   https://ar.jobrapido.com/Ofertas-de-trabajo-para-Python?l=Argentina → HTTP 200 | 369,926 chars
+2026-09-04 19:20:19,668 [INFO]   <title>: Bolsa trabajo para Python, ofertas empleo | Jobrapido.com
+2026-09-04 19:20:19,668 [INFO]   JS-only:False
+2026-09-04 19:20:19,672 [INFO]   Clase 'job': 45 | ejemplo: search google-one-tap-enabled not-is-jobseeker open-sans-ena
+2026-09-04 19:20:19,676 [INFO]   Clase 'result': 196 | ejemplo: wrapper result-list
+2026-09-04 19:20:19,682 [INFO]   Clase 'item': 230 | ejemplo: suggested-locations-item
+2026-09-04 19:20:19,691 [INFO]   Links de oferta: 15
+2026-09-04 19:20:19,691 [INFO]     https://open.app.jobrapido.com/ar/3705923438423048192/?w=python&l=&oc=sponsored&k=web.1.1.0&uuid=arF001a06eb9168c6017&page_item_id=-15553075 | Open job preview for: Senior Python Engineer  - Rosario
+2026-09-04 19:20:19,691 [INFO]     https://open.app.jobrapido.com/ar/8284025819072823296/?w=python&l=&oc=sponsored&k=web.1.1.1&uuid=arF001a06eb9168c6017&page_item_id=-1902047435 | Open job preview for: Desarrollador/a Fullstack (React + Pyt
+2026-09-04 19:20:19,691 [INFO]     https://open.app.jobrapido.com/ar/4397388554326507520/?w=python&l=&oc=sponsored&k=web.1.1.2&uuid=arF001a06eb9168c6017&page_item_id=-1506760608 | Open job preview for: Data Engineer: Python + AWS + DBT | Re
+2026-09-04 19:20:19,695 [INFO]   Paginación: 12345678910
+2026-09-04 19:20:19,696 [INFO] JobrapidoScraper inicializado
+2026-09-04 19:20:19,696 [INFO] ============================================================
+2026-09-04 19:20:19,696 [INFO] INICIO - Jobrapido Argentina
+2026-09-04 19:20:19,696 [INFO] 
+🔍 'Data Scientist'
+2026-09-04 19:20:19,696 [INFO]    Página 1/5
+2026-09-04 19:20:23,266 [INFO]    → 20 encontradas
+2026-09-04 19:22:35,448 [INFO]    Página 2/5
+2026-09-04 19:22:39,691 [INFO]    → 20 encontradas
+2026-09-04 19:24:46,205 [INFO]    Página 3/5
+2026-09-04 19:24:51,072 [INFO]    → 20 encontradas
+2026-09-04 19:26:59,406 [INFO]    Página 4/5
+2026-09-04 19:27:04,525 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-04 19:27:04,525 [INFO]    → 0 encontradas
+2026-09-04 19:27:04,527 [INFO] CSV: 60 exportadas
+2026-09-04 19:27:04,527 [INFO] ✅ 'Data Scientist': 60 guardadas
+2026-09-04 19:27:11,695 [INFO] 
+🔍 'Data Analyst'
+2026-09-04 19:27:11,695 [INFO]    Página 1/5
+2026-09-04 19:27:16,895 [INFO]    → 20 encontradas
+2026-09-04 19:29:15,336 [INFO]    Página 2/5
+2026-09-04 19:29:20,889 [INFO]    → 20 encontradas
+2026-09-04 19:31:26,083 [INFO]    Página 3/5
+2026-09-04 19:31:31,141 [INFO]    → 19 encontradas
+2026-09-04 19:33:31,300 [INFO]    Página 4/5
+2026-09-04 19:33:36,686 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-04 19:33:36,687 [INFO]    → 0 encontradas
+2026-09-04 19:33:36,688 [INFO] CSV: 59 exportadas
+2026-09-04 19:33:36,688 [INFO] ✅ 'Data Analyst': 59 guardadas
+2026-09-04 19:33:43,896 [INFO] 
+🔍 'Machine Learning Engineer'
+2026-09-04 19:33:43,897 [INFO]    Página 1/5
+2026-09-04 19:33:47,977 [INFO]    → 13 encontradas
+2026-09-04 19:35:07,477 [INFO]    Página 2/5
+2026-09-04 19:35:11,609 [INFO]    → 11 encontradas
+2026-09-04 19:36:21,895 [INFO]    Página 3/5
+2026-09-04 19:36:27,609 [INFO]    → 18 encontradas
+2026-09-04 19:38:16,505 [INFO]    Página 4/5
+2026-09-04 19:38:22,289 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-04 19:38:22,289 [INFO]    → 0 encontradas
+2026-09-04 19:38:22,291 [INFO] CSV: 42 exportadas
+2026-09-04 19:38:22,291 [INFO] ✅ 'Machine Learning Engineer': 42 guardadas
+2026-09-04 19:38:30,183 [INFO] 
+🔍 'NLP Engineer'
+2026-09-04 19:38:30,183 [INFO]    Página 1/5
+2026-09-04 19:38:33,806 [INFO]    → 13 encontradas
+2026-09-04 19:39:54,701 [INFO]    Página 2/5
+2026-09-04 19:39:59,294 [INFO]    → 10 encontradas
+2026-09-04 19:41:00,032 [INFO]    Página 3/5
+2026-09-04 19:41:05,628 [INFO]    → 19 encontradas
+2026-09-04 19:43:05,008 [INFO]    Página 4/5
+2026-09-04 19:43:09,471 [INFO]    → 20 encontradas
+2026-09-04 19:45:31,386 [INFO]    Página 5/5
+2026-09-04 19:45:36,537 [INFO]    → 20 encontradas
+2026-09-04 19:47:58,571 [INFO] CSV: 82 exportadas
+2026-09-04 19:47:58,571 [INFO] ✅ 'NLP Engineer': 82 guardadas
+2026-09-04 19:48:05,990 [INFO] 
+🔍 'Data Engineer'
+2026-09-04 19:48:05,991 [INFO]    Página 1/5
+2026-09-04 19:48:11,136 [INFO]    → 13 encontradas
+2026-09-04 19:49:29,242 [INFO]    Página 2/5
+2026-09-04 19:49:35,688 [INFO]    → 18 encontradas
+2026-09-04 19:51:26,260 [INFO]    Página 3/5
+2026-09-04 19:51:31,477 [INFO]    → 18 encontradas
+2026-09-04 19:53:20,372 [INFO]    Página 4/5
+2026-09-04 19:53:24,768 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-04 19:53:24,769 [INFO]    → 0 encontradas
+2026-09-04 19:53:24,770 [INFO] CSV: 49 exportadas
+2026-09-04 19:53:24,770 [INFO] ✅ 'Data Engineer': 49 guardadas
+2026-09-04 19:53:33,061 [INFO] 
+🔍 'Software Engineer'
+2026-09-04 19:53:33,061 [INFO]    Página 1/5
+2026-09-04 19:53:37,409 [INFO]    → 14 encontradas
+2026-09-04 19:55:00,567 [INFO]    Página 2/5
+2026-09-04 19:55:05,522 [INFO]    → 6 encontradas
+2026-09-04 19:55:40,705 [INFO]    Página 3/5
+2026-09-04 19:55:44,009 [INFO]    → 11 encontradas
+2026-09-04 19:56:50,082 [INFO]    Página 4/5
+2026-09-04 19:56:53,591 [INFO]    → 17 encontradas
+2026-09-04 19:58:34,375 [INFO]    Página 5/5
+2026-09-04 19:58:40,349 [INFO]    → 15 encontradas
+2026-09-04 20:00:09,186 [INFO] CSV: 63 exportadas
+2026-09-04 20:00:09,187 [INFO] ✅ 'Software Engineer': 63 guardadas
+2026-09-04 20:00:16,974 [INFO] 
+🔍 'Python Developer'
+2026-09-04 20:00:16,975 [INFO]    Página 1/5
+2026-09-04 20:00:22,480 [INFO]    → 9 encontradas
+2026-09-04 20:01:18,733 [INFO]    Página 2/5
+2026-09-04 20:01:23,016 [INFO]    → 4 encontradas
+2026-09-04 20:01:50,980 [INFO]    Página 3/5
+2026-09-04 20:01:54,285 [INFO]    → 2 encontradas
+2026-09-04 20:02:07,887 [INFO]    Página 4/5
+2026-09-04 20:02:12,039 [INFO]    → 5 encontradas
+2026-09-04 20:02:45,390 [INFO]    Página 5/5
+2026-09-04 20:02:48,977 [INFO]    → 8 encontradas
+2026-09-04 20:03:36,982 [INFO] CSV: 28 exportadas
+2026-09-04 20:03:36,983 [INFO] ✅ 'Python Developer': 28 guardadas
+2026-09-04 20:03:43,020 [INFO] 
+🔍 'Desarrollador Backend'
+2026-09-04 20:03:43,020 [INFO]    Página 1/5
+2026-09-04 20:03:48,569 [INFO]    → 19 encontradas
+2026-09-04 20:05:44,897 [INFO]    Página 2/5
+2026-09-04 20:05:49,350 [INFO]    → 10 encontradas
+2026-09-04 20:06:54,927 [INFO]    Página 3/5
+2026-09-04 20:07:01,020 [INFO]    → 20 encontradas
+2026-09-04 20:09:11,788 [INFO]    Página 4/5
+2026-09-04 20:09:17,288 [INFO]    → 1 encontradas
+2026-09-04 20:09:22,514 [INFO]    Página 5/5
+2026-09-04 20:09:26,973 [INFO]    → 14 encontradas
+2026-09-04 20:10:51,370 [INFO] CSV: 64 exportadas
+2026-09-04 20:10:51,370 [INFO] ✅ 'Desarrollador Backend': 64 guardadas
+2026-09-04 20:10:58,186 [INFO] 
+🔍 'Desarrollador Full Stack'
+2026-09-04 20:10:58,186 [INFO]    Página 1/5
+2026-09-04 20:11:04,142 [INFO]    → 11 encontradas
+2026-09-04 20:12:05,117 [INFO]    Página 2/5
+2026-09-04 20:12:09,295 [INFO]    → 16 encontradas
+2026-09-04 20:13:52,922 [INFO]    Página 3/5
+2026-09-04 20:13:58,724 [INFO]    → 20 encontradas
+2026-09-04 20:16:19,829 [INFO]    Página 4/5
+2026-09-04 20:16:25,826 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-04 20:16:25,826 [INFO]    → 0 encontradas
+2026-09-04 20:16:25,832 [INFO] CSV: 47 exportadas
+2026-09-04 20:16:25,832 [INFO] ✅ 'Desarrollador Full Stack': 47 guardadas
+2026-09-04 20:16:31,010 [INFO] 
+🔍 'Ingeniero de Datos'
+2026-09-04 20:16:31,011 [INFO]    Página 1/5
+2026-09-04 20:16:35,658 [INFO]    → 18 encontradas
+2026-09-04 20:18:24,697 [INFO]    Página 2/5
+2026-09-04 20:18:30,818 [INFO]    → 10 encontradas
+2026-09-04 20:19:33,398 [INFO]    Página 3/5
+2026-09-04 20:19:38,975 [INFO]    → 15 encontradas
+2026-09-04 20:21:13,399 [INFO]    Página 4/5
+2026-09-04 20:21:19,890 [INFO]    → 19 encontradas
+2026-09-04 20:23:14,250 [INFO]    Página 5/5
+2026-09-04 20:23:18,050 [INFO]    → 19 encontradas
+2026-09-04 20:25:18,724 [INFO] CSV: 81 exportadas
+2026-09-04 20:25:18,725 [INFO] ✅ 'Ingeniero de Datos': 81 guardadas
+2026-09-04 20:25:25,369 [INFO] 
+============================================================
+FINALIZADO — 575 ofertas
+2026-09-04 20:25:25,379 [INFO]   ✅ jobrapido: 575 ofertas recopiladas
+2026-09-04 20:25:25,386 [INFO] 
+============================================================
+2026-09-04 20:25:25,386 [INFO]   EJECUTANDO: jobleads (JobleadsScraper)
+2026-09-04 20:25:25,386 [INFO]   Queries: definidas en el módulo
+2026-09-04 20:25:25,386 [INFO] ============================================================
+2026-09-04 20:25:25,418 [INFO] DB lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/jobleads.db
+2026-09-04 20:25:25,419 [INFO] Ejecutando diagnóstico de JobLeads...
+2026-09-04 20:25:27,589 [INFO]   https://www.jobleads.com/ar/jobs?q=python → HTTP 200 | 327,982 chars | Final: https://www.jobleads.com/ar/jobs?q=python
+2026-09-04 20:25:27,684 [INFO]   <title>: Trabajos en Argentina | JobLeads
+2026-09-04 20:25:27,686 [INFO]   Links oferta detectados: 25
+2026-09-04 20:25:27,686 [INFO]     /ar/job/software-engineer-qb-net-20260713--buenos-aires--e5a0da3494f286c6f4d4832bc3497a135 | Software Engineer (QB - .Net - 20260713)
+2026-09-04 20:25:27,686 [INFO]     /ar/job/software-engineer-mobile-id76367--rosario--e8b8fb006cc4c78dfa5f5dbb4fb9e21c1 | Software Engineer (Mobile) Id76367
+2026-09-04 20:25:27,686 [INFO]     /es/job/frontend-engineer-sr-id-00103--san-telmo--efb22739831726d7091b5771e5b06b75b | Frontend Engineer SR – ID #00103
+2026-09-04 20:25:27,687 [INFO] JobleadsScraper inicializado (modo híbrido: requests + Playwright)
+2026-09-04 20:25:27,687 [INFO] ============================================================
+2026-09-04 20:25:27,687 [INFO] INICIO - JobLeads (modo híbrido: requests + Playwright)
+2026-09-04 20:25:27,687 [ERROR] Playwright no disponible. Instalá con: pip install playwright && playwright install chromium
+2026-09-04 20:25:27,687 [INFO]   ✅ jobleads: 0 ofertas recopiladas
+2026-09-04 20:25:27,690 [INFO] 
+=================================================================
+2026-09-04 20:25:27,690 [INFO]   FASE 2: CONSOLIDACIÓN
+2026-09-04 20:25:27,691 [INFO] =================================================================
+2026-09-04 20:25:27,691 [INFO] Consolidado DB lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.db
+2026-09-04 20:25:27,707 [INFO] 
+  📂 Procesando: linkedin (linkedin.db)
+2026-09-04 20:25:27,723 [INFO]   Leídas 879 ofertas de linkedin.db
+2026-09-04 20:25:27,760 [INFO]   ✅ linkedin: leídas=879 | nuevas=134 | dup=689 | old=56
+2026-09-04 20:25:27,761 [INFO] 
+  📂 Procesando: computrabajo (computrabajo.db)
+2026-09-04 20:25:27,765 [INFO]   Leídas 472 ofertas de computrabajo.db
+2026-09-04 20:25:27,782 [INFO]   ✅ computrabajo: leídas=472 | nuevas=191 | dup=281 | old=0
+2026-09-04 20:25:27,782 [INFO] 
+  📂 Procesando: getonboard (getonboard.db)
+2026-09-04 20:25:27,788 [INFO]   Leídas 552 ofertas de getonboard.db
+2026-09-04 20:25:27,802 [INFO]   ✅ getonboard: leídas=552 | nuevas=52 | dup=494 | old=6
+2026-09-04 20:25:27,802 [INFO] 
+  📂 Procesando: bumeran (bumeran.db)
+2026-09-04 20:25:27,802 [WARNING]   DB no encontrada: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/bumeran.db
+2026-09-04 20:25:27,803 [INFO]   ✅ bumeran: leídas=0 | nuevas=0 | dup=0 | old=0
+2026-09-04 20:25:27,803 [INFO] 
+  📂 Procesando: zonajobs (zonajobs.db)
+2026-09-04 20:25:27,803 [WARNING]   DB no encontrada: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/zonajobs.db
+2026-09-04 20:25:27,803 [INFO]   ✅ zonajobs: leídas=0 | nuevas=0 | dup=0 | old=0
+2026-09-04 20:25:27,803 [INFO] 
+  📂 Procesando: workana (workana.db)
+2026-09-04 20:25:27,803 [WARNING]   DB no encontrada: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/workana.db
+2026-09-04 20:25:27,803 [INFO]   ✅ workana: leídas=0 | nuevas=0 | dup=0 | old=0
+2026-09-04 20:25:27,803 [INFO] 
+  📂 Procesando: opcionempleo (opcionempleo.db)
+2026-09-04 20:25:27,803 [WARNING]   DB no encontrada: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/opcionempleo.db
+2026-09-04 20:25:27,804 [INFO]   ✅ opcionempleo: leídas=0 | nuevas=0 | dup=0 | old=0
+2026-09-04 20:25:27,804 [INFO] 
+  📂 Procesando: jobomas (jobomas.db)
+2026-09-04 20:25:27,804 [INFO]   Leídas 16 ofertas de jobomas.db
+2026-09-04 20:25:27,808 [INFO]   ✅ jobomas: leídas=16 | nuevas=4 | dup=12 | old=0
+2026-09-04 20:25:27,808 [INFO] 
+  📂 Procesando: jobrapido (jobrapido.db)
+2026-09-04 20:25:27,819 [INFO]   Leídas 1,178 ofertas de jobrapido.db
+2026-09-04 20:25:27,840 [INFO]   ✅ jobrapido: leídas=1,178 | nuevas=211 | dup=967 | old=0
+2026-09-04 20:25:27,840 [INFO] 
+  📂 Procesando: jobleads (jobleads.db)
+2026-09-04 20:25:27,841 [INFO]   Leídas 0 ofertas de jobleads.db
+2026-09-04 20:25:27,841 [INFO]   ✅ jobleads: leídas=0 | nuevas=0 | dup=0 | old=0
+2026-09-04 20:25:27,872 [INFO]   CSV consolidado actualizado: +592 filas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.csv
+2026-09-04 20:25:27,872 [INFO] 
+=================================================================
+2026-09-04 20:25:27,872 [INFO]   RESUMEN FINAL
+2026-09-04 20:25:27,873 [INFO] =================================================================
+2026-09-04 20:25:27,873 [INFO]   Ofertas nuevas incorporadas : 592
+2026-09-04 20:25:27,873 [INFO]   Descartadas (antigüedad)    : 62
+2026-09-04 20:25:27,874 [INFO]   Descartadas (duplicado)     : 2,443
+2026-09-04 20:25:27,874 [INFO]   Total acumulado en DB       : 8,346
+2026-09-04 20:25:27,874 [INFO]   Ventana temporal aplicada   : últimos 90 días (desde 2026-06-06)
+2026-09-04 20:25:27,874 [INFO]   Duración total              : 128m 55s
+2026-09-04 20:25:27,874 [INFO] 
+  Archivos de salida:
+2026-09-04 20:25:27,874 [INFO]     DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.db
+2026-09-04 20:25:27,874 [INFO]     CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.csv
+2026-09-04 20:25:27,874 [INFO]     Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/run_scraping_20260904_181632.log
+2026-09-04 20:25:27,874 [INFO] 
+  Resultado por scraper:
+2026-09-04 20:25:27,874 [INFO]     ✅ linkedin        | 🔧mod | ofertas=407 | tiempo=1913s
+2026-09-04 20:25:27,874 [INFO]     ✅ computrabajo    | 🔧mod | ofertas=202 | tiempo=1504s
+2026-09-04 20:25:27,874 [INFO]     ✅ getonboard      | 🔧mod | ofertas=431 | tiempo=210s
+2026-09-04 20:25:27,874 [INFO]     ❌ bumeran         | 🔧mod | ofertas=0 | tiempo=0s | error=No module named 'playwright'
+2026-09-04 20:25:27,874 [INFO]     ❌ zonajobs        | 🔧mod | ofertas=0 | tiempo=0s | error=No module named 'playwright'
+2026-09-04 20:25:27,875 [INFO]     ❌ workana         | 🔧mod | ofertas=0 | tiempo=0s | error=No module named 'playwright'
+2026-09-04 20:25:27,875 [INFO]     ❌ opcionempleo    | 🔧mod | ofertas=0 | tiempo=0s | error=No module named 'playwright'
+2026-09-04 20:25:27,875 [INFO]     ✅ jobomas         | 🔧mod | ofertas=8 | tiempo=194s
+2026-09-04 20:25:27,875 [INFO]     ✅ jobrapido       | 🔧mod | ofertas=575 | tiempo=3908s
+2026-09-04 20:25:27,875 [INFO]     ✅ jobleads        | 🔧mod | ofertas=0 | tiempo=2s
+2026-09-04 20:25:27,875 [INFO] 
+  Por fuente (consolidación):
+2026-09-04 20:25:27,875 [INFO]     linkedin       : nuevas=134 | dup=689 | old=56
+2026-09-04 20:25:27,875 [INFO]     computrabajo   : nuevas=191 | dup=281 | old=0
+2026-09-04 20:25:27,875 [INFO]     getonboard     : nuevas=52 | dup=494 | old=6
+2026-09-04 20:25:27,875 [INFO]     bumeran        : nuevas=0 | dup=0 | old=0
+2026-09-04 20:25:27,875 [INFO]     zonajobs       : nuevas=0 | dup=0 | old=0
+2026-09-04 20:25:27,875 [INFO]     workana        : nuevas=0 | dup=0 | old=0
+2026-09-04 20:25:27,876 [INFO]     opcionempleo   : nuevas=0 | dup=0 | old=0
+2026-09-04 20:25:27,876 [INFO]     jobomas        : nuevas=4 | dup=12 | old=0
+2026-09-04 20:25:27,876 [INFO]     jobrapido      : nuevas=211 | dup=967 | old=0
+2026-09-04 20:25:27,876 [INFO]     jobleads       : nuevas=0 | dup=0 | old=0
+2026-09-04 20:25:27,876 [INFO]     Reporte: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/run_20260904_202527.json
+2026-09-04 20:25:27,876 [INFO] =================================================================

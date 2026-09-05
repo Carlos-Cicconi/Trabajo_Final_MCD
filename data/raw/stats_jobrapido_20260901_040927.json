@@ -1,0 +1,47 @@
+{
+  "fuente": "jobrapido",
+  "fecha": "2026-09-01T04:09:27.992909",
+  "total": 665,
+  "detalle": [
+    {
+      "keyword": "Data Scientist",
+      "ofertas": 85
+    },
+    {
+      "keyword": "Data Analyst",
+      "ofertas": 80
+    },
+    {
+      "keyword": "Machine Learning Engineer",
+      "ofertas": 62
+    },
+    {
+      "keyword": "NLP Engineer",
+      "ofertas": 62
+    },
+    {
+      "keyword": "Data Engineer",
+      "ofertas": 70
+    },
+    {
+      "keyword": "Software Engineer",
+      "ofertas": 45
+    },
+    {
+      "keyword": "Python Developer",
+      "ofertas": 22
+    },
+    {
+      "keyword": "Desarrollador Backend",
+      "ofertas": 72
+    },
+    {
+      "keyword": "Desarrollador Full Stack",
+      "ofertas": 80
+    },
+    {
+      "keyword": "Ingeniero de Datos",
+      "ofertas": 87
+    }
+  ]
+}

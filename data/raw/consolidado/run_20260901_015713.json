@@ -1,0 +1,73 @@
+{
+  "fecha_ejecucion": "2026-09-01T01:57:13.251879",
+  "max_dias": 90,
+  "limite_temporal": "2026-06-03",
+  "duracion_segundos": 0,
+  "total_acumulado_db": 7424,
+  "nuevas_incorporadas": 0,
+  "descartadas_fecha": 43,
+  "descartadas_dup": 2101,
+  "scrapers_ejecutados": [],
+  "consolidacion_fuentes": {
+    "linkedin": {
+      "leidas": 549,
+      "descartadas_fecha": 38,
+      "descartadas_dup": 511,
+      "nuevas": 0
+    },
+    "computrabajo": {
+      "leidas": 204,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 204,
+      "nuevas": 0
+    },
+    "getonboard": {
+      "leidas": 479,
+      "descartadas_fecha": 5,
+      "descartadas_dup": 474,
+      "nuevas": 0
+    },
+    "bumeran": {
+      "leidas": 0,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "nuevas": 0
+    },
+    "zonajobs": {
+      "leidas": 0,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "nuevas": 0
+    },
+    "workana": {
+      "leidas": 0,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "nuevas": 0
+    },
+    "opcionempleo": {
+      "leidas": 0,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "nuevas": 0
+    },
+    "jobomas": {
+      "leidas": 6,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 6,
+      "nuevas": 0
+    },
+    "jobrapido": {
+      "leidas": 906,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 906,
+      "nuevas": 0
+    },
+    "jobleads": {
+      "leidas": 0,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "nuevas": 0
+    }
+  }
+}
