@@ -118,7 +118,14 @@ pip install --quiet \
     lxml==5.3.1 \
     scrapy==2.12.0 \
     fake-useragent==2.1.0 \
-    httpx==0.28.1
+    httpx==0.28.1 \
+    playwright==1.62.0
+
+# Playwright necesita descargar los binarios de navegador (Chromium) y,
+# en Linux, sus dependencias de sistema. Usado por los scrapers de
+# bumeran, zonajobs, workana y opcionempleo (requieren JS rendering).
+echo -e "   🔽 Instalando navegador Chromium para Playwright..."
+python3 -m playwright install --with-deps chromium
 
 # --- Manejo de datos ---
 echo -e "   📦 Instalando librerías de datos..."

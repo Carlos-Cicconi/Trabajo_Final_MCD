@@ -216,13 +216,24 @@ class JobleadsScraper:
         soup    = BeautifulSoup(html, "lxml")
         ofertas = []
 
-        # Estrategia en cascada para encontrar cards
-        cards = (
-            soup.find_all("article") or
-            soup.find_all("li", class_=re.compile(r"job|item|result", re.I)) or
-            soup.find_all(attrs={"data-job-id": True}) or
-            soup.find_all("div", class_=re.compile(r"job|result|card|listing|offer", re.I))
-        )
+        # Estrategia en cascada para encontrar cards.
+        # FIX 2026-09-05: las regex sin \b (ej. "item") daban falsos positivos
+        # con clases utilitarias de Tailwind como "jlui-items-center" (un
+        # dropdown de idioma, no una tarjeta de oferta). Esos falsos positivos
+        # ganaban la cascada — al no contener ningún link de oferta real,
+        # `ofertas` quedaba vacío aunque la página sí tuviera resultados.
+        # Ahora cada candidato de la cascada se valida: solo se usa si al
+        # menos una card contiene un link de oferta real.
+        def _tiene_oferta(elementos):
+            return any(el.find("a", href=HREF_OFERTA_RE) for el in elementos)
+
+        candidatos = [
+            soup.find_all("article"),
+            soup.find_all("li", class_=re.compile(r"\bjob\b|\bitem\b|\bresult\b", re.I)),
+            soup.find_all(attrs={"data-job-id": True}),
+            soup.find_all("div", class_=re.compile(r"\bjob\b|\bresult\b|\bcard\b|\blisting\b|\boffer\b", re.I)),
+        ]
+        cards = next((c for c in candidatos if c and _tiene_oferta(c)), [])
 
         # Si no hay cards estructurados, parsear directamente los links de oferta
         if not cards:

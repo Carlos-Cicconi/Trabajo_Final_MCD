@@ -419,8 +419,11 @@ class WorkanaScraper:
         stats = []
 
         async with async_playwright() as pw:
+            # headless=True es detectado por el Cloudflare "managed challenge"
+            # (falta fingerprint real de GPU/display) y nunca pasa el
+            # challenge — confirmado empíricamente 2026-09-05.
             browser = await pw.chromium.launch(
-                headless=True,
+                headless=False,
                 args=[
                     "--no-sandbox",
                     "--disable-blink-features=AutomationControlled",
@@ -428,28 +431,21 @@ class WorkanaScraper:
                     "--window-size=1366,768",
                 ]
             )
+            # Sin user_agent explícito: un UA fijo (ej. "Chrome/122") queda
+            # desincronizado de la versión real del Chromium instalado y ese
+            # desajuste es detectado por Cloudflare — confirmado empíricamente
+            # 2026-09-05 (con UA hardcodeado el challenge nunca se resuelve;
+            # sin él, sí). Tampoco se agrega add_init_script con overrides de
+            # navigator.*: esas propiedades sobreescritas (ej. webdriver ->
+            # undefined en vez de false) son en sí mismas una señal de bot.
             context = await browser.new_context(
                 viewport={"width": 1366, "height": 768},
-                user_agent=(
-                    "Mozilla/5.0 (X11; Linux x86_64) "
-                    "AppleWebKit/537.36 (KHTML, like Gecko) "
-                    "Chrome/122.0.0.0 Safari/537.36"
-                ),
                 locale="es-AR",
                 timezone_id="America/Argentina/Buenos_Aires",
                 extra_http_headers={
                     "Accept-Language": "es-AR,es;q=0.9,en-US;q=0.8",
                 }
             )
-            await context.add_init_script("""
-                Object.defineProperty(navigator, 'webdriver',
-                                      { get: () => undefined });
-                Object.defineProperty(navigator, 'plugins',
-                                      { get: () => [1,2,3,4,5] });
-                Object.defineProperty(navigator, 'languages',
-                                      { get: () => ['es-AR','es','en'] });
-                window.chrome = { runtime: {} };
-            """)
 
             page = await context.new_page()
 

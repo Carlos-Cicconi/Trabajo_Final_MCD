@@ -8,13 +8,14 @@
 # Fuente: OpcionEmpleo Argentina (www.opcionempleo.com.ar)
 # Grupo:  Jobijoba Group (Francia)
 #
-# PROTECCIÓN DETECTADA (diagnóstico 2026-04-08):
-#   Cloudflare Turnstile — challenge interactivo que requiere JS real.
+# PROTECCIÓN DETECTADA (diagnóstico 2026-04-08, reconfirmado 2026-09-05):
+#   Cloudflare Turnstile — "managed challenge" invisible.
 #   requests/urllib devuelven la página de challenge sin contenido.
-#   SOLUCIÓN: Playwright (Chromium headless) ejecuta el JS del challenge,
-#   resuelve el Turnstile automáticamente y accede al contenido real.
-#   OpcionEmpleo NO tiene Cloudflare a nivel TLS (a diferencia de Indeed),
-#   por lo que Playwright es suficiente sin necesidad de curl_cffi.
+#   Chromium headless TAMPOCO la resuelve (fingerprint de GPU/display
+#   insuficiente para pasar el score de Turnstile) — devuelve un shell
+#   vacío sin lanzar error, lo que hace fallar el scraping en silencio.
+#   SOLUCIÓN: Playwright con headless=False (requiere sesión gráfica X
+#   en la máquina que ejecuta el scraper) sí resuelve el challenge.
 #
 # ESTRUCTURA DEL DOM (inferida del grupo Jobijoba — misma plataforma
 # que otras versiones regionales como opcionempleo.com.mx):
@@ -377,8 +378,13 @@ class OpcionempleoScraper:
         stats = []
 
         async with async_playwright() as pw:
+            # headless=True es detectado por el Turnstile "managed challenge"
+            # de Cloudflare (falta fingerprint real de GPU/display) y nunca
+            # obtiene la cookie cf_clearance — confirmado empíricamente
+            # 2026-09-05: headless devuelve el shell vacío (~12KB), headful
+            # resuelve el challenge y entrega el HTML completo con ofertas.
             browser = await pw.chromium.launch(
-                headless=True,
+                headless=False,
                 args=[
                     "--no-sandbox",
                     "--disable-blink-features=AutomationControlled",
@@ -386,29 +392,22 @@ class OpcionempleoScraper:
                     "--window-size=1366,768",
                 ]
             )
+            # Sin user_agent explícito: un UA fijo (ej. "Chrome/122") queda
+            # desincronizado de la versión real del Chromium instalado y ese
+            # desajuste es detectado por el Turnstile "managed challenge" de
+            # Cloudflare — confirmado empíricamente 2026-09-05 (con UA
+            # hardcodeado el challenge nunca se resuelve; sin él, sí).
+            # Tampoco se agrega add_init_script con overrides de navigator.*:
+            # esas propiedades sobreescritas (ej. webdriver -> undefined en
+            # vez de false) son en sí mismas una señal de automatización.
             context = await browser.new_context(
                 viewport={"width": 1366, "height": 768},
-                user_agent=(
-                    "Mozilla/5.0 (X11; Linux x86_64) "
-                    "AppleWebKit/537.36 (KHTML, like Gecko) "
-                    "Chrome/122.0.0.0 Safari/537.36"
-                ),
                 locale="es-AR",
                 timezone_id="America/Argentina/Buenos_Aires",
                 extra_http_headers={
                     "Accept-Language": "es-AR,es;q=0.9,en-US;q=0.8",
                 }
             )
-            # Ocultar señales de automatización — ayuda con Turnstile
-            await context.add_init_script("""
-                Object.defineProperty(navigator, 'webdriver',
-                                      { get: () => undefined });
-                Object.defineProperty(navigator, 'plugins',
-                                      { get: () => [1, 2, 3, 4, 5] });
-                Object.defineProperty(navigator, 'languages',
-                                      { get: () => ['es-AR', 'es', 'en'] });
-                window.chrome = { runtime: {} };
-            """)
 
             page = await context.new_page()
 
@@ -500,7 +499,7 @@ if __name__ == "__main__":
     print("\n🚀 Iniciando scraper de OpcionEmpleo Argentina (Playwright)...")
     print("   Proyecto: Tesis MCD - Sistema de Recomendación Laboral")
     print("   Alumno: Cicconi, Carlos Alberto")
-    print("   ℹ️  Cloudflare Turnstile → Chromium headless resuelve el challenge\n")
+    print("   ℹ️  Cloudflare Turnstile → requiere Chromium headful (necesita sesión gráfica X)\n")
     print("   ⏳ El primer arranque puede tardar ~20s (resolución del Turnstile)\n")
 
     scraper = OpcionempleoScraper()

@@ -109,6 +109,7 @@ parso==0.8.6
 pexpect==4.9.0
 pillow==11.3.0
 platformdirs==4.9.4
+playwright==1.62.0
 plotly==6.0.1
 preshed==3.0.13
 prometheus_client==0.24.1
@@ -127,6 +128,7 @@ pydantic_core==2.41.5
 pydeck==0.9.1
 PyDispatcher==2.0.7
 Pygments==2.19.2
+pyee==13.0.1
 pyOpenSSL==26.0.0
 pyparsing==3.3.2
 python-dateutil==2.9.0.post0
