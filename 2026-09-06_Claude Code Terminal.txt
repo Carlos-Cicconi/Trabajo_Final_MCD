@@ -1,0 +1,337 @@
+❯ En algunos sitios se registró un error al intentar scrapearlos, ¿podrás ayudarme a solucionarlo?
+  2026-09-04 20:25:27,874 [INFO]     ❌ bumeran         | 🔧mod | ofertas=0 | tiempo=0s | error=No module named 'playwright'
+  2026-09-04 20:25:27,874 [INFO]     ❌ zonajobs        | 🔧mod | ofertas=0 | tiempo=0s | error=No module named 'playwright'
+  2026-09-04 20:25:27,875 [INFO]     ❌ workana         | 🔧mod | ofertas=0 | tiempo=0s | error=No module named 'playwright'
+  2026-09-04 20:25:27,875 [INFO]     ❌ opcionempleo    | 🔧mod | ofertas=0 | tiempo=0s | error=No module named 'playwright'
+
+The error is simple: playwright's Python package isn't installed (or its browser binaries aren't). Let me check the venv.
+
+  Ran 1 shell command
+
+Confirmed — playwright isn't installed in venv_tesis. Let me check requirements.txt to see if it should be there.
+
+  Ran 1 shell command
+
+playwright isn't in requirements.txt at all, but 4 scrapers (bumeran, zonajobs, workana, opcionempleo) require it. I'll install it into the venv and also add it to requirements.txt for reproducibility.
+
+  Ran 1 shell command
+
+Package installed. Now install the browser binaries playwright needs, and add it to requirements.txt.
+
+  Ran 1 shell command
+
+It's downloading Chromium in the background (large download). Meanwhile let me update requirements.txt.
+
+  Read 1 file
+
+● Background command "Install chromium browser for playwright" completed (exit code 0)
+
+Chromium install finished successfully. Now let me add playwright to requirements.txt and verify the fix.
+
+● Update(/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/requirements.txt)
+Added 1 line
+pexpect==4.9.0
+pillow==11.3.0
+platformdirs==4.9.4
+playwright==1.62.0
+plotly==6.0.1
+preshed==3.0.13
+prometheus_client==0.24.1
+
+Also pyee==13.0.1 was newly installed as a dependency but isn't listed either.
+
+● Update(/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/requirements.txt)
+Added 1 line
+pydeck==0.9.1
+PyDispatcher==2.0.7
+Pygments==2.19.2
+pyee==13.0.1
+pyOpenSSL==26.0.0
+pyparsing==3.3.2
+python-dateutil==2.9.0.post0
+
+Now let's confirm one of the affected scrapers actually works.
+
+  Ran 1 shell command
+
+That's just a network/DNS restriction in this sandbox, not a playwright problem — the browser launched fine. Let me confirm launch alone works without network.
+
+  Ran 1 shell command
+
+Playwright and Chromium are fully working now. The ERR_NAME_NOT_RESOLVED was just because this sandbox has no outbound DNS/network — that won't affect the scrapers when you run them on your normal machine with internet access.
+
+Fix summary:
+- The playwright Python package was missing from venv_tesis (and wasn't in requirements.txt at all), causing bumeran, zonajobs, workana, and opcionempleo scrapers to fail with No module named 'playwright'.
+- Installed playwright==1.62.0 (pulled in pyee==13.0.1) into the venv.
+- Ran playwright install chromium to download the browser binary it needs.
+- Added both playwright==1.62.0 and pyee==13.0.1 to requirements.txt so setup_entorno.sh reproduces this correctly from scratch in the future.
+
+You should now be able to re-run python src/scraping/run_scraping.py --solo bumeran (or the full orchestrator) and those four scrapers should work. One thing to note for setup_entorno.sh: it currently doesn't call playwright install, so it'd need that step added too if you want fresh installs to have the browser binary — let me know if you'd like me to patch that script.
+
+✻ Churned for 3m 20s · done viernes, 23:07
+
+❯ Sí, agregá el paso a setup_entorno.sh
+
+  Ran 1 shell command
+
+I'll add playwright + its browser install to the scraping section (step 5), and install its OS deps too.
+
+● Update(/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/setup_entorno.sh)
+File must be read first
+
+  Read 1 file
+
+● Update(/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/setup_entorno.sh)
+Added 8 lines, removed 1 line
+    lxml==5.3.1 \
+    scrapy==2.12.0 \
+    fake-useragent==2.1.0 \
+    httpx==0.28.1
+    httpx==0.28.1 \
+    playwright==1.62.0
+
+# Playwright necesita descargar los binarios de navegador (Chromium) y,
+# en Linux, sus dependencias de sistema. Usado por los scrapers de
+# bumeran, zonajobs, workana y opcionempleo (requieren JS rendering).
+echo -e "   🔽 Instalando navegador Chromium para Playwright..."
+python3 -m playwright install --with-deps chromium
+
+# --- Manejo de datos ---
+echo -e "   📦 Instalando librerías de datos..."
+pip install --quiet \
+
+Listo. Agregué a setup_entorno.sh (paso 5) la instalación de playwright==1.62.0 vía pip y luego python3 -m playwright install --with-deps chromium, que descarga el binario de Chromium y sus dependencias de sistema en Linux (necesario para bumeran, zonajobs, workana y opcionempleo). requirements.txt ya lo tenía desde el fix anterior.
+
+✻ Sautéed for 31s · done viernes, 23:15
+
+❯ Corré el scraper completo para probar que anda
+
+Voy a correr el orquestador completo. Esto puede tardar varios minutos ya que scrapea todas las fuentes.
+
+  Ran 1 shell command
+
+Lanzado en background. Te aviso apenas termine con el resultado completo.
+
+I'll wait for the background task's completion notification rather than polling.
+
+✻ Crunched for 10s · done viernes, 23:16
+
+❯ Avisame cuando termine
+
+Dale, quedo esperando la notificación de fin del proceso en background y te aviso apenas termine con el resumen del resultado.
+
+✻ Worked for 5s · done viernes, 23:17
+
+※ recap: Fixing scraper environment issues, playwright now installed and setup script updated. Currently waiting for the full scraper run (all sources) to finish in the background so I can confirm everything works. (disable recaps in /config)
+
+● Background command "Run full scraper orchestrator" completed (exit code 0)
+
+El scraping terminó. Voy a revisar el resultado.
+
+  Read 1 file
+
+El error de playwright quedó resuelto — las 4 fuentes que antes fallaban con ❌ ... error=No module named 'playwright' ahora corren completas (✅) sin excepción. Sin embargo, las cuatro devolvieron 0 ofertas: bumeran, zonajobs, workana y opcionempleo. Eso ya no es un problema de entorno sino de scraping en sí (posible bloqueo anti-bot, selector roto, o cambio de sitio). Voy a revisar el log de una de ellas para ver la causa.
+
+  Searched for 1 pattern
+
+El scraping funciona técnicamente (Chromium navega bien) pero el selector que busca las ofertas en el HTML de Bumeran no encuentra nada — probablemente cambiaron el markup del sitio. Voy a revisar el código del scraper para confirmar.
+
+  Searched for 1 pattern
+
+These are auto-generated styled-components class hashes (sc-cMfllC, sc-kNwkiS, etc.) — a fragile selector strategy that breaks any time Bumeran rebuilds their frontend bundle, unrelated to the playwright fix. This is a separate, pre-existing scraping-logic issue.
+
+  Listed 1 directory, ran 1 shell command
+
+4680 bytes is way too small for a listings page — likely blocked or served an error/challenge page. Let me check.
+
+  Searched for 1 pattern
+
+Confirmado el diagnóstico. El fix de playwright funcionó — el error No module named 'playwright' está resuelto y los 4 scrapers corren sin excepción. Pero devuelven 0 ofertas por un problema distinto y preexistente: Cloudflare está bloqueando Bumeran con un desafío "Attention Required!" (probablemente lo mismo aplica a zonajobs/workana/opcionempleo, que suelen compartir infraestructura anti-bot similar).
+
+Resumen del run completo:
+- ✅ linkedin: 397 ofertas, computrabajo: 129, getonboard: 431, jobomas: 8, jobrapido: 706 — funcionando bien
+- ✅ bumeran/zonajobs/workana/opcionempleo: ya no crashean, pero devuelven 0 por bloqueo de Cloudflare/anti-bot
+- Consolidación: 184 ofertas nuevas incorporadas, total acumulado 8,530
+
+El problema de Cloudflare es harina de otro costal (requiere stealth/anti-detección en Playwright, proxies, o headers/fingerprint más realistas) — es un tema de scraping-evasion en cada scraper individual, no algo relacionado con la instalación del entorno. ¿Querés que investigue una solución para esquivar el bloqueo de Cloudflare en estos sitios, o lo dejamos como está por ahora?
+
+✻ Cooked for 51s · done sábado, 1:54
+
+※ recap: Fixed the playwright module error so scrapers run again; ran the full scraper and confirmed it works, but bumeran, zonajobs, workana, and opcionempleo return 0 results due to Cloudflare blocking. Next: decide whether to tackle bypassing that block. (disable recaps in /config)
+
+❯ ok, investigá una solución para esquivar el bloqueo de Cloudflare en estos sitios
+
+  Searched for 3 patterns, read 1 file, ran 2 shell commands
+
+El bloqueo es más profundo de lo que pensaba — no es un simple challenge de JavaScript, es un Error 1020 "Access Denied" de Cloudflare (regla de firewall), y viene con tu IP real revelada en la página de error. Esto normalmente se dispara por reputación de IP/ASN o por fingerprinting a nivel de protocolo, no solo por headers de JS. Voy a probar con patchright (un fork de Playwright que parchea las señales de automatización a nivel de protocolo CDP que Cloudflare detecta) para ver si al menos elimina la detección de "bot" antes de asumir que es un bloqueo puro de IP.
+
+  Ran 1 shell command
+
+Instalando patchright + su Chromium en segundo plano. Te aviso cuando termine para probarlo contra Bumeran.
+
+✻ Brewed for 1m 20s · done sábado, 9:14
+
+● Background command "Install patchright and its chromium build" completed (exit code 0)
+
+Instalación lista. Ahora pruebo patchright contra Bumeran para ver si evade el bloqueo.
+
+  Ran 1 shell command
+
+Idéntico bloqueo con patchright — mismo tamaño de página, mismo título. Esto confirma que no es un problema de fingerprinting/detección de automatización (patchright soluciona exactamente eso a nivel de protocolo CDP), sino un bloqueo de firewall a nivel de IP/ASN o de la ruta específica. Voy a verificar si es la IP completa o solo esa URL de búsqueda.
+
+  Ran 1 shell command
+
+Resultados reveladores y distintos por sitio:
+- bumeran / zonajobs (mismo grupo, Navent): bloqueo duro de IP a nivel de todo el dominio — ni la home carga.
+- workana: "Un momento…" es el challenge JS soft de Cloudflare, que normalmente se resuelve solo tras unos segundos — vale la pena esperar más.
+- opcionempleo: la home carga bien ("Opcionempleo"), sin bloqueo — el problema ahí es otra cosa (probablemente el scraper no encuentra ofertas por un selector roto, no por Cloudflare).
+
+Voy a probar workana con más espera para ver si el challenge se resuelve solo.
+
+  Searched for 2 patterns, ran 6 shell commands
+
+Resultado de la investigación
+
+Probé exhaustivamente contra las 4 fuentes, incluyendo patchright (fork de Playwright que elimina las señales de automatización a nivel de protocolo CDP — el método más efectivo contra fingerprinting). Los resultados muestran que cada sitio tiene un problema distinto, y no todos son solucionables por software:
+
+┌──────────────┬───────────────────────────────────────────────┬────────────────────────────────────────────┐
+│    Sitio     │                  Diagnóstico                  │             ¿Se puede evadir?              │
+├──────────────┼───────────────────────────────────────────────┼────────────────────────────────────────────┤
+│              │ Error 1020 "Access Denied" de Cloudflare —    │ ❌ No con stealth. Es un bloqueo de        │
+│ bumeran      │ bloqueo duro a nivel de IP completa, incluso  │ reputación de IP/ASN, no de fingerprint    │
+│              │ la home. Idéntico con patchright.             │ del navegador.                             │
+├──────────────┼───────────────────────────────────────────────┼────────────────────────────────────────────┤
+│ zonajobs     │ Mismo bloqueo 1020 (comparte infraestructura  │ ❌ Igual que bumeran.                      │
+│              │ con bumeran, ambos son del grupo Navent).     │                                            │
+├──────────────┼───────────────────────────────────────────────┼────────────────────────────────────────────┤
+│              │ Cloudflare Managed Challenge (Turnstile       │ ⚠️ Parcialmente — requiere fingerprint de  │
+│ workana      │ invisible, cType: managed). No obtuvo         │ navegador "confiable" (GPU real, WebGL,    │
+│              │ cf_clearance tras 18s de espera, ni con       │ etc.) que headless no logra imitar del     │
+│              │ patchright.                                   │ todo.                                      │
+├──────────────┼───────────────────────────────────────────────┼────────────────────────────────────────────┤
+│              │ No hay bloqueo de Cloudflare. La página carga │ ✅ Es un problema de scraper (selector     │
+│ opcionempleo │  (200 OK) pero devuelve el shell vacío, sin   │ roto o el sitio cambió cómo carga          │
+│              │ tarjetas de empleo.                           │ resultados), no de Cloudflare — se puede   │
+│              │                                               │ arreglar.                                  │
+└──────────────┴───────────────────────────────────────────────┴────────────────────────────────────────────┘
+
+Por qué no conviene forzar bumeran/zonajobs
+
+Un bloqueo 1020 por IP/ASN no se resuelve con mejores headers, user-agents o stealth de navegador — necesitaría un proxy residencial rotativo (servicio pago de terceros), lo cual es una inversión de infraestructura, no un cambio de código, y además exigiría manejo cuidadoso de tasa de requests para no volver a activar el bloqueo.
+
+Recomendación práctica
+
+1. opcionempleo: vale la pena arreglarlo — es el único de los 4 con chance real de funcionar. ¿Querés que investigue por qué no renderiza resultados (probablemente cambió a carga vía API/XHR)?
+2. workana: podría intentarse con patchright + esperar más tiempo (30-60s) y headless=False con Xvfb, pero el éxito no está garantizado — es la opción de "mejor esfuerzo".
+3. bumeran/zonajobs: no recomiendo invertir más tiempo en evasión — el bloqueo es de infraestructura de red, no de código.
+
+¿Querés que avance con el arreglo de opcionempleo primero?
+
+✻ Worked for 3m 19s · done sábado, 9:18
+
+※ recap: Fixing broken job-board scrapers: playwright is now working, and today I diagnosed Cloudflare blocks across bumeran, zonajobs, workana, and opcionempleo. Next: waiting on your go-ahead to fix opcionempleo, the one site with no real block, just a broken results page. (disable recaps in /config)
+
+❯ Sí, dale, arreglá opcionempleo
+
+  Searched for 1 pattern, ran 3 shell commands
+
+Corrijo mi diagnóstico anterior — mirando el HTML completo (no solo el início), opcionempleo también usa Cloudflare Turnstile (challenge invisible), igual que workana. Mi test anterior fue insuficiente. Voy a probar si headless=False con un display virtual (Xvfb) logra resolverlo, ya que los challenges "managed" de Cloudflare a veces detectan headless=True como señal de bot incluso con patchright.
+
+  Listed 1 directory, ran 2 shell commands
+
+There's an actual X display available — this is your real desktop, not a headless server. Let me try headless=False directly.
+
+  Ran 1 shell command
+
+Excelente — 471 KB de página real, con contenido de ofertas. El modo headful (con display real) resuelve el Turnstile invisible que headless no puede pasar. Verifico la estructura real de las tarjetas de empleo.
+
+  Ran 1 shell command
+
+article.job confirms the scraper's guessed selector <article class="job"> was actually correct — the problem is purely that headless Chromium can't pass the Turnstile challenge, headful can. Let me check inner structure for title/company/location fields.
+
+  Searched for 1 pattern, read 1 file, ran 3 shell commands
+
+Everything else is already well set up (stealth args, init script, warmup). The only fix needed is headless=True → False, since the Turnstile challenge requires a real GPU/display fingerprint that headless Chromium can't fake.
+
+● Update(opcionempleo_scraper.py)
+Added 6 lines, removed 1 line
+        stats = []
+
+        async with async_playwright() as pw:
+            # headless=True es detectado por el Turnstile "managed challenge"
+            # de Cloudflare (falta fingerprint real de GPU/display) y nunca
+            # obtiene la cookie cf_clearance — confirmado empíricamente
+            # 2026-09-05: headless devuelve el shell vacío (~12KB), headful
+            # resuelve el challenge y entrega el HTML completo con ofertas.
+            browser = await pw.chromium.launch(
+                headless=True,
+                headless=False,
+                args=[
+                    "--no-sandbox",
+                    "--disable-blink-features=AutomationControlled",
+
+Also fix the stale comment/log at the top and print statement referring to headless.
+
+● Update(opcionempleo_scraper.py)
+Added 7 lines, removed 6 lines
+# Fuente: OpcionEmpleo Argentina (www.opcionempleo.com.ar)
+# Grupo:  Jobijoba Group (Francia)
+#
+# PROTECCIÓN DETECTADA (diagnóstico 2026-04-08):
+#   Cloudflare Turnstile — challenge interactivo que requiere JS real.
+# PROTECCIÓN DETECTADA (diagnóstico 2026-04-08, reconfirmado 2026-09-05):
+#   Cloudflare Turnstile — "managed challenge" invisible.
+#   requests/urllib devuelven la página de challenge sin contenido.
+#   SOLUCIÓN: Playwright (Chromium headless) ejecuta el JS del challenge,
+#   resuelve el Turnstile automáticamente y accede al contenido real.
+#   OpcionEmpleo NO tiene Cloudflare a nivel TLS (a diferencia de Indeed),
+#   por lo que Playwright es suficiente sin necesidad de curl_cffi.
+#   Chromium headless TAMPOCO la resuelve (fingerprint de GPU/display
+#   insuficiente para pasar el score de Turnstile) — devuelve un shell
+#   vacío sin lanzar error, lo que hace fallar el scraping en silencio.
+#   SOLUCIÓN: Playwright con headless=False (requiere sesión gráfica X
+#   en la máquina que ejecuta el scraper) sí resuelve el challenge.
+#
+# ESTRUCTURA DEL DOM (inferida del grupo Jobijoba — misma plataforma
+# que otras versiones regionales como opcionempleo.com.mx):
+
+  Searched for 1 pattern, read 1 file
+
+● Update(opcionempleo_scraper.py)
+Added 1 line, removed 1 line
+    print("\n🚀 Iniciando scraper de OpcionEmpleo Argentina (Playwright)...")
+    print("   Proyecto: Tesis MCD - Sistema de Recomendación Laboral")
+    print("   Alumno: Cicconi, Carlos Alberto")
+    print("   ℹ️  Cloudflare Turnstile → Chromium headless resuelve el challenge\n")
+    print("   ℹ️  Cloudflare Turnstile → requiere Chromium headful (necesita sesión gráfica X)\
+n")
+    print("   ⏳ El primer arranque puede tardar ~20s (resolución del Turnstile)\n")
+
+    scraper = OpcionempleoScraper()
+
+Ahora corro el scraper de opcionempleo standalone para confirmar que efectivamente trae ofertas reales.
+
+  Ran 1 shell command
+
+Corriendo el scraper de opcione
+├──────────────┼─────────┼────────────────────────────────────────────┤
+│ jobrapido    │ 631     │ ✅                                         │
+├──────────────┼─────────┼────────────────────────────────────────────┤
+│ jobleads     │ 25      │ ✅ (fix de hoy — techo esperado del sitio) │
+├──────────────┼─────────┼────────────────────────────────────────────┤
+│ workana      │ 21      │ ✅ (fix de hoy)                            │
+├──────────────┼─────────┼────────────────────────────────────────────┤
+│ jobomas      │ 8       │ ✅                                         │
+├──────────────┼─────────┼────────────────────────────────────────────┤
+│ bumeran      │ 0       │ ❌ bloqueo de IP (sin cambios, esperado)   │
+├──────────────┼─────────┼────────────────────────────────────────────┤
+│ zonajobs     │ 0       │ ❌ bloqueo de IP (sin cambios, esperado)   │
+└──────────────┴─────────┴────────────────────────────────────────────┘
+
+Consolidación: 662 ofertas nuevas, total acumulado en la base: 10,380.
+
+Los tres fixes de esta semana (opcionempleo, workana, jobleads) siguen funcionando consistentemente en esta segunda corrida completa. Todo en orden.
+
+✻ Churned for 14s · done 3:04
+
+※ recap: Estuvimos arreglando los scrapers que fallaban en el proyecto de tesis; ya solucionamos opcionempleo, workana y jobleads, y el commit quedó pusheado. Acabamos de correr el scraping completo de nuevo y salió bien (10,380 ofertas acumuladas); no queda ninguna acción pendiente salvo que quieras revisar algo más.
