@@ -85,3 +85,7 @@ scrapers (src/scraping/*_scraper.py)
 ```
 
 CV input side: `cv_keyword_extractor.py` (PDF → `data/cvs/keywords.json`) feeds both `run_scraping.py --cv` (search queries/location) and the matching engine (candidate profile).
+
+## Contexto histórico de decisiones
+
+`docs/contexto_tesis/CONTEXTO_CONVERSACIONES.md` sintetiza decisiones de diseño y arquitectura tomadas en conversaciones previas con Claude AI durante el desarrollo de este proyecto — por qué se descartaron ciertas fuentes/enfoques (ej. Indeed por bloqueo Cloudflare), estructuras de datos/API reales de cada scraper, bugs ya corregidos y sus causas raíz, y el razonamiento detrás de la reorganización de carpetas actual. Consultarlo antes de tocar scrapers, el extractor de keywords del CV, o la estructura de carpetas del proyecto.
