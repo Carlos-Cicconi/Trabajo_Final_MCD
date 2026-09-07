@@ -1,0 +1,104 @@
+2026-09-07 10:04:46,933 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/freelancer_ar.db
+2026-09-07 10:04:46,933 [INFO] FreelancerArScraper inicializado correctamente
+2026-09-07 10:04:46,933 [INFO] ============================================================
+2026-09-07 10:04:46,933 [INFO] INICIO DEL SCRAPING - freelancer.ar
+2026-09-07 10:04:46,933 [INFO] Búsquedas: 10 | Páginas por búsqueda: 5
+2026-09-07 10:04:46,933 [INFO] ============================================================
+2026-09-07 10:04:46,933 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-09-07 10:04:46,933 [INFO]    Página 1/5 → search='data scientist'
+2026-09-07 10:04:52,420 [INFO]    → 4 ofertas argentinas nuevas de 4 recibidas
+2026-09-07 10:04:52,421 [INFO] Exportadas 4 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_freelancer_ar_20260907.csv
+2026-09-07 10:04:52,421 [INFO] ✅ 'Data Scientist': 4 ofertas guardadas
+2026-09-07 10:04:52,421 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-09-07 10:04:52,421 [INFO]    Página 1/5 → search='data analyst'
+2026-09-07 10:04:57,976 [INFO]    → 20 ofertas argentinas nuevas de 20 recibidas
+2026-09-07 10:04:57,976 [INFO]    Página 2/5 → search='data analyst'
+2026-09-07 10:05:05,130 [INFO]    → 6 ofertas argentinas nuevas de 6 recibidas
+2026-09-07 10:05:05,138 [INFO] Exportadas 26 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_freelancer_ar_20260907.csv
+2026-09-07 10:05:05,138 [INFO] ✅ 'Data Analyst': 26 ofertas guardadas
+2026-09-07 10:05:05,138 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer'
+2026-09-07 10:05:05,138 [INFO]    Página 1/5 → search='machine learning'
+2026-09-07 10:05:10,397 [INFO]    → 14 ofertas argentinas nuevas de 17 recibidas
+2026-09-07 10:05:10,403 [INFO] Exportadas 14 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_freelancer_ar_20260907.csv
+2026-09-07 10:05:10,403 [INFO] ✅ 'Machine Learning Engineer': 14 ofertas guardadas
+2026-09-07 10:05:10,404 [INFO] 
+🔍 Buscando: 'NLP Engineer'
+2026-09-07 10:05:10,404 [INFO]    Página 1/5 → search='nlp'
+2026-09-07 10:05:16,166 [INFO]    → 1 ofertas argentinas nuevas de 3 recibidas
+2026-09-07 10:05:16,167 [INFO] Exportadas 1 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_freelancer_ar_20260907.csv
+2026-09-07 10:05:16,167 [INFO] ✅ 'NLP Engineer': 1 ofertas guardadas
+2026-09-07 10:05:16,167 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-09-07 10:05:16,168 [INFO]    Página 1/5 → search='data engineer'
+2026-09-07 10:05:21,245 [INFO]    → 16 ofertas argentinas nuevas de 20 recibidas
+2026-09-07 10:05:21,245 [INFO]    Página 2/5 → search='data engineer'
+2026-09-07 10:05:25,782 [INFO]    → 6 ofertas argentinas nuevas de 10 recibidas
+2026-09-07 10:05:25,786 [INFO] Exportadas 22 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_freelancer_ar_20260907.csv
+2026-09-07 10:05:25,786 [INFO] ✅ 'Data Engineer': 22 ofertas guardadas
+2026-09-07 10:05:25,787 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-09-07 10:05:25,787 [INFO]    Página 1/5 → search='software engineer'
+2026-09-07 10:05:31,127 [INFO]    → 14 ofertas argentinas nuevas de 20 recibidas
+2026-09-07 10:05:31,128 [INFO]    Página 2/5 → search='software engineer'
+2026-09-07 10:05:36,137 [INFO]    → 6 ofertas argentinas nuevas de 18 recibidas
+2026-09-07 10:05:36,145 [INFO] Exportadas 20 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_freelancer_ar_20260907.csv
+2026-09-07 10:05:36,146 [INFO] ✅ 'Software Engineer': 20 ofertas guardadas
+2026-09-07 10:05:36,146 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-09-07 10:05:36,146 [INFO]    Página 1/5 → search='python'
+2026-09-07 10:05:40,924 [INFO]    → 19 ofertas argentinas nuevas de 20 recibidas
+2026-09-07 10:05:40,924 [INFO]    Página 2/5 → search='python'
+2026-09-07 10:05:46,193 [INFO]    → 16 ofertas argentinas nuevas de 20 recibidas
+2026-09-07 10:05:46,193 [INFO]    Página 3/5 → search='python'
+2026-09-07 10:05:51,284 [INFO]    → 19 ofertas argentinas nuevas de 20 recibidas
+2026-09-07 10:05:51,284 [INFO]    Página 4/5 → search='python'
+2026-09-07 10:05:56,331 [INFO]    → 16 ofertas argentinas nuevas de 20 recibidas
+2026-09-07 10:05:56,331 [INFO]    Página 5/5 → search='python'
+2026-09-07 10:06:01,093 [INFO]    → 18 ofertas argentinas nuevas de 20 recibidas
+2026-09-07 10:06:01,115 [INFO] Exportadas 88 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_freelancer_ar_20260907.csv
+2026-09-07 10:06:01,115 [INFO] ✅ 'Python Developer': 88 ofertas guardadas
+2026-09-07 10:06:01,115 [INFO] 
+🔍 Buscando: 'Desarrollador Backend'
+2026-09-07 10:06:01,116 [INFO]    Página 1/5 → search='desarrollador backend'
+2026-09-07 10:06:06,639 [INFO]    → 17 ofertas argentinas nuevas de 20 recibidas
+2026-09-07 10:06:06,639 [INFO]    Página 2/5 → search='desarrollador backend'
+2026-09-07 10:06:12,385 [INFO]    → 13 ofertas argentinas nuevas de 14 recibidas
+2026-09-07 10:06:12,393 [INFO] Exportadas 30 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_freelancer_ar_20260907.csv
+2026-09-07 10:06:12,393 [INFO] ✅ 'Desarrollador Backend': 30 ofertas guardadas
+2026-09-07 10:06:12,393 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack'
+2026-09-07 10:06:12,394 [INFO]    Página 1/5 → search='desarrollador full stack'
+2026-09-07 10:06:16,507 [INFO]    → 15 ofertas argentinas nuevas de 20 recibidas
+2026-09-07 10:06:16,508 [INFO]    Página 2/5 → search='desarrollador full stack'
+2026-09-07 10:06:21,687 [INFO]    → 13 ofertas argentinas nuevas de 20 recibidas
+2026-09-07 10:06:21,688 [INFO]    Página 3/5 → search='desarrollador full stack'
+2026-09-07 10:06:27,192 [INFO]    → 1 ofertas argentinas nuevas de 3 recibidas
+2026-09-07 10:06:27,199 [INFO] Exportadas 29 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_freelancer_ar_20260907.csv
+2026-09-07 10:06:27,199 [INFO] ✅ 'Desarrollador Full Stack': 29 ofertas guardadas
+2026-09-07 10:06:27,200 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-09-07 10:06:27,200 [INFO]    Página 1/5 → search='ingeniero de datos'
+2026-09-07 10:06:32,726 [INFO]    → 14 ofertas argentinas nuevas de 20 recibidas
+2026-09-07 10:06:32,727 [INFO]    Página 2/5 → search='ingeniero de datos'
+2026-09-07 10:06:37,260 [INFO]    → 17 ofertas argentinas nuevas de 20 recibidas
+2026-09-07 10:06:37,261 [INFO]    Página 3/5 → search='ingeniero de datos'
+2026-09-07 10:06:42,317 [INFO]    → 19 ofertas argentinas nuevas de 20 recibidas
+2026-09-07 10:06:42,317 [INFO]    Página 4/5 → search='ingeniero de datos'
+2026-09-07 10:06:47,614 [INFO]    → 20 ofertas argentinas nuevas de 20 recibidas
+2026-09-07 10:06:47,614 [INFO]    Página 5/5 → search='ingeniero de datos'
+2026-09-07 10:06:53,094 [INFO]    → 19 ofertas argentinas nuevas de 20 recibidas
+2026-09-07 10:06:53,117 [INFO] Exportadas 89 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_freelancer_ar_20260907.csv
+2026-09-07 10:06:53,117 [INFO] ✅ 'Ingeniero de Datos': 89 ofertas guardadas
+2026-09-07 10:06:53,118 [INFO] 
+============================================================
+2026-09-07 10:06:53,118 [INFO] SCRAPING FINALIZADO - freelancer.ar
+2026-09-07 10:06:53,118 [INFO] Total de ofertas únicas recopiladas: 323
+2026-09-07 10:06:53,118 [INFO] Descartadas por no ser de Argentina : 0
+2026-09-07 10:06:53,118 [INFO] Base de datos : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/freelancer_ar.db
+2026-09-07 10:06:53,118 [INFO] CSV exportado : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_freelancer_ar_20260907.csv
+2026-09-07 10:06:53,118 [INFO] Log guardado  : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/freelancer_ar_scraper_20260907_100446.log
+2026-09-07 10:06:53,118 [INFO] ============================================================
+2026-09-07 10:06:53,119 [INFO] Estadísticas guardadas: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/stats_freelancer_ar_20260907_100653.json
