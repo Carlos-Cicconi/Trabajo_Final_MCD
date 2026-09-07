@@ -25,6 +25,14 @@
 #      JobLeads tienen la forma /ar/job/{slug} que no matcheaba el regex anterior
 #      (requería 4+ dígitos o /empleo/). Se actualizó el regex para incluir /job/.
 #      Además se agregó extracción por <article> y <li> con clase job-item.
+#
+# ⚠️ DESACTIVADO (ver run_scraping.py, SCRAPERS_REGISTRO) (2026-09-07): se
+# confirmó que el endpoint SSR usado acá (/ar/jobs?q={keyword}&country=AR)
+# ignora el parámetro "q" — probado con keywords muy distintas
+# ("data-scientist" vs "gastronomia"): mismo listado genérico, mismo orden,
+# sin relación con ninguna de las dos búsquedas. El filtrado real ocurre
+# client-side contra un endpoint no identificado. No reactivar en el
+# orquestador hasta encontrar y adaptar el scraper a ese endpoint real.
 # =============================================================================
 
 import asyncio

@@ -94,11 +94,47 @@ SCRAPERS_REGISTRO = [
     ("getonboard_scraper",   "GetOnBoardScraper",   "getonboard",   "getonboard.db"),
     ("bumeran_scraper",      "BumeranScraper",      "bumeran",      "bumeran.db"),
     ("zonajobs_scraper",     "ZonaJobsScraper",     "zonajobs",     "zonajobs.db"),
-    ("workana_scraper",      "WorkanaScraper",      "workana",      "workana.db"),
+    # workana_scraper: DESACTIVADO — el parámetro "search" del listado
+    # (/jobs?category=it-programming&search={keyword}) se ignora
+    # server-side: probado con "python" vs "wordpress" (ambos dentro de la
+    # misma categoría IT que usa el scraper) y devolvió los mismos 7
+    # proyectos exactos, en el mismo orden, en ambos casos. El filtro de
+    # categoría sí funciona, pero el de keyword no. El filtrado real por
+    # keyword ocurre client-side contra un endpoint no identificado. No
+    # reactivar en el orquestador hasta encontrar y adaptar el scraper a
+    # ese endpoint real.
+    # ("workana_scraper",    "WorkanaScraper",      "workana",      "workana.db"),
     ("opcionempleo_scraper", "OpcionempleoScraper", "opcionempleo", "opcionempleo.db"),
-    ("jobomas_scraper",      "JobomasScraper",      "jobomas",      "jobomas.db"),
+    # jobomas_scraper: DESACTIVADO — el modo "slug" (/{keyword}) que intenta
+    # primero da 404 incluso con keywords conocidas ("python"), por lo que
+    # en la práctica siempre cae al modo fallback por query params
+    # (/?q={keyword}&l=argentina). Se probó ese fallback con dos keywords
+    # muy distintas ("data-scientist" vs "gastronomia") y la respuesta fue
+    # idéntica byte a byte (mismo tamaño, mismo listado genérico) — el
+    # parámetro "q" se ignora server-side. El filtrado real ocurre
+    # client-side contra un endpoint no identificado. No reactivar en el
+    # orquestador hasta encontrar y adaptar el scraper a ese endpoint real.
+    # ("jobomas_scraper",    "JobomasScraper",      "jobomas",      "jobomas.db"),
     ("jobrapido_scraper",    "JobrapidoScraper",    "jobrapido",    "jobrapido.db"),
-    ("jobleads_scraper",     "JobleadsScraper",     "jobleads",     "jobleads.db"),
+    # jobleads_scraper: DESACTIVADO — el endpoint SSR que usa
+    # (/ar/jobs?q={keyword}&country=AR) ignora el parámetro "q": se probó
+    # con keywords muy distintas ("data-scientist" vs "gastronomia") y
+    # devolvió el mismo listado genérico, en el mismo orden, sin relación
+    # con ninguna de las dos búsquedas. El filtrado real ocurre client-side
+    # contra un endpoint no identificado. Reactivar solo si se encuentra y
+    # adapta el scraper a ese endpoint real.
+    # ("jobleads_scraper",   "JobleadsScraper",     "jobleads",     "jobleads.db"),
+    # buscojobs_scraper: DESACTIVADO — el endpoint SSR que usa
+    # (/ofertas/rc744/trabajo-en-{keyword}) ignora el keyword tanto en el
+    # path como en el query param "?que=", y siempre devuelve el mismo
+    # listado genérico del sitio (confirmado con 2 keywords muy distintas:
+    # mismos IDs, mismo orden). El filtrado real ocurre client-side contra
+    # un endpoint no identificado. Reactivar solo si se encuentra y adapta
+    # el scraper a ese endpoint real.
+    # ("buscojobs_scraper",  "BuscojobsScraper",    "buscojobs",    "buscojobs.db"),
+    ("freelancer_ar_scraper","FreelancerArScraper", "freelancer_ar","freelancer_ar.db"),
+    ("randstad_scraper",     "RandstadScraper",     "randstad",     "randstad.db"),
+    ("adecco_scraper",       "AdeccoScraper",       "adecco",       "adecco.db"),
 ]
 
 

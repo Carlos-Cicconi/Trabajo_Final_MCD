@@ -49,6 +49,15 @@
 #
 #   El HTML de búsqueda NO tiene __NEXT_DATA__ (solo la home lo tiene).
 #   Playwright es necesario para ejecutar el JS que renderiza los cards.
+#
+# ⚠️ DESACTIVADO (ver run_scraping.py, SCRAPERS_REGISTRO) (2026-09-07): el
+# parámetro "search" de la URL de búsqueda se ignora server-side. Probado
+# con "python" vs "wordpress" (ambos dentro de la misma categoría
+# "it-programming" que usa el scraper): devolvió los mismos 7 proyectos
+# exactos, en el mismo orden, en ambos casos. El filtro de categoría sí
+# funciona, pero el de keyword no. El filtrado real por keyword ocurre
+# client-side contra un endpoint no identificado. No reactivar en el
+# orquestador hasta encontrar y adaptar el scraper a ese endpoint real.
 # =============================================================================
 
 import asyncio

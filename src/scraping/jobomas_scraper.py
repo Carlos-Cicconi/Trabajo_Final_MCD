@@ -24,6 +24,15 @@
 #   3. El diagnóstico dejaba self.base_search con "{{slug}}" hardcodeado
 #      en modo "params", que luego no se usaba. Se corrigió para que en modo
 #      "params" self.base_search apunte a BASE_URL + "/".
+#
+# ⚠️ DESACTIVADO (ver run_scraping.py, SCRAPERS_REGISTRO) (2026-09-07): el
+# modo "slug" (/{keyword}) da 404 incluso con keywords conocidas ("python"),
+# por lo que siempre cae al modo fallback "params" (/?q={keyword}&l=argentina).
+# Se probó ese fallback con keywords muy distintas ("data-scientist" vs
+# "gastronomia") y la respuesta fue idéntica byte a byte — el parámetro "q"
+# se ignora server-side. El filtrado real ocurre client-side contra un
+# endpoint no identificado. No reactivar en el orquestador hasta encontrar
+# y adaptar el scraper a ese endpoint real.
 # =============================================================================
 
 import requests, time, random, logging, sqlite3, csv, json, re

@@ -235,30 +235,32 @@ class BumeranScraper:
         Extrae cards de la página de resultados ya renderizada por Playwright.
 
         Lógica confirmada por diagnóstico:
-        1. Buscar divs con clase 'sc-cMfllC' (clase base de cada card)
-        2. Dentro de cada card, el <a> principal tiene:
+        1. Cada oferta tiene un <a> principal con:
              aria-labelledby="header-col-job-posting-{id} ..."
              href="/empleos/{slug}-{id}.html"
-        3. El id=header-col-job-posting-{id} contiene h2 (título) y h3 (empresa)
-        4. El id=data-col-job-posting-{id} contiene h3 para modalidad y ubicación
+        2. El id=header-col-job-posting-{id} contiene h2 (título) y h3 (empresa)
+        3. El id=data-col-job-posting-{id} contiene h3 para modalidad y ubicación
+
+        NOTA (2026-09-07): antes se agrupaba por un div contenedor con clase
+        CARD_CSS_CLASS ("sc-cMfllC"), un hash autogenerado por
+        styled-components que cambia con cada deploy del sitio y quedó
+        desactualizado (0 cards encontradas, aunque las ofertas seguían
+        presentes en el HTML). Se eliminó esa dependencia: ahora se itera
+        directamente sobre los links con aria-labelledby="job-posting-{id}"
+        y los bloques header-col/data-col se buscan por su id (único en la
+        página), sin necesitar el div contenedor.
         """
         soup    = BeautifulSoup(html, "lxml")
         ofertas = []
 
-        cards = soup.find_all("div", class_=lambda c:
-                              c and CARD_CSS_CLASS in (c if isinstance(c, str)
-                                                       else " ".join(c)))
-        logger.debug(f"   Cards encontrados: {len(cards)}")
+        links = soup.find_all("a", attrs={
+            "aria-labelledby": re.compile(r"job-posting-\d+")
+        })
+        logger.debug(f"   Links de oferta encontrados: {len(links)}")
 
-        for card in cards:
+        for link in links:
             try:
                 # --- job_id y URL ---
-                link = card.find("a", attrs={
-                    "aria-labelledby": re.compile(r"job-posting-\d+")
-                })
-                if not link:
-                    continue
-
                 lb = link.get("aria-labelledby", "")
                 m  = re.search(r"job-posting-(\d+)", lb)
                 if not m:
@@ -273,7 +275,7 @@ class BumeranScraper:
                 url  = BASE_URL + href if href.startswith("/") else href
 
                 # --- Header col: título, empresa, descripción snippet ---
-                header = card.find(id=f"header-col-job-posting-{job_id}")
+                header = soup.find(id=f"header-col-job-posting-{job_id}")
 
                 titulo  = "N/A"
                 empresa = "N/A"
@@ -302,7 +304,7 @@ class BumeranScraper:
                         snippet = limpiar_texto(p.get_text(strip=True))
 
                 # --- Data col: ubicación y modalidad ---
-                data_col = card.find(id=f"data-col-job-posting-{job_id}")
+                data_col = soup.find(id=f"data-col-job-posting-{job_id}")
                 ubicacion = "Argentina"
                 modalidad = None
 
