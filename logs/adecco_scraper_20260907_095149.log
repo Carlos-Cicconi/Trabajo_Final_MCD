@@ -1,0 +1,59 @@
+2026-09-07 09:51:49,156 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/adecco.db
+2026-09-07 09:51:49,156 [INFO] AdeccoScraper inicializado correctamente
+2026-09-07 09:51:49,156 [INFO] ============================================================
+2026-09-07 09:51:49,156 [INFO] INICIO DEL SCRAPING - Adecco Argentina
+2026-09-07 09:51:49,156 [INFO] Búsquedas: 10
+2026-09-07 09:51:49,157 [INFO] ============================================================
+2026-09-07 09:51:49,157 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-09-07 09:51:52,362 [INFO]    → 0 ofertas encontradas
+2026-09-07 09:51:52,362 [INFO] ✅ 'Data Scientist': 0 ofertas guardadas
+2026-09-07 09:51:52,362 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-09-07 09:51:55,409 [INFO]    → 1 ofertas encontradas
+2026-09-07 09:51:58,201 [INFO] Exportadas 1 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_adecco_20260907.csv
+2026-09-07 09:51:58,201 [INFO] ✅ 'Data Analyst': 1 ofertas guardadas
+2026-09-07 09:51:58,202 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer'
+2026-09-07 09:52:00,399 [INFO]    → 0 ofertas encontradas
+2026-09-07 09:52:00,399 [INFO] ✅ 'Machine Learning Engineer': 0 ofertas guardadas
+2026-09-07 09:52:00,399 [INFO] 
+🔍 Buscando: 'NLP Engineer'
+2026-09-07 09:52:03,315 [INFO]    → 0 ofertas encontradas
+2026-09-07 09:52:03,315 [INFO] ✅ 'NLP Engineer': 0 ofertas guardadas
+2026-09-07 09:52:03,316 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-09-07 09:52:05,646 [INFO]    → 2 ofertas encontradas
+2026-09-07 09:52:07,434 [INFO] Exportadas 1 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_adecco_20260907.csv
+2026-09-07 09:52:07,435 [INFO] ✅ 'Data Engineer': 1 ofertas guardadas
+2026-09-07 09:52:07,435 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-09-07 09:52:10,183 [INFO]    → 0 ofertas encontradas
+2026-09-07 09:52:10,184 [INFO] ✅ 'Software Engineer': 0 ofertas guardadas
+2026-09-07 09:52:10,184 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-09-07 09:52:13,249 [INFO]    → 1 ofertas encontradas
+2026-09-07 09:52:16,143 [INFO] Exportadas 1 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_adecco_20260907.csv
+2026-09-07 09:52:16,144 [INFO] ✅ 'Python Developer': 1 ofertas guardadas
+2026-09-07 09:52:16,144 [INFO] 
+🔍 Buscando: 'Desarrollador Backend'
+2026-09-07 09:52:18,673 [INFO]    → 1 ofertas encontradas
+2026-09-07 09:52:20,842 [INFO] Exportadas 1 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_adecco_20260907.csv
+2026-09-07 09:52:20,843 [INFO] ✅ 'Desarrollador Backend': 1 ofertas guardadas
+2026-09-07 09:52:20,843 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack'
+2026-09-07 09:52:23,290 [INFO]    → 0 ofertas encontradas
+2026-09-07 09:52:23,291 [INFO] ✅ 'Desarrollador Full Stack': 0 ofertas guardadas
+2026-09-07 09:52:23,291 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-09-07 09:52:26,661 [INFO]    → 0 ofertas encontradas
+2026-09-07 09:52:26,661 [INFO] ✅ 'Ingeniero de Datos': 0 ofertas guardadas
+2026-09-07 09:52:26,661 [INFO] 
+============================================================
+2026-09-07 09:52:26,661 [INFO] SCRAPING FINALIZADO - Adecco
+2026-09-07 09:52:26,662 [INFO] Total de ofertas únicas recopiladas: 4
+2026-09-07 09:52:26,662 [INFO] Base de datos : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/adecco.db
+2026-09-07 09:52:26,662 [INFO] CSV exportado : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_adecco_20260907.csv
+2026-09-07 09:52:26,662 [INFO] Log guardado  : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/adecco_scraper_20260907_095149.log
+2026-09-07 09:52:26,663 [INFO] ============================================================
+2026-09-07 09:52:26,665 [INFO] Estadísticas guardadas: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/stats_adecco_20260907_095226.json
