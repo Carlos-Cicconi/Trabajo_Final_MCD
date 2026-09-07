@@ -3,8 +3,8 @@
 Este documento sintetiza el "por qué" detrás de decisiones de diseño y arquitectura tomadas
 en 5 conversaciones previas con Claude AI (no Claude Code) durante el desarrollo de este
 proyecto de tesis. No repite código (eso está en el repo) — se enfoca en motivos, descartes
-y hallazgos que no son derivables leyendo el código actual. Fuente cruda: `conversations.json`
-en esta misma carpeta.
+y hallazgos que no son derivables leyendo el código actual. La fuente cruda (`conversations.json`,
+exportada desde Claude AI) ya no se conserva en el repo; este documento es la síntesis definitiva.
 
 ## 01 — Carga de plan de trabajo, scrapers, orquestador
 
