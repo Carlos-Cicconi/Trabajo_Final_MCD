@@ -91,7 +91,7 @@ DELAY_DETAIL_MAX = 5.5
 DELAY_QUERY_MIN  = 8.0
 DELAY_QUERY_MAX  = 14.0
 
-DB_FILENAME  = DATA_RAW_DIR / "opcionempleo.db"
+DB_FILENAME  = DATA_RAW_DIR / "db_opcionempleo.db"
 CSV_FILENAME = DATA_RAW_DIR / f"ofertas_opcionempleo_{datetime.now().strftime('%Y%m%d')}.csv"
 BASE_URL     = "https://www.opcionempleo.com.ar"
 

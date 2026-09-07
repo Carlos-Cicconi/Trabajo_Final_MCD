@@ -80,7 +80,7 @@ RESULTS_PER_PAGE = 30      # tamaño de página observado de la API
 DELAY_MIN        = 2.0     # Segundos mínimos entre requests (ético)
 DELAY_MAX        = 4.0     # Segundos máximos entre requests
 MAX_RETRIES      = 3       # Reintentos ante fallo de conexión
-DB_FILENAME      = DATA_RAW_DIR / "randstad.db"
+DB_FILENAME      = DATA_RAW_DIR / "db_randstad.db"
 CSV_FILENAME     = DATA_RAW_DIR / f"ofertas_randstad_{datetime.now().strftime('%Y%m%d')}.csv"
 
 # URL base y endpoint interno de búsqueda de Randstad Argentina

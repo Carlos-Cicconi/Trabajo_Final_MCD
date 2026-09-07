@@ -70,7 +70,7 @@ PAGES_PER_QUERY    = 5       # 25 ofertas por página → ~125 por búsqueda
 DELAY_MIN          = 2.5     # Segundos mínimos entre requests (ético)
 DELAY_MAX          = 5.0     # Segundos máximos entre requests
 MAX_RETRIES        = 3       # Reintentos ante fallo de conexión
-DB_FILENAME        = DATA_RAW_DIR / "linkedin.db"
+DB_FILENAME        = DATA_RAW_DIR / "db_linkedin.db"
 CSV_FILENAME       = DATA_RAW_DIR / f"ofertas_linkedin_{datetime.now().strftime('%Y%m%d')}.csv"
 
 

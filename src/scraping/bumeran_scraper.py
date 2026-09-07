@@ -99,7 +99,7 @@ DELAY_DETAIL_MAX = 4.5
 DELAY_QUERY_MIN  = 7.0
 DELAY_QUERY_MAX  = 13.0
 
-DB_FILENAME  = DATA_RAW_DIR / "bumeran.db"
+DB_FILENAME  = DATA_RAW_DIR / "db_bumeran.db"
 CSV_FILENAME = DATA_RAW_DIR / f"ofertas_bumeran_{datetime.now().strftime('%Y%m%d')}.csv"
 BASE_URL     = "https://www.bumeran.com.ar"
 

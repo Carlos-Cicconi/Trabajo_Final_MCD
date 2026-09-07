@@ -89,7 +89,7 @@ PER_PAGE        = 20      # ofertas por página (tamaño de página de la API)
 DELAY_MIN       = 2.0     # Segundos mínimos entre requests (ético)
 DELAY_MAX       = 4.0     # Segundos máximos entre requests
 MAX_RETRIES     = 3       # Reintentos ante fallo de conexión
-DB_FILENAME     = DATA_RAW_DIR / "freelancer_ar.db"
+DB_FILENAME     = DATA_RAW_DIR / "db_freelancer_ar.db"
 CSV_FILENAME    = DATA_RAW_DIR / f"ofertas_freelancer_ar_{datetime.now().strftime('%Y%m%d')}.csv"
 
 # URL base y endpoint REST de freelancer.ar

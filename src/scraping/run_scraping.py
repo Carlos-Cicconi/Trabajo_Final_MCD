@@ -89,11 +89,11 @@ COLUMNAS = [
 # Registro de todos los scrapers disponibles
 # Formato: (módulo, clase, nombre_fuente, db_filename)
 SCRAPERS_REGISTRO = [
-    ("linkedin_scraper",     "LinkedInScraper",     "linkedin",     "linkedin.db"),
-    ("computrabajo_scraper", "ComputrabajoScraper", "computrabajo", "computrabajo.db"),
-    ("getonboard_scraper",   "GetOnBoardScraper",   "getonboard",   "getonboard.db"),
-    ("bumeran_scraper",      "BumeranScraper",      "bumeran",      "bumeran.db"),
-    ("zonajobs_scraper",     "ZonaJobsScraper",     "zonajobs",     "zonajobs.db"),
+    ("linkedin_scraper",     "LinkedInScraper",     "linkedin",     "db_linkedin.db"),
+    ("computrabajo_scraper", "ComputrabajoScraper", "computrabajo", "db_computrabajo.db"),
+    ("getonboard_scraper",   "GetOnBoardScraper",   "getonboard",   "db_getonboard.db"),
+    ("bumeran_scraper",      "BumeranScraper",      "bumeran",      "db_bumeran.db"),
+    ("zonajobs_scraper",     "ZonaJobsScraper",     "zonajobs",     "db_zonajobs.db"),
     # workana_scraper: DESACTIVADO — el parámetro "search" del listado
     # (/jobs?category=it-programming&search={keyword}) se ignora
     # server-side: probado con "python" vs "wordpress" (ambos dentro de la
@@ -103,8 +103,8 @@ SCRAPERS_REGISTRO = [
     # keyword ocurre client-side contra un endpoint no identificado. No
     # reactivar en el orquestador hasta encontrar y adaptar el scraper a
     # ese endpoint real.
-    # ("workana_scraper",    "WorkanaScraper",      "workana",      "workana.db"),
-    ("opcionempleo_scraper", "OpcionempleoScraper", "opcionempleo", "opcionempleo.db"),
+    # ("workana_scraper",    "WorkanaScraper",      "workana",      "db_workana.db"),
+    ("opcionempleo_scraper", "OpcionempleoScraper", "opcionempleo", "db_opcionempleo.db"),
     # jobomas_scraper: DESACTIVADO — el modo "slug" (/{keyword}) que intenta
     # primero da 404 incluso con keywords conocidas ("python"), por lo que
     # en la práctica siempre cae al modo fallback por query params
@@ -114,8 +114,8 @@ SCRAPERS_REGISTRO = [
     # parámetro "q" se ignora server-side. El filtrado real ocurre
     # client-side contra un endpoint no identificado. No reactivar en el
     # orquestador hasta encontrar y adaptar el scraper a ese endpoint real.
-    # ("jobomas_scraper",    "JobomasScraper",      "jobomas",      "jobomas.db"),
-    ("jobrapido_scraper",    "JobrapidoScraper",    "jobrapido",    "jobrapido.db"),
+    # ("jobomas_scraper",    "JobomasScraper",      "jobomas",      "db_jobomas.db"),
+    ("jobrapido_scraper",    "JobrapidoScraper",    "jobrapido",    "db_jobrapido.db"),
     # jobleads_scraper: DESACTIVADO — el endpoint SSR que usa
     # (/ar/jobs?q={keyword}&country=AR) ignora el parámetro "q": se probó
     # con keywords muy distintas ("data-scientist" vs "gastronomia") y
@@ -123,7 +123,7 @@ SCRAPERS_REGISTRO = [
     # con ninguna de las dos búsquedas. El filtrado real ocurre client-side
     # contra un endpoint no identificado. Reactivar solo si se encuentra y
     # adapta el scraper a ese endpoint real.
-    # ("jobleads_scraper",   "JobleadsScraper",     "jobleads",     "jobleads.db"),
+    # ("jobleads_scraper",   "JobleadsScraper",     "jobleads",     "db_jobleads.db"),
     # buscojobs_scraper: DESACTIVADO — el endpoint SSR que usa
     # (/ofertas/rc744/trabajo-en-{keyword}) ignora el keyword tanto en el
     # path como en el query param "?que=", y siempre devuelve el mismo
@@ -131,10 +131,10 @@ SCRAPERS_REGISTRO = [
     # mismos IDs, mismo orden). El filtrado real ocurre client-side contra
     # un endpoint no identificado. Reactivar solo si se encuentra y adapta
     # el scraper a ese endpoint real.
-    # ("buscojobs_scraper",  "BuscojobsScraper",    "buscojobs",    "buscojobs.db"),
-    ("freelancer_ar_scraper","FreelancerArScraper", "freelancer_ar","freelancer_ar.db"),
-    ("randstad_scraper",     "RandstadScraper",     "randstad",     "randstad.db"),
-    ("adecco_scraper",       "AdeccoScraper",       "adecco",       "adecco.db"),
+    # ("buscojobs_scraper",  "BuscojobsScraper",    "buscojobs",    "db_buscojobs.db"),
+    ("freelancer_ar_scraper","FreelancerArScraper", "freelancer_ar","db_freelancer_ar.db"),
+    ("randstad_scraper",     "RandstadScraper",     "randstad",     "db_randstad.db"),
+    ("adecco_scraper",       "AdeccoScraper",       "adecco",       "db_adecco.db"),
 ]
 
 

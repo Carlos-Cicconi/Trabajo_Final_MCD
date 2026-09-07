@@ -75,7 +75,7 @@ PAGES_PER_QUERY = 5       # ~20 ofertas por página → ~100 por búsqueda
 DELAY_MIN       = 3.0     # Segundos mínimos entre requests (ético)
 DELAY_MAX       = 6.0     # Segundos máximos entre requests
 MAX_RETRIES     = 3       # Reintentos ante fallo de conexión
-DB_FILENAME     = DATA_RAW_DIR / "computrabajo.db"
+DB_FILENAME     = DATA_RAW_DIR / "db_computrabajo.db"
 CSV_FILENAME    = DATA_RAW_DIR / f"ofertas_computrabajo_{datetime.now().strftime('%Y%m%d')}.csv"
 
 # URL base de Computrabajo Argentina

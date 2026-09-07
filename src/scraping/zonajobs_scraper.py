@@ -88,7 +88,7 @@ DELAY_DETAIL_MAX = 4.5
 DELAY_QUERY_MIN  = 7.0
 DELAY_QUERY_MAX  = 13.0
 
-DB_FILENAME  = DATA_RAW_DIR / "zonajobs.db"
+DB_FILENAME  = DATA_RAW_DIR / "db_zonajobs.db"
 CSV_FILENAME = DATA_RAW_DIR / f"ofertas_zonajobs_{datetime.now().strftime('%Y%m%d')}.csv"
 
 # ─── ÚNICA DIFERENCIA CON BUMERAN ───────────────────────────────────────────

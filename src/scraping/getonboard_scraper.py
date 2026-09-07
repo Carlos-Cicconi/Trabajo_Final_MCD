@@ -82,7 +82,7 @@ DELAY_QUERY_MIN = 4.0
 DELAY_QUERY_MAX = 8.0
 MAX_RETRIES     = 3
 
-DB_FILENAME  = DATA_RAW_DIR / "getonboard.db"
+DB_FILENAME  = DATA_RAW_DIR / "db_getonboard.db"
 CSV_FILENAME = DATA_RAW_DIR / f"ofertas_getonboard_{datetime.now().strftime('%Y%m%d')}.csv"
 API_SEARCH   = "https://www.getonbrd.com/api/v0/search/jobs"
 WEB_BASE     = "https://www.getonbrd.com"

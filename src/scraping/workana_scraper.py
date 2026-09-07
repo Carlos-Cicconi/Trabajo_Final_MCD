@@ -131,7 +131,7 @@ DELAY_DETAIL_MAX = 4.0
 DELAY_QUERY_MIN  = 6.0
 DELAY_QUERY_MAX  = 11.0
 
-DB_FILENAME  = DATA_RAW_DIR / "workana.db"
+DB_FILENAME  = DATA_RAW_DIR / "db_workana.db"
 CSV_FILENAME = DATA_RAW_DIR / f"ofertas_workana_{datetime.now().strftime('%Y%m%d')}.csv"
 BASE_URL     = "https://www.workana.com"
 SEARCH_URL   = f"{BASE_URL}/jobs"

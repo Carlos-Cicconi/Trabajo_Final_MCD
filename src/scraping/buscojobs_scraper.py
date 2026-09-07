@@ -94,7 +94,7 @@ DELAY_MIN       = 3.0     # Segundos mínimos entre requests (ético)
 DELAY_MAX       = 6.0     # Segundos máximos entre requests
 MAX_RETRIES     = 3       # Reintentos ante fallo de conexión
 OFERTAS_POR_PAGINA = 15   # Tamaño de página fijo del sitio
-DB_FILENAME     = DATA_RAW_DIR / "buscojobs.db"
+DB_FILENAME     = DATA_RAW_DIR / "db_buscojobs.db"
 CSV_FILENAME    = DATA_RAW_DIR / f"ofertas_buscojobs_{datetime.now().strftime('%Y%m%d')}.csv"
 
 # URL base de Buscojobs Argentina
