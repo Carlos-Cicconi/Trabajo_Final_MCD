@@ -1,0 +1,48 @@
+{
+  "fuente": "freelancer_ar",
+  "fecha": "2026-09-10T05:16:07.168296",
+  "total_ofertas": 323,
+  "descartadas_no_ar": 0,
+  "detalle_por_keyword": [
+    {
+      "keyword": "Data Scientist",
+      "ofertas": 4
+    },
+    {
+      "keyword": "Data Analyst",
+      "ofertas": 26
+    },
+    {
+      "keyword": "Machine Learning Engineer",
+      "ofertas": 14
+    },
+    {
+      "keyword": "NLP Engineer",
+      "ofertas": 1
+    },
+    {
+      "keyword": "Data Engineer",
+      "ofertas": 22
+    },
+    {
+      "keyword": "Software Engineer",
+      "ofertas": 20
+    },
+    {
+      "keyword": "Python Developer",
+      "ofertas": 88
+    },
+    {
+      "keyword": "Desarrollador Backend",
+      "ofertas": 30
+    },
+    {
+      "keyword": "Desarrollador Full Stack",
+      "ofertas": 29
+    },
+    {
+      "keyword": "Ingeniero de Datos",
+      "ofertas": 89
+    }
+  ]
+}

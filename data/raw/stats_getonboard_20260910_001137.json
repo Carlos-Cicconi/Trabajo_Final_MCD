@@ -1,0 +1,47 @@
+{
+  "fuente": "getonboard",
+  "fecha": "2026-09-10T00:11:37.852918",
+  "total_ofertas": 432,
+  "detalle_por_keyword": [
+    {
+      "keyword": "Data Scientist",
+      "ofertas": 24
+    },
+    {
+      "keyword": "Data Analyst",
+      "ofertas": 87
+    },
+    {
+      "keyword": "Machine Learning",
+      "ofertas": 41
+    },
+    {
+      "keyword": "NLP",
+      "ofertas": 68
+    },
+    {
+      "keyword": "Data Engineer",
+      "ofertas": 37
+    },
+    {
+      "keyword": "Software Engineer",
+      "ofertas": 47
+    },
+    {
+      "keyword": "Python",
+      "ofertas": 27
+    },
+    {
+      "keyword": "Backend",
+      "ofertas": 40
+    },
+    {
+      "keyword": "Full Stack",
+      "ofertas": 34
+    },
+    {
+      "keyword": "Ingeniero de Datos",
+      "ofertas": 27
+    }
+  ]
+}

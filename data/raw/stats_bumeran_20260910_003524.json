@@ -1,0 +1,47 @@
+{
+  "fuente": "bumeran",
+  "fecha": "2026-09-10T00:35:24.874597",
+  "total_ofertas": 116,
+  "detalle_por_keyword": [
+    {
+      "keyword": "Data Scientist",
+      "ofertas": 0
+    },
+    {
+      "keyword": "Data Analyst",
+      "ofertas": 5
+    },
+    {
+      "keyword": "Machine Learning Engineer",
+      "ofertas": 1
+    },
+    {
+      "keyword": "NLP Engineer",
+      "ofertas": 0
+    },
+    {
+      "keyword": "Data Engineer",
+      "ofertas": 6
+    },
+    {
+      "keyword": "Software Engineer",
+      "ofertas": 100
+    },
+    {
+      "keyword": "Python Developer",
+      "ofertas": 3
+    },
+    {
+      "keyword": "Desarrollador Backend",
+      "ofertas": 0
+    },
+    {
+      "keyword": "Desarrollador Full Stack",
+      "ofertas": 1
+    },
+    {
+      "keyword": "Ingeniero de Datos",
+      "ofertas": 0
+    }
+  ]
+}

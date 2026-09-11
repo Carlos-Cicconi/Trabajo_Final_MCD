@@ -1,6 +1,6 @@
 # Reporte del Motor de Matching — T6
 
-**Fecha:** 2026-04-23 23:33  
+**Fecha:** 2026-09-10 23:06  
 **Configuración activa:** Híbrido 70/30  
 **Modelo de embeddings:** paraphrase-multilingual-MiniLM-L12-v2  
 **Corpus:** 1,279 ofertas  
