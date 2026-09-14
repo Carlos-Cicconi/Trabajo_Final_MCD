@@ -10,6 +10,7 @@
 #   consolida sus resultados en un único archivo CSV y SQLite, y garantiza:
 #     1. No incluir ofertas publicadas hace más de 90 días
 #     2. No duplicar ofertas ya presentes en el consolidado
+#     3. No incluir ofertas cuyo link ya no esté activo al momento de consolidar
 #
 # USO:
 #   python run_scraping.py                          # Todos, queries por defecto
@@ -18,6 +19,7 @@
 #   python run_scraping.py --skip workana           # Saltear uno o más
 #   python run_scraping.py --solo-consolidar        # Solo consolidar sin scrapear
 #   python run_scraping.py --max-dias 60            # Cambiar ventana temporal
+#   python run_scraping.py --no-check-links         # No verificar links (más rápido)
 #
 # INTEGRACIÓN CON cv_keyword_extractor.py:
 #   1. Generá el JSON:
@@ -43,6 +45,8 @@ import logging
 import argparse
 import importlib
 import traceback
+import requests
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
@@ -64,6 +68,40 @@ CONSOLIDADO_CSV = CONSOLIDADO_DIR / "ofertas_consolidadas.csv"
 CONSOLIDADO_DB  = CONSOLIDADO_DIR / "ofertas_consolidadas.db"
 
 MAX_DIAS_DEFAULT = 90   # Ventana temporal por defecto
+
+# --- Verificación de links activos ---
+LINK_CHECK_TIMEOUT = 15    # Segundos de timeout por request de verificación
+LINK_CHECK_WORKERS = 8     # Verificaciones en paralelo (hilos)
+LINK_CHECK_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/120.0 Safari/537.36"
+    ),
+    "Accept-Language": "es-AR,es;q=0.9,en;q=0.8",
+}
+
+# Frases típicas de "oferta ya no disponible" en portales de empleo AR/LatAm.
+# Se buscan en el HTML de la página cuando el status HTTP es 200 pero el
+# sitio igual informa (client-side o server-rendered) que el aviso venció.
+FRASES_OFERTA_INACTIVA = [
+    "oferta ya no está disponible",
+    "esta oferta no está disponible",
+    "esta oferta ya no está disponible",
+    "ya no se encuentra disponible",
+    "el aviso ya no está disponible",
+    "oferta no encontrada",
+    "aviso no encontrado",
+    "búsqueda ya no está disponible",
+    "esta búsqueda ha finalizado",
+    "ha finalizado el plazo",
+    "esta vacante ya no está disponible",
+    "vacante no disponible",
+    "job is no longer available",
+    "this job is no longer accepting applications",
+    "posting has expired",
+    "página no encontrada",
+    "page not found",
+]
 
 # Columnas canónicas del consolidado — superconjunto de todos los scrapers
 COLUMNAS = [
@@ -401,6 +439,81 @@ def es_vigente(fecha_str: str, fecha_scrap: str, max_dias: int) -> tuple[bool, s
 
 
 # =============================================================================
+# VERIFICACIÓN DE LINKS ACTIVOS
+# =============================================================================
+
+def verificar_link_activo(url: str, timeout: int = LINK_CHECK_TIMEOUT) -> bool:
+    """
+    Verifica si el link de una oferta sigue activo/accesible.
+
+    Es deliberadamente permisivo ante la ambigüedad (timeouts, errores de
+    conexión, bloqueos anti-bot con 403/429, errores 5xx transitorios):
+    en esos casos se asume que la oferta sigue activa, para no descartar
+    ofertas válidas por un falso positivo. Solo se descarta ante evidencia
+    clara: HTTP 404/410, o una frase típica de "oferta no disponible" en
+    el cuerpo de una respuesta 200.
+    """
+    if not url or not url.strip().lower().startswith("http"):
+        return True  # Sin URL verificable: no se puede evaluar, se conserva
+
+    try:
+        resp = requests.get(
+            url, headers=LINK_CHECK_HEADERS, timeout=timeout, allow_redirects=True
+        )
+    except requests.exceptions.RequestException as e:
+        logger.debug(f"    Link no verificable ({e.__class__.__name__}), se conserva: {url}")
+        return True
+
+    if resp.status_code in (404, 410):
+        return False
+
+    if resp.status_code >= 400:
+        # No se puede confirmar (bloqueo anti-bot, rate limit, error del
+        # servidor) — se conserva la oferta en vez de descartarla a ciegas.
+        logger.debug(f"    Link con HTTP {resp.status_code} (no concluyente), se conserva: {url}")
+        return True
+
+    cuerpo = resp.text.lower()
+    if any(frase in cuerpo for frase in FRASES_OFERTA_INACTIVA):
+        return False
+
+    return True
+
+
+def filtrar_links_activos(candidatas: list[dict], workers: int = LINK_CHECK_WORKERS) -> tuple[list[dict], int]:
+    """
+    Verifica en paralelo el link de cada oferta candidata.
+    Retorna (activas, cantidad_descartada_por_link).
+    """
+    if not candidatas:
+        return [], 0
+
+    activas = []
+    descartadas = 0
+
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futuros = {
+            executor.submit(verificar_link_activo, fila["url"]): fila
+            for fila in candidatas
+        }
+        for futuro in as_completed(futuros):
+            fila = futuros[futuro]
+            try:
+                activo = futuro.result()
+            except Exception as e:
+                logger.debug(f"    Error verificando link, se conserva: {fila.get('url')}: {e}")
+                activo = True
+
+            if activo:
+                activas.append(fila)
+            else:
+                descartadas += 1
+                logger.info(f"    🔗❌ Link inactivo, descartada: {fila.get('titulo', '')[:60]} → {fila.get('url')}")
+
+    return activas, descartadas
+
+
+# =============================================================================
 # CONSOLIDADO — SQLite maestro
 # =============================================================================
 
@@ -519,14 +632,16 @@ def leer_db_fuente(db_path: Path, fuente: str) -> list[dict]:
 # CONSOLIDAR — procesar y filtrar ofertas de todas las fuentes
 # =============================================================================
 
-def consolidar(max_dias: int) -> dict:
+def consolidar(max_dias: int, verificar_links: bool = True,
+                link_workers: int = LINK_CHECK_WORKERS) -> dict:
     """
     Proceso principal de consolidación:
     1. Lee todas las DBs individuales
-    2. Filtra por ventana temporal (max_dias)
-    3. Descarta duplicados respecto al consolidado existente
-    4. Inserta las nuevas en el consolidado (DB + CSV)
-    5. Retorna estadísticas de la ejecución
+    2. Descarta duplicados respecto al consolidado existente
+    3. Filtra por ventana temporal (max_dias)
+    4. Descarta ofertas cuyo link ya no está activo (salvo --no-check-links)
+    5. Inserta las nuevas en el consolidado (DB + CSV)
+    6. Retorna estadísticas de la ejecución
     """
     setup_consolidado_db()
     ids_existentes    = get_ids_existentes()
@@ -542,6 +657,8 @@ def consolidar(max_dias: int) -> dict:
         "nuevas_total":      0,
         "descartadas_fecha": 0,
         "descartadas_dup":   0,
+        "descartadas_link":  0,
+        "verificacion_links": verificar_links,
     }
 
     nuevas_global = []
@@ -556,8 +673,11 @@ def consolidar(max_dias: int) -> dict:
                 "leidas":             len(ofertas_fuente),
                 "descartadas_fecha":  0,
                 "descartadas_dup":    0,
+                "descartadas_link":   0,
                 "nuevas":             0,
             }
+
+            candidatas = []   # Pasaron dup + fecha, faltan pasar el check de link
 
             for oferta in ofertas_fuente:
                 job_id = str(oferta.get("job_id", "")).strip()
@@ -602,9 +722,18 @@ def consolidar(max_dias: int) -> dict:
                     "fecha_scrap":      fecha_scrap,
                     "fecha_consolidado": fecha_consolidado,
                 }
+                candidatas.append(fila)
 
+            # --- Filtro 3: link activo ---
+            if verificar_links and candidatas:
+                logger.info(f"    🔗 Verificando {len(candidatas):,} links...")
+                candidatas, descartadas_link = filtrar_links_activos(candidatas, workers=link_workers)
+                stats_fuente["descartadas_link"] += descartadas_link
+                stats_total["descartadas_link"]  += descartadas_link
+
+            for fila in candidatas:
                 insertar_en_consolidado(conn, fila)
-                ids_existentes.add(id_cons)   # Actualizar para evitar dups intra-ejecución
+                ids_existentes.add(fila["id_consolidado"])   # Evitar dups intra-ejecución
                 nuevas_global.append(fila)
                 stats_fuente["nuevas"]    += 1
                 stats_total["nuevas_total"] += 1
@@ -615,7 +744,8 @@ def consolidar(max_dias: int) -> dict:
                 f"  ✅ {fuente}: leídas={stats_fuente['leidas']:,} | "
                 f"nuevas={stats_fuente['nuevas']:,} | "
                 f"dup={stats_fuente['descartadas_dup']:,} | "
-                f"old={stats_fuente['descartadas_fecha']:,}"
+                f"old={stats_fuente['descartadas_fecha']:,} | "
+                f"link-inactivo={stats_fuente['descartadas_link']:,}"
             )
 
     # --- Actualizar CSV consolidado ---
@@ -748,6 +878,15 @@ Ejemplos:
         "--max-dias", type=int, default=MAX_DIAS_DEFAULT,
         help=f"Ventana temporal en días (default: {MAX_DIAS_DEFAULT})"
     )
+    parser.add_argument(
+        "--no-check-links", action="store_true",
+        help="No verificar si el link de cada oferta sigue activo al consolidar "
+             "(la verificación está activada por default; desactivarla acelera la corrida)"
+    )
+    parser.add_argument(
+        "--link-workers", type=int, default=LINK_CHECK_WORKERS,
+        help=f"Verificaciones de link en paralelo (default: {LINK_CHECK_WORKERS})"
+    )
     args = parser.parse_args()
 
     t_inicio_total = datetime.now()
@@ -767,6 +906,7 @@ Ejemplos:
     logger.info("=" * 65)
     logger.info(f"  Fecha/hora inicio : {t_inicio_total.strftime('%Y-%m-%d %H:%M:%S')}")
     logger.info(f"  Ventana temporal  : {args.max_dias} días")
+    logger.info(f"  Verificar links   : {'No' if args.no_check_links else f'Sí ({args.link_workers} hilos)'}")
     logger.info(f"  Scrapers activos  : {len(SCRAPERS_REGISTRO)}")
     logger.info(f"  Solo consolidar   : {args.solo_consolidar}")
     logger.info(f"  Origen de queries : {'CV → ' + args.cv if cv_queries else 'módulos (por defecto)'}")
@@ -804,7 +944,11 @@ Ejemplos:
     logger.info("  FASE 2: CONSOLIDACIÓN")
     logger.info("=" * 65)
 
-    stats, nuevas = consolidar(args.max_dias)
+    stats, nuevas = consolidar(
+        args.max_dias,
+        verificar_links=not args.no_check_links,
+        link_workers=args.link_workers,
+    )
 
     # -----------------------------------------------------------------------
     # REPORTE FINAL
@@ -824,6 +968,8 @@ Ejemplos:
     logger.info(f"  Ofertas nuevas incorporadas : {stats['nuevas_total']:,}")
     logger.info(f"  Descartadas (antigüedad)    : {stats['descartadas_fecha']:,}")
     logger.info(f"  Descartadas (duplicado)     : {stats['descartadas_dup']:,}")
+    logger.info(f"  Descartadas (link inactivo) : {stats['descartadas_link']:,}"
+                + ("" if stats["verificacion_links"] else " (verificación desactivada)"))
     logger.info(f"  Total acumulado en DB       : {total_en_db:,}")
     logger.info(f"  Ventana temporal aplicada   : últimos {args.max_dias} días (desde {stats['limite_temporal']})")
     logger.info(f"  Duración total              : {duracion_total // 60}m {duracion_total % 60}s")
@@ -846,18 +992,21 @@ Ejemplos:
     for fuente, s in stats["fuentes"].items():
         logger.info(f"    {fuente:15}: nuevas={s['nuevas']:,} | "
                     f"dup={s['descartadas_dup']:,} | "
-                    f"old={s['descartadas_fecha']:,}")
+                    f"old={s['descartadas_fecha']:,} | "
+                    f"link-inactivo={s['descartadas_link']:,}")
 
     # Guardar reporte JSON
     reporte = {
         "fecha_ejecucion":    stats["fecha_ejecucion"],
         "max_dias":           args.max_dias,
+        "verificacion_links": stats["verificacion_links"],
         "limite_temporal":    stats["limite_temporal"],
         "duracion_segundos":  duracion_total,
         "total_acumulado_db": total_en_db,
         "nuevas_incorporadas":stats["nuevas_total"],
         "descartadas_fecha":  stats["descartadas_fecha"],
         "descartadas_dup":    stats["descartadas_dup"],
+        "descartadas_link":   stats["descartadas_link"],
         "scrapers_ejecutados":resultados_scrapers,
         "consolidacion_fuentes": stats["fuentes"],
     }
