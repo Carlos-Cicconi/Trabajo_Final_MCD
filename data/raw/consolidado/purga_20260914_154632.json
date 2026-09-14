@@ -1,0 +1,11 @@
+{
+  "fecha_ejecucion": "2026-09-14T15:40:29.821432",
+  "max_dias": 90,
+  "verificacion_links": true,
+  "total_previo": 2621,
+  "eliminadas_fecha": 3,
+  "eliminadas_link": 11,
+  "eliminadas_total": 14,
+  "conservadas": 2607,
+  "duracion_segundos": 362
+}

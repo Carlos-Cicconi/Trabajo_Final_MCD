@@ -1,0 +1,43 @@
+2026-09-14 15:40:29,819 [INFO] 
+=================================================================
+2026-09-14 15:40:29,820 [INFO]   ORQUESTADOR DE SCRAPING — Tesis MCD
+2026-09-14 15:40:29,820 [INFO]   Alumno: Cicconi, Carlos Alberto
+2026-09-14 15:40:29,820 [INFO]   Universidad Austral — Maestría en Explotación de Datos
+2026-09-14 15:40:29,820 [INFO] =================================================================
+2026-09-14 15:40:29,820 [INFO]   Fecha/hora inicio : 2026-09-14 15:40:29
+2026-09-14 15:40:29,820 [INFO]   Ventana temporal  : 90 días
+2026-09-14 15:40:29,820 [INFO]   Verificar links   : Sí (8 hilos)
+2026-09-14 15:40:29,821 [INFO]   Scrapers activos  : 10
+2026-09-14 15:40:29,821 [INFO]   Solo consolidar   : False
+2026-09-14 15:40:29,821 [INFO]   Origen de queries : módulos (por defecto)
+2026-09-14 15:40:29,821 [INFO] 
+=================================================================
+2026-09-14 15:40:29,821 [INFO]   MODO PURGA — revalidando el consolidado existente
+2026-09-14 15:40:29,821 [INFO] =================================================================
+2026-09-14 15:40:29,857 [INFO]   Revisando 2,621 ofertas ya consolidadas...
+2026-09-14 15:40:29,863 [INFO]   🔗 Verificando 2,618 links...
+2026-09-14 15:45:54,800 [INFO]     🔗❌ Link inactivo, descartada: Business Data Scientist - Marketing (Rosario) → https://ar.jobrapido.com/jobpreview/9038955656664580096?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52525647%252Fbusiness-data-scientist-marketing-rosario&w=Python&p=4
+2026-09-14 15:45:56,562 [INFO]     🔗❌ Link inactivo, descartada: Principal Nlp Scientist (Chubut) → https://ar.jobrapido.com/jobpreview/3698465640030404608?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52643527%252Fprincipal-nlp-scientist-chubut&w=Python&p=4
+2026-09-14 15:45:56,812 [INFO]     🔗❌ Link inactivo, descartada: Senior Nlp Scientist: Production-Ready Llms & Ai (Buenos Air → https://ar.jobrapido.com/jobpreview/1642190742161981440?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52642384%252Fsenior-nlp-scientist-production-ready-llms-ai-buenos-aires&w=Python&p=4
+2026-09-14 15:45:56,977 [INFO]     🔗❌ Link inactivo, descartada: Senior NLP Scientist: Production-Ready LLMs (Buenos Aires) → https://ar.jobrapido.com/jobpreview/2137288733521608704?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52614416%252Fsenior-nlp-scientist-production-ready-llms-buenos-aires&w=Python&p=4
+2026-09-14 15:46:19,644 [INFO]     🔗❌ Link inactivo, descartada: Desarrollador Full Stack .Net Semi Senior (100% Remote) (Ros → https://ar.jobrapido.com/jobpreview/8660515161817219072?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52607699%252Fdesarrollador-full-stack-net-semi-senior-100-remote-rosario&w=Python&p=2
+2026-09-14 15:46:20,669 [INFO]     🔗❌ Link inactivo, descartada: Desarrollador/A Full Stack Php (Rosario) → https://ar.jobrapido.com/jobpreview/7516925349834260480?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52580871%252Fdesarrollador-a-full-stack-php-rosario&w=Python&p=2
+2026-09-14 15:46:21,378 [INFO]     🔗❌ Link inactivo, descartada: Backend/Full-stack Developer (Rosario) → https://ar.jobrapido.com/jobpreview/6698011838245765120?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52561530%252Fbackend-full-stack-developer-rosario&w=Python&p=4
+2026-09-14 15:46:22,854 [INFO]     🔗❌ Link inactivo, descartada: Desarrollador SSR Full Stack (Buenos Aires) → https://ar.jobrapido.com/jobpreview/5653279529033007104?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52565390%252Fdesarrollador-ssr-full-stack-buenos-aires&w=Python&p=5
+2026-09-14 15:46:23,674 [INFO]     🔗❌ Link inactivo, descartada: Desarrollador/a Full Stack | IA & Data (Buenos Aires) → https://ar.jobrapido.com/jobpreview/2151388458319347712?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52762028%252Fdesarrollador-a-full-stack-ia-data-buenos-aires&w=Python&p=5
+2026-09-14 15:46:25,035 [INFO]     🔗❌ Link inactivo, descartada: Desarrollador Full Stack | Ai & Automation (Avellaneda) → https://ar.jobrapido.com/jobpreview/9043995886685782016?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52612107%252Fdesarrollador-full-stack-ai-automation-avellaneda&w=Python&p=5
+2026-09-14 15:46:25,744 [INFO]     🔗❌ Link inactivo, descartada: Desarrollador Full Stack Ai & Automation Avellaneda (Argenti → https://ar.jobrapido.com/jobpreview/5541165626883571712?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52625305%252Fdesarrollador-full-stack-ai-automation-avellaneda-argentina&w=Python&p=5
+2026-09-14 15:46:32,711 [INFO]   CSV consolidado reescrito: 2,607 filas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.csv
+2026-09-14 15:46:32,711 [INFO]   🗑️  Purgadas 14 ofertas (antigüedad=3 | link-inactivo=11)
+2026-09-14 15:46:32,711 [INFO]   Consolidado actualizado: 2,607 ofertas vigentes
+2026-09-14 15:46:32,715 [INFO] 
+=================================================================
+2026-09-14 15:46:32,715 [INFO]   RESUMEN DE LA PURGA
+2026-09-14 15:46:32,715 [INFO] =================================================================
+2026-09-14 15:46:32,715 [INFO]   Ofertas revisadas           : 2,621
+2026-09-14 15:46:32,715 [INFO]   Eliminadas (antigüedad)     : 3
+2026-09-14 15:46:32,715 [INFO]   Eliminadas (link inactivo)  : 11
+2026-09-14 15:46:32,715 [INFO]   Total eliminadas            : 14
+2026-09-14 15:46:32,715 [INFO]   Ofertas conservadas         : 2,607
+2026-09-14 15:46:32,715 [INFO]   Duración total              : 6m 2s
+2026-09-14 15:46:32,715 [INFO]   Reporte: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/purga_20260914_154632.json

@@ -20,6 +20,7 @@
 #   python run_scraping.py --solo-consolidar        # Solo consolidar sin scrapear
 #   python run_scraping.py --max-dias 60            # Cambiar ventana temporal
 #   python run_scraping.py --no-check-links         # No verificar links (más rápido)
+#   python run_scraping.py --purgar-consolidado     # Revalida y limpia TODO lo ya consolidado
 #
 # INTEGRACIÓN CON cv_keyword_extractor.py:
 #   1. Generá el JSON:
@@ -773,6 +774,119 @@ def _actualizar_csv(nuevas: list[dict]):
     logger.info(f"  CSV consolidado actualizado: +{len(nuevas):,} filas → {CONSOLIDADO_CSV}")
 
 
+def _reescribir_csv_completo(filas: list[dict]):
+    """
+    Reescribe el CSV consolidado completo desde cero (a diferencia de
+    _actualizar_csv, que solo agrega). Se usa después de purgar_consolidado(),
+    que borra filas de la DB y por lo tanto no puede limitarse a "appendear".
+    """
+    with open(CONSOLIDADO_CSV, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=COLUMNAS, extrasaction="ignore")
+        writer.writeheader()
+        for fila in filas:
+            writer.writerow(fila)
+    logger.info(f"  CSV consolidado reescrito: {len(filas):,} filas → {CONSOLIDADO_CSV}")
+
+
+# =============================================================================
+# PURGAR CONSOLIDADO — revalidar y limpiar lo ya consolidado
+# =============================================================================
+
+def purgar_consolidado(max_dias: int, verificar_links: bool = True,
+                        link_workers: int = LINK_CHECK_WORKERS) -> dict:
+    """
+    A diferencia de consolidar() —que solo filtra ofertas NUEVAS antes de
+    insertarlas— esta función revalida TODO lo que ya está en el consolidado
+    maestro y elimina lo que ya no corresponde:
+      1. Ofertas cuya fecha_pub_dt quedó fuera de la ventana de max_dias.
+      2. Ofertas cuyo link ya no está activo (salvo verificar_links=False).
+    Reescribe tanto ofertas_consolidadas.db como el CSV.
+    """
+    stats = {
+        "fecha_ejecucion":    datetime.now().isoformat(),
+        "max_dias":           max_dias,
+        "verificacion_links": verificar_links,
+        "total_previo":       0,
+        "eliminadas_fecha":   0,
+        "eliminadas_link":    0,
+        "eliminadas_total":   0,
+        "conservadas":        0,
+    }
+
+    if not CONSOLIDADO_DB.exists():
+        logger.warning("  No existe el consolidado todavía — nada que purgar.")
+        return stats
+
+    with sqlite3.connect(CONSOLIDADO_DB) as conn:
+        conn.row_factory = sqlite3.Row
+        filas = [dict(r) for r in conn.execute("SELECT * FROM ofertas").fetchall()]
+
+    stats["total_previo"] = len(filas)
+    logger.info(f"  Revisando {len(filas):,} ofertas ya consolidadas...")
+
+    limite_temporal = datetime.now() - timedelta(days=max_dias)
+    ids_eliminar    = []
+    candidatas      = []
+
+    # --- Filtro 1: antigüedad ---
+    for fila in filas:
+        fecha_pub_dt = str(fila.get("fecha_pub_dt") or "")
+        dt = None
+        if fecha_pub_dt and fecha_pub_dt != "sin-fecha":
+            try:
+                dt = datetime.strptime(fecha_pub_dt, "%Y-%m-%d")
+            except ValueError:
+                dt = None
+
+        if dt is not None and dt < limite_temporal:
+            ids_eliminar.append(fila["id_consolidado"])
+            stats["eliminadas_fecha"] += 1
+            continue
+
+        candidatas.append(fila)
+
+    # --- Filtro 2: link activo ---
+    if verificar_links and candidatas:
+        logger.info(f"  🔗 Verificando {len(candidatas):,} links...")
+        activas, descartadas_link = filtrar_links_activos(candidatas, workers=link_workers)
+        ids_activas = {f["id_consolidado"] for f in activas}
+        for fila in candidatas:
+            if fila["id_consolidado"] not in ids_activas:
+                ids_eliminar.append(fila["id_consolidado"])
+        stats["eliminadas_link"] = descartadas_link
+        candidatas = activas
+
+    stats["conservadas"]      = len(candidatas)
+    stats["eliminadas_total"] = len(ids_eliminar)
+
+    if not ids_eliminar:
+        logger.info("  ✅ Nada para purgar — el consolidado ya está al día.")
+        return stats
+
+    # --- Borrar de la DB (en lotes, para no exceder el límite de parámetros de SQLite) ---
+    LOTE = 500
+    with sqlite3.connect(CONSOLIDADO_DB) as conn:
+        for i in range(0, len(ids_eliminar), LOTE):
+            lote = ids_eliminar[i:i + LOTE]
+            placeholders = ",".join("?" for _ in lote)
+            conn.execute(f"DELETE FROM ofertas WHERE id_consolidado IN ({placeholders})", lote)
+        conn.commit()
+
+    # --- Reescribir el CSV consolidado completo desde la DB ya purgada ---
+    with sqlite3.connect(CONSOLIDADO_DB) as conn:
+        conn.row_factory = sqlite3.Row
+        filas_finales = [dict(r) for r in conn.execute("SELECT * FROM ofertas").fetchall()]
+    _reescribir_csv_completo(filas_finales)
+
+    logger.info(
+        f"  🗑️  Purgadas {stats['eliminadas_total']:,} ofertas "
+        f"(antigüedad={stats['eliminadas_fecha']:,} | link-inactivo={stats['eliminadas_link']:,})"
+    )
+    logger.info(f"  Consolidado actualizado: {stats['conservadas']:,} ofertas vigentes")
+
+    return stats
+
+
 # =============================================================================
 # EJECUTAR SCRAPERS
 # =============================================================================
@@ -875,6 +989,12 @@ Ejemplos:
         help="Solo consolidar sin ejecutar scrapers"
     )
     parser.add_argument(
+        "--purgar-consolidado", action="store_true",
+        help="No scrapear ni consolidar ofertas nuevas: revalida TODO el "
+             "consolidado ya existente (antigüedad + link activo, salvo "
+             "--no-check-links) y elimina lo que ya no corresponde"
+    )
+    parser.add_argument(
         "--max-dias", type=int, default=MAX_DIAS_DEFAULT,
         help=f"Ventana temporal en días (default: {MAX_DIAS_DEFAULT})"
     )
@@ -914,6 +1034,39 @@ Ejemplos:
         logger.info(f"  Filtro --solo     : {args.solo}")
     if args.skip:
         logger.info(f"  Filtro --skip     : {args.skip}")
+
+    # -----------------------------------------------------------------------
+    # MODO PURGA: revalida el consolidado existente y sale (no scrapea)
+    # -----------------------------------------------------------------------
+    if args.purgar_consolidado:
+        logger.info("\n" + "=" * 65)
+        logger.info("  MODO PURGA — revalidando el consolidado existente")
+        logger.info("=" * 65)
+
+        stats_purga = purgar_consolidado(
+            args.max_dias,
+            verificar_links=not args.no_check_links,
+            link_workers=args.link_workers,
+        )
+
+        duracion_total = (datetime.now() - t_inicio_total).seconds
+        logger.info("\n" + "=" * 65)
+        logger.info("  RESUMEN DE LA PURGA")
+        logger.info("=" * 65)
+        logger.info(f"  Ofertas revisadas           : {stats_purga['total_previo']:,}")
+        logger.info(f"  Eliminadas (antigüedad)     : {stats_purga['eliminadas_fecha']:,}")
+        logger.info(f"  Eliminadas (link inactivo)  : {stats_purga['eliminadas_link']:,}"
+                    + ("" if stats_purga["verificacion_links"] else " (verificación desactivada)"))
+        logger.info(f"  Total eliminadas            : {stats_purga['eliminadas_total']:,}")
+        logger.info(f"  Ofertas conservadas         : {stats_purga['conservadas']:,}")
+        logger.info(f"  Duración total              : {duracion_total // 60}m {duracion_total % 60}s")
+
+        reporte_path = CONSOLIDADO_DIR / f"purga_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        with open(reporte_path, "w", encoding="utf-8") as f:
+            json.dump({**stats_purga, "duracion_segundos": duracion_total}, f, ensure_ascii=False, indent=2)
+        logger.info(f"  Reporte: {reporte_path}")
+
+        return 0
 
     resultados_scrapers = []
 
