@@ -22,7 +22,9 @@ No hay comandos de lint/test/build configurados — este es un pipeline de inves
 
 ### 1. Scraping (`src/scraping/`, tarea T2)
 
-Un módulo scraper por portal de empleo (`bumeran_scraper.py`, `computrabajo_scraper.py`, `getonboard_scraper.py`, `jobleads_scraper.py`, `jobomas_scraper.py`, `jobrapido_scraper.py`, `linkedin_scraper.py`, `opcionempleo_scraper.py`, `workana_scraper.py`, `zonajobs_scraper.py`). Cada uno es ejecutable de forma independiente (`if __name__ == "__main__"`) y registra su propio log en `logs/<scraper>_<timestamp>.log`.
+Un módulo scraper por portal de empleo (`adecco_scraper.py`, `bumeran_scraper.py`, `computrabajo_scraper.py`, `freelancer_ar_scraper.py`, `getonboard_scraper.py`, `jobleads_scraper.py`, `jobomas_scraper.py`, `jobrapido_scraper.py`, `linkedin_scraper.py`, `opcionempleo_scraper.py`, `randstad_scraper.py`, `workana_scraper.py`, `zonajobs_scraper.py`). Cada uno es ejecutable de forma independiente (`if __name__ == "__main__"`) y registra su propio log en `logs/<scraper>_<timestamp>.log`.
+
+`buscojobs_scraper.py`, `jobleads_scraper.py`, `jobomas_scraper.py` y `workana_scraper.py` existen pero están **desactivados** (comentados) en `SCRAPERS_REGISTRO` de `run_scraping.py`: en los cuatro casos se confirmó que el endpoint SSR/listado usado ignora el keyword de búsqueda y siempre devuelve el mismo listado genérico del sitio (probado con keywords muy distintas → mismos IDs, mismo orden) — el filtrado real ocurre client-side contra un endpoint no identificado sin inspección de tráfico de red en un navegador con JS. No reactivar sin encontrar y adaptar el scraper a ese endpoint real (ver el comentario de cada uno en `SCRAPERS_REGISTRO` para el detalle).
 
 `run_scraping.py` es el orquestador que corre todos (o un subconjunto) de los scrapers en secuencia y consolida su salida:
 
@@ -33,11 +35,13 @@ python src/scraping/run_scraping.py --solo linkedin         # corre un solo scra
 python src/scraping/run_scraping.py --skip workana          # omite uno o más scrapers
 python src/scraping/run_scraping.py --solo-consolidar       # re-consolida sin scrapear
 python src/scraping/run_scraping.py --max-dias 60           # cambia la ventana de "antigüedad máxima" (90 días por defecto)
+python src/scraping/run_scraping.py --no-check-links        # omite la verificación de links activos (corre más rápido)
+python src/scraping/run_scraping.py --link-workers 16        # cambia el paralelismo de la verificación de links (8 por defecto)
 ```
 
 Cada scraper por fuente escribe su salida cruda directamente en `data/raw/` siguiendo una convención de nombres fija: `ofertas_<sitio>_<fecha>.csv` (snapshot diario), `<sitio>.db` (SQLite acumulativo, leído por el orquestador para consolidar), y `stats_<sitio>_<fecha_hora>.json` (estadísticas por corrida). `SCRAPERS_REGISTRO` de `run_scraping.py` mapea cada módulo scraper a su archivo `<sitio>.db`.
 
-Reglas de consolidación aplicadas por el orquestador: las ofertas más antiguas que `--max-dias` se descartan, y los duplicados (por `id_consolidado` = hash de fuente + job_id) nunca se vuelven a insertar. Las salidas son acumulativas, no se sobrescriben:
+Reglas de consolidación aplicadas por el orquestador: las ofertas más antiguas que `--max-dias` se descartan, los duplicados (por `id_consolidado` = hash de fuente + job_id) nunca se vuelven a insertar, y las ofertas cuyo link ya no está activo (HTTP 404/410, o frases como "oferta no disponible"/"job is no longer available" en el cuerpo) se descartan salvo `--no-check-links`. La verificación de links se hace en paralelo (`--link-workers`, default 8) y es permisiva ante ambigüedad (timeouts, bloqueos anti-bot 403/429, errores 5xx) para no perder ofertas válidas por falsos positivos — la lógica vive en `verificar_link_activo()`/`filtrar_links_activos()` en `run_scraping.py`. Las salidas son acumulativas, no se sobrescriben:
 - `data/raw/consolidado/ofertas_consolidadas.csv` / `.db` (SQLite) — dataset consolidado maestro, columnas canónicas definidas en `COLUMNAS` en `run_scraping.py`.
 - `data/raw/consolidado/run_<timestamp>.json` — reporte por corrida.
 - `data/raw/diagnostico/` — snapshots de HTML crudo por fuente/query, conservados para depurar roturas de scrapers.
