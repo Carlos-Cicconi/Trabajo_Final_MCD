@@ -350,11 +350,12 @@ class BuscojobsScraper:
 
         descripcion_completa = detalle.get("Descripcion") or detalle.get("DescripcionMarkdown")
         if descripcion_completa:
-            oferta.descripcion = descripcion_completa.strip()
+            oferta.descripcion = " ".join(descripcion_completa.split())
 
         requisitos = detalle.get("Requisitos") or detalle.get("RequisitosMinimos")
         if requisitos:
-            oferta.descripcion = f"{oferta.descripcion}\n\nRequisitos:\n{requisitos.strip()}"
+            requisitos_limpio = " ".join(requisitos.split())
+            oferta.descripcion = f"{oferta.descripcion} | Requisitos: {requisitos_limpio}"
 
         nivel = detalle.get("NivelJerarquico") or {}
         if nivel.get("Nombre"):
