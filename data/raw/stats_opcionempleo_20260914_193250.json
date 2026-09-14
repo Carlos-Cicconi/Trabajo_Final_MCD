@@ -1,0 +1,48 @@
+{
+  "fuente": "opcionempleo",
+  "estrategia": "playwright + turnstile",
+  "fecha": "2026-09-14T19:32:50.981674",
+  "total_ofertas": 635,
+  "detalle_por_keyword": [
+    {
+      "keyword": "Data Scientist",
+      "ofertas": 100
+    },
+    {
+      "keyword": "Data Analyst",
+      "ofertas": 98
+    },
+    {
+      "keyword": "Machine Learning Engineer",
+      "ofertas": 87
+    },
+    {
+      "keyword": "NLP Engineer",
+      "ofertas": 89
+    },
+    {
+      "keyword": "Data Engineer",
+      "ofertas": 97
+    },
+    {
+      "keyword": "Software Engineer",
+      "ofertas": 94
+    },
+    {
+      "keyword": "Python Developer",
+      "ofertas": 70
+    },
+    {
+      "keyword": "Desarrollador Backend",
+      "ofertas": 0
+    },
+    {
+      "keyword": "Desarrollador Full Stack",
+      "ofertas": 0
+    },
+    {
+      "keyword": "Ingeniero de Datos",
+      "ofertas": 0
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+2026-09-14 20:16:19,501 [INFO] 
+=================================================================
+2026-09-14 20:16:19,501 [INFO]   ORQUESTADOR DE SCRAPING — Tesis MCD
+2026-09-14 20:16:19,501 [INFO]   Alumno: Cicconi, Carlos Alberto
+2026-09-14 20:16:19,501 [INFO]   Universidad Austral — Maestría en Explotación de Datos
+2026-09-14 20:16:19,501 [INFO] =================================================================
+2026-09-14 20:16:19,501 [INFO]   Fecha/hora inicio : 2026-09-14 20:16:19
+2026-09-14 20:16:19,501 [INFO]   Ventana temporal  : 90 días
+2026-09-14 20:16:19,502 [INFO]   Verificar links   : Sí (8 hilos)
+2026-09-14 20:16:19,502 [INFO]   Scrapers activos  : 10
+2026-09-14 20:16:19,502 [INFO]   Solo consolidar   : True
+2026-09-14 20:16:19,502 [INFO]   Origen de queries : módulos (por defecto)
+2026-09-14 20:16:19,502 [INFO] 
+=================================================================
+2026-09-14 20:16:19,502 [INFO]   FASE 2: CONSOLIDACIÓN
+2026-09-14 20:16:19,502 [INFO] =================================================================
+2026-09-14 20:16:19,503 [INFO] Consolidado DB lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.db
+2026-09-14 20:16:19,507 [INFO] 
+  📂 Procesando: linkedin (db_linkedin.db)
+2026-09-14 20:16:19,519 [INFO]   Leídas 557 ofertas de db_linkedin.db
+2026-09-14 20:16:19,524 [INFO]     🔗 Verificando 140 links...
+2026-09-14 20:16:29,874 [INFO]   ✅ linkedin: leídas=557 | nuevas=140 | dup=370 | old=47 | link-inactivo=0
+2026-09-14 20:16:29,874 [INFO] 
+  📂 Procesando: computrabajo (db_computrabajo.db)
+2026-09-14 20:16:29,879 [INFO]   Leídas 124 ofertas de db_computrabajo.db
+2026-09-14 20:16:29,881 [INFO]     🔗 Verificando 66 links...
+2026-09-14 20:16:43,280 [INFO]   ✅ computrabajo: leídas=124 | nuevas=66 | dup=58 | old=0 | link-inactivo=0
+2026-09-14 20:16:43,281 [INFO] 
+  📂 Procesando: getonboard (db_getonboard.db)
+2026-09-14 20:16:43,301 [INFO]   Leídas 473 ofertas de db_getonboard.db
+2026-09-14 20:16:43,305 [INFO]     🔗 Verificando 40 links...
+2026-09-14 20:16:53,162 [INFO]   ✅ getonboard: leídas=473 | nuevas=40 | dup=382 | old=51 | link-inactivo=0
+2026-09-14 20:16:53,163 [INFO] 
+  📂 Procesando: bumeran (db_bumeran.db)
+2026-09-14 20:16:53,164 [INFO]   Leídas 125 ofertas de db_bumeran.db
+2026-09-14 20:16:53,165 [INFO]     🔗 Verificando 9 links...
+2026-09-14 20:16:54,598 [INFO]   ✅ bumeran: leídas=125 | nuevas=9 | dup=116 | old=0 | link-inactivo=0
+2026-09-14 20:16:54,599 [INFO] 
+  📂 Procesando: zonajobs (db_zonajobs.db)
+2026-09-14 20:16:54,604 [INFO]   Leídas 123 ofertas de db_zonajobs.db
+2026-09-14 20:16:54,610 [INFO]     🔗 Verificando 9 links...
+2026-09-14 20:16:56,003 [INFO]   ✅ zonajobs: leídas=123 | nuevas=9 | dup=114 | old=0 | link-inactivo=0
+2026-09-14 20:16:56,004 [INFO] 
+  📂 Procesando: opcionempleo (db_opcionempleo.db)
+2026-09-14 20:16:56,056 [INFO]   Leídas 1,518 ofertas de db_opcionempleo.db
+2026-09-14 20:16:56,059 [INFO]     🔗 Verificando 626 links...
+2026-09-14 20:17:58,343 [INFO]   ✅ opcionempleo: leídas=1,518 | nuevas=626 | dup=892 | old=0 | link-inactivo=0
+2026-09-14 20:17:58,343 [INFO] 
+  📂 Procesando: jobrapido (db_jobrapido.db)
+2026-09-14 20:17:58,365 [INFO]   Leídas 956 ofertas de db_jobrapido.db
+2026-09-14 20:17:58,368 [INFO]     🔗 Verificando 288 links...
+2026-09-14 20:17:58,885 [INFO]     🔗❌ Link inactivo, descartada: Desarrollador Full Stack .Net Semi Senior (100% Remote) (Ros → https://ar.jobrapido.com/jobpreview/8660515161817219072?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52607699%252Fdesarrollador-full-stack-net-semi-senior-100-remote-rosario&w=Python&p=2
+2026-09-14 20:17:58,891 [INFO]     🔗❌ Link inactivo, descartada: Backend/Full-stack Developer (Rosario) → https://ar.jobrapido.com/jobpreview/6698011838245765120?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52561530%252Fbackend-full-stack-developer-rosario&w=Python&p=4
+2026-09-14 20:17:58,895 [INFO]     🔗❌ Link inactivo, descartada: Senior NLP Scientist: Production-Ready LLMs (Buenos Aires) → https://ar.jobrapido.com/jobpreview/2137288733521608704?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52614416%252Fsenior-nlp-scientist-production-ready-llms-buenos-aires&w=Python&p=4
+2026-09-14 20:17:58,903 [INFO]     🔗❌ Link inactivo, descartada: Senior Nlp Scientist: Production-Ready Llms & Ai (Buenos Air → https://ar.jobrapido.com/jobpreview/1642190742161981440?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52642384%252Fsenior-nlp-scientist-production-ready-llms-ai-buenos-aires&w=Python&p=4
+2026-09-14 20:17:59,288 [INFO]     🔗❌ Link inactivo, descartada: Desarrollador Full Stack Ai & Automation Avellaneda (Argenti → https://ar.jobrapido.com/jobpreview/5541165626883571712?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52625305%252Fdesarrollador-full-stack-ai-automation-avellaneda-argentina&w=Python&p=5
+2026-09-14 20:17:59,299 [INFO]     🔗❌ Link inactivo, descartada: Desarrollador Full Stack | Ai & Automation (Avellaneda) → https://ar.jobrapido.com/jobpreview/9043995886685782016?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52612107%252Fdesarrollador-full-stack-ai-automation-avellaneda&w=Python&p=5
+2026-09-14 20:17:59,923 [INFO]     🔗❌ Link inactivo, descartada: Principal Nlp Scientist (Chubut) → https://ar.jobrapido.com/jobpreview/3698465640030404608?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52643527%252Fprincipal-nlp-scientist-chubut&w=Python&p=4
+2026-09-14 20:17:59,927 [INFO]     🔗❌ Link inactivo, descartada: Business Data Scientist - Marketing (Rosario) → https://ar.jobrapido.com/jobpreview/9038955656664580096?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52525647%252Fbusiness-data-scientist-marketing-rosario&w=Python&p=4
+2026-09-14 20:18:00,012 [INFO]     🔗❌ Link inactivo, descartada: Desarrollador/a Full Stack | IA & Data (Buenos Aires) → https://ar.jobrapido.com/jobpreview/2151388458319347712?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52762028%252Fdesarrollador-a-full-stack-ia-data-buenos-aires&w=Python&p=5
+2026-09-14 20:18:00,661 [INFO]     🔗❌ Link inactivo, descartada: Desarrollador SSR Full Stack (Buenos Aires) → https://ar.jobrapido.com/jobpreview/5653279529033007104?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52565390%252Fdesarrollador-ssr-full-stack-buenos-aires&w=Python&p=5
+2026-09-14 20:18:00,666 [INFO]     🔗❌ Link inactivo, descartada: Desarrollador/A Full Stack Php (Rosario) → https://ar.jobrapido.com/jobpreview/7516925349834260480?redirectTo=https%253A%252F%252Fwww.kitempleo.com.ar%252Fempleo%252F52580871%252Fdesarrollador-a-full-stack-php-rosario&w=Python&p=2
+2026-09-14 20:18:20,100 [INFO]   ✅ jobrapido: leídas=956 | nuevas=277 | dup=668 | old=0 | link-inactivo=11
+2026-09-14 20:18:20,100 [INFO] 
+  📂 Procesando: freelancer_ar (db_freelancer_ar.db)
+2026-09-14 20:18:20,106 [INFO]   Leídas 323 ofertas de db_freelancer_ar.db
+2026-09-14 20:18:20,111 [INFO]   ✅ freelancer_ar: leídas=323 | nuevas=0 | dup=0 | old=323 | link-inactivo=0
+2026-09-14 20:18:20,111 [INFO] 
+  📂 Procesando: randstad (db_randstad.db)
+2026-09-14 20:18:20,112 [INFO]   Leídas 3 ofertas de db_randstad.db
+2026-09-14 20:18:20,112 [INFO]   ✅ randstad: leídas=3 | nuevas=0 | dup=3 | old=0 | link-inactivo=0
+2026-09-14 20:18:20,112 [INFO] 
+  📂 Procesando: adecco (db_adecco.db)
+2026-09-14 20:18:20,112 [INFO]   Leídas 4 ofertas de db_adecco.db
+2026-09-14 20:18:20,112 [INFO]   ✅ adecco: leídas=4 | nuevas=0 | dup=4 | old=0 | link-inactivo=0
+2026-09-14 20:18:20,194 [INFO]   CSV consolidado actualizado: +1,167 filas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.csv
+2026-09-14 20:18:20,194 [INFO] 
+=================================================================
+2026-09-14 20:18:20,194 [INFO]   RESUMEN FINAL
+2026-09-14 20:18:20,194 [INFO] =================================================================
+2026-09-14 20:18:20,195 [INFO]   Ofertas nuevas incorporadas : 1,167
+2026-09-14 20:18:20,195 [INFO]   Descartadas (antigüedad)    : 421
+2026-09-14 20:18:20,195 [INFO]   Descartadas (duplicado)     : 2,607
+2026-09-14 20:18:20,195 [INFO]   Descartadas (link inactivo) : 11
+2026-09-14 20:18:20,195 [INFO]   Total acumulado en DB       : 3,774
+2026-09-14 20:18:20,195 [INFO]   Ventana temporal aplicada   : últimos 90 días (desde 2026-06-16)
+2026-09-14 20:18:20,195 [INFO]   Duración total              : 2m 0s
+2026-09-14 20:18:20,195 [INFO] 
+  Archivos de salida:
+2026-09-14 20:18:20,195 [INFO]     DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.db
+2026-09-14 20:18:20,195 [INFO]     CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.csv
+2026-09-14 20:18:20,195 [INFO]     Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/run_scraping_20260914_201619.log
+2026-09-14 20:18:20,195 [INFO] 
+  Por fuente (consolidación):
+2026-09-14 20:18:20,195 [INFO]     linkedin       : nuevas=140 | dup=370 | old=47 | link-inactivo=0
+2026-09-14 20:18:20,195 [INFO]     computrabajo   : nuevas=66 | dup=58 | old=0 | link-inactivo=0
+2026-09-14 20:18:20,196 [INFO]     getonboard     : nuevas=40 | dup=382 | old=51 | link-inactivo=0
+2026-09-14 20:18:20,196 [INFO]     bumeran        : nuevas=9 | dup=116 | old=0 | link-inactivo=0
+2026-09-14 20:18:20,196 [INFO]     zonajobs       : nuevas=9 | dup=114 | old=0 | link-inactivo=0
+2026-09-14 20:18:20,196 [INFO]     opcionempleo   : nuevas=626 | dup=892 | old=0 | link-inactivo=0
+2026-09-14 20:18:20,196 [INFO]     jobrapido      : nuevas=277 | dup=668 | old=0 | link-inactivo=11
+2026-09-14 20:18:20,196 [INFO]     freelancer_ar  : nuevas=0 | dup=0 | old=323 | link-inactivo=0
+2026-09-14 20:18:20,196 [INFO]     randstad       : nuevas=0 | dup=3 | old=0 | link-inactivo=0
+2026-09-14 20:18:20,196 [INFO]     adecco         : nuevas=0 | dup=4 | old=0 | link-inactivo=0
+2026-09-14 20:18:20,196 [INFO]     Reporte: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/run_20260914_201820.json
+2026-09-14 20:18:20,197 [INFO] =================================================================

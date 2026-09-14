@@ -1,0 +1,2318 @@
+2026-09-14 15:58:40,939 [INFO] 
+=================================================================
+2026-09-14 15:58:40,939 [INFO]   ORQUESTADOR DE SCRAPING — Tesis MCD
+2026-09-14 15:58:40,939 [INFO]   Alumno: Cicconi, Carlos Alberto
+2026-09-14 15:58:40,939 [INFO]   Universidad Austral — Maestría en Explotación de Datos
+2026-09-14 15:58:40,939 [INFO] =================================================================
+2026-09-14 15:58:40,939 [INFO]   Fecha/hora inicio : 2026-09-14 15:58:40
+2026-09-14 15:58:40,939 [INFO]   Ventana temporal  : 90 días
+2026-09-14 15:58:40,939 [INFO]   Verificar links   : Sí (8 hilos)
+2026-09-14 15:58:40,939 [INFO]   Scrapers activos  : 10
+2026-09-14 15:58:40,940 [INFO]   Solo consolidar   : False
+2026-09-14 15:58:40,940 [INFO]   Origen de queries : módulos (por defecto)
+2026-09-14 15:58:40,940 [INFO] 
+  Scrapers a ejecutar: ['linkedin', 'computrabajo', 'getonboard', 'bumeran', 'zonajobs', 'opcionempleo', 'jobrapido', 'freelancer_ar', 'randstad', 'adecco']
+2026-09-14 15:58:40,940 [INFO] 
+============================================================
+2026-09-14 15:58:40,940 [INFO]   EJECUTANDO: linkedin (LinkedInScraper)
+2026-09-14 15:58:40,940 [INFO]   Queries: definidas en el módulo
+2026-09-14 15:58:40,940 [INFO] ============================================================
+2026-09-14 15:58:41,050 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_linkedin.db
+2026-09-14 15:58:41,050 [INFO] LinkedInScraper inicializado correctamente
+2026-09-14 15:58:41,050 [INFO] ============================================================
+2026-09-14 15:58:41,050 [INFO] INICIO DEL SCRAPING - LinkedIn Jobs
+2026-09-14 15:58:41,050 [INFO] Búsquedas: 10 | Páginas por búsqueda: 5
+2026-09-14 15:58:41,050 [INFO] ============================================================
+2026-09-14 15:58:41,050 [INFO] 
+🔍 Buscando: 'Data Scientist' en 'Argentina'
+2026-09-14 15:58:41,051 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Scientist&location=Argentina&start=0&f_WT=2
+2026-09-14 15:58:45,671 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 15:59:28,332 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Scientist&location=Argentina&start=25&f_WT=2
+2026-09-14 15:59:32,323 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:00:11,234 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Scientist&location=Argentina&start=50&f_WT=2
+2026-09-14 16:00:16,568 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:00:57,069 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Scientist&location=Argentina&start=75&f_WT=2
+2026-09-14 16:01:01,611 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:01:41,751 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Scientist&location=Argentina&start=100&f_WT=2
+2026-09-14 16:01:46,305 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:02:28,925 [INFO] Exportadas 50 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260914.csv
+2026-09-14 16:02:28,926 [INFO] ✅ 'Data Scientist': 50 ofertas guardadas
+2026-09-14 16:02:28,926 [INFO] 
+🔍 Buscando: 'Data Analyst' en 'Argentina'
+2026-09-14 16:02:28,926 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Analyst&location=Argentina&start=0&f_WT=2
+2026-09-14 16:02:33,827 [INFO]    → 9 ofertas nuevas encontradas
+2026-09-14 16:03:11,349 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Analyst&location=Argentina&start=25&f_WT=2
+2026-09-14 16:03:16,337 [INFO]    → 9 ofertas nuevas encontradas
+2026-09-14 16:03:55,987 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Analyst&location=Argentina&start=50&f_WT=2
+2026-09-14 16:03:59,944 [INFO]    → 9 ofertas nuevas encontradas
+2026-09-14 16:04:36,893 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Analyst&location=Argentina&start=75&f_WT=2
+2026-09-14 16:04:41,066 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:05:19,921 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Analyst&location=Argentina&start=100&f_WT=2
+2026-09-14 16:05:25,057 [INFO]    → 9 ofertas nuevas encontradas
+2026-09-14 16:06:01,525 [INFO] Exportadas 46 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260914.csv
+2026-09-14 16:06:01,525 [INFO] ✅ 'Data Analyst': 46 ofertas guardadas
+2026-09-14 16:06:01,525 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer' en 'Argentina'
+2026-09-14 16:06:01,526 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Machine%20Learning%20Engineer&location=Argentina&start=0&f_WT=2
+2026-09-14 16:06:06,216 [INFO]    → 6 ofertas nuevas encontradas
+2026-09-14 16:06:31,467 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Machine%20Learning%20Engineer&location=Argentina&start=25&f_WT=2
+2026-09-14 16:06:35,033 [INFO]    → 9 ofertas nuevas encontradas
+2026-09-14 16:07:10,792 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Machine%20Learning%20Engineer&location=Argentina&start=50&f_WT=2
+2026-09-14 16:07:13,911 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:07:54,417 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Machine%20Learning%20Engineer&location=Argentina&start=75&f_WT=2
+2026-09-14 16:07:58,096 [INFO]    → 8 ofertas nuevas encontradas
+2026-09-14 16:08:30,067 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Machine%20Learning%20Engineer&location=Argentina&start=100&f_WT=2
+2026-09-14 16:08:33,807 [INFO]    → 9 ofertas nuevas encontradas
+2026-09-14 16:09:12,570 [INFO] Exportadas 42 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260914.csv
+2026-09-14 16:09:12,571 [INFO] ✅ 'Machine Learning Engineer': 42 ofertas guardadas
+2026-09-14 16:09:12,571 [INFO] 
+🔍 Buscando: 'NLP Engineer' en 'Argentina'
+2026-09-14 16:09:12,571 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=NLP%20Engineer&location=Argentina&start=0&f_WT=2
+2026-09-14 16:09:17,465 [INFO]    → 4 ofertas nuevas encontradas
+2026-09-14 16:09:35,427 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=NLP%20Engineer&location=Argentina&start=25&f_WT=2
+2026-09-14 16:09:38,958 [INFO]    → 4 ofertas nuevas encontradas
+2026-09-14 16:09:56,249 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=NLP%20Engineer&location=Argentina&start=50&f_WT=2
+2026-09-14 16:09:59,943 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:10:41,329 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=NLP%20Engineer&location=Argentina&start=75&f_WT=2
+2026-09-14 16:10:45,393 [INFO]    → 5 ofertas nuevas encontradas
+2026-09-14 16:11:08,135 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=NLP%20Engineer&location=Argentina&start=100&f_WT=2
+2026-09-14 16:11:12,009 [INFO]    → 7 ofertas nuevas encontradas
+2026-09-14 16:11:41,415 [INFO] Exportadas 30 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260914.csv
+2026-09-14 16:11:41,415 [INFO] ✅ 'NLP Engineer': 30 ofertas guardadas
+2026-09-14 16:11:41,415 [INFO] 
+🔍 Buscando: 'Data Engineer' en 'Argentina'
+2026-09-14 16:11:41,416 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Engineer&location=Argentina&start=0&f_WT=2
+2026-09-14 16:11:45,136 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:12:23,646 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Engineer&location=Argentina&start=25&f_WT=2
+2026-09-14 16:12:27,446 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:13:09,581 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Engineer&location=Argentina&start=50&f_WT=2
+2026-09-14 16:13:13,867 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:13:52,118 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Engineer&location=Argentina&start=75&f_WT=2
+2026-09-14 16:13:55,740 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:14:38,882 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data%20Engineer&location=Argentina&start=100&f_WT=2
+2026-09-14 16:14:42,293 [INFO]    → 7 ofertas nuevas encontradas
+2026-09-14 16:15:11,615 [INFO] Exportadas 47 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260914.csv
+2026-09-14 16:15:11,615 [INFO] ✅ 'Data Engineer': 47 ofertas guardadas
+2026-09-14 16:15:11,615 [INFO] 
+🔍 Buscando: 'Software Engineer' en 'Argentina'
+2026-09-14 16:15:11,615 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Software%20Engineer&location=Argentina&start=0&f_WT=2
+2026-09-14 16:15:17,003 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:16:01,258 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Software%20Engineer&location=Argentina&start=25&f_WT=2
+2026-09-14 16:16:04,621 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:16:50,327 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Software%20Engineer&location=Argentina&start=50&f_WT=2
+2026-09-14 16:16:55,385 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:17:36,870 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Software%20Engineer&location=Argentina&start=75&f_WT=2
+2026-09-14 16:17:42,086 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:18:24,794 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Software%20Engineer&location=Argentina&start=100&f_WT=2
+2026-09-14 16:18:27,964 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:19:10,496 [INFO] Exportadas 50 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260914.csv
+2026-09-14 16:19:10,496 [INFO] ✅ 'Software Engineer': 50 ofertas guardadas
+2026-09-14 16:19:10,496 [INFO] 
+🔍 Buscando: 'Python Developer' en 'Argentina'
+2026-09-14 16:19:10,496 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python%20Developer&location=Argentina&start=0&f_WT=2
+2026-09-14 16:19:15,218 [INFO]    → 8 ofertas nuevas encontradas
+2026-09-14 16:19:49,690 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python%20Developer&location=Argentina&start=25&f_WT=2
+2026-09-14 16:19:53,789 [INFO]    → 8 ofertas nuevas encontradas
+2026-09-14 16:20:29,928 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python%20Developer&location=Argentina&start=50&f_WT=2
+2026-09-14 16:20:35,180 [INFO]    → 7 ofertas nuevas encontradas
+2026-09-14 16:21:05,266 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python%20Developer&location=Argentina&start=75&f_WT=2
+2026-09-14 16:21:10,056 [INFO]    → 8 ofertas nuevas encontradas
+2026-09-14 16:21:43,550 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python%20Developer&location=Argentina&start=100&f_WT=2
+2026-09-14 16:21:46,830 [INFO]    → 6 ofertas nuevas encontradas
+2026-09-14 16:22:10,314 [INFO] Exportadas 37 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260914.csv
+2026-09-14 16:22:10,314 [INFO] ✅ 'Python Developer': 37 ofertas guardadas
+2026-09-14 16:22:10,314 [INFO] 
+🔍 Buscando: 'Desarrollador Backend' en 'Argentina'
+2026-09-14 16:22:10,315 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Argentina&start=0&f_WT=2
+2026-09-14 16:22:15,067 [INFO]    → 7 ofertas nuevas encontradas
+2026-09-14 16:22:44,986 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Argentina&start=25&f_WT=2
+2026-09-14 16:22:49,719 [INFO]    → 8 ofertas nuevas encontradas
+2026-09-14 16:23:22,359 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Argentina&start=50&f_WT=2
+2026-09-14 16:23:27,071 [INFO]    → 6 ofertas nuevas encontradas
+2026-09-14 16:23:49,945 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Argentina&start=75&f_WT=2
+2026-09-14 16:23:55,359 [INFO]    → 8 ofertas nuevas encontradas
+2026-09-14 16:24:28,823 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Backend&location=Argentina&start=100&f_WT=2
+2026-09-14 16:24:32,610 [INFO]    → 6 ofertas nuevas encontradas
+2026-09-14 16:24:57,118 [INFO] Exportadas 35 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260914.csv
+2026-09-14 16:24:57,118 [INFO] ✅ 'Desarrollador Backend': 35 ofertas guardadas
+2026-09-14 16:24:57,118 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack' en 'Argentina'
+2026-09-14 16:24:57,118 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Full%20Stack&location=Argentina&start=0&f_WT=2
+2026-09-14 16:25:02,481 [INFO]    → 9 ofertas nuevas encontradas
+2026-09-14 16:25:40,910 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Full%20Stack&location=Argentina&start=25&f_WT=2
+2026-09-14 16:25:44,800 [INFO]    → 8 ofertas nuevas encontradas
+2026-09-14 16:26:18,655 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Full%20Stack&location=Argentina&start=50&f_WT=2
+2026-09-14 16:26:22,010 [INFO]    → 6 ofertas nuevas encontradas
+2026-09-14 16:26:44,093 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Full%20Stack&location=Argentina&start=75&f_WT=2
+2026-09-14 16:26:48,292 [INFO]    → 8 ofertas nuevas encontradas
+2026-09-14 16:27:24,665 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Desarrollador%20Full%20Stack&location=Argentina&start=100&f_WT=2
+2026-09-14 16:27:29,208 [INFO]    → 10 ofertas nuevas encontradas
+2026-09-14 16:28:11,824 [INFO] Exportadas 41 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260914.csv
+2026-09-14 16:28:11,824 [INFO] ✅ 'Desarrollador Full Stack': 41 ofertas guardadas
+2026-09-14 16:28:11,824 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos' en 'Argentina'
+2026-09-14 16:28:11,824 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingeniero%20de%20Datos&location=Argentina&start=0&f_WT=2
+2026-09-14 16:28:17,482 [INFO]    → 5 ofertas nuevas encontradas
+2026-09-14 16:28:39,504 [INFO]    Página 2/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingeniero%20de%20Datos&location=Argentina&start=25&f_WT=2
+2026-09-14 16:28:43,118 [INFO]    → 5 ofertas nuevas encontradas
+2026-09-14 16:29:00,905 [INFO]    Página 3/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingeniero%20de%20Datos&location=Argentina&start=50&f_WT=2
+2026-09-14 16:29:06,131 [INFO]    → 4 ofertas nuevas encontradas
+2026-09-14 16:29:22,525 [INFO]    Página 4/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingeniero%20de%20Datos&location=Argentina&start=75&f_WT=2
+2026-09-14 16:29:27,373 [INFO]    → 3 ofertas nuevas encontradas
+2026-09-14 16:29:41,233 [INFO]    Página 5/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Ingeniero%20de%20Datos&location=Argentina&start=100&f_WT=2
+2026-09-14 16:29:46,308 [INFO]    → 4 ofertas nuevas encontradas
+2026-09-14 16:30:03,235 [INFO] Exportadas 21 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260914.csv
+2026-09-14 16:30:03,235 [INFO] ✅ 'Ingeniero de Datos': 21 ofertas guardadas
+2026-09-14 16:30:03,235 [INFO] 
+============================================================
+2026-09-14 16:30:03,235 [INFO] SCRAPING FINALIZADO
+2026-09-14 16:30:03,235 [INFO] Total de ofertas únicas recopiladas: 399
+2026-09-14 16:30:03,235 [INFO] Base de datos: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_linkedin.db
+2026-09-14 16:30:03,235 [INFO] CSV exportado: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_linkedin_20260914.csv
+2026-09-14 16:30:03,235 [INFO] Log guardado:  /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/linkedin_20260914_155841.log
+2026-09-14 16:30:03,236 [INFO] ============================================================
+2026-09-14 16:30:03,236 [INFO] Estadísticas guardadas: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/stats_linkedin_20260914_163003.json
+2026-09-14 16:30:03,236 [INFO]   ✅ linkedin: 399 ofertas recopiladas
+2026-09-14 16:30:03,241 [INFO] 
+============================================================
+2026-09-14 16:30:03,241 [INFO]   EJECUTANDO: computrabajo (ComputrabajoScraper)
+2026-09-14 16:30:03,241 [INFO]   Queries: definidas en el módulo
+2026-09-14 16:30:03,241 [INFO] ============================================================
+2026-09-14 16:30:03,275 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_computrabajo.db
+2026-09-14 16:30:03,275 [INFO] ComputrabajoScraper inicializado correctamente
+2026-09-14 16:30:03,275 [INFO] ============================================================
+2026-09-14 16:30:03,275 [INFO] INICIO DEL SCRAPING - Computrabajo Argentina
+2026-09-14 16:30:03,275 [INFO] Búsquedas: 10 | Páginas por búsqueda: 5
+2026-09-14 16:30:03,275 [INFO] ============================================================
+2026-09-14 16:30:03,275 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-09-14 16:30:03,275 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-data-scientist
+2026-09-14 16:30:09,476 [INFO]    → 3 ofertas nuevas encontradas
+2026-09-14 16:30:24,393 [INFO]    Página 2/5 → https://www.computrabajo.com.ar/trabajo-de-data-scientist?p=2
+2026-09-14 16:30:29,606 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-14 16:30:29,606 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-14 16:30:29,614 [INFO] Exportadas 3 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_computrabajo_20260914.csv
+2026-09-14 16:30:29,615 [INFO] ✅ 'Data Scientist': 3 ofertas guardadas
+2026-09-14 16:30:29,615 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-09-14 16:30:29,615 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-data-analyst
+2026-09-14 16:30:34,095 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-14 16:30:34,095 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-14 16:30:34,095 [INFO] ✅ 'Data Analyst': 0 ofertas guardadas
+2026-09-14 16:30:34,095 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer'
+2026-09-14 16:30:34,095 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-machine-learning
+2026-09-14 16:30:38,360 [INFO]    → 5 ofertas nuevas encontradas
+2026-09-14 16:31:05,491 [INFO]    Página 2/5 → https://www.computrabajo.com.ar/trabajo-de-machine-learning?p=2
+2026-09-14 16:31:10,363 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-14 16:31:10,363 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-14 16:31:10,364 [INFO] Exportadas 5 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_computrabajo_20260914.csv
+2026-09-14 16:31:10,364 [INFO] ✅ 'Machine Learning Engineer': 5 ofertas guardadas
+2026-09-14 16:31:10,364 [INFO] 
+🔍 Buscando: 'NLP Engineer'
+2026-09-14 16:31:10,364 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-nlp-engineer
+2026-09-14 16:31:15,754 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-14 16:31:15,754 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-14 16:31:15,754 [INFO] ✅ 'NLP Engineer': 0 ofertas guardadas
+2026-09-14 16:31:15,754 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-09-14 16:31:15,754 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-data-engineer
+2026-09-14 16:31:21,907 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-14 16:31:21,908 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-14 16:31:21,908 [INFO] ✅ 'Data Engineer': 0 ofertas guardadas
+2026-09-14 16:31:21,908 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-09-14 16:31:21,908 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-software-engineer
+2026-09-14 16:31:26,052 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-14 16:31:26,052 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-14 16:31:26,052 [INFO] ✅ 'Software Engineer': 0 ofertas guardadas
+2026-09-14 16:31:26,052 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-09-14 16:31:26,052 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-python
+2026-09-14 16:31:32,608 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-14 16:31:32,608 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-14 16:31:32,609 [INFO] ✅ 'Python Developer': 0 ofertas guardadas
+2026-09-14 16:31:32,609 [INFO] 
+🔍 Buscando: 'Desarrollador Backend'
+2026-09-14 16:31:32,609 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-desarrollador-backend
+2026-09-14 16:31:38,941 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-14 16:31:38,941 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-14 16:31:38,948 [INFO] ✅ 'Desarrollador Backend': 0 ofertas guardadas
+2026-09-14 16:31:38,949 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack'
+2026-09-14 16:31:38,949 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-desarrollador-full-stack
+2026-09-14 16:31:42,856 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-14 16:31:42,857 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-14 16:31:42,857 [INFO] ✅ 'Desarrollador Full Stack': 0 ofertas guardadas
+2026-09-14 16:31:42,857 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-09-14 16:31:42,857 [INFO]    Página 1/5 → https://www.computrabajo.com.ar/trabajo-de-ingeniero-de-datos
+2026-09-14 16:31:48,931 [INFO]    → 20 ofertas nuevas encontradas
+2026-09-14 16:33:27,025 [INFO]    Página 2/5 → https://www.computrabajo.com.ar/trabajo-de-ingeniero-de-datos?p=2
+2026-09-14 16:33:31,294 [INFO]    → 20 ofertas nuevas encontradas
+2026-09-14 16:35:11,544 [INFO]    Página 3/5 → https://www.computrabajo.com.ar/trabajo-de-ingeniero-de-datos?p=3
+2026-09-14 16:35:16,323 [INFO]    → 20 ofertas nuevas encontradas
+2026-09-14 16:36:56,442 [INFO]    Página 4/5 → https://www.computrabajo.com.ar/trabajo-de-ingeniero-de-datos?p=4
+2026-09-14 16:37:02,234 [INFO]    → 0 ofertas nuevas encontradas
+2026-09-14 16:37:02,234 [INFO]    → Sin más resultados para esta búsqueda.
+2026-09-14 16:37:02,243 [INFO] Exportadas 60 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_computrabajo_20260914.csv
+2026-09-14 16:37:02,243 [INFO] ✅ 'Ingeniero de Datos': 60 ofertas guardadas
+2026-09-14 16:37:02,243 [INFO] 
+============================================================
+2026-09-14 16:37:02,243 [INFO] SCRAPING FINALIZADO - Computrabajo
+2026-09-14 16:37:02,243 [INFO] Total de ofertas únicas recopiladas: 68
+2026-09-14 16:37:02,243 [INFO] Base de datos : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_computrabajo.db
+2026-09-14 16:37:02,243 [INFO] CSV exportado : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_computrabajo_20260914.csv
+2026-09-14 16:37:02,243 [INFO] Log guardado  : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/computrabajo_scraper_20260914_163003.log
+2026-09-14 16:37:02,243 [INFO] ============================================================
+2026-09-14 16:37:02,244 [INFO] Estadísticas guardadas: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/stats_computrabajo_20260914_163702.json
+2026-09-14 16:37:02,244 [INFO]   ✅ computrabajo: 68 ofertas recopiladas
+2026-09-14 16:37:02,246 [INFO] 
+============================================================
+2026-09-14 16:37:02,246 [INFO]   EJECUTANDO: getonboard (GetOnBoardScraper)
+2026-09-14 16:37:02,246 [INFO]   Queries: definidas en el módulo
+2026-09-14 16:37:02,246 [INFO] ============================================================
+2026-09-14 16:37:02,248 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_getonboard.db
+2026-09-14 16:37:02,248 [INFO] GetOnBoardScraper inicializado
+2026-09-14 16:37:02,248 [INFO] ============================================================
+2026-09-14 16:37:02,248 [INFO] INICIO DEL SCRAPING - GetOnBoard (API JSON)
+2026-09-14 16:37:02,248 [INFO] Búsquedas: 10 | Páginas: 5
+2026-09-14 16:37:02,248 [INFO] ============================================================
+2026-09-14 16:37:02,248 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-09-14 16:37:02,248 [INFO]    Página 1/5
+2026-09-14 16:37:06,477 [INFO]    → 20 items recibidos
+2026-09-14 16:37:06,498 [INFO]    → 20 ofertas nuevas guardadas en esta página
+2026-09-14 16:37:06,499 [INFO]    Página 2/5
+2026-09-14 16:37:09,138 [INFO]    → 5 items recibidos
+2026-09-14 16:37:09,145 [INFO]    → 5 ofertas nuevas guardadas en esta página
+2026-09-14 16:37:09,145 [INFO]    Página 3/5
+2026-09-14 16:37:12,925 [INFO]    → 0 items recibidos
+2026-09-14 16:37:12,925 [INFO]    → Sin más resultados.
+2026-09-14 16:37:12,942 [INFO] Exportadas 25 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260914.csv
+2026-09-14 16:37:12,943 [INFO] ✅ 'Data Scientist': 25 ofertas guardadas
+2026-09-14 16:37:12,943 [INFO]    💤 Pausa: 4.2s
+2026-09-14 16:37:17,114 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-09-14 16:37:17,114 [INFO]    Página 1/5
+2026-09-14 16:37:20,203 [INFO]    → 20 items recibidos
+2026-09-14 16:37:20,254 [INFO]    → 17 ofertas nuevas guardadas en esta página
+2026-09-14 16:37:20,254 [INFO]    Página 2/5
+2026-09-14 16:37:24,505 [INFO]    → 20 items recibidos
+2026-09-14 16:37:24,524 [INFO]    → 19 ofertas nuevas guardadas en esta página
+2026-09-14 16:37:24,524 [INFO]    Página 3/5
+2026-09-14 16:37:28,245 [INFO]    → 20 items recibidos
+2026-09-14 16:37:28,268 [INFO]    → 20 ofertas nuevas guardadas en esta página
+2026-09-14 16:37:28,268 [INFO]    Página 4/5
+2026-09-14 16:37:32,183 [INFO]    → 20 items recibidos
+2026-09-14 16:37:32,188 [INFO]    → 17 ofertas nuevas guardadas en esta página
+2026-09-14 16:37:32,189 [INFO]    Página 5/5
+2026-09-14 16:37:35,049 [INFO]    → 20 items recibidos
+2026-09-14 16:37:35,067 [INFO]    → 14 ofertas nuevas guardadas en esta página
+2026-09-14 16:37:35,075 [INFO] Exportadas 87 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260914.csv
+2026-09-14 16:37:35,075 [INFO] ✅ 'Data Analyst': 87 ofertas guardadas
+2026-09-14 16:37:35,075 [INFO]    💤 Pausa: 6.1s
+2026-09-14 16:37:41,208 [INFO] 
+🔍 Buscando: 'Machine Learning'
+2026-09-14 16:37:41,208 [INFO]    Página 1/5
+2026-09-14 16:37:45,291 [INFO]    → 20 items recibidos
+2026-09-14 16:37:45,329 [INFO]    → 15 ofertas nuevas guardadas en esta página
+2026-09-14 16:37:45,329 [INFO]    Página 2/5
+2026-09-14 16:37:49,197 [INFO]    → 20 items recibidos
+2026-09-14 16:37:49,207 [INFO]    → 7 ofertas nuevas guardadas en esta página
+2026-09-14 16:37:49,207 [INFO]    Página 3/5
+2026-09-14 16:37:52,879 [INFO]    → 20 items recibidos
+2026-09-14 16:37:52,884 [INFO]    → 15 ofertas nuevas guardadas en esta página
+2026-09-14 16:37:52,884 [INFO]    Página 4/5
+2026-09-14 16:37:54,930 [INFO]    → 8 items recibidos
+2026-09-14 16:37:54,933 [INFO]    → 6 ofertas nuevas guardadas en esta página
+2026-09-14 16:37:54,933 [INFO]    Página 5/5
+2026-09-14 16:37:58,316 [INFO]    → 0 items recibidos
+2026-09-14 16:37:58,317 [INFO]    → Sin más resultados.
+2026-09-14 16:37:58,332 [INFO] Exportadas 43 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260914.csv
+2026-09-14 16:37:58,332 [INFO] ✅ 'Machine Learning': 43 ofertas guardadas
+2026-09-14 16:37:58,332 [INFO]    💤 Pausa: 5.1s
+2026-09-14 16:38:03,432 [INFO] 
+🔍 Buscando: 'NLP'
+2026-09-14 16:38:03,433 [INFO]    Página 1/5
+2026-09-14 16:38:07,692 [INFO]    → 20 items recibidos
+2026-09-14 16:38:07,754 [INFO]    → 14 ofertas nuevas guardadas en esta página
+2026-09-14 16:38:07,754 [INFO]    Página 2/5
+2026-09-14 16:38:11,771 [INFO]    → 20 items recibidos
+2026-09-14 16:38:11,802 [INFO]    → 16 ofertas nuevas guardadas en esta página
+2026-09-14 16:38:11,802 [INFO]    Página 3/5
+2026-09-14 16:38:15,491 [INFO]    → 20 items recibidos
+2026-09-14 16:38:15,509 [INFO]    → 13 ofertas nuevas guardadas en esta página
+2026-09-14 16:38:15,509 [INFO]    Página 4/5
+2026-09-14 16:38:17,536 [INFO]    → 20 items recibidos
+2026-09-14 16:38:17,541 [INFO]    → 12 ofertas nuevas guardadas en esta página
+2026-09-14 16:38:17,541 [INFO]    Página 5/5
+2026-09-14 16:38:19,880 [INFO]    → 20 items recibidos
+2026-09-14 16:38:19,898 [INFO]    → 11 ofertas nuevas guardadas en esta página
+2026-09-14 16:38:19,905 [INFO] Exportadas 66 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260914.csv
+2026-09-14 16:38:19,905 [INFO] ✅ 'NLP': 66 ofertas guardadas
+2026-09-14 16:38:19,905 [INFO]    💤 Pausa: 6.7s
+2026-09-14 16:38:26,560 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-09-14 16:38:26,561 [INFO]    Página 1/5
+2026-09-14 16:38:30,837 [INFO]    → 20 items recibidos
+2026-09-14 16:38:30,861 [INFO]    → 3 ofertas nuevas guardadas en esta página
+2026-09-14 16:38:30,861 [INFO]    Página 2/5
+2026-09-14 16:38:34,560 [INFO]    → 20 items recibidos
+2026-09-14 16:38:34,562 [INFO]    → 5 ofertas nuevas guardadas en esta página
+2026-09-14 16:38:34,562 [INFO]    Página 3/5
+2026-09-14 16:38:36,831 [INFO]    → 20 items recibidos
+2026-09-14 16:38:36,833 [INFO]    → 4 ofertas nuevas guardadas en esta página
+2026-09-14 16:38:36,833 [INFO]    Página 4/5
+2026-09-14 16:38:40,048 [INFO]    → 20 items recibidos
+2026-09-14 16:38:40,063 [INFO]    → 11 ofertas nuevas guardadas en esta página
+2026-09-14 16:38:40,070 [INFO]    Página 5/5
+2026-09-14 16:38:42,245 [INFO]    → 20 items recibidos
+2026-09-14 16:38:42,258 [INFO]    → 11 ofertas nuevas guardadas en esta página
+2026-09-14 16:38:42,276 [INFO] Exportadas 34 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260914.csv
+2026-09-14 16:38:42,276 [INFO] ✅ 'Data Engineer': 34 ofertas guardadas
+2026-09-14 16:38:42,276 [INFO]    💤 Pausa: 6.8s
+2026-09-14 16:38:49,113 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-09-14 16:38:49,113 [INFO]    Página 1/5
+2026-09-14 16:38:51,334 [INFO]    → 20 items recibidos
+2026-09-14 16:38:51,372 [INFO]    → 9 ofertas nuevas guardadas en esta página
+2026-09-14 16:38:51,372 [INFO]    Página 2/5
+2026-09-14 16:38:54,542 [INFO]    → 20 items recibidos
+2026-09-14 16:38:54,546 [INFO]    → 11 ofertas nuevas guardadas en esta página
+2026-09-14 16:38:54,546 [INFO]    Página 3/5
+2026-09-14 16:38:57,623 [INFO]    → 20 items recibidos
+2026-09-14 16:38:57,627 [INFO]    → 9 ofertas nuevas guardadas en esta página
+2026-09-14 16:38:57,628 [INFO]    Página 4/5
+2026-09-14 16:39:00,436 [INFO]    → 20 items recibidos
+2026-09-14 16:39:00,439 [INFO]    → 6 ofertas nuevas guardadas en esta página
+2026-09-14 16:39:00,439 [INFO]    Página 5/5
+2026-09-14 16:39:03,210 [INFO]    → 20 items recibidos
+2026-09-14 16:39:03,238 [INFO]    → 12 ofertas nuevas guardadas en esta página
+2026-09-14 16:39:03,253 [INFO] Exportadas 47 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260914.csv
+2026-09-14 16:39:03,253 [INFO] ✅ 'Software Engineer': 47 ofertas guardadas
+2026-09-14 16:39:03,253 [INFO]    💤 Pausa: 5.1s
+2026-09-14 16:39:08,330 [INFO] 
+🔍 Buscando: 'Python'
+2026-09-14 16:39:08,331 [INFO]    Página 1/5
+2026-09-14 16:39:11,899 [INFO]    → 20 items recibidos
+2026-09-14 16:39:11,915 [INFO]    → 6 ofertas nuevas guardadas en esta página
+2026-09-14 16:39:11,915 [INFO]    Página 2/5
+2026-09-14 16:39:13,965 [INFO]    → 20 items recibidos
+2026-09-14 16:39:13,974 [INFO]    → 7 ofertas nuevas guardadas en esta página
+2026-09-14 16:39:13,974 [INFO]    Página 3/5
+2026-09-14 16:39:16,953 [INFO]    → 20 items recibidos
+2026-09-14 16:39:16,955 [INFO]    → 5 ofertas nuevas guardadas en esta página
+2026-09-14 16:39:16,955 [INFO]    Página 4/5
+2026-09-14 16:39:20,024 [INFO]    → 20 items recibidos
+2026-09-14 16:39:20,026 [INFO]    → 5 ofertas nuevas guardadas en esta página
+2026-09-14 16:39:20,026 [INFO]    Página 5/5
+2026-09-14 16:39:23,303 [INFO]    → 20 items recibidos
+2026-09-14 16:39:23,305 [INFO]    → 4 ofertas nuevas guardadas en esta página
+2026-09-14 16:39:23,315 [INFO] Exportadas 27 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260914.csv
+2026-09-14 16:39:23,315 [INFO] ✅ 'Python': 27 ofertas guardadas
+2026-09-14 16:39:23,315 [INFO]    💤 Pausa: 4.5s
+2026-09-14 16:39:27,782 [INFO] 
+🔍 Buscando: 'Backend'
+2026-09-14 16:39:27,782 [INFO]    Página 1/5
+2026-09-14 16:39:31,488 [INFO]    → 20 items recibidos
+2026-09-14 16:39:31,519 [INFO]    → 7 ofertas nuevas guardadas en esta página
+2026-09-14 16:39:31,519 [INFO]    Página 2/5
+2026-09-14 16:39:34,615 [INFO]    → 20 items recibidos
+2026-09-14 16:39:34,628 [INFO]    → 9 ofertas nuevas guardadas en esta página
+2026-09-14 16:39:34,628 [INFO]    Página 3/5
+2026-09-14 16:39:37,660 [INFO]    → 20 items recibidos
+2026-09-14 16:39:37,695 [INFO]    → 6 ofertas nuevas guardadas en esta página
+2026-09-14 16:39:37,695 [INFO]    Página 4/5
+2026-09-14 16:39:40,860 [INFO]    → 20 items recibidos
+2026-09-14 16:39:40,865 [INFO]    → 11 ofertas nuevas guardadas en esta página
+2026-09-14 16:39:40,867 [INFO]    Página 5/5
+2026-09-14 16:39:44,883 [INFO]    → 20 items recibidos
+2026-09-14 16:39:44,886 [INFO]    → 7 ofertas nuevas guardadas en esta página
+2026-09-14 16:39:44,897 [INFO] Exportadas 40 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260914.csv
+2026-09-14 16:39:44,897 [INFO] ✅ 'Backend': 40 ofertas guardadas
+2026-09-14 16:39:44,897 [INFO]    💤 Pausa: 4.2s
+2026-09-14 16:39:49,070 [INFO] 
+🔍 Buscando: 'Full Stack'
+2026-09-14 16:39:49,071 [INFO]    Página 1/5
+2026-09-14 16:39:52,337 [INFO]    → 20 items recibidos
+2026-09-14 16:39:52,352 [INFO]    → 3 ofertas nuevas guardadas en esta página
+2026-09-14 16:39:52,352 [INFO]    Página 2/5
+2026-09-14 16:39:56,392 [INFO]    → 20 items recibidos
+2026-09-14 16:39:56,395 [INFO]    → 1 ofertas nuevas guardadas en esta página
+2026-09-14 16:39:56,395 [INFO]    Página 3/5
+2026-09-14 16:40:00,341 [INFO]    → 20 items recibidos
+2026-09-14 16:40:00,344 [INFO]    → 1 ofertas nuevas guardadas en esta página
+2026-09-14 16:40:00,344 [INFO]    Página 4/5
+2026-09-14 16:40:02,545 [INFO]    → 20 items recibidos
+2026-09-14 16:40:02,552 [INFO]    → 5 ofertas nuevas guardadas en esta página
+2026-09-14 16:40:02,552 [INFO]    Página 5/5
+2026-09-14 16:40:05,963 [INFO]    → 20 items recibidos
+2026-09-14 16:40:05,968 [INFO]    → 14 ofertas nuevas guardadas en esta página
+2026-09-14 16:40:05,978 [INFO] Exportadas 24 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260914.csv
+2026-09-14 16:40:05,978 [INFO] ✅ 'Full Stack': 24 ofertas guardadas
+2026-09-14 16:40:05,978 [INFO]    💤 Pausa: 5.7s
+2026-09-14 16:40:11,684 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-09-14 16:40:11,685 [INFO]    Página 1/5
+2026-09-14 16:40:15,689 [INFO]    → 20 items recibidos
+2026-09-14 16:40:15,703 [INFO]    → 4 ofertas nuevas guardadas en esta página
+2026-09-14 16:40:15,703 [INFO]    Página 2/5
+2026-09-14 16:40:19,942 [INFO]    → 20 items recibidos
+2026-09-14 16:40:19,959 [INFO]    → 14 ofertas nuevas guardadas en esta página
+2026-09-14 16:40:19,959 [INFO]    Página 3/5
+2026-09-14 16:40:23,423 [INFO]    → 11 items recibidos
+2026-09-14 16:40:23,427 [INFO]    → 10 ofertas nuevas guardadas en esta página
+2026-09-14 16:40:23,428 [INFO]    Página 4/5
+2026-09-14 16:40:26,263 [INFO]    → 0 items recibidos
+2026-09-14 16:40:26,263 [INFO]    → Sin más resultados.
+2026-09-14 16:40:26,277 [INFO] Exportadas 28 ofertas a CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260914.csv
+2026-09-14 16:40:26,278 [INFO] ✅ 'Ingeniero de Datos': 28 ofertas guardadas
+2026-09-14 16:40:26,278 [INFO]    💤 Pausa: 7.2s
+2026-09-14 16:40:33,470 [INFO] 
+============================================================
+2026-09-14 16:40:33,470 [INFO] SCRAPING FINALIZADO - GetOnBoard
+2026-09-14 16:40:33,470 [INFO] Total ofertas únicas: 421
+2026-09-14 16:40:33,471 [INFO] DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_getonboard.db
+2026-09-14 16:40:33,471 [INFO] CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_getonboard_20260914.csv
+2026-09-14 16:40:33,471 [INFO] Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/getonboard_scraper_20260914_163702.log
+2026-09-14 16:40:33,471 [INFO] ============================================================
+2026-09-14 16:40:33,479 [INFO]   ✅ getonboard: 421 ofertas recopiladas
+2026-09-14 16:40:33,480 [INFO] 
+============================================================
+2026-09-14 16:40:33,481 [INFO]   EJECUTANDO: bumeran (BumeranScraper)
+2026-09-14 16:40:33,481 [INFO]   Queries: definidas en el módulo
+2026-09-14 16:40:33,481 [INFO] ============================================================
+2026-09-14 16:40:33,573 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_bumeran.db
+2026-09-14 16:40:33,573 [INFO] BumeranScraper (Playwright) inicializado
+2026-09-14 16:40:34,575 [INFO] Inicializando sesión en Bumeran...
+2026-09-14 16:40:52,640 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-09-14 16:40:52,640 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-data-scientist.html
+2026-09-14 16:41:15,152 [INFO]    → 0 ofertas encontradas
+2026-09-14 16:41:15,152 [INFO]    → Sin más resultados.
+2026-09-14 16:41:15,153 [INFO] ✅ 'Data Scientist': 0 ofertas guardadas
+2026-09-14 16:41:15,153 [INFO]    💤 Pausa: 7.6s
+2026-09-14 16:41:22,743 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-09-14 16:41:22,743 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-data-analyst.html
+2026-09-14 16:41:42,568 [INFO]    → 5 ofertas encontradas
+2026-09-14 16:42:17,762 [INFO]    Página 2/5 → https://www.bumeran.com.ar/empleos-busqueda-data-analyst.html?page=2
+2026-09-14 16:42:37,858 [INFO]    → 0 ofertas encontradas
+2026-09-14 16:42:37,858 [INFO]    → Sin más resultados.
+2026-09-14 16:42:37,866 [INFO] Exportadas 5 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_bumeran_20260914.csv
+2026-09-14 16:42:37,866 [INFO] ✅ 'Data Analyst': 5 ofertas guardadas
+2026-09-14 16:42:37,866 [INFO]    💤 Pausa: 12.6s
+2026-09-14 16:42:50,497 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer'
+2026-09-14 16:42:50,498 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-machine-learning.html
+2026-09-14 16:43:13,129 [INFO]    → 1 ofertas encontradas
+2026-09-14 16:43:21,595 [INFO]    Página 2/5 → https://www.bumeran.com.ar/empleos-busqueda-machine-learning.html?page=2
+2026-09-14 16:43:43,276 [INFO]    → 0 ofertas encontradas
+2026-09-14 16:43:43,276 [INFO]    → Sin más resultados.
+2026-09-14 16:43:43,277 [INFO] Exportadas 1 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_bumeran_20260914.csv
+2026-09-14 16:43:43,277 [INFO] ✅ 'Machine Learning Engineer': 1 ofertas guardadas
+2026-09-14 16:43:43,277 [INFO]    💤 Pausa: 12.7s
+2026-09-14 16:43:55,981 [INFO] 
+🔍 Buscando: 'NLP Engineer'
+2026-09-14 16:43:55,981 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-nlp.html
+2026-09-14 16:44:18,444 [INFO]    → 0 ofertas encontradas
+2026-09-14 16:44:18,445 [INFO]    → Sin más resultados.
+2026-09-14 16:44:18,445 [INFO] ✅ 'NLP Engineer': 0 ofertas guardadas
+2026-09-14 16:44:18,445 [INFO]    💤 Pausa: 7.1s
+2026-09-14 16:44:25,578 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-09-14 16:44:25,579 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-data-engineer.html
+2026-09-14 16:44:48,049 [INFO]    → 6 ofertas encontradas
+2026-09-14 16:45:30,793 [INFO]    Página 2/5 → https://www.bumeran.com.ar/empleos-busqueda-data-engineer.html?page=2
+2026-09-14 16:45:51,025 [INFO]    → 0 ofertas encontradas
+2026-09-14 16:45:51,025 [INFO]    → Sin más resultados.
+2026-09-14 16:45:51,033 [INFO] Exportadas 6 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_bumeran_20260914.csv
+2026-09-14 16:45:51,033 [INFO] ✅ 'Data Engineer': 6 ofertas guardadas
+2026-09-14 16:45:51,033 [INFO]    💤 Pausa: 8.2s
+2026-09-14 16:45:59,241 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-09-14 16:45:59,242 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-software-engineer.html
+2026-09-14 16:46:19,652 [INFO]    → 20 ofertas encontradas
+2026-09-14 16:48:59,163 [INFO]    Página 2/5 → https://www.bumeran.com.ar/empleos-busqueda-software-engineer.html?page=2
+2026-09-14 16:49:18,486 [INFO]    → 20 ofertas encontradas
+2026-09-14 16:51:44,181 [INFO]    Página 3/5 → https://www.bumeran.com.ar/empleos-busqueda-software-engineer.html?page=3
+2026-09-14 16:52:06,699 [INFO]    → 20 ofertas encontradas
+2026-09-14 16:54:37,514 [INFO]    Página 4/5 → https://www.bumeran.com.ar/empleos-busqueda-software-engineer.html?page=4
+2026-09-14 16:54:58,646 [INFO]    → 20 ofertas encontradas
+2026-09-14 16:57:32,084 [INFO]    Página 5/5 → https://www.bumeran.com.ar/empleos-busqueda-software-engineer.html?page=5
+2026-09-14 16:57:52,318 [INFO]    → 20 ofertas encontradas
+2026-09-14 17:00:24,098 [INFO] Exportadas 100 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_bumeran_20260914.csv
+2026-09-14 17:00:24,098 [INFO] ✅ 'Software Engineer': 100 ofertas guardadas
+2026-09-14 17:00:24,098 [INFO]    💤 Pausa: 11.8s
+2026-09-14 17:00:35,869 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-09-14 17:00:35,869 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-python.html
+2026-09-14 17:00:56,587 [INFO]    → 4 ofertas encontradas
+2026-09-14 17:01:27,395 [INFO]    Página 2/5 → https://www.bumeran.com.ar/empleos-busqueda-python.html?page=2
+2026-09-14 17:01:49,046 [INFO]    → 0 ofertas encontradas
+2026-09-14 17:01:49,046 [INFO]    → Sin más resultados.
+2026-09-14 17:01:49,054 [INFO] Exportadas 4 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_bumeran_20260914.csv
+2026-09-14 17:01:49,054 [INFO] ✅ 'Python Developer': 4 ofertas guardadas
+2026-09-14 17:01:49,054 [INFO]    💤 Pausa: 8.4s
+2026-09-14 17:01:57,480 [INFO] 
+🔍 Buscando: 'Desarrollador Backend'
+2026-09-14 17:01:57,480 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-desarrollador-backend.html
+2026-09-14 17:02:17,984 [INFO]    → 0 ofertas encontradas
+2026-09-14 17:02:17,984 [INFO]    → Sin más resultados.
+2026-09-14 17:02:17,984 [INFO] ✅ 'Desarrollador Backend': 0 ofertas guardadas
+2026-09-14 17:02:17,984 [INFO]    💤 Pausa: 8.2s
+2026-09-14 17:02:26,176 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack'
+2026-09-14 17:02:26,176 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-desarrollador-full-stack.html
+2026-09-14 17:02:47,709 [INFO]    → 1 ofertas encontradas
+2026-09-14 17:02:55,306 [INFO]    Página 2/5 → https://www.bumeran.com.ar/empleos-busqueda-desarrollador-full-stack.html?page=2
+2026-09-14 17:03:14,926 [INFO]    → 0 ofertas encontradas
+2026-09-14 17:03:14,926 [INFO]    → Sin más resultados.
+2026-09-14 17:03:14,926 [INFO] Exportadas 1 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_bumeran_20260914.csv
+2026-09-14 17:03:14,926 [INFO] ✅ 'Desarrollador Full Stack': 1 ofertas guardadas
+2026-09-14 17:03:14,926 [INFO]    💤 Pausa: 11.3s
+2026-09-14 17:03:26,273 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-09-14 17:03:26,273 [INFO]    Página 1/5 → https://www.bumeran.com.ar/empleos-busqueda-ingeniero-de-datos.html
+2026-09-14 17:03:46,496 [INFO]    → 0 ofertas encontradas
+2026-09-14 17:03:46,496 [INFO]    → Sin más resultados.
+2026-09-14 17:03:46,496 [INFO] ✅ 'Ingeniero de Datos': 0 ofertas guardadas
+2026-09-14 17:03:46,496 [INFO]    💤 Pausa: 12.6s
+2026-09-14 17:03:59,179 [INFO] 
+============================================================
+2026-09-14 17:03:59,179 [INFO] SCRAPING FINALIZADO - Bumeran Argentina
+2026-09-14 17:03:59,179 [INFO] Total ofertas únicas: 117
+2026-09-14 17:03:59,179 [INFO] DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_bumeran.db
+2026-09-14 17:03:59,179 [INFO] CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_bumeran_20260914.csv
+2026-09-14 17:03:59,179 [INFO] Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/bumeran_scraper_20260914_164033.log
+2026-09-14 17:03:59,179 [INFO] ============================================================
+2026-09-14 17:03:59,180 [INFO]   ✅ bumeran: 117 ofertas recopiladas
+2026-09-14 17:03:59,180 [INFO] 
+============================================================
+2026-09-14 17:03:59,180 [INFO]   EJECUTANDO: zonajobs (ZonaJobsScraper)
+2026-09-14 17:03:59,180 [INFO]   Queries: definidas en el módulo
+2026-09-14 17:03:59,180 [INFO] ============================================================
+2026-09-14 17:03:59,182 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_zonajobs.db
+2026-09-14 17:03:59,183 [INFO] ZonaJobsScraper (Playwright) inicializado
+2026-09-14 17:03:59,712 [INFO] Inicializando sesión en ZonaJobs...
+2026-09-14 17:04:17,534 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-09-14 17:04:17,534 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-data-scientist.html
+2026-09-14 17:04:37,925 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Data_Scientist.html
+2026-09-14 17:04:37,925 [INFO]    → 0 ofertas encontradas
+2026-09-14 17:04:37,925 [INFO]    → Sin más resultados.
+2026-09-14 17:04:37,925 [INFO] ✅ 'Data Scientist': 0 ofertas guardadas
+2026-09-14 17:04:37,925 [INFO]    💤 Pausa: 8.9s
+2026-09-14 17:04:46,843 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-09-14 17:04:46,844 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-data-analyst.html
+2026-09-14 17:05:07,073 [INFO]    → 5 ofertas encontradas
+2026-09-14 17:05:45,880 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-data-analyst.html?page=2
+2026-09-14 17:06:08,958 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Data_Analyst.html
+2026-09-14 17:06:08,958 [INFO]    → 0 ofertas encontradas
+2026-09-14 17:06:08,958 [INFO]    → Sin más resultados.
+2026-09-14 17:06:08,959 [INFO] Exportadas 5 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs_20260914.csv
+2026-09-14 17:06:08,959 [INFO] ✅ 'Data Analyst': 5 ofertas guardadas
+2026-09-14 17:06:08,959 [INFO]    💤 Pausa: 12.6s
+2026-09-14 17:06:21,562 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer'
+2026-09-14 17:06:21,562 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-machine-learning.html
+2026-09-14 17:06:43,570 [INFO]    → 1 ofertas encontradas
+2026-09-14 17:06:51,282 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-machine-learning.html?page=2
+2026-09-14 17:07:13,519 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Machine_Learning_Engineer.html
+2026-09-14 17:07:13,519 [INFO]    → 0 ofertas encontradas
+2026-09-14 17:07:13,519 [INFO]    → Sin más resultados.
+2026-09-14 17:07:13,520 [INFO] Exportadas 1 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs_20260914.csv
+2026-09-14 17:07:13,520 [INFO] ✅ 'Machine Learning Engineer': 1 ofertas guardadas
+2026-09-14 17:07:13,520 [INFO]    💤 Pausa: 12.6s
+2026-09-14 17:07:26,094 [INFO] 
+🔍 Buscando: 'NLP Engineer'
+2026-09-14 17:07:26,094 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-nlp.html
+2026-09-14 17:07:46,091 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_NLP_Engineer.html
+2026-09-14 17:07:46,091 [INFO]    → 0 ofertas encontradas
+2026-09-14 17:07:46,091 [INFO]    → Sin más resultados.
+2026-09-14 17:07:46,091 [INFO] ✅ 'NLP Engineer': 0 ofertas guardadas
+2026-09-14 17:07:46,092 [INFO]    💤 Pausa: 11.6s
+2026-09-14 17:07:57,748 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-09-14 17:07:57,748 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-data-engineer.html
+2026-09-14 17:08:19,681 [INFO]    → 6 ofertas encontradas
+2026-09-14 17:09:00,767 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-data-engineer.html?page=2
+2026-09-14 17:09:22,863 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Data_Engineer.html
+2026-09-14 17:09:22,863 [INFO]    → 0 ofertas encontradas
+2026-09-14 17:09:22,863 [INFO]    → Sin más resultados.
+2026-09-14 17:09:22,864 [INFO] Exportadas 6 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs_20260914.csv
+2026-09-14 17:09:22,864 [INFO] ✅ 'Data Engineer': 6 ofertas guardadas
+2026-09-14 17:09:22,864 [INFO]    💤 Pausa: 10.8s
+2026-09-14 17:09:33,632 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-09-14 17:09:33,632 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-software-engineer.html
+2026-09-14 17:09:55,084 [INFO]    → 20 ofertas encontradas
+2026-09-14 17:12:25,268 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-software-engineer.html?page=2
+2026-09-14 17:12:44,526 [INFO]    → 20 ofertas encontradas
+2026-09-14 17:15:14,070 [INFO]    Página 3/5 → https://www.zonajobs.com.ar/empleos-busqueda-software-engineer.html?page=3
+2026-09-14 17:15:34,973 [INFO]    → 20 ofertas encontradas
+2026-09-14 17:18:15,370 [INFO]    Página 4/5 → https://www.zonajobs.com.ar/empleos-busqueda-software-engineer.html?page=4
+2026-09-14 17:18:35,606 [INFO]    → 20 ofertas encontradas
+2026-09-14 17:21:07,009 [INFO]    Página 5/5 → https://www.zonajobs.com.ar/empleos-busqueda-software-engineer.html?page=5
+2026-09-14 17:21:27,552 [INFO]    → 20 ofertas encontradas
+2026-09-14 17:24:00,507 [INFO] Exportadas 100 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs_20260914.csv
+2026-09-14 17:24:00,507 [INFO] ✅ 'Software Engineer': 100 ofertas guardadas
+2026-09-14 17:24:00,507 [INFO]    💤 Pausa: 12.1s
+2026-09-14 17:24:12,571 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-09-14 17:24:12,571 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-python.html
+2026-09-14 17:24:34,311 [INFO]    → 3 ofertas encontradas
+2026-09-14 17:24:57,605 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-python.html?page=2
+2026-09-14 17:25:18,802 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Python_Developer.html
+2026-09-14 17:25:18,802 [INFO]    → 0 ofertas encontradas
+2026-09-14 17:25:18,802 [INFO]    → Sin más resultados.
+2026-09-14 17:25:18,803 [INFO] Exportadas 3 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs_20260914.csv
+2026-09-14 17:25:18,803 [INFO] ✅ 'Python Developer': 3 ofertas guardadas
+2026-09-14 17:25:18,803 [INFO]    💤 Pausa: 8.7s
+2026-09-14 17:25:27,527 [INFO] 
+🔍 Buscando: 'Desarrollador Backend'
+2026-09-14 17:25:27,528 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-desarrollador-backend.html
+2026-09-14 17:25:48,908 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Desarrollador_Backend.html
+2026-09-14 17:25:48,909 [INFO]    → 0 ofertas encontradas
+2026-09-14 17:25:48,909 [INFO]    → Sin más resultados.
+2026-09-14 17:25:48,909 [INFO] ✅ 'Desarrollador Backend': 0 ofertas guardadas
+2026-09-14 17:25:48,909 [INFO]    💤 Pausa: 7.7s
+2026-09-14 17:25:56,648 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack'
+2026-09-14 17:25:56,648 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-desarrollador-full-stack.html
+2026-09-14 17:26:17,005 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Desarrollador_Full_Stack.html
+2026-09-14 17:26:17,005 [INFO]    → 0 ofertas encontradas
+2026-09-14 17:26:17,005 [INFO]    → Sin más resultados.
+2026-09-14 17:26:17,005 [INFO] ✅ 'Desarrollador Full Stack': 0 ofertas guardadas
+2026-09-14 17:26:17,006 [INFO]    💤 Pausa: 9.0s
+2026-09-14 17:26:26,031 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-09-14 17:26:26,031 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-ingeniero-de-datos.html
+2026-09-14 17:26:45,726 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Ingeniero_de_Datos.html
+2026-09-14 17:26:45,726 [INFO]    → 0 ofertas encontradas
+2026-09-14 17:26:45,726 [INFO]    → Sin más resultados.
+2026-09-14 17:26:45,726 [INFO] ✅ 'Ingeniero de Datos': 0 ofertas guardadas
+2026-09-14 17:26:45,726 [INFO]    💤 Pausa: 11.5s
+2026-09-14 17:26:57,256 [INFO] 
+============================================================
+2026-09-14 17:26:57,256 [INFO] SCRAPING FINALIZADO - ZonaJobs Argentina
+2026-09-14 17:26:57,256 [INFO] Total ofertas únicas: 115
+2026-09-14 17:26:57,256 [INFO] DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_zonajobs.db
+2026-09-14 17:26:57,256 [INFO] CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs_20260914.csv
+2026-09-14 17:26:57,256 [INFO] Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/zonajobs_scraper_20260914_170359.log
+2026-09-14 17:26:57,256 [INFO] ============================================================
+2026-09-14 17:26:57,257 [INFO]   ✅ zonajobs: 115 ofertas recopiladas
+2026-09-14 17:26:57,257 [INFO] 
+============================================================
+2026-09-14 17:26:57,257 [INFO]   EJECUTANDO: opcionempleo (OpcionempleoScraper)
+2026-09-14 17:26:57,257 [INFO]   Queries: definidas en el módulo
+2026-09-14 17:26:57,257 [INFO] ============================================================
+2026-09-14 17:26:57,259 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_opcionempleo.db
+2026-09-14 17:26:57,259 [INFO] OpcionempleoScraper (Playwright) inicializado
+2026-09-14 17:26:58,579 [INFO] Inicializando sesión en OpcionEmpleo...
+2026-09-14 17:26:58,579 [INFO] (Puede tardar hasta 20s mientras se resuelve el Turnstile)
+2026-09-14 17:27:02,807 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:27:02,880 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:27:07,416 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-09-14 17:27:07,416 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-data-scientist.html
+2026-09-14 17:27:17,568 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:27:17,595 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:27:21,486 [INFO]    → 20 ofertas encontradas
+2026-09-14 17:27:29,461 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:27:29,481 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:27:39,859 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:27:39,880 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:27:50,992 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:27:51,022 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:28:02,731 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:28:02,752 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:28:13,693 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:28:13,717 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:28:26,079 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:28:26,100 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:28:38,263 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:28:38,288 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:28:48,357 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:28:48,379 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:28:59,251 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:28:59,273 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:29:10,526 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:29:10,550 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:29:21,069 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:29:21,090 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:29:31,400 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:29:31,425 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:29:42,376 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:29:42,410 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:29:52,694 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:29:52,715 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:30:02,547 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:30:02,577 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:30:12,165 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:30:12,190 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:30:22,890 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:30:22,912 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:30:34,058 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:30:34,092 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:30:45,831 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:30:45,852 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:30:55,725 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:30:55,747 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:30:59,528 [INFO]    Página 2/5 → https://www.opcionempleo.com.ar/trabajo-data-scientist.html?p=2
+2026-09-14 17:31:07,461 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:31:07,485 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:31:11,717 [INFO]    → 20 ofertas encontradas
+2026-09-14 17:31:17,803 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:31:17,841 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:31:27,601 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:31:27,625 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:31:37,495 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:31:37,519 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:31:46,762 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:31:46,784 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:31:57,630 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:31:57,653 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:32:07,872 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:32:07,896 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:32:19,759 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:32:19,783 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:32:29,003 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:32:29,027 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:32:38,673 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:32:38,696 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:32:49,981 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:32:50,004 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:33:00,180 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:33:00,211 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:33:10,130 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:33:10,154 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:33:19,562 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:33:19,584 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:33:29,988 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:33:30,011 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:33:40,972 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:33:40,996 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:33:51,990 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:33:52,026 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:34:03,872 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:34:03,893 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:34:14,629 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:34:14,651 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:34:25,170 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:34:25,193 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:34:36,658 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:34:36,693 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:34:40,025 [INFO]    Página 3/5 → https://www.opcionempleo.com.ar/trabajo-data-scientist.html?p=3
+2026-09-14 17:34:50,097 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:34:50,129 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:34:54,679 [INFO]    → 20 ofertas encontradas
+2026-09-14 17:35:00,917 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:35:00,939 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:35:12,228 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:35:12,250 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:35:23,899 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:35:23,921 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:35:35,463 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:35:35,502 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:35:47,356 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:35:47,379 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:35:57,465 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:35:57,493 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:36:08,937 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:36:08,959 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:36:18,554 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:36:18,580 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:36:30,816 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:36:30,838 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:36:40,774 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:36:40,800 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:36:50,559 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:36:50,582 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:37:01,367 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:37:01,389 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:37:11,342 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:37:11,367 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:37:23,075 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:37:23,098 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:37:32,570 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:37:32,592 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:37:43,549 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:37:43,571 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:37:53,542 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:37:53,563 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:38:04,295 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:38:04,334 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:38:14,398 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:38:14,420 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:38:24,280 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:38:24,302 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:38:28,207 [INFO]    Página 4/5 → https://www.opcionempleo.com.ar/trabajo-data-scientist.html?p=4
+2026-09-14 17:38:36,763 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:38:36,787 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:38:41,250 [INFO]    → 20 ofertas encontradas
+2026-09-14 17:38:48,648 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:38:48,671 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:38:58,962 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:38:58,986 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:39:11,151 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:39:11,172 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:39:22,821 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:39:22,842 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:39:37,263 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:39:37,285 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:39:48,418 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:39:48,439 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:39:59,408 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:39:59,429 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:40:09,976 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:40:10,006 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:40:21,295 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:40:21,316 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:40:31,973 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:40:32,000 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:40:42,868 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:40:42,891 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:40:54,070 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:40:54,091 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:41:03,842 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:41:03,874 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:41:14,867 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:41:14,888 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:41:26,375 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:41:26,397 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:41:39,664 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:41:39,685 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:41:50,932 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:41:50,969 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:42:03,427 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:42:03,449 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:42:14,991 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:42:15,014 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:42:26,876 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:42:26,897 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:42:30,622 [INFO]    Página 5/5 → https://www.opcionempleo.com.ar/trabajo-data-scientist.html?p=5
+2026-09-14 17:42:39,361 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:42:39,393 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:42:43,420 [INFO]    → 20 ofertas encontradas
+2026-09-14 17:42:50,315 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:42:50,338 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:43:01,194 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:43:01,219 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:43:12,121 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:43:12,144 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:43:22,264 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:43:22,287 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:43:32,610 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:43:32,641 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:43:43,263 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:43:43,285 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:43:55,428 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:43:55,450 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:44:06,863 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:44:06,886 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:44:18,090 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:44:18,111 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:44:29,665 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:44:29,687 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:44:41,083 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:44:41,112 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:44:51,843 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:44:51,864 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:45:01,636 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:45:01,658 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:45:16,330 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:45:16,363 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:45:28,439 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:45:28,461 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:45:39,574 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:45:39,597 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:45:51,996 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:45:52,018 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:46:02,496 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:46:02,518 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:46:14,478 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:46:14,500 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:46:25,907 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:46:25,930 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:46:29,572 [INFO] Exportadas 100 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_opcionempleo_20260914.csv
+2026-09-14 17:46:29,572 [INFO] ✅ 'Data Scientist': 100 ofertas guardadas
+2026-09-14 17:46:29,572 [INFO]    💤 Pausa: 12.8s
+2026-09-14 17:46:42,385 [INFO] 
+🔍 Buscando: 'Data Analyst'
+2026-09-14 17:46:42,385 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-data-analyst.html
+2026-09-14 17:46:51,461 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:46:51,489 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:46:55,514 [INFO]    → 20 ofertas encontradas
+2026-09-14 17:47:03,019 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:47:03,041 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:47:14,814 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:47:14,835 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:47:25,391 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:47:25,413 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:47:35,129 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:47:35,151 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:47:47,413 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:47:47,435 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:47:58,029 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:47:58,052 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:48:09,061 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:48:09,094 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:48:18,918 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:48:18,940 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:48:29,173 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:48:29,195 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:48:40,022 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:48:40,047 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:48:52,617 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:48:52,642 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:49:03,443 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:49:03,465 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:49:15,245 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:49:15,267 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:49:26,778 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:49:26,811 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:49:36,908 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:49:36,929 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:49:48,175 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:49:48,198 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:49:59,816 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:49:59,838 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:50:10,316 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:50:10,340 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:50:20,752 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:50:20,779 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:50:32,838 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:50:32,864 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:50:36,015 [INFO]    Página 2/5 → https://www.opcionempleo.com.ar/trabajo-data-analyst.html?p=2
+2026-09-14 17:50:45,041 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:50:45,081 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:50:48,954 [INFO]    → 18 ofertas encontradas
+2026-09-14 17:50:54,969 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:50:54,996 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:51:05,566 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:51:05,603 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:51:17,017 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:51:17,039 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:51:29,448 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:51:29,470 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:51:40,120 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:51:40,142 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:51:51,996 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:51:52,017 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:52:03,790 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:52:03,825 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:52:16,993 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:52:17,015 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:52:28,243 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:52:28,265 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:52:39,299 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:52:39,326 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:52:50,343 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:52:50,365 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:53:01,406 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:53:01,440 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:53:11,966 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:53:11,993 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:53:22,445 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:53:22,469 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:53:33,885 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:53:33,912 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:53:45,747 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:53:45,773 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:53:56,317 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:53:56,349 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:54:08,175 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:54:08,197 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:54:11,886 [INFO]    Página 3/5 → https://www.opcionempleo.com.ar/trabajo-data-analyst.html?p=3
+2026-09-14 17:54:22,126 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:54:22,151 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:54:26,353 [INFO]    → 20 ofertas encontradas
+2026-09-14 17:54:33,555 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:54:33,577 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:54:43,837 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:54:43,863 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:54:57,111 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:54:57,132 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:55:10,225 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:55:10,246 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:55:21,480 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:55:21,501 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:55:33,566 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:55:33,588 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:55:44,049 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:55:44,070 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:55:55,419 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:55:55,444 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:56:06,389 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:56:06,410 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:56:18,068 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:56:18,100 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:56:29,795 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:56:29,816 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:56:43,211 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:56:43,233 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:56:54,041 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:56:54,063 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:57:04,424 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:57:04,446 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:57:15,299 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:57:15,331 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:57:26,715 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:57:26,737 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:57:37,110 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:57:37,134 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:57:48,659 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:57:48,689 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:57:58,900 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:57:58,934 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:58:09,535 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:58:09,557 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:58:13,407 [INFO]    Página 4/5 → https://www.opcionempleo.com.ar/trabajo-data-analyst.html?p=4
+2026-09-14 17:58:23,252 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:58:23,276 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:58:27,142 [INFO]    → 20 ofertas encontradas
+2026-09-14 17:58:35,037 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:58:35,059 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:58:45,812 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:58:45,833 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:58:56,669 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:58:56,690 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:59:06,469 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:59:06,492 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:59:16,817 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:59:16,849 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:59:26,944 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:59:26,966 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:59:38,546 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:59:38,570 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:59:49,171 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:59:49,192 [INFO]    ✅ Turnstile resuelto
+2026-09-14 17:59:59,528 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 17:59:59,549 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:00:10,672 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:00:10,694 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:00:20,910 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:00:20,934 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:00:32,997 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:00:33,019 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:00:43,714 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:00:43,736 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:00:55,388 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:00:55,410 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:01:05,584 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:01:05,614 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:01:15,697 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:01:15,719 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:01:27,736 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:01:27,756 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:01:38,984 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:01:39,011 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:01:51,131 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:01:51,171 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:02:02,679 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:02:02,700 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:02:06,549 [INFO]    Página 5/5 → https://www.opcionempleo.com.ar/trabajo-data-analyst.html?p=5
+2026-09-14 18:02:15,421 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:02:15,452 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:02:19,591 [INFO]    → 20 ofertas encontradas
+2026-09-14 18:02:25,735 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:02:25,756 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:02:36,319 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:02:36,344 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:02:47,124 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:02:47,145 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:02:57,349 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:02:57,371 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:03:07,697 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:03:07,719 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:03:17,692 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:03:17,714 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:03:28,381 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:03:28,402 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:03:38,625 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:03:38,647 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:03:49,847 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:03:49,868 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:04:01,883 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:04:01,905 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:04:15,292 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:04:15,322 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:04:25,722 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:04:25,743 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:04:36,293 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:04:36,315 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:04:49,006 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:04:49,028 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:04:59,004 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:04:59,025 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:05:10,368 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:05:10,390 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:05:20,322 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:05:20,344 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:05:30,507 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:05:30,532 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:05:40,186 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:05:40,213 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:05:50,163 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:05:50,188 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:05:54,142 [INFO] Exportadas 98 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_opcionempleo_20260914.csv
+2026-09-14 18:05:54,142 [INFO] ✅ 'Data Analyst': 98 ofertas guardadas
+2026-09-14 18:05:54,142 [INFO]    💤 Pausa: 9.4s
+2026-09-14 18:06:03,554 [INFO] 
+🔍 Buscando: 'Machine Learning Engineer'
+2026-09-14 18:06:03,554 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-machine-learning.html
+2026-09-14 18:06:13,899 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:06:13,932 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:06:17,580 [INFO]    → 20 ofertas encontradas
+2026-09-14 18:06:24,714 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:06:24,736 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:06:35,611 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:06:35,632 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:06:44,811 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:06:44,832 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:06:55,057 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:06:55,092 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:07:06,638 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:07:06,661 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:07:17,053 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:07:17,075 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:07:27,912 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:07:27,933 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:07:38,209 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:07:38,245 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:07:50,566 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:07:50,588 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:08:01,087 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:08:01,110 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:08:10,968 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:08:10,990 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:08:20,879 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:08:20,919 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:08:32,563 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:08:32,583 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:08:42,300 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:08:42,323 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:08:54,500 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:08:54,525 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:09:06,686 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:09:06,722 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:09:16,120 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:09:16,143 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:09:27,329 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:09:27,355 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:09:38,167 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:09:38,188 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:09:48,257 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:09:48,297 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:09:51,484 [INFO]    Página 2/5 → https://www.opcionempleo.com.ar/trabajo-machine-learning.html?p=2
+2026-09-14 18:10:00,804 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:10:00,829 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:10:05,138 [INFO]    → 20 ofertas encontradas
+2026-09-14 18:10:13,344 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:10:13,366 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:10:25,303 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:10:25,325 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:10:37,148 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:10:37,170 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:10:48,425 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:10:48,447 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:10:59,402 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:10:59,427 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:11:14,936 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:11:14,958 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:11:25,075 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:11:25,097 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:11:37,957 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:11:37,990 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:11:49,239 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:11:49,261 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:11:59,758 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:11:59,780 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:12:11,810 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:12:11,833 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:12:23,711 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:12:23,748 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:12:34,627 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:12:34,648 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:12:44,732 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:12:44,753 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:12:55,321 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:12:55,344 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:13:05,569 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:13:05,608 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:13:16,097 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:13:16,122 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:13:26,962 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:13:26,983 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:13:37,262 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:13:37,284 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:13:48,491 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:13:48,524 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:13:52,015 [INFO]    Página 3/5 → https://www.opcionempleo.com.ar/trabajo-machine-learning.html?p=3
+2026-09-14 18:13:59,527 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:13:59,552 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:14:03,197 [INFO]    → 16 ofertas encontradas
+2026-09-14 18:14:09,530 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:14:09,553 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:14:21,528 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:14:21,553 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:14:32,433 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:14:32,465 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:14:42,830 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:14:42,855 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:14:53,797 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:14:53,819 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:15:05,114 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:15:05,135 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:15:15,882 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:15:15,905 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:15:27,272 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:15:27,294 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:15:37,374 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:15:37,399 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:15:47,161 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:15:47,183 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:15:57,681 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:15:57,707 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:16:09,402 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:16:09,425 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:16:19,885 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:16:19,918 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:16:29,422 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:16:29,443 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:16:40,416 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:16:40,442 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:16:50,609 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:16:50,634 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:16:54,017 [INFO]    Página 4/5 → https://www.opcionempleo.com.ar/trabajo-machine-learning.html?p=4
+2026-09-14 18:17:01,338 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:17:01,372 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:17:05,551 [INFO]    → 16 ofertas encontradas
+2026-09-14 18:17:13,489 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:17:13,511 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:17:24,186 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:17:24,207 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:17:35,590 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:17:35,615 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:17:46,105 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:17:46,135 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:17:56,900 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:17:56,923 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:18:09,150 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:18:09,171 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:18:20,230 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:18:20,256 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:18:30,511 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:18:30,553 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:18:41,632 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:18:41,658 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:18:52,446 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:18:52,468 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:19:02,619 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:19:02,642 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:19:14,208 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:19:14,229 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:19:25,966 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:19:25,988 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:19:35,887 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:19:35,915 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:19:47,065 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:19:47,088 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:19:57,987 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:19:58,009 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:20:01,158 [INFO]    Página 5/5 → https://www.opcionempleo.com.ar/trabajo-machine-learning.html?p=5
+2026-09-14 18:20:11,036 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:20:11,067 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:20:15,324 [INFO]    → 15 ofertas encontradas
+2026-09-14 18:20:22,262 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:20:22,284 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:20:32,631 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:20:32,654 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:20:44,063 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:20:44,085 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:20:55,975 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:20:55,996 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:21:06,660 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:21:06,685 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:21:17,704 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:21:17,726 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:21:31,145 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:21:31,167 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:21:43,130 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:21:43,152 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:21:55,034 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:21:55,058 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:22:06,742 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:22:06,763 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:22:17,026 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:22:17,065 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:22:28,753 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:22:28,774 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:22:39,450 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:22:39,472 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:22:51,249 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:22:51,270 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:23:00,376 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:23:00,415 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:23:04,003 [INFO] Exportadas 87 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_opcionempleo_20260914.csv
+2026-09-14 18:23:04,003 [INFO] ✅ 'Machine Learning Engineer': 87 ofertas guardadas
+2026-09-14 18:23:04,003 [INFO]    💤 Pausa: 13.7s
+2026-09-14 18:23:17,680 [INFO] 
+🔍 Buscando: 'NLP Engineer'
+2026-09-14 18:23:17,681 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-nlp.html
+2026-09-14 18:23:26,318 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:23:26,341 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:23:30,205 [INFO]    → 18 ofertas encontradas
+2026-09-14 18:23:38,344 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:23:38,366 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:23:48,436 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:23:48,458 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:23:57,844 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:23:57,877 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:24:08,100 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:24:08,124 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:24:18,349 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:24:18,371 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:24:28,649 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:24:28,670 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:24:38,849 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:24:38,871 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:24:49,283 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:24:49,319 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:24:58,721 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:24:58,745 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:25:09,581 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:25:09,604 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:25:20,800 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:25:20,821 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:25:32,155 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:25:32,197 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:25:42,292 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:25:42,315 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:25:56,565 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:25:56,591 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:26:09,714 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:26:09,736 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:26:20,525 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:26:20,548 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:26:31,307 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:26:31,343 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:26:41,073 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:26:41,094 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:26:44,997 [INFO]    Página 2/5 → https://www.opcionempleo.com.ar/trabajo-nlp.html?p=2
+2026-09-14 18:26:52,799 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:26:52,823 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:26:56,875 [INFO]    → 17 ofertas encontradas
+2026-09-14 18:27:04,267 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:27:04,288 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:27:15,602 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:27:15,639 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:27:27,006 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:27:27,028 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:27:37,077 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:27:37,099 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:27:47,401 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:27:47,426 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:27:57,504 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:27:57,525 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:28:08,616 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:28:08,638 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:28:19,482 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:28:19,504 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:28:31,154 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:28:31,180 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:28:43,033 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:28:43,056 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:28:53,785 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:28:53,807 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:29:04,024 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:29:04,045 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:29:14,704 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:29:14,728 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:29:26,368 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:29:26,406 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:29:38,015 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:29:38,037 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:29:49,207 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:29:49,233 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:30:01,175 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:30:01,196 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:30:05,242 [INFO]    Página 3/5 → https://www.opcionempleo.com.ar/trabajo-nlp.html?p=3
+2026-09-14 18:30:15,955 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:30:15,979 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:30:20,115 [INFO]    → 17 ofertas encontradas
+2026-09-14 18:30:27,425 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:30:27,448 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:30:37,999 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:30:38,021 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:30:49,546 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:30:49,568 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:31:01,539 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:31:01,560 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:31:12,958 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:31:12,984 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:31:23,175 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:31:23,209 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:31:34,540 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:31:34,562 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:31:44,674 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:31:44,695 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:31:56,020 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:31:56,042 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:32:07,967 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:32:07,989 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:32:19,404 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:32:19,426 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:32:31,412 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:32:31,434 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:32:43,896 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:32:43,918 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:32:55,571 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:32:55,591 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:33:05,600 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:33:05,623 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:33:17,734 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:33:17,757 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:33:28,872 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:33:28,895 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:33:32,850 [INFO]    Página 4/5 → https://www.opcionempleo.com.ar/trabajo-nlp.html?p=4
+2026-09-14 18:33:40,514 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:33:40,538 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:33:44,274 [INFO]    → 18 ofertas encontradas
+2026-09-14 18:33:52,755 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:33:52,789 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:34:02,940 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:34:02,961 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:34:16,228 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:34:16,250 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:34:28,330 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:34:28,353 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:34:40,198 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:34:40,220 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:34:53,317 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:34:53,339 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:35:05,395 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:35:05,417 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:35:17,474 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:35:17,496 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:35:29,097 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:35:29,121 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:35:41,128 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:35:41,149 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:35:52,061 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:35:52,083 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:36:03,236 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:36:03,271 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:36:13,772 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:36:13,798 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:36:23,713 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:36:23,736 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:36:33,588 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:36:33,610 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:36:43,360 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:36:43,382 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:36:54,085 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:36:54,106 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:37:05,293 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:37:05,314 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:37:09,193 [INFO]    Página 5/5 → https://www.opcionempleo.com.ar/trabajo-nlp.html?p=5
+2026-09-14 18:37:18,431 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:37:18,475 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:37:22,272 [INFO]    → 19 ofertas encontradas
+2026-09-14 18:37:29,080 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:37:29,102 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:37:39,296 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:37:39,318 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:37:49,048 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:37:49,069 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:38:00,155 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:38:00,192 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:38:11,304 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:38:11,328 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:38:21,376 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:38:21,398 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:38:32,076 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:38:32,097 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:38:41,783 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:38:41,805 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:38:52,394 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:38:52,417 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:39:02,136 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:39:02,159 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:39:11,953 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:39:11,979 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:39:22,175 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:39:22,196 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:39:32,211 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:39:32,245 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:39:42,790 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:39:42,813 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:39:53,494 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:39:53,516 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:40:03,120 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:40:03,141 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:40:14,541 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:40:14,565 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:40:24,397 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:40:24,419 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:40:35,047 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:40:35,068 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:40:38,299 [INFO] Exportadas 89 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_opcionempleo_20260914.csv
+2026-09-14 18:40:38,299 [INFO] ✅ 'NLP Engineer': 89 ofertas guardadas
+2026-09-14 18:40:38,299 [INFO]    💤 Pausa: 11.5s
+2026-09-14 18:40:49,817 [INFO] 
+🔍 Buscando: 'Data Engineer'
+2026-09-14 18:40:49,817 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-data-engineer.html
+2026-09-14 18:40:59,898 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:40:59,922 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:41:03,918 [INFO]    → 20 ofertas encontradas
+2026-09-14 18:41:10,021 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:41:10,046 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:41:20,954 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:41:20,976 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:41:32,449 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:41:32,470 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:41:43,319 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:41:43,341 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:41:54,336 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:41:54,373 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:42:04,288 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:42:04,310 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:42:16,048 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:42:16,069 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:42:27,633 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:42:27,654 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:42:37,163 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:42:37,184 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:42:48,820 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:42:48,858 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:42:59,316 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:42:59,338 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:43:09,444 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:43:09,466 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:43:19,517 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:43:19,539 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:43:30,018 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:43:30,039 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:43:39,208 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:43:39,243 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:43:49,239 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:43:49,261 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:43:59,231 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:43:59,253 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:44:10,553 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:44:10,574 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:44:22,406 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:44:22,426 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:44:32,588 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:44:32,624 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:44:36,313 [INFO]    Página 2/5 → https://www.opcionempleo.com.ar/trabajo-data-engineer.html?p=2
+2026-09-14 18:44:44,075 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:44:44,099 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:44:48,304 [INFO]    → 20 ofertas encontradas
+2026-09-14 18:44:56,153 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:44:56,175 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:45:06,616 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:45:06,641 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:45:17,246 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:45:17,281 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:45:30,462 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:45:30,484 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:45:46,008 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:45:46,032 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:45:55,506 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:45:55,528 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:46:05,751 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:46:05,772 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:46:16,902 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:46:16,936 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:46:27,495 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:46:27,516 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:46:38,437 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:46:38,460 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:46:49,990 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:46:50,010 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:47:00,082 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:47:00,105 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:47:10,474 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:47:10,496 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:47:20,771 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:47:20,800 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:47:31,280 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:47:31,302 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:47:41,247 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:47:41,269 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:47:52,805 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:47:52,840 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:48:03,946 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:48:03,968 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:48:14,853 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:48:14,874 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:48:25,214 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:48:25,237 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:48:28,720 [INFO]    Página 3/5 → https://www.opcionempleo.com.ar/trabajo-data-engineer.html?p=3
+2026-09-14 18:48:37,320 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:48:37,368 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:48:41,500 [INFO]    → 19 ofertas encontradas
+2026-09-14 18:48:49,594 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:48:49,616 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:49:00,084 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:49:00,108 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:49:09,957 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:49:09,981 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:49:22,059 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:49:22,093 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:49:31,803 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:49:31,824 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:49:43,624 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:49:43,645 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:49:56,543 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:49:56,566 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:50:07,797 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:50:07,822 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:50:19,447 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:50:19,483 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:50:31,558 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:50:31,579 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:50:42,729 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:50:42,750 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:50:53,336 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:50:53,357 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:51:04,548 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:51:04,594 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:51:16,096 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:51:16,118 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:51:26,340 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:51:26,361 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:51:37,427 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:51:37,452 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:51:51,363 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:51:51,385 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:52:04,542 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:52:04,576 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:52:15,879 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:52:15,901 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:52:19,390 [INFO]    Página 4/5 → https://www.opcionempleo.com.ar/trabajo-data-engineer.html?p=4
+2026-09-14 18:52:28,431 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:52:28,454 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:52:32,122 [INFO]    → 18 ofertas encontradas
+2026-09-14 18:52:38,451 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:52:38,473 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:52:49,107 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:52:49,129 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:52:59,263 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:52:59,288 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:53:09,371 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:53:09,393 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:53:21,336 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:53:21,359 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:53:31,293 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:53:31,314 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:53:42,282 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:53:42,303 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:53:53,082 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:53:53,105 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:54:05,199 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:54:05,224 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:54:18,963 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:54:18,985 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:54:30,930 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:54:30,952 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:54:41,728 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:54:41,766 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:54:53,383 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:54:53,406 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:55:04,141 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:55:04,163 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:55:14,652 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:55:14,673 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:55:25,585 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:55:25,627 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:55:36,737 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:55:36,759 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:55:47,544 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:55:47,566 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:55:51,586 [INFO]    Página 5/5 → https://www.opcionempleo.com.ar/trabajo-data-engineer.html?p=5
+2026-09-14 18:56:01,414 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:56:01,438 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:56:05,585 [INFO]    → 20 ofertas encontradas
+2026-09-14 18:56:12,838 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:56:12,859 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:56:22,387 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:56:22,408 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:56:32,424 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:56:32,446 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:56:44,403 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:56:44,428 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:56:55,517 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:56:55,539 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:57:17,664 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:57:17,686 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:57:29,311 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:57:29,333 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:57:40,578 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:57:40,602 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:57:52,306 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:57:52,331 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:58:03,842 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:58:03,864 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:58:14,100 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:58:14,121 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:58:25,942 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:58:25,979 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:58:36,628 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:58:36,651 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:58:47,240 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:58:47,266 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:58:58,130 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:58:58,153 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:59:08,884 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:59:08,919 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:59:18,160 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:59:18,184 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:59:29,496 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:59:29,521 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:59:39,910 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:59:39,931 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:59:50,816 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 18:59:50,857 [INFO]    ✅ Turnstile resuelto
+2026-09-14 18:59:54,196 [INFO] Exportadas 97 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_opcionempleo_20260914.csv
+2026-09-14 18:59:54,196 [INFO] ✅ 'Data Engineer': 97 ofertas guardadas
+2026-09-14 18:59:54,196 [INFO]    💤 Pausa: 13.0s
+2026-09-14 19:00:07,175 [INFO] 
+🔍 Buscando: 'Software Engineer'
+2026-09-14 19:00:07,175 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-software-engineer.html
+2026-09-14 19:00:14,447 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:00:14,472 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:00:18,983 [INFO]    → 18 ofertas encontradas
+2026-09-14 19:00:25,727 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:00:25,748 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:00:35,547 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:00:35,588 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:00:46,414 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:00:46,434 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:00:58,699 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:00:58,720 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:01:08,522 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:01:08,553 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:01:20,050 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:01:20,093 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:01:32,788 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:01:32,809 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:01:43,224 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:01:43,249 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:01:53,589 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:01:53,613 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:02:04,514 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:02:04,536 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:02:14,460 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:02:14,494 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:02:24,677 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:02:24,698 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:02:35,500 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:02:35,524 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:02:46,242 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:02:46,264 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:02:57,199 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:02:57,243 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:03:09,486 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:03:09,508 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:03:19,730 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:03:19,752 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:03:29,800 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:03:29,822 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:03:33,411 [INFO]    Página 2/5 → https://www.opcionempleo.com.ar/trabajo-software-engineer.html?p=2
+2026-09-14 19:03:42,059 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:03:42,086 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:03:46,112 [INFO]    → 18 ofertas encontradas
+2026-09-14 19:03:52,381 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:03:52,408 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:04:02,518 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:04:02,543 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:04:12,805 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:04:12,826 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:04:24,751 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:04:24,786 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:04:34,790 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:04:34,811 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:04:46,692 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:04:46,714 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:04:57,891 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:04:57,912 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:05:08,936 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:05:08,976 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:05:20,491 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:05:20,513 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:05:32,520 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:05:32,545 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:05:44,033 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:05:44,061 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:05:54,405 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:05:54,427 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:06:05,282 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:06:05,318 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:06:15,190 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:06:15,214 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:06:26,150 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:06:26,172 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:06:36,356 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:06:36,377 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:06:48,248 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:06:48,269 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:06:57,732 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:06:57,769 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:07:01,165 [INFO]    Página 3/5 → https://www.opcionempleo.com.ar/trabajo-software-engineer.html?p=3
+2026-09-14 19:07:10,191 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:07:10,215 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:07:14,761 [INFO]    → 19 ofertas encontradas
+2026-09-14 19:07:21,466 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:07:21,488 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:07:31,658 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:07:31,680 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:07:42,949 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:07:42,970 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:07:53,348 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:07:53,391 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:08:03,911 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:08:03,934 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:08:15,401 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:08:15,422 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:08:26,339 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:08:26,361 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:08:36,179 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:08:36,203 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:08:45,974 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:08:45,996 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:08:55,775 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:08:55,796 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:09:05,495 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:09:05,518 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:09:16,239 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:09:16,260 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:09:27,406 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:09:27,445 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:09:38,568 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:09:38,591 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:09:48,484 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:09:48,505 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:09:59,223 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:09:59,244 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:10:10,405 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:10:10,433 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:10:23,006 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:10:23,044 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:10:34,837 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:10:34,859 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:10:38,017 [INFO]    Página 4/5 → https://www.opcionempleo.com.ar/trabajo-software-engineer.html?p=4
+2026-09-14 19:10:47,648 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:10:47,672 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:10:51,764 [INFO]    → 19 ofertas encontradas
+2026-09-14 19:10:59,878 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:10:59,900 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:11:10,943 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:11:10,965 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:11:20,992 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:11:21,013 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:11:31,098 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:11:31,120 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:11:42,355 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:11:42,380 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:11:53,216 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:11:53,245 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:12:03,605 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:12:03,628 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:12:14,088 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:12:14,110 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:12:24,621 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:12:24,643 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:12:35,028 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:12:35,072 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:12:46,245 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:12:46,266 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:12:56,827 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:12:56,849 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:13:07,300 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:13:07,322 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:13:16,354 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:13:16,395 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:13:26,666 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:13:26,687 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:13:36,539 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:13:36,560 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:13:46,539 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:13:46,561 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:13:58,103 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:13:58,145 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:14:09,841 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:14:09,863 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:14:13,128 [INFO]    Página 5/5 → https://www.opcionempleo.com.ar/trabajo-software-engineer.html?p=5
+2026-09-14 19:14:22,577 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:14:22,603 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:14:26,774 [INFO]    → 20 ofertas encontradas
+2026-09-14 19:14:33,157 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:14:33,186 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:14:42,879 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:14:42,901 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:14:52,347 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:14:52,369 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:15:02,099 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:15:02,121 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:15:12,767 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:15:12,790 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:15:24,891 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:15:24,913 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:15:35,697 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:15:35,723 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:15:45,572 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:15:45,595 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:15:57,063 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:15:57,085 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:16:06,765 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:16:06,787 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:16:17,692 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:16:17,714 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:16:27,753 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:16:27,775 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:16:38,126 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:16:38,200 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:16:48,078 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:16:48,101 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:16:57,966 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:16:57,988 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:17:10,561 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:17:10,583 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:17:21,283 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:17:21,305 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:17:32,491 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:17:32,515 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:17:44,765 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:17:44,790 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:17:56,376 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:17:56,409 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:18:00,476 [INFO] Exportadas 94 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_opcionempleo_20260914.csv
+2026-09-14 19:18:00,476 [INFO] ✅ 'Software Engineer': 94 ofertas guardadas
+2026-09-14 19:18:00,476 [INFO]    💤 Pausa: 8.8s
+2026-09-14 19:18:09,329 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-09-14 19:18:09,329 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-python.html
+2026-09-14 19:18:19,178 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:18:19,202 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:18:23,506 [INFO]    → 16 ofertas encontradas
+2026-09-14 19:18:31,715 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:18:31,740 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:18:42,897 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:18:42,941 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:18:54,086 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:18:54,116 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:19:05,127 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:19:05,148 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:19:15,784 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:19:15,805 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:19:25,327 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:19:25,350 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:19:37,103 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:19:37,144 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:19:48,656 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:19:48,680 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:20:00,357 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:20:00,380 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:20:12,221 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:20:12,244 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:20:22,433 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:20:22,454 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:20:31,966 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:20:31,987 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:20:41,731 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:20:41,754 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:20:52,509 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:20:52,530 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:21:04,359 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:21:04,380 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:21:13,738 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:21:13,775 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:21:16,972 [INFO]    Página 2/5 → https://www.opcionempleo.com.ar/trabajo-python.html?p=2
+2026-09-14 19:21:27,110 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:21:27,134 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:21:31,679 [INFO]    → 19 ofertas encontradas
+2026-09-14 19:21:37,610 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:21:37,639 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:21:47,720 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:21:47,743 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:21:58,961 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:21:58,986 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:22:11,087 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:22:11,109 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:22:21,130 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:22:21,152 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:22:30,742 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:22:30,766 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:22:40,803 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:22:40,831 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:22:52,270 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:22:52,309 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:23:03,430 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:23:03,452 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:23:12,750 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:23:12,773 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:23:22,544 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:23:22,573 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:23:32,888 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:23:32,933 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:23:43,993 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:23:44,014 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:23:55,235 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:23:55,257 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:24:06,244 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:24:06,265 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:24:16,357 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:24:16,402 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:24:26,262 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:24:26,284 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:24:36,425 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:24:36,447 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:24:46,538 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:24:46,559 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:24:50,652 [INFO]    Página 3/5 → https://www.opcionempleo.com.ar/trabajo-python.html?p=3
+2026-09-14 19:24:59,810 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:24:59,859 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:25:04,073 [INFO]    → 18 ofertas encontradas
+2026-09-14 19:25:10,673 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:25:10,696 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:25:21,863 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:25:21,885 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:25:32,702 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:25:32,724 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:25:42,923 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:25:42,963 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:25:54,880 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:25:54,902 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:26:05,885 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:26:05,906 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:26:17,457 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:26:17,485 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:26:28,204 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:26:28,225 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:26:40,479 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:26:40,518 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:26:51,362 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:26:51,383 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:27:03,002 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:27:03,023 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:27:13,818 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:27:13,839 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:27:23,777 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:27:23,798 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:27:36,001 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:27:36,062 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:27:47,089 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:27:47,111 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:27:57,277 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:27:57,306 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:28:06,573 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:28:06,594 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:28:16,835 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:28:16,879 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:28:20,830 [INFO]    Página 4/5 → https://www.opcionempleo.com.ar/trabajo-python.html?p=4
+2026-09-14 19:28:29,961 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:28:29,987 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:28:34,421 [INFO]    → 17 ofertas encontradas
+2026-09-14 19:28:40,363 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:28:40,385 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:28:50,125 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:28:50,147 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:29:01,533 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:29:01,556 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:29:11,403 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:29:11,425 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:29:21,996 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:29:22,022 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:29:31,728 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:29:31,749 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:29:42,011 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:29:42,033 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:29:53,673 [INFO]    ⏳ Turnstile detectado — esperando resolución automática...
+2026-09-14 19:29:53,696 [INFO]    ✅ Turnstile resuelto
+2026-09-14 19:29:57,655 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/jobad/aradddafd7007791f5963b9c785c7e7e47: Page.content: Target page, context or browser has been closed
+2026-09-14 19:30:02,489 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/jobad/ar8c614dcce9703d8290773209bb3cd5ca: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:30:06,533 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/jobad/ara701093a0245bf8b885547d8b801d58a: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:30:09,727 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/jobad/arf96edfb646af4d52a168a8aadac3e050: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:30:14,644 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/jobad/ar31634bc8407e82a8d2647a49297278a4: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:30:19,718 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/jobad/arde8d573d0b266436aff5f04108668b7b: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:30:23,204 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/jobad/ar1669fa9c6d6ab809cfd4ce9cbd324350: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:30:26,970 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/jobad/ar98593d0a457416849dea1bdeb28b9ade: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:30:32,354 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/jobad/ar5fe305e65256f9e60f560a62c00e0abb: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:30:37,288 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/jobad/ar3de4e3033c54981f6b2ac9e5bd167e5e: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:30:37,301 [INFO]    Página 5/5 → https://www.opcionempleo.com.ar/trabajo-python.html?p=5
+2026-09-14 19:30:44,118 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/trabajo-python.html?p=5: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:30:44,119 [WARNING]    ⚠️  Sin contenido. Saltando.
+2026-09-14 19:30:44,152 [INFO] Exportadas 70 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_opcionempleo_20260914.csv
+2026-09-14 19:30:44,152 [INFO] ✅ 'Python Developer': 70 ofertas guardadas
+2026-09-14 19:30:44,153 [INFO]    💤 Pausa: 13.7s
+2026-09-14 19:30:57,865 [INFO] 
+🔍 Buscando: 'Desarrollador Backend'
+2026-09-14 19:30:57,866 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-desarrollador-backend.html
+2026-09-14 19:31:03,532 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/trabajo-desarrollador-backend.html: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:31:03,532 [WARNING]    ⚠️  Sin contenido. Saltando.
+2026-09-14 19:31:03,533 [INFO]    Página 2/5 → https://www.opcionempleo.com.ar/trabajo-desarrollador-backend.html?p=2
+2026-09-14 19:31:09,914 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/trabajo-desarrollador-backend.html?p=2: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:31:09,915 [WARNING]    ⚠️  Sin contenido. Saltando.
+2026-09-14 19:31:09,915 [INFO]    Página 3/5 → https://www.opcionempleo.com.ar/trabajo-desarrollador-backend.html?p=3
+2026-09-14 19:31:15,249 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/trabajo-desarrollador-backend.html?p=3: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:31:15,249 [WARNING]    ⚠️  Sin contenido. Saltando.
+2026-09-14 19:31:15,256 [INFO]    Página 4/5 → https://www.opcionempleo.com.ar/trabajo-desarrollador-backend.html?p=4
+2026-09-14 19:31:19,370 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/trabajo-desarrollador-backend.html?p=4: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:31:19,370 [WARNING]    ⚠️  Sin contenido. Saltando.
+2026-09-14 19:31:19,370 [INFO]    Página 5/5 → https://www.opcionempleo.com.ar/trabajo-desarrollador-backend.html?p=5
+2026-09-14 19:31:25,742 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/trabajo-desarrollador-backend.html?p=5: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:31:25,742 [WARNING]    ⚠️  Sin contenido. Saltando.
+2026-09-14 19:31:25,742 [INFO] ✅ 'Desarrollador Backend': 0 ofertas guardadas
+2026-09-14 19:31:25,743 [INFO]    💤 Pausa: 10.4s
+2026-09-14 19:31:36,168 [INFO] 
+🔍 Buscando: 'Desarrollador Full Stack'
+2026-09-14 19:31:36,168 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-desarrollador-full-stack.html
+2026-09-14 19:31:42,962 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/trabajo-desarrollador-full-stack.html: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:31:42,962 [WARNING]    ⚠️  Sin contenido. Saltando.
+2026-09-14 19:31:42,963 [INFO]    Página 2/5 → https://www.opcionempleo.com.ar/trabajo-desarrollador-full-stack.html?p=2
+2026-09-14 19:31:49,175 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/trabajo-desarrollador-full-stack.html?p=2: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:31:49,175 [WARNING]    ⚠️  Sin contenido. Saltando.
+2026-09-14 19:31:49,175 [INFO]    Página 3/5 → https://www.opcionempleo.com.ar/trabajo-desarrollador-full-stack.html?p=3
+2026-09-14 19:31:54,570 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/trabajo-desarrollador-full-stack.html?p=3: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:31:54,570 [WARNING]    ⚠️  Sin contenido. Saltando.
+2026-09-14 19:31:54,577 [INFO]    Página 4/5 → https://www.opcionempleo.com.ar/trabajo-desarrollador-full-stack.html?p=4
+2026-09-14 19:31:58,752 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/trabajo-desarrollador-full-stack.html?p=4: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:31:58,752 [WARNING]    ⚠️  Sin contenido. Saltando.
+2026-09-14 19:31:58,752 [INFO]    Página 5/5 → https://www.opcionempleo.com.ar/trabajo-desarrollador-full-stack.html?p=5
+2026-09-14 19:32:04,025 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/trabajo-desarrollador-full-stack.html?p=5: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:32:04,026 [WARNING]    ⚠️  Sin contenido. Saltando.
+2026-09-14 19:32:04,026 [INFO] ✅ 'Desarrollador Full Stack': 0 ofertas guardadas
+2026-09-14 19:32:04,026 [INFO]    💤 Pausa: 10.1s
+2026-09-14 19:32:14,165 [INFO] 
+🔍 Buscando: 'Ingeniero de Datos'
+2026-09-14 19:32:14,165 [INFO]    Página 1/5 → https://www.opcionempleo.com.ar/trabajo-ingeniero-de-datos.html
+2026-09-14 19:32:19,955 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/trabajo-ingeniero-de-datos.html: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:32:19,955 [WARNING]    ⚠️  Sin contenido. Saltando.
+2026-09-14 19:32:19,955 [INFO]    Página 2/5 → https://www.opcionempleo.com.ar/trabajo-ingeniero-de-datos.html?p=2
+2026-09-14 19:32:24,979 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/trabajo-ingeniero-de-datos.html?p=2: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:32:24,979 [WARNING]    ⚠️  Sin contenido. Saltando.
+2026-09-14 19:32:24,986 [INFO]    Página 3/5 → https://www.opcionempleo.com.ar/trabajo-ingeniero-de-datos.html?p=3
+2026-09-14 19:32:30,170 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/trabajo-ingeniero-de-datos.html?p=3: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:32:30,170 [WARNING]    ⚠️  Sin contenido. Saltando.
+2026-09-14 19:32:30,177 [INFO]    Página 4/5 → https://www.opcionempleo.com.ar/trabajo-ingeniero-de-datos.html?p=4
+2026-09-14 19:32:35,198 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/trabajo-ingeniero-de-datos.html?p=4: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:32:35,198 [WARNING]    ⚠️  Sin contenido. Saltando.
+2026-09-14 19:32:35,205 [INFO]    Página 5/5 → https://www.opcionempleo.com.ar/trabajo-ingeniero-de-datos.html?p=5
+2026-09-14 19:32:41,227 [ERROR] Error Playwright en https://www.opcionempleo.com.ar/trabajo-ingeniero-de-datos.html?p=5: Page.goto: Target page, context or browser has been closed
+2026-09-14 19:32:41,228 [WARNING]    ⚠️  Sin contenido. Saltando.
+2026-09-14 19:32:41,228 [INFO] ✅ 'Ingeniero de Datos': 0 ofertas guardadas
+2026-09-14 19:32:41,228 [INFO]    💤 Pausa: 9.7s
+2026-09-14 19:32:50,980 [INFO] 
+============================================================
+2026-09-14 19:32:50,981 [INFO] SCRAPING FINALIZADO - OpcionEmpleo Argentina
+2026-09-14 19:32:50,981 [INFO] Total ofertas únicas: 635
+2026-09-14 19:32:50,981 [INFO] DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_opcionempleo.db
+2026-09-14 19:32:50,981 [INFO] CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_opcionempleo_20260914.csv
+2026-09-14 19:32:50,981 [INFO] Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/opcionempleo_20260914_172657.log
+2026-09-14 19:32:50,981 [INFO] ============================================================
+2026-09-14 19:32:50,988 [INFO]   ✅ opcionempleo: 635 ofertas recopiladas
+2026-09-14 19:32:50,989 [INFO] 
+============================================================
+2026-09-14 19:32:50,989 [INFO]   EJECUTANDO: jobrapido (JobrapidoScraper)
+2026-09-14 19:32:50,989 [INFO]   Queries: definidas en el módulo
+2026-09-14 19:32:50,989 [INFO] ============================================================
+2026-09-14 19:32:51,017 [INFO] DB lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_jobrapido.db
+2026-09-14 19:32:51,018 [INFO] Ejecutando diagnóstico de Jobrapido...
+2026-09-14 19:32:55,417 [INFO]   https://ar.jobrapido.com/Ofertas-de-trabajo-para-Python?l=Argentina → HTTP 200 | 396,581 chars
+2026-09-14 19:32:55,457 [INFO]   <title>: Bolsa trabajo para Python, ofertas empleo | Jobrapido.com
+2026-09-14 19:32:55,458 [INFO]   JS-only:False
+2026-09-14 19:32:55,462 [INFO]   Clase 'job': 56 | ejemplo: search google-one-tap-enabled smartphone-banner-enabled not-
+2026-09-14 19:32:55,465 [INFO]   Clase 'result': 261 | ejemplo: wrapper result-list
+2026-09-14 19:32:55,471 [INFO]   Clase 'item': 289 | ejemplo: suggested-locations-item
+2026-09-14 19:32:55,478 [INFO]   Links de oferta: 20
+2026-09-14 19:32:55,479 [INFO]     https://open.app.jobrapido.com/ar/6751791494580928512/?w=python&l=&oc=sponsored&k=web.1.1.0&uuid=arF001a0a24435e96270&page_item_id=-691808185 | Open job preview for: Senior Data Governance & Analytics, PR
+2026-09-14 19:32:55,479 [INFO]     https://open.app.jobrapido.com/ar/1747493169777344512/?w=python&l=&oc=sponsored&k=web.1.1.1&uuid=arF001a0a24435e96270&page_item_id=1767166547 | Open job preview for: Pasante de Ciencia de Datos  - Beccar
+2026-09-14 19:32:55,479 [INFO]     https://open.app.jobrapido.com/ar/2648909180601106432/?w=python&l=&oc=sponsored&k=web.1.1.2&uuid=arF001a0a24435e96270&page_item_id=-217540166 | Open job preview for: Administrador de Sistemas  - General R
+2026-09-14 19:32:55,482 [INFO]   Paginación: 1
+2026-09-14 19:32:55,482 [INFO] JobrapidoScraper inicializado
+2026-09-14 19:32:55,482 [INFO] ============================================================
+2026-09-14 19:32:55,482 [INFO] INICIO - Jobrapido Argentina
+2026-09-14 19:32:55,482 [INFO] 
+🔍 'Data Scientist'
+2026-09-14 19:32:55,482 [INFO]    Página 1/5
+2026-09-14 19:32:59,916 [INFO]    → 20 encontradas
+2026-09-14 19:35:11,067 [INFO]    Página 2/5
+2026-09-14 19:35:15,154 [INFO]    → 10 encontradas
+2026-09-14 19:36:16,188 [INFO]    Página 3/5
+2026-09-14 19:36:21,150 [INFO]    → 20 encontradas
+2026-09-14 19:38:26,133 [INFO]    Página 4/5
+2026-09-14 19:38:30,247 [INFO]    → 20 encontradas
+2026-09-14 19:40:22,545 [INFO]    Página 5/5
+2026-09-14 19:40:27,105 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-14 19:40:27,105 [INFO]    → 0 encontradas
+2026-09-14 19:40:27,107 [INFO] CSV: 70 exportadas
+2026-09-14 19:40:27,107 [INFO] ✅ 'Data Scientist': 70 guardadas
+2026-09-14 19:40:33,459 [INFO] 
+🔍 'Data Analyst'
+2026-09-14 19:40:33,460 [INFO]    Página 1/5
+2026-09-14 19:40:38,194 [INFO]    → 15 encontradas
+2026-09-14 19:42:18,873 [INFO]    Página 2/5
+2026-09-14 19:42:23,201 [INFO]    → 20 encontradas
+2026-09-14 19:44:24,816 [INFO]    Página 3/5
+2026-09-14 19:44:29,343 [INFO]    → 20 encontradas
+2026-09-14 19:46:41,473 [INFO]    Página 4/5
+2026-09-14 19:46:45,779 [INFO]    → 20 encontradas
+2026-09-14 19:48:46,391 [INFO]    Página 5/5
+2026-09-14 19:48:52,100 [INFO]    → 20 encontradas
+2026-09-14 19:50:54,970 [INFO] CSV: 95 exportadas
+2026-09-14 19:50:54,970 [INFO] ✅ 'Data Analyst': 95 guardadas
+2026-09-14 19:51:01,731 [INFO] 
+🔍 'Machine Learning Engineer'
+2026-09-14 19:51:01,731 [INFO]    Página 1/5
+2026-09-14 19:51:07,035 [INFO]    → 19 encontradas
+2026-09-14 19:53:01,224 [INFO]    Página 2/5
+2026-09-14 19:53:06,784 [INFO]    → 20 encontradas
+2026-09-14 19:55:09,752 [INFO]    Página 3/5
+2026-09-14 19:55:14,970 [INFO]    → 5 encontradas
+2026-09-14 19:55:49,760 [INFO]    Página 4/5
+2026-09-14 19:55:55,511 [INFO]    → 20 encontradas
+2026-09-14 19:57:58,692 [INFO]    Página 5/5
+2026-09-14 19:58:03,595 [INFO]    → 13 encontradas
+2026-09-14 19:59:23,365 [INFO] CSV: 77 exportadas
+2026-09-14 19:59:23,365 [INFO] ✅ 'Machine Learning Engineer': 77 guardadas
+2026-09-14 19:59:31,341 [INFO] 
+🔍 'NLP Engineer'
+2026-09-14 19:59:31,342 [INFO]    Página 1/5
+2026-09-14 19:59:34,960 [INFO]    → 12 encontradas
+2026-09-14 20:00:50,908 [INFO]    Página 2/5
+2026-09-14 20:00:56,329 [INFO]    → 16 encontradas
+2026-09-14 20:02:37,096 [INFO]    Página 3/5
+2026-09-14 20:02:41,365 [INFO]    → 20 encontradas
+2026-09-14 20:04:40,530 [INFO]    Página 4/5
+2026-09-14 20:04:44,714 [WARNING]    Sin ofertas — HTML guardado en diagnostico/
+2026-09-14 20:04:44,714 [INFO]    → 0 encontradas
+2026-09-14 20:04:44,715 [INFO] CSV: 48 exportadas
+2026-09-14 20:04:44,715 [INFO] ✅ 'NLP Engineer': 48 guardadas
+2026-09-14 20:04:50,139 [INFO] 
+🔍 'Data Engineer'
+2026-09-14 20:04:50,140 [INFO]    Página 1/5
+2026-09-14 20:04:54,205 [INFO]    → 19 encontradas
+2026-09-14 20:06:52,397 [INFO]    Página 2/5
+2026-09-14 20:06:58,180 [INFO]    → 18 encontradas
+2026-09-14 20:08:42,773 [INFO]    Página 3/5
+2026-09-14 20:08:47,822 [INFO]    → 4 encontradas
+2026-09-14 20:09:13,673 [INFO]    Página 4/5
+2026-09-14 20:09:17,855 [INFO]    → 19 encontradas
+2026-09-14 20:11:15,554 [INFO]    Página 5/5
+2026-09-14 20:11:20,290 [INFO]    → 1 encontradas
+2026-09-14 20:11:27,465 [INFO] CSV: 61 exportadas
+2026-09-14 20:11:27,465 [INFO] ✅ 'Data Engineer': 61 guardadas
+2026-09-14 20:11:33,802 [INFO] 
+🔍 'Software Engineer'
+2026-09-14 20:11:33,803 [INFO]    Página 1/5
+2026-09-14 20:11:38,923 [INFO]    → 9 encontradas
+2026-09-14 20:12:34,614 [INFO]    Página 2/5
+2026-09-14 20:12:40,125 [INFO]    → 16 encontradas
+2026-09-14 20:14:15,941 [INFO]    Página 3/5
+2026-09-14 20:14:22,417 [INFO]    → 19 encontradas
