@@ -330,7 +330,7 @@ class AdeccoScraper:
             self._limpiar_html(detalle.get("Responsabilities", "")),
             self._limpiar_html(detalle.get("CandidateProfile", "")),
         ]
-        descripcion_completa = "\n\n".join(p for p in partes_desc if p)
+        descripcion_completa = " | ".join(p for p in partes_desc if p)
         if descripcion_completa:
             oferta.descripcion = descripcion_completa
 
