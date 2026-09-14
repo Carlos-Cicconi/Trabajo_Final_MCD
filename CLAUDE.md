@@ -37,11 +37,14 @@ python src/scraping/run_scraping.py --solo-consolidar       # re-consolida sin s
 python src/scraping/run_scraping.py --max-dias 60           # cambia la ventana de "antigüedad máxima" (90 días por defecto)
 python src/scraping/run_scraping.py --no-check-links        # omite la verificación de links activos (corre más rápido)
 python src/scraping/run_scraping.py --link-workers 16        # cambia el paralelismo de la verificación de links (8 por defecto)
+python src/scraping/run_scraping.py --purgar-consolidado     # no scrapea: revalida TODO lo ya consolidado y elimina lo que ya no corresponde
 ```
 
 Cada scraper por fuente escribe su salida cruda directamente en `data/raw/` siguiendo una convención de nombres fija: `ofertas_<sitio>_<fecha>.csv` (snapshot diario), `<sitio>.db` (SQLite acumulativo, leído por el orquestador para consolidar), y `stats_<sitio>_<fecha_hora>.json` (estadísticas por corrida). `SCRAPERS_REGISTRO` de `run_scraping.py` mapea cada módulo scraper a su archivo `<sitio>.db`.
 
 Reglas de consolidación aplicadas por el orquestador: las ofertas más antiguas que `--max-dias` se descartan, los duplicados (por `id_consolidado` = hash de fuente + job_id) nunca se vuelven a insertar, y las ofertas cuyo link ya no está activo (HTTP 404/410, o frases como "oferta no disponible"/"job is no longer available" en el cuerpo) se descartan salvo `--no-check-links`. La verificación de links se hace en paralelo (`--link-workers`, default 8) y es permisiva ante ambigüedad (timeouts, bloqueos anti-bot 403/429, errores 5xx) para no perder ofertas válidas por falsos positivos — la lógica vive en `verificar_link_activo()`/`filtrar_links_activos()` en `run_scraping.py`. Las salidas son acumulativas, no se sobrescriben:
+
+Importante: estos tres filtros (antigüedad, duplicado, link activo) solo se aplican a ofertas **nuevas** en el momento de insertarlas — nunca revalidan lo que ya está en el consolidado maestro de corridas anteriores. Para limpiar retroactivamente ofertas ya consolidadas que quedaron viejas o cuyo link murió después de haber sido insertadas, usar `--purgar-consolidado`: recorre todo `ofertas_consolidadas.db`, reaplica el filtro de antigüedad y el de link activo, borra lo que ya no corresponde y reescribe DB + CSV completos (`purgar_consolidado()` / `_reescribir_csv_completo()`). Genera `data/raw/consolidado/purga_<timestamp>.json` con el detalle.
 - `data/raw/consolidado/ofertas_consolidadas.csv` / `.db` (SQLite) — dataset consolidado maestro, columnas canónicas definidas en `COLUMNAS` en `run_scraping.py`.
 - `data/raw/consolidado/run_<timestamp>.json` — reporte por corrida.
 - `data/raw/diagnostico/` — snapshots de HTML crudo por fuente/query, conservados para depurar roturas de scrapers.
