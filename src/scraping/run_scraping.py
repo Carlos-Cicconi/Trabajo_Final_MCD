@@ -105,6 +105,17 @@ FRASES_OFERTA_INACTIVA = [
     "page not found",
 ]
 
+# Frases que indican que la respuesta HTTP 200 es en realidad un challenge
+# anti-bot (ej. Cloudflare Turnstile en opcionempleo.com.ar) y no el
+# contenido real de la oferta — no confirman ni descartan la vigencia.
+PATRONES_VERIFICACION_ANTIBOT = [
+    "verificación requerida",
+    "verificacion requerida",
+    "cf-turnstile",
+    "checking your browser",
+    "just a moment",
+]
+
 # Columnas canónicas del consolidado — superconjunto de todos los scrapers
 COLUMNAS = [
     "id_consolidado",   # Hash único: fuente + job_id (clave del consolidado)
@@ -454,6 +465,16 @@ def verificar_link_activo(url: str, timeout: int = LINK_CHECK_TIMEOUT) -> bool:
     ofertas válidas por un falso positivo. Solo se descarta ante evidencia
     clara: HTTP 404/410, o una frase típica de "oferta no disponible" en
     el cuerpo de una respuesta 200.
+
+    Caso especial: opcionempleo.com.ar usa un challenge anti-bot (Cloudflare
+    Turnstile) que devuelve HTTP 200 con una página de "Verificación
+    requerida" en vez del contenido real de la oferta — no se probó con
+    Playwright (headless o con playwright-stealth) porque el challenge
+    tampoco se resuelve en ninguno de los dos casos, así que la frase real de
+    vencimiento ("Este empleo expiró") queda oculta. En ese caso se sigue
+    conservando la oferta (mismo criterio permisivo), pero se loguea de forma
+    distinguible como "no concluyente por verificación anti-bot" en vez de
+    quedar indistinguible de una verificación exitosa.
     """
     if not url or not url.strip().lower().startswith("http"):
         return True  # Sin URL verificable: no se puede evaluar, se conserva
@@ -478,6 +499,10 @@ def verificar_link_activo(url: str, timeout: int = LINK_CHECK_TIMEOUT) -> bool:
     cuerpo = resp.text.lower()
     if any(frase in cuerpo for frase in FRASES_OFERTA_INACTIVA):
         return False
+
+    if any(patron in cuerpo for patron in PATRONES_VERIFICACION_ANTIBOT):
+        logger.info(f"    🤖⚠️  Verificación anti-bot (no concluyente), se conserva: {url}")
+        return True
 
     return True
 
