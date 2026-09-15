@@ -54,7 +54,93 @@
                                                                                                                                   }, g[o]['t'] = 1 * new Date
                                                                                                                                 })(window, '_googCsa');
                                                                                                                               </script>
-    <script type="text/javascript" src="/api/siteconfig"></script>
+                                  <script src="https://resources.jobrapido.com/static/js/prebid.bundle.680c3eb44b1d6e143e4f.js" async></script><script>var iid="13407767",
+                                    p=location.protocol,url=("https:"===p?p:"http:")+"//ap.lijit.com/www/sovrn_beacon_standalone/sovrn_standalone_beacon.js?iid="+iid,scr=document.createElement("script");scr.id="sBeacon",scr.src=url,scr.async=!1;var s0=document.getElementsByTagName("script")[0];s0.parentNode.insertBefore(scr,s0);</script><script>var adUnits = [{"bids":[{"bidder":"appnexus","params":{"placementId":"12484625"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846706"}},{"bidder":"ix","params":{"size":[300,250],"siteId":"350496"}},{"bidder":"criteo","params":{"zoneId":"1082855"}}],"code":"b_gtp_middle","mediaTypes":{"banner":{"sizes":[[300,250]]}},"sizes":[[300,250]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484628"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[728,90],"siteId":"350497"}},{"bidder":"criteo","params":{"zoneId":"1114753"}}],"code":"b_gtp_leaderboard","mediaTypes":{"banner":{"sizes":[[728,90]]}},"sizes":[[728,90]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484631"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846706"}},{"bidder":"ix","params":{"size":[160,600],"siteId":"350505"}},{"bidder":"criteo","params":{"zoneId":"1082854"}}],"code":"banner-aside-left","mediaTypes":{"banner":{"sizes":[[160,600]]}},"sizes":[[160,600]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484633"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[300,250],"siteId":"350494"}},{"bidder":"criteo","params":{"zoneId":"1091230"}}],"code":"b_gtp_top","mediaTypes":{"banner":{"sizes":[[300,250]]}},"sizes":[[300,250]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484624"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[300,600],"siteId":"350494"}},{"bidder":"criteo","params":{"zoneId":"1398668"}}],"code":"b_gtp_top","mediaTypes":{"banner":{"sizes":[[300,600]]}},"sizes":[[300,600]]}];
+                                    var pbjs = pbjs || { que: [] };
+                                    var customConfigObject = {
+                                     'buckets' : [{"increment":0.01,"max":5,"min":0,"precision":2},{"increment":0.05,"max":20,"min":5,"precision":2},{"increment":0.1,"max":40,"min":20,"precision":2}]
+                                    };
+                                  
+                                    pbjs.que.push(function() {
+                                  
+                                      // Object provides a way to define some behaviors for the platform and specific adapters.
+                                      // @see https://docs.prebid.org/dev-docs/publisher-api-reference/bidderSettings.html#deviceAccess
+                                      pbjs.bidderSettings = {
+                                        standard: {
+                                          storageAllowed: true
+                                        }
+                                      }
+                                  
+                                      pbjs.setConfig({
+                                        bidderTimeout: 1000,
+                                        debug: false,
+                                        priceGranularity: customConfigObject,
+                                        currency: {
+                                          adServerCurrency: 'EUR',
+
+                                            conversionRateFile: 'https://currency.prebid.org/latest.json'
+                                        },
+                                        
+                                        // General permissions settings: Device access
+                                        // @see https://docs.prebid.org/dev-docs/publisher-api-reference/setConfig.html#device-access
+                                        deviceAccess: true,
+                                  
+                                        // General permissions settings: Enable sharing of transaction IDs
+                                        // @see https://docs.prebid.org/dev-docs/publisher-api-reference/setConfig.html#enable-sharing-of-transaction-ids
+                                        enableTIDs: true,
+                                  
+                                        // Single permissions overrides
+                                        // @see https://docs.prebid.org/dev-docs/activity-controls.html#activities
+                                        allowActivities: {
+                                          accessDevice: {
+                                            default: true
+                                          },
+                                          transmitTid: {
+                                            default: true
+                                          }
+                                        },
+                                        
+                                        consentManagement: {
+                                          // @see https://docs.prebid.org/dev-docs/modules/consentManagementUsp.html
+                                          usp: {
+                                            cmpApi: 'static',
+                                            timeout: 50,
+                                            consentData: {
+                                              getUSPData: {
+                                                uspString: '1---'
+                                              }
+                                            }
+                                          }
+                                  
+                                        }
+                                      });
+                                  
+                                        pbjs.setBidderConfig({
+                                          bidders: ['criteo'],
+                                          config: {
+                                              ortb2: {
+                                                  user: {
+                                                      ext: {
+                                                          data: {
+                                                              eids: [{
+                                                                  source: "domain_here",
+                                                                  uids: [
+                                                                      {
+                                                                          id: window.jrConfigGlobal.user.sha256EncodedEmail,
+                                                                          atype: 3,
+                                                                          ext: {
+                                                                              stype: "hemsha256"
+                                                                          }
+                                                                      }
+                                                                  ]
+                                                              }]
+                                                          }
+                                                      }
+                                                  }
+                                              }
+                                          }
+                                        }, true);
+                                    });</script>    <script type="text/javascript" src="/api/siteconfig"></script>
 <script>
   if(!jrConfigGlobal) {
     var jrConfigGlobal = {};
@@ -75,12 +161,12 @@
     isSearch: true,
     isJobPreviewPage: false,
     isErrorPage: false,
-    uuid: 'arF001a0a261586186ff'
+    uuid: 'arF001a0a4016c8b5da4'
   };
   jrConfigGlobal.visit = {
     requestComingFromAdWords: false,
     sessionComingFromPaidSource: false,
-    uuid: 'arF001a0a24435e96273',
+    uuid: 'arF001a0a3e8c6ff3512',
     isOneTapConfirmationFlow: false,
     requestComingFromWelcomeEmailAddPassword: false,
     requestComingFromWelcomeEmailIncreaseSearch: false
@@ -106,10 +192,10 @@
     radius: {"unit":"km","autoexpanded":"false","value":""},
     page: {
       number: 4,
-      numberOfItems: 16
+      numberOfItems: 18
     },
-    inlineProposal: {"advertTypeWithInlineProposal":"organic","deviceType":"NOTDETECTED","forSponsoredAdvertEnabled":false,"fromPaidSourceEnabled":true,"impressionsRemainingCountEnabled":false,"maxImpressionsAllTime":2147483647,"maxImpressionsVisit":3,"metadataKey":{},"visitType":"BRAND"},
-    totalResults: 357,
+    inlineProposal: {"advertTypeWithInlineProposal":"organic","deviceType":"DESKTOP","forSponsoredAdvertEnabled":false,"fromPaidSourceEnabled":true,"impressionsRemainingCountEnabled":false,"maxImpressionsAllTime":2147483647,"maxImpressionsVisit":3,"metadataKey":{},"visitType":"BRAND"},
+    totalResults: 340,
     sortBy: '',
     geoCoordinatesNotPresent: true,
     taxonomyCode: '',
@@ -117,10 +203,10 @@
     attributionToken: '',
   };
   jrConfigGlobal.serpItems = {
-    globalParameters: {},
-    itemsEnabled: {"dfp":true},
+    globalParameters: {"promoted":{"position":"listing"},"dfp":{"hideNative":"true"}},
+    itemsEnabled: {"dfp":true,"promoted":true},
     structuredDataEnabled: false,
-    dfpItems: [{"adsenseAtfItem":false,"adsenseItem":false,"advertItem":false,"itemId":"dfp","itemProperties":{"adUnit":"Jobtome","cssClass":"native","size":"[[1,1], \u0027fluid\u0027]","slotId":"partnership-result-top"},"promotedItem":false,"searchResult":{"actionType":"","advertId":"","advertPosition":0,"advertType":"","autoExpandRadiusDistance":null,"autoExpandRadiusLayout":null,"bodyHighlighted":"","budgetId":0,"company":"","companyForTitle":"","cpcInEur":0,"date":"","enumAdvertType":null,"fromSponsoredSearch":false,"index":-1,"isCpaEnabled":false,"isFromExpandedSearch":false,"isSponsored":false,"location":"","locations":null,"locationsLabel":null,"onMouseDown":"","openAdvertUrl":"","pageItemId":-1194235380,"parameterMap":{"date":"","website":"","trackClickAd":"","showNewMarker":false,"fromSponsoredSearch":false,"sponsorAccount":"","budgetId":0,"isCpaEnabled":false,"salary":"","sponsorAccountBranch":"","title":"","openAdvertUrl":"","advertId":"","tags":{},"cpcInEur":0,"isFromExpandedSearch":false,"companyForTitle":"","company":"","location":"","onmousedown":"","tag":"","isSponsored":false},"salary":"","showNewMarker":false,"sponsorAccount":"","sponsorAccountBranch":"","tag":"","tags":{},"title":"","titleSlug":"","trackClickAd":"","website":"","websiteCategory":"UNQUALIFIED","websiteNoWWW":""},"serpPosition":9,"sponsoredOrOrganicItem":false}],
+    dfpItems: [{"adsenseAtfItem":false,"adsenseItem":false,"advertItem":false,"itemId":"dfp","itemProperties":{"adUnit":"textad_desktop_1","cssClass":"native","size":"[[1,1], \u0027fluid\u0027]","slotId":"partnership-result-top","type":"affiliate"},"promotedItem":false,"searchResult":{"actionType":"","advertId":"","advertPosition":0,"advertType":"","autoExpandRadiusDistance":null,"autoExpandRadiusLayout":null,"bodyHighlighted":"","budgetId":0,"company":"","companyForTitle":"","cpcInEur":0,"date":"","enumAdvertType":null,"fromSponsoredSearch":false,"index":-1,"isCpaEnabled":false,"isFromExpandedSearch":false,"isSponsored":false,"location":"","locations":null,"locationsLabel":null,"onMouseDown":"","openAdvertUrl":"","pageItemId":-1817862436,"parameterMap":{"date":"","website":"","trackClickAd":"","showNewMarker":false,"fromSponsoredSearch":false,"sponsorAccount":"","budgetId":0,"isCpaEnabled":false,"salary":"","sponsorAccountBranch":"","title":"","openAdvertUrl":"","advertId":"","tags":{},"cpcInEur":0,"isFromExpandedSearch":false,"companyForTitle":"","company":"","location":"","onmousedown":"","tag":"","isSponsored":false},"salary":"","showNewMarker":false,"sponsorAccount":"","sponsorAccountBranch":"","tag":"","tags":{},"title":"","titleSlug":"","trackClickAd":"","website":"","websiteCategory":"UNQUALIFIED","websiteNoWWW":""},"serpPosition":4,"sponsoredOrOrganicItem":false},{"adsenseAtfItem":false,"adsenseItem":false,"advertItem":false,"itemId":"dfp","itemProperties":{"adUnit":"textad_desktop_2","cssClass":"native","size":"[[1,1], \u0027fluid\u0027]","slotId":"partnership-result-bottom","type":"affiliate"},"promotedItem":false,"searchResult":{"actionType":"","advertId":"","advertPosition":0,"advertType":"","autoExpandRadiusDistance":null,"autoExpandRadiusLayout":null,"bodyHighlighted":"","budgetId":0,"company":"","companyForTitle":"","cpcInEur":0,"date":"","enumAdvertType":null,"fromSponsoredSearch":false,"index":-1,"isCpaEnabled":false,"isFromExpandedSearch":false,"isSponsored":false,"location":"","locations":null,"locationsLabel":null,"onMouseDown":"","openAdvertUrl":"","pageItemId":-286292079,"parameterMap":{"date":"","website":"","trackClickAd":"","showNewMarker":false,"fromSponsoredSearch":false,"sponsorAccount":"","budgetId":0,"isCpaEnabled":false,"salary":"","sponsorAccountBranch":"","title":"","openAdvertUrl":"","advertId":"","tags":{},"cpcInEur":0,"isFromExpandedSearch":false,"companyForTitle":"","company":"","location":"","onmousedown":"","tag":"","isSponsored":false},"salary":"","showNewMarker":false,"sponsorAccount":"","sponsorAccountBranch":"","tag":"","tags":{},"title":"","titleSlug":"","trackClickAd":"","website":"","websiteCategory":"UNQUALIFIED","websiteNoWWW":""},"serpPosition":11,"sponsoredOrOrganicItem":false}],
     anchorAdParameters: [],
     anchorEnabled: false
   };
@@ -130,11 +216,11 @@
       email: '',
       confirmed:false
   };
-  jrConfigGlobal.user = {"gclid":null,"hostJustCreated":false,"hostPostgresId":"185126260246","hostRegistered":false,"id":"185126260246","isJobSeeker":false,"isNotConfirmed":true,"mail":null,"md5EncodedEmail":null,"msclkid":null,"sha256EncodedEmail":null,"shortId":null,"subscribedEmail":null,"uuid":"185126260246"},
+  jrConfigGlobal.user = {"gclid":null,"hostJustCreated":false,"hostPostgresId":"185126263908","hostRegistered":false,"id":"185126263908","isJobSeeker":false,"isNotConfirmed":true,"mail":null,"md5EncodedEmail":null,"msclkid":null,"sha256EncodedEmail":null,"shortId":null,"subscribedEmail":null,"uuid":"185126263908"},
   jrConfigGlobal.jobletter = {
     jobseeker: {
       parentShardId: '',
-      parentUserId: '185126260246',
+      parentUserId: '185126263908',
         registrationConfirmed: false,
     }
   };
@@ -143,7 +229,7 @@
     statements: [{"capitalizedWhat":"Python","capitalizedWhere":"","distanceOptions":[],"distancesOptions":[{"enabled":true,"selected":false,"text":"-","value":"auto"},{"enabled":true,"selected":false,"text":"15 km","value":"15"},{"enabled":true,"selected":false,"text":"30 km","value":"30"},{"enabled":true,"selected":false,"text":"45 km","value":"45"},{"enabled":true,"selected":false,"text":"60 km","value":"60"}],"index":0,"isCurrent":false,"label":"Python","link":"/Ofertas-de-trabajo-para-Python","radiusLabel":"","radiusValue":"","suggestions":[],"what":"python","where":""},{"capitalizedWhat":"Data Scientist","capitalizedWhere":"","distanceOptions":[],"distancesOptions":[{"enabled":true,"selected":false,"text":"-","value":"auto"},{"enabled":true,"selected":false,"text":"15 km","value":"15"},{"enabled":true,"selected":false,"text":"30 km","value":"30"},{"enabled":true,"selected":false,"text":"45 km","value":"45"},{"enabled":true,"selected":false,"text":"60 km","value":"60"}],"index":1,"isCurrent":false,"label":"Data Scientist","link":"/Ofertas-de-trabajo-para-Data-Scientist","radiusLabel":"","radiusValue":"","suggestions":[],"what":"data scientist","where":""},{"capitalizedWhat":"Data Analyst","capitalizedWhere":"","distanceOptions":[],"distancesOptions":[{"enabled":true,"selected":false,"text":"-","value":"auto"},{"enabled":true,"selected":false,"text":"15 km","value":"15"},{"enabled":true,"selected":false,"text":"30 km","value":"30"},{"enabled":true,"selected":false,"text":"45 km","value":"45"},{"enabled":true,"selected":false,"text":"60 km","value":"60"}],"index":2,"isCurrent":false,"label":"Data Analyst","link":"/Ofertas-de-trabajo-para-Data-Analyst","radiusLabel":"","radiusValue":"","suggestions":[],"what":"data analyst","where":""},{"capitalizedWhat":"Machine Learning","capitalizedWhere":"","distanceOptions":[],"distancesOptions":[{"enabled":true,"selected":false,"text":"-","value":"auto"},{"enabled":true,"selected":false,"text":"15 km","value":"15"},{"enabled":true,"selected":false,"text":"30 km","value":"30"},{"enabled":true,"selected":false,"text":"45 km","value":"45"},{"enabled":true,"selected":false,"text":"60 km","value":"60"}],"index":3,"isCurrent":false,"label":"Machine Learning","link":"/Ofertas-de-trabajo-para-Machine-Learning","radiusLabel":"","radiusValue":"","suggestions":[],"what":"machine learning","where":""},{"capitalizedWhat":"Nlp","capitalizedWhere":"","distanceOptions":[],"distancesOptions":[{"enabled":true,"selected":false,"text":"-","value":"auto"},{"enabled":true,"selected":false,"text":"15 km","value":"15"},{"enabled":true,"selected":false,"text":"30 km","value":"30"},{"enabled":true,"selected":false,"text":"45 km","value":"45"},{"enabled":true,"selected":false,"text":"60 km","value":"60"}],"index":4,"isCurrent":true,"label":"Nlp","link":null,"radiusLabel":"","radiusValue":"","suggestions":[],"what":"nlp","where":""}]
   };
   jrConfigGlobal.isMobile = false;
-  jrConfigGlobal.isDesktop = false;
+  jrConfigGlobal.isDesktop = true;
   jrConfigGlobal.isTablet = false;
   jrConfigGlobal.filters = {
     showMode: 'all',
@@ -151,6 +237,14 @@
   };
   jrConfigGlobal.searchResults = {
       
+      '1723660361892102144': {
+        'location': 'Comisión De Fomento De Perú'
+      }
+      ,
+      '3152941502800330752': {
+        'location': 'Esquel'
+      }
+      ,
       '3493981834750984192': {
         'location': 'Córdoba Capital'
       }
@@ -202,14 +296,6 @@
       '8903465243955429376': {
         'location': 'Remoto'
       }
-      ,
-      '3305472868271259648': {
-        'location': 'Córdoba'
-      }
-      ,
-      '68926148414799872': {
-        'location': 'Córdoba'
-      }
   };
   jrConfigGlobal.myProfile = {
     firstname: '',
@@ -240,7 +326,7 @@
     {value: 30, label: '30 mi'},
     {value: 40, label: '40 mi'}];
   jrConfigGlobal.canShowSubscriptionPopup = true;
-  jrConfigGlobal.correlationId = '2f09ec7f-c9b0-4615-b76a-f77a3c3af0df';
+  jrConfigGlobal.correlationId = '54646586-35c4-44e1-b70e-6629c517e4a8';
   jrConfigGlobal.showActivateProfileConfirmDialog = false;
   jrConfigGlobal.onboardingTooltipEnabled = false;
   jrConfigGlobal.gdprAccepted = false;
@@ -423,14 +509,14 @@
                                                         .setTargeting('what', gpt.config.what.replace(/&#x27;/g, "\u0060"))
                                                         .setTargeting('where', gpt.config.where.replace(/&#x27;/g, "\u0060"))
                                                         .setTargeting('language', 'es')
-                                                        .setTargeting('jobtomeFormattedUrl', '%2F%3Fl%3D%26k%3Dnlp%26t%3D1789427084054%26v%3Df881d925dfb53ffec414b857ce6c8fe2')
+                                                        .setTargeting('jobtomeFormattedUrl', '%2F%3Fl%3D%26k%3Dnlp%26t%3D1789454352210%26v%3Dfa4b4a4d761fc9acaa62b67add683822')
                                                         .setTargeting('zeroResults',  'false' )
                                                         .setTargeting('what_set', '1')
                                                         .setTargeting('where_set', '0')
                                                           .setTargeting('UserType', 'Anonymous')
                                                           .setTargeting('keyword', 'nlp')
                                                         .setTargeting('pageItemId', slotParams.pageItemId)
-                                                        .setTargeting('jobseekerId', 185126260246 ? 185126260246 : '')
+                                                        .setTargeting('jobseekerId', 185126263908 ? 185126263908 : '')
                                                         .setTargeting('taxonomyCode', '')
                                                         .setTargeting('attributionToken', '')
                                                         .setTargeting('dyn_const_ar', 'br_other_no-test_no-t-what')
@@ -634,6 +720,22 @@
                                                                                                                                                                                                                              }
                                                                                                                                                                                                                              
                                                                                                                                                                                                                              
+                                                                                                                                                                                                                               if(isPersonalizedAdverts){
+                                                                                                                                                                                                                                 googletag.cmd.push(function(){
+                                                                                                                                                                                                                                   googletag.pubads().disableInitialLoad()
+                                                                                                                                                                                                                                 });
+                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                 pbjs.que.push(function() {
+                                                                                                                                                                                                                                     pbjs.addAdUnits(adUnits);
+                                                                                                                                                                                                                                     pbjs.requestBids({
+                                                                                                                                                                                                                                         bidsBackHandler: sendAdserverRequest
+                                                                                                                                                                                                                                     });
+                                                                                                                                                                                                                                 });
+                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                 setTimeout(function() {
+                                                                                                                                                                                                                                     sendAdserverRequest();
+                                                                                                                                                                                                                                 }, 2500);
+                                                                                                                                                                                                                               }
                                                                                                                                                                                                                              
                                                                                                                                                                                                                              googletag.cmd.push(function() {
                                                                                                                                                                                                                                        
@@ -689,19 +791,29 @@ if (dfpParametersConfig.length > 0) {
                                                                                                                                                                                                                            
                                                                                                                                                                                                                            
                                                                                                                                                                                                                                        gpt.defineSlot({
-                                                                                                                                                                                                                                         adSlot: 'Jobtome',
+                                                                                                                                                                                                                                         adSlot: 'textad_desktop_1',
                                                                                                                                                                                                                                          size: Function('"use strict";return ' + "[[1,1], \u0027fluid\u0027]")(),
                                                                                                                                                                                                                                          wrapperId: 'partnership-result-top',
                                                                                                                                                                                                                                          hasNotStaticSize: true,
                                                                                                                                                                                                                                          isSerpListing: true,
-                                                                                                                                                                                                                                         pageItemId: -1194235380
+                                                                                                                                                                                                                                         pageItemId: -1817862436
+                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                       });
+                                                                                                                                                                                                                                       gpt.defineSlot({
+                                                                                                                                                                                                                                         adSlot: 'textad_desktop_2',
+                                                                                                                                                                                                                                         size: Function('"use strict";return ' + "[[1,1], \u0027fluid\u0027]")(),
+                                                                                                                                                                                                                                         wrapperId: 'partnership-result-bottom',
+                                                                                                                                                                                                                                         hasNotStaticSize: true,
+                                                                                                                                                                                                                                         isSerpListing: true,
+                                                                                                                                                                                                                                         pageItemId: -286292079
                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                        });
                                                                                                                                                                                                                            
                                                                                                                                                                                                                            
                                                                                                                                                                                                                                  if(jrConfigGlobal.feature.lazyLoadBannerEnabled){
-                                                                                                                                                                                                                                   var lazyLoadBannerParams = {"fetchMarginPercent":50,"mobileScaling":1,"renderMarginPercent":30};
+                                                                                                                                                                                                                                   var lazyLoadBannerParams = {"fetchMarginPercent":100,"mobileScaling":1,"renderMarginPercent":50};
                                                                                                                                                                                                                            
                                                                                                                                                                                                                                    googletag.pubads().enableLazyLoad({
                                                                                                                                                                                                                                      fetchMarginPercent: lazyLoadBannerParams.fetchMarginPercent || 50,
@@ -740,6 +852,7 @@ if (dfpParametersConfig.length > 0) {
 <link rel="preconnect" href="https://securepubads.g.doubleclick.net">
   <link rel="preconnect" href="https://cdn-databox.jobrapido.com">
   <link rel="preconnect" href="https://jtag.services.jobrapido.com">
+  <link rel="preconnect" href="https://currency.prebid.org">
       <link rel="preconnect" href="https://accounts.google.com">
 
 <!--[if IE 9]>
@@ -752,11 +865,12 @@ if (dfpParametersConfig.length > 0) {
 <link rel="prefetch" href="https://securepubads.g.doubleclick.net">
   <link rel="prefetch" href="https://cdn-databox.jobrapido.com">
   <link rel="prefetch" href="https://jtag.services.jobrapido.com">
+  <link rel="prefetch" href="https://currency.prebid.org">
       <link rel="prefetch" href="https://smartlock.google.com">
 <![endif]-->
- 
+   
         <script>
-            dataLayer = [{"deviceType":"notdetected","searchWhat":"nlp","conversionOwner":"","visitSource":"","visitType":"brand","pageUUID":"arF001a0a261586186ff","pageType":"results","vstUUID":"arF001a0a24435e96273","trackingOrderId":0,"zeroResults":false,"zeroResultContext":false,"searchWhere":"","jsUUID":185126260246,"acquisitionSource":"","jsMD5":null}];
+            dataLayer = [{"deviceType":"desktop","searchWhat":"nlp","conversionOwner":"","visitSource":"","visitType":"brand","pageUUID":"arF001a0a4016c8b5da4","pageType":"results","vstUUID":"arF001a0a3e8c6ff3512","trackingOrderId":0,"zeroResults":false,"zeroResultContext":false,"searchWhere":"","jsUUID":185126263908,"acquisitionSource":"","jsMD5":null}];
         </script>
 
   <link rel="apple-touch-icon" sizes="57x57" href="//resources.jobrapido.com/static/img/favicon/apple-icon-57x57.png">
@@ -875,7 +989,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
       'personalizedAds': true,
       'adLoadedCallback': googleCsaRequestDone,
       
-      'clicktrackUrl': 'https://ar.jobrapido.com/track/adsense/arF001a0a261586186ff/' + jrConfigGlobal.search.page.number,
+      'clicktrackUrl': 'https://ar.jobrapido.com/track/adsense/arF001a0a4016c8b5da4/' + jrConfigGlobal.search.page.number,
       'longerHeadlines': true,
       'detailedAttribution': false,
       'plusOnes': false,
@@ -943,7 +1057,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
 
   <div
     ng-class="{'overflow-hidden': $root.overflow, 'mobile-menu-opened': menuOpened}"
-    ng-controller="MaskController" 
+    ng-controller="MaskController"  id="" 
     class="body-wrapper js-body-wrapper">
 
 <input type="checkbox" id="push-menu-footer" class="push-menu push-menu-footer" ng-checked="$root.menuOpened" aria-label="Open or close the mobile menu" />
@@ -957,197 +1071,89 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
 <header class="header-wrapper js-header-wrapper"
   jr-header-fixed>
 <div class="header-top js-header-top" id="header">
-    <label for="push-menu-footer" class="icon-menu" ng-click="toggleMobileMenus($event);" tabindex="0">
-      <span class="sr-only">Open or close the mobile menu</span>
-    </label>
   <a href="//ar.jobrapido.com/" id="logo" class="logo " 
     data-google-interstitial=false>Bolsa trabajo para Nlp, ofertas empleo | Jobrapido.com</a>
-</div>
-<div class="mobile-menu" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-
-    <div class="jobseeker-links jobseeker-account-wrapper" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-
-        <a class="get-mail top-link jobseeker-link" id="login-header" data-google-interstitial=false
-          href="/login">Entrar</a>
-        <a class="get-mail top-link jobseeker-link" id="signup-header" data-google-interstitial=false
-          href="/signup?w=nlp&l=">Inscríbete</a>
-    </div>
-
-      <a class="top-link" itemprop="url" data-google-interstitial=false href=https://corporate.jobrapido.com/es/direct-employers/>Publica una oferta</a>
-      <a class="top-link" itemprop="url" data-google-interstitial=false href="/support
-      ">Ayuda</a>
+<div class="top-links" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
       <a class="top-link" itemprop="url" data-google-interstitial=false
-        href="https://corp.jobrapido.com/es/">
-        Empresas
-      </a>
-</div>
-</header>
+        href=https://corporate.jobrapido.com/es/direct-employers/>Publica una oferta</a>
+        <a class="top-link" itemprop="url" data-google-interstitial=false
+          href="/support">Ayuda</a>
 
-<div class="mobile-search-box js-mobile-search-box" ng-class="{'enabled': mobileSearchFormEnabled}"
-  ng-controller="SearchFormCtrl"
-  jr-header-fixed>
-  <form name="f" class="mobile-search-form" action="/" ng-submit="submit($event, f.$valid)" novalidate>
-    <div class="mobile-search-form-innerbox">
-      <div class="what-wrapper">
-        <i class="input-icon icon-job" aria-hidden="true" ng-cloak></i>
-        <button type="button" class="clear-button" ng-click="clearInput('what')" ng-hide="isEmptyWhat" aria-label="Clear job input" title="Clear job input" ng-cloak>
-          <span class="sr-only">Clear job input</span>
-        </button>
+
+      <a class="top-link" itemprop="url" data-google-interstitial=false
+        href="https://corp.jobrapido.com/es/">Empresas</a>
+  <div class="jobseeker-account-wrapper">
+
+      <a class="jr-button jr-button--dark jr-button--small" itemprop="url" id="login-header" data-google-interstitial=false
+        href="/login">Entrar</a>
+        <a class="jr-button jr-button--dark jr-button--small" itemprop="url" id="signup-header" data-google-interstitial=false
+          href="/signup?w=nlp&l=">Inscríbete</a>
+  </div>
+</div>
+</div>
+<div class="header-bottom js-header-bottom">
+  <form name="f" class="search-form" action="/" ng-controller="SearchFormCtrl" ng-submit="submit($event, f.$valid)" novalidate>
+    <div class="input-container">
+      <div
+        class="input-wrapper what-wrapper ">
+        <i class="input-icon icon-job" aria-hidden="true"></i>
         <label for="search-what" class="sr-only">Profesión / Palabras clave</label>
         <input
           id="search-what"
-          ng-model="search.what" type="text" class="jr-input jr-input__what jr-input--left-icon" tabindex="1"
-          name="w" placeholder="Profesión, industria, empresa"
-          value="nlp" 
-          ng-class="{'jr-input--invalid': invalidSearchForm && f.w.$invalid}">
-        <div class="jr-input fake-search" ng-click="enableSearchForm($event, $element)">
-          <i class="icon-search-material" aria-hidden="true"></i>
-
-
-            <h1 class="fake-search__h1" ng-if="!isEmptySearch">
-              Ofertas de trabajo para Nlp
-            </h1>
-          
-          <span ng-if="isEmptySearch" class="fake-search__placeholder"
-            ng-cloak>¿Qué trabajo estás buscando?</span>
-        </div>
+          ng-model="search.what"
+          type="text"
+          class="jr-input jr-input__what jr-input--left-icon"
+          tabindex="1"
+          name="w" 
+          placeholder="¿Qué profesión, industria o empresa?"
+          value="nlp"
+          ng-class="{'jr-input--invalid': invalidSearchForm && f.w.$invalid}"
+        >
       </div>
-      <div class="where-wrapper">
+      <div
+        class="input-wrapper where-wrapper empty-where-suggestions top-matches-suggestions">
         <i class="input-icon icon-pin-drop" aria-hidden="true"></i>
-        <button type="button" class="clear-button" ng-click="clearInput('where')" ng-hide="isEmptyWhere" aria-label="Clear location input" title="Clear location input" ng-cloak>
-          <span class="sr-only">Clear location input</span>
-        </button>
         <div class="typeahead-wrapper" ng-controller="LocationAutocompleteCtrl">
           <label for="search-where" class="sr-only">Localidad</label>
-
           <input
             id="search-where"
-            class="jr-input jr-input--autocomplete jr-input__where jr-input--left-icon" type="text" name="l"
-            tabindex="2" placeholder="Ciudad, provincia"
+            ng-model="search.where"
+            type="text"
+            name="l"
+            tabindex="2"
+            class="jr-input jr-input--autocomplete jr-input__where jr-input--left-icon"
+            placeholder="¿En qué ciudad, provincia o código postal?"
             value=""
-            autocomplete="off" typeahead="canonicalName for canonicalName in getLocation($viewValue, 4)"
-            ng-model="search.where" ng-blur="typeaheadFirstItem = null" typeahead-on-select="typeaheadFirstItem = ''">
+            autocomplete="off"
+            typeahead="canonicalName for canonicalName in getLocation($viewValue, 10)"
+            typeahead-on-select="typeaheadOnSelect($item)"
+            ng-blur="typeaheadFirstItem = null"
+            aria-controls="search-where-location-suggestions"
+            aria-haspopup="listbox"
+            role="combobox"
+          >
           <input aria-label="Selected location"  readonly tabindex="-1" autocomplete="off" ng-value="search.where ? typeaheadFirstItem : ''" type="text" class="jr-typeahead-input" />
         </div>
       </div>
-
-      <div class="advanced-search-box">
-        <p class="advanced-search-title" ng-click="advancedSearchVisibled = !advancedSearchVisibled">
-          Búsqueda avanzada de empleo <i
-            ng-class="{'icon-keyboard_arrow_down': !advancedSearchVisibled, 'icon-keyboard_arrow_up': advancedSearchVisibled}"
-            class="input-icon"></i>
-        </p>
-        <div ng-if="advancedSearchVisibled">
-          <ul>
-            <li ng-class="{'active': search.sortBy === '' || search.sortBy === 'relevance'}" rel="nofollow"
-              ng-click="setSortyByFilter('relevance')">Relevancia</li>
-            <li ng-class="{'active': search.sortBy === 'publish_date'}" rel="nofollow"
-              ng-click="setSortyByFilter('publish_date')">Fecha</li>
-          </ul>
-
-          <div class="filter-title" ng-class="{'disabled': !distance.enabled}">[[distance.label]]</div>
-            <ul ng-class="{'disabled': !distance.enabled}">
-              <li ng-repeat="d in search.distances" ng-click="setDistanceFilter(d)"
-                ng-class="{'active': d.value === distance.value}">[[d.text]]</li>
-            </ul>
-        </div>
-      </div>
-      <input class="jr-button jr-button__mobile-search" tabindex="3" type="submit" value="Encontrar empleos">
-    </div>
-    <div class="close-search-form" ng-click="disableSearchForm()" ng-cloak>
-      <i class="icon-close" aria-hidden="true"></i>
-      <span class="sr-only">Close</span>
+      <input class="jr-button jr-button__search" tabindex="3" type="submit" value="Encontrar empleos">
     </div>
   </form>
-
-  <div class="search-filters">
-    <div class="js-my-searches-wrapper">
+  <div class="shinfo" shlast="" sh=""></div>
+  <div class="serp-tips-wrapper incomplete-statement-suggestion empty-where-suggestions js-empty-where js-tips">
+    <i class="icon-close js-tip-close"></i>
+    <div class="serp-tips-innerbox">
+      <ul>
+          <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
+              href="https://ar.jobrapido.com/?w=nlp&l=gran buenos aires&shm=all">Gran Buenos Aires</a></li>
+          <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
+              href="https://ar.jobrapido.com/?w=nlp&l=capital federal&shm=all">Capital Federal</a></li>
+          <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
+              href="https://ar.jobrapido.com/?w=nlp&l=capital federal (san nicolás)&shm=all">Capital Federal (san Nicolás)</a></li>
+      </ul>
     </div>
-
-          <div>
-              <h3 class="h6 filter-title"><i class="location" aria-hidden="true"></i>Localidad</h3>
-              <ul class="filter-list top-locations-filter">
-                  <li class="suggested-locations-item">
-                    <i class="icon-angle-right"></i>
-                    <a index="0" href="/Ofertas-de-trabajo-para-Nlp-en-Gran-Buenos-Aires?shm=all" class="top-locations-link" data-google-interstitial=false>Gran Buenos Aires</a>
-                    
-                  </li>
-                  <li class="suggested-locations-item">
-                    <i class="icon-angle-right"></i>
-                    <a index="1" href="/Ofertas-de-trabajo-para-Nlp-en-Departamento-Federal?shm=all" class="top-locations-link" data-google-interstitial=false>Capital Federal</a>
-                    
-                  </li>
-                  <li class="suggested-locations-item">
-                    <i class="icon-angle-right"></i>
-                    <a index="2" href="/Ofertas-de-trabajo-para-Nlp-en-Capital-Federal-(San-Nicol%C3%A1s)?shm=all" class="top-locations-link" data-google-interstitial=false>Capital Federal (San Nicolás)</a>
-                    
-                  </li>
-                  <li class="suggested-locations-item">
-                    <i class="icon-angle-right"></i>
-                    <a index="3" href="/Ofertas-de-trabajo-para-Nlp-en-C%C3%B3rdoba?shm=all" class="top-locations-link" data-google-interstitial=false>Córdoba</a>
-                    
-                  </li>
-                  <li class="suggested-locations-item">
-                    <i class="icon-angle-right"></i>
-                    <a index="4" href="/Ofertas-de-trabajo-para-Nlp-en-Chubut?shm=all" class="top-locations-link" data-google-interstitial=false>Chubut</a>
-                    
-                  </li>
-                  <li class="suggested-locations-item">
-                    <i class="icon-angle-right"></i>
-                    <a index="5" href="/Ofertas-de-trabajo-para-Nlp-en-San-Nicol%C3%A1s-De-Los-Arroyos?shm=all" class="top-locations-link" data-google-interstitial=false>San Nicolás De Los Arroyos</a>
-                    
-                  </li>
-                  <li class="suggested-locations-item">
-                    <i class="icon-angle-right"></i>
-                    <a index="6" href="/Ofertas-de-trabajo-para-Nlp-en-Santa-F%C3%A9?shm=all" class="top-locations-link" data-google-interstitial=false>Santa Fé</a>
-                    
-                  </li>
-                  <li class="suggested-locations-item">
-                    <i class="icon-angle-right"></i>
-                    <a index="7" href="/Ofertas-de-trabajo-para-Nlp-en-La-Pampa?shm=all" class="top-locations-link" data-google-interstitial=false>La Pampa</a>
-                    
-                  </li>
-                  <li class="suggested-locations-item">
-                    <i class="icon-angle-right"></i>
-                    <a index="8" href="/Ofertas-de-trabajo-para-Nlp-en-Neuqu%C3%A9n?shm=all" class="top-locations-link" data-google-interstitial=false>Neuquén</a>
-                    
-                  </li>
-                  <li class="suggested-locations-item">
-                    <i class="icon-angle-right"></i>
-                    <a index="9" href="/Ofertas-de-trabajo-para-Nlp-en-Gba-Sur?shm=all" class="top-locations-link" data-google-interstitial=false>Gba Sur</a>
-                    
-                  </li>
-              </ul>
-          
-                <h3 class="h6 filter-title"><i class="location" aria-hidden="true"></i>Búsquedas relacionadas</h3>
-                <ul class="filter-list suggested-jobs-filter">
-                    <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="0" href="/Ofertas-de-trabajo-para-Modelo?shm=all"
-                        class="top-locations-link" data-google-interstitial=false>Modelo</a></li>
-                    <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="1" href="/Ofertas-de-trabajo-para-Software?shm=all"
-                        class="top-locations-link" data-google-interstitial=false>Software</a></li>
-                    <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="2" href="/Ofertas-de-trabajo-para-Software-Engineer?shm=all"
-                        class="top-locations-link" data-google-interstitial=false>Software Engineer</a></li>
-                    <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="3" href="/Ofertas-de-trabajo-para-Agente?shm=all"
-                        class="top-locations-link" data-google-interstitial=false>Agente</a></li>
-                    <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="4" href="/Ofertas-de-trabajo-para-Agente-Empleo?shm=all"
-                        class="top-locations-link" data-google-interstitial=false>Agente Empleo</a></li>
-                    <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="5" href="/Ofertas-de-trabajo-para-Agente-De-Bolsa?shm=all"
-                        class="top-locations-link" data-google-interstitial=false>Agente De Bolsa</a></li>
-                    <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="6" href="/Ofertas-de-trabajo-para-Python-Software-Engineer?shm=all"
-                        class="top-locations-link" data-google-interstitial=false>Python Software Engineer</a></li>
-                    <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="7" href="/Ofertas-de-trabajo-para-Product-Engineering?shm=all"
-                        class="top-locations-link" data-google-interstitial=false>Product Engineering</a></li>
-                    <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="8" href="/Ofertas-de-trabajo-para-Sistemas?shm=all"
-                        class="top-locations-link" data-google-interstitial=false>Sistemas</a></li>
-                    <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="9" href="/Ofertas-de-trabajo-para-Management?shm=all"
-                        class="top-locations-link" data-google-interstitial=false>Management</a></li>
-                </ul>
-          
-          </div>
-
-
   </div>
 </div>
+</header>
 
 
 
@@ -1212,22 +1218,22 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
                   </li>
                   <li class="suggested-locations-item">
                     <i class="icon-angle-right"></i>
-                    <a index="6" href="/Ofertas-de-trabajo-para-Nlp-en-Santa-F%C3%A9?shm=all" class="top-locations-link" data-google-interstitial=false>Santa Fé</a>
+                    <a index="6" href="/Ofertas-de-trabajo-para-Nlp-en-La-Pampa?shm=all" class="top-locations-link" data-google-interstitial=false>La Pampa</a>
                     
                   </li>
                   <li class="suggested-locations-item">
                     <i class="icon-angle-right"></i>
-                    <a index="7" href="/Ofertas-de-trabajo-para-Nlp-en-La-Pampa?shm=all" class="top-locations-link" data-google-interstitial=false>La Pampa</a>
+                    <a index="7" href="/Ofertas-de-trabajo-para-Nlp-en-Gba-Sur?shm=all" class="top-locations-link" data-google-interstitial=false>Gba Sur</a>
                     
                   </li>
                   <li class="suggested-locations-item">
                     <i class="icon-angle-right"></i>
-                    <a index="8" href="/Ofertas-de-trabajo-para-Nlp-en-Neuqu%C3%A9n?shm=all" class="top-locations-link" data-google-interstitial=false>Neuquén</a>
+                    <a index="8" href="/Ofertas-de-trabajo-para-Nlp-en-Quilmes?shm=all" class="top-locations-link" data-google-interstitial=false>Quilmes</a>
                     
                   </li>
                   <li class="suggested-locations-item">
                     <i class="icon-angle-right"></i>
-                    <a index="9" href="/Ofertas-de-trabajo-para-Nlp-en-Gba-Sur?shm=all" class="top-locations-link" data-google-interstitial=false>Gba Sur</a>
+                    <a index="9" href="/Ofertas-de-trabajo-para-Nlp-en-Neuqu%C3%A9n?shm=all" class="top-locations-link" data-google-interstitial=false>Neuquén</a>
                     
                   </li>
               </ul>
@@ -1266,15 +1272,6 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
     </div>
 </aside>
           <div class="main-content-wrapper" >
-  <div class="serp-tips-wrapper incomplete-statement-suggestion empty-where-suggestions js-empty-where js-tips">
-    <i class="icon-close js-tip-close"></i>
-    <div class="serp-tips-innerbox">
-      <ul>
-          <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
-              href="https://ar.jobrapido.com/?w=nlp&l=gran buenos aires&shm=all">Gran Buenos Aires</a></li>
-      </ul>
-    </div>
-  </div>
             <section id="results" class="main-section">
                                                                                                                                               <script>
                                                                                                                                                 //send confirmation tracking evant to google analitics
@@ -1304,7 +1301,125 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"3493981834750984192","advertPosition":0,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Santex Group","companyForTitle":"Santex Group","cpcInEur":0,"date":"13 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"C\u00F3rdoba Capital","locations":["C\u00F3rdoba Capital"],"locationsLabel":"C\u00F3rdoba Capital","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/3493981834750984192/?w=nlp&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a0a261586186ff&page_item_id=2104938144","pageItemId":2104938144,"parameterMap":{"date":"13 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior AI Specialist","openAdvertUrl":"https://open.app.jobrapido.com/ar/3493981834750984192/?w=nlp&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a0a261586186ff&page_item_id=2104938144","advertId":"3493981834750984192","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Santex Group","company":"Santex Group","location":"C\u00F3rdoba Capital","locations":["C\u00F3rdoba Capital"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior AI Specialist","titleSlug":"senior-ai-specialist","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='1' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1723660361892102144","advertPosition":0,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"EPAM Systems, Inc.","companyForTitle":"EPAM Systems, Inc.","cpcInEur":0,"date":"13 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"locationsLabel":"Comisi\u00F3n De Fomento De Per\u00FA","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1723660361892102144/?w=nlp&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a0a4016c8b5da4&page_item_id=-58798163","pageItemId":-58798163,"parameterMap":{"date":"13 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Chief Data Scientist","openAdvertUrl":"https://open.app.jobrapido.com/ar/1723660361892102144/?w=nlp&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a0a4016c8b5da4&page_item_id=-58798163","advertId":"1723660361892102144","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"EPAM Systems, Inc.","company":"EPAM Systems, Inc.","location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Chief Data Scientist","titleSlug":"chief-data-scientist","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='1' x-jr-advert
+  ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
+  <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
+    <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
+      class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
+      <span class="sr-only">
+        Open job preview for: Chief Data Scientist  - Comisión De Fomento De Perú
+      </span>
+    </a>
+    <div class="result-item__head result-item__head--no-date"
+      ng-hide="proposalVisible">
+    </div>
+    <h3 class="result-item__title  result-item__title--no-date" >
+      Chief Data Scientist
+    </h3>
+    <div class="result-item__location" >
+      <i class="icon-location" aria-hidden="true"></i>
+      <span class="result-item__location-label" >
+        <span >
+          Comisión De Fomento De Perú
+        </span>
+      </span>
+    </div>
+      <div class="result-item__company">
+        <i class="icon-company" aria-hidden="true"></i>
+        <span class="result-item__company-label" >
+          EPAM Systems, Inc.
+        </span>
+      </div>
+        <div class="result-item__cta">
+        <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
+          ng-click="[[advert.openAdvertUrl]]">View Salary</button>
+          <i ng-click="favouriteJobsCtrl.updateJob(1723660361892102144)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(1723660361892102144) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <div class="result-item__save-job-box" ng-cloak
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1723660361892102144)}">
+            <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
+          </div>
+    </div>
+
+    <!--- mobile like cta --->
+
+
+    <!--- mobile like cta end --->
+
+    <a class="result-item__link" id="a_1723660361892102144" tc="" ai="1723660361892102144"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1723660361892102144/?w=nlp&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a0a4016c8b5da4&page_item_id=-58798163"   target="_blank"  
+      rel="nofollow"
+    >
+      <span class="sr-only">
+        Open job preview for: Chief Data Scientist  - Comisión De Fomento De Perú
+      </span>
+    </a>
+  </div>
+</div>
+
+
+
+<div class="result-item js-result-item" data-sponsored="true"
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"3152941502800330752","advertPosition":1,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Sony Pictures Entertainment","companyForTitle":"Sony Pictures Entertainment","cpcInEur":0,"date":"03 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Esquel","locations":["Esquel"],"locationsLabel":"Esquel","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/3152941502800330752/?w=nlp&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a0a4016c8b5da4&page_item_id=-246233713","pageItemId":-246233713,"parameterMap":{"date":"03 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Data Science Manager","openAdvertUrl":"https://open.app.jobrapido.com/ar/3152941502800330752/?w=nlp&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a0a4016c8b5da4&page_item_id=-246233713","advertId":"3152941502800330752","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Sony Pictures Entertainment","company":"Sony Pictures Entertainment","location":"Esquel","locations":["Esquel"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Data Science Manager","titleSlug":"data-science-manager","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='2' x-jr-advert
+  ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
+  <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
+    <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
+      class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
+      <span class="sr-only">
+        Open job preview for: Data Science Manager  - Esquel
+      </span>
+    </a>
+    <div class="result-item__head result-item__head--no-date"
+      ng-hide="proposalVisible">
+    </div>
+    <h3 class="result-item__title  result-item__title--no-date" >
+      Data Science Manager
+    </h3>
+    <div class="result-item__location" >
+      <i class="icon-location" aria-hidden="true"></i>
+      <span class="result-item__location-label" >
+        <span >
+          Esquel
+        </span>
+      </span>
+    </div>
+      <div class="result-item__company">
+        <i class="icon-company" aria-hidden="true"></i>
+        <span class="result-item__company-label" >
+          Sony Pictures Entertainment
+        </span>
+      </div>
+        <div class="result-item__cta">
+        <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
+          ng-click="[[advert.openAdvertUrl]]">View Salary</button>
+          <i ng-click="favouriteJobsCtrl.updateJob(3152941502800330752)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(3152941502800330752) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <div class="result-item__save-job-box" ng-cloak
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(3152941502800330752)}">
+            <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
+          </div>
+    </div>
+
+    <!--- mobile like cta --->
+
+
+    <!--- mobile like cta end --->
+
+    <a class="result-item__link" id="a_3152941502800330752" tc="" ai="3152941502800330752"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/3152941502800330752/?w=nlp&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a0a4016c8b5da4&page_item_id=-246233713"   target="_blank"  
+      rel="nofollow"
+    >
+      <span class="sr-only">
+        Open job preview for: Data Science Manager  - Esquel
+      </span>
+    </a>
+  </div>
+</div>
+
+
+
+<div class="result-item js-result-item" data-sponsored="true"
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"3493981834750984192","advertPosition":2,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Santex Group","companyForTitle":"Santex Group","cpcInEur":0,"date":"13 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"C\u00F3rdoba Capital","locations":["C\u00F3rdoba Capital"],"locationsLabel":"C\u00F3rdoba Capital","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/3493981834750984192/?w=nlp&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a0a4016c8b5da4&page_item_id=489876058","pageItemId":489876058,"parameterMap":{"date":"13 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior AI Specialist","openAdvertUrl":"https://open.app.jobrapido.com/ar/3493981834750984192/?w=nlp&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a0a4016c8b5da4&page_item_id=489876058","advertId":"3493981834750984192","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Santex Group","company":"Santex Group","location":"C\u00F3rdoba Capital","locations":["C\u00F3rdoba Capital"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior AI Specialist","titleSlug":"senior-ai-specialist","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='3' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
@@ -1350,7 +1465,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
     <!--- mobile like cta end --->
 
     <a class="result-item__link" id="a_3493981834750984192" tc="" ai="3493981834750984192"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/3493981834750984192/?w=nlp&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a0a261586186ff&page_item_id=2104938144"   target="_blank"  
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/3493981834750984192/?w=nlp&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a0a4016c8b5da4&page_item_id=489876058"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
@@ -1360,10 +1475,14 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
   </div>
 </div>
 
-
+    
+    <div class="banner-box js-banner native" ng-non-bindable>
+      <div id="partnership-result-top" class="banner"></div>
+    </div>
+  
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8952684469655961600","advertPosition":1,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Business Commercial Management SRL","companyForTitle":"Business Commercial Management SRL","cpcInEur":0,"date":"01 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Esquel","locations":["Esquel"],"locationsLabel":"Esquel","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8952684469655961600/?w=nlp&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a0a261586186ff&page_item_id=797051228","pageItemId":797051228,"parameterMap":{"date":"01 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Analista desarrollador Semi Sr / Senior Botmaker - H\u00EDbrido","openAdvertUrl":"https://open.app.jobrapido.com/ar/8952684469655961600/?w=nlp&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a0a261586186ff&page_item_id=797051228","advertId":"8952684469655961600","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Business Commercial Management SRL","company":"Business Commercial Management SRL","location":"Esquel","locations":["Esquel"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Analista desarrollador Semi Sr / Senior Botmaker - H\u00EDbrido","titleSlug":"analista-desarrollador-semi-sr-senior-botmaker-hibrido","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='2' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8952684469655961600","advertPosition":3,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Business Commercial Management SRL","companyForTitle":"Business Commercial Management SRL","cpcInEur":0,"date":"01 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Esquel","locations":["Esquel"],"locationsLabel":"Esquel","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8952684469655961600/?w=nlp&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a0a4016c8b5da4&page_item_id=-944529462","pageItemId":-944529462,"parameterMap":{"date":"01 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Analista desarrollador Semi Sr / Senior Botmaker - H\u00EDbrido","openAdvertUrl":"https://open.app.jobrapido.com/ar/8952684469655961600/?w=nlp&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a0a4016c8b5da4&page_item_id=-944529462","advertId":"8952684469655961600","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Business Commercial Management SRL","company":"Business Commercial Management SRL","location":"Esquel","locations":["Esquel"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Analista desarrollador Semi Sr / Senior Botmaker - H\u00EDbrido","titleSlug":"analista-desarrollador-semi-sr-senior-botmaker-hibrido","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='5' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
@@ -1409,7 +1528,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
     <!--- mobile like cta end --->
 
     <a class="result-item__link" id="a_8952684469655961600" tc="" ai="8952684469655961600"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8952684469655961600/?w=nlp&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a0a261586186ff&page_item_id=797051228"   target="_blank"  
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8952684469655961600/?w=nlp&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a0a4016c8b5da4&page_item_id=-944529462"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
@@ -1422,7 +1541,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8384904327294091264","advertPosition":2,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Promtior","companyForTitle":"Promtior","cpcInEur":0,"date":"14 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"C\u00F3rdoba Capital","locations":["C\u00F3rdoba Capital"],"locationsLabel":"C\u00F3rdoba Capital","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8384904327294091264/?w=nlp&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a0a261586186ff&page_item_id=-126766649","pageItemId":-126766649,"parameterMap":{"date":"14 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Sr. Machine Learning Engineer","openAdvertUrl":"https://open.app.jobrapido.com/ar/8384904327294091264/?w=nlp&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a0a261586186ff&page_item_id=-126766649","advertId":"8384904327294091264","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Promtior","company":"Promtior","location":"C\u00F3rdoba Capital","locations":["C\u00F3rdoba Capital"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Sr. Machine Learning Engineer","titleSlug":"sr-machine-learning-engineer","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='3' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8384904327294091264","advertPosition":4,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Promtior","companyForTitle":"Promtior","cpcInEur":0,"date":"14 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"C\u00F3rdoba Capital","locations":["C\u00F3rdoba Capital"],"locationsLabel":"C\u00F3rdoba Capital","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8384904327294091264/?w=nlp&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a0a4016c8b5da4&page_item_id=1386606330","pageItemId":1386606330,"parameterMap":{"date":"14 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Sr. Machine Learning Engineer","openAdvertUrl":"https://open.app.jobrapido.com/ar/8384904327294091264/?w=nlp&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a0a4016c8b5da4&page_item_id=1386606330","advertId":"8384904327294091264","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Promtior","company":"Promtior","location":"C\u00F3rdoba Capital","locations":["C\u00F3rdoba Capital"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Sr. Machine Learning Engineer","titleSlug":"sr-machine-learning-engineer","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='6' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
@@ -1468,7 +1587,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
     <!--- mobile like cta end --->
 
     <a class="result-item__link" id="a_8384904327294091264" tc="" ai="8384904327294091264"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8384904327294091264/?w=nlp&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a0a261586186ff&page_item_id=-126766649"   target="_blank"  
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8384904327294091264/?w=nlp&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a0a4016c8b5da4&page_item_id=1386606330"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
@@ -1481,7 +1600,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1789705929428566016","advertPosition":3,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Promtior","companyForTitle":"Promtior","cpcInEur":0,"date":"14 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"C\u00F3rdoba Capital","locations":["C\u00F3rdoba Capital"],"locationsLabel":"C\u00F3rdoba Capital","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1789705929428566016/?w=nlp&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a0a261586186ff&page_item_id=1643600885","pageItemId":1643600885,"parameterMap":{"date":"14 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Sr. AI Engineer","openAdvertUrl":"https://open.app.jobrapido.com/ar/1789705929428566016/?w=nlp&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a0a261586186ff&page_item_id=1643600885","advertId":"1789705929428566016","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Promtior","company":"Promtior","location":"C\u00F3rdoba Capital","locations":["C\u00F3rdoba Capital"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Sr. AI Engineer","titleSlug":"sr-ai-engineer","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='4' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1789705929428566016","advertPosition":5,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Promtior","companyForTitle":"Promtior","cpcInEur":0,"date":"14 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"C\u00F3rdoba Capital","locations":["C\u00F3rdoba Capital"],"locationsLabel":"C\u00F3rdoba Capital","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1789705929428566016/?w=nlp&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a0a4016c8b5da4&page_item_id=428382201","pageItemId":428382201,"parameterMap":{"date":"14 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Sr. AI Engineer","openAdvertUrl":"https://open.app.jobrapido.com/ar/1789705929428566016/?w=nlp&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a0a4016c8b5da4&page_item_id=428382201","advertId":"1789705929428566016","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Promtior","company":"Promtior","location":"C\u00F3rdoba Capital","locations":["C\u00F3rdoba Capital"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Sr. AI Engineer","titleSlug":"sr-ai-engineer","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='7' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
@@ -1527,7 +1646,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
     <!--- mobile like cta end --->
 
     <a class="result-item__link" id="a_1789705929428566016" tc="" ai="1789705929428566016"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1789705929428566016/?w=nlp&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a0a261586186ff&page_item_id=1643600885"   target="_blank"  
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1789705929428566016/?w=nlp&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a0a4016c8b5da4&page_item_id=428382201"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
@@ -1540,7 +1659,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"6213023255008116736","advertPosition":4,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"EY","companyForTitle":"EY","cpcInEur":0,"date":"14 ago","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Esquel","locations":["Esquel"],"locationsLabel":"Esquel","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/6213023255008116736/?w=nlp&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a0a261586186ff&page_item_id=270079692","pageItemId":270079692,"parameterMap":{"date":"14 ago","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Client Technology - Software Engineering - EY Global Delivery Services","openAdvertUrl":"https://open.app.jobrapido.com/ar/6213023255008116736/?w=nlp&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a0a261586186ff&page_item_id=270079692","advertId":"6213023255008116736","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"EY","company":"EY","location":"Esquel","locations":["Esquel"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Client Technology - Software Engineering - EY Global Delivery Services","titleSlug":"client-technology-software-engineering-ey-global-delivery-services","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='5' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"6213023255008116736","advertPosition":6,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"EY","companyForTitle":"EY","cpcInEur":0,"date":"14 ago","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Esquel","locations":["Esquel"],"locationsLabel":"Esquel","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/6213023255008116736/?w=nlp&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a0a4016c8b5da4&page_item_id=309454770","pageItemId":309454770,"parameterMap":{"date":"14 ago","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Client Technology - Software Engineering - EY Global Delivery Services","openAdvertUrl":"https://open.app.jobrapido.com/ar/6213023255008116736/?w=nlp&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a0a4016c8b5da4&page_item_id=309454770","advertId":"6213023255008116736","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"EY","company":"EY","location":"Esquel","locations":["Esquel"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Client Technology - Software Engineering - EY Global Delivery Services","titleSlug":"client-technology-software-engineering-ey-global-delivery-services","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='8' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
@@ -1586,7 +1705,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
     <!--- mobile like cta end --->
 
     <a class="result-item__link" id="a_6213023255008116736" tc="" ai="6213023255008116736"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/6213023255008116736/?w=nlp&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a0a261586186ff&page_item_id=270079692"   target="_blank"  
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/6213023255008116736/?w=nlp&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a0a4016c8b5da4&page_item_id=309454770"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
@@ -1599,7 +1718,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1641304484250386432","advertPosition":5,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Azumo LLC.","companyForTitle":"Azumo LLC.","cpcInEur":0,"date":"14 ago","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Remoto","locations":["Remoto"],"locationsLabel":"Remoto","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1641304484250386432/?w=nlp&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a0a261586186ff&page_item_id=1370936165","pageItemId":1370936165,"parameterMap":{"date":"14 ago","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"AI Agent Systems Architect - Remote","openAdvertUrl":"https://open.app.jobrapido.com/ar/1641304484250386432/?w=nlp&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a0a261586186ff&page_item_id=1370936165","advertId":"1641304484250386432","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Azumo LLC.","company":"Azumo LLC.","location":"Remoto","locations":["Remoto"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"AI Agent Systems Architect - Remote","titleSlug":"ai-agent-systems-architect-remote","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='6' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1641304484250386432","advertPosition":7,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Azumo LLC.","companyForTitle":"Azumo LLC.","cpcInEur":0,"date":"14 ago","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Remoto","locations":["Remoto"],"locationsLabel":"Remoto","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1641304484250386432/?w=nlp&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a0a4016c8b5da4&page_item_id=23881797","pageItemId":23881797,"parameterMap":{"date":"14 ago","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"AI Agent Systems Architect - Remote","openAdvertUrl":"https://open.app.jobrapido.com/ar/1641304484250386432/?w=nlp&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a0a4016c8b5da4&page_item_id=23881797","advertId":"1641304484250386432","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Azumo LLC.","company":"Azumo LLC.","location":"Remoto","locations":["Remoto"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"AI Agent Systems Architect - Remote","titleSlug":"ai-agent-systems-architect-remote","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='9' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
@@ -1645,7 +1764,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
     <!--- mobile like cta end --->
 
     <a class="result-item__link" id="a_1641304484250386432" tc="" ai="1641304484250386432"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1641304484250386432/?w=nlp&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a0a261586186ff&page_item_id=1370936165"   target="_blank"  
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1641304484250386432/?w=nlp&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a0a4016c8b5da4&page_item_id=23881797"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
@@ -1658,7 +1777,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8697752408014454784","advertPosition":6,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Sezzle","companyForTitle":"Sezzle","cpcInEur":0,"date":"14 ago","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Remoto","locations":["Remoto"],"locationsLabel":"Remoto","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8697752408014454784/?w=nlp&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a0a261586186ff&page_item_id=90869580","pageItemId":90869580,"parameterMap":{"date":"14 ago","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"AI Engineer II - Marketing Argentina, Remote","openAdvertUrl":"https://open.app.jobrapido.com/ar/8697752408014454784/?w=nlp&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a0a261586186ff&page_item_id=90869580","advertId":"8697752408014454784","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Sezzle","company":"Sezzle","location":"Remoto","locations":["Remoto"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"AI Engineer II - Marketing Argentina, Remote","titleSlug":"ai-engineer-ii-marketing-argentina-remote","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='7' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8697752408014454784","advertPosition":8,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Sezzle","companyForTitle":"Sezzle","cpcInEur":0,"date":"14 ago","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Remoto","locations":["Remoto"],"locationsLabel":"Remoto","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8697752408014454784/?w=nlp&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a0a4016c8b5da4&page_item_id=-290036417","pageItemId":-290036417,"parameterMap":{"date":"14 ago","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"AI Engineer II - Marketing Argentina, Remote","openAdvertUrl":"https://open.app.jobrapido.com/ar/8697752408014454784/?w=nlp&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a0a4016c8b5da4&page_item_id=-290036417","advertId":"8697752408014454784","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Sezzle","company":"Sezzle","location":"Remoto","locations":["Remoto"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"AI Engineer II - Marketing Argentina, Remote","titleSlug":"ai-engineer-ii-marketing-argentina-remote","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='10' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
@@ -1704,7 +1823,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
     <!--- mobile like cta end --->
 
     <a class="result-item__link" id="a_8697752408014454784" tc="" ai="8697752408014454784"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8697752408014454784/?w=nlp&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a0a261586186ff&page_item_id=90869580"   target="_blank"  
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8697752408014454784/?w=nlp&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a0a4016c8b5da4&page_item_id=-290036417"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
@@ -1714,10 +1833,15 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
   </div>
 </div>
 
-
+    
+    <div class="banner-box js-banner native" ng-non-bindable>
+      <div id="partnership-result-bottom" class="banner"></div>
+    </div>
+      
+  
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8295372933690294272","advertPosition":7,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Doctolib","companyForTitle":"Doctolib","cpcInEur":0,"date":"14 ago","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Londres","locations":["Londres"],"locationsLabel":"Londres","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8295372933690294272/?w=nlp&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a0a261586186ff&page_item_id=783283487","pageItemId":783283487,"parameterMap":{"date":"14 ago","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Principal Machine Learning Engineer - Applied AI & LLMs (x/f/m)","openAdvertUrl":"https://open.app.jobrapido.com/ar/8295372933690294272/?w=nlp&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a0a261586186ff&page_item_id=783283487","advertId":"8295372933690294272","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Doctolib","company":"Doctolib","location":"Londres","locations":["Londres"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Principal Machine Learning Engineer - Applied AI & LLMs (x/f/m)","titleSlug":"principal-machine-learning-engineer-applied-ai-llms-x-f-m","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='8' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8295372933690294272","advertPosition":9,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Doctolib","companyForTitle":"Doctolib","cpcInEur":0,"date":"14 ago","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Londres","locations":["Londres"],"locationsLabel":"Londres","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8295372933690294272/?w=nlp&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a0a4016c8b5da4&page_item_id=-1079224108","pageItemId":-1079224108,"parameterMap":{"date":"14 ago","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Principal Machine Learning Engineer - Applied AI & LLMs (x/f/m)","openAdvertUrl":"https://open.app.jobrapido.com/ar/8295372933690294272/?w=nlp&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a0a4016c8b5da4&page_item_id=-1079224108","advertId":"8295372933690294272","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Doctolib","company":"Doctolib","location":"Londres","locations":["Londres"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Principal Machine Learning Engineer - Applied AI & LLMs (x/f/m)","titleSlug":"principal-machine-learning-engineer-applied-ai-llms-x-f-m","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='13' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
@@ -1763,7 +1887,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
     <!--- mobile like cta end --->
 
     <a class="result-item__link" id="a_8295372933690294272" tc="" ai="8295372933690294272"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8295372933690294272/?w=nlp&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a0a261586186ff&page_item_id=783283487"   target="_blank"  
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8295372933690294272/?w=nlp&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a0a4016c8b5da4&page_item_id=-1079224108"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
@@ -1773,14 +1897,10 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
   </div>
 </div>
 
-    
-    <div class="banner-box js-banner native" ng-non-bindable>
-      <div id="partnership-result-top" class="banner"></div>
-    </div>
-  
+
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1040984587322261504","advertPosition":8,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Werben HR","companyForTitle":"Werben HR","cpcInEur":0,"date":"13 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal (Parque Patricios)","locations":["Capital Federal (Parque Patricios)"],"locationsLabel":"Capital Federal (Parque Patricios)","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1040984587322261504/?w=nlp&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a0a261586186ff&page_item_id=2128444088","pageItemId":2128444088,"parameterMap":{"date":"13 sep","website":"www.whatjobs.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_whatjobs_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Python Developer (IA) - Machine Learning ID #00335","openAdvertUrl":"https://open.app.jobrapido.com/ar/1040984587322261504/?w=nlp&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a0a261586186ff&page_item_id=2128444088","advertId":"1040984587322261504","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Werben HR","company":"Werben HR","location":"Capital Federal (Parque Patricios)","locations":["Capital Federal (Parque Patricios)"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_whatjobs_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Python Developer (IA) - Machine Learning ID #00335","titleSlug":"python-developer-ia-machine-learning-id-00335","trackClickAd":null,"website":"www.whatjobs.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"whatjobs.com"}' data-position='10' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1040984587322261504","advertPosition":10,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Werben HR","companyForTitle":"Werben HR","cpcInEur":0,"date":"13 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal (Parque Patricios)","locations":["Capital Federal (Parque Patricios)"],"locationsLabel":"Capital Federal (Parque Patricios)","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1040984587322261504/?w=nlp&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a0a4016c8b5da4&page_item_id=1968338198","pageItemId":1968338198,"parameterMap":{"date":"13 sep","website":"www.whatjobs.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_whatjobs_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Python Developer (IA) - Machine Learning ID #00335","openAdvertUrl":"https://open.app.jobrapido.com/ar/1040984587322261504/?w=nlp&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a0a4016c8b5da4&page_item_id=1968338198","advertId":"1040984587322261504","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Werben HR","company":"Werben HR","location":"Capital Federal (Parque Patricios)","locations":["Capital Federal (Parque Patricios)"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_whatjobs_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Python Developer (IA) - Machine Learning ID #00335","titleSlug":"python-developer-ia-machine-learning-id-00335","trackClickAd":null,"website":"www.whatjobs.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"whatjobs.com"}' data-position='14' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
@@ -1826,7 +1946,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
     <!--- mobile like cta end --->
 
     <a class="result-item__link" id="a_1040984587322261504" tc="" ai="1040984587322261504"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1040984587322261504/?w=nlp&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a0a261586186ff&page_item_id=2128444088"   target="_blank"  
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1040984587322261504/?w=nlp&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a0a4016c8b5da4&page_item_id=1968338198"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
@@ -1839,7 +1959,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"7810947059887898624","advertPosition":9,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Interbank","companyForTitle":"Interbank","cpcInEur":0,"date":"13 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Remoto","locations":["Remoto"],"locationsLabel":"Remoto","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/7810947059887898624/?w=nlp&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a0a261586186ff&page_item_id=-1552912168","pageItemId":-1552912168,"parameterMap":{"date":"13 sep","website":"www.whatjobs.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_whatjobs_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"AI Context Governance Analyst","openAdvertUrl":"https://open.app.jobrapido.com/ar/7810947059887898624/?w=nlp&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a0a261586186ff&page_item_id=-1552912168","advertId":"7810947059887898624","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Interbank","company":"Interbank","location":"Remoto","locations":["Remoto"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_whatjobs_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"AI Context Governance Analyst","titleSlug":"ai-context-governance-analyst","trackClickAd":null,"website":"www.whatjobs.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"whatjobs.com"}' data-position='11' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"7810947059887898624","advertPosition":11,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Interbank","companyForTitle":"Interbank","cpcInEur":0,"date":"13 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Remoto","locations":["Remoto"],"locationsLabel":"Remoto","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/7810947059887898624/?w=nlp&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a0a4016c8b5da4&page_item_id=587297627","pageItemId":587297627,"parameterMap":{"date":"13 sep","website":"www.whatjobs.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_whatjobs_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"AI Context Governance Analyst","openAdvertUrl":"https://open.app.jobrapido.com/ar/7810947059887898624/?w=nlp&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a0a4016c8b5da4&page_item_id=587297627","advertId":"7810947059887898624","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Interbank","company":"Interbank","location":"Remoto","locations":["Remoto"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_whatjobs_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"AI Context Governance Analyst","titleSlug":"ai-context-governance-analyst","trackClickAd":null,"website":"www.whatjobs.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"whatjobs.com"}' data-position='15' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
@@ -1885,7 +2005,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
     <!--- mobile like cta end --->
 
     <a class="result-item__link" id="a_7810947059887898624" tc="" ai="7810947059887898624"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/7810947059887898624/?w=nlp&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a0a261586186ff&page_item_id=-1552912168"   target="_blank"  
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/7810947059887898624/?w=nlp&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a0a4016c8b5da4&page_item_id=587297627"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
@@ -1898,7 +2018,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"3205509016285347840","advertPosition":10,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Stefanini Latam","companyForTitle":"Stefanini Latam","cpcInEur":0,"date":"11 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Remoto","locations":["Remoto"],"locationsLabel":"Remoto","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/3205509016285347840/?w=nlp&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a0a261586186ff&page_item_id=1856825177","pageItemId":1856825177,"parameterMap":{"date":"11 sep","website":"www.whatjobs.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_whatjobs_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Desarrallador IA","openAdvertUrl":"https://open.app.jobrapido.com/ar/3205509016285347840/?w=nlp&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a0a261586186ff&page_item_id=1856825177","advertId":"3205509016285347840","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Stefanini Latam","company":"Stefanini Latam","location":"Remoto","locations":["Remoto"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_whatjobs_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Desarrallador IA","titleSlug":"desarrallador-ia","trackClickAd":null,"website":"www.whatjobs.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"whatjobs.com"}' data-position='12' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"3205509016285347840","advertPosition":12,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Stefanini Latam","companyForTitle":"Stefanini Latam","cpcInEur":0,"date":"11 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Remoto","locations":["Remoto"],"locationsLabel":"Remoto","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/3205509016285347840/?w=nlp&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a0a4016c8b5da4&page_item_id=-1156503671","pageItemId":-1156503671,"parameterMap":{"date":"11 sep","website":"www.whatjobs.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_whatjobs_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Desarrallador IA","openAdvertUrl":"https://open.app.jobrapido.com/ar/3205509016285347840/?w=nlp&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a0a4016c8b5da4&page_item_id=-1156503671","advertId":"3205509016285347840","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Stefanini Latam","company":"Stefanini Latam","location":"Remoto","locations":["Remoto"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_whatjobs_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Desarrallador IA","titleSlug":"desarrallador-ia","trackClickAd":null,"website":"www.whatjobs.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"whatjobs.com"}' data-position='16' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
@@ -1944,7 +2064,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
     <!--- mobile like cta end --->
 
     <a class="result-item__link" id="a_3205509016285347840" tc="" ai="3205509016285347840"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/3205509016285347840/?w=nlp&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a0a261586186ff&page_item_id=1856825177"   target="_blank"  
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/3205509016285347840/?w=nlp&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a0a4016c8b5da4&page_item_id=-1156503671"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
@@ -1957,7 +2077,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"652901066261659648","advertPosition":11,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Cadence Design Systems, Inc.","companyForTitle":"Cadence Design Systems, Inc.","cpcInEur":0,"date":"14 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal (San Nicol\u00E1s)","locations":["Capital Federal (San Nicol\u00E1s)"],"locationsLabel":"Capital Federal (San Nicol\u00E1s)","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/652901066261659648/?w=nlp&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a0a261586186ff&page_item_id=-1212428929","pageItemId":-1212428929,"parameterMap":{"date":"14 sep","website":"www.whatjobs.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_whatjobs_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Software Engineer","openAdvertUrl":"https://open.app.jobrapido.com/ar/652901066261659648/?w=nlp&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a0a261586186ff&page_item_id=-1212428929","advertId":"652901066261659648","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Cadence Design Systems, Inc.","company":"Cadence Design Systems, Inc.","location":"Capital Federal (San Nicol\u00E1s)","locations":["Capital Federal (San Nicol\u00E1s)"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_whatjobs_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Software Engineer","titleSlug":"senior-software-engineer","trackClickAd":null,"website":"www.whatjobs.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"whatjobs.com"}' data-position='13' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"652901066261659648","advertPosition":13,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Cadence Design Systems, Inc.","companyForTitle":"Cadence Design Systems, Inc.","cpcInEur":0,"date":"14 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal (San Nicol\u00E1s)","locations":["Capital Federal (San Nicol\u00E1s)"],"locationsLabel":"Capital Federal (San Nicol\u00E1s)","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/652901066261659648/?w=nlp&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a0a4016c8b5da4&page_item_id=-2031532906","pageItemId":-2031532906,"parameterMap":{"date":"14 sep","website":"www.whatjobs.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_whatjobs_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Software Engineer","openAdvertUrl":"https://open.app.jobrapido.com/ar/652901066261659648/?w=nlp&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a0a4016c8b5da4&page_item_id=-2031532906","advertId":"652901066261659648","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Cadence Design Systems, Inc.","company":"Cadence Design Systems, Inc.","location":"Capital Federal (San Nicol\u00E1s)","locations":["Capital Federal (San Nicol\u00E1s)"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_whatjobs_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Software Engineer","titleSlug":"senior-software-engineer","trackClickAd":null,"website":"www.whatjobs.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"whatjobs.com"}' data-position='17' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
@@ -2003,7 +2123,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
     <!--- mobile like cta end --->
 
     <a class="result-item__link" id="a_652901066261659648" tc="" ai="652901066261659648"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/652901066261659648/?w=nlp&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a0a261586186ff&page_item_id=-1212428929"   target="_blank"  
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/652901066261659648/?w=nlp&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a0a4016c8b5da4&page_item_id=-2031532906"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
@@ -2016,7 +2136,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8903465243955429376","advertPosition":12,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Stefanini Latam","companyForTitle":"Stefanini Latam","cpcInEur":0,"date":"11 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Remoto","locations":["Remoto"],"locationsLabel":"Remoto","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8903465243955429376/?w=nlp&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a0a261586186ff&page_item_id=-1452001663","pageItemId":-1452001663,"parameterMap":{"date":"11 sep","website":"www.whatjobs.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_whatjobs_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"L\u00EDder T\u00E9cnico de IA","openAdvertUrl":"https://open.app.jobrapido.com/ar/8903465243955429376/?w=nlp&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a0a261586186ff&page_item_id=-1452001663","advertId":"8903465243955429376","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Stefanini Latam","company":"Stefanini Latam","location":"Remoto","locations":["Remoto"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_whatjobs_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"L\u00EDder T\u00E9cnico de IA","titleSlug":"lider-tecnico-de-ia","trackClickAd":null,"website":"www.whatjobs.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"whatjobs.com"}' data-position='14' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8903465243955429376","advertPosition":14,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Stefanini Latam","companyForTitle":"Stefanini Latam","cpcInEur":0,"date":"11 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Remoto","locations":["Remoto"],"locationsLabel":"Remoto","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8903465243955429376/?w=nlp&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a0a4016c8b5da4&page_item_id=-411153733","pageItemId":-411153733,"parameterMap":{"date":"11 sep","website":"www.whatjobs.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_whatjobs_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"L\u00EDder T\u00E9cnico de IA","openAdvertUrl":"https://open.app.jobrapido.com/ar/8903465243955429376/?w=nlp&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a0a4016c8b5da4&page_item_id=-411153733","advertId":"8903465243955429376","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Stefanini Latam","company":"Stefanini Latam","location":"Remoto","locations":["Remoto"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_whatjobs_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"L\u00EDder T\u00E9cnico de IA","titleSlug":"lider-tecnico-de-ia","trackClickAd":null,"website":"www.whatjobs.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"whatjobs.com"}' data-position='18' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
@@ -2062,129 +2182,11 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
     <!--- mobile like cta end --->
 
     <a class="result-item__link" id="a_8903465243955429376" tc="" ai="8903465243955429376"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8903465243955429376/?w=nlp&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a0a261586186ff&page_item_id=-1452001663"   target="_blank"  
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8903465243955429376/?w=nlp&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a0a4016c8b5da4&page_item_id=-411153733"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
         Open job preview for: Líder Técnico de IA  - Remoto
-      </span>
-    </a>
-  </div>
-</div>
-
-
-
-<div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"3305472868271259648","advertPosition":13,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Promtior","companyForTitle":"Promtior","cpcInEur":0,"date":"14 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"C\u00F3rdoba","locations":["C\u00F3rdoba"],"locationsLabel":"C\u00F3rdoba","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/3305472868271259648/?w=nlp&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a0a261586186ff&page_item_id=832955558","pageItemId":832955558,"parameterMap":{"date":"14 sep","website":"www.whatjobs.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_whatjobs_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Sr. AI Engineer","openAdvertUrl":"https://open.app.jobrapido.com/ar/3305472868271259648/?w=nlp&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a0a261586186ff&page_item_id=832955558","advertId":"3305472868271259648","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Promtior","company":"Promtior","location":"C\u00F3rdoba","locations":["C\u00F3rdoba"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_whatjobs_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Sr. AI Engineer","titleSlug":"sr-ai-engineer","trackClickAd":null,"website":"www.whatjobs.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"whatjobs.com"}' data-position='15' x-jr-advert
-  ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
-  <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
-    <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
-      class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
-      <span class="sr-only">
-        Open job preview for: Sr. AI Engineer  - Córdoba
-      </span>
-    </a>
-    <div class="result-item__head result-item__head--no-date"
-      ng-hide="proposalVisible">
-    </div>
-    <h3 class="result-item__title  result-item__title--no-date" >
-      Sr. AI Engineer
-    </h3>
-    <div class="result-item__location" >
-      <i class="icon-location" aria-hidden="true"></i>
-      <span class="result-item__location-label" >
-        <span >
-          Córdoba
-        </span>
-      </span>
-    </div>
-      <div class="result-item__company">
-        <i class="icon-company" aria-hidden="true"></i>
-        <span class="result-item__company-label" >
-          Promtior
-        </span>
-      </div>
-        <div class="result-item__cta">
-        <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
-          ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(3305472868271259648)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(3305472868271259648) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
-          <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(3305472868271259648)}">
-            <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
-          </div>
-    </div>
-
-    <!--- mobile like cta --->
-
-
-    <!--- mobile like cta end --->
-
-    <a class="result-item__link" id="a_3305472868271259648" tc="" ai="3305472868271259648"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/3305472868271259648/?w=nlp&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a0a261586186ff&page_item_id=832955558"   target="_blank"  
-      rel="nofollow"
-    >
-      <span class="sr-only">
-        Open job preview for: Sr. AI Engineer  - Córdoba
-      </span>
-    </a>
-  </div>
-</div>
-
-
-
-<div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"68926148414799872","advertPosition":14,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Promtior","companyForTitle":"Promtior","cpcInEur":0,"date":"14 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"C\u00F3rdoba","locations":["C\u00F3rdoba"],"locationsLabel":"C\u00F3rdoba","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/68926148414799872/?w=nlp&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a0a261586186ff&page_item_id=-1426225746","pageItemId":-1426225746,"parameterMap":{"date":"14 sep","website":"www.whatjobs.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_whatjobs_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Sr. Machine Learning Engineer","openAdvertUrl":"https://open.app.jobrapido.com/ar/68926148414799872/?w=nlp&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a0a261586186ff&page_item_id=-1426225746","advertId":"68926148414799872","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Promtior","company":"Promtior","location":"C\u00F3rdoba","locations":["C\u00F3rdoba"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_whatjobs_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Sr. Machine Learning Engineer","titleSlug":"sr-machine-learning-engineer","trackClickAd":null,"website":"www.whatjobs.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"whatjobs.com"}' data-position='16' x-jr-advert
-  ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
-  <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
-    <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
-      class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
-      <span class="sr-only">
-        Open job preview for: Sr. Machine Learning Engineer  - Córdoba
-      </span>
-    </a>
-    <div class="result-item__head result-item__head--no-date"
-      ng-hide="proposalVisible">
-    </div>
-    <h3 class="result-item__title  result-item__title--no-date" >
-      Sr. Machine Learning Engineer
-    </h3>
-    <div class="result-item__location" >
-      <i class="icon-location" aria-hidden="true"></i>
-      <span class="result-item__location-label" >
-        <span >
-          Córdoba
-        </span>
-      </span>
-    </div>
-      <div class="result-item__company">
-        <i class="icon-company" aria-hidden="true"></i>
-        <span class="result-item__company-label" >
-          Promtior
-        </span>
-      </div>
-        <div class="result-item__cta">
-        <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
-          ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(68926148414799872)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(68926148414799872) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
-          <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(68926148414799872)}">
-            <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
-          </div>
-    </div>
-
-    <!--- mobile like cta --->
-
-
-    <!--- mobile like cta end --->
-
-    <a class="result-item__link" id="a_68926148414799872" tc="" ai="68926148414799872"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/68926148414799872/?w=nlp&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a0a261586186ff&page_item_id=-1426225746"   target="_blank"  
-      rel="nofollow"
-    >
-      <span class="sr-only">
-        Open job preview for: Sr. Machine Learning Engineer  - Córdoba
       </span>
     </a>
   </div>
@@ -3109,7 +3111,7 @@ window.__d3lUW8vwsKlB__("WyI0NWMyYTBkZTg1YmMwODA5IixbbnVsbCxudWxsLG51bGwsImh0dHB
 </script>
 
   <script>
-  _gaq.push(['_deleteCustomVar',5],['_trackPageview','/?w=Python&q=/Python//w-/&p=004&sa=00&ta=15&re=all&o=typein&n=20']);
+  _gaq.push(['_deleteCustomVar',5],['_trackPageview','/?w=Python&q=/Python//w-/&p=004&sa=00&ta=15&re=all&o=typein&n=19']);
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;g.src=('https:' == location.protocol
   ? '//ssl' : '//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))
   </script>

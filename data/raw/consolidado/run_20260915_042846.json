@@ -1,0 +1,166 @@
+{
+  "fecha_ejecucion": "2026-09-15T04:26:58.091356",
+  "max_dias": 90,
+  "verificacion_links": true,
+  "limite_temporal": "2026-06-17",
+  "duracion_segundos": 20956,
+  "total_acumulado_db": 4997,
+  "nuevas_incorporadas": 979,
+  "descartadas_fecha": 426,
+  "descartadas_dup": 4018,
+  "descartadas_link": 11,
+  "scrapers_ejecutados": [
+    {
+      "fuente": "linkedin",
+      "exito": true,
+      "ofertas": 398,
+      "error": null,
+      "duracion_s": 1871,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "computrabajo",
+      "exito": true,
+      "ofertas": 85,
+      "error": null,
+      "duracion_s": 500,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "getonboard",
+      "exito": true,
+      "ofertas": 420,
+      "error": null,
+      "duracion_s": 197,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "bumeran",
+      "exito": true,
+      "ofertas": 117,
+      "error": null,
+      "duracion_s": 1419,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "zonajobs",
+      "exito": true,
+      "ofertas": 115,
+      "error": null,
+      "duracion_s": 1375,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "opcionempleo",
+      "exito": true,
+      "ofertas": 937,
+      "error": null,
+      "duracion_s": 11000,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "jobrapido",
+      "exito": true,
+      "ofertas": 641,
+      "error": null,
+      "duracion_s": 4279,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "freelancer_ar",
+      "exito": true,
+      "ofertas": 323,
+      "error": null,
+      "duracion_s": 123,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "randstad",
+      "exito": true,
+      "ofertas": 3,
+      "error": null,
+      "duracion_s": 45,
+      "queries_origen": "modulo"
+    },
+    {
+      "fuente": "adecco",
+      "exito": true,
+      "ofertas": 4,
+      "error": null,
+      "duracion_s": 35,
+      "queries_origen": "modulo"
+    }
+  ],
+  "consolidacion_fuentes": {
+    "linkedin": {
+      "leidas": 610,
+      "descartadas_fecha": 52,
+      "descartadas_dup": 510,
+      "descartadas_link": 0,
+      "nuevas": 48
+    },
+    "computrabajo": {
+      "leidas": 200,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 124,
+      "descartadas_link": 0,
+      "nuevas": 76
+    },
+    "getonboard": {
+      "leidas": 480,
+      "descartadas_fecha": 51,
+      "descartadas_dup": 422,
+      "descartadas_link": 0,
+      "nuevas": 7
+    },
+    "bumeran": {
+      "leidas": 126,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 125,
+      "descartadas_link": 0,
+      "nuevas": 1
+    },
+    "zonajobs": {
+      "leidas": 124,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 123,
+      "descartadas_link": 0,
+      "nuevas": 1
+    },
+    "opcionempleo": {
+      "leidas": 2269,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 1518,
+      "descartadas_link": 0,
+      "nuevas": 751
+    },
+    "jobrapido": {
+      "leidas": 1295,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 1189,
+      "descartadas_link": 11,
+      "nuevas": 95
+    },
+    "freelancer_ar": {
+      "leidas": 323,
+      "descartadas_fecha": 323,
+      "descartadas_dup": 0,
+      "descartadas_link": 0,
+      "nuevas": 0
+    },
+    "randstad": {
+      "leidas": 3,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 3,
+      "descartadas_link": 0,
+      "nuevas": 0
+    },
+    "adecco": {
+      "leidas": 4,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 4,
+      "descartadas_link": 0,
+      "nuevas": 0
+    }
+  }
+}
