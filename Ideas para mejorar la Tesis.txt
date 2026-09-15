@@ -1,0 +1,13 @@
+¿Qué se te ocurre para mejorar lo que ya está hecho de mi tesis?
+
+Con lo que vi del proyecto hasta ahora, van algunas ideas concretas para mejorar lo ya hecho:
+
+Sobre el pipeline de scraping (T2)
+- El pipeline tardó ~6 horas en la última corrida completa, mayormente por opcionempleo (Playwright + Turnstile de Cloudflare, ~3h) y bumeran/zonajobs (también Playwright). Si el tiempo de scraping se vuelve un problema para iterar, valdría la pena paralelizar scrapers independientes entre sí (no dentro de cada uno, sino correr varias fuentes en simultáneo con procesos separados), ya que hoy run_scraping.py los corre en secuencia estricta.
+- El filtro de link activo que agregamos es permisivo por diseño (para no perder ofertas por bloqueos anti-bot), pero eso significa que ofertas detrás de un 403/429 persistente nunca se descartan. Si con el tiempo notás que se acumulan "zombies" que nunca dan 404 pero tampoco están realmente vigentes, podría valer la pena un chequeo más agresivo (ej. reintentar con headers distintos antes de decidir "permisivo").
+- buscojobs_scraper.py, jobleads_scraper.py, jobomas_scraper.py y workana_scraper.py están desactivados por el mismo motivo (el filtro de keyword no funciona server-side). Si en algún momento tenés tiempo para inspeccionar el tráfico de red real de esos sitios con un navegador, reactivarlos sumaría diversidad de fuentes al corpus.
+
+Sobre el diseño metodológico general
+- Vale la pena documentar en la tesis el criterio de "oferta vigente" que terminaste definiendo (90 días + link activo verificado en el momento de consolidar) como parte de la sección de calidad de datos — es un aporte metodológico concreto y defendible ante un tribunal, no solo un detalle de implementación.
+- Dado que el corpus mezcla fuentes muy dispares en volumen (opcionempleo con miles de ofertas vs. randstad/adecco con un puñado), sería interesante en el EDA (T3) mostrar explícitamente cómo esa asimetría de fuentes podría sesgar el ranking final, y si conviene ponderar o normalizar por fuente en el motor de matching (T6).
+- Comparar cuantitativamente TF-IDF vs. SBERT no solo en similitud promedio sino en acuerdo de ranking (¿cuánto se superponen los top-10 de cada método para la misma keyword?) le daría más peso empírico al benchmark (T7).
