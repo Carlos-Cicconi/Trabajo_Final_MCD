@@ -97,6 +97,7 @@ FRASES_OFERTA_INACTIVA = [
     "ha finalizado el plazo",
     "esta vacante ya no está disponible",
     "vacante no disponible",
+    "este empleo expiró",
     "job is no longer available",
     "this job is no longer accepting applications",
     "posting has expired",
