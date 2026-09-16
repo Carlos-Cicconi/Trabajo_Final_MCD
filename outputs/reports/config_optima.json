@@ -1,5 +1,5 @@
 {
-  "fecha_tuning": "2026-09-15T16:12:36.335069",
+  "fecha_tuning": "2026-09-15T21:30:19.143293",
   "tuning_A": {
     "descripcion": "Ponderación híbrida óptima",
     "w_embed": 0.7,
@@ -14,8 +14,8 @@
   "tuning_C": {
     "descripcion": "Hiperparámetros TF-IDF óptimos",
     "ngram_range": "(1, 1)",
-    "min_df": 2,
-    "max_features": 10000,
+    "min_df": 3,
+    "max_features": 20000,
     "metrica_opt": "nDCG@10"
   }
 }

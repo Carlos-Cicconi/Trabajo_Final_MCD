@@ -1,0 +1,147 @@
+2026-09-15 19:39:50,772 [INFO] DB lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_kitempleo.db
+2026-09-15 19:39:50,772 [INFO] KitempleoScraper inicializado
+2026-09-15 19:39:50,773 [INFO] ============================================================
+2026-09-15 19:39:50,773 [INFO] INICIO - Kit Empleo Argentina
+2026-09-15 19:39:50,773 [INFO] 
+🔍 'Data Scientist'
+2026-09-15 19:39:50,773 [INFO]    Página 1/5
+2026-09-15 19:39:54,521 [INFO]    → 10 encontradas
+2026-09-15 19:40:56,347 [INFO]    Página 2/5
+2026-09-15 19:41:00,114 [INFO]    → 10 encontradas
+2026-09-15 19:42:01,188 [INFO]    Página 3/5
+2026-09-15 19:42:03,827 [INFO]    → 10 encontradas
+2026-09-15 19:43:11,582 [INFO]    Página 4/5
+2026-09-15 19:43:15,387 [INFO]    → 10 encontradas
+2026-09-15 19:44:17,015 [INFO]    Página 5/5
+2026-09-15 19:44:21,146 [INFO]    → 10 encontradas
+2026-09-15 19:45:26,565 [INFO] CSV: 50 exportadas
+2026-09-15 19:45:26,565 [INFO] ✅ 'Data Scientist': 50 guardadas
+2026-09-15 19:45:32,797 [INFO] 
+🔍 'Data Analyst'
+2026-09-15 19:45:32,797 [INFO]    Página 1/5
+2026-09-15 19:45:36,488 [INFO]    → 10 encontradas
+2026-09-15 19:46:42,195 [INFO]    Página 2/5
+2026-09-15 19:46:46,321 [INFO]    → 10 encontradas
+2026-09-15 19:47:50,257 [INFO]    Página 3/5
+2026-09-15 19:47:54,302 [INFO]    → 10 encontradas
+2026-09-15 19:49:00,897 [INFO]    Página 4/5
+2026-09-15 19:49:05,552 [INFO]    → 10 encontradas
+2026-09-15 19:50:11,284 [INFO]    Página 5/5
+2026-09-15 19:50:15,440 [INFO]    → 10 encontradas
+2026-09-15 19:51:19,015 [INFO] CSV: 50 exportadas
+2026-09-15 19:51:19,015 [INFO] ✅ 'Data Analyst': 50 guardadas
+2026-09-15 19:51:26,008 [INFO] 
+🔍 'Machine Learning Engineer'
+2026-09-15 19:51:26,009 [INFO]    Página 1/5
+2026-09-15 19:51:29,681 [INFO]    → 10 encontradas
+2026-09-15 19:52:32,985 [INFO]    Página 2/5
+2026-09-15 19:52:36,105 [INFO]    → 8 encontradas
+2026-09-15 19:53:27,726 [INFO]    Página 3/5
+2026-09-15 19:53:32,449 [INFO]    → 10 encontradas
+2026-09-15 19:54:39,301 [INFO]    Página 4/5
+2026-09-15 19:54:44,104 [INFO]    → 10 encontradas
+2026-09-15 19:55:46,610 [INFO]    Página 5/5
+2026-09-15 19:55:51,103 [INFO]    → 10 encontradas
+2026-09-15 19:56:54,574 [INFO] CSV: 48 exportadas
+2026-09-15 19:56:54,574 [INFO] ✅ 'Machine Learning Engineer': 48 guardadas
+2026-09-15 19:57:02,240 [INFO] 
+🔍 'NLP Engineer'
+2026-09-15 19:57:02,241 [INFO]    Página 1/5
+2026-09-15 19:57:05,750 [INFO]    → 10 encontradas
+2026-09-15 19:58:09,736 [INFO]    Página 2/5
+2026-09-15 19:58:14,357 [INFO]    → 10 encontradas
+2026-09-15 19:59:14,790 [INFO]    Página 3/5
+2026-09-15 19:59:18,153 [INFO]    → 10 encontradas
+2026-09-15 20:00:17,171 [INFO]    Página 4/5
+2026-09-15 20:00:19,624 [INFO]    → 10 encontradas
+2026-09-15 20:01:23,598 [INFO]    Página 5/5
+2026-09-15 20:01:26,253 [INFO]    → 10 encontradas
+2026-09-15 20:02:30,916 [INFO] CSV: 50 exportadas
+2026-09-15 20:02:30,916 [INFO] ✅ 'NLP Engineer': 50 guardadas
+2026-09-15 20:02:36,060 [INFO] 
+🔍 'Data Engineer'
+2026-09-15 20:02:36,060 [INFO]    Página 1/5
+2026-09-15 20:02:39,606 [INFO]    → 9 encontradas
+2026-09-15 20:03:31,781 [INFO]    Página 2/5
+2026-09-15 20:03:34,765 [INFO]    → 9 encontradas
+2026-09-15 20:04:29,557 [INFO]    Página 3/5
+2026-09-15 20:04:32,929 [INFO]    → 10 encontradas
+2026-09-15 20:05:40,608 [INFO]    Página 4/5
+2026-09-15 20:05:44,384 [INFO]    → 10 encontradas
+2026-09-15 20:06:46,336 [INFO]    Página 5/5
+2026-09-15 20:06:49,226 [INFO]    → 10 encontradas
+2026-09-15 20:07:55,176 [INFO] CSV: 48 exportadas
+2026-09-15 20:07:55,176 [INFO] ✅ 'Data Engineer': 48 guardadas
+2026-09-15 20:08:01,394 [INFO] 
+🔍 'Software Engineer'
+2026-09-15 20:08:01,394 [INFO]    Página 1/5
+2026-09-15 20:08:05,064 [INFO]    → 10 encontradas
+2026-09-15 20:09:05,613 [INFO]    Página 2/5
+2026-09-15 20:09:08,979 [INFO]    → 10 encontradas
+2026-09-15 20:10:18,621 [INFO]    Página 3/5
+2026-09-15 20:10:22,835 [INFO]    → 10 encontradas
+2026-09-15 20:11:25,114 [INFO]    Página 4/5
+2026-09-15 20:11:29,985 [INFO]    → 10 encontradas
+2026-09-15 20:12:32,190 [INFO]    Página 5/5
+2026-09-15 20:12:35,184 [INFO]    → 10 encontradas
+2026-09-15 20:13:43,986 [INFO] CSV: 50 exportadas
+2026-09-15 20:13:43,986 [INFO] ✅ 'Software Engineer': 50 guardadas
+2026-09-15 20:13:49,228 [INFO] 
+🔍 'Python Developer'
+2026-09-15 20:13:49,229 [INFO]    Página 1/5
+2026-09-15 20:13:53,900 [INFO]    → 10 encontradas
+2026-09-15 20:15:01,523 [INFO]    Página 2/5
+2026-09-15 20:15:04,191 [INFO]    → 10 encontradas
+2026-09-15 20:16:08,318 [INFO]    Página 3/5
+2026-09-15 20:16:12,290 [INFO]    → 10 encontradas
+2026-09-15 20:17:16,946 [INFO]    Página 4/5
+2026-09-15 20:17:21,109 [INFO]    → 10 encontradas
+2026-09-15 20:18:28,583 [INFO]    Página 5/5
+2026-09-15 20:18:33,142 [INFO]    → 10 encontradas
+2026-09-15 20:19:33,687 [INFO] CSV: 50 exportadas
+2026-09-15 20:19:33,687 [INFO] ✅ 'Python Developer': 50 guardadas
+2026-09-15 20:19:41,250 [INFO] 
+🔍 'Desarrollador Backend'
+2026-09-15 20:19:41,250 [INFO]    Página 1/5
+2026-09-15 20:19:43,691 [INFO]    → 10 encontradas
+2026-09-15 20:20:51,583 [INFO]    Página 2/5
+2026-09-15 20:20:53,943 [INFO]    → 10 encontradas
+2026-09-15 20:21:52,541 [INFO]    Página 3/5
+2026-09-15 20:21:56,280 [INFO]    → 10 encontradas
+2026-09-15 20:23:01,119 [INFO]    Página 4/5
+2026-09-15 20:23:05,018 [INFO]    → 10 encontradas
+2026-09-15 20:24:10,199 [INFO]    Página 5/5
+2026-09-15 20:24:15,159 [INFO]    → 10 encontradas
+2026-09-15 20:25:16,085 [INFO] CSV: 50 exportadas
+2026-09-15 20:25:16,085 [INFO] ✅ 'Desarrollador Backend': 50 guardadas
+2026-09-15 20:25:23,372 [INFO] 
+🔍 'Desarrollador Full Stack'
+2026-09-15 20:25:23,373 [INFO]    Página 1/5
+2026-09-15 20:25:27,999 [INFO]    → 10 encontradas
+2026-09-15 20:26:29,719 [INFO]    Página 2/5
+2026-09-15 20:26:34,617 [INFO]    → 10 encontradas
+2026-09-15 20:27:31,493 [INFO]    Página 3/5
+2026-09-15 20:27:35,697 [INFO]    → 10 encontradas
+2026-09-15 20:28:40,258 [INFO]    Página 4/5
+2026-09-15 20:28:43,082 [INFO]    → 10 encontradas
+2026-09-15 20:29:45,385 [INFO]    Página 5/5
+2026-09-15 20:29:48,913 [INFO]    → 10 encontradas
+2026-09-15 20:30:52,383 [INFO] CSV: 50 exportadas
+2026-09-15 20:30:52,383 [INFO] ✅ 'Desarrollador Full Stack': 50 guardadas
+2026-09-15 20:30:57,506 [INFO] 
+🔍 'Ingeniero de Datos'
+2026-09-15 20:30:57,507 [INFO]    Página 1/5
+2026-09-15 20:31:00,473 [INFO]    → 10 encontradas
+2026-09-15 20:32:05,154 [INFO]    Página 2/5
+2026-09-15 20:32:09,381 [INFO]    → 10 encontradas
+2026-09-15 20:33:10,815 [INFO]    Página 3/5
+2026-09-15 20:33:13,828 [INFO]    → 10 encontradas
+2026-09-15 20:34:18,712 [INFO]    Página 4/5
+2026-09-15 20:34:22,608 [INFO]    → 10 encontradas
+2026-09-15 20:35:22,463 [INFO]    Página 5/5
+2026-09-15 20:35:27,175 [INFO]    → 10 encontradas
+2026-09-15 20:36:29,084 [INFO] CSV: 50 exportadas
+2026-09-15 20:36:29,084 [INFO] ✅ 'Ingeniero de Datos': 50 guardadas
+2026-09-15 20:36:35,092 [INFO] 
+============================================================
+FINALIZADO — 496 ofertas

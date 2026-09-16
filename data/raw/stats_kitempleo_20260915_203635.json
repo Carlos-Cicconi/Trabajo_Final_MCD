@@ -1,0 +1,47 @@
+{
+  "fuente": "kitempleo",
+  "fecha": "2026-09-15T20:36:35.093256",
+  "total": 496,
+  "detalle": [
+    {
+      "keyword": "Data Scientist",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Data Analyst",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Machine Learning Engineer",
+      "ofertas": 48
+    },
+    {
+      "keyword": "NLP Engineer",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Data Engineer",
+      "ofertas": 48
+    },
+    {
+      "keyword": "Software Engineer",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Python Developer",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Desarrollador Backend",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Desarrollador Full Stack",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Ingeniero de Datos",
+      "ofertas": 50
+    }
+  ]
+}

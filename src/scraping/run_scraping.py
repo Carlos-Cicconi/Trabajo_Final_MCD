@@ -155,7 +155,17 @@ SCRAPERS_REGISTRO = [
     # reactivar en el orquestador hasta encontrar y adaptar el scraper a
     # ese endpoint real.
     # ("workana_scraper",    "WorkanaScraper",      "workana",      "db_workana.db"),
-    ("opcionempleo_scraper", "OpcionempleoScraper", "opcionempleo", "db_opcionempleo.db"),
+    # opcionempleo_scraper: DESACTIVADO — usa Cloudflare Turnstile y devuelve
+    # HTTP 200 con una página de "Verificación requerida" en vez del
+    # contenido real, incluso probando con Playwright headless y con
+    # playwright-stealth. Esto hace que verificar_link_activo() nunca pueda
+    # confirmar ni descartar la vigencia real de sus ofertas (todas caen en
+    # la categoría "no concluyente por verificación anti-bot"), lo que dejó
+    # pasar al menos una oferta ya vencida sin detectar. Reemplazado por
+    # kitempleo_scraper (mismo volumen de fuentes: 10), que no tiene
+    # Cloudflare y sí filtra por keyword server-side de forma verificable.
+    # ("opcionempleo_scraper", "OpcionempleoScraper", "opcionempleo", "db_opcionempleo.db"),
+    ("kitempleo_scraper",    "KitempleoScraper",    "kitempleo",    "db_kitempleo.db"),
     # jobomas_scraper: DESACTIVADO — el modo "slug" (/{keyword}) que intenta
     # primero da 404 incluso con keywords conocidas ("python"), por lo que
     # en la práctica siempre cae al modo fallback por query params

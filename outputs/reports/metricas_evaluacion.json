@@ -1,7 +1,7 @@
 {
-  "fecha_evaluacion": "2026-09-15T16:11:39.098689",
-  "n_documentos": 2476,
-  "umbral_relevancia": 0.3947,
+  "fecha_evaluacion": "2026-09-15T21:29:33.279334",
+  "n_documentos": 1335,
+  "umbral_relevancia": 0.4343,
   "config_principal": "Híbrido 70/30",
   "modelo_embed": "paraphrase-multilingual-MiniLM-L12-v2",
   "configuraciones": {
