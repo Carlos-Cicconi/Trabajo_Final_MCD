@@ -1,6 +1,6 @@
 # Reporte del Motor de Matching — T6
 
-**Fecha:** 2026-09-15 23:44  
+**Fecha:** 2026-09-16 08:45  
 **Configuración activa:** Híbrido 70/30  
 **Modelo de embeddings:** paraphrase-multilingual-MiniLM-L12-v2  
 **Corpus:** 1,335 ofertas  
@@ -12,7 +12,7 @@
 | Solo SBERT | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
 | Híbrido 70/30 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
 | Híbrido 50/50 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
-| Solo TF-IDF | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+| Solo TF-IDF | 0.800 | 0.600 | 0.701 | 0.694 | 1.000 |
 
 ## Top 20 ofertas recomendadas
 
