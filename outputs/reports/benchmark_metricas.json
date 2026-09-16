@@ -1,5 +1,5 @@
 {
-  "fecha_evaluacion": "2026-09-15T21:29:44.391127",
+  "fecha_evaluacion": "2026-09-15T23:44:59.861815",
   "n_documentos": 1335,
   "umbral_relevancia": 0.0597,
   "n_relevantes": 334,
@@ -22,7 +22,7 @@
       "nDCG_g@20": 0.2204,
       "nDCG_g@50": 0.2638,
       "MRR": 0.5,
-      "Tiempo_ms": 123.5
+      "Tiempo_ms": 127.9
     },
     "B1 — Jaccard BoW": {
       "P@5": 1.0,
@@ -42,7 +42,7 @@
       "nDCG_g@20": 0.9539,
       "nDCG_g@50": 0.9383,
       "MRR": 1.0,
-      "Tiempo_ms": 237.8
+      "Tiempo_ms": 259.0
     },
     "B2 — TF-IDF": {
       "P@5": 1.0,

@@ -5,6 +5,6 @@
   "chunk_overlap": 100,
   "batch_size": 32,
   "n_ofertas": 1335,
-  "fecha_encoding": "2026-09-15T21:29:24.021446",
+  "fecha_encoding": "2026-09-15T23:44:37.522636",
   "col_texto_fuente": "texto_procesado"
 }

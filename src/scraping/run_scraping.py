@@ -97,7 +97,10 @@ FRASES_OFERTA_INACTIVA = [
     "ha finalizado el plazo",
     "esta vacante ya no está disponible",
     "vacante no disponible",
+    "oferta no disponible",
     "este empleo expiró",
+    "la empresa finalizó este aviso",
+    "este aviso finalizó",
     "job is no longer available",
     "this job is no longer accepting applications",
     "posting has expired",
@@ -114,6 +117,16 @@ PATRONES_VERIFICACION_ANTIBOT = [
     "cf-turnstile",
     "checking your browser",
     "just a moment",
+]
+
+# Patrones que indican que la respuesta HTTP 200 es el "shell" vacío de una
+# SPA sin SSR (ej. Bumeran/ZonaJobs, Randstad: React puro) — requests nunca
+# ve el contenido real de la oferta, solo el loader inicial. Igual que con
+# PATRONES_VERIFICACION_ANTIBOT, no confirman ni descartan la vigencia.
+PATRONES_SPA_SIN_SSR = [
+    "you need to enable javascript",
+    "enable javascript to run this app",
+    "enable javascript to continue",
 ]
 
 # Columnas canónicas del consolidado — superconjunto de todos los scrapers
@@ -476,15 +489,18 @@ def verificar_link_activo(url: str, timeout: int = LINK_CHECK_TIMEOUT) -> bool:
     clara: HTTP 404/410, o una frase típica de "oferta no disponible" en
     el cuerpo de una respuesta 200.
 
-    Caso especial: opcionempleo.com.ar usa un challenge anti-bot (Cloudflare
-    Turnstile) que devuelve HTTP 200 con una página de "Verificación
-    requerida" en vez del contenido real de la oferta — no se probó con
-    Playwright (headless o con playwright-stealth) porque el challenge
-    tampoco se resuelve en ninguno de los dos casos, así que la frase real de
-    vencimiento ("Este empleo expiró") queda oculta. En ese caso se sigue
-    conservando la oferta (mismo criterio permisivo), pero se loguea de forma
-    distinguible como "no concluyente por verificación anti-bot" en vez de
-    quedar indistinguible de una verificación exitosa.
+    Casos especiales donde el HTTP 200 no refleja el contenido real de la
+    oferta (se sigue conservando por el mismo criterio permisivo, pero se
+    loguea de forma distinguible en vez de mezclarse con una verificación
+    exitosa):
+    - Challenge anti-bot (ej. Cloudflare Turnstile, histórico en
+      opcionempleo.com.ar, ahora desactivado en SCRAPERS_REGISTRO): la
+      respuesta es una página de "Verificación requerida", no la oferta.
+      Se probó resolverlo con Playwright headless y con playwright-stealth
+      sin éxito.
+    - SPA sin SSR (ej. Bumeran, ZonaJobs, Randstad: React puro): requests
+      solo ve el shell vacío del loader ("You need to enable JavaScript"),
+      nunca el HTML ya renderizado con el contenido de la oferta.
     """
     if not url or not url.strip().lower().startswith("http"):
         return True  # Sin URL verificable: no se puede evaluar, se conserva
@@ -512,6 +528,10 @@ def verificar_link_activo(url: str, timeout: int = LINK_CHECK_TIMEOUT) -> bool:
 
     if any(patron in cuerpo for patron in PATRONES_VERIFICACION_ANTIBOT):
         logger.info(f"    🤖⚠️  Verificación anti-bot (no concluyente), se conserva: {url}")
+        return True
+
+    if any(patron in cuerpo for patron in PATRONES_SPA_SIN_SSR):
+        logger.info(f"    ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: {url}")
         return True
 
     return True

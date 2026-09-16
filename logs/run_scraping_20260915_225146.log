@@ -1,0 +1,283 @@
+2026-09-15 22:51:46,047 [INFO] 
+=================================================================
+2026-09-15 22:51:46,047 [INFO]   ORQUESTADOR DE SCRAPING — Tesis MCD
+2026-09-15 22:51:46,047 [INFO]   Alumno: Cicconi, Carlos Alberto
+2026-09-15 22:51:46,047 [INFO]   Universidad Austral — Maestría en Explotación de Datos
+2026-09-15 22:51:46,047 [INFO] =================================================================
+2026-09-15 22:51:46,047 [INFO]   Fecha/hora inicio : 2026-09-15 22:51:46
+2026-09-15 22:51:46,047 [INFO]   Ventana temporal  : 90 días
+2026-09-15 22:51:46,048 [INFO]   Verificar links   : Sí (8 hilos)
+2026-09-15 22:51:46,048 [INFO]   Scrapers activos  : 10
+2026-09-15 22:51:46,048 [INFO]   Solo consolidar   : False
+2026-09-15 22:51:46,048 [INFO]   Origen de queries : módulos (por defecto)
+2026-09-15 22:51:46,048 [INFO] 
+=================================================================
+2026-09-15 22:51:46,048 [INFO]   MODO PURGA — revalidando el consolidado existente
+2026-09-15 22:51:46,048 [INFO] =================================================================
+2026-09-15 22:51:46,085 [INFO]   Revisando 2,040 ofertas ya consolidadas...
+2026-09-15 22:51:46,092 [INFO]   🔗 Verificando 2,040 links...
+2026-09-15 22:52:57,150 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/bi-analyst-data-visualization-baires-hr-2189150.html
+2026-09-15 22:52:57,315 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/bi-analyst-data-visualization-baires-hr-1118424251.html
+2026-09-15 22:52:57,349 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/data-visualization-analyst-baires-hr-1118426453.html
+2026-09-15 22:52:57,410 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/data-engineer-gcp-remoto-1775-aliantec-1118428803.html
+2026-09-15 22:52:57,415 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/data-visualization-analyst-baires-hr-2189245.html
+2026-09-15 22:52:57,418 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/data-business-intelligence-analyst-jr-ssr-neuquen-capital-adecco-recursos-humanos-argentina-sa-1118373125.html
+2026-09-15 22:52:57,451 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/especialista-en-machine-learning-bumeran-selecta-1118338178.html
+2026-09-15 22:52:57,466 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/data-engineer-emede-consultora-1118434647.html
+2026-09-15 22:52:57,536 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/data-engineer-senior-itsm-consulting-sa-1118425270.html
+2026-09-15 22:52:57,767 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/data-engineer-gcp-remoto-1775-aliantec-2189365.html
+2026-09-15 22:52:57,799 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/cloud-data-engineer-|-ai-real-time-marco-marketing-2188711.html
+2026-09-15 22:52:57,928 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-backend-python-iaagentes-sr-software-financiero-remoto-para-argentina-kaizen-recursos-humanos-1118430946.html
+2026-09-15 22:52:57,944 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/data-engineer-senior-it-sm-consulting-s.a.-2189190.html
+2026-09-15 22:52:57,947 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/frontend-software-engineer--angular-gvg-consultora-1118421640.html
+2026-09-15 22:52:58,105 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-de-software-semi-senior-hipodromo-palermo-1118391235.html
+2026-09-15 22:52:58,112 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/.net-software-engineer-angular-remoto-argentina-todo-el-pais-aliantec-1118436298.html
+2026-09-15 22:52:58,166 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-de-software-jr-hipodromo-palermo-1118391216.html
+2026-09-15 22:52:58,169 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/backend-software-engineer--java-python-gvg-consultora-1118421641.html
+2026-09-15 22:52:58,203 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/ingeniero-a-de-sistemas-aeroespaciales-management-en-red-1118430953.html
+2026-09-15 22:52:58,287 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-desarrollador-semi-sr-senior-botmaker-hibrido-business-commercial-management-1118416634.html
+2026-09-15 22:52:58,350 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/planificador-programador-de-produccion-cortes-de-precision-s.a.-1118432844.html
+2026-09-15 22:52:58,358 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-grupo-taraborelli-1118424509.html
+2026-09-15 22:52:58,376 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-a-de-abastecimiento-maincal-sa-1118425687.html
+2026-09-15 22:52:58,425 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-plc-jl-consultores-1118418222.html
+2026-09-15 22:52:58,524 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-a-genexus-bb-consultores-1118425671.html
+2026-09-15 22:52:58,765 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-de-plc-1118419701.html
+2026-09-15 22:52:58,829 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-fullstack-senior-itsm-consulting-sa-1118435676.html
+2026-09-15 22:52:58,839 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/operador-programador-cnc-1118427650.html
+2026-09-15 22:52:58,846 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-ssr-grupomulti-1118421570.html
+2026-09-15 22:52:58,855 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/instrumentista-programador-a-plc-zona-pilar-grupo-gestion-1118422626.html
+2026-09-15 22:52:58,912 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-formulas-cosmeticas-soledad-maldonado-1118435687.html
+2026-09-15 22:52:58,914 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/node-js-software-engineer-remoto-1834-aliantec-1118392928.html
+2026-09-15 22:52:58,915 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/software-engineer-|-laravel-backend-focus-caba-hibrido-speedwork-rrhh-1118395478.html
+2026-09-15 22:52:59,107 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-frontend-ssr.-gst-1118414039.html
+2026-09-15 22:52:59,114 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-sr-frontend-developer-react-evolucionar-consultora-1118431707.html
+2026-09-15 22:52:59,122 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-backend-python-con-ia-sr-multinacional-de-software-financiero-remoto-para-argentina-kaizen-recursos-humanos-1118383518.html
+2026-09-15 22:52:59,172 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-programador-c-ideafix--full-remoto-solutix-s.a.-1118373677.html
+2026-09-15 22:52:59,176 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-full-stack-.net-angular-hibrido-1885-aliantec-1118436275.html
+2026-09-15 22:52:59,185 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-rpa-semi-senior-senior-tax-bdo-argentina-1118426307.html
+2026-09-15 22:52:59,234 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-cnc-y-autocad-matricer-1118399613.html
+2026-09-15 22:52:59,238 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/preparador-programador-cnc-1118406996.html
+2026-09-15 22:52:59,427 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/asistente-de-compras-senior-desarrollador-proveedores-y-categorias-rh-talentum-1118414456.html
+2026-09-15 22:52:59,437 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/project-manager-para-desarrolladora-de-elizalde-desarrollo-del-talento-1118399084.html
+2026-09-15 22:52:59,480 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-fullstack-senior-vue-3-typescript-persat-1118410267.html
+2026-09-15 22:52:59,481 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-full-stack-java-react-senior-mix-onsite-remoto-1778-aliantec-1118436307.html
+2026-09-15 22:52:59,498 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-web-senior-ui-ux--freelancer-dobohomes-1118421638.html
+2026-09-15 22:52:59,500 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-backend-find-me-1118392714.html
+2026-09-15 22:52:59,527 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-web-junior-estudiante-avanzado-de-programacion-los-elegidos-1118424319.html
+2026-09-15 22:52:59,529 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-full-stack-|-ia-data-1118416664.html
+2026-09-15 22:52:59,848 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-salesforce-sr.-reglas-de-negocio-mix-onsite-remoto-retiro-1808-aliantec-1118436302.html
+2026-09-15 22:52:59,884 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-cnc-centro-de-mecanizado-1118388330.html
+2026-09-15 22:52:59,900 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/go-software-engineer-remoto-1859-aliantec-1118368517.html
+2026-09-15 22:52:59,903 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-java-senior-hibrido-y-remoto-business-commercial-management-1118400632.html
+2026-09-15 22:52:59,915 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-a-java-senior--apis-david-rochwarger-1118385278.html
+2026-09-15 22:52:59,946 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/ejecutivo-comercial-b2b-desarrollador-de-nuevos-negocios-1118404937.html
+2026-09-15 22:52:59,954 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-|-junior-semi-senior-1118392518.html
+2026-09-15 22:53:00,296 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-full-stack-para-empresa-de-servicios-de-gas-generacion-talento-1118400545.html
+2026-09-15 22:53:00,300 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-php-laravel-sr-hibrido-1819-aliantec-1118392937.html
+2026-09-15 22:53:00,360 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-android-senior-1118385856.html
+2026-09-15 22:53:00,364 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-de-canal-mayorista-dynamic-box-hr-consulting-1118385233.html
+2026-09-15 22:53:00,377 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-backend-ssr-gst-1118383011.html
+2026-09-15 22:53:00,382 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-node-js-ssr-mix-onsite-remoto-1807-aliantec-1118401600.html
+2026-09-15 22:53:00,389 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-rpg-cobol-senior--as-400-1118399189.html
+2026-09-15 22:53:00,787 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/instrumentista-programador-a-plc-zona-pilar-grupo-gestion-1118371183.html
+2026-09-15 22:53:00,798 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-backend-lenox-1118370489.html
+2026-09-15 22:53:00,827 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-tornos-cnc-turno-noche-mecanizados-gabriel-s.a-1118368719.html
+2026-09-15 22:53:00,878 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/ingeniero-junior-de-sistema-de-gestion-integrado-randstad-argentina-1118370503.html
+2026-09-15 22:53:00,885 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-mobile-1118378005.html
+2026-09-15 22:53:00,893 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-plsql-sr-remoto-argentina-acciona-it-1118384297.html
+2026-09-15 22:53:00,899 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/instrumentista-programador-a-plc-zona-pilar-grupo-gestion-1118380159.html
+2026-09-15 22:53:00,974 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-fisico-a-matematico-a-jr.-bb-consultores-1118391671.html
+2026-09-15 22:53:01,304 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-de-software-bumeran-selecta-1118338055.html
+2026-09-15 22:53:01,308 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-de-cnc-ceta-capital-humano-1118336985.html
+2026-09-15 22:53:01,331 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-web-fullstack-sesnich-villalonga-cereales-sa-1118360815.html
+2026-09-15 22:53:01,344 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/.net-software-engineer-angular-remoto-argentina-todo-el-pais-aliantec-2189733.html
+2026-09-15 22:53:01,401 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-fullstack-sr-node-angular-remoto-argentina-acciona-it-1118348901.html
+2026-09-15 22:53:01,421 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrolladores-java-para-empresa-lider-en-el-desarrollo-de-soluciones-para-la-industria-de-oilgas-bt-consultores-buscadores-de-talentos-1118368050.html
+2026-09-15 22:53:01,456 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-a-de-abastecimiento-maincal-sa-2189210.html
+2026-09-15 22:53:01,460 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-programador-ferrovias-s.a.c.-2188012.html
+2026-09-15 22:53:01,700 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-grupo-taraborelli-2189173.html
+2026-09-15 22:53:01,712 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-a-genexus-bb-consultores-2189209.html
+2026-09-15 22:53:01,724 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-a-de-mantenimiento-mec-consultores-asociados-2189140.html
+2026-09-15 22:53:01,731 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/node-js-software-engineer-remoto-1834-aliantec-2187521.html
+2026-09-15 22:53:01,764 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-ssr-grupomulti-2189003.html
+2026-09-15 22:53:01,841 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-cnc-mb-consultores-en-recursos-humanos-2188907.html
+2026-09-15 22:53:01,910 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/estudiante-de-ingenieria-en-sistemas-desarrollador-full-stack-veronica-guagliardi-2187139.html
+2026-09-15 22:53:01,917 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-centro-mecanizado-matripre-srlsrl-s.r.l-2188948.html
+2026-09-15 22:53:02,071 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrolladores-todo-el-pais-2187688.html
+2026-09-15 22:53:02,098 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-rpa-semi-senior-senior-tax-bdo-2189239.html
+2026-09-15 22:53:02,191 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-de-centro-de-mecanizado-cnc-matripre-srlsrl-s.r.l-2188940.html
+2026-09-15 22:53:02,194 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-pl-sql-la-caja-de-ahorro-y-seguros-s.a.-2189415.html
+2026-09-15 22:53:02,206 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-cnc-y-autocad-matriceria-cr-srl-2187915.html
+2026-09-15 22:53:02,313 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-full-stack-.net-angular-hibrido-1885-aliantec-2189728.html
+2026-09-15 22:53:02,321 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/project-manager-para-desarrolladora-de-elizalde-desarrollo-del-talento-2187887.html
+2026-09-15 22:53:02,402 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/operador-programador-cnc-carpinteria-centro-de-trabajo-oromanta-2188279.html
+2026-09-15 22:53:02,469 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrolladores-backend-go-sr.-solutix-s.a.-2187772.html
+2026-09-15 22:53:02,564 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/go-software-engineer-remoto-1859-aliantec-2185897.html
+2026-09-15 22:53:02,578 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-full-stack-java-react-senior-mix-onsite-remoto-1778-aliantec-2189735.html
+2026-09-15 22:53:02,678 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/go-software-engineer-remoto-1858-aliantec-2185759.html
+2026-09-15 22:53:02,682 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-salesforce-sr.-reglas-de-negocio-mix-onsite-remoto-retiro-1808-aliantec-2189734.html
+2026-09-15 22:53:02,829 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-canal-mayorista-dynamic-box-hr-consulting-2187057.html
+2026-09-15 22:53:02,891 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-fisico-a-matematico-a-jr.-bb-consultores-2187413.html
+2026-09-15 22:53:02,916 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-full-stack-para-empresa-de-servicios-de-gas-generacion-talento-2187956.html
+2026-09-15 22:53:02,922 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-full-stack-veronica-guagliardi-2187138.html
+2026-09-15 22:53:03,024 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-backend-ssr-grupo-financiero-st-2186850.html
+2026-09-15 22:53:03,042 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/plegador-cnc-operador-programador-sorrento-maquinarias-2186632.html
+2026-09-15 22:53:03,152 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-php-laravel-sr-hibrido-1819-aliantec-2187524.html
+2026-09-15 22:53:03,239 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-full-stack-sr.-con-ia-python-node.js-javascript-solutix-s.a.-2187263.html
+2026-09-15 22:53:03,252 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-de-centros-y-tornos-cnc.-10-anos-de-experfiencia.-pariani-sa-2186763.html
+2026-09-15 22:53:03,279 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-node-js-ssr-mix-onsite-remoto-1807-aliantec-2188026.html
+2026-09-15 22:53:03,283 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/soporte-it-desarrollador-jr.-2187066.html
+2026-09-15 22:53:03,394 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrolladores-backend-go-sr.-solutix-s.a.-2186558.html
+2026-09-15 22:53:03,550 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/data-science-python-ia-remoto-1731-aliantec-1118436309.html
+2026-09-15 22:53:03,803 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/data-science-python-ia-remoto-1731-aliantec-2189736.html
+2026-09-15 22:53:03,831 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-full-stack-sr.-con-ia-python-node.js-javascript-solutix-s.a.-2186564.html
+2026-09-15 22:53:04,030 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/data-visualization-analyst-baires-hr-1118426453.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:04,047 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-full-stack-pistacho-app-2186103.html
+2026-09-15 22:53:04,149 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/data-visualization-analyst-baires-hr-2189245.html
+2026-09-15 22:53:04,157 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/bi-analyst-data-visualization-baires-hr-1118424251.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:04,164 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/data-business-intelligence-analyst-jr-ssr-neuquen-capital-adecco-recursos-humanos-argentina-sa-1118373125.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:04,252 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/bi-analyst-data-visualization-baires-hr-2189150.html
+2026-09-15 22:53:04,349 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/especialista-en-machine-learning-bumeran-selecta-1118338178.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:04,357 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/data-engineer-senior-it-sm-consulting-s.a.-2189190.html
+2026-09-15 22:53:04,713 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/data-engineer-senior-itsm-consulting-sa-1118425270.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:04,727 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/cloud-data-engineer-|-ai-real-time-marco-marketing-2188711.html
+2026-09-15 22:53:04,731 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/data-engineer-gcp-remoto-1775-aliantec-1118428803.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:04,734 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/data-engineer-emede-consultora-1118434647.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:04,750 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/data-engineer-gcp-remoto-1775-aliantec-2189365.html
+2026-09-15 22:53:04,756 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/programador-a-de-abastecimiento-maincal-sa-2189210.html
+2026-09-15 22:53:04,759 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-programador-ferrovias-s.a.c.-2188012.html
+2026-09-15 22:53:04,764 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/.net-software-engineer-angular-remoto-argentina-todo-el-pais-aliantec-2189733.html
+2026-09-15 22:53:05,095 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/estudiante-de-ingenieria-en-sistemas-desarrollador-full-stack-veronica-guagliardi-2187139.html
+2026-09-15 22:53:05,126 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/node-js-software-engineer-remoto-1834-aliantec-2187521.html
+2026-09-15 22:53:05,144 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/programador-a-genexus-bb-consultores-2189209.html
+2026-09-15 22:53:05,147 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/programador-a-de-mantenimiento-mec-consultores-asociados-2189140.html
+2026-09-15 22:53:05,153 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/programador-cnc-mb-consultores-en-recursos-humanos-2188907.html
+2026-09-15 22:53:05,164 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-grupo-taraborelli-2189173.html
+2026-09-15 22:53:05,167 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/programador-centro-mecanizado-matripre-srlsrl-s.r.l-2188948.html
+2026-09-15 22:53:05,215 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-ssr-grupomulti-2189003.html
+2026-09-15 22:53:05,594 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/programador-de-centro-de-mecanizado-cnc-matripre-srlsrl-s.r.l-2188940.html
+2026-09-15 22:53:05,607 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-a-pl-sql-la-caja-de-ahorro-y-seguros-s.a.-2189415.html
+2026-09-15 22:53:05,683 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-rpa-semi-senior-senior-tax-bdo-2189239.html
+2026-09-15 22:53:05,688 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-full-stack-.net-angular-hibrido-1885-aliantec-2189728.html
+2026-09-15 22:53:05,689 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/operador-programador-cnc-carpinteria-centro-de-trabajo-oromanta-2188279.html
+2026-09-15 22:53:05,691 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrolladores-todo-el-pais-2187688.html
+2026-09-15 22:53:05,693 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/programador-cnc-y-autocad-matriceria-cr-srl-2187915.html
+2026-09-15 22:53:05,958 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-full-stack-veronica-guagliardi-2187138.html
+2026-09-15 22:53:05,978 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-salesforce-sr.-reglas-de-negocio-mix-onsite-remoto-retiro-1808-aliantec-2189734.html
+2026-09-15 22:53:06,089 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrolladores-backend-go-sr.-solutix-s.a.-2187772.html
+2026-09-15 22:53:06,097 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-full-stack-java-react-senior-mix-onsite-remoto-1778-aliantec-2189735.html
+2026-09-15 22:53:06,108 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/go-software-engineer-remoto-1859-aliantec-2185897.html
+2026-09-15 22:53:06,111 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-fisico-a-matematico-a-jr.-bb-consultores-2187413.html
+2026-09-15 22:53:06,121 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/go-software-engineer-remoto-1858-aliantec-2185759.html
+2026-09-15 22:53:06,388 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/soporte-it-desarrollador-jr.-2187066.html
+2026-09-15 22:53:06,410 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-a-full-stack-para-empresa-de-servicios-de-gas-generacion-talento-2187956.html
+2026-09-15 22:53:06,418 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-canal-mayorista-dynamic-box-hr-consulting-2187057.html
+2026-09-15 22:53:06,427 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-php-laravel-sr-hibrido-1819-aliantec-2187524.html
+2026-09-15 22:53:06,430 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-backend-ssr-grupo-financiero-st-2186850.html
+2026-09-15 22:53:06,461 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/plegador-cnc-operador-programador-sorrento-maquinarias-2186632.html
+2026-09-15 22:53:06,476 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-node-js-ssr-mix-onsite-remoto-1807-aliantec-2188026.html
+2026-09-15 22:53:06,730 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-full-stack-sr.-con-ia-python-node.js-javascript-solutix-s.a.-2187263.html
+2026-09-15 22:53:06,755 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-a-full-stack-pistacho-app-2186103.html
+2026-09-15 22:53:06,799 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-a-odoo-integraciones-con-ia-fadav-2186265.html
+2026-09-15 22:53:06,825 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrolladores-backend-go-sr.-solutix-s.a.-2186558.html
+2026-09-15 22:53:06,842 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/project-manager-para-desarrolladora-de-elizalde-desarrollo-del-talento-2187887.html
+2026-09-15 22:53:06,860 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-full-stack-sr.-con-ia-python-node.js-javascript-solutix-s.a.-2186564.html
+2026-09-15 22:53:06,918 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/programador-de-centros-y-tornos-cnc.-10-anos-de-experfiencia.-pariani-sa-2186763.html
+2026-09-15 22:53:06,925 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/frontend-software-engineer--angular-gvg-consultora-1118421640.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:07,287 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-backend-python-iaagentes-sr-software-financiero-remoto-para-argentina-kaizen-recursos-humanos-1118430946.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:07,335 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/ingeniero-a-de-sistemas-aeroespaciales-management-en-red-1118430953.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:07,363 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/.net-software-engineer-angular-remoto-argentina-todo-el-pais-aliantec-1118436298.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:07,372 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-a-de-abastecimiento-maincal-sa-1118425687.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:07,375 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-de-software-semi-senior-hipodromo-palermo-1118391235.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:07,386 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-desarrollador-semi-sr-senior-botmaker-hibrido-business-commercial-management-1118416634.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:07,394 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/backend-software-engineer--java-python-gvg-consultora-1118421641.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:07,741 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/operador-programador-cnc-1118427650.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:07,765 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/node-js-software-engineer-remoto-1834-aliantec-1118392928.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:07,823 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-a-genexus-bb-consultores-1118425671.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:07,826 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-grupo-taraborelli-1118424509.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:07,830 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/planificador-programador-de-produccion-cortes-de-precision-s.a.-1118432844.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:07,847 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-plc-jl-consultores-1118418222.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:07,856 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-de-plc-1118419701.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:07,863 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-de-software-jr-hipodromo-palermo-1118391216.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,093 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/instrumentista-programador-a-plc-zona-pilar-grupo-gestion-1118422626.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,106 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-formulas-cosmeticas-soledad-maldonado-1118435687.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,122 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-fullstack-senior-itsm-consulting-sa-1118435676.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,205 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/software-engineer-|-laravel-backend-focus-caba-hibrido-speedwork-rrhh-1118395478.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,211 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-ssr-grupomulti-1118421570.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,230 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/preparador-programador-cnc-1118406996.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,235 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-sr-frontend-developer-react-evolucionar-consultora-1118431707.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,241 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-backend-python-con-ia-sr-multinacional-de-software-financiero-remoto-para-argentina-kaizen-recursos-humanos-1118383518.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,527 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-web-junior-estudiante-avanzado-de-programacion-los-elegidos-1118424319.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,552 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-full-stack-|-ia-data-1118416664.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,563 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-full-stack-.net-angular-hibrido-1885-aliantec-1118436275.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,570 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-rpa-semi-senior-senior-tax-bdo-argentina-1118426307.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,581 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-programador-c-ideafix--full-remoto-solutix-s.a.-1118373677.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,587 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-frontend-ssr.-gst-1118414039.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,589 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-cnc-y-autocad-matricer-1118399613.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,596 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-web-senior-ui-ux--freelancer-dobohomes-1118421638.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,899 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-cnc-centro-de-mecanizado-1118388330.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,929 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-fullstack-senior-vue-3-typescript-persat-1118410267.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,960 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-salesforce-sr.-reglas-de-negocio-mix-onsite-remoto-retiro-1808-aliantec-1118436302.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,971 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-backend-find-me-1118392714.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,979 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-full-stack-java-react-senior-mix-onsite-remoto-1778-aliantec-1118436307.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,989 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/project-manager-para-desarrolladora-de-elizalde-desarrollo-del-talento-1118399084.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:08,993 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/asistente-de-compras-senior-desarrollador-proveedores-y-categorias-rh-talentum-1118414456.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:09,004 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/ejecutivo-comercial-b2b-desarrollador-de-nuevos-negocios-1118404937.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:09,398 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-android-senior-1118385856.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:09,407 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-full-stack-para-empresa-de-servicios-de-gas-generacion-talento-1118400545.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:09,416 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-|-junior-semi-senior-1118392518.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:09,444 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-a-java-senior--apis-david-rochwarger-1118385278.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:09,452 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-fisico-a-matematico-a-jr.-bb-consultores-1118391671.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:09,468 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-java-senior-hibrido-y-remoto-business-commercial-management-1118400632.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:09,472 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/go-software-engineer-remoto-1859-aliantec-1118368517.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:09,731 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-plsql-sr-remoto-argentina-acciona-it-1118384297.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:09,741 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-mobile-1118378005.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:09,745 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-node-js-ssr-mix-onsite-remoto-1807-aliantec-1118401600.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:09,794 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-de-canal-mayorista-dynamic-box-hr-consulting-1118385233.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:09,811 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-backend-ssr-gst-1118383011.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:09,816 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-php-laravel-sr-hibrido-1819-aliantec-1118392937.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:09,852 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/ingeniero-junior-de-sistema-de-gestion-integrado-randstad-argentina-1118370503.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:10,114 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-backend-lenox-1118370489.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:10,121 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/instrumentista-programador-a-plc-zona-pilar-grupo-gestion-1118380159.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:10,124 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/instrumentista-programador-a-plc-zona-pilar-grupo-gestion-1118371183.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:10,266 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/programador-tornos-cnc-turno-noche-mecanizados-gabriel-s.a-1118368719.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:10,387 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-web-fullstack-sesnich-villalonga-cereales-sa-1118360815.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:10,400 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrolladores-java-para-empresa-lider-en-el-desarrollo-de-soluciones-para-la-industria-de-oilgas-bt-consultores-buscadores-de-talentos-1118368050.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:10,500 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/data-science-python-ia-remoto-1731-aliantec-2189736.html
+2026-09-15 22:53:10,595 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-rpg-cobol-senior--as-400-1118399189.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:10,602 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/data-science-python-ia-remoto-1731-aliantec-1118436309.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:22,196 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.randstad.com.ar/trabajos/analista-de-datos_rosario_47364576/
+2026-09-15 22:53:22,221 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.randstad.com.ar/trabajos/ai-analytics-product-specialist_capital-federal_47408855/
+2026-09-15 22:53:22,653 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.randstad.com.ar/trabajos/research-analyst-commercial-deligence_vicente-lopez_47373277/
+2026-09-15 22:53:53,023 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-remoto-a-padicama-software-sac-1118435746.html
+2026-09-15 22:53:53,208 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/asistente-de-compras-senior-desarrollador-proveedores-y-categorias-rh-talentum-1118440364.html
+2026-09-15 22:53:53,220 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/software-engineer-java-kotlin-mindit-hr-agency-2189859.html
+2026-09-15 22:53:53,309 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/senior-backend-python-ia-agentes-developer-remoto-para-argentina-kaizenrh-2189743.html
+2026-09-15 22:53:53,317 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-python-sr-hibrido-cap.-federal-origin-software-1118438425.html
+2026-09-15 22:53:53,327 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-frontend-angular-remoto-1897-aliantec-1118439626.html
+2026-09-15 22:53:53,398 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-remoto-a-padicama-software-sac-2189752.html
+2026-09-15 22:53:53,427 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-frontend-angular-remoto-1897-aliantec-2189887.html
+2026-09-15 22:53:53,505 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-frontend-angular-remoto-1897-aliantec-1118439626.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:53,568 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/software-engineer-java-kotlin-mindit-hr-agency-1118438882.html
+2026-09-15 22:53:53,632 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/asistente-de-compras-senior-desarrollador-proveedores-y-categorias-rh-talentum-1118440364.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:53,651 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-python-sr-hibrido-cap.-federal-origin-software-1118438425.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:53,725 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/software-engineer-java-kotlin-mindit-hr-agency-2189859.html
+2026-09-15 22:53:53,732 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/software-engineer-java-kotlin-mindit-hr-agency-1118438882.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:53,739 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-remoto-a-padicama-software-sac-1118435746.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:53:53,771 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-frontend-angular-remoto-1897-aliantec-2189887.html
+2026-09-15 22:53:53,901 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/senior-backend-python-ia-agentes-developer-remoto-para-argentina-kaizenrh-2189743.html
+2026-09-15 22:53:54,049 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/desarrollador-a-remoto-a-padicama-software-sac-2189752.html
+2026-09-15 22:54:26,965 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-a-odoo-integraciones-con-ia-fadav-2186265.html
+2026-09-15 22:54:27,058 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/desarrollador-fullstack-sr-node-angular-remoto-argentina-acciona-it-1118348901.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-15 22:54:41,096 [INFO]   ✅ Nada para purgar — el consolidado ya está al día.
+2026-09-15 22:54:41,100 [INFO] 
+=================================================================
+2026-09-15 22:54:41,100 [INFO]   RESUMEN DE LA PURGA
+2026-09-15 22:54:41,100 [INFO] =================================================================
+2026-09-15 22:54:41,100 [INFO]   Ofertas revisadas           : 2,040
+2026-09-15 22:54:41,101 [INFO]   Eliminadas (antigüedad)     : 0
+2026-09-15 22:54:41,101 [INFO]   Eliminadas (link inactivo)  : 0
+2026-09-15 22:54:41,101 [INFO]   Total eliminadas            : 0
+2026-09-15 22:54:41,101 [INFO]   Ofertas conservadas         : 2,040
+2026-09-15 22:54:41,101 [INFO]   Duración total              : 2m 55s
+2026-09-15 22:54:41,102 [INFO]   Reporte: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/purga_20260915_225441.json
