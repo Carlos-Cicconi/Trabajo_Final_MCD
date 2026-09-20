@@ -4,7 +4,7 @@
   "max_chunk_chars": 800,
   "chunk_overlap": 100,
   "batch_size": 32,
-  "n_ofertas": 1335,
-  "fecha_encoding": "2026-09-15T23:44:37.522636",
+  "n_ofertas": 2497,
+  "fecha_encoding": "2026-09-19T11:09:08.999738",
   "col_texto_fuente": "texto_procesado"
 }

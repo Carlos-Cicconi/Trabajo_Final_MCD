@@ -1,0 +1,51 @@
+{
+  "fuente": "kitempleo",
+  "fecha": "2026-09-19T02:15:46.802554",
+  "total": 546,
+  "detalle": [
+    {
+      "keyword": "Data Scientist",
+      "ofertas": 50
+    },
+    {
+      "keyword": "BI / Analytics",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Python Developer",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Control de Gestión",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Gerente de Operaciones",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Compras / Procurement",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Ingeniero Industrial",
+      "ofertas": 48
+    },
+    {
+      "keyword": "Finanzas / CAPEX",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Excel / VBA",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Supply Chain",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Continuous Improvement",
+      "ofertas": 48
+    }
+  ]
+}

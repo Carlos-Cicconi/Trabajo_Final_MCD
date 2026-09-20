@@ -1,0 +1,52 @@
+{
+  "fuente": "zonajobs",
+  "nota": "Misma plataforma que Bumeran (Jobint/Adevinta)",
+  "fecha": "2026-09-19T08:09:01.635647",
+  "total_ofertas": 264,
+  "detalle_por_keyword": [
+    {
+      "keyword": "Data Scientist",
+      "ofertas": 0
+    },
+    {
+      "keyword": "BI / Analytics",
+      "ofertas": 5
+    },
+    {
+      "keyword": "Python Developer",
+      "ofertas": 9
+    },
+    {
+      "keyword": "Control de Gestión",
+      "ofertas": 34
+    },
+    {
+      "keyword": "Gerente de Operaciones",
+      "ofertas": 21
+    },
+    {
+      "keyword": "Compras / Procurement",
+      "ofertas": 100
+    },
+    {
+      "keyword": "Ingeniero Industrial",
+      "ofertas": 4
+    },
+    {
+      "keyword": "Finanzas / CAPEX",
+      "ofertas": 79
+    },
+    {
+      "keyword": "Excel / VBA",
+      "ofertas": 5
+    },
+    {
+      "keyword": "Supply Chain",
+      "ofertas": 7
+    },
+    {
+      "keyword": "Continuous Improvement",
+      "ofertas": 0
+    }
+  ]
+}

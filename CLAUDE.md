@@ -31,8 +31,8 @@ Un módulo scraper por portal de empleo (`adecco_scraper.py`, `bumeran_scraper.p
 `run_scraping.py` es el orquestador que corre todos (o un subconjunto) de los scrapers en secuencia y consolida su salida:
 
 ```bash
-python src/scraping/run_scraping.py                        # corre todos los scrapers con queries por defecto
-python src/scraping/run_scraping.py --cv data/cvs/keywords.json   # deriva queries + ubicación desde un CV
+python src/scraping/run_scraping.py                        # corre todos los scrapers con las keywords de data/cvs/keywords.json (default)
+python src/scraping/run_scraping.py --cv otro/keywords.json # usa un keywords.json distinto (otro candidato/perfil)
 python src/scraping/run_scraping.py --solo linkedin         # corre un solo scraper
 python src/scraping/run_scraping.py --skip workana          # omite uno o más scrapers
 python src/scraping/run_scraping.py --solo-consolidar       # re-consolida sin scrapear
@@ -41,6 +41,8 @@ python src/scraping/run_scraping.py --no-check-links        # omite la verificac
 python src/scraping/run_scraping.py --link-workers 16        # cambia el paralelismo de la verificación de links (8 por defecto)
 python src/scraping/run_scraping.py --purgar-consolidado     # no scrapea: revalida TODO lo ya consolidado y elimina lo que ya no corresponde
 ```
+
+Ninguno de los scrapers trae keywords hardcodeadas: cada uno (incluidos los desactivados en `SCRAPERS_REGISTRO`, como `opcionempleo_scraper.py`) arma su `SEARCH_QUERIES` por defecto leyendo `data/cvs/keywords.json` vía `src/scraping/_keywords_loader.py`, tanto si se ejecuta solo (`python src/scraping/linkedin_scraper.py`) como desde el orquestador. `run_scraping.py --cv <otro.json>` inyecta un `keywords.json` distinto sin tocar ese default. `SCRAPERS_REGISTRO` incluye además, por fuente, el formato de query que necesita cada scraper (`location`/`search`/`string`/`keyword_label`).
 
 Cada scraper por fuente escribe su salida cruda directamente en `data/raw/` siguiendo una convención de nombres fija: `ofertas_<sitio>_<fecha>.csv` (snapshot diario), `<sitio>.db` (SQLite acumulativo, leído por el orquestador para consolidar), y `stats_<sitio>_<fecha_hora>.json` (estadísticas por corrida). `SCRAPERS_REGISTRO` de `run_scraping.py` mapea cada módulo scraper a su archivo `<sitio>.db`.
 

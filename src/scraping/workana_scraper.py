@@ -75,6 +75,7 @@ from pathlib import Path
 from urllib.parse import urlencode
 
 from playwright.async_api import async_playwright, TimeoutError as PlaywrightTimeout
+from _keywords_loader import cargar_search_queries
 
 # =============================================================================
 # CONFIGURACIÓN DEL PROYECTO
@@ -108,18 +109,8 @@ logger = logging.getLogger(__name__)
 # Workana organiza por categoría + búsqueda libre.
 # URL base de búsqueda confirmada:
 #   /jobs?category=it-programming&language=es&country=AR&search={q}&page={n}
-SEARCH_QUERIES = [
-    {"search": "data scientist",     "label": "Data Scientist"},
-    {"search": "data analyst",       "label": "Data Analyst"},
-    {"search": "machine learning",   "label": "Machine Learning Engineer"},
-    {"search": "nlp",                "label": "NLP Engineer"},
-    {"search": "data engineer",      "label": "Data Engineer"},
-    {"search": "python",             "label": "Python Developer"},
-    {"search": "backend",            "label": "Desarrollador Backend"},
-    {"search": "full stack",         "label": "Desarrollador Full Stack"},
-    {"search": "software engineer",  "label": "Software Engineer"},
-    {"search": "ingeniero de datos", "label": "Ingeniero de Datos"},
-]
+# Por defecto, las de data/cvs/keywords.json (ver _keywords_loader.py).
+SEARCH_QUERIES = cargar_search_queries("search")
 
 PAGES_PER_QUERY  = 5
 PAGE_TIMEOUT     = 30000

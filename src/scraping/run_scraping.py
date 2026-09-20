@@ -13,8 +13,9 @@
 #     3. No incluir ofertas cuyo link ya no esté activo al momento de consolidar
 #
 # USO:
-#   python run_scraping.py                          # Todos, queries por defecto
-#   python run_scraping.py --cv data/cvs/kw.json   # Queries + ubicación del CV
+#   python run_scraping.py                          # Todos, keywords desde
+#                                                     #   data/cvs/keywords.json (default)
+#   python run_scraping.py --cv otro/kw.json        # Keywords + ubicación de otro JSON
 #   python run_scraping.py --solo linkedin          # Ejecutar solo uno
 #   python run_scraping.py --skip workana           # Saltear uno o más
 #   python run_scraping.py --solo-consolidar        # Solo consolidar sin scrapear
@@ -22,12 +23,17 @@
 #   python run_scraping.py --no-check-links         # No verificar links (más rápido)
 #   python run_scraping.py --purgar-consolidado     # Revalida y limpia TODO lo ya consolidado
 #
-# INTEGRACIÓN CON cv_keyword_extractor.py:
-#   1. Generá el JSON:
-#        python src/scraping/cv_keyword_extractor.py data/cvs/MiCV.pdf \
-#               --output data/cvs/keywords.json
-#   2. Pasalo al orquestador:
-#        python run_scraping.py --cv data/cvs/keywords.json
+# ORIGEN DE LAS KEYWORDS:
+#   Cada scraper ya no trae keywords hardcodeadas: por defecto todos leen
+#   data/cvs/keywords.json (vía src/scraping/_keywords_loader.py), tanto si
+#   se ejecutan solos (`python src/scraping/linkedin_scraper.py`) como desde
+#   este orquestador. --cv <otro.json> permite usar un perfil distinto sin
+#   pisar el default.
+#
+# GENERAR/EDITAR data/cvs/keywords.json:
+#   python src/scraping/cv_keyword_extractor.py data/cvs/MiCV.pdf \
+#          --output data/cvs/keywords.json
+#   python src/scraping/edit_keywords.py   # editor interactivo (con backup automático)
 #
 # ARCHIVOS GENERADOS:
 #   data/raw/consolidado/ofertas_consolidadas.csv   → CSV maestro (acumulativo)
@@ -67,6 +73,8 @@ for d in [CONSOLIDADO_DIR, LOGS_DIR]:
 
 CONSOLIDADO_CSV = CONSOLIDADO_DIR / "ofertas_consolidadas.csv"
 CONSOLIDADO_DB  = CONSOLIDADO_DIR / "ofertas_consolidadas.db"
+
+DEFAULT_KEYWORDS_JSON = BASE_DIR / "data" / "cvs" / "keywords.json"
 
 MAX_DIAS_DEFAULT = 90   # Ventana temporal por defecto
 
@@ -151,13 +159,20 @@ COLUMNAS = [
 ]
 
 # Registro de todos los scrapers disponibles
-# Formato: (módulo, clase, nombre_fuente, db_filename)
+# Formato: (módulo, clase, nombre_fuente, db_filename, formato_queries)
+# formato_queries determina cómo se adaptan las SEARCH_QUERIES de
+# data/cvs/keywords.json (o del --cv que se pase) al inyectarlas — ver
+# inyectar_queries_en_scraper() y src/scraping/_keywords_loader.py:
+#   "location"      → LinkedIn: {"keyword", "label", "location"}
+#   "search"        → Workana:  {"search", "label"}
+#   "string"        → GetOnBoard: [label, label, ...]
+#   "keyword_label" → el resto: {"keyword", "label"}
 SCRAPERS_REGISTRO = [
-    ("linkedin_scraper",     "LinkedInScraper",     "linkedin",     "db_linkedin.db"),
-    ("computrabajo_scraper", "ComputrabajoScraper", "computrabajo", "db_computrabajo.db"),
-    ("getonboard_scraper",   "GetOnBoardScraper",   "getonboard",   "db_getonboard.db"),
-    ("bumeran_scraper",      "BumeranScraper",      "bumeran",      "db_bumeran.db"),
-    ("zonajobs_scraper",     "ZonaJobsScraper",     "zonajobs",     "db_zonajobs.db"),
+    ("linkedin_scraper",     "LinkedInScraper",     "linkedin",     "db_linkedin.db",     "location"),
+    ("computrabajo_scraper", "ComputrabajoScraper", "computrabajo", "db_computrabajo.db", "keyword_label"),
+    ("getonboard_scraper",   "GetOnBoardScraper",   "getonboard",   "db_getonboard.db",   "string"),
+    ("bumeran_scraper",      "BumeranScraper",      "bumeran",      "db_bumeran.db",      "keyword_label"),
+    ("zonajobs_scraper",     "ZonaJobsScraper",     "zonajobs",     "db_zonajobs.db",     "keyword_label"),
     # workana_scraper: DESACTIVADO — el parámetro "search" del listado
     # (/jobs?category=it-programming&search={keyword}) se ignora
     # server-side: probado con "python" vs "wordpress" (ambos dentro de la
@@ -167,7 +182,7 @@ SCRAPERS_REGISTRO = [
     # keyword ocurre client-side contra un endpoint no identificado. No
     # reactivar en el orquestador hasta encontrar y adaptar el scraper a
     # ese endpoint real.
-    # ("workana_scraper",    "WorkanaScraper",      "workana",      "db_workana.db"),
+    # ("workana_scraper",    "WorkanaScraper",      "workana",      "db_workana.db",      "search"),
     # opcionempleo_scraper: DESACTIVADO — usa Cloudflare Turnstile y devuelve
     # HTTP 200 con una página de "Verificación requerida" en vez del
     # contenido real, incluso probando con Playwright headless y con
@@ -177,8 +192,8 @@ SCRAPERS_REGISTRO = [
     # pasar al menos una oferta ya vencida sin detectar. Reemplazado por
     # kitempleo_scraper (mismo volumen de fuentes: 10), que no tiene
     # Cloudflare y sí filtra por keyword server-side de forma verificable.
-    # ("opcionempleo_scraper", "OpcionempleoScraper", "opcionempleo", "db_opcionempleo.db"),
-    ("kitempleo_scraper",    "KitempleoScraper",    "kitempleo",    "db_kitempleo.db"),
+    # ("opcionempleo_scraper", "OpcionempleoScraper", "opcionempleo", "db_opcionempleo.db", "keyword_label"),
+    ("kitempleo_scraper",    "KitempleoScraper",    "kitempleo",    "db_kitempleo.db",    "keyword_label"),
     # jobomas_scraper: DESACTIVADO — el modo "slug" (/{keyword}) que intenta
     # primero da 404 incluso con keywords conocidas ("python"), por lo que
     # en la práctica siempre cae al modo fallback por query params
@@ -188,8 +203,8 @@ SCRAPERS_REGISTRO = [
     # parámetro "q" se ignora server-side. El filtrado real ocurre
     # client-side contra un endpoint no identificado. No reactivar en el
     # orquestador hasta encontrar y adaptar el scraper a ese endpoint real.
-    # ("jobomas_scraper",    "JobomasScraper",      "jobomas",      "db_jobomas.db"),
-    ("jobrapido_scraper",    "JobrapidoScraper",    "jobrapido",    "db_jobrapido.db"),
+    # ("jobomas_scraper",    "JobomasScraper",      "jobomas",      "db_jobomas.db",      "keyword_label"),
+    ("jobrapido_scraper",    "JobrapidoScraper",    "jobrapido",    "db_jobrapido.db",    "keyword_label"),
     # jobleads_scraper: DESACTIVADO — el endpoint SSR que usa
     # (/ar/jobs?q={keyword}&country=AR) ignora el parámetro "q": se probó
     # con keywords muy distintas ("data-scientist" vs "gastronomia") y
@@ -197,7 +212,7 @@ SCRAPERS_REGISTRO = [
     # con ninguna de las dos búsquedas. El filtrado real ocurre client-side
     # contra un endpoint no identificado. Reactivar solo si se encuentra y
     # adapta el scraper a ese endpoint real.
-    # ("jobleads_scraper",   "JobleadsScraper",     "jobleads",     "db_jobleads.db"),
+    # ("jobleads_scraper",   "JobleadsScraper",     "jobleads",     "db_jobleads.db",     "keyword_label"),
     # buscojobs_scraper: DESACTIVADO — el endpoint SSR que usa
     # (/ofertas/rc744/trabajo-en-{keyword}) ignora el keyword tanto en el
     # path como en el query param "?que=", y siempre devuelve el mismo
@@ -205,10 +220,10 @@ SCRAPERS_REGISTRO = [
     # mismos IDs, mismo orden). El filtrado real ocurre client-side contra
     # un endpoint no identificado. Reactivar solo si se encuentra y adapta
     # el scraper a ese endpoint real.
-    # ("buscojobs_scraper",  "BuscojobsScraper",    "buscojobs",    "db_buscojobs.db"),
-    ("freelancer_ar_scraper","FreelancerArScraper", "freelancer_ar","db_freelancer_ar.db"),
-    ("randstad_scraper",     "RandstadScraper",     "randstad",     "db_randstad.db"),
-    ("adecco_scraper",       "AdeccoScraper",       "adecco",       "db_adecco.db"),
+    # ("buscojobs_scraper",  "BuscojobsScraper",    "buscojobs",    "db_buscojobs.db",    "keyword_label"),
+    ("freelancer_ar_scraper","FreelancerArScraper", "freelancer_ar","db_freelancer_ar.db","keyword_label"),
+    ("randstad_scraper",     "RandstadScraper",     "randstad",     "db_randstad.db",     "keyword_label"),
+    ("adecco_scraper",       "AdeccoScraper",       "adecco",       "db_adecco.db",       "keyword_label"),
 ]
 
 
@@ -292,41 +307,43 @@ def cargar_queries_desde_cv(json_path: Path) -> Optional[list[dict]]:
         return None
 
 
-def inyectar_queries_en_scraper(scraper_instance, queries: list[dict], modulo) -> bool:
+def inyectar_queries_en_scraper(scraper_instance, queries: list[dict], modulo, formato: str) -> bool:
     """
     Inyecta las SEARCH_QUERIES del CV en el scraper, adaptando el formato
-    según las particularidades de cada plataforma:
+    según las particularidades de cada plataforma (ver `formato` en
+    SCRAPERS_REGISTRO / src/scraping/_keywords_loader.py):
 
-    - LinkedIn:  usa {"keyword", "label", "location"} — se pasa location completo.
-    - Workana:   usa {"search", "label"}              — "keyword" → "search", sin location.
-    - El resto:  usa {"keyword", "label"}              — se omite location.
+    - "location":      LinkedIn — {"keyword", "label", "location"}.
+    - "search":        Workana — {"search", "label"} ("keyword" → "search", sin location).
+    - "string":        GetOnBoard — [label, label, ...].
+    - "keyword_label": el resto — {"keyword", "label"}, deduplicado por keyword.
 
     Las búsquedas de ubicación exacta + remoto ya vienen incluidas en el JSON
     (generadas por cv_keyword_extractor.py), por lo que LinkedIn recibirá
     las tres variantes (ciudad, país, worldwide) para cada keyword.
     """
     try:
-        modulo_queries_orig = getattr(modulo, "SEARCH_QUERIES", [{}])
-        usa_location = bool(modulo_queries_orig and "location" in modulo_queries_orig[0])
-        usa_search   = bool(modulo_queries_orig and "search"   in modulo_queries_orig[0])
-
-        if usa_location:
-            # LinkedIn: preservar keyword + label + location
+        if formato == "location":
             queries_finales = [
                 {"keyword":  q["keyword"],
                  "label":    q["label"],
                  "location": q.get("location", "Argentina")}
                 for q in queries
             ]
-        elif usa_search:
-            # Workana: keyword → search, sin location
+        elif formato == "search":
             queries_finales = [
                 {"search": q["keyword"].replace("-", " "), "label": q["label"]}
                 for q in queries
             ]
+        elif formato == "string":
+            vistos, queries_finales = set(), []
+            for q in queries:
+                if q["label"] not in vistos:
+                    vistos.add(q["label"])
+                    queries_finales.append(q["label"])
         else:
-            # Resto de scrapers: solo keyword + label, sin location
-            # Deduplicar por keyword para no repetir la misma búsqueda 3 veces
+            # "keyword_label" — deduplicar por keyword para no repetir la
+            # misma búsqueda una vez por cada variante de ubicación.
             vistos, queries_finales = set(), []
             for q in queries:
                 if q["keyword"] not in vistos:
@@ -337,9 +354,7 @@ def inyectar_queries_en_scraper(scraper_instance, queries: list[dict], modulo) -
         if hasattr(scraper_instance, "SEARCH_QUERIES"):
             scraper_instance.SEARCH_QUERIES = queries_finales
 
-        logger.debug(f"  Queries inyectadas: {len(queries_finales)} "
-                     f"(location={'sí' if usa_location else 'no'}, "
-                     f"search={'sí' if usa_search else 'no'})")
+        logger.debug(f"  Queries inyectadas: {len(queries_finales)} (formato={formato})")
         return True
 
     except Exception as e:
@@ -721,7 +736,7 @@ def consolidar(max_dias: int, verificar_links: bool = True,
     nuevas_global = []
 
     with sqlite3.connect(CONSOLIDADO_DB) as conn:
-        for modulo, clase, fuente, db_nombre in SCRAPERS_REGISTRO:
+        for modulo, clase, fuente, db_nombre, _formato in SCRAPERS_REGISTRO:
             db_path = DATA_RAW_DIR / db_nombre
             logger.info(f"\n  📂 Procesando: {fuente} ({db_path.name})")
 
@@ -948,7 +963,7 @@ def purgar_consolidado(max_dias: int, verificar_links: bool = True,
 # =============================================================================
 
 def ejecutar_scraper(modulo_nombre: str, clase_nombre: str,
-                     fuente: str,
+                     fuente: str, formato: str,
                      cv_queries: Optional[list[dict]] = None) -> dict:
     """
     Importa dinámicamente el módulo del scraper y ejecuta su método run().
@@ -981,7 +996,7 @@ def ejecutar_scraper(modulo_nombre: str, clase_nombre: str,
         scraper = clase()
 
         if cv_queries:
-            ok = inyectar_queries_en_scraper(scraper, cv_queries, modulo)
+            ok = inyectar_queries_en_scraper(scraper, cv_queries, modulo, formato)
             if ok:
                 logger.info(f"  ✅ Queries del CV inyectadas en {fuente}")
             else:
@@ -1010,16 +1025,16 @@ def main():
     parser = argparse.ArgumentParser(
         description="Orquestador de scrapers — Tesis MCD Cicconi Carlos Alberto",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
+        epilog=f"""
 Ejemplos:
-  # Queries por defecto (hardcodeadas en cada scraper)
+  # Usa data/cvs/keywords.json por defecto (no hace falta --cv)
   python run_scraping.py
 
-  # Keywords + ubicación extraídas del CV
-  python run_scraping.py --cv data/cvs/keywords.json
+  # Usar las keywords de otro candidato/perfil
+  python run_scraping.py --cv data/cvs/otro_perfil/keywords.json
 
-  # Solo LinkedIn, con keywords del CV
-  python run_scraping.py --cv data/cvs/keywords.json --solo linkedin
+  # Solo LinkedIn, con el keywords.json por defecto
+  python run_scraping.py --solo linkedin
 
   # Generar el JSON primero:
   python src/scraping/cv_keyword_extractor.py data/cvs/MiCV.pdf \\
@@ -1027,10 +1042,11 @@ Ejemplos:
         """
     )
     parser.add_argument(
-        "--cv", metavar="KEYWORDS_JSON",
+        "--cv", metavar="KEYWORDS_JSON", default=str(DEFAULT_KEYWORDS_JSON),
         help="JSON generado por cv_keyword_extractor.py. Incluye keywords "
              "y ubicación del candidato. LinkedIn usará búsquedas por ciudad, "
-             "país y 'Worldwide' (remoto). El resto de scrapers usará solo las keywords."
+             "país y 'Worldwide' (remoto). El resto de scrapers usará solo las keywords. "
+             f"Default: {DEFAULT_KEYWORDS_JSON}"
     )
     parser.add_argument(
         "--solo", nargs="+", metavar="FUENTE",
@@ -1132,7 +1148,7 @@ Ejemplos:
     if not args.solo_consolidar:
         scrapers_a_ejecutar = []
         for entrada in SCRAPERS_REGISTRO:
-            modulo, clase, fuente, _ = entrada
+            modulo, clase, fuente, _, _formato = entrada
             if args.solo and fuente not in args.solo:
                 continue
             if args.skip and fuente in args.skip:
@@ -1142,8 +1158,8 @@ Ejemplos:
 
         logger.info(f"\n  Scrapers a ejecutar: {[s[2] for s in scrapers_a_ejecutar]}")
 
-        for modulo, clase, fuente, _ in scrapers_a_ejecutar:
-            resultado = ejecutar_scraper(modulo, clase, fuente, cv_queries=cv_queries)
+        for modulo, clase, fuente, _, formato in scrapers_a_ejecutar:
+            resultado = ejecutar_scraper(modulo, clase, fuente, formato, cv_queries=cv_queries)
             resultados_scrapers.append(resultado)
 
     # -----------------------------------------------------------------------

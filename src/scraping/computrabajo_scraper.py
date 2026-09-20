@@ -25,6 +25,7 @@ from bs4 import BeautifulSoup
 from dataclasses import dataclass, asdict, field
 from typing import Optional
 from pathlib import Path
+from _keywords_loader import cargar_search_queries
 from fake_useragent import UserAgent
 
 # =============================================================================
@@ -57,18 +58,8 @@ logger = logging.getLogger(__name__)
 
 # Búsquedas objetivo — mismas que LinkedIn para construir corpus comparable
 # Computrabajo usa slugs en la URL: espacios → guiones, todo minúsculas
-SEARCH_QUERIES = [
-    {"keyword": "data-scientist",           "label": "Data Scientist"},
-    {"keyword": "data-analyst",             "label": "Data Analyst"},
-    {"keyword": "machine-learning",         "label": "Machine Learning Engineer"},
-    {"keyword": "nlp-engineer",             "label": "NLP Engineer"},
-    {"keyword": "data-engineer",            "label": "Data Engineer"},
-    {"keyword": "software-engineer",        "label": "Software Engineer"},
-    {"keyword": "python",                   "label": "Python Developer"},
-    {"keyword": "desarrollador-backend",    "label": "Desarrollador Backend"},
-    {"keyword": "desarrollador-full-stack", "label": "Desarrollador Full Stack"},
-    {"keyword": "ingeniero-de-datos",       "label": "Ingeniero de Datos"},
-]
+# Por defecto, las de data/cvs/keywords.json (ver _keywords_loader.py).
+SEARCH_QUERIES = cargar_search_queries("keyword_label")
 
 # Parámetros de scraping
 PAGES_PER_QUERY = 5       # ~20 ofertas por página → ~100 por búsqueda

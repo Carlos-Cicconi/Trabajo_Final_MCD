@@ -1,0 +1,166 @@
+{
+  "fecha_ejecucion": "2026-09-19T05:08:33.999128",
+  "max_dias": 90,
+  "verificacion_links": true,
+  "limite_temporal": "2026-06-21",
+  "duracion_segundos": 20405,
+  "total_acumulado_db": 4754,
+  "nuevas_incorporadas": 4754,
+  "descartadas_fecha": 526,
+  "descartadas_dup": 0,
+  "descartadas_link": 0,
+  "scrapers_ejecutados": [
+    {
+      "fuente": "linkedin",
+      "exito": true,
+      "ofertas": 728,
+      "error": null,
+      "duracion_s": 3496,
+      "queries_origen": "cv"
+    },
+    {
+      "fuente": "computrabajo",
+      "exito": true,
+      "ofertas": 23,
+      "error": null,
+      "duracion_s": 186,
+      "queries_origen": "cv"
+    },
+    {
+      "fuente": "getonboard",
+      "exito": true,
+      "ofertas": 272,
+      "error": null,
+      "duracion_s": 252,
+      "queries_origen": "cv"
+    },
+    {
+      "fuente": "bumeran",
+      "exito": true,
+      "ofertas": 205,
+      "error": null,
+      "duracion_s": 2236,
+      "queries_origen": "cv"
+    },
+    {
+      "fuente": "zonajobs",
+      "exito": false,
+      "ofertas": 0,
+      "error": "[Errno 2] No such file or directory: '/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/diagnostico/zonajobs_rendered_BI_/_Analytics.html'",
+      "duracion_s": 133,
+      "queries_origen": "cv"
+    },
+    {
+      "fuente": "kitempleo",
+      "exito": true,
+      "ofertas": 546,
+      "error": null,
+      "duracion_s": 3725,
+      "queries_origen": "cv"
+    },
+    {
+      "fuente": "jobrapido",
+      "exito": true,
+      "ofertas": 150,
+      "error": null,
+      "duracion_s": 5095,
+      "queries_origen": "cv"
+    },
+    {
+      "fuente": "freelancer_ar",
+      "exito": true,
+      "ofertas": 0,
+      "error": null,
+      "duracion_s": 754,
+      "queries_origen": "cv"
+    },
+    {
+      "fuente": "randstad",
+      "exito": true,
+      "ofertas": 0,
+      "error": null,
+      "duracion_s": 3777,
+      "queries_origen": "cv"
+    },
+    {
+      "fuente": "adecco",
+      "exito": true,
+      "ofertas": 0,
+      "error": null,
+      "duracion_s": 739,
+      "queries_origen": "cv"
+    }
+  ],
+  "consolidacion_fuentes": {
+    "linkedin": {
+      "leidas": 1332,
+      "descartadas_fecha": 102,
+      "descartadas_dup": 0,
+      "descartadas_link": 0,
+      "nuevas": 1230
+    },
+    "computrabajo": {
+      "leidas": 221,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "descartadas_link": 0,
+      "nuevas": 221
+    },
+    "getonboard": {
+      "leidas": 605,
+      "descartadas_fecha": 101,
+      "descartadas_dup": 0,
+      "descartadas_link": 0,
+      "nuevas": 504
+    },
+    "bumeran": {
+      "leidas": 321,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "descartadas_link": 0,
+      "nuevas": 321
+    },
+    "zonajobs": {
+      "leidas": 128,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "descartadas_link": 0,
+      "nuevas": 128
+    },
+    "kitempleo": {
+      "leidas": 955,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "descartadas_link": 0,
+      "nuevas": 955
+    },
+    "jobrapido": {
+      "leidas": 1388,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "descartadas_link": 0,
+      "nuevas": 1388
+    },
+    "freelancer_ar": {
+      "leidas": 323,
+      "descartadas_fecha": 323,
+      "descartadas_dup": 0,
+      "descartadas_link": 0,
+      "nuevas": 0
+    },
+    "randstad": {
+      "leidas": 3,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "descartadas_link": 0,
+      "nuevas": 3
+    },
+    "adecco": {
+      "leidas": 4,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 0,
+      "descartadas_link": 0,
+      "nuevas": 4
+    }
+  }
+}

@@ -34,6 +34,7 @@ from bs4 import BeautifulSoup
 from dataclasses import dataclass, asdict, field
 from typing import Optional
 from pathlib import Path
+from _keywords_loader import cargar_search_queries
 
 from playwright.async_api import async_playwright, TimeoutError as PlaywrightTimeout
 
@@ -65,18 +66,8 @@ logger = logging.getLogger(__name__)
 # CONFIGURACIÓN
 # =============================================================================
 
-SEARCH_QUERIES = [
-    {"keyword": "data-scientist",           "label": "Data Scientist"},
-    {"keyword": "data-analyst",             "label": "Data Analyst"},
-    {"keyword": "machine-learning",         "label": "Machine Learning Engineer"},
-    {"keyword": "nlp",                      "label": "NLP Engineer"},
-    {"keyword": "data-engineer",            "label": "Data Engineer"},
-    {"keyword": "software-engineer",        "label": "Software Engineer"},
-    {"keyword": "python",                   "label": "Python Developer"},
-    {"keyword": "desarrollador-backend",    "label": "Desarrollador Backend"},
-    {"keyword": "desarrollador-full-stack", "label": "Desarrollador Full Stack"},
-    {"keyword": "ingeniero-de-datos",       "label": "Ingeniero de Datos"},
-]
+# Por defecto, las de data/cvs/keywords.json (ver _keywords_loader.py).
+SEARCH_QUERIES = cargar_search_queries("keyword_label")
 
 PAGES_PER_QUERY  = 5
 PAGE_TIMEOUT     = 30000
@@ -314,7 +305,10 @@ class ZonaJobsScraper:
 
         # Si no se encontraron cards, guardar HTML para diagnóstico
         if not ofertas:
-            diag_file = DIAG_DIR / f"zonajobs_rendered_{keyword_label.replace(' ','_')}.html"
+            # Sanear el label para nombre de archivo: labels como "BI / Analytics"
+            # contienen "/", que romperían la ruta (interpretado como subdirectorio).
+            slug_label = re.sub(r"[^\w-]+", "_", keyword_label).strip("_")
+            diag_file = DIAG_DIR / f"zonajobs_rendered_{slug_label}.html"
             diag_file.write_text(html, encoding="utf-8")
             logger.warning(f"   ⚠️  Sin ofertas. HTML guardado: {diag_file.name}")
 

@@ -41,6 +41,7 @@ from bs4 import BeautifulSoup
 from dataclasses import dataclass, asdict, field
 from typing import Optional
 from pathlib import Path
+from _keywords_loader import cargar_search_queries
 from fake_useragent import UserAgent
 
 BASE_DIR     = Path("/media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD")
@@ -58,18 +59,8 @@ logging.basicConfig(level=logging.INFO,
 logger = logging.getLogger(__name__)
 
 # =============================================================================
-SEARCH_QUERIES = [
-    {"keyword": "data scientist",     "slug": "data-scientist",     "label": "Data Scientist"},
-    {"keyword": "data analyst",       "slug": "data-analyst",       "label": "Data Analyst"},
-    {"keyword": "machine learning",   "slug": "machine-learning",   "label": "Machine Learning Engineer"},
-    {"keyword": "nlp",                "slug": "nlp",                "label": "NLP Engineer"},
-    {"keyword": "data engineer",      "slug": "data-engineer",      "label": "Data Engineer"},
-    {"keyword": "software engineer",  "slug": "software-engineer",  "label": "Software Engineer"},
-    {"keyword": "python",             "slug": "python",             "label": "Python Developer"},
-    {"keyword": "desarrollador backend",    "slug": "desarrollador-backend",    "label": "Desarrollador Backend"},
-    {"keyword": "desarrollador full stack", "slug": "desarrollador-full-stack", "label": "Desarrollador Full Stack"},
-    {"keyword": "ingeniero de datos",       "slug": "ingeniero-de-datos",       "label": "Ingeniero de Datos"},
-]
+# Por defecto, las de data/cvs/keywords.json (ver _keywords_loader.py).
+SEARCH_QUERIES = cargar_search_queries("keyword_label")
 
 PAGES_PER_QUERY  = 5
 DELAY_MIN        = 2.5; DELAY_MAX        = 5.0

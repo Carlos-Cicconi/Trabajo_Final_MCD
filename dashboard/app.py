@@ -98,6 +98,28 @@ def cargar_corpus() -> pd.DataFrame:
             df = pd.read_csv(fname, low_memory=False)
             if "descripcion" in df.columns:
                 df = df[df["descripcion"].fillna("").str.len() > 50].copy()
+            # FIX: ofertas_preprocesadas.csv / ofertas_con_descripcion.csv (T3/T4)
+            # nunca incluyen similitud_embed — ese valor se calcula en T5 y solo
+            # se guarda en embeddings_ranking.csv / los rankings de T6-T8. Sin
+            # este merge, calcular_score_hibrido() no encuentra la columna y cae
+            # en silencio a TF-IDF puro, ignorando SBERT (y el w_embed=0.9 que
+            # T8 estableció como óptimo) aunque emb_of/emb_cv sí estén cargados.
+            if "similitud_embed" not in df.columns and "id_consolidado" in df.columns:
+                for emb_fname in [_RANKINGS / "ranking_final_optimizado.csv",
+                                   _RANKINGS / "ranking_final_combinado.csv",
+                                   _RANKINGS / "embeddings_ranking.csv"]:
+                    if emb_fname.exists():
+                        try:
+                            df_emb = pd.read_csv(
+                                emb_fname, low_memory=False,
+                                usecols=lambda c: c in ["id_consolidado", "similitud_embed"]
+                            )
+                            if "similitud_embed" in df_emb.columns:
+                                df = df.merge(df_emb[["id_consolidado", "similitud_embed"]],
+                                              on="id_consolidado", how="left")
+                        except Exception:
+                            pass
+                        break
             return df.reset_index(drop=True)
 
     # Intento 2: archivos de ranking + enriquecimiento con descripcion

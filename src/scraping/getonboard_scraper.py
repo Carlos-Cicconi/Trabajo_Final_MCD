@@ -34,6 +34,7 @@ from datetime import datetime, timezone
 from dataclasses import dataclass, asdict, field
 from typing import Optional
 from pathlib import Path
+from _keywords_loader import cargar_search_queries
 
 # =============================================================================
 # CONFIGURACIÓN DEL PROYECTO
@@ -62,18 +63,8 @@ logger = logging.getLogger(__name__)
 # CONFIGURACIÓN DEL SCRAPER
 # =============================================================================
 
-SEARCH_QUERIES = [
-    "Data Scientist",
-    "Data Analyst",
-    "Machine Learning",
-    "NLP",
-    "Data Engineer",
-    "Software Engineer",
-    "Python",
-    "Backend",
-    "Full Stack",
-    "Ingeniero de Datos",
-]
+# Por defecto, las de data/cvs/keywords.json (ver _keywords_loader.py).
+SEARCH_QUERIES = cargar_search_queries("string")
 
 PAGES_PER_QUERY = 5
 DELAY_MIN       = 1.5

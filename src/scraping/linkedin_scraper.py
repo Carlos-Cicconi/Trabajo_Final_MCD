@@ -22,6 +22,7 @@ from dataclasses import dataclass, asdict, field
 from typing import Optional
 from pathlib import Path
 from fake_useragent import UserAgent
+from _keywords_loader import cargar_search_queries
 
 # =============================================================================
 # CONFIGURACIÓN DEL PROYECTO
@@ -51,19 +52,9 @@ logger = logging.getLogger(__name__)
 # CONFIGURACIÓN DEL SCRAPER
 # =============================================================================
 
-# Búsquedas objetivo (alineadas con el corpus de tu tesis: Tecnología, DS, Ing.)
-SEARCH_QUERIES = [
-    {"keyword": "Data Scientist",          "location": "Argentina"},
-    {"keyword": "Data Analyst",            "location": "Argentina"},
-    {"keyword": "Machine Learning Engineer","location": "Argentina"},
-    {"keyword": "NLP Engineer",            "location": "Argentina"},
-    {"keyword": "Data Engineer",           "location": "Argentina"},
-    {"keyword": "Software Engineer",       "location": "Argentina"},
-    {"keyword": "Python Developer",        "location": "Argentina"},
-    {"keyword": "Desarrollador Backend",   "location": "Argentina"},
-    {"keyword": "Desarrollador Full Stack","location": "Argentina"},
-    {"keyword": "Ingeniero de Datos",      "location": "Argentina"},
-]
+# Búsquedas objetivo — por defecto, las de data/cvs/keywords.json (ver
+# _keywords_loader.py). run_scraping.py --cv <otro.json> las reemplaza.
+SEARCH_QUERIES = cargar_search_queries("location")
 
 # Parámetros de scraping
 PAGES_PER_QUERY    = 5       # 25 ofertas por página → ~125 por búsqueda
