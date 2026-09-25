@@ -1,5 +1,5 @@
 {
-  "fecha_evaluacion": "2026-09-24T23:12:34.652291",
+  "fecha_evaluacion": "2026-09-24T23:49:12.914566",
   "n_documentos": 2497,
   "umbral_relevancia": 0.6158,
   "n_relevantes": 625,
@@ -22,7 +22,7 @@
       "nDCG_g@20": 0.6699,
       "nDCG_g@50": 0.558,
       "MRR": 0.25,
-      "Tiempo_ms": 319.4
+      "Tiempo_ms": 313.2
     },
     "B1 — Jaccard BoW": {
       "P@5": 0.8,
@@ -42,7 +42,7 @@
       "nDCG_g@20": 0.9501,
       "nDCG_g@50": 0.9158,
       "MRR": 1.0,
-      "Tiempo_ms": 597.7
+      "Tiempo_ms": 574.7
     },
     "B2 — TF-IDF": {
       "P@5": 1.0,
@@ -170,6 +170,43 @@
       "Data Scientist": 0.0,
       "Excel / VBA": 0.0,
       "Ingeniero Industrial": 0.0
+    }
+  },
+  "p10_global_vs_por_keyword": {
+    "B0 — Keyword Match": {
+      "P10_global": 0.6,
+      "P10_macro_kw": 0.1864,
+      "delta_P10": -0.4136,
+      "nDCG10_global": 0.4616,
+      "nDCG10_macro_kw": 0.1909
+    },
+    "B1 — Jaccard BoW": {
+      "P10_global": 0.8,
+      "P10_macro_kw": 0.5045,
+      "delta_P10": -0.2955,
+      "nDCG10_global": 0.8454,
+      "nDCG10_macro_kw": 0.5262
+    },
+    "B2 — TF-IDF": {
+      "P10_global": 1.0,
+      "P10_macro_kw": 0.4909,
+      "delta_P10": -0.5091,
+      "nDCG10_global": 1.0,
+      "nDCG10_macro_kw": 0.5217
+    },
+    "B3 — SBERT puro": {
+      "P10_global": 1.0,
+      "P10_macro_kw": 0.7591,
+      "delta_P10": -0.2409,
+      "nDCG10_global": 1.0,
+      "nDCG10_macro_kw": 0.8636
+    },
+    "S  — SBERT Híbrido": {
+      "P10_global": 1.0,
+      "P10_macro_kw": 0.7409,
+      "delta_P10": -0.2591,
+      "nDCG10_global": 1.0,
+      "nDCG10_macro_kw": 0.8416
     }
   }
 }
