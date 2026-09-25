@@ -1,5 +1,5 @@
 {
-  "fecha_evaluacion": "2026-09-24T23:49:12.914566",
+  "fecha_evaluacion": "2026-09-24T23:54:45.692040",
   "n_documentos": 2497,
   "umbral_relevancia": 0.6158,
   "n_relevantes": 625,
@@ -22,7 +22,7 @@
       "nDCG_g@20": 0.6699,
       "nDCG_g@50": 0.558,
       "MRR": 0.25,
-      "Tiempo_ms": 313.2
+      "Tiempo_ms": 305.1
     },
     "B1 — Jaccard BoW": {
       "P@5": 0.8,
@@ -42,7 +42,7 @@
       "nDCG_g@20": 0.9501,
       "nDCG_g@50": 0.9158,
       "MRR": 1.0,
-      "Tiempo_ms": 574.7
+      "Tiempo_ms": 566.2
     },
     "B2 — TF-IDF": {
       "P@5": 1.0,
@@ -207,6 +207,92 @@
       "delta_P10": -0.2591,
       "nDCG10_global": 1.0,
       "nDCG10_macro_kw": 0.8416
+    }
+  },
+  "representacion_fuente_topk": {
+    "top_20": {
+      "linkedin": {
+        "pct_corpus": 47.5,
+        "pct_topk": 5.0,
+        "indice_representacion": 0.11
+      },
+      "kitempleo": {
+        "pct_corpus": 20.1,
+        "pct_topk": 95.0,
+        "indice_representacion": 4.72
+      },
+      "getonboard": {
+        "pct_corpus": 19.3,
+        "pct_topk": 0.0,
+        "indice_representacion": 0.0
+      },
+      "bumeran": {
+        "pct_corpus": 5.9,
+        "pct_topk": 0.0,
+        "indice_representacion": 0.0
+      },
+      "jobrapido": {
+        "pct_corpus": 4.8,
+        "pct_topk": 0.0,
+        "indice_representacion": 0.0
+      },
+      "zonajobs": {
+        "pct_corpus": 2.0,
+        "pct_topk": 0.0,
+        "indice_representacion": 0.0
+      },
+      "adecco": {
+        "pct_corpus": 0.2,
+        "pct_topk": 0.0,
+        "indice_representacion": 0.0
+      },
+      "randstad": {
+        "pct_corpus": 0.1,
+        "pct_topk": 0.0,
+        "indice_representacion": 0.0
+      }
+    },
+    "top_50": {
+      "linkedin": {
+        "pct_corpus": 47.5,
+        "pct_topk": 8.0,
+        "indice_representacion": 0.17
+      },
+      "kitempleo": {
+        "pct_corpus": 20.1,
+        "pct_topk": 82.0,
+        "indice_representacion": 4.07
+      },
+      "getonboard": {
+        "pct_corpus": 19.3,
+        "pct_topk": 2.0,
+        "indice_representacion": 0.1
+      },
+      "bumeran": {
+        "pct_corpus": 5.9,
+        "pct_topk": 6.0,
+        "indice_representacion": 1.02
+      },
+      "jobrapido": {
+        "pct_corpus": 4.8,
+        "pct_topk": 0.0,
+        "indice_representacion": 0.0
+      },
+      "zonajobs": {
+        "pct_corpus": 2.0,
+        "pct_topk": 2.0,
+        "indice_representacion": 1.0
+      },
+      "adecco": {
+        "pct_corpus": 0.2,
+        "pct_topk": 0.0,
+        "indice_representacion": 0.0
+      },
+      "randstad": {
+        "pct_corpus": 0.1,
+        "pct_topk": 0.0,
+        "indice_representacion": 0.0
+      }
     }
   }
 }
