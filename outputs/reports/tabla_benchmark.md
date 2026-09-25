@@ -1,6 +1,6 @@
 # Tabla Comparativa de Benchmarks — T7
 
-**Fecha:** 2026-09-19 12:27  
+**Fecha:** 2026-09-24 23:12  
 **Corpus:** 2,497 ofertas  |  **Ground truth:** similitud SBERT ≥ p75  
 **Umbral de relevancia (θ):** 0.6158  |  **N relevantes:** 625
 

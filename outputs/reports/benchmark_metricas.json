@@ -1,5 +1,5 @@
 {
-  "fecha_evaluacion": "2026-09-19T12:27:16.173426",
+  "fecha_evaluacion": "2026-09-24T23:12:34.652291",
   "n_documentos": 2497,
   "umbral_relevancia": 0.6158,
   "n_relevantes": 625,
@@ -22,7 +22,7 @@
       "nDCG_g@20": 0.6699,
       "nDCG_g@50": 0.558,
       "MRR": 0.25,
-      "Tiempo_ms": 288.2
+      "Tiempo_ms": 319.4
     },
     "B1 — Jaccard BoW": {
       "P@5": 0.8,
@@ -42,7 +42,7 @@
       "nDCG_g@20": 0.9501,
       "nDCG_g@50": 0.9158,
       "MRR": 1.0,
-      "Tiempo_ms": 573.4
+      "Tiempo_ms": 597.7
     },
     "B2 — TF-IDF": {
       "P@5": 1.0,
@@ -141,6 +141,35 @@
       "nDCG@10": 0.0,
       "nDCG@20": 0.0,
       "MRR": 0.0
+    }
+  },
+  "overlap_top10_tfidf_sbert": {
+    "global_pct": 10.0,
+    "global_jaccard": 0.0526,
+    "promedio_por_keyword_pct": 29.5,
+    "por_keyword": {
+      "Machine Learning": 70.0,
+      "Full Stack": 60.0,
+      "Machine Learning Engineer": 60.0,
+      "Ingeniero de Datos": 50.0,
+      "BI / Analytics": 50.0,
+      "Software Engineer": 50.0,
+      "Finanzas / CAPEX": 40.0,
+      "Desarrollador Backend": 40.0,
+      "Supply Chain": 40.0,
+      "Data Engineer": 30.0,
+      "Backend": 30.0,
+      "Continuous Improvement": 30.0,
+      "Data Analyst": 30.0,
+      "Python Developer": 20.0,
+      "Gerente de Operaciones": 20.0,
+      "Control de Gestión": 10.0,
+      "NLP Engineer": 10.0,
+      "Desarrollador Full Stack": 10.0,
+      "Compras / Procurement": 0.0,
+      "Data Scientist": 0.0,
+      "Excel / VBA": 0.0,
+      "Ingeniero Industrial": 0.0
     }
   }
 }
