@@ -1,0 +1,94 @@
+{
+  "fecha_ejecucion": "2026-10-14T14:54:08.632731",
+  "max_dias": 90,
+  "verificacion_links": true,
+  "limite_temporal": "2026-07-16",
+  "duracion_segundos": 4019,
+  "total_acumulado_db": 6572,
+  "nuevas_incorporadas": 313,
+  "descartadas_fecha": 550,
+  "descartadas_dup": 6259,
+  "descartadas_link": 731,
+  "scrapers_ejecutados": [
+    {
+      "fuente": "linkedin",
+      "exito": true,
+      "ofertas": 729,
+      "error": null,
+      "duracion_s": 3890,
+      "queries_origen": "cv"
+    }
+  ],
+  "consolidacion_fuentes": {
+    "linkedin": {
+      "leidas": 1863,
+      "descartadas_fecha": 117,
+      "descartadas_dup": 1433,
+      "descartadas_link": 0,
+      "nuevas": 313
+    },
+    "computrabajo": {
+      "leidas": 343,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 343,
+      "descartadas_link": 0,
+      "nuevas": 0
+    },
+    "getonboard": {
+      "leidas": 680,
+      "descartadas_fecha": 107,
+      "descartadas_dup": 573,
+      "descartadas_link": 0,
+      "nuevas": 0
+    },
+    "bumeran": {
+      "leidas": 437,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 437,
+      "descartadas_link": 0,
+      "nuevas": 0
+    },
+    "zonajobs": {
+      "leidas": 474,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 474,
+      "descartadas_link": 0,
+      "nuevas": 0
+    },
+    "kitempleo": {
+      "leidas": 1495,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 1495,
+      "descartadas_link": 0,
+      "nuevas": 0
+    },
+    "jobrapido": {
+      "leidas": 2119,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 1388,
+      "descartadas_link": 731,
+      "nuevas": 0
+    },
+    "freelancer_ar": {
+      "leidas": 323,
+      "descartadas_fecha": 323,
+      "descartadas_dup": 0,
+      "descartadas_link": 0,
+      "nuevas": 0
+    },
+    "randstad": {
+      "leidas": 115,
+      "descartadas_fecha": 3,
+      "descartadas_dup": 112,
+      "descartadas_link": 0,
+      "nuevas": 0
+    },
+    "adecco": {
+      "leidas": 4,
+      "descartadas_fecha": 0,
+      "descartadas_dup": 4,
+      "descartadas_link": 0,
+      "nuevas": 0
+    }
+  }
+}

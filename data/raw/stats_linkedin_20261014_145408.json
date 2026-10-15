@@ -1,0 +1,94 @@
+{
+  "fecha": "2026-10-14T14:54:08.625935",
+  "total_ofertas": 729,
+  "detalle_por_keyword": [
+    {
+      "keyword": "data-scientist",
+      "ofertas": 10
+    },
+    {
+      "keyword": "business-intelligence",
+      "ofertas": 18
+    },
+    {
+      "keyword": "python",
+      "ofertas": 37
+    },
+    {
+      "keyword": "control-de-gestion",
+      "ofertas": 9
+    },
+    {
+      "keyword": "gerente-operaciones",
+      "ofertas": 21
+    },
+    {
+      "keyword": "compras",
+      "ofertas": 13
+    },
+    {
+      "keyword": "ingeniero-industrial",
+      "ofertas": 16
+    },
+    {
+      "keyword": "finanzas",
+      "ofertas": 19
+    },
+    {
+      "keyword": "excel",
+      "ofertas": 25
+    },
+    {
+      "keyword": "supply-chain",
+      "ofertas": 13
+    },
+    {
+      "keyword": "continuous-improvement",
+      "ofertas": 8
+    },
+    {
+      "keyword": "data-scientist",
+      "ofertas": 50
+    },
+    {
+      "keyword": "business-intelligence",
+      "ofertas": 49
+    },
+    {
+      "keyword": "python",
+      "ofertas": 50
+    },
+    {
+      "keyword": "control-de-gestion",
+      "ofertas": 49
+    },
+    {
+      "keyword": "gerente-operaciones",
+      "ofertas": 50
+    },
+    {
+      "keyword": "compras",
+      "ofertas": 50
+    },
+    {
+      "keyword": "ingeniero-industrial",
+      "ofertas": 49
+    },
+    {
+      "keyword": "finanzas",
+      "ofertas": 50
+    },
+    {
+      "keyword": "excel",
+      "ofertas": 50
+    },
+    {
+      "keyword": "supply-chain",
+      "ofertas": 50
+    },
+    {
+      "keyword": "continuous-improvement",
+      "ofertas": 43
+    }
+  ]
+}

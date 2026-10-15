@@ -1,0 +1,494 @@
+2026-09-19 07:23:17,106 [INFO] ✅ Keywords cargadas desde CV: 22 búsquedas
+2026-09-19 07:23:17,106 [INFO]    Ubicación del candidato: Rosario, Santa Fe, Argentina
+2026-09-19 07:23:17,106 [INFO] 
+=================================================================
+2026-09-19 07:23:17,106 [INFO]   ORQUESTADOR DE SCRAPING — Tesis MCD
+2026-09-19 07:23:17,106 [INFO]   Alumno: Cicconi, Carlos Alberto
+2026-09-19 07:23:17,106 [INFO]   Universidad Austral — Maestría en Explotación de Datos
+2026-09-19 07:23:17,107 [INFO] =================================================================
+2026-09-19 07:23:17,107 [INFO]   Fecha/hora inicio : 2026-09-19 07:23:17
+2026-09-19 07:23:17,107 [INFO]   Ventana temporal  : 90 días
+2026-09-19 07:23:17,107 [INFO]   Verificar links   : Sí (8 hilos)
+2026-09-19 07:23:17,107 [INFO]   Scrapers activos  : 10
+2026-09-19 07:23:17,107 [INFO]   Solo consolidar   : False
+2026-09-19 07:23:17,107 [INFO]   Origen de queries : CV → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/cvs/keywords.json
+2026-09-19 07:23:17,107 [INFO]   Filtro --solo     : ['zonajobs']
+2026-09-19 07:23:17,107 [INFO] 
+  Scrapers a ejecutar: ['zonajobs']
+2026-09-19 07:23:17,107 [INFO] 
+============================================================
+2026-09-19 07:23:17,107 [INFO]   EJECUTANDO: zonajobs (ZonaJobsScraper)
+2026-09-19 07:23:17,107 [INFO]   Queries: desde CV (22 búsquedas)
+2026-09-19 07:23:17,107 [INFO] ============================================================
+2026-09-19 07:23:17,234 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_zonajobs.db
+2026-09-19 07:23:17,234 [INFO] ZonaJobsScraper (Playwright) inicializado
+2026-09-19 07:23:17,235 [INFO]   ✅ Queries del CV inyectadas en zonajobs
+2026-09-19 07:23:17,922 [INFO] Inicializando sesión en ZonaJobs...
+2026-09-19 07:23:35,128 [INFO] 
+🔍 Buscando: 'Data Scientist'
+2026-09-19 07:23:35,128 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-data-scientist.html
+2026-09-19 07:23:56,498 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Data_Scientist.html
+2026-09-19 07:23:56,498 [INFO]    → 0 ofertas encontradas
+2026-09-19 07:23:56,498 [INFO]    → Sin más resultados.
+2026-09-19 07:23:56,498 [INFO] ✅ 'Data Scientist': 0 ofertas guardadas
+2026-09-19 07:23:56,498 [INFO]    💤 Pausa: 7.3s
+2026-09-19 07:24:03,789 [INFO] 
+🔍 Buscando: 'BI / Analytics'
+2026-09-19 07:24:03,790 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-business-intelligence.html
+2026-09-19 07:24:24,872 [INFO]    → 5 ofertas encontradas
+2026-09-19 07:25:01,728 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-business-intelligence.html?page=2
+2026-09-19 07:25:24,326 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_BI_Analytics.html
+2026-09-19 07:25:24,327 [INFO]    → 0 ofertas encontradas
+2026-09-19 07:25:24,327 [INFO]    → Sin más resultados.
+2026-09-19 07:25:24,328 [INFO] Exportadas 5 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs_20260919.csv
+2026-09-19 07:25:24,328 [INFO] ✅ 'BI / Analytics': 5 ofertas guardadas
+2026-09-19 07:25:24,328 [INFO]    💤 Pausa: 9.9s
+2026-09-19 07:25:34,272 [INFO] 
+🔍 Buscando: 'Python Developer'
+2026-09-19 07:25:34,273 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-python.html
+2026-09-19 07:25:54,916 [INFO]    → 9 ofertas encontradas
+2026-09-19 07:27:06,712 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-python.html?page=2
+2026-09-19 07:27:29,161 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Python_Developer.html
+2026-09-19 07:27:29,161 [INFO]    → 0 ofertas encontradas
+2026-09-19 07:27:29,161 [INFO]    → Sin más resultados.
+2026-09-19 07:27:29,163 [INFO] Exportadas 9 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs_20260919.csv
+2026-09-19 07:27:29,163 [INFO] ✅ 'Python Developer': 9 ofertas guardadas
+2026-09-19 07:27:29,164 [INFO]    💤 Pausa: 7.4s
+2026-09-19 07:27:36,534 [INFO] 
+🔍 Buscando: 'Control de Gestión'
+2026-09-19 07:27:36,534 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-control-de-gestion.html
+2026-09-19 07:27:57,662 [INFO]    → 20 ofertas encontradas
+2026-09-19 07:30:33,927 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-control-de-gestion.html?page=2
+2026-09-19 07:30:55,689 [INFO]    → 14 ofertas encontradas
+2026-09-19 07:32:42,766 [INFO]    Página 3/5 → https://www.zonajobs.com.ar/empleos-busqueda-control-de-gestion.html?page=3
+2026-09-19 07:33:03,713 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Control_de_Gestión.html
+2026-09-19 07:33:03,713 [INFO]    → 0 ofertas encontradas
+2026-09-19 07:33:03,713 [INFO]    → Sin más resultados.
+2026-09-19 07:33:03,717 [INFO] Exportadas 34 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs_20260919.csv
+2026-09-19 07:33:03,717 [INFO] ✅ 'Control de Gestión': 34 ofertas guardadas
+2026-09-19 07:33:03,718 [INFO]    💤 Pausa: 9.9s
+2026-09-19 07:33:13,584 [INFO] 
+🔍 Buscando: 'Gerente de Operaciones'
+2026-09-19 07:33:13,585 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-gerente-operaciones.html
+2026-09-19 07:33:33,589 [INFO]    → 20 ofertas encontradas
+2026-09-19 07:36:11,443 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-gerente-operaciones.html?page=2
+2026-09-19 07:36:34,895 [INFO]    → 1 ofertas encontradas
+2026-09-19 07:36:44,486 [INFO]    Página 3/5 → https://www.zonajobs.com.ar/empleos-busqueda-gerente-operaciones.html?page=3
+2026-09-19 07:37:05,855 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Gerente_de_Operaciones.html
+2026-09-19 07:37:05,856 [INFO]    → 0 ofertas encontradas
+2026-09-19 07:37:05,856 [INFO]    → Sin más resultados.
+2026-09-19 07:37:05,857 [INFO] Exportadas 21 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs_20260919.csv
+2026-09-19 07:37:05,857 [INFO] ✅ 'Gerente de Operaciones': 21 ofertas guardadas
+2026-09-19 07:37:05,857 [INFO]    💤 Pausa: 9.2s
+2026-09-19 07:37:15,036 [INFO] 
+🔍 Buscando: 'Compras / Procurement'
+2026-09-19 07:37:15,036 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-compras.html
+2026-09-19 07:37:35,831 [INFO]    → 20 ofertas encontradas
+2026-09-19 07:40:12,014 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-compras.html?page=2
+2026-09-19 07:40:34,297 [INFO]    → 20 ofertas encontradas
+2026-09-19 07:43:07,848 [INFO]    Página 3/5 → https://www.zonajobs.com.ar/empleos-busqueda-compras.html?page=3
+2026-09-19 07:43:29,219 [INFO]    → 20 ofertas encontradas
+2026-09-19 07:45:58,869 [INFO]    Página 4/5 → https://www.zonajobs.com.ar/empleos-busqueda-compras.html?page=4
+2026-09-19 07:46:20,286 [INFO]    → 20 ofertas encontradas
+2026-09-19 07:48:54,087 [INFO]    Página 5/5 → https://www.zonajobs.com.ar/empleos-busqueda-compras.html?page=5
+2026-09-19 07:49:15,568 [INFO]    → 20 ofertas encontradas
+2026-09-19 07:51:51,282 [INFO] Exportadas 100 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs_20260919.csv
+2026-09-19 07:51:51,283 [INFO] ✅ 'Compras / Procurement': 100 ofertas guardadas
+2026-09-19 07:51:51,283 [INFO]    💤 Pausa: 9.4s
+2026-09-19 07:52:00,727 [INFO] 
+🔍 Buscando: 'Ingeniero Industrial'
+2026-09-19 07:52:00,728 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-ingeniero-industrial.html
+2026-09-19 07:52:21,264 [INFO]    → 4 ofertas encontradas
+2026-09-19 07:52:52,831 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-ingeniero-industrial.html?page=2
+2026-09-19 07:53:13,284 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Ingeniero_Industrial.html
+2026-09-19 07:53:13,285 [INFO]    → 0 ofertas encontradas
+2026-09-19 07:53:13,285 [INFO]    → Sin más resultados.
+2026-09-19 07:53:13,285 [INFO] Exportadas 4 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs_20260919.csv
+2026-09-19 07:53:13,286 [INFO] ✅ 'Ingeniero Industrial': 4 ofertas guardadas
+2026-09-19 07:53:13,286 [INFO]    💤 Pausa: 8.8s
+2026-09-19 07:53:22,122 [INFO] 
+🔍 Buscando: 'Finanzas / CAPEX'
+2026-09-19 07:53:22,123 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-finanzas.html
+2026-09-19 07:53:44,307 [INFO]    → 19 ofertas encontradas
+2026-09-19 07:55:59,501 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-finanzas.html?page=2
+2026-09-19 07:56:19,495 [INFO]    → 20 ofertas encontradas
+2026-09-19 07:58:53,810 [INFO]    Página 3/5 → https://www.zonajobs.com.ar/empleos-busqueda-finanzas.html?page=3
+2026-09-19 07:59:14,769 [INFO]    → 20 ofertas encontradas
+2026-09-19 08:01:44,037 [INFO]    Página 4/5 → https://www.zonajobs.com.ar/empleos-busqueda-finanzas.html?page=4
+2026-09-19 08:02:05,736 [INFO]    → 20 ofertas encontradas
+2026-09-19 08:04:36,835 [INFO]    Página 5/5 → https://www.zonajobs.com.ar/empleos-busqueda-finanzas.html?page=5
+2026-09-19 08:04:58,244 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Finanzas_CAPEX.html
+2026-09-19 08:04:58,245 [INFO]    → 0 ofertas encontradas
+2026-09-19 08:04:58,245 [INFO]    → Sin más resultados.
+2026-09-19 08:04:58,250 [INFO] Exportadas 79 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs_20260919.csv
+2026-09-19 08:04:58,250 [INFO] ✅ 'Finanzas / CAPEX': 79 ofertas guardadas
+2026-09-19 08:04:58,250 [INFO]    💤 Pausa: 9.3s
+2026-09-19 08:05:07,597 [INFO] 
+🔍 Buscando: 'Excel / VBA'
+2026-09-19 08:05:07,597 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-excel.html
+2026-09-19 08:05:28,939 [INFO]    → 5 ofertas encontradas
+2026-09-19 08:06:07,116 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-excel.html?page=2
+2026-09-19 08:06:27,081 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Excel_VBA.html
+2026-09-19 08:06:27,082 [INFO]    → 0 ofertas encontradas
+2026-09-19 08:06:27,082 [INFO]    → Sin más resultados.
+2026-09-19 08:06:27,083 [INFO] Exportadas 5 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs_20260919.csv
+2026-09-19 08:06:27,083 [INFO] ✅ 'Excel / VBA': 5 ofertas guardadas
+2026-09-19 08:06:27,084 [INFO]    💤 Pausa: 11.3s
+2026-09-19 08:06:38,404 [INFO] 
+🔍 Buscando: 'Supply Chain'
+2026-09-19 08:06:38,404 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-supply-chain.html
+2026-09-19 08:07:00,988 [INFO]    → 7 ofertas encontradas
+2026-09-19 08:07:56,929 [INFO]    Página 2/5 → https://www.zonajobs.com.ar/empleos-busqueda-supply-chain.html?page=2
+2026-09-19 08:08:19,762 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Supply_Chain.html
+2026-09-19 08:08:19,762 [INFO]    → 0 ofertas encontradas
+2026-09-19 08:08:19,762 [INFO]    → Sin más resultados.
+2026-09-19 08:08:19,763 [INFO] Exportadas 7 ofertas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs_20260919.csv
+2026-09-19 08:08:19,763 [INFO] ✅ 'Supply Chain': 7 ofertas guardadas
+2026-09-19 08:08:19,763 [INFO]    💤 Pausa: 8.7s
+2026-09-19 08:08:28,503 [INFO] 
+🔍 Buscando: 'Continuous Improvement'
+2026-09-19 08:08:28,503 [INFO]    Página 1/5 → https://www.zonajobs.com.ar/empleos-busqueda-continuous-improvement.html
+2026-09-19 08:08:48,988 [WARNING]    ⚠️  Sin ofertas. HTML guardado: zonajobs_rendered_Continuous_Improvement.html
+2026-09-19 08:08:48,989 [INFO]    → 0 ofertas encontradas
+2026-09-19 08:08:48,989 [INFO]    → Sin más resultados.
+2026-09-19 08:08:48,989 [INFO] ✅ 'Continuous Improvement': 0 ofertas guardadas
+2026-09-19 08:08:48,989 [INFO]    💤 Pausa: 12.5s
+2026-09-19 08:09:01,634 [INFO] 
+============================================================
+2026-09-19 08:09:01,634 [INFO] SCRAPING FINALIZADO - ZonaJobs Argentina
+2026-09-19 08:09:01,634 [INFO] Total ofertas únicas: 264
+2026-09-19 08:09:01,634 [INFO] DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_zonajobs.db
+2026-09-19 08:09:01,634 [INFO] CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/ofertas_zonajobs_20260919.csv
+2026-09-19 08:09:01,634 [INFO] Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/zonajobs_scraper_20260919_072317.log
+2026-09-19 08:09:01,634 [INFO] ============================================================
+2026-09-19 08:09:01,636 [INFO]   ✅ zonajobs: 264 ofertas recopiladas
+2026-09-19 08:09:01,636 [INFO] 
+=================================================================
+2026-09-19 08:09:01,636 [INFO]   FASE 2: CONSOLIDACIÓN
+2026-09-19 08:09:01,636 [INFO] =================================================================
+2026-09-19 08:09:01,636 [INFO] Consolidado DB lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.db
+2026-09-19 08:09:01,640 [INFO] 
+  📂 Procesando: linkedin (db_linkedin.db)
+2026-09-19 08:09:01,664 [INFO]   Leídas 1,332 ofertas de db_linkedin.db
+2026-09-19 08:09:01,668 [INFO]   ✅ linkedin: leídas=1,332 | nuevas=0 | dup=1,230 | old=102 | link-inactivo=0
+2026-09-19 08:09:01,668 [INFO] 
+  📂 Procesando: computrabajo (db_computrabajo.db)
+2026-09-19 08:09:01,670 [INFO]   Leídas 221 ofertas de db_computrabajo.db
+2026-09-19 08:09:01,671 [INFO]   ✅ computrabajo: leídas=221 | nuevas=0 | dup=221 | old=0 | link-inactivo=0
+2026-09-19 08:09:01,671 [INFO] 
+  📂 Procesando: getonboard (db_getonboard.db)
+2026-09-19 08:09:01,683 [INFO]   Leídas 605 ofertas de db_getonboard.db
+2026-09-19 08:09:01,685 [INFO]   ✅ getonboard: leídas=605 | nuevas=0 | dup=504 | old=101 | link-inactivo=0
+2026-09-19 08:09:01,685 [INFO] 
+  📂 Procesando: bumeran (db_bumeran.db)
+2026-09-19 08:09:01,688 [INFO]   Leídas 321 ofertas de db_bumeran.db
+2026-09-19 08:09:01,689 [INFO]   ✅ bumeran: leídas=321 | nuevas=0 | dup=321 | old=0 | link-inactivo=0
+2026-09-19 08:09:01,689 [INFO] 
+  📂 Procesando: zonajobs (db_zonajobs.db)
+2026-09-19 08:09:01,692 [INFO]   Leídas 378 ofertas de db_zonajobs.db
+2026-09-19 08:09:01,698 [INFO]     🔗 Verificando 250 links...
+2026-09-19 08:09:02,110 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-de-planeamiento-y-control-de-gestion-instituto-tecnologico-de-buenos-aires-2190279.html
+2026-09-19 08:09:02,115 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/software-engineer-python-ia-remoto-1731-aliantec-2190303.html
+2026-09-19 08:09:02,131 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/responsable-de-contaduria-y-control-de-gestion-2190174.html
+2026-09-19 08:09:02,143 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-ssr.-planeamiento-y-control-de-gestion-swiss-medical-2189794.html
+2026-09-19 08:09:02,157 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-de-control-de-gestion-y-cobranzas-desarrollos-inmobiliarios-mn-rrhh-2188919.html
+2026-09-19 08:09:02,170 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/software-engineer-python-ia-remoto-1731-aliantec-1118446730.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:02,182 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-ssr.-planeamiento-y-control-de-gestion-swiss-medical-2187665.html
+2026-09-19 08:09:02,188 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-de-costos-y-control-de-gestion-go-selection-intelligent-2190376.html
+2026-09-19 08:09:02,397 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/jefe-planeamiento-control-y-gestion-operativo-swiss-medical-2186362.html
+2026-09-19 08:09:02,406 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/jefe-planeamiento-control-y-gestion-operativo-swiss-medical-2188468.html
+2026-09-19 08:09:02,434 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-control-de-gestion-y-datos-mn-rrhh-1118419537.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:02,492 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-ssr.-planeamiento-y-control-de-gestion-swiss-medical-2186706.html
+2026-09-19 08:09:02,504 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/control-de-gestion-y-costos-industriales-metalcris-s.a-2189827.html
+2026-09-19 08:09:02,519 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-sr.-de-planeamiento-y-control-de-gestion-swiss-medical-2184023.html
+2026-09-19 08:09:02,549 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-control-interno-y-de-gestion-venado-tuerto-randstad-argentina-1118426218.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:02,574 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-ssr.-planeamiento-y-control-de-gestion-swiss-medical-1118437225.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:02,635 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-jr.-de-control-de-gestion-1118418857.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:02,709 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-sr-de-control-de-gestion-capitalent-executive-search-1118367196.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:02,746 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-sr-de-presupuesto-y-control-de-gestion-la-nacion-1118365045.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:02,814 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-sr.-de-planeamiento-y-control-de-gestion-seguros-swiss-medical-1118409939.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:02,914 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-control-de-gestion-rafaela-sunchales-buenos-aires-sancor-salud-1118437428.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:02,942 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-sr.-de-control-de-gestion-imp.-empresa-de-transporte-publico-de-pasajeros-1118394377.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:02,989 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-sr.-de-planeamiento-y-control-de-gestion-swiss-medical-1118301097.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:03,008 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-control-de-produccion-y-stock-sistema-tango-gestion-1118418103.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:03,027 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-ssr.-planeamiento-y-control-de-gestion-swiss-medical-1118393321.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:03,045 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-control-de-gestion-ssr.-vicente-lopez-bs.-as.-1118423037.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:03,090 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-administracion-y-control-de-gestion-1118396606.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:03,115 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-sr.-de-control-de-gestion-swiss-medical-1118394620.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:03,177 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/si825-analista-jr-de-planeamiento-y-control-de-gestion-|-excel-avanz.-|-general-pacheco-|-gba-norte-cona-consultores-en-rrhh-1118411767.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:03,225 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-planeamiento-financiero-y-control-de-gestion-ledesma-1118386524.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:03,241 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/control-de-gestion-analyst-ssr-maria-de-la-paz-sarmiento-1118408375.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:03,257 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-de-planeamiento-control-y-gestion-operativo-swiss-medical-1118411221.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:03,277 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/si825-analista-jr-de-control-de-gestion-|-excel-avanzado-|-general-pacheco-|-gba-norte-cona-consultores-en-rrhh-1118391180.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:03,292 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/si825-analista-jr-de-planeamiento-y-control-de-gestion-|-excel-avanz.-|-general-pacheco-|-gba-norte-cona-consultores-en-rrhh-1118392927.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:03,392 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/ingeniero-junior-de-control-de-gestion-y-proyecto-randstad-argentina-1118383937.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:03,420 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-junior-de-datos-y-control-de-gestion-perfil-humano-1118356870.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:03,608 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/gerente-de-operaciones-2189987.html
+2026-09-19 08:09:03,647 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/gerente-de-operaciones-2189117.html
+2026-09-19 08:09:03,655 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/gerente-de-operaciones-id-logistics-2189664.html
+2026-09-19 08:09:03,688 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/gerente-a-de-operaciones-gastronomicas--zona-norte-tigre-tbc-resto-cafe-2189960.html
+2026-09-19 08:09:03,705 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/encargado-a-de-local--operaciones-y-experiencia-del-cliente-beauty-store-manager-estudio-sanchez-salas-amp-asociados-2187967.html
+2026-09-19 08:09:03,721 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/gerente-de-operaciones-eth-nutrition-2190005.html
+2026-09-19 08:09:03,774 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/gerente-de-operaciones-para-estaciones-de-servicio-2187137.html
+2026-09-19 08:09:03,796 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/gerente-de-operaciones-construccion-slc-2186432.html
+2026-09-19 08:09:04,055 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-de-operaciones-id-logistics-1118391941.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:04,070 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-a-de-operaciones-gastronomicas--zona-norte-tigre-norte-comercial-1118440951.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:04,088 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-de-operaciones-coo-startia-consultores-1118448281.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:04,097 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/gerente-de-operaciones--cadena-gastronomica-multi-local--caba-2186890.html
+2026-09-19 08:09:04,101 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-de-operaciones-1118428137.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:04,125 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-de-rh-operaciones-human-consulting-1118437066.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:04,130 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-operaciones-gastronomicas-perfil-humano-1118433343.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:04,148 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/manager-junior-de-operaciones-grupo-gestion-1118428302.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:04,377 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-de-operaciones-construccion-slc-1118377492.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:04,390 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/encargado-a-de-local--operaciones-y-experiencia-del-cliente-beauty-store-manager-estudio-sanchez-salas-y-asociados-srl-1118400619.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:04,399 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-de-operaciones-y-desarrollo-comercial-desarrollo-integral-de-proyectos-empresariales.-1118394071.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:04,403 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-de-operaciones-1118382967.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:04,442 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-de-operaciones-de-seguridad-privada-alesa-sa-1118408765.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:04,529 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-de-compras-selecta-2189322.html
+2026-09-19 08:09:04,552 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-de-compras-senior-2190374.html
+2026-09-19 08:09:04,556 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/asistente-de-compras-perfumerias-pigmento-2190071.html
+2026-09-19 08:09:04,771 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/responsable-de-compras-con-experiencia-dropshipping-s.a-2189790.html
+2026-09-19 08:09:04,785 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/coordinador-a-de-compras-universidad-abierta-interamericana-uai-2188663.html
+2026-09-19 08:09:04,795 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/responsable-de-compras-cc-servicio-de-seleccion-de-personal-2188751.html
+2026-09-19 08:09:04,814 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-compras-2188190.html
+2026-09-19 08:09:04,833 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-de-proveedores-y-compras-data-memory-s-a-2189446.html
+2026-09-19 08:09:04,837 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-de-compras-2189038.html
+2026-09-19 08:09:04,861 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/encargado-de-compras-2188455.html
+2026-09-19 08:09:04,896 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/auxiliar-de-compras-part-time-2189535.html
+2026-09-19 08:09:05,016 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/responsable-de-compras-y-abastecimiento-para-importante-empresa-constructora-cocina-amp-asociados-2189542.html
+2026-09-19 08:09:05,035 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-de-compras-generales-y-abastecimiento-vril-consultora-2188659.html
+2026-09-19 08:09:05,044 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-de-compras-sr.-2188199.html
+2026-09-19 08:09:05,098 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/asistente-operativo-de-compras--mercado-central-patricio-pattin-2188697.html
+2026-09-19 08:09:05,136 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/jefe-de-compras-2187379.html
+2026-09-19 08:09:05,163 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/responsable-de-compras-arquinering-2187639.html
+2026-09-19 08:09:05,167 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/responsable-de-compras-2185223.html
+2026-09-19 08:09:05,280 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-de-compras-e-importacion-de-materiales-slc-2188072.html
+2026-09-19 08:09:05,291 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/jefe-a-de-compras-generales-analia-nunez-2186968.html
+2026-09-19 08:09:05,295 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/zona-moreno-jefe-a-adm-y-finanzas-|-analista-contable-|-analista-rrhh-|-analista-compras-2189949.html
+2026-09-19 08:09:05,389 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-de-compras-kilab-s.r.l.-2186987.html
+2026-09-19 08:09:05,405 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/encargado-a-de-compras-maxikiosco-corner-2187157.html
+2026-09-19 08:09:05,459 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-compras-buenos-aires-valentino-2187316.html
+2026-09-19 08:09:05,469 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/asistente-de-compras-construtoc-sa-2186736.html
+2026-09-19 08:09:05,481 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/coordinador-a-de-comercio-exterior-y-compras-general-rodriguez-recursos-humanos-2187716.html
+2026-09-19 08:09:05,517 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/arquitecto-especialista-en-compras-y-computo-2187071.html
+2026-09-19 08:09:05,587 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-sr.-de-compras-2186454.html
+2026-09-19 08:09:05,597 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/compra-venta-de-materiales-electricos-jl-consultores-2186689.html
+2026-09-19 08:09:05,736 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/supervisor-logistica-compra-gamer-2188845.html
+2026-09-19 08:09:05,821 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/supervisor-de-compras-1118446184.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:05,826 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-de-compras-1118446805.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:05,863 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-bprofessional-1118443256.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:05,867 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-itsm-consulting-sa-1118440365.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:05,899 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/asistente-de-compras-necho-s.a.-1118440317.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:05,968 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-a-de-compras-1118437401.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:05,981 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-compras-1118438133.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,104 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-retail-1118439255.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,124 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/administrativo-a-de-compras-y-proveedoresy-analista-de-compras-comprador-san-pedro-supermercado-1118430058.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,135 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-bumeran-selecta-1118428146.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,158 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-randstad-argentina-1118433646.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,193 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-ssr-ankas-del-sur-1118444775.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,365 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-sr.-de-compras-1118435816.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,408 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/asistente-de-compras-bn-consultoria-rh-1118415446.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,435 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-data-analytics-creciendo-lideres-consultores-1118440062.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,437 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/encargado-de-compras-y-suministros-1118430445.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,441 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/coordinador-a-de-compras-universidad-abierta-interamericana-uai-1118414765.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,450 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-compras-y-comex-0206-accelrh-1118445903.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,456 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-rh-consultores-1118423868.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,489 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-de-formulaciones-terminadas-numan-headhunter-industrial-1118437446.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,663 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-de-compras-1118411559.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,674 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-de-compras-presencial-caba-importante-empresa-speedwork-rrhh-1118402874.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,687 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/asistente-de-compras-y-comercio-exterior-jr.-bait-pisos-deco-1118431441.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,709 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-internacionales-1118316131.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,723 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-tecnicas-slate-quality-personal-s.r.l.-1118322457.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,738 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-compras-cc-consulting-1118416442.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,747 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analistra-ssr-de-compras-deporsur-s.a.s.-1118419123.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,770 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-de-compras-para-empresa-petrolera-delaburo-1118421664.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,901 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/encargado-de-compras-1118408847.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,930 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/especialista-de-compras-universidad-siglo-21-1118407761.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:06,975 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/asistente-de-compras-junior-1118413874.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,045 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-sr.-compras-1118412125.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,057 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-mantenimiento-1118413612.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,086 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-compras-y-abastecimiento-para-importante-empresa-constructora-cocina-consultoria-de-empresas-familiares-1118431810.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,161 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/ingeniero-a-de-compras-para-importante-multinacional-industrial-gba-sur-focalizar-capital-humano-1118436621.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,180 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/tecnicos-electromecanicos-con-exp-en-compras-y-panol-zona-de-trabajo-florencio-varela-clovek-1118444044.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,190 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-lab-farmaceutico-sel-consultores-soporte-y-estrategia-laboral-1118413168.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,207 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-generales-y-abastecimiento-vril-1118414756.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,222 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/lider-de-negocios-compras-y-canales-de-venta-rh-talentum-1118416572.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,332 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-para-empresa-de-servicios-grupo-homini-1118411672.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,335 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-codere-argentina-1118398275.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,355 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/pasante-en-compras-emu-establecimientos-metalurgicos-unidos-sociedad-anonima-industrial-y-comercial-1118397387.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,440 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-comprador-jr-caba-adecco-recursos-humanos-argentina-sa-1118414202.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,479 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-internacionales-exp.-en-metalurgica-oil-gas-rh-talentum-1118419227.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,495 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-y-abastecimiento-1118396629.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,513 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-e-importacion-de-materiales-slc-1118402564.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,530 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-comercio-exterior-con-experiencia-en-compra-de-repuestos-y-maquinarias.-zona-san-martin-suministra-1118432790.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,683 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-compras-grand-bourg-mmg-servicios-eventuales-1118399260.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,693 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-grupo-del-buen-pastor-1118388307.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,704 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-linkit-1118391355.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,733 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/asistente-de-compras-senior-rh-talentum-1118392674.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,768 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-a-de-compras-bb-consultores-1118385772.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,795 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/product-owner-compras-sunchales-rafaela-bs-as-sancor-salud-1118407750.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,808 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-administrativo-de-compras-y-control-de-proveedores-talent-growers-1118394522.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,816 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-a-de-compras-generales-analia-nunez-1118384167.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,929 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-de-de-ssma-calidad-y-laboratorio-calsa-1118393097.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,941 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-senior-de-compras-laspipol-laspipol-1118383798.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:07,963 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/lider-de-negocio-compras-y-canales-de-venta-rh-talentum-1118388029.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:08,109 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/ingeniero-junior-de-abastecimiento-y-compras-randstad-argentina-1118383939.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:08,149 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-a-de-compras-estrategicas-con-relocalizacion-en-tandil-gi-group-argentina-1118385162.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:08,175 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-merimat-1118378708.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:08,184 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-compras-adecco-recursos-humanos-argentina-sa-1118378928.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:08,208 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-de-compras-y-abastecimiento-1118378393.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:08,222 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-compras-casa-hospital-san-juan-de-dios-ramos-mejia-1118376821.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:08,242 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-importaciones-y-compras-internacionales-ensol-1118378434.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:08,257 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-de-compras-gba-sur-hr-specialist-1118379445.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:08,418 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-compras-distri-1118371065.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:08,511 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/supervisor-logistica-compra-gamer-1118418064.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:08,550 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/ingeniero-a-industrial-zona-caba-grupo-gestion-1118346264.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:08,565 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/ingeniero-a-industrial-logistico-a--pilar-grupo-gestion-1118425531.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:08,571 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/ingeniero-responsable-de-produccion--procesos-industriales-plasticos-camillo-srl-1118401161.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:08,635 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/planner-junior-mantenimientojoven-ingeniero-p-planta-industrial-ing-jacobacci-rio-negro-2189881.html
+2026-09-19 08:09:08,662 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/responsable-de-administracion-y-finanzas-capital-humano-2190268.html
+2026-09-19 08:09:08,670 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/respoonsable-de-administracion-y-finanzas-capital-rh-2190245.html
+2026-09-19 08:09:08,770 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/responsable-de-administracion-y-finanzas-res-beef-2190201.html
+2026-09-19 08:09:08,899 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-de-finanzas-ssr-2190052.html
+2026-09-19 08:09:08,904 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-de-administracion-y-finanzas-nefra-medical-care-2190029.html
+2026-09-19 08:09:08,931 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/importante-empresa-de-zona-norte-busca-analista-de-administracion-y-finanzas-2190267.html
+2026-09-19 08:09:08,939 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/responsable-de-administracion-y-finanzas-ituzaingo-de-elizalde-desarrollo-del-talento-2188759.html
+2026-09-19 08:09:08,958 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/responsable-de-administracion-y-finanzas-2189811.html
+2026-09-19 08:09:08,963 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/gerente-de-administracion-finanzas-regional-lighthouse-smart-2189798.html
+2026-09-19 08:09:09,001 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/coordinador-a-academico-a-para-la-maestria-en-finanzas-universidad-torcuato-di-tella-2189787.html
+2026-09-19 08:09:09,020 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-senior-de-administracion-y-finanzas-industrias-mh-srl-2188483.html
+2026-09-19 08:09:09,179 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/asistente-de-adm-y-finanzas-2187166.html
+2026-09-19 08:09:09,198 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/responsable-de-administracion-y-finanzas-2186918.html
+2026-09-19 08:09:09,221 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/jefe-de-administracion-y-finanzas-2186577.html
+2026-09-19 08:09:09,237 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-de-datos-y-finanzas-gelin-group-s.a-2186827.html
+2026-09-19 08:09:09,271 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/contador-a-publico-a-soluciones-y-finanzas-2187386.html
+2026-09-19 08:09:09,285 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/jefe-de-administracion-y-finanzas-saiba-recursos-humanos-2187973.html
+2026-09-19 08:09:09,303 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/jefe-de-administracion-finanzas-sp-consulting-2187715.html
+2026-09-19 08:09:09,541 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/contador-a-semi-sr-sr-para-sumarse-a-nuestro-equipo-de-finanzas-simplicity-business-partners-2186716.html
+2026-09-19 08:09:09,576 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-de-finanzas-1118438101.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:09,586 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-adimintracion-y-finanzas-ruben-castro.-reclutamiento-y-seleccion-de-rrhh-1118444868.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:09,598 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-administracion-y-finanzas-jl-consultores-1118444008.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:09,666 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-en-finanzas-bayton-1118286984.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:09,671 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-administracion-y-finanzas-res-beef-1118444809.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:09,711 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-administracion-y-finanzas-alianza-estrategica-1118439051.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:09,756 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/administrativa-de-finanzas-cnw-importadora-1118427407.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:09,795 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-administracion-y-finanzas-internacionales-roitz-roitz-1118444940.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:09,837 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-finanzas-mooks-1118190895.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:09,846 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-a-de-administracion-y-finanzas-zona-caba-grupo-gestion-1118447985.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:09,864 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-de-finanzas-mooks-1118190870.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:09,913 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-a-de-administracion-y-finanzas-medicina-privada-in-move-consulting-1118447806.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:09,916 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/coordinador-a-academico-a-para-la-maestria-en-finanzas-universidad-torcuato-di-tella-1118433723.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:09,945 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-junior-de-negocios-y-finanzas-avis-budget-argentina-1118432906.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:09,988 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-sr-de-finanzas-creditos-cobranzas-capitalent-executive-search-1118441237.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,113 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-administracion-y-finanzas-deporsur-s.a.s.-1118419220.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,149 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-administracion-y-finanzas-expreso-diemar-1118417411.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,217 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-finanzas-ssr-be-part-rh-1118413273.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,237 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-de-administracion-y-finanzas-1118333592.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,261 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-administracion-y-finanzas-ituzaingo-de-elizalde-desarrollo-del-talento-1118416507.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,271 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-de-administracion-y-finanzas-1118407747.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,276 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-administracion-y-finanzas-retail-randstad-argentina-1118414744.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,294 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-finanzas-corporativas-fyo-1118405796.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,337 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-sr.-de-administracion-y-finanzas-agropecuarias-hipodromo-palermo-1118353194.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,386 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-contable-administracion-y-finanzas-persat-1118410271.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,561 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-de-administracion-y-finanzas-saiba-recursos-humanos-1118400627.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,580 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-de-finanzas-danaide-s-a-1118396487.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,588 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/707-be-|-administrativo-contable-senior-|-administracion-y-finanzas-|-caba-cona-consultores-en-rrhh-1118428972.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,617 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-a-de-administracion-y-finanzas-100-presencial-full-time-el-triangulo-pcia.-de-bs.-as.-perez-vilches-maria-florencia-1118443273.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,652 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-sr.-de-administracion-y-finanzas-agropecuarias-hipodromo-palermo-1118390221.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,660 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-de-administracion-y-finanzas-soledad-piceni-1118395659.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,667 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-sr.-de-administracion-y-finanzas-agropecuarias-hipodromo-palermo-1118406940.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,676 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-senior-de-finanzas-y-creditos-bait-pisos-deco-1118391687.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,810 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-de-administracion-y-finanzas-haytalento-consultora-rrhh-1118394365.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,869 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/393co-|-contador-administracion-economia-finanzas-|-ingles-avanzado-|-caba-cona-consultores-en-rrhh-1117908392.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,878 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/administrativa-de-finanzas-cierres-mil-8-1118387918.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,928 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-finanzas-tesoreria-1118384244.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,941 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-finanzas-jr-hipodromo-palermo-1118385030.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,968 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-sr-de-administracion-y-finanzas-bprofessional-1118393680.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,992 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-de-administracion-y-finanzas-1118386463.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:10,986 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-administracion-y-finanzas-mk-consultores-1118385034.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,067 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-administracion-y-finanzas-1118383534.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,202 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-datos-y-finanzas-gelin-group-sa-1118382789.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,212 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-datos-y-finanzas-gelin-group-1118382780.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,222 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-a-de-administracion-y-finanzas-1118382832.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,228 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/lider-de-administracion-y-finanzas-vguirao-hr-consulting-1118381377.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,255 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-finanzas-tesoreria-1118381401.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,292 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/profesional-de-finanzas-peiso-technologies-1118379656.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,306 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-sr-de-administracion-y-finanzas-1118381954.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,323 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-finanzas-planificacion-financiera-1118381325.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,497 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-senior-de-finanzas-tgn-1118380195.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,525 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-de-administracion-y-finanzas-nuevo-central-argentino-sa-1118327149.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,545 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/gerente-de-finanzas-y-rrhh-slate-quality-personal-s.r.l.-1118054458.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,561 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-administracion-y-finanzas-generacion-talento-1118377771.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,574 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-administracion-y-finanzas-jr.-tigre-y-alrededores-gi-group-argentina-1118381476.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,591 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-ventas-y-atencion-al-cliente-fertil-finanzas-sa-1118428067.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,614 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-ventas-y-atencion-al-cliente-fertil-finanzas-sa-1118389636.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,625 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-ventas-y-atencion-al-cliente-fertil-finanzas-sa-1118413343.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,784 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/jefe-de-administracion-y-finanzas-1118341997.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,802 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-administracion-y-finanzas-1118343903.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,836 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-impositivo-contable-con-excel-avanzado-contador-publico-caba-1118352770.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,848 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-jr-de-e-commerce-con-excel-avanzado-bumeran-selecta-1118427980.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,864 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/1359cc-|-administrativa-jr-|-sistema-bejerman-|-excel-|-hibrido-|-capital-federal-|-buenos-aires-cona-consultores-en-rrhh-1118416550.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,885 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/administrativo-de-oficina-tecnica--excel-kpis-e-ia-san-martin-suministra-1118379563.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:11,953 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/analista-jr-de-e-commerce-con-excel-avanzado-selecta-2189313.html
+2026-09-19 08:09:12,005 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.zonajobs.com.ar/empleos/pasantia-supply-chain-capsa-capex-direcciona-sa-2190259.html
+2026-09-19 08:09:12,054 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/director-de-supply-chain-onix-human-resources-consulting-s.a.-1118437478.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:12,071 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/pasantia-supply-chain-capsa-capex-direcciona-1118446012.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:12,087 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/analista-de-supply-chain-1118401081.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:12,092 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/responsable-de-supply-chain-decathlon-deporsur-s.a.s.-1118418089.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:12,110 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/supply-chain-empresa-de-consumo-masivo-cia-de-talentos-1118411906.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:12,114 [INFO]     ⚛️⚠️  SPA sin SSR (no concluyente), se conserva: https://www.bumeran.com.ar/empleos/base-de-profesionales-para-supply-chain--ingenieros-as-expo-bumeran-2026-coca-cola-femsa-de-argentina-1118415696.html?utm_source=zonajobs&utm_medium=free&utm_campaign=crossbrand
+2026-09-19 08:09:12,163 [INFO]   ✅ zonajobs: leídas=378 | nuevas=250 | dup=128 | old=0 | link-inactivo=0
+2026-09-19 08:09:12,164 [INFO] 
+  📂 Procesando: kitempleo (db_kitempleo.db)
+2026-09-19 08:09:12,216 [INFO]   Leídas 955 ofertas de db_kitempleo.db
+2026-09-19 08:09:12,217 [INFO]   ✅ kitempleo: leídas=955 | nuevas=0 | dup=955 | old=0 | link-inactivo=0
+2026-09-19 08:09:12,217 [INFO] 
+  📂 Procesando: jobrapido (db_jobrapido.db)
+2026-09-19 08:09:12,233 [INFO]   Leídas 1,388 ofertas de db_jobrapido.db
+2026-09-19 08:09:12,235 [INFO]   ✅ jobrapido: leídas=1,388 | nuevas=0 | dup=1,388 | old=0 | link-inactivo=0
+2026-09-19 08:09:12,235 [INFO] 
+  📂 Procesando: freelancer_ar (db_freelancer_ar.db)
+2026-09-19 08:09:12,239 [INFO]   Leídas 323 ofertas de db_freelancer_ar.db
+2026-09-19 08:09:12,244 [INFO]   ✅ freelancer_ar: leídas=323 | nuevas=0 | dup=0 | old=323 | link-inactivo=0
+2026-09-19 08:09:12,245 [INFO] 
+  📂 Procesando: randstad (db_randstad.db)
+2026-09-19 08:09:12,245 [INFO]   Leídas 3 ofertas de db_randstad.db
+2026-09-19 08:09:12,246 [INFO]   ✅ randstad: leídas=3 | nuevas=0 | dup=3 | old=0 | link-inactivo=0
+2026-09-19 08:09:12,246 [INFO] 
+  📂 Procesando: adecco (db_adecco.db)
+2026-09-19 08:09:12,246 [INFO]   Leídas 4 ofertas de db_adecco.db
+2026-09-19 08:09:12,246 [INFO]   ✅ adecco: leídas=4 | nuevas=0 | dup=4 | old=0 | link-inactivo=0
+2026-09-19 08:09:12,253 [INFO]   CSV consolidado actualizado: +250 filas → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.csv
+2026-09-19 08:09:12,253 [INFO] 
+=================================================================
+2026-09-19 08:09:12,253 [INFO]   RESUMEN FINAL
+2026-09-19 08:09:12,253 [INFO] =================================================================
+2026-09-19 08:09:12,254 [INFO]   Ofertas nuevas incorporadas : 250
+2026-09-19 08:09:12,254 [INFO]   Descartadas (antigüedad)    : 526
+2026-09-19 08:09:12,254 [INFO]   Descartadas (duplicado)     : 4,754
+2026-09-19 08:09:12,254 [INFO]   Descartadas (link inactivo) : 0
+2026-09-19 08:09:12,254 [INFO]   Total acumulado en DB       : 5,004
+2026-09-19 08:09:12,254 [INFO]   Ventana temporal aplicada   : últimos 90 días (desde 2026-06-21)
+2026-09-19 08:09:12,254 [INFO]   Duración total              : 45m 55s
+2026-09-19 08:09:12,254 [INFO] 
+  Archivos de salida:
+2026-09-19 08:09:12,254 [INFO]     DB : /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.db
+2026-09-19 08:09:12,255 [INFO]     CSV: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/ofertas_consolidadas.csv
+2026-09-19 08:09:12,255 [INFO]     Log: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/logs/run_scraping_20260919_072317.log
+2026-09-19 08:09:12,255 [INFO] 
+  Resultado por scraper:
+2026-09-19 08:09:12,255 [INFO]     ✅ zonajobs        | 📄CV | ofertas=264 | tiempo=2744s
+2026-09-19 08:09:12,255 [INFO] 
+  Por fuente (consolidación):
+2026-09-19 08:09:12,255 [INFO]     linkedin       : nuevas=0 | dup=1,230 | old=102 | link-inactivo=0
+2026-09-19 08:09:12,255 [INFO]     computrabajo   : nuevas=0 | dup=221 | old=0 | link-inactivo=0
+2026-09-19 08:09:12,255 [INFO]     getonboard     : nuevas=0 | dup=504 | old=101 | link-inactivo=0
+2026-09-19 08:09:12,255 [INFO]     bumeran        : nuevas=0 | dup=321 | old=0 | link-inactivo=0
+2026-09-19 08:09:12,255 [INFO]     zonajobs       : nuevas=250 | dup=128 | old=0 | link-inactivo=0
+2026-09-19 08:09:12,255 [INFO]     kitempleo      : nuevas=0 | dup=955 | old=0 | link-inactivo=0
+2026-09-19 08:09:12,255 [INFO]     jobrapido      : nuevas=0 | dup=1,388 | old=0 | link-inactivo=0
+2026-09-19 08:09:12,256 [INFO]     freelancer_ar  : nuevas=0 | dup=0 | old=323 | link-inactivo=0
+2026-09-19 08:09:12,256 [INFO]     randstad       : nuevas=0 | dup=3 | old=0 | link-inactivo=0
+2026-09-19 08:09:12,256 [INFO]     adecco         : nuevas=0 | dup=4 | old=0 | link-inactivo=0
+2026-09-19 08:09:12,256 [INFO]     Reporte: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/consolidado/run_20260919_080912.json
+2026-09-19 08:09:12,256 [INFO] =================================================================

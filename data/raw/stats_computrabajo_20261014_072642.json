@@ -1,0 +1,51 @@
+{
+  "fuente": "computrabajo",
+  "fecha": "2026-10-14T07:26:42.597525",
+  "total_ofertas": 123,
+  "detalle_por_keyword": [
+    {
+      "keyword": "Data Scientist",
+      "ofertas": 3
+    },
+    {
+      "keyword": "BI / Analytics",
+      "ofertas": 20
+    },
+    {
+      "keyword": "Python Developer",
+      "ofertas": 20
+    },
+    {
+      "keyword": "Control de Gestión",
+      "ofertas": 20
+    },
+    {
+      "keyword": "Gerente de Operaciones",
+      "ofertas": 0
+    },
+    {
+      "keyword": "Compras / Procurement",
+      "ofertas": 0
+    },
+    {
+      "keyword": "Ingeniero Industrial",
+      "ofertas": 0
+    },
+    {
+      "keyword": "Finanzas / CAPEX",
+      "ofertas": 40
+    },
+    {
+      "keyword": "Excel / VBA",
+      "ofertas": 0
+    },
+    {
+      "keyword": "Supply Chain",
+      "ofertas": 20
+    },
+    {
+      "keyword": "Continuous Improvement",
+      "ofertas": 0
+    }
+  ]
+}
