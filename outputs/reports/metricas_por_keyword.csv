@@ -1,111 +1,111 @@
 sistema,keyword,n_ofertas,P@10,nDCG@10
-B0 — Keyword Match,BI / Analytics,103,0.0,0.0
+B0 — Keyword Match,BI / Analytics,184,0.0,0.0
 B0 — Keyword Match,Backend,46,0.0,0.0
-B0 — Keyword Match,Compras / Procurement,149,0.8,0.8643145546088339
-B0 — Keyword Match,Continuous Improvement,97,0.1,0.07839826897867534
-B0 — Keyword Match,Control de Gestión,147,0.8,0.8603818544462509
-B0 — Keyword Match,Data Analyst,166,0.3,0.2297956100746854
+B0 — Keyword Match,Compras / Procurement,263,0.9,0.9148568823583791
+B0 — Keyword Match,Continuous Improvement,183,0.1,0.07336392209936006
+B0 — Keyword Match,Control de Gestión,238,0.7,0.6352557412688554
+B0 — Keyword Match,Data Analyst,166,0.2,0.14465249243306438
 B0 — Keyword Match,Data Engineer,139,0.0,0.0
-B0 — Keyword Match,Data Scientist,163,0.0,0.0
+B0 — Keyword Match,Data Scientist,210,0.0,0.0
 B0 — Keyword Match,Desarrollador Backend,73,0.0,0.0
 B0 — Keyword Match,Desarrollador Full Stack,154,0.3,0.21819512777735
-B0 — Keyword Match,Excel / VBA,111,0.6,0.727329844310522
-B0 — Keyword Match,Finanzas / CAPEX,116,0.4,0.42333070005078105
+B0 — Keyword Match,Excel / VBA,241,0.7,0.8006937664098821
+B0 — Keyword Match,Finanzas / CAPEX,225,0.7,0.6442227883107536
 B0 — Keyword Match,Full Stack,18,0.0,0.0
-B0 — Keyword Match,Gerente de Operaciones,88,0.5,0.5517854393872874
-B0 — Keyword Match,Ingeniero Industrial,115,0.0,0.0
+B0 — Keyword Match,Gerente de Operaciones,152,0.3,0.36792125721353286
+B0 — Keyword Match,Ingeniero Industrial,179,0.0,0.0
 B0 — Keyword Match,Ingeniero de Datos,67,0.0,0.0
 B0 — Keyword Match,Machine Learning,34,0.0,0.0
 B0 — Keyword Match,Machine Learning Engineer,69,0.0,0.0
 B0 — Keyword Match,NLP Engineer,194,0.1,0.06362078819895173
-B0 — Keyword Match,Python Developer,176,0.1,0.07311683844390995
-B0 — Keyword Match,Software Engineer,179,0.1,0.1100458831490401
-B0 — Keyword Match,Supply Chain,93,0.0,0.0
-B1 — Jaccard BoW,BI / Analytics,103,0.7,0.7818048722226502
+B0 — Keyword Match,Python Developer,260,0.0,0.0
+B0 — Keyword Match,Software Engineer,179,0.1,0.1175227747072427
+B0 — Keyword Match,Supply Chain,149,0.9,0.77990823370192
+B1 — Jaccard BoW,BI / Analytics,184,0.6,0.5645252544249328
 B1 — Jaccard BoW,Backend,46,0.0,0.0
-B1 — Jaccard BoW,Compras / Procurement,149,1.0,1.0
-B1 — Jaccard BoW,Continuous Improvement,97,0.5,0.4451989745299882
-B1 — Jaccard BoW,Control de Gestión,147,0.9,0.77990823370192
-B1 — Jaccard BoW,Data Analyst,166,0.6,0.6961622681399229
+B1 — Jaccard BoW,Compras / Procurement,263,1.0,1.0
+B1 — Jaccard BoW,Continuous Improvement,183,0.1,0.13886244387355456
+B1 — Jaccard BoW,Control de Gestión,238,0.7,0.5914640815742044
+B1 — Jaccard BoW,Data Analyst,166,0.5,0.4760705018418427
 B1 — Jaccard BoW,Data Engineer,139,0.1,0.38685280723454163
-B1 — Jaccard BoW,Data Scientist,163,0.4,0.31954962756492095
-B1 — Jaccard BoW,Desarrollador Backend,73,0.1,0.1208113026994942
+B1 — Jaccard BoW,Data Scientist,210,0.3,0.349966777951421
+B1 — Jaccard BoW,Desarrollador Backend,73,0.1,0.13905617951077562
 B1 — Jaccard BoW,Desarrollador Full Stack,154,0.8,0.713654010247531
-B1 — Jaccard BoW,Excel / VBA,111,0.9,0.9337457765456111
-B1 — Jaccard BoW,Finanzas / CAPEX,116,1.0,1.0
+B1 — Jaccard BoW,Excel / VBA,241,1.0,1.0
+B1 — Jaccard BoW,Finanzas / CAPEX,225,1.0,1.0
 B1 — Jaccard BoW,Full Stack,18,0.0,0.0
-B1 — Jaccard BoW,Gerente de Operaciones,88,0.9,0.9148568823583791
-B1 — Jaccard BoW,Ingeniero Industrial,115,0.9,0.9363792118010483
+B1 — Jaccard BoW,Gerente de Operaciones,152,0.7,0.5774250016294137
+B1 — Jaccard BoW,Ingeniero Industrial,179,1.0,1.0
 B1 — Jaccard BoW,Ingeniero de Datos,67,0.3,0.2629123995523597
 B1 — Jaccard BoW,Machine Learning,34,0.0,0.0
-B1 — Jaccard BoW,Machine Learning Engineer,69,0.3,0.4366632592553499
+B1 — Jaccard BoW,Machine Learning Engineer,69,0.1,0.38685280723454163
 B1 — Jaccard BoW,NLP Engineer,194,0.6,0.6023277671368328
-B1 — Jaccard BoW,Python Developer,176,0.2,0.3507942974028176
-B1 — Jaccard BoW,Software Engineer,179,0.3,0.2808815010511816
-B1 — Jaccard BoW,Supply Chain,93,0.6,0.6141069626790936
-B2 — TF-IDF,BI / Analytics,103,0.7,0.7254521107352793
+B1 — Jaccard BoW,Python Developer,260,0.2,0.3507942974028176
+B1 — Jaccard BoW,Software Engineer,179,0.2,0.15166831491748423
+B1 — Jaccard BoW,Supply Chain,149,0.6,0.5900490851534657
+B2 — TF-IDF,BI / Analytics,184,0.6,0.55206785919664
 B2 — TF-IDF,Backend,46,0.0,0.0
-B2 — TF-IDF,Compras / Procurement,149,0.9,0.9305687780632229
-B2 — TF-IDF,Continuous Improvement,97,0.4,0.535254316775064
-B2 — TF-IDF,Control de Gestión,147,1.0,1.0
-B2 — TF-IDF,Data Analyst,166,0.6,0.699473903081392
+B2 — TF-IDF,Compras / Procurement,263,0.9,0.9052116356304495
+B2 — TF-IDF,Continuous Improvement,183,0.4,0.3850481493391154
+B2 — TF-IDF,Control de Gestión,238,1.0,1.0
+B2 — TF-IDF,Data Analyst,166,0.5,0.6046855387118413
 B2 — TF-IDF,Data Engineer,139,0.1,0.31546487678572877
-B2 — TF-IDF,Data Scientist,163,0.1,0.07336392209936006
-B2 — TF-IDF,Desarrollador Backend,73,0.2,0.2591217516005785
-B2 — TF-IDF,Desarrollador Full Stack,154,0.6,0.5900490851534657
-B2 — TF-IDF,Excel / VBA,111,0.9,0.77990823370192
-B2 — TF-IDF,Finanzas / CAPEX,116,1.0,1.0
+B2 — TF-IDF,Data Scientist,210,0.3,0.4085359184257956
+B2 — TF-IDF,Desarrollador Backend,73,0.1,0.24630238874073
+B2 — TF-IDF,Desarrollador Full Stack,154,0.5,0.5360735436824438
+B2 — TF-IDF,Excel / VBA,241,0.8,0.6698623505528799
+B2 — TF-IDF,Finanzas / CAPEX,225,0.8,0.8521705090845474
 B2 — TF-IDF,Full Stack,18,0.0,0.0
-B2 — TF-IDF,Gerente de Operaciones,88,0.9,0.9148568823583791
-B2 — TF-IDF,Ingeniero Industrial,115,0.9,0.9216017310213247
-B2 — TF-IDF,Ingeniero de Datos,67,0.5,0.5020420510331549
+B2 — TF-IDF,Gerente de Operaciones,152,0.5,0.38271603883851824
+B2 — TF-IDF,Ingeniero Industrial,179,0.8,0.7975167679274939
+B2 — TF-IDF,Ingeniero de Datos,67,0.5,0.6195648257403976
 B2 — TF-IDF,Machine Learning,34,0.0,0.0
-B2 — TF-IDF,Machine Learning Engineer,69,0.2,0.2685357229842324
-B2 — TF-IDF,NLP Engineer,194,0.5,0.429595510713961
-B2 — TF-IDF,Python Developer,176,0.2,0.3507942974028176
-B2 — TF-IDF,Software Engineer,179,0.5,0.5884674004369674
-B2 — TF-IDF,Supply Chain,93,0.6,0.5926825204089029
-B3 — SBERT puro,BI / Analytics,103,1.0,1.0
+B2 — TF-IDF,Machine Learning Engineer,69,0.0,0.0
+B2 — TF-IDF,NLP Engineer,194,0.6,0.4892835987503299
+B2 — TF-IDF,Python Developer,260,0.2,0.4125317798925535
+B2 — TF-IDF,Software Engineer,179,0.4,0.42417878340062165
+B2 — TF-IDF,Supply Chain,149,0.5,0.4977962688668736
+B3 — SBERT puro,BI / Analytics,184,1.0,1.0
 B3 — SBERT puro,Backend,46,0.0,0.0
-B3 — SBERT puro,Compras / Procurement,149,1.0,1.0
-B3 — SBERT puro,Continuous Improvement,97,1.0,1.0
-B3 — SBERT puro,Control de Gestión,147,1.0,1.0
+B3 — SBERT puro,Compras / Procurement,263,1.0,1.0
+B3 — SBERT puro,Continuous Improvement,183,1.0,1.0
+B3 — SBERT puro,Control de Gestión,238,1.0,1.0
 B3 — SBERT puro,Data Analyst,166,1.0,1.0
 B3 — SBERT puro,Data Engineer,139,0.1,1.0
-B3 — SBERT puro,Data Scientist,163,1.0,1.0
-B3 — SBERT puro,Desarrollador Backend,73,0.5,1.0
+B3 — SBERT puro,Data Scientist,210,1.0,1.0
+B3 — SBERT puro,Desarrollador Backend,73,0.4,1.0
 B3 — SBERT puro,Desarrollador Full Stack,154,1.0,1.0
-B3 — SBERT puro,Excel / VBA,111,1.0,1.0
-B3 — SBERT puro,Finanzas / CAPEX,116,1.0,1.0
+B3 — SBERT puro,Excel / VBA,241,1.0,1.0
+B3 — SBERT puro,Finanzas / CAPEX,225,1.0,1.0
 B3 — SBERT puro,Full Stack,18,0.0,0.0
-B3 — SBERT puro,Gerente de Operaciones,88,1.0,1.0
-B3 — SBERT puro,Ingeniero Industrial,115,1.0,1.0
+B3 — SBERT puro,Gerente de Operaciones,152,1.0,1.0
+B3 — SBERT puro,Ingeniero Industrial,179,1.0,1.0
 B3 — SBERT puro,Ingeniero de Datos,67,0.9,1.0
 B3 — SBERT puro,Machine Learning,34,0.0,0.0
-B3 — SBERT puro,Machine Learning Engineer,69,0.4,1.0
+B3 — SBERT puro,Machine Learning Engineer,69,0.1,1.0
 B3 — SBERT puro,NLP Engineer,194,1.0,1.0
-B3 — SBERT puro,Python Developer,176,0.8,1.0
-B3 — SBERT puro,Software Engineer,179,1.0,1.0
-B3 — SBERT puro,Supply Chain,93,1.0,1.0
-S  — SBERT Híbrido,BI / Analytics,103,1.0,1.0
+B3 — SBERT puro,Python Developer,260,0.8,1.0
+B3 — SBERT puro,Software Engineer,179,0.9,1.0
+B3 — SBERT puro,Supply Chain,149,1.0,1.0
+S  — SBERT Híbrido,BI / Analytics,184,1.0,1.0
 S  — SBERT Híbrido,Backend,46,0.0,0.0
-S  — SBERT Híbrido,Compras / Procurement,149,1.0,1.0
-S  — SBERT Híbrido,Continuous Improvement,97,0.8,0.8482378089219648
-S  — SBERT Híbrido,Control de Gestión,147,1.0,1.0
-S  — SBERT Híbrido,Data Analyst,166,1.0,1.0
+S  — SBERT Híbrido,Compras / Procurement,263,1.0,1.0
+S  — SBERT Híbrido,Continuous Improvement,183,0.7,0.8006937664098821
+S  — SBERT Híbrido,Control de Gestión,238,1.0,1.0
+S  — SBERT Híbrido,Data Analyst,166,0.9,0.9305687780632229
 S  — SBERT Híbrido,Data Engineer,139,0.1,1.0
-S  — SBERT Híbrido,Data Scientist,163,1.0,1.0
-S  — SBERT Híbrido,Desarrollador Backend,73,0.5,0.9284591831945489
+S  — SBERT Híbrido,Data Scientist,210,1.0,1.0
+S  — SBERT Híbrido,Desarrollador Backend,73,0.4,0.8223723458399597
 S  — SBERT Híbrido,Desarrollador Full Stack,154,1.0,1.0
-S  — SBERT Híbrido,Excel / VBA,111,1.0,1.0
-S  — SBERT Híbrido,Finanzas / CAPEX,116,1.0,1.0
+S  — SBERT Híbrido,Excel / VBA,241,1.0,1.0
+S  — SBERT Híbrido,Finanzas / CAPEX,225,1.0,1.0
 S  — SBERT Híbrido,Full Stack,18,0.0,0.0
-S  — SBERT Híbrido,Gerente de Operaciones,88,1.0,1.0
-S  — SBERT Híbrido,Ingeniero Industrial,115,1.0,1.0
+S  — SBERT Híbrido,Gerente de Operaciones,152,1.0,1.0
+S  — SBERT Híbrido,Ingeniero Industrial,179,1.0,1.0
 S  — SBERT Híbrido,Ingeniero de Datos,67,0.8,0.9216514835285049
 S  — SBERT Híbrido,Machine Learning,34,0.0,0.0
-S  — SBERT Híbrido,Machine Learning Engineer,69,0.4,0.8927537907700456
+S  — SBERT Híbrido,Machine Learning Engineer,69,0.1,1.0
 S  — SBERT Híbrido,NLP Engineer,194,1.0,1.0
-S  — SBERT Híbrido,Python Developer,176,0.8,0.9888026041880241
-S  — SBERT Híbrido,Software Engineer,179,0.9,0.9363792118010483
-S  — SBERT Híbrido,Supply Chain,93,1.0,1.0
+S  — SBERT Híbrido,Python Developer,260,0.7,0.9156857657441142
+S  — SBERT Híbrido,Software Engineer,179,0.8,0.9162750860008065
+S  — SBERT Híbrido,Supply Chain,149,1.0,1.0

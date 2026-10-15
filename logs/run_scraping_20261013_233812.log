@@ -1,0 +1,36 @@
+2026-10-13 23:38:12,429 [INFO] ✅ Keywords cargadas desde CV: 22 búsquedas
+2026-10-13 23:38:12,430 [INFO]    Ubicación del candidato: Rosario, Santa Fe, Argentina
+2026-10-13 23:38:12,430 [INFO] 
+=================================================================
+2026-10-13 23:38:12,430 [INFO]   ORQUESTADOR DE SCRAPING — Tesis MCD
+2026-10-13 23:38:12,430 [INFO]   Alumno: Cicconi, Carlos Alberto
+2026-10-13 23:38:12,430 [INFO]   Universidad Austral — Maestría en Explotación de Datos
+2026-10-13 23:38:12,430 [INFO] =================================================================
+2026-10-13 23:38:12,430 [INFO]   Fecha/hora inicio : 2026-10-13 23:38:12
+2026-10-13 23:38:12,430 [INFO]   Ventana temporal  : 90 días
+2026-10-13 23:38:12,430 [INFO]   Verificar links   : Sí (8 hilos)
+2026-10-13 23:38:12,430 [INFO]   Scrapers activos  : 10
+2026-10-13 23:38:12,430 [INFO]   Solo consolidar   : False
+2026-10-13 23:38:12,431 [INFO]   Origen de queries : CV → /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/cvs/keywords.json
+2026-10-13 23:38:12,431 [INFO] 
+  Scrapers a ejecutar: ['linkedin', 'computrabajo', 'getonboard', 'bumeran', 'zonajobs', 'kitempleo', 'jobrapido', 'freelancer_ar', 'randstad', 'adecco']
+2026-10-13 23:38:12,431 [INFO] 
+============================================================
+2026-10-13 23:38:12,431 [INFO]   EJECUTANDO: linkedin (LinkedInScraper)
+2026-10-13 23:38:12,431 [INFO]   Queries: desde CV (22 búsquedas)
+2026-10-13 23:38:12,431 [INFO] ============================================================
+2026-10-13 23:38:12,608 [INFO] Base de datos lista: /media/carlos-a-cicconi/Common1/Repositorios-Ing.Carlos-Cicconi/Trabajo_Final_MCD/data/raw/db_linkedin.db
+2026-10-13 23:38:12,608 [INFO] LinkedInScraper inicializado correctamente
+2026-10-13 23:38:12,608 [INFO]   ✅ Queries del CV inyectadas en linkedin
+2026-10-13 23:38:12,608 [INFO] ============================================================
+2026-10-13 23:38:12,608 [INFO] INICIO DEL SCRAPING - LinkedIn Jobs
+2026-10-13 23:38:12,608 [INFO] Búsquedas: 22 | Páginas por búsqueda: 5
+2026-10-13 23:38:12,608 [INFO] ============================================================
+2026-10-13 23:38:12,608 [INFO] 
+🔍 Buscando: 'data-scientist' en 'Rosario, Santa Fe, Argentina'
+2026-10-13 23:38:12,608 [INFO]    Página 1/5 → https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=data-scientist&location=Rosario%2C%20Santa%20Fe%2C%20Argentina&start=0&f_WT=2
+2026-10-13 23:38:16,057 [WARNING] Rate limit (429). Esperando 60s antes de reintentar...
+2026-10-13 23:39:21,491 [INFO]    → 10 ofertas nuevas encontradas
+2026-10-13 23:39:37,856 [WARNING] Rate limit (429). Esperando 60s antes de reintentar...
+2026-10-13 23:40:42,992 [WARNING] Rate limit (429). Esperando 120s antes de reintentar...
+2026-10-13 23:42:46,077 [WARNING] Rate limit (429). Esperando 180s antes de reintentar...

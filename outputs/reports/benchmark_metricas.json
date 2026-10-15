@@ -1,48 +1,48 @@
 {
-  "fecha_evaluacion": "2026-09-24T23:54:45.692040",
-  "n_documentos": 2497,
-  "umbral_relevancia": 0.6158,
-  "n_relevantes": 625,
+  "fecha_evaluacion": "2026-10-14T16:15:38.277891",
+  "n_documentos": 3423,
+  "umbral_relevancia": 0.6291,
+  "n_relevantes": 856,
   "sistemas": {
     "B0 — Keyword Match": {
-      "P@5": 0.4,
+      "P@5": 1.0,
       "HR@5": 1.0,
-      "nDCG@5": 0.2773,
-      "P@10": 0.6,
+      "nDCG@5": 1.0,
+      "P@10": 0.7,
       "HR@10": 1.0,
-      "nDCG@10": 0.4616,
-      "P@20": 0.6,
+      "nDCG@10": 0.7859,
+      "P@20": 0.65,
       "HR@20": 1.0,
-      "nDCG@20": 0.5043,
-      "P@50": 0.38,
+      "nDCG@20": 0.726,
+      "P@50": 0.54,
       "HR@50": 1.0,
-      "nDCG@50": 0.3825,
-      "nDCG_g@5": 0.6386,
-      "nDCG_g@10": 0.6629,
-      "nDCG_g@20": 0.6699,
-      "nDCG_g@50": 0.558,
-      "MRR": 0.25,
-      "Tiempo_ms": 305.1
+      "nDCG@50": 0.6121,
+      "nDCG_g@5": 1.0,
+      "nDCG_g@10": 0.8538,
+      "nDCG_g@20": 0.821,
+      "nDCG_g@50": 0.7598,
+      "MRR": 1.0,
+      "Tiempo_ms": 350.2
     },
     "B1 — Jaccard BoW": {
-      "P@5": 0.8,
+      "P@5": 1.0,
       "HR@5": 1.0,
-      "nDCG@5": 0.8688,
+      "nDCG@5": 1.0,
       "P@10": 0.8,
       "HR@10": 1.0,
-      "nDCG@10": 0.8454,
-      "P@20": 0.9,
+      "nDCG@10": 0.8482,
+      "P@20": 0.8,
       "HR@20": 1.0,
-      "nDCG@20": 0.9002,
+      "nDCG@20": 0.8261,
       "P@50": 0.84,
       "HR@50": 1.0,
-      "nDCG@50": 0.8596,
-      "nDCG_g@5": 0.9344,
-      "nDCG_g@10": 0.9227,
-      "nDCG_g@20": 0.9501,
-      "nDCG_g@50": 0.9158,
+      "nDCG@50": 0.8466,
+      "nDCG_g@5": 1.0,
+      "nDCG_g@10": 0.9241,
+      "nDCG_g@20": 0.913,
+      "nDCG_g@50": 0.9233,
       "MRR": 1.0,
-      "Tiempo_ms": 566.2
+      "Tiempo_ms": 643.5
     },
     "B2 — TF-IDF": {
       "P@5": 1.0,
@@ -51,16 +51,16 @@
       "P@10": 1.0,
       "HR@10": 1.0,
       "nDCG@10": 1.0,
-      "P@20": 1.0,
+      "P@20": 0.95,
       "HR@20": 1.0,
-      "nDCG@20": 1.0,
-      "P@50": 0.9,
+      "nDCG@20": 0.9627,
+      "P@50": 0.84,
       "HR@50": 1.0,
-      "nDCG@50": 0.9231,
+      "nDCG@50": 0.878,
       "nDCG_g@5": 1.0,
       "nDCG_g@10": 1.0,
-      "nDCG_g@20": 1.0,
-      "nDCG_g@50": 0.9616,
+      "nDCG_g@20": 0.9813,
+      "nDCG_g@50": 0.939,
       "MRR": 1.0,
       "Tiempo_ms": 0.0
     },
@@ -107,30 +107,30 @@
   },
   "mejora_relativa": {
     "B0 — Keyword Match": {
-      "P@5": 150.0,
-      "P@10": 66.7,
-      "P@20": 66.7,
-      "nDCG@5": 260.6,
-      "nDCG@10": 116.6,
-      "nDCG@20": 98.3,
-      "MRR": 300.0
+      "P@5": 0.0,
+      "P@10": 42.9,
+      "P@20": 53.8,
+      "nDCG@5": 0.0,
+      "nDCG@10": 27.2,
+      "nDCG@20": 37.7,
+      "MRR": 0.0
     },
     "B1 — Jaccard BoW": {
-      "P@5": 25.0,
+      "P@5": 0.0,
       "P@10": 25.0,
-      "P@20": 11.1,
-      "nDCG@5": 15.1,
-      "nDCG@10": 18.3,
-      "nDCG@20": 11.1,
+      "P@20": 25.0,
+      "nDCG@5": 0.0,
+      "nDCG@10": 17.9,
+      "nDCG@20": 21.1,
       "MRR": 0.0
     },
     "B2 — TF-IDF": {
       "P@5": 0.0,
       "P@10": 0.0,
-      "P@20": 0.0,
+      "P@20": 5.3,
       "nDCG@5": 0.0,
       "nDCG@10": 0.0,
-      "nDCG@20": 0.0,
+      "nDCG@20": 3.9,
       "MRR": 0.0
     },
     "B3 — SBERT puro": {
@@ -144,95 +144,100 @@
     }
   },
   "overlap_top10_tfidf_sbert": {
-    "global_pct": 10.0,
-    "global_jaccard": 0.0526,
-    "promedio_por_keyword_pct": 29.5,
+    "global_pct": 0.0,
+    "global_jaccard": 0.0,
+    "promedio_por_keyword_pct": 26.4,
     "por_keyword": {
       "Machine Learning": 70.0,
       "Full Stack": 60.0,
       "Machine Learning Engineer": 60.0,
       "Ingeniero de Datos": 50.0,
-      "BI / Analytics": 50.0,
       "Software Engineer": 50.0,
-      "Finanzas / CAPEX": 40.0,
+      "BI / Analytics": 40.0,
       "Desarrollador Backend": 40.0,
-      "Supply Chain": 40.0,
-      "Data Engineer": 30.0,
-      "Backend": 30.0,
-      "Continuous Improvement": 30.0,
       "Data Analyst": 30.0,
+      "Data Engineer": 30.0,
+      "Backend": 20.0,
+      "Supply Chain": 20.0,
       "Python Developer": 20.0,
-      "Gerente de Operaciones": 20.0,
+      "Continuous Improvement": 20.0,
+      "Ingeniero Industrial": 20.0,
+      "Finanzas / CAPEX": 10.0,
       "Control de Gestión": 10.0,
-      "NLP Engineer": 10.0,
       "Desarrollador Full Stack": 10.0,
+      "Gerente de Operaciones": 10.0,
+      "NLP Engineer": 10.0,
       "Compras / Procurement": 0.0,
-      "Data Scientist": 0.0,
       "Excel / VBA": 0.0,
-      "Ingeniero Industrial": 0.0
+      "Data Scientist": 0.0
     }
   },
   "p10_global_vs_por_keyword": {
     "B0 — Keyword Match": {
-      "P10_global": 0.6,
-      "P10_macro_kw": 0.1864,
-      "delta_P10": -0.4136,
-      "nDCG10_global": 0.4616,
-      "nDCG10_macro_kw": 0.1909
+      "P10_global": 0.7,
+      "P10_macro_kw": 0.2273,
+      "delta_P10": -0.4727,
+      "nDCG10_global": 0.7859,
+      "nDCG10_macro_kw": 0.2164
     },
     "B1 — Jaccard BoW": {
       "P10_global": 0.8,
-      "P10_macro_kw": 0.5045,
-      "delta_P10": -0.2955,
-      "nDCG10_global": 0.8454,
-      "nDCG10_macro_kw": 0.5262
+      "P10_macro_kw": 0.45,
+      "delta_P10": -0.35,
+      "nDCG10_global": 0.8482,
+      "nDCG10_macro_kw": 0.4674
     },
     "B2 — TF-IDF": {
       "P10_global": 1.0,
-      "P10_macro_kw": 0.4909,
-      "delta_P10": -0.5091,
+      "P10_macro_kw": 0.4318,
+      "delta_P10": -0.5682,
       "nDCG10_global": 1.0,
-      "nDCG10_macro_kw": 0.5217
+      "nDCG10_macro_kw": 0.459
     },
     "B3 — SBERT puro": {
       "P10_global": 1.0,
-      "P10_macro_kw": 0.7591,
-      "delta_P10": -0.2409,
+      "P10_macro_kw": 0.7364,
+      "delta_P10": -0.2636,
       "nDCG10_global": 1.0,
       "nDCG10_macro_kw": 0.8636
     },
     "S  — SBERT Híbrido": {
       "P10_global": 1.0,
-      "P10_macro_kw": 0.7409,
-      "delta_P10": -0.2591,
+      "P10_macro_kw": 0.7045,
+      "delta_P10": -0.2955,
       "nDCG10_global": 1.0,
-      "nDCG10_macro_kw": 0.8416
+      "nDCG10_macro_kw": 0.8321
     }
   },
   "representacion_fuente_topk": {
     "top_20": {
       "linkedin": {
-        "pct_corpus": 47.5,
+        "pct_corpus": 47.4,
         "pct_topk": 5.0,
         "indice_representacion": 0.11
       },
       "kitempleo": {
-        "pct_corpus": 20.1,
+        "pct_corpus": 22.3,
         "pct_topk": 95.0,
-        "indice_representacion": 4.72
+        "indice_representacion": 4.25
       },
       "getonboard": {
-        "pct_corpus": 19.3,
+        "pct_corpus": 15.9,
         "pct_topk": 0.0,
         "indice_representacion": 0.0
       },
       "bumeran": {
-        "pct_corpus": 5.9,
+        "pct_corpus": 5.6,
         "pct_topk": 0.0,
         "indice_representacion": 0.0
       },
       "jobrapido": {
-        "pct_corpus": 4.8,
+        "pct_corpus": 3.5,
+        "pct_topk": 0.0,
+        "indice_representacion": 0.0
+      },
+      "randstad": {
+        "pct_corpus": 3.1,
         "pct_topk": 0.0,
         "indice_representacion": 0.0
       },
@@ -242,11 +247,6 @@
         "indice_representacion": 0.0
       },
       "adecco": {
-        "pct_corpus": 0.2,
-        "pct_topk": 0.0,
-        "indice_representacion": 0.0
-      },
-      "randstad": {
         "pct_corpus": 0.1,
         "pct_topk": 0.0,
         "indice_representacion": 0.0
@@ -254,41 +254,41 @@
     },
     "top_50": {
       "linkedin": {
-        "pct_corpus": 47.5,
-        "pct_topk": 8.0,
-        "indice_representacion": 0.17
+        "pct_corpus": 47.4,
+        "pct_topk": 4.0,
+        "indice_representacion": 0.08
       },
       "kitempleo": {
-        "pct_corpus": 20.1,
-        "pct_topk": 82.0,
-        "indice_representacion": 4.07
+        "pct_corpus": 22.3,
+        "pct_topk": 86.0,
+        "indice_representacion": 3.85
       },
       "getonboard": {
-        "pct_corpus": 19.3,
-        "pct_topk": 2.0,
-        "indice_representacion": 0.1
+        "pct_corpus": 15.9,
+        "pct_topk": 4.0,
+        "indice_representacion": 0.25
       },
       "bumeran": {
-        "pct_corpus": 5.9,
-        "pct_topk": 6.0,
-        "indice_representacion": 1.02
+        "pct_corpus": 5.6,
+        "pct_topk": 4.0,
+        "indice_representacion": 0.72
       },
       "jobrapido": {
-        "pct_corpus": 4.8,
+        "pct_corpus": 3.5,
+        "pct_topk": 0.0,
+        "indice_representacion": 0.0
+      },
+      "randstad": {
+        "pct_corpus": 3.1,
         "pct_topk": 0.0,
         "indice_representacion": 0.0
       },
       "zonajobs": {
         "pct_corpus": 2.0,
         "pct_topk": 2.0,
-        "indice_representacion": 1.0
+        "indice_representacion": 0.98
       },
       "adecco": {
-        "pct_corpus": 0.2,
-        "pct_topk": 0.0,
-        "indice_representacion": 0.0
-      },
-      "randstad": {
         "pct_corpus": 0.1,
         "pct_topk": 0.0,
         "indice_representacion": 0.0
