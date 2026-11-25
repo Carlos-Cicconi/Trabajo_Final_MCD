@@ -2,6 +2,14 @@
 
 Este archivo brinda guía a Claude Code (claude.ai/code) al trabajar con código de este repositorio.
 
+## Propósito de esta rama: `main`
+
+Esta es la rama de la **tesis**. La rama `operativa` se usa para buscar empleo en forma activa, scrapeando con mayor frecuencia.
+
+- Los datos y resultados de esta rama respaldan la tesis: no regenerarlos (scraping, `--purgar-consolidado`, re-ejecución de notebooks) salvo que sea un cambio buscado para la tesis. Las corridas de búsqueda laboral van en `operativa`.
+- **No mergear `operativa` en `main`.** Las correcciones de código hechas en `operativa` que sirvan a la tesis se traen con `git cherry-pick <hash>`, solo desde commits sin datos ni salidas.
+- Esta sección es propia de cada rama: no copiarla a `operativa`.
+
 ## Descripción general del proyecto
 
 Proyecto de tesis de maestría ("Sistema de Recomendación Laboral - Motor de Matching Inteligente", Maestría en Explotación de Datos, Universidad Austral — Carlos Cicconi). Es un pipeline de punta a punta que scrapea ofertas laborales de múltiples portales de empleo argentinos/LatAm, las limpia y vectoriza (TF-IDF y embeddings SBERT), las matchea contra el CV de un candidato, y presenta los resultados en un dashboard de Streamlit. El plan de trabajo está organizado en tareas numeradas (T2–T9) que mapean directamente a módulos de `src/` y notebooks.
