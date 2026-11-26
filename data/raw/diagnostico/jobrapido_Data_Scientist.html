@@ -54,12 +54,222 @@
                                                                                                                                   }, g[o]['t'] = 1 * new Date
                                                                                                                                 })(window, '_googCsa');
                                                                                                                               </script>
-                                  <script src="https://resources.jobrapido.com/static/js/prebid.bundle.680c3eb44b1d6e143e4f.js" async></script><script>var iid="13407767",
-                                    p=location.protocol,url=("https:"===p?p:"http:")+"//ap.lijit.com/www/sovrn_beacon_standalone/sovrn_standalone_beacon.js?iid="+iid,scr=document.createElement("script");scr.id="sBeacon",scr.src=url,scr.async=!1;var s0=document.getElementsByTagName("script")[0];s0.parentNode.insertBefore(scr,s0);</script><script>var adUnits = [{"bids":[{"bidder":"appnexus","params":{"placementId":"12484625"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846706"}},{"bidder":"ix","params":{"size":[300,250],"siteId":"350496"}},{"bidder":"criteo","params":{"zoneId":"1082855"}}],"code":"b_gtp_middle","mediaTypes":{"banner":{"sizes":[[300,250]]}},"sizes":[[300,250]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484628"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[728,90],"siteId":"350497"}},{"bidder":"criteo","params":{"zoneId":"1114753"}}],"code":"b_gtp_leaderboard","mediaTypes":{"banner":{"sizes":[[728,90]]}},"sizes":[[728,90]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484631"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846706"}},{"bidder":"ix","params":{"size":[160,600],"siteId":"350505"}},{"bidder":"criteo","params":{"zoneId":"1082854"}}],"code":"banner-aside-left","mediaTypes":{"banner":{"sizes":[[160,600]]}},"sizes":[[160,600]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484633"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[300,250],"siteId":"350494"}},{"bidder":"criteo","params":{"zoneId":"1091230"}}],"code":"b_gtp_top","mediaTypes":{"banner":{"sizes":[[300,250]]}},"sizes":[[300,250]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484624"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[300,600],"siteId":"350494"}},{"bidder":"criteo","params":{"zoneId":"1398668"}}],"code":"b_gtp_top","mediaTypes":{"banner":{"sizes":[[300,600]]}},"sizes":[[300,600]]}];
-                                    var pbjs = pbjs || { que: [] };
+                                  <script src="https://resources.jobrapido.com/static/js/prebid.bundle.b7de232af73031e3658b.js" async></script><script>var iid="13407767",
+                                    p=location.protocol,url=("https:"===p?p:"http:")+"//ap.lijit.com/www/sovrn_beacon_standalone/sovrn_standalone_beacon.js?iid="+iid,scr=document.createElement("script");scr.id="sBeacon",scr.src=url,scr.async=!1;var s0=document.getElementsByTagName("script")[0];s0.parentNode.insertBefore(scr,s0);</script><script>var pbjs = pbjs || { que: [] };
                                     var customConfigObject = {
                                      'buckets' : [{"increment":0.01,"max":5,"min":0,"precision":2},{"increment":0.05,"max":20,"min":5,"precision":2},{"increment":0.1,"max":40,"min":20,"precision":2}]
                                     };
+                                  
+                                    // Ad units coming from the datastore can contain the same code more than once
+                                    // (e.g. 'b_gtp_top'): Prebid would then run two auctions for the same slot.
+                                    // Merge duplicated codes into a single ad unit, keeping every distinct bid.
+                                    function jrPbDedupeAdUnits(units) {
+                                      var byCode = {};
+                                      var result = [];
+                                  
+                                      (units || []).forEach(function(unit) {
+                                        if (!unit || !unit.code) {
+                                          return;
+                                        }
+                                  
+                                        var existing = byCode[unit.code];
+                                        if (!existing) {
+                                          existing = byCode[unit.code] = Object.assign({}, unit, { bids: (unit.bids || []).slice() });
+                                          result.push(existing);
+                                          return;
+                                        }
+                                  
+                                        (unit.bids || []).forEach(function(bid) {
+                                          var key = JSON.stringify(bid);
+                                          var isDuplicated = existing.bids.some(function(b) { return JSON.stringify(b) === key; });
+                                          if (!isDuplicated) {
+                                            existing.bids.push(bid);
+                                          }
+                                        });
+                                      });
+                                  
+                                      return result;
+                                    }
+                                  
+                                    var adUnits = jrPbDedupeAdUnits([{"bids":[{"bidder":"appnexus","params":{"placementId":"12484625"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846706"}},{"bidder":"ix","params":{"size":[300,250],"siteId":"350496"}},{"bidder":"criteo","params":{"zoneId":"1082855"}}],"code":"b_gtp_middle","mediaTypes":{"banner":{"sizes":[[300,250]]}},"sizes":[[300,250]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484628"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[728,90],"siteId":"350497"}},{"bidder":"criteo","params":{"zoneId":"1114753"}}],"code":"b_gtp_leaderboard","mediaTypes":{"banner":{"sizes":[[728,90]]}},"sizes":[[728,90]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484631"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846706"}},{"bidder":"ix","params":{"size":[160,600],"siteId":"350505"}},{"bidder":"criteo","params":{"zoneId":"1082854"}}],"code":"banner-aside-left","mediaTypes":{"banner":{"sizes":[[160,600]]}},"sizes":[[160,600]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484633"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[300,250],"siteId":"350494"}},{"bidder":"criteo","params":{"zoneId":"1091230"}}],"code":"b_gtp_top","mediaTypes":{"banner":{"sizes":[[300,250]]}},"sizes":[[300,250]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484624"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[300,600],"siteId":"350494"}},{"bidder":"criteo","params":{"zoneId":"1398668"}}],"code":"b_gtp_top","mediaTypes":{"banner":{"sizes":[[300,600]]}},"sizes":[[300,600]]}]);
+                                  
+                                    // SHA-256 (hex) of the logged user's email. Rendered server side so it doesn't
+                                    // depend on 'jrConfigGlobal', which is defined after this script: when prebid.js
+                                    // is cached/preloaded the queue below can run before it ("Error processing command").
+                                    var jrPbEmailHash = '' ||
+                                      (window.jrConfigGlobal && window.jrConfigGlobal.user && window.jrConfigGlobal.user.sha256EncodedEmail) || '';
+                                  
+                                    // UID2 expects the email hash as base64-encoded SHA-256
+                                    // @see https://unifiedid.com/docs/getting-started/gs-normalization-encoding
+                                    function jrPbHexToBase64(hex) {
+                                      if (!/^[0-9a-f]{64}$/i.test(hex)) {
+                                        return null;
+                                      }
+                                      var bin = '';
+                                      for (var i = 0; i < hex.length; i += 2) {
+                                        bin += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+                                      }
+                                      return window.btoa(bin);
+                                    }
+                                  
+                                    // On GDPR pages without TCF CMP the consent is stored in the 'JEC' cookie (same
+                                    // logic used in dfp-no-cmp.hbs): no consent -> no user IDs are generated/stored.
+                                    var jrPbUserIdsAllowed = true;
+                                  
+                                    // Prebid.js User ID sub-modules
+                                    // @see https://docs.prebid.org/dev-docs/modules/userId.html
+                                    //
+                                    // SharedID is always on (no vendor agreement needed). Every partner sub-module has
+                                    // its own switch below and is OFF by default: to enable a partner set 'enabled: true'
+                                    // and fill its credentials. A sub-module is added only when its switch is on AND all
+                                    // its required credentials are set: a missing/partial configuration only logs a
+                                    // warning and never breaks the auction.
+                                    // NOTE: static configuration handled only within website-static-layout (temporary,
+                                    // until the vendor agreements are signed and the values can come from the backend).
+                                    var jrPbUserIdPartners = {
+                                      id5:       { enabled: false, partnerId: null },
+                                      liveRamp:  { enabled: false, pid: '' },
+                                      lotame:    { enabled: false, clientId: '' },
+                                      uid2:      { enabled: false, subscriptionId: '', serverPublicKey: '' },
+                                      unifiedId: { enabled: false, partner: '' }
+                                    };
+                                  
+                                    // How every partner switch maps to its Prebid sub-module configuration
+                                    var jrPbUserIdModules = {
+                                      // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/id5.html
+                                      id5: {
+                                        required: ['partnerId'],
+                                        build: function(cfg) {
+                                          return {
+                                            name: 'id5Id',
+                                            params: {
+                                              partner: Number(cfg.partnerId)
+                                            },
+                                            storage: {
+                                              type: 'html5',
+                                              name: 'id5id',
+                                              expires: 90,
+                                              refreshInSeconds: 7200
+                                            }
+                                          };
+                                        }
+                                      },
+                                  
+                                      // LiveRamp RampID (ATS)
+                                      // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/ramp.html
+                                      liveRamp: {
+                                        required: ['pid'],
+                                        build: function(cfg) {
+                                          return {
+                                            name: 'identityLink',
+                                            params: {
+                                              pid: String(cfg.pid),
+                                              notUse3P: false
+                                            },
+                                            storage: {
+                                              type: 'html5',
+                                              name: 'idl_env',
+                                              expires: 15,
+                                              refreshInSeconds: 1800
+                                            }
+                                          };
+                                        }
+                                      },
+                                  
+                                      // Lotame Panorama ID
+                                      // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/lotame.html
+                                      lotame: {
+                                        required: ['clientId'],
+                                        build: function(cfg) {
+                                          return {
+                                            name: 'lotamePanoramaId',
+                                            params: {
+                                              clientId: String(cfg.clientId)
+                                            }
+                                          };
+                                        }
+                                      },
+                                  
+                                      // UID2 client-side token generation: logged users only (needs the email hash)
+                                      // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/unified2.html
+                                      uid2: {
+                                        required: ['subscriptionId', 'serverPublicKey'],
+                                        build: function(cfg) {
+                                          var emailHash = jrPbHexToBase64(jrPbEmailHash);
+                                          if (!emailHash) {
+                                            return null;
+                                          }
+                                          return {
+                                            name: 'uid2',
+                                            params: {
+                                              uid2ApiBase: 'https://prod.uidapi.com',
+                                              subscriptionId: String(cfg.subscriptionId),
+                                              serverPublicKey: String(cfg.serverPublicKey),
+                                              emailHash: emailHash
+                                            }
+                                          };
+                                        }
+                                      },
+                                  
+                                      // The Trade Desk Unified ID 1.0
+                                      // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/unified.html
+                                      unifiedId: {
+                                        required: ['partner'],
+                                        build: function(cfg) {
+                                          return {
+                                            name: 'unifiedId',
+                                            params: {
+                                              partner: String(cfg.partner)
+                                            },
+                                            storage: {
+                                              type: 'cookie',
+                                              name: 'pbjs-unifiedid',
+                                              expires: 60
+                                            }
+                                          };
+                                        }
+                                      }
+                                    };
+                                  
+                                    function jrPbGetUserIds() {
+                                      if (!jrPbUserIdsAllowed) {
+                                        return [];
+                                      }
+                                  
+                                      var userIds = [{
+                                        // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/sharedid.html
+                                        name: 'sharedId',
+                                        storage: {
+                                          type: 'cookie',
+                                          name: '_sharedid',
+                                          expires: 365
+                                        }
+                                      }];
+                                  
+                                      Object.keys(jrPbUserIdModules).forEach(function(partner) {
+                                        var cfg = jrPbUserIdPartners[partner];
+                                        if (!cfg || cfg.enabled !== true) {
+                                          return;
+                                        }
+                                  
+                                        var missing = jrPbUserIdModules[partner].required.filter(function(key) {
+                                          return cfg[key] === undefined || cfg[key] === null || cfg[key] === '';
+                                        });
+                                        if (missing.length > 0) {
+                                          if (window.console && console.warn) {
+                                            console.warn('[JR Prebid] User ID partner "' + partner + '" is enabled but its credentials are missing (' + missing.join(', ') + '): skipped.');
+                                          }
+                                          return;
+                                        }
+                                  
+                                        var userIdModule = jrPbUserIdModules[partner].build(cfg);
+                                        if (userIdModule) {
+                                          userIds.push(userIdModule);
+                                        }
+                                      });
+                                  
+                                      return userIds;
+                                    }
                                   
                                     pbjs.que.push(function() {
                                   
@@ -71,6 +281,20 @@
                                         }
                                       }
                                   
+                                      var consentManagement = {
+                                        // @see https://docs.prebid.org/dev-docs/modules/consentManagementUsp.html
+                                        usp: {
+                                          cmpApi: 'static',
+                                          timeout: 50,
+                                          consentData: {
+                                            getUSPData: {
+                                              uspString: '1---'
+                                            }
+                                          }
+                                        }
+                                      };
+                                  
+                                  
                                       pbjs.setConfig({
                                         bidderTimeout: 1000,
                                         debug: false,
@@ -80,7 +304,7 @@
 
                                             conversionRateFile: 'https://currency.prebid.org/latest.json'
                                         },
-                                        
+                                  
                                         // General permissions settings: Device access
                                         // @see https://docs.prebid.org/dev-docs/publisher-api-reference/setConfig.html#device-access
                                         deviceAccess: true,
@@ -97,49 +321,72 @@
                                           },
                                           transmitTid: {
                                             default: true
+                                          },
+                                          enrichEids: {
+                                            default: true
+                                          },
+                                          transmitEids: {
+                                            default: true
                                           }
                                         },
-                                        
-                                        consentManagement: {
-                                          // @see https://docs.prebid.org/dev-docs/modules/consentManagementUsp.html
-                                          usp: {
-                                            cmpApi: 'static',
-                                            timeout: 50,
-                                            consentData: {
-                                              getUSPData: {
-                                                uspString: '1---'
-                                              }
-                                            }
-                                          }
                                   
+                                        // Prebid.js User ID Module Configuration
+                                        // @see https://docs.prebid.org/dev-docs/modules/userId.html
+                                        userSync: {
+                                          syncDelay: 3000,
+                                          userIds: jrPbGetUserIds(),
+                                          // Secure signals shared with GAM (only for the providers set as
+                                          // "Prebid UserID Module" in GAM > Admin > Secure signals)
+                                          // @see https://docs.prebid.org/dev-docs/modules/userId.html#esp-configurations
+                                          encryptedSignalSources: {
+                                            sources: [
+                                              {
+                                                source: ['sharedid.org', 'pubcid.org', 'criteo.com', 'id5-sync.com', 'liveramp.com', 'crwdcntrl.net', 'adserver.org', 'uidapi.com'],
+                                                encrypt: false
+                                              }
+                                            ],
+                                            registerDelay: 3000
+                                          }
+                                        },
+                                  
+                                        consentManagement: consentManagement
+                                      });
+                                  
+                                      // Register Secure Signal sources for Google Ad Manager (ESP)
+                                      window.googletag = window.googletag || { cmd: [] };
+                                      googletag.cmd.push(function() {
+                                        if (typeof pbjs.registerSignalSources === 'function') {
+                                          pbjs.registerSignalSources();
                                         }
                                       });
                                   
-                                        pbjs.setBidderConfig({
-                                          bidders: ['criteo'],
-                                          config: {
-                                              ortb2: {
-                                                  user: {
-                                                      ext: {
-                                                          data: {
-                                                              eids: [{
-                                                                  source: "domain_here",
-                                                                  uids: [
-                                                                      {
-                                                                          id: window.jrConfigGlobal.user.sha256EncodedEmail,
-                                                                          atype: 3,
-                                                                          ext: {
-                                                                              stype: "hemsha256"
-                                                                          }
-                                                                      }
-                                                                  ]
-                                                              }]
-                                                          }
-                                                      }
-                                                  }
-                                              }
-                                          }
-                                        }, true);
+                                        if (jrPbEmailHash) {
+                                          pbjs.setBidderConfig({
+                                            bidders: ['criteo'],
+                                            config: {
+                                                ortb2: {
+                                                    user: {
+                                                        ext: {
+                                                            data: {
+                                                                eids: [{
+                                                                    source: "domain_here",
+                                                                    uids: [
+                                                                        {
+                                                                            id: jrPbEmailHash,
+                                                                            atype: 3,
+                                                                            ext: {
+                                                                                stype: "hemsha256"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }]
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                          }, true);
+                                        }
                                     });</script>    <script type="text/javascript" src="/api/siteconfig"></script>
 <script>
   if(!jrConfigGlobal) {
@@ -161,12 +408,12 @@
     isSearch: true,
     isJobPreviewPage: false,
     isErrorPage: false,
-    uuid: 'arF001a13b06881d4f63'
+    uuid: 'arF001a216a33c6249b0'
   };
   jrConfigGlobal.visit = {
     requestComingFromAdWords: false,
     sessionComingFromPaidSource: false,
-    uuid: 'arF001a13b0060af4ace',
+    uuid: 'arF001a2169cd8653f35',
     isOneTapConfirmationFlow: false,
     requestComingFromWelcomeEmailAddPassword: false,
     requestComingFromWelcomeEmailIncreaseSearch: false
@@ -191,11 +438,11 @@
     },
     radius: {"unit":"km","autoexpanded":"false","value":""},
     page: {
-      number: 4,
+      number: 5,
       numberOfItems: 18
     },
     inlineProposal: {"advertTypeWithInlineProposal":"organic","deviceType":"DESKTOP","forSponsoredAdvertEnabled":false,"fromPaidSourceEnabled":true,"impressionsRemainingCountEnabled":false,"maxImpressionsAllTime":2147483647,"maxImpressionsVisit":3,"metadataKey":{},"visitType":"BRAND"},
-    totalResults: 1169,
+    totalResults: 5710,
     sortBy: '',
     geoCoordinatesNotPresent: true,
     taxonomyCode: '',
@@ -206,7 +453,7 @@
     globalParameters: {"promoted":{"position":"listing"},"dfp":{"hideNative":"true"}},
     itemsEnabled: {"dfp":true,"promoted":true},
     structuredDataEnabled: false,
-    dfpItems: [{"adsenseAtfItem":false,"adsenseItem":false,"advertItem":false,"itemId":"dfp","itemProperties":{"adUnit":"textad_desktop_1","cssClass":"native","size":"[[1,1], \u0027fluid\u0027]","slotId":"partnership-result-top","type":"affiliate"},"promotedItem":false,"searchResult":{"actionType":"","advertId":"","advertPosition":0,"advertType":"","autoExpandRadiusDistance":null,"autoExpandRadiusLayout":null,"bodyHighlighted":"","budgetId":0,"company":"","companyForTitle":"","cpcInEur":0,"date":"","enumAdvertType":null,"fromSponsoredSearch":false,"index":-1,"isCpaEnabled":false,"isFromExpandedSearch":false,"isSponsored":false,"location":"","locations":null,"locationsLabel":null,"onMouseDown":"","openAdvertUrl":"","pageItemId":-799506012,"parameterMap":{"date":"","website":"","trackClickAd":"","showNewMarker":false,"fromSponsoredSearch":false,"sponsorAccount":"","budgetId":0,"isCpaEnabled":false,"salary":"","sponsorAccountBranch":"","title":"","openAdvertUrl":"","advertId":"","tags":{},"cpcInEur":0,"isFromExpandedSearch":false,"companyForTitle":"","company":"","location":"","onmousedown":"","tag":"","isSponsored":false},"salary":"","showNewMarker":false,"sponsorAccount":"","sponsorAccountBranch":"","tag":"","tags":{},"title":"","titleSlug":"","trackClickAd":"","website":"","websiteCategory":"UNQUALIFIED","websiteNoWWW":""},"serpPosition":4,"sponsoredOrOrganicItem":false},{"adsenseAtfItem":false,"adsenseItem":false,"advertItem":false,"itemId":"dfp","itemProperties":{"adUnit":"textad_desktop_2","cssClass":"native","size":"[[1,1], \u0027fluid\u0027]","slotId":"partnership-result-bottom","type":"affiliate"},"promotedItem":false,"searchResult":{"actionType":"","advertId":"","advertPosition":0,"advertType":"","autoExpandRadiusDistance":null,"autoExpandRadiusLayout":null,"bodyHighlighted":"","budgetId":0,"company":"","companyForTitle":"","cpcInEur":0,"date":"","enumAdvertType":null,"fromSponsoredSearch":false,"index":-1,"isCpaEnabled":false,"isFromExpandedSearch":false,"isSponsored":false,"location":"","locations":null,"locationsLabel":null,"onMouseDown":"","openAdvertUrl":"","pageItemId":716961477,"parameterMap":{"date":"","website":"","trackClickAd":"","showNewMarker":false,"fromSponsoredSearch":false,"sponsorAccount":"","budgetId":0,"isCpaEnabled":false,"salary":"","sponsorAccountBranch":"","title":"","openAdvertUrl":"","advertId":"","tags":{},"cpcInEur":0,"isFromExpandedSearch":false,"companyForTitle":"","company":"","location":"","onmousedown":"","tag":"","isSponsored":false},"salary":"","showNewMarker":false,"sponsorAccount":"","sponsorAccountBranch":"","tag":"","tags":{},"title":"","titleSlug":"","trackClickAd":"","website":"","websiteCategory":"UNQUALIFIED","websiteNoWWW":""},"serpPosition":11,"sponsoredOrOrganicItem":false}],
+    dfpItems: [{"adsenseAtfItem":false,"adsenseItem":false,"advertItem":false,"itemId":"dfp","itemProperties":{"adUnit":"textad_desktop_1","cssClass":"native","size":"[[1,1], \u0027fluid\u0027]","slotId":"partnership-result-top","type":"affiliate"},"promotedItem":false,"searchResult":{"actionType":"","advertId":"","advertPosition":0,"advertType":"","autoExpandRadiusDistance":null,"autoExpandRadiusLayout":null,"bodyHighlighted":"","budgetId":0,"company":"","companyForTitle":"","cpcInEur":0,"date":"","enumAdvertType":null,"fromSponsoredSearch":false,"index":-1,"isCpaEnabled":false,"isFromExpandedSearch":false,"isSponsored":false,"location":"","locations":null,"locationsLabel":null,"onMouseDown":"","openAdvertUrl":"","pageItemId":-1714672490,"parameterMap":{"date":"","website":"","trackClickAd":"","showNewMarker":false,"fromSponsoredSearch":false,"sponsorAccount":"","budgetId":0,"isCpaEnabled":false,"salary":"","sponsorAccountBranch":"","title":"","openAdvertUrl":"","advertId":"","tags":{},"cpcInEur":0,"isFromExpandedSearch":false,"companyForTitle":"","company":"","location":"","onmousedown":"","tag":"","isSponsored":false},"salary":"","showNewMarker":false,"sponsorAccount":"","sponsorAccountBranch":"","tag":"","tags":{},"title":"","titleSlug":"","trackClickAd":"","website":"","websiteCategory":"UNQUALIFIED","websiteNoWWW":""},"serpPosition":4,"sponsoredOrOrganicItem":false},{"adsenseAtfItem":false,"adsenseItem":false,"advertItem":false,"itemId":"dfp","itemProperties":{"adUnit":"textad_desktop_2","cssClass":"native","size":"[[1,1], \u0027fluid\u0027]","slotId":"partnership-result-bottom","type":"affiliate"},"promotedItem":false,"searchResult":{"actionType":"","advertId":"","advertPosition":0,"advertType":"","autoExpandRadiusDistance":null,"autoExpandRadiusLayout":null,"bodyHighlighted":"","budgetId":0,"company":"","companyForTitle":"","cpcInEur":0,"date":"","enumAdvertType":null,"fromSponsoredSearch":false,"index":-1,"isCpaEnabled":false,"isFromExpandedSearch":false,"isSponsored":false,"location":"","locations":null,"locationsLabel":null,"onMouseDown":"","openAdvertUrl":"","pageItemId":-970160184,"parameterMap":{"date":"","website":"","trackClickAd":"","showNewMarker":false,"fromSponsoredSearch":false,"sponsorAccount":"","budgetId":0,"isCpaEnabled":false,"salary":"","sponsorAccountBranch":"","title":"","openAdvertUrl":"","advertId":"","tags":{},"cpcInEur":0,"isFromExpandedSearch":false,"companyForTitle":"","company":"","location":"","onmousedown":"","tag":"","isSponsored":false},"salary":"","showNewMarker":false,"sponsorAccount":"","sponsorAccountBranch":"","tag":"","tags":{},"title":"","titleSlug":"","trackClickAd":"","website":"","websiteCategory":"UNQUALIFIED","websiteNoWWW":""},"serpPosition":11,"sponsoredOrOrganicItem":false}],
     anchorAdParameters: [],
     anchorEnabled: false
   };
@@ -216,11 +463,11 @@
       email: '',
       confirmed:false
   };
-  jrConfigGlobal.user = {"gclid":null,"hostJustCreated":false,"hostPostgresId":"185126929935","hostRegistered":false,"id":"185126929935","isJobSeeker":false,"isNotConfirmed":true,"mail":null,"md5EncodedEmail":null,"msclkid":null,"sha256EncodedEmail":null,"shortId":null,"subscribedEmail":null,"uuid":"185126929935"},
+  jrConfigGlobal.user = {"gclid":null,"hostJustCreated":false,"hostPostgresId":"185131694976","hostRegistered":false,"id":"185131694976","isJobSeeker":false,"isNotConfirmed":true,"mail":null,"md5EncodedEmail":null,"msclkid":null,"sha256EncodedEmail":null,"shortId":null,"subscribedEmail":null,"uuid":"185131694976"},
   jrConfigGlobal.jobletter = {
     jobseeker: {
       parentShardId: '',
-      parentUserId: '185126929935',
+      parentUserId: '185131694976',
         registrationConfirmed: false,
     }
   };
@@ -237,64 +484,64 @@
   };
   jrConfigGlobal.searchResults = {
       
-      '2187602626126807040': {
-        'location': 'Remoto'
+      '308563954995560448': {
+        'location': 'Rosario'
       }
       ,
-      '7798668298144448512': {
-        'location': 'Neuquén Capital'
+      '490414657014595584': {
+        'location': 'Rosario'
       }
       ,
-      '1800503030534111232': {
-        'location': 'Capital Federal'
+      '8581940799942426624': {
+        'location': 'Rosario'
       }
       ,
-      '9212279336772567040': {
-        'location': 'Capital Federal'
+      '2072978645231599616': {
+        'location': 'Rosario'
       }
       ,
-      '8185131104705970176': {
-        'location': 'Comisión De Fomento De Perú'
+      '8774933299962314752': {
+        'location': 'Rosario'
       }
       ,
-      '6265541032771846144': {
-        'location': 'Comisión De Fomento De Perú'
+      '7326482379982241792': {
+        'location': 'Rosario'
       }
       ,
-      '361252789495529472': {
-        'location': 'Capital Federal'
+      '5353707831100964864': {
+        'location': 'Rosario'
       }
       ,
-      '6941410967804706816': {
-        'location': 'Capital Federal'
+      '7847960335351808000': {
+        'location': 'Rosario'
       }
       ,
-      '5368446094055309312': {
-        'location': 'Argentina'
+      '5689969548078350336': {
+        'location': 'Rosario'
       }
       ,
-      '1867611760316383232': {
-        'location': 'Remoto'
+      '7319208595168428032': {
+        'location': 'Rosario'
       }
       ,
-      '3150241256861335552': {
-        'location': 'Remoto'
+      '1241881548374933504': {
+        'location': 'Rosario'
       }
       ,
-      '3045614224664428544': {
-        'location': 'Remoto'
+      '2945768776336932864': {
+        'location': 'Rosario'
       }
       ,
-      '6282566523651358720': {
-        'location': 'Capital Federal'
+      '1694608587847892992': {
+        'location': 'Rosario'
       }
       ,
-      '8100372983136124928': {
-        'location': 'Argentina'
+      '1478254111437619200': {
+        'location': 'Rosario'
       }
       ,
-      '1994215023475425280': {
-        'location': 'Neuquén Capital'
+      '3561180002932228096': {
+        'location': 'Rosario'
       }
   };
   jrConfigGlobal.myProfile = {
@@ -326,7 +573,7 @@
     {value: 30, label: '30 mi'},
     {value: 40, label: '40 mi'}];
   jrConfigGlobal.canShowSubscriptionPopup = true;
-  jrConfigGlobal.correlationId = 'e55c70f0-11b7-47e0-99a4-48e98c57050d';
+  jrConfigGlobal.correlationId = '242c0a2b-c1e4-4d19-a1d0-1a56611a1a83';
   jrConfigGlobal.showActivateProfileConfirmDialog = false;
   jrConfigGlobal.onboardingTooltipEnabled = false;
   jrConfigGlobal.gdprAccepted = false;
@@ -509,14 +756,14 @@
                                                         .setTargeting('what', gpt.config.what.replace(/&#x27;/g, "\u0060"))
                                                         .setTargeting('where', gpt.config.where.replace(/&#x27;/g, "\u0060"))
                                                         .setTargeting('language', 'es')
-                                                        .setTargeting('jobtomeFormattedUrl', '%2F%3Fl%3D%26k%3Ddata%20scientist%26t%3D1791988046528%26v%3D133339aca236d11bdcb7118c5516e412')
+                                                        .setTargeting('jobtomeFormattedUrl', '%2F%3Fl%3D%26k%3Ddata%20scientist%26t%3D1795676126637%26v%3D8d955ac3401a6e1a82a7d86104c89be9')
                                                         .setTargeting('zeroResults',  'false' )
                                                         .setTargeting('what_set', '1')
                                                         .setTargeting('where_set', '0')
                                                           .setTargeting('UserType', 'Anonymous')
                                                           .setTargeting('keyword', 'data scientist')
                                                         .setTargeting('pageItemId', slotParams.pageItemId)
-                                                        .setTargeting('jobseekerId', 185126929935 ? 185126929935 : '')
+                                                        .setTargeting('jobseekerId', 185131694976 ? 185131694976 : '')
                                                         .setTargeting('taxonomyCode', '')
                                                         .setTargeting('attributionToken', '')
                                                         .setTargeting('dyn_const_ar', 'br_other_no-test_no-t-what')
@@ -726,6 +973,9 @@
                                                                                                                                                                                                                                  });
                                                                                                                                                                                                                            
                                                                                                                                                                                                                                  pbjs.que.push(function() {
+                                                                                                                                                                                                                                     // Add ad units / request bids only once per page view
+                                                                                                                                                                                                                                     if (pbjs.jrAuctionRequested) return;
+                                                                                                                                                                                                                                     pbjs.jrAuctionRequested = true;
                                                                                                                                                                                                                                      pbjs.addAdUnits(adUnits);
                                                                                                                                                                                                                                      pbjs.requestBids({
                                                                                                                                                                                                                                          bidsBackHandler: sendAdserverRequest
@@ -796,7 +1046,7 @@ if (dfpParametersConfig.length > 0) {
                                                                                                                                                                                                                                          wrapperId: 'partnership-result-top',
                                                                                                                                                                                                                                          hasNotStaticSize: true,
                                                                                                                                                                                                                                          isSerpListing: true,
-                                                                                                                                                                                                                                         pageItemId: -799506012
+                                                                                                                                                                                                                                         pageItemId: -1714672490
                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                        });
@@ -806,7 +1056,7 @@ if (dfpParametersConfig.length > 0) {
                                                                                                                                                                                                                                          wrapperId: 'partnership-result-bottom',
                                                                                                                                                                                                                                          hasNotStaticSize: true,
                                                                                                                                                                                                                                          isSerpListing: true,
-                                                                                                                                                                                                                                         pageItemId: 716961477
+                                                                                                                                                                                                                                         pageItemId: -970160184
                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                        });
@@ -836,10 +1086,10 @@ if (dfpParametersConfig.length > 0) {
                                                                                                                                                                                                                              });
                                                                                                                                                                                                                            </script>
 
-  <meta name="keywords" content="Modelo,Management,Software,Product Engineering,Práctica,Technical Lead,Team Lead,Customer Solutions,Ciencia,Clinical">
-  <link rel="canonical" href="https://ar.jobrapido.com/Ofertas-de-trabajo-para-Data-Scientist?p=4">
-  <link rel="prev" href="https://ar.jobrapido.com/Ofertas-de-trabajo-para-Data-Scientist?p=3">
-  <link rel="next" href="https://ar.jobrapido.com/Ofertas-de-trabajo-para-Data-Scientist?p=5">
+  <meta name="keywords" content="Modelo,Management,Business Analyst,Analista,Servicio Clientes,Business Data Analyst,Analista Datos,Técnico Servicio,Comercial,Universitario">
+  <link rel="canonical" href="https://ar.jobrapido.com/Ofertas-de-trabajo-para-Data-Scientist?p=5">
+  <link rel="prev" href="https://ar.jobrapido.com/Ofertas-de-trabajo-para-Data-Scientist?p=4">
+  <link rel="next" href="https://ar.jobrapido.com/Ofertas-de-trabajo-para-Data-Scientist?p=6">
   <meta name="msvalidate.01" content="5A1F9FEE618B55BC81C3DFD414E9D7DB">
   <meta name="google-site-verification" content="ZsbB39cHnYXaX6XqLyviMfJiVbMWRSh0a0WbtpVk4sY">
 <link rel="preconnect" href="https://resources.jobrapido.com" crossorigin="anonymous">
@@ -870,7 +1120,7 @@ if (dfpParametersConfig.length > 0) {
 <![endif]-->
    
         <script>
-            dataLayer = [{"deviceType":"desktop","searchWhat":"data scientist","conversionOwner":"","visitSource":"","visitType":"brand","pageUUID":"arF001a13b06881d4f63","pageType":"results","vstUUID":"arF001a13b0060af4ace","trackingOrderId":0,"zeroResults":false,"zeroResultContext":false,"searchWhere":"","jsUUID":185126929935,"acquisitionSource":"","jsMD5":null}];
+            dataLayer = [{"deviceType":"desktop","searchWhat":"data scientist","conversionOwner":"","visitSource":"","visitType":"brand","pageUUID":"arF001a216a33c6249b0","pageType":"results","vstUUID":"arF001a2169cd8653f35","trackingOrderId":0,"zeroResults":false,"zeroResultContext":false,"searchWhere":"","jsUUID":185131694976,"acquisitionSource":"","jsMD5":null}];
         </script>
 
   <link rel="apple-touch-icon" sizes="57x57" href="//resources.jobrapido.com/static/img/favicon/apple-icon-57x57.png">
@@ -989,7 +1239,7 @@ if (dfpParametersConfig.length > 0) {
                                                                                                                                                                                                                'personalizedAds': true,
                                                                                                                                                                                                                'adLoadedCallback': googleCsaRequestDone,
                                                                                                                                                                                                                
-                                                                                                                                                                                                               'clicktrackUrl': 'https://ar.jobrapido.com/track/adsense/arF001a13b06881d4f63/' + jrConfigGlobal.search.page.number,
+                                                                                                                                                                                                               'clicktrackUrl': 'https://ar.jobrapido.com/track/adsense/arF001a216a33c6249b0/' + jrConfigGlobal.search.page.number,
                                                                                                                                                                                                                'longerHeadlines': true,
                                                                                                                                                                                                                'detailedAttribution': false,
                                                                                                                                                                                                                'plusOnes': false,
@@ -1057,7 +1307,7 @@ if (dfpParametersConfig.length > 0) {
 
   <div
     ng-class="{'overflow-hidden': $root.overflow, 'mobile-menu-opened': menuOpened}"
-    ng-controller="MaskController"  id="" 
+    ng-controller="MaskController" 
     class="body-wrapper js-body-wrapper">
 
 <input type="checkbox" id="push-menu-footer" class="push-menu push-menu-footer" ng-checked="$root.menuOpened" aria-label="Open or close the mobile menu" />
@@ -1146,9 +1396,9 @@ if (dfpParametersConfig.length > 0) {
                                                                                                 <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
                                                                                                     href="https://ar.jobrapido.com/?w=data scientist&l=gran buenos aires&shm=all">Gran Buenos Aires</a></li>
                                                                                                 <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
-                                                                                                    href="https://ar.jobrapido.com/?w=data scientist&l=capital federal&shm=all">Capital Federal</a></li>
-                                                                                                <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
                                                                                                     href="https://ar.jobrapido.com/?w=data scientist&l=santa fé&shm=all">Santa Fé</a></li>
+                                                                                                <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
+                                                                                                    href="https://ar.jobrapido.com/?w=data scientist&l=capital federal&shm=all">Capital Federal</a></li>
                                                                                             </ul>
                                                                                           </div>
                                                                                         </div>
@@ -1193,12 +1443,12 @@ if (dfpParametersConfig.length > 0) {
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="1" href="/Ofertas-de-trabajo-para-Data-Scientist-en-Departamento-Federal?shm=all" class="top-locations-link" data-google-interstitial=false>Capital Federal</a>
+          <a index="1" href="/Ofertas-de-trabajo-para-Data-Scientist-en-Santa-F%C3%A9?shm=all" class="top-locations-link" data-google-interstitial=false>Santa Fé</a>
           
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="2" href="/Ofertas-de-trabajo-para-Data-Scientist-en-Santa-F%C3%A9?shm=all" class="top-locations-link" data-google-interstitial=false>Santa Fé</a>
+          <a index="2" href="/Ofertas-de-trabajo-para-Data-Scientist-en-Departamento-Federal?shm=all" class="top-locations-link" data-google-interstitial=false>Capital Federal</a>
           
         </li>
         <li class="suggested-locations-item">
@@ -1208,32 +1458,32 @@ if (dfpParametersConfig.length > 0) {
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="4" href="/Ofertas-de-trabajo-para-Data-Scientist-en-C%C3%B3rdoba?shm=all" class="top-locations-link" data-google-interstitial=false>Córdoba</a>
+          <a index="4" href="/Ofertas-de-trabajo-para-Data-Scientist-en-Rosario?shm=all" class="top-locations-link" data-google-interstitial=false>Rosario</a>
           
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="5" href="/Ofertas-de-trabajo-para-Data-Scientist-en-La-Pampa?shm=all" class="top-locations-link" data-google-interstitial=false>La Pampa</a>
+          <a index="5" href="/Ofertas-de-trabajo-para-Data-Scientist-en-Mendoza?shm=all" class="top-locations-link" data-google-interstitial=false>Mendoza</a>
           
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="6" href="/Ofertas-de-trabajo-para-Data-Scientist-en-Rosario?shm=all" class="top-locations-link" data-google-interstitial=false>Rosario</a>
+          <a index="6" href="/Ofertas-de-trabajo-para-Data-Scientist-en-Tandil?shm=all" class="top-locations-link" data-google-interstitial=false>Tandil</a>
           
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="7" href="/Ofertas-de-trabajo-para-Data-Scientist-en-Rinc%C3%B3n-De-Los-Sauces?shm=all" class="top-locations-link" data-google-interstitial=false>Rincón De Los Sauces</a>
+          <a index="7" href="/Ofertas-de-trabajo-para-Data-Scientist-en-Gba-Sur?shm=all" class="top-locations-link" data-google-interstitial=false>Gba Sur</a>
           
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="8" href="/Ofertas-de-trabajo-para-Data-Scientist-en-Mendoza?shm=all" class="top-locations-link" data-google-interstitial=false>Mendoza</a>
+          <a index="8" href="/Ofertas-de-trabajo-para-Data-Scientist-en-Quilmes?shm=all" class="top-locations-link" data-google-interstitial=false>Quilmes</a>
           
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="9" href="/Ofertas-de-trabajo-para-Data-Scientist-en-Gba-Sur?shm=all" class="top-locations-link" data-google-interstitial=false>Gba Sur</a>
+          <a index="9" href="/Ofertas-de-trabajo-para-Data-Scientist-en-Rinc%C3%B3n-De-Los-Sauces?shm=all" class="top-locations-link" data-google-interstitial=false>Rincón De Los Sauces</a>
           
         </li>
     </ul>
@@ -1244,22 +1494,22 @@ if (dfpParametersConfig.length > 0) {
               class="top-locations-link" data-google-interstitial=false>Modelo</a></li>
           <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="1" href="/Ofertas-de-trabajo-para-Management?shm=all"
               class="top-locations-link" data-google-interstitial=false>Management</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="2" href="/Ofertas-de-trabajo-para-Software?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Software</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="3" href="/Ofertas-de-trabajo-para-Product-Engineering?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Product Engineering</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="4" href="/Ofertas-de-trabajo-para-Pr%C3%A1ctica?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Práctica</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="5" href="/Ofertas-de-trabajo-para-Technical-Lead?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Technical Lead</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="6" href="/Ofertas-de-trabajo-para-Team-Lead?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Team Lead</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="7" href="/Ofertas-de-trabajo-para-Customer-Solutions?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Customer Solutions</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="8" href="/Ofertas-de-trabajo-para-Ciencia?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Ciencia</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="9" href="/Ofertas-de-trabajo-para-Clinical?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Clinical</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="2" href="/Ofertas-de-trabajo-para-Business-Analyst?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Business Analyst</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="3" href="/Ofertas-de-trabajo-para-Analista?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Analista</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="4" href="/Ofertas-de-trabajo-para-Servicio-Clientes?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Servicio Clientes</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="5" href="/Ofertas-de-trabajo-para-Business-Data-Analyst?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Business Data Analyst</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="6" href="/Ofertas-de-trabajo-para-Analista-Datos?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Analista Datos</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="7" href="/Ofertas-de-trabajo-para-T%C3%A9cnico-Servicio?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Técnico Servicio</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="8" href="/Ofertas-de-trabajo-para-Comercial?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Comercial</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="9" href="/Ofertas-de-trabajo-para-Universitario?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Universitario</a></li>
       </ul>
 
 </div>
@@ -1301,42 +1551,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"2187602626126807040","advertPosition":0,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"IV.AI","companyForTitle":"IV.AI","cpcInEur":0,"date":"10 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Remoto","locations":["Remoto"],"locationsLabel":"Remoto","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/2187602626126807040/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a13b06881d4f63&page_item_id=-1970833068","pageItemId":-1970833068,"parameterMap":{"date":"10 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"NLP Data Scientist - Remote ML & Insights","openAdvertUrl":"https://open.app.jobrapido.com/ar/2187602626126807040/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a13b06881d4f63&page_item_id=-1970833068","advertId":"2187602626126807040","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"IV.AI","company":"IV.AI","location":"Remoto","locations":["Remoto"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"NLP Data Scientist - Remote ML & Insights","titleSlug":"nlp-data-scientist-remote-ml-insights","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='1' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"308563954995560448","advertPosition":0,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Muttdata","companyForTitle":"Muttdata","cpcInEur":0,"date":"11 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/308563954995560448/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.0&uuid=arF001a216a33c6249b0&page_item_id=167024692","pageItemId":167024692,"parameterMap":{"date":"11 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior AI Data Scientist - Remote Personalization & Production ML","openAdvertUrl":"https://open.app.jobrapido.com/ar/308563954995560448/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.0&uuid=arF001a216a33c6249b0&page_item_id=167024692","advertId":"308563954995560448","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Muttdata","company":"Muttdata","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior AI Data Scientist - Remote Personalization & Production ML","titleSlug":"senior-ai-data-scientist-remote-personalization-production-ml","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='1' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: NLP Data Scientist - Remote ML & Insights  - Remoto
+        Open job preview for: Senior AI Data Scientist - Remote Personalization & Production ML  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      NLP Data Scientist - Remote ML & Insights
+      Senior AI Data Scientist - Remote Personalization & Production ML
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Remoto
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          IV.AI
+          Muttdata
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(2187602626126807040)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(2187602626126807040) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(308563954995560448)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(308563954995560448) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(2187602626126807040)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(308563954995560448)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1346,12 +1596,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_2187602626126807040" tc="" ai="2187602626126807040"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/2187602626126807040/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a13b06881d4f63&page_item_id=-1970833068"   target="_blank"  
+    <a class="result-item__link" id="a_308563954995560448" tc="" ai="308563954995560448"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/308563954995560448/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.0&uuid=arF001a216a33c6249b0&page_item_id=167024692"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: NLP Data Scientist - Remote ML & Insights  - Remoto
+        Open job preview for: Senior AI Data Scientist - Remote Personalization & Production ML  - Rosario
       </span>
     </a>
   </div>
@@ -1360,42 +1610,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"7798668298144448512","advertPosition":1,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Accenture Plc","companyForTitle":"Accenture Plc","cpcInEur":0,"date":"09 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Neuqu\u00E9n Capital","locations":["Neuqu\u00E9n Capital"],"locationsLabel":"Neuqu\u00E9n Capital","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/7798668298144448512/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a13b06881d4f63&page_item_id=-852155240","pageItemId":-852155240,"parameterMap":{"date":"09 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Data Scientist Lead: AWS & Strategy (Remote)","openAdvertUrl":"https://open.app.jobrapido.com/ar/7798668298144448512/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a13b06881d4f63&page_item_id=-852155240","advertId":"7798668298144448512","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Accenture Plc","company":"Accenture Plc","location":"Neuqu\u00E9n Capital","locations":["Neuqu\u00E9n Capital"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Data Scientist Lead: AWS & Strategy (Remote)","titleSlug":"senior-data-scientist-lead-aws-strategy-remote","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='2' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"490414657014595584","advertPosition":1,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"GoFasti","companyForTitle":"GoFasti","cpcInEur":0,"date":"10 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/490414657014595584/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.1&uuid=arF001a216a33c6249b0&page_item_id=2008800252","pageItemId":2008800252,"parameterMap":{"date":"10 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Data Scientist Lead - Personalization ML for Trading Apps","openAdvertUrl":"https://open.app.jobrapido.com/ar/490414657014595584/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.1&uuid=arF001a216a33c6249b0&page_item_id=2008800252","advertId":"490414657014595584","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"GoFasti","company":"GoFasti","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Data Scientist Lead - Personalization ML for Trading Apps","titleSlug":"senior-data-scientist-lead-personalization-ml-for-trading-apps","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='2' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Senior Data Scientist Lead: AWS & Strategy (Remote)  - Neuquén Capital
+        Open job preview for: Senior Data Scientist Lead - Personalization ML for Trading Apps  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Senior Data Scientist Lead: AWS & Strategy (Remote)
+      Senior Data Scientist Lead - Personalization ML for Trading Apps
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Neuquén Capital
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Accenture Plc
+          GoFasti
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(7798668298144448512)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(7798668298144448512) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(490414657014595584)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(490414657014595584) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(7798668298144448512)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(490414657014595584)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1405,12 +1655,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_7798668298144448512" tc="" ai="7798668298144448512"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/7798668298144448512/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a13b06881d4f63&page_item_id=-852155240"   target="_blank"  
+    <a class="result-item__link" id="a_490414657014595584" tc="" ai="490414657014595584"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/490414657014595584/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.1&uuid=arF001a216a33c6249b0&page_item_id=2008800252"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Senior Data Scientist Lead: AWS & Strategy (Remote)  - Neuquén Capital
+        Open job preview for: Senior Data Scientist Lead - Personalization ML for Trading Apps  - Rosario
       </span>
     </a>
   </div>
@@ -1419,42 +1669,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1800503030534111232","advertPosition":2,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Worldwide Clinical Trials","companyForTitle":"Worldwide Clinical Trials","cpcInEur":0,"date":"13 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal","locations":["Capital Federal"],"locationsLabel":"Capital Federal","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1800503030534111232/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a13b06881d4f63&page_item_id=1434815057","pageItemId":1434815057,"parameterMap":{"date":"13 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Neuroscience Clinical Scientist: Data Insights & Strategy","openAdvertUrl":"https://open.app.jobrapido.com/ar/1800503030534111232/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a13b06881d4f63&page_item_id=1434815057","advertId":"1800503030534111232","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Worldwide Clinical Trials","company":"Worldwide Clinical Trials","location":"Capital Federal","locations":["Capital Federal"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Neuroscience Clinical Scientist: Data Insights & Strategy","titleSlug":"neuroscience-clinical-scientist-data-insights-strategy","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='3' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8581940799942426624","advertPosition":2,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Azumo","companyForTitle":"Azumo","cpcInEur":0,"date":"03 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8581940799942426624/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.2&uuid=arF001a216a33c6249b0&page_item_id=773351979","pageItemId":773351979,"parameterMap":{"date":"03 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Remote Data Scientist: Turn Business Questions into Models","openAdvertUrl":"https://open.app.jobrapido.com/ar/8581940799942426624/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.2&uuid=arF001a216a33c6249b0&page_item_id=773351979","advertId":"8581940799942426624","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Azumo","company":"Azumo","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Remote Data Scientist: Turn Business Questions into Models","titleSlug":"remote-data-scientist-turn-business-questions-into-models","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='3' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Neuroscience Clinical Scientist: Data Insights & Strategy  - Capital Federal
+        Open job preview for: Remote Data Scientist: Turn Business Questions into Models  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Neuroscience Clinical Scientist: Data Insights & Strategy
+      Remote Data Scientist: Turn Business Questions into Models
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Capital Federal
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Worldwide Clinical Trials
+          Azumo
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(1800503030534111232)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(1800503030534111232) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(8581940799942426624)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(8581940799942426624) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1800503030534111232)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(8581940799942426624)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1464,12 +1714,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_1800503030534111232" tc="" ai="1800503030534111232"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1800503030534111232/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a13b06881d4f63&page_item_id=1434815057"   target="_blank"  
+    <a class="result-item__link" id="a_8581940799942426624" tc="" ai="8581940799942426624"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8581940799942426624/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.2&uuid=arF001a216a33c6249b0&page_item_id=773351979"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Neuroscience Clinical Scientist: Data Insights & Strategy  - Capital Federal
+        Open job preview for: Remote Data Scientist: Turn Business Questions into Models  - Rosario
       </span>
     </a>
   </div>
@@ -1482,42 +1732,42 @@ if (dfpParametersConfig.length > 0) {
   
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"9212279336772567040","advertPosition":3,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"1300 ACCENTURE SRL Company","companyForTitle":"1300 ACCENTURE SRL Company","cpcInEur":0,"date":"05 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal","locations":["Capital Federal"],"locationsLabel":"Capital Federal","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/9212279336772567040/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a13b06881d4f63&page_item_id=-278832182","pageItemId":-278832182,"parameterMap":{"date":"05 oct","website":"www.whatjobs.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_whatjobs_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Business Data Scientist: Data & AI Strategy","openAdvertUrl":"https://open.app.jobrapido.com/ar/9212279336772567040/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a13b06881d4f63&page_item_id=-278832182","advertId":"9212279336772567040","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"1300 ACCENTURE SRL Company","company":"1300 ACCENTURE SRL Company","location":"Capital Federal","locations":["Capital Federal"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_whatjobs_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Business Data Scientist: Data & AI Strategy","titleSlug":"senior-business-data-scientist-data-ai-strategy","trackClickAd":null,"website":"www.whatjobs.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"whatjobs.com"}' data-position='5' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"2072978645231599616","advertPosition":3,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"1801 Haleon Argentina","companyForTitle":"1801 Haleon Argentina","cpcInEur":0,"date":"20 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/2072978645231599616/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.3&uuid=arF001a216a33c6249b0&page_item_id=1283461024","pageItemId":1283461024,"parameterMap":{"date":"20 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Remote Ml Data Scientist - Adtech & Roas Insights (Mendoza)","openAdvertUrl":"https://open.app.jobrapido.com/ar/2072978645231599616/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.3&uuid=arF001a216a33c6249b0&page_item_id=1283461024","advertId":"2072978645231599616","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"1801 Haleon Argentina","company":"1801 Haleon Argentina","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Remote Ml Data Scientist - Adtech & Roas Insights (Mendoza)","titleSlug":"remote-ml-data-scientist-adtech-roas-insights-mendoza","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='5' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Senior Business Data Scientist: Data & AI Strategy  - Capital Federal
+        Open job preview for: Remote Ml Data Scientist - Adtech & Roas Insights (Mendoza)  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Senior Business Data Scientist: Data & AI Strategy
+      Remote Ml Data Scientist - Adtech & Roas Insights (Mendoza)
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Capital Federal
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          1300 ACCENTURE SRL Company
+          1801 Haleon Argentina
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(9212279336772567040)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(9212279336772567040) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(2072978645231599616)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(2072978645231599616) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(9212279336772567040)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(2072978645231599616)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1527,12 +1777,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_9212279336772567040" tc="" ai="9212279336772567040"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/9212279336772567040/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a13b06881d4f63&page_item_id=-278832182"   target="_blank"  
+    <a class="result-item__link" id="a_2072978645231599616" tc="" ai="2072978645231599616"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/2072978645231599616/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.3&uuid=arF001a216a33c6249b0&page_item_id=1283461024"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Senior Business Data Scientist: Data & AI Strategy  - Capital Federal
+        Open job preview for: Remote Ml Data Scientist - Adtech & Roas Insights (Mendoza)  - Rosario
       </span>
     </a>
   </div>
@@ -1541,42 +1791,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8185131104705970176","advertPosition":4,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Coderio","companyForTitle":"Coderio","cpcInEur":0,"date":"02 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"locationsLabel":"Comisi\u00F3n De Fomento De Per\u00FA","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8185131104705970176/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a13b06881d4f63&page_item_id=-2039264491","pageItemId":-2039264491,"parameterMap":{"date":"02 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior AWS Data Scientist \u2014 Remote, High-Impact","openAdvertUrl":"https://open.app.jobrapido.com/ar/8185131104705970176/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a13b06881d4f63&page_item_id=-2039264491","advertId":"8185131104705970176","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Coderio","company":"Coderio","location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior AWS Data Scientist \u2014 Remote, High-Impact","titleSlug":"senior-aws-data-scientist-remote-high-impact","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='6' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8774933299962314752","advertPosition":4,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Muttdata","companyForTitle":"Muttdata","cpcInEur":0,"date":"24 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8774933299962314752/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.4&uuid=arF001a216a33c6249b0&page_item_id=-1682157685","pageItemId":-1682157685,"parameterMap":{"date":"24 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Ai Data Scientist \u2014 Remote, Agentic Ai & Routing","openAdvertUrl":"https://open.app.jobrapido.com/ar/8774933299962314752/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.4&uuid=arF001a216a33c6249b0&page_item_id=-1682157685","advertId":"8774933299962314752","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Muttdata","company":"Muttdata","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Ai Data Scientist \u2014 Remote, Agentic Ai & Routing","titleSlug":"senior-ai-data-scientist-remote-agentic-ai-routing","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='6' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Senior AWS Data Scientist — Remote, High-Impact  - Comisión De Fomento De Perú
+        Open job preview for: Senior Ai Data Scientist — Remote, Agentic Ai & Routing  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Senior AWS Data Scientist — Remote, High-Impact
+      Senior Ai Data Scientist — Remote, Agentic Ai & Routing
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Comisión De Fomento De Perú
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Coderio
+          Muttdata
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(8185131104705970176)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(8185131104705970176) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(8774933299962314752)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(8774933299962314752) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(8185131104705970176)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(8774933299962314752)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1586,12 +1836,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_8185131104705970176" tc="" ai="8185131104705970176"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8185131104705970176/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a13b06881d4f63&page_item_id=-2039264491"   target="_blank"  
+    <a class="result-item__link" id="a_8774933299962314752" tc="" ai="8774933299962314752"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8774933299962314752/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.4&uuid=arF001a216a33c6249b0&page_item_id=-1682157685"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Senior AWS Data Scientist — Remote, High-Impact  - Comisión De Fomento De Perú
+        Open job preview for: Senior Ai Data Scientist — Remote, Agentic Ai & Routing  - Rosario
       </span>
     </a>
   </div>
@@ -1600,42 +1850,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"6265541032771846144","advertPosition":5,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Redbee","companyForTitle":"Redbee","cpcInEur":0,"date":"01 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"locationsLabel":"Comisi\u00F3n De Fomento De Per\u00FA","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/6265541032771846144/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a13b06881d4f63&page_item_id=-1895039237","pageItemId":-1895039237,"parameterMap":{"date":"01 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Data Scientist for Banking Transformation (Contractor)","openAdvertUrl":"https://open.app.jobrapido.com/ar/6265541032771846144/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a13b06881d4f63&page_item_id=-1895039237","advertId":"6265541032771846144","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Redbee","company":"Redbee","location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Data Scientist for Banking Transformation (Contractor)","titleSlug":"data-scientist-for-banking-transformation-contractor","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='7' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"7326482379982241792","advertPosition":5,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"GoFasti","companyForTitle":"GoFasti","cpcInEur":0,"date":"17 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/7326482379982241792/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.5&uuid=arF001a216a33c6249b0&page_item_id=40849939","pageItemId":40849939,"parameterMap":{"date":"17 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Data Scientist Lead - Global Cdm & Client Delivery","openAdvertUrl":"https://open.app.jobrapido.com/ar/7326482379982241792/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.5&uuid=arF001a216a33c6249b0&page_item_id=40849939","advertId":"7326482379982241792","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"GoFasti","company":"GoFasti","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Data Scientist Lead - Global Cdm & Client Delivery","titleSlug":"senior-data-scientist-lead-global-cdm-client-delivery","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='7' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Data Scientist for Banking Transformation (Contractor)  - Comisión De Fomento De Perú
+        Open job preview for: Senior Data Scientist Lead - Global Cdm & Client Delivery  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Data Scientist for Banking Transformation (Contractor)
+      Senior Data Scientist Lead - Global Cdm & Client Delivery
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Comisión De Fomento De Perú
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Redbee
+          GoFasti
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(6265541032771846144)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(6265541032771846144) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(7326482379982241792)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(7326482379982241792) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(6265541032771846144)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(7326482379982241792)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1645,12 +1895,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_6265541032771846144" tc="" ai="6265541032771846144"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/6265541032771846144/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a13b06881d4f63&page_item_id=-1895039237"   target="_blank"  
+    <a class="result-item__link" id="a_7326482379982241792" tc="" ai="7326482379982241792"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/7326482379982241792/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.5&uuid=arF001a216a33c6249b0&page_item_id=40849939"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Data Scientist for Banking Transformation (Contractor)  - Comisión De Fomento De Perú
+        Open job preview for: Senior Data Scientist Lead - Global Cdm & Client Delivery  - Rosario
       </span>
     </a>
   </div>
@@ -1659,42 +1909,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"361252789495529472","advertPosition":6,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Coderio","companyForTitle":"Coderio","cpcInEur":0,"date":"08 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal","locations":["Capital Federal"],"locationsLabel":"Capital Federal","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/361252789495529472/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a13b06881d4f63&page_item_id=769062093","pageItemId":769062093,"parameterMap":{"date":"08 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Data Scientist \u2014 Travel Tech, Hybrid & Impact","openAdvertUrl":"https://open.app.jobrapido.com/ar/361252789495529472/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a13b06881d4f63&page_item_id=769062093","advertId":"361252789495529472","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Coderio","company":"Coderio","location":"Capital Federal","locations":["Capital Federal"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Data Scientist \u2014 Travel Tech, Hybrid & Impact","titleSlug":"senior-data-scientist-travel-tech-hybrid-impact","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='8' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"5353707831100964864","advertPosition":6,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Iv.Ai","companyForTitle":"Iv.Ai","cpcInEur":0,"date":"17 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/5353707831100964864/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.6&uuid=arF001a216a33c6249b0&page_item_id=-32489157","pageItemId":-32489157,"parameterMap":{"date":"17 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Data Scientist Lead (Remote) \u2013 Aws Ml & Insights","openAdvertUrl":"https://open.app.jobrapido.com/ar/5353707831100964864/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.6&uuid=arF001a216a33c6249b0&page_item_id=-32489157","advertId":"5353707831100964864","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Iv.Ai","company":"Iv.Ai","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Data Scientist Lead (Remote) \u2013 Aws Ml & Insights","titleSlug":"senior-data-scientist-lead-remote-aws-ml-insights","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='8' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Senior Data Scientist — Travel Tech, Hybrid & Impact  - Capital Federal
+        Open job preview for: Senior Data Scientist Lead (Remote) – Aws Ml & Insights  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Senior Data Scientist — Travel Tech, Hybrid & Impact
+      Senior Data Scientist Lead (Remote) – Aws Ml & Insights
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Capital Federal
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Coderio
+          Iv.Ai
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(361252789495529472)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(361252789495529472) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(5353707831100964864)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(5353707831100964864) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(361252789495529472)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(5353707831100964864)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1704,12 +1954,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_361252789495529472" tc="" ai="361252789495529472"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/361252789495529472/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a13b06881d4f63&page_item_id=769062093"   target="_blank"  
+    <a class="result-item__link" id="a_5353707831100964864" tc="" ai="5353707831100964864"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/5353707831100964864/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.6&uuid=arF001a216a33c6249b0&page_item_id=-32489157"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Senior Data Scientist — Travel Tech, Hybrid & Impact  - Capital Federal
+        Open job preview for: Senior Data Scientist Lead (Remote) – Aws Ml & Insights  - Rosario
       </span>
     </a>
   </div>
@@ -1718,42 +1968,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"6941410967804706816","advertPosition":7,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Startups Bpo","companyForTitle":"Startups Bpo","cpcInEur":0,"date":"07 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal","locations":["Capital Federal"],"locationsLabel":"Capital Federal","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/6941410967804706816/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a13b06881d4f63&page_item_id=-582166771","pageItemId":-582166771,"parameterMap":{"date":"07 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Production AI/ML Lead \u2014 Data Scientist","openAdvertUrl":"https://open.app.jobrapido.com/ar/6941410967804706816/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a13b06881d4f63&page_item_id=-582166771","advertId":"6941410967804706816","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Startups Bpo","company":"Startups Bpo","location":"Capital Federal","locations":["Capital Federal"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Production AI/ML Lead \u2014 Data Scientist","titleSlug":"production-ai-ml-lead-data-scientist","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='9' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"7847960335351808000","advertPosition":7,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Alignerr Corp.","companyForTitle":"Alignerr Corp.","cpcInEur":0,"date":"24 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/7847960335351808000/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.7&uuid=arF001a216a33c6249b0&page_item_id=-915636781","pageItemId":-915636781,"parameterMap":{"date":"24 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Remote Bi & Data Analytics Scientist (Sql/Power Bi)","openAdvertUrl":"https://open.app.jobrapido.com/ar/7847960335351808000/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.7&uuid=arF001a216a33c6249b0&page_item_id=-915636781","advertId":"7847960335351808000","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Alignerr Corp.","company":"Alignerr Corp.","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Remote Bi & Data Analytics Scientist (Sql/Power Bi)","titleSlug":"remote-bi-data-analytics-scientist-sql-power-bi","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='9' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Production AI/ML Lead — Data Scientist  - Capital Federal
+        Open job preview for: Remote Bi & Data Analytics Scientist (Sql/Power Bi)  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Production AI/ML Lead — Data Scientist
+      Remote Bi & Data Analytics Scientist (Sql/Power Bi)
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Capital Federal
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Startups Bpo
+          Alignerr Corp.
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(6941410967804706816)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(6941410967804706816) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(7847960335351808000)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(7847960335351808000) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(6941410967804706816)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(7847960335351808000)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1763,12 +2013,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_6941410967804706816" tc="" ai="6941410967804706816"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/6941410967804706816/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a13b06881d4f63&page_item_id=-582166771"   target="_blank"  
+    <a class="result-item__link" id="a_7847960335351808000" tc="" ai="7847960335351808000"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/7847960335351808000/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.7&uuid=arF001a216a33c6249b0&page_item_id=-915636781"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Production AI/ML Lead — Data Scientist  - Capital Federal
+        Open job preview for: Remote Bi & Data Analytics Scientist (Sql/Power Bi)  - Rosario
       </span>
     </a>
   </div>
@@ -1777,42 +2027,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"5368446094055309312","advertPosition":8,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Valtech","companyForTitle":"Valtech","cpcInEur":0,"date":"20 ago","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Argentina","locations":["Argentina"],"locationsLabel":"Argentina","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/5368446094055309312/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a13b06881d4f63&page_item_id=1997059955","pageItemId":1997059955,"parameterMap":{"date":"20 ago","website":"www.bebee-direct.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_direct_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Data Scientist","openAdvertUrl":"https://open.app.jobrapido.com/ar/5368446094055309312/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a13b06881d4f63&page_item_id=1997059955","advertId":"5368446094055309312","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Valtech","company":"Valtech","location":"Argentina","locations":["Argentina"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_direct_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Data Scientist","titleSlug":"senior-data-scientist","trackClickAd":null,"website":"www.bebee-direct.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"bebee-direct.com"}' data-position='10' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"5689969548078350336","advertPosition":8,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Alignerr Corp.","companyForTitle":"Alignerr Corp.","cpcInEur":0,"date":"13 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/5689969548078350336/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.8&uuid=arF001a216a33c6249b0&page_item_id=2119353908","pageItemId":2119353908,"parameterMap":{"date":"13 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Remote AI Data Scientist & Supply Chain Analytics Pro","openAdvertUrl":"https://open.app.jobrapido.com/ar/5689969548078350336/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.8&uuid=arF001a216a33c6249b0&page_item_id=2119353908","advertId":"5689969548078350336","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Alignerr Corp.","company":"Alignerr Corp.","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Remote AI Data Scientist & Supply Chain Analytics Pro","titleSlug":"remote-ai-data-scientist-supply-chain-analytics-pro","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='10' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Senior Data Scientist  - Argentina
+        Open job preview for: Remote AI Data Scientist & Supply Chain Analytics Pro  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Senior Data Scientist
+      Remote AI Data Scientist & Supply Chain Analytics Pro
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Argentina
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Valtech
+          Alignerr Corp.
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(5368446094055309312)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(5368446094055309312) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(5689969548078350336)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(5689969548078350336) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(5368446094055309312)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(5689969548078350336)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1822,12 +2072,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_5368446094055309312" tc="" ai="5368446094055309312"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/5368446094055309312/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a13b06881d4f63&page_item_id=1997059955"   target="_blank"  
+    <a class="result-item__link" id="a_5689969548078350336" tc="" ai="5689969548078350336"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/5689969548078350336/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.8&uuid=arF001a216a33c6249b0&page_item_id=2119353908"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Senior Data Scientist  - Argentina
+        Open job preview for: Remote AI Data Scientist & Supply Chain Analytics Pro  - Rosario
       </span>
     </a>
   </div>
@@ -1841,42 +2091,42 @@ if (dfpParametersConfig.length > 0) {
   
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1867611760316383232","advertPosition":9,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"GoFasti","companyForTitle":"GoFasti","cpcInEur":0,"date":"13 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Remoto","locations":["Remoto"],"locationsLabel":"Remoto","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1867611760316383232/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a13b06881d4f63&page_item_id=-1624930022","pageItemId":-1624930022,"parameterMap":{"date":"13 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Marketing Data Scientist - Remote Healthcare/Pharma","openAdvertUrl":"https://open.app.jobrapido.com/ar/1867611760316383232/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a13b06881d4f63&page_item_id=-1624930022","advertId":"1867611760316383232","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"GoFasti","company":"GoFasti","location":"Remoto","locations":["Remoto"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Marketing Data Scientist - Remote Healthcare/Pharma","titleSlug":"senior-marketing-data-scientist-remote-healthcare-pharma","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='13' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"7319208595168428032","advertPosition":9,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Muttdata","companyForTitle":"Muttdata","cpcInEur":0,"date":"05 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/7319208595168428032/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.9&uuid=arF001a216a33c6249b0&page_item_id=994418142","pageItemId":994418142,"parameterMap":{"date":"05 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"# 6 Data Scientist Senior \u2013 Customer Segmentation & Classification (RTM) - Latam","openAdvertUrl":"https://open.app.jobrapido.com/ar/7319208595168428032/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.9&uuid=arF001a216a33c6249b0&page_item_id=994418142","advertId":"7319208595168428032","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Muttdata","company":"Muttdata","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"# 6 Data Scientist Senior \u2013 Customer Segmentation & Classification (RTM) - Latam","titleSlug":"6-data-scientist-senior-customer-segmentation-classification-rtm-latam","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='13' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Senior Marketing Data Scientist - Remote Healthcare/Pharma  - Remoto
+        Open job preview for: # 6 Data Scientist Senior – Customer Segmentation & Classification (RTM) - Latam  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Senior Marketing Data Scientist - Remote Healthcare/Pharma
+      # 6 Data Scientist Senior – Customer Segmentation & Classification (RTM) - Latam
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Remoto
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          GoFasti
+          Muttdata
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(1867611760316383232)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(1867611760316383232) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(7319208595168428032)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(7319208595168428032) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1867611760316383232)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(7319208595168428032)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1886,12 +2136,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_1867611760316383232" tc="" ai="1867611760316383232"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1867611760316383232/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a13b06881d4f63&page_item_id=-1624930022"   target="_blank"  
+    <a class="result-item__link" id="a_7319208595168428032" tc="" ai="7319208595168428032"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/7319208595168428032/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.9&uuid=arF001a216a33c6249b0&page_item_id=994418142"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Senior Marketing Data Scientist - Remote Healthcare/Pharma  - Remoto
+        Open job preview for: # 6 Data Scientist Senior – Customer Segmentation & Classification (RTM) - Latam  - Rosario
       </span>
     </a>
   </div>
@@ -1900,42 +2150,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"3150241256861335552","advertPosition":10,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Zicasso","companyForTitle":"Zicasso","cpcInEur":0,"date":"14 ago","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Remoto","locations":["Remoto"],"locationsLabel":"Remoto","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/3150241256861335552/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a13b06881d4f63&page_item_id=858353185","pageItemId":858353185,"parameterMap":{"date":"14 ago","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Remote Data Scientist: Travel Personalization & Insights","openAdvertUrl":"https://open.app.jobrapido.com/ar/3150241256861335552/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a13b06881d4f63&page_item_id=858353185","advertId":"3150241256861335552","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Zicasso","company":"Zicasso","location":"Remoto","locations":["Remoto"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Remote Data Scientist: Travel Personalization & Insights","titleSlug":"remote-data-scientist-travel-personalization-insights","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='14' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1241881548374933504","advertPosition":10,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Launch Potato","companyForTitle":"Launch Potato","cpcInEur":0,"date":"03 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1241881548374933504/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.10&uuid=arF001a216a33c6249b0&page_item_id=1325729861","pageItemId":1325729861,"parameterMap":{"date":"03 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Lead Data Scientist, Adtech","openAdvertUrl":"https://open.app.jobrapido.com/ar/1241881548374933504/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.10&uuid=arF001a216a33c6249b0&page_item_id=1325729861","advertId":"1241881548374933504","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Launch Potato","company":"Launch Potato","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Lead Data Scientist, Adtech","titleSlug":"lead-data-scientist-adtech","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='14' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Remote Data Scientist: Travel Personalization & Insights  - Remoto
+        Open job preview for: Lead Data Scientist, Adtech  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Remote Data Scientist: Travel Personalization & Insights
+      Lead Data Scientist, Adtech
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Remoto
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Zicasso
+          Launch Potato
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(3150241256861335552)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(3150241256861335552) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(1241881548374933504)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(1241881548374933504) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(3150241256861335552)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1241881548374933504)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1945,12 +2195,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_3150241256861335552" tc="" ai="3150241256861335552"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/3150241256861335552/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a13b06881d4f63&page_item_id=858353185"   target="_blank"  
+    <a class="result-item__link" id="a_1241881548374933504" tc="" ai="1241881548374933504"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1241881548374933504/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.10&uuid=arF001a216a33c6249b0&page_item_id=1325729861"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Remote Data Scientist: Travel Personalization & Insights  - Remoto
+        Open job preview for: Lead Data Scientist, Adtech  - Rosario
       </span>
     </a>
   </div>
@@ -1959,42 +2209,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"3045614224664428544","advertPosition":11,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Software Mind","companyForTitle":"Software Mind","cpcInEur":0,"date":"12 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Remoto","locations":["Remoto"],"locationsLabel":"Remoto","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/3045614224664428544/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a13b06881d4f63&page_item_id=679515033","pageItemId":679515033,"parameterMap":{"date":"12 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Probabilistic AI Data Scientist \u2014 Bayesian Modeling Remote","openAdvertUrl":"https://open.app.jobrapido.com/ar/3045614224664428544/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a13b06881d4f63&page_item_id=679515033","advertId":"3045614224664428544","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Software Mind","company":"Software Mind","location":"Remoto","locations":["Remoto"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Probabilistic AI Data Scientist \u2014 Bayesian Modeling Remote","titleSlug":"probabilistic-ai-data-scientist-bayesian-modeling-remote","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='15' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"2945768776336932864","advertPosition":11,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"European Startup Hub","companyForTitle":"European Startup Hub","cpcInEur":0,"date":"19 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/2945768776336932864/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.11&uuid=arF001a216a33c6249b0&page_item_id=90023591","pageItemId":90023591,"parameterMap":{"date":"19 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Staff Data Scientist","openAdvertUrl":"https://open.app.jobrapido.com/ar/2945768776336932864/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.11&uuid=arF001a216a33c6249b0&page_item_id=90023591","advertId":"2945768776336932864","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"European Startup Hub","company":"European Startup Hub","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Staff Data Scientist","titleSlug":"staff-data-scientist","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='15' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Probabilistic AI Data Scientist — Bayesian Modeling Remote  - Remoto
+        Open job preview for: Staff Data Scientist  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Probabilistic AI Data Scientist — Bayesian Modeling Remote
+      Staff Data Scientist
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Remoto
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Software Mind
+          European Startup Hub
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(3045614224664428544)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(3045614224664428544) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(2945768776336932864)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(2945768776336932864) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(3045614224664428544)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(2945768776336932864)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -2004,12 +2254,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_3045614224664428544" tc="" ai="3045614224664428544"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/3045614224664428544/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a13b06881d4f63&page_item_id=679515033"   target="_blank"  
+    <a class="result-item__link" id="a_2945768776336932864" tc="" ai="2945768776336932864"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/2945768776336932864/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.11&uuid=arF001a216a33c6249b0&page_item_id=90023591"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Probabilistic AI Data Scientist — Bayesian Modeling Remote  - Remoto
+        Open job preview for: Staff Data Scientist  - Rosario
       </span>
     </a>
   </div>
@@ -2018,42 +2268,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"6282566523651358720","advertPosition":12,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"PwC","companyForTitle":"PwC","cpcInEur":0,"date":"12 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal","locations":["Capital Federal"],"locationsLabel":"Capital Federal","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/6282566523651358720/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a13b06881d4f63&page_item_id=-393682041","pageItemId":-393682041,"parameterMap":{"date":"12 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Data Scientist, Innovation & Tech Delivery","openAdvertUrl":"https://open.app.jobrapido.com/ar/6282566523651358720/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a13b06881d4f63&page_item_id=-393682041","advertId":"6282566523651358720","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"PwC","company":"PwC","location":"Capital Federal","locations":["Capital Federal"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Data Scientist, Innovation & Tech Delivery","titleSlug":"senior-data-scientist-innovation-tech-delivery","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='16' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1694608587847892992","advertPosition":12,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Present of AI","companyForTitle":"Present of AI","cpcInEur":0,"date":"10 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1694608587847892992/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.12&uuid=arF001a216a33c6249b0&page_item_id=-2093089786","pageItemId":-2093089786,"parameterMap":{"date":"10 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Data Scientist","openAdvertUrl":"https://open.app.jobrapido.com/ar/1694608587847892992/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.12&uuid=arF001a216a33c6249b0&page_item_id=-2093089786","advertId":"1694608587847892992","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Present of AI","company":"Present of AI","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Data Scientist","titleSlug":"senior-data-scientist","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='16' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Senior Data Scientist, Innovation & Tech Delivery  - Capital Federal
+        Open job preview for: Senior Data Scientist  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Senior Data Scientist, Innovation & Tech Delivery
+      Senior Data Scientist
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Capital Federal
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          PwC
+          Present of AI
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(6282566523651358720)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(6282566523651358720) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(1694608587847892992)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(1694608587847892992) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(6282566523651358720)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1694608587847892992)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -2063,12 +2313,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_6282566523651358720" tc="" ai="6282566523651358720"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/6282566523651358720/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a13b06881d4f63&page_item_id=-393682041"   target="_blank"  
+    <a class="result-item__link" id="a_1694608587847892992" tc="" ai="1694608587847892992"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1694608587847892992/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.12&uuid=arF001a216a33c6249b0&page_item_id=-2093089786"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Senior Data Scientist, Innovation & Tech Delivery  - Capital Federal
+        Open job preview for: Senior Data Scientist  - Rosario
       </span>
     </a>
   </div>
@@ -2077,26 +2327,26 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8100372983136124928","advertPosition":13,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Coderio","companyForTitle":"Coderio","cpcInEur":0,"date":"18 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Argentina","locations":["Argentina"],"locationsLabel":"Argentina","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8100372983136124928/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a13b06881d4f63&page_item_id=568307051","pageItemId":568307051,"parameterMap":{"date":"18 sep","website":"www.whatjobs.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_whatjobs_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Sr Data Scientist Lead","openAdvertUrl":"https://open.app.jobrapido.com/ar/8100372983136124928/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a13b06881d4f63&page_item_id=568307051","advertId":"8100372983136124928","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Coderio","company":"Coderio","location":"Argentina","locations":["Argentina"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_whatjobs_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Sr Data Scientist Lead","titleSlug":"sr-data-scientist-lead","trackClickAd":null,"website":"www.whatjobs.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"whatjobs.com"}' data-position='17' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1478254111437619200","advertPosition":13,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Coderio","companyForTitle":"Coderio","cpcInEur":0,"date":"10 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1478254111437619200/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.13&uuid=arF001a216a33c6249b0&page_item_id=61486536","pageItemId":61486536,"parameterMap":{"date":"10 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Data Scientist Aws - Sr","openAdvertUrl":"https://open.app.jobrapido.com/ar/1478254111437619200/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.13&uuid=arF001a216a33c6249b0&page_item_id=61486536","advertId":"1478254111437619200","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Coderio","company":"Coderio","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Data Scientist Aws - Sr","titleSlug":"data-scientist-aws-sr","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='17' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Sr Data Scientist Lead  - Argentina
+        Open job preview for: Data Scientist Aws - Sr  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Sr Data Scientist Lead
+      Data Scientist Aws - Sr
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Argentina
+          Rosario
         </span>
       </span>
     </div>
@@ -2109,10 +2359,10 @@ if (dfpParametersConfig.length > 0) {
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(8100372983136124928)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(8100372983136124928) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(1478254111437619200)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(1478254111437619200) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(8100372983136124928)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1478254111437619200)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -2122,12 +2372,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_8100372983136124928" tc="" ai="8100372983136124928"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8100372983136124928/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a13b06881d4f63&page_item_id=568307051"   target="_blank"  
+    <a class="result-item__link" id="a_1478254111437619200" tc="" ai="1478254111437619200"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1478254111437619200/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.13&uuid=arF001a216a33c6249b0&page_item_id=61486536"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Sr Data Scientist Lead  - Argentina
+        Open job preview for: Data Scientist Aws - Sr  - Rosario
       </span>
     </a>
   </div>
@@ -2136,42 +2386,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1994215023475425280","advertPosition":14,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Smartrecruiters, Inc.","companyForTitle":"Smartrecruiters, Inc.","cpcInEur":0,"date":"11 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Neuqu\u00E9n Capital","locations":["Neuqu\u00E9n Capital"],"locationsLabel":"Neuqu\u00E9n Capital","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1994215023475425280/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a13b06881d4f63&page_item_id=-86997668","pageItemId":-86997668,"parameterMap":{"date":"11 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Data Scientist: Probabilistic Modeling In Ecommerce","openAdvertUrl":"https://open.app.jobrapido.com/ar/1994215023475425280/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a13b06881d4f63&page_item_id=-86997668","advertId":"1994215023475425280","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Smartrecruiters, Inc.","company":"Smartrecruiters, Inc.","location":"Neuqu\u00E9n Capital","locations":["Neuqu\u00E9n Capital"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Data Scientist: Probabilistic Modeling In Ecommerce","titleSlug":"senior-data-scientist-probabilistic-modeling-in-ecommerce","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='18' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"3561180002932228096","advertPosition":14,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Infracommerce Latam","companyForTitle":"Infracommerce Latam","cpcInEur":0,"date":"23 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/3561180002932228096/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.14&uuid=arF001a216a33c6249b0&page_item_id=902184841","pageItemId":902184841,"parameterMap":{"date":"23 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Data Scientist SSr. \u2013 Freelance","openAdvertUrl":"https://open.app.jobrapido.com/ar/3561180002932228096/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.14&uuid=arF001a216a33c6249b0&page_item_id=902184841","advertId":"3561180002932228096","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Infracommerce Latam","company":"Infracommerce Latam","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Data Scientist SSr. \u2013 Freelance","titleSlug":"data-scientist-ssr-freelance","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='18' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Senior Data Scientist: Probabilistic Modeling In Ecommerce  - Neuquén Capital
+        Open job preview for: Data Scientist SSr. – Freelance  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Senior Data Scientist: Probabilistic Modeling In Ecommerce
+      Data Scientist SSr. – Freelance
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Neuquén Capital
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Smartrecruiters, Inc.
+          Infracommerce Latam
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(1994215023475425280)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(1994215023475425280) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(3561180002932228096)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(3561180002932228096) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1994215023475425280)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(3561180002932228096)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -2181,12 +2431,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_1994215023475425280" tc="" ai="1994215023475425280"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1994215023475425280/?w=data%20scientist&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a13b06881d4f63&page_item_id=-86997668"   target="_blank"  
+    <a class="result-item__link" id="a_3561180002932228096" tc="" ai="3561180002932228096"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/3561180002932228096/?w=data%20scientist&l=&oc=sponsored&k=web.1.5.14&uuid=arF001a216a33c6249b0&page_item_id=902184841"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Senior Data Scientist: Probabilistic Modeling In Ecommerce  - Neuquén Capital
+        Open job preview for: Data Scientist SSr. – Freelance  - Rosario
       </span>
     </a>
   </div>
@@ -2206,7 +2456,7 @@ if (dfpParametersConfig.length > 0) {
 <div class="pagination-wrapper" ng-controller="PaginationCtrl">
   
   <div id="pagination" class="pagination">
-      <a href="/Ofertas-de-trabajo-para-Data-Scientist?p=3"  
+      <a href="/Ofertas-de-trabajo-para-Data-Scientist?p=4"  
         jrcustom="prev" class="sprite-pag-prev icon-angle-left" id="pag-prev" rel="nofollow">
         <span></span>
       </a>
@@ -2222,12 +2472,12 @@ if (dfpParametersConfig.length > 0) {
         jrcustom="position-003" class="pagination-item" id="pag-3" rel="nofollow">
         <span>3</span>
       </a>
-      <a href="javascript:void(0).assembly();"  
-        jrcustom="" class="current" id="" rel="nofollow">
+      <a href="/Ofertas-de-trabajo-para-Data-Scientist?p=4"  
+        jrcustom="position-004" class="pagination-item" id="pag-4" rel="nofollow">
         <span>4</span>
       </a>
-      <a href="/Ofertas-de-trabajo-para-Data-Scientist?p=5"  
-        jrcustom="position-005" class="pagination-item" id="pag-5" rel="nofollow">
+      <a href="javascript:void(0).assembly();"  
+        jrcustom="" class="current" id="" rel="nofollow">
         <span>5</span>
       </a>
       <a href="/Ofertas-de-trabajo-para-Data-Scientist?p=6"  
@@ -2250,7 +2500,7 @@ if (dfpParametersConfig.length > 0) {
         jrcustom="position-010" class="pagination-item" id="pag-10" rel="nofollow">
         <span>10</span>
       </a>
-      <a href="/Ofertas-de-trabajo-para-Data-Scientist?p=5"  
+      <a href="/Ofertas-de-trabajo-para-Data-Scientist?p=6"  
         jrcustom="next" class="sprite-pag-next icon-angle-right" id="pag-next" rel="nofollow">
         <span></span>
       </a>
@@ -3111,7 +3361,7 @@ if (dfpParametersConfig.length > 0) {
                                     </script>
 
           <script>
-          _gaq.push(['_deleteCustomVar',5],['_trackPageview','/?w=Python&q=/Python//w-/&p=004&sa=00&ta=15&re=all&o=typein&n=05']);
+          _gaq.push(['_deleteCustomVar',5],['_trackPageview','/?w=Python&q=/Python//w-/&p=005&sa=00&ta=15&re=all&o=typein&n=06']);
           (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;g.src=('https:' == location.protocol
           ? '//ssl' : '//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))
           </script>

@@ -1,0 +1,51 @@
+{
+  "fuente": "randstad",
+  "fecha": "2026-11-26T05:19:31.863814",
+  "total_ofertas": 96,
+  "detalle_por_keyword": [
+    {
+      "keyword": "Data Scientist",
+      "ofertas": 1
+    },
+    {
+      "keyword": "BI / Analytics",
+      "ofertas": 3
+    },
+    {
+      "keyword": "Python Developer",
+      "ofertas": 4
+    },
+    {
+      "keyword": "Control de Gestión",
+      "ofertas": 5
+    },
+    {
+      "keyword": "Gerente de Operaciones",
+      "ofertas": 0
+    },
+    {
+      "keyword": "Compras / Procurement",
+      "ofertas": 26
+    },
+    {
+      "keyword": "Ingeniero Industrial",
+      "ofertas": 0
+    },
+    {
+      "keyword": "Finanzas / CAPEX",
+      "ofertas": 13
+    },
+    {
+      "keyword": "Excel / VBA",
+      "ofertas": 44
+    },
+    {
+      "keyword": "Supply Chain",
+      "ofertas": 0
+    },
+    {
+      "keyword": "Continuous Improvement",
+      "ofertas": 0
+    }
+  ]
+}

@@ -54,12 +54,222 @@
                                                                                                                                   }, g[o]['t'] = 1 * new Date
                                                                                                                                 })(window, '_googCsa');
                                                                                                                               </script>
-                                  <script src="https://resources.jobrapido.com/static/js/prebid.bundle.680c3eb44b1d6e143e4f.js" async></script><script>var iid="13407767",
-                                    p=location.protocol,url=("https:"===p?p:"http:")+"//ap.lijit.com/www/sovrn_beacon_standalone/sovrn_standalone_beacon.js?iid="+iid,scr=document.createElement("script");scr.id="sBeacon",scr.src=url,scr.async=!1;var s0=document.getElementsByTagName("script")[0];s0.parentNode.insertBefore(scr,s0);</script><script>var adUnits = [{"bids":[{"bidder":"appnexus","params":{"placementId":"12484625"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846706"}},{"bidder":"ix","params":{"size":[300,250],"siteId":"350496"}},{"bidder":"criteo","params":{"zoneId":"1082855"}}],"code":"b_gtp_middle","mediaTypes":{"banner":{"sizes":[[300,250]]}},"sizes":[[300,250]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484628"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[728,90],"siteId":"350497"}},{"bidder":"criteo","params":{"zoneId":"1114753"}}],"code":"b_gtp_leaderboard","mediaTypes":{"banner":{"sizes":[[728,90]]}},"sizes":[[728,90]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484631"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846706"}},{"bidder":"ix","params":{"size":[160,600],"siteId":"350505"}},{"bidder":"criteo","params":{"zoneId":"1082854"}}],"code":"banner-aside-left","mediaTypes":{"banner":{"sizes":[[160,600]]}},"sizes":[[160,600]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484633"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[300,250],"siteId":"350494"}},{"bidder":"criteo","params":{"zoneId":"1091230"}}],"code":"b_gtp_top","mediaTypes":{"banner":{"sizes":[[300,250]]}},"sizes":[[300,250]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484624"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[300,600],"siteId":"350494"}},{"bidder":"criteo","params":{"zoneId":"1398668"}}],"code":"b_gtp_top","mediaTypes":{"banner":{"sizes":[[300,600]]}},"sizes":[[300,600]]}];
-                                    var pbjs = pbjs || { que: [] };
+                                  <script src="https://resources.jobrapido.com/static/js/prebid.bundle.b7de232af73031e3658b.js" async></script><script>var iid="13407767",
+                                    p=location.protocol,url=("https:"===p?p:"http:")+"//ap.lijit.com/www/sovrn_beacon_standalone/sovrn_standalone_beacon.js?iid="+iid,scr=document.createElement("script");scr.id="sBeacon",scr.src=url,scr.async=!1;var s0=document.getElementsByTagName("script")[0];s0.parentNode.insertBefore(scr,s0);</script><script>var pbjs = pbjs || { que: [] };
                                     var customConfigObject = {
                                      'buckets' : [{"increment":0.01,"max":5,"min":0,"precision":2},{"increment":0.05,"max":20,"min":5,"precision":2},{"increment":0.1,"max":40,"min":20,"precision":2}]
                                     };
+                                  
+                                    // Ad units coming from the datastore can contain the same code more than once
+                                    // (e.g. 'b_gtp_top'): Prebid would then run two auctions for the same slot.
+                                    // Merge duplicated codes into a single ad unit, keeping every distinct bid.
+                                    function jrPbDedupeAdUnits(units) {
+                                      var byCode = {};
+                                      var result = [];
+                                  
+                                      (units || []).forEach(function(unit) {
+                                        if (!unit || !unit.code) {
+                                          return;
+                                        }
+                                  
+                                        var existing = byCode[unit.code];
+                                        if (!existing) {
+                                          existing = byCode[unit.code] = Object.assign({}, unit, { bids: (unit.bids || []).slice() });
+                                          result.push(existing);
+                                          return;
+                                        }
+                                  
+                                        (unit.bids || []).forEach(function(bid) {
+                                          var key = JSON.stringify(bid);
+                                          var isDuplicated = existing.bids.some(function(b) { return JSON.stringify(b) === key; });
+                                          if (!isDuplicated) {
+                                            existing.bids.push(bid);
+                                          }
+                                        });
+                                      });
+                                  
+                                      return result;
+                                    }
+                                  
+                                    var adUnits = jrPbDedupeAdUnits([{"bids":[{"bidder":"appnexus","params":{"placementId":"12484625"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846706"}},{"bidder":"ix","params":{"size":[300,250],"siteId":"350496"}},{"bidder":"criteo","params":{"zoneId":"1082855"}}],"code":"b_gtp_middle","mediaTypes":{"banner":{"sizes":[[300,250]]}},"sizes":[[300,250]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484628"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[728,90],"siteId":"350497"}},{"bidder":"criteo","params":{"zoneId":"1114753"}}],"code":"b_gtp_leaderboard","mediaTypes":{"banner":{"sizes":[[728,90]]}},"sizes":[[728,90]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484631"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846706"}},{"bidder":"ix","params":{"size":[160,600],"siteId":"350505"}},{"bidder":"criteo","params":{"zoneId":"1082854"}}],"code":"banner-aside-left","mediaTypes":{"banner":{"sizes":[[160,600]]}},"sizes":[[160,600]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484633"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[300,250],"siteId":"350494"}},{"bidder":"criteo","params":{"zoneId":"1091230"}}],"code":"b_gtp_top","mediaTypes":{"banner":{"sizes":[[300,250]]}},"sizes":[[300,250]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484624"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[300,600],"siteId":"350494"}},{"bidder":"criteo","params":{"zoneId":"1398668"}}],"code":"b_gtp_top","mediaTypes":{"banner":{"sizes":[[300,600]]}},"sizes":[[300,600]]}]);
+                                  
+                                    // SHA-256 (hex) of the logged user's email. Rendered server side so it doesn't
+                                    // depend on 'jrConfigGlobal', which is defined after this script: when prebid.js
+                                    // is cached/preloaded the queue below can run before it ("Error processing command").
+                                    var jrPbEmailHash = '' ||
+                                      (window.jrConfigGlobal && window.jrConfigGlobal.user && window.jrConfigGlobal.user.sha256EncodedEmail) || '';
+                                  
+                                    // UID2 expects the email hash as base64-encoded SHA-256
+                                    // @see https://unifiedid.com/docs/getting-started/gs-normalization-encoding
+                                    function jrPbHexToBase64(hex) {
+                                      if (!/^[0-9a-f]{64}$/i.test(hex)) {
+                                        return null;
+                                      }
+                                      var bin = '';
+                                      for (var i = 0; i < hex.length; i += 2) {
+                                        bin += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+                                      }
+                                      return window.btoa(bin);
+                                    }
+                                  
+                                    // On GDPR pages without TCF CMP the consent is stored in the 'JEC' cookie (same
+                                    // logic used in dfp-no-cmp.hbs): no consent -> no user IDs are generated/stored.
+                                    var jrPbUserIdsAllowed = true;
+                                  
+                                    // Prebid.js User ID sub-modules
+                                    // @see https://docs.prebid.org/dev-docs/modules/userId.html
+                                    //
+                                    // SharedID is always on (no vendor agreement needed). Every partner sub-module has
+                                    // its own switch below and is OFF by default: to enable a partner set 'enabled: true'
+                                    // and fill its credentials. A sub-module is added only when its switch is on AND all
+                                    // its required credentials are set: a missing/partial configuration only logs a
+                                    // warning and never breaks the auction.
+                                    // NOTE: static configuration handled only within website-static-layout (temporary,
+                                    // until the vendor agreements are signed and the values can come from the backend).
+                                    var jrPbUserIdPartners = {
+                                      id5:       { enabled: false, partnerId: null },
+                                      liveRamp:  { enabled: false, pid: '' },
+                                      lotame:    { enabled: false, clientId: '' },
+                                      uid2:      { enabled: false, subscriptionId: '', serverPublicKey: '' },
+                                      unifiedId: { enabled: false, partner: '' }
+                                    };
+                                  
+                                    // How every partner switch maps to its Prebid sub-module configuration
+                                    var jrPbUserIdModules = {
+                                      // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/id5.html
+                                      id5: {
+                                        required: ['partnerId'],
+                                        build: function(cfg) {
+                                          return {
+                                            name: 'id5Id',
+                                            params: {
+                                              partner: Number(cfg.partnerId)
+                                            },
+                                            storage: {
+                                              type: 'html5',
+                                              name: 'id5id',
+                                              expires: 90,
+                                              refreshInSeconds: 7200
+                                            }
+                                          };
+                                        }
+                                      },
+                                  
+                                      // LiveRamp RampID (ATS)
+                                      // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/ramp.html
+                                      liveRamp: {
+                                        required: ['pid'],
+                                        build: function(cfg) {
+                                          return {
+                                            name: 'identityLink',
+                                            params: {
+                                              pid: String(cfg.pid),
+                                              notUse3P: false
+                                            },
+                                            storage: {
+                                              type: 'html5',
+                                              name: 'idl_env',
+                                              expires: 15,
+                                              refreshInSeconds: 1800
+                                            }
+                                          };
+                                        }
+                                      },
+                                  
+                                      // Lotame Panorama ID
+                                      // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/lotame.html
+                                      lotame: {
+                                        required: ['clientId'],
+                                        build: function(cfg) {
+                                          return {
+                                            name: 'lotamePanoramaId',
+                                            params: {
+                                              clientId: String(cfg.clientId)
+                                            }
+                                          };
+                                        }
+                                      },
+                                  
+                                      // UID2 client-side token generation: logged users only (needs the email hash)
+                                      // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/unified2.html
+                                      uid2: {
+                                        required: ['subscriptionId', 'serverPublicKey'],
+                                        build: function(cfg) {
+                                          var emailHash = jrPbHexToBase64(jrPbEmailHash);
+                                          if (!emailHash) {
+                                            return null;
+                                          }
+                                          return {
+                                            name: 'uid2',
+                                            params: {
+                                              uid2ApiBase: 'https://prod.uidapi.com',
+                                              subscriptionId: String(cfg.subscriptionId),
+                                              serverPublicKey: String(cfg.serverPublicKey),
+                                              emailHash: emailHash
+                                            }
+                                          };
+                                        }
+                                      },
+                                  
+                                      // The Trade Desk Unified ID 1.0
+                                      // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/unified.html
+                                      unifiedId: {
+                                        required: ['partner'],
+                                        build: function(cfg) {
+                                          return {
+                                            name: 'unifiedId',
+                                            params: {
+                                              partner: String(cfg.partner)
+                                            },
+                                            storage: {
+                                              type: 'cookie',
+                                              name: 'pbjs-unifiedid',
+                                              expires: 60
+                                            }
+                                          };
+                                        }
+                                      }
+                                    };
+                                  
+                                    function jrPbGetUserIds() {
+                                      if (!jrPbUserIdsAllowed) {
+                                        return [];
+                                      }
+                                  
+                                      var userIds = [{
+                                        // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/sharedid.html
+                                        name: 'sharedId',
+                                        storage: {
+                                          type: 'cookie',
+                                          name: '_sharedid',
+                                          expires: 365
+                                        }
+                                      }];
+                                  
+                                      Object.keys(jrPbUserIdModules).forEach(function(partner) {
+                                        var cfg = jrPbUserIdPartners[partner];
+                                        if (!cfg || cfg.enabled !== true) {
+                                          return;
+                                        }
+                                  
+                                        var missing = jrPbUserIdModules[partner].required.filter(function(key) {
+                                          return cfg[key] === undefined || cfg[key] === null || cfg[key] === '';
+                                        });
+                                        if (missing.length > 0) {
+                                          if (window.console && console.warn) {
+                                            console.warn('[JR Prebid] User ID partner "' + partner + '" is enabled but its credentials are missing (' + missing.join(', ') + '): skipped.');
+                                          }
+                                          return;
+                                        }
+                                  
+                                        var userIdModule = jrPbUserIdModules[partner].build(cfg);
+                                        if (userIdModule) {
+                                          userIds.push(userIdModule);
+                                        }
+                                      });
+                                  
+                                      return userIds;
+                                    }
                                   
                                     pbjs.que.push(function() {
                                   
@@ -71,6 +281,20 @@
                                         }
                                       }
                                   
+                                      var consentManagement = {
+                                        // @see https://docs.prebid.org/dev-docs/modules/consentManagementUsp.html
+                                        usp: {
+                                          cmpApi: 'static',
+                                          timeout: 50,
+                                          consentData: {
+                                            getUSPData: {
+                                              uspString: '1---'
+                                            }
+                                          }
+                                        }
+                                      };
+                                  
+                                  
                                       pbjs.setConfig({
                                         bidderTimeout: 1000,
                                         debug: false,
@@ -80,7 +304,7 @@
 
                                             conversionRateFile: 'https://currency.prebid.org/latest.json'
                                         },
-                                        
+                                  
                                         // General permissions settings: Device access
                                         // @see https://docs.prebid.org/dev-docs/publisher-api-reference/setConfig.html#device-access
                                         deviceAccess: true,
@@ -97,49 +321,72 @@
                                           },
                                           transmitTid: {
                                             default: true
+                                          },
+                                          enrichEids: {
+                                            default: true
+                                          },
+                                          transmitEids: {
+                                            default: true
                                           }
                                         },
-                                        
-                                        consentManagement: {
-                                          // @see https://docs.prebid.org/dev-docs/modules/consentManagementUsp.html
-                                          usp: {
-                                            cmpApi: 'static',
-                                            timeout: 50,
-                                            consentData: {
-                                              getUSPData: {
-                                                uspString: '1---'
-                                              }
-                                            }
-                                          }
                                   
+                                        // Prebid.js User ID Module Configuration
+                                        // @see https://docs.prebid.org/dev-docs/modules/userId.html
+                                        userSync: {
+                                          syncDelay: 3000,
+                                          userIds: jrPbGetUserIds(),
+                                          // Secure signals shared with GAM (only for the providers set as
+                                          // "Prebid UserID Module" in GAM > Admin > Secure signals)
+                                          // @see https://docs.prebid.org/dev-docs/modules/userId.html#esp-configurations
+                                          encryptedSignalSources: {
+                                            sources: [
+                                              {
+                                                source: ['sharedid.org', 'pubcid.org', 'criteo.com', 'id5-sync.com', 'liveramp.com', 'crwdcntrl.net', 'adserver.org', 'uidapi.com'],
+                                                encrypt: false
+                                              }
+                                            ],
+                                            registerDelay: 3000
+                                          }
+                                        },
+                                  
+                                        consentManagement: consentManagement
+                                      });
+                                  
+                                      // Register Secure Signal sources for Google Ad Manager (ESP)
+                                      window.googletag = window.googletag || { cmd: [] };
+                                      googletag.cmd.push(function() {
+                                        if (typeof pbjs.registerSignalSources === 'function') {
+                                          pbjs.registerSignalSources();
                                         }
                                       });
                                   
-                                        pbjs.setBidderConfig({
-                                          bidders: ['criteo'],
-                                          config: {
-                                              ortb2: {
-                                                  user: {
-                                                      ext: {
-                                                          data: {
-                                                              eids: [{
-                                                                  source: "domain_here",
-                                                                  uids: [
-                                                                      {
-                                                                          id: window.jrConfigGlobal.user.sha256EncodedEmail,
-                                                                          atype: 3,
-                                                                          ext: {
-                                                                              stype: "hemsha256"
-                                                                          }
-                                                                      }
-                                                                  ]
-                                                              }]
-                                                          }
-                                                      }
-                                                  }
-                                              }
-                                          }
-                                        }, true);
+                                        if (jrPbEmailHash) {
+                                          pbjs.setBidderConfig({
+                                            bidders: ['criteo'],
+                                            config: {
+                                                ortb2: {
+                                                    user: {
+                                                        ext: {
+                                                            data: {
+                                                                eids: [{
+                                                                    source: "domain_here",
+                                                                    uids: [
+                                                                        {
+                                                                            id: jrPbEmailHash,
+                                                                            atype: 3,
+                                                                            ext: {
+                                                                                stype: "hemsha256"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }]
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                          }, true);
+                                        }
                                     });</script>    <script type="text/javascript" src="/api/siteconfig"></script>
 <script>
   if(!jrConfigGlobal) {
@@ -161,12 +408,12 @@
     isSearch: true,
     isJobPreviewPage: false,
     isErrorPage: false,
-    uuid: 'arF001a13b23552179b5'
+    uuid: 'arF001a216bcded5253b'
   };
   jrConfigGlobal.visit = {
     requestComingFromAdWords: false,
     sessionComingFromPaidSource: false,
-    uuid: 'arF001a13b0060af4ace',
+    uuid: 'arF001a2169cd8653f35',
     isOneTapConfirmationFlow: false,
     requestComingFromWelcomeEmailAddPassword: false,
     requestComingFromWelcomeEmailIncreaseSearch: false
@@ -195,7 +442,7 @@
       numberOfItems: 18
     },
     inlineProposal: {"advertTypeWithInlineProposal":"organic","deviceType":"DESKTOP","forSponsoredAdvertEnabled":false,"fromPaidSourceEnabled":true,"impressionsRemainingCountEnabled":false,"maxImpressionsAllTime":2147483647,"maxImpressionsVisit":3,"metadataKey":{},"visitType":"BRAND"},
-    totalResults: 2719,
+    totalResults: 5113,
     sortBy: '',
     geoCoordinatesNotPresent: true,
     taxonomyCode: '',
@@ -206,7 +453,7 @@
     globalParameters: {"promoted":{"position":"listing"},"dfp":{"hideNative":"true"}},
     itemsEnabled: {"dfp":true,"promoted":true},
     structuredDataEnabled: false,
-    dfpItems: [{"adsenseAtfItem":false,"adsenseItem":false,"advertItem":false,"itemId":"dfp","itemProperties":{"adUnit":"textad_desktop_1","cssClass":"native","size":"[[1,1], \u0027fluid\u0027]","slotId":"partnership-result-top","type":"affiliate"},"promotedItem":false,"searchResult":{"actionType":"","advertId":"","advertPosition":0,"advertType":"","autoExpandRadiusDistance":null,"autoExpandRadiusLayout":null,"bodyHighlighted":"","budgetId":0,"company":"","companyForTitle":"","cpcInEur":0,"date":"","enumAdvertType":null,"fromSponsoredSearch":false,"index":-1,"isCpaEnabled":false,"isFromExpandedSearch":false,"isSponsored":false,"location":"","locations":null,"locationsLabel":null,"onMouseDown":"","openAdvertUrl":"","pageItemId":-1863280642,"parameterMap":{"date":"","website":"","trackClickAd":"","showNewMarker":false,"fromSponsoredSearch":false,"sponsorAccount":"","budgetId":0,"isCpaEnabled":false,"salary":"","sponsorAccountBranch":"","title":"","openAdvertUrl":"","advertId":"","tags":{},"cpcInEur":0,"isFromExpandedSearch":false,"companyForTitle":"","company":"","location":"","onmousedown":"","tag":"","isSponsored":false},"salary":"","showNewMarker":false,"sponsorAccount":"","sponsorAccountBranch":"","tag":"","tags":{},"title":"","titleSlug":"","trackClickAd":"","website":"","websiteCategory":"UNQUALIFIED","websiteNoWWW":""},"serpPosition":4,"sponsoredOrOrganicItem":false},{"adsenseAtfItem":false,"adsenseItem":false,"advertItem":false,"itemId":"dfp","itemProperties":{"adUnit":"textad_desktop_2","cssClass":"native","size":"[[1,1], \u0027fluid\u0027]","slotId":"partnership-result-bottom","type":"affiliate"},"promotedItem":false,"searchResult":{"actionType":"","advertId":"","advertPosition":0,"advertType":"","autoExpandRadiusDistance":null,"autoExpandRadiusLayout":null,"bodyHighlighted":"","budgetId":0,"company":"","companyForTitle":"","cpcInEur":0,"date":"","enumAdvertType":null,"fromSponsoredSearch":false,"index":-1,"isCpaEnabled":false,"isFromExpandedSearch":false,"isSponsored":false,"location":"","locations":null,"locationsLabel":null,"onMouseDown":"","openAdvertUrl":"","pageItemId":290017381,"parameterMap":{"date":"","website":"","trackClickAd":"","showNewMarker":false,"fromSponsoredSearch":false,"sponsorAccount":"","budgetId":0,"isCpaEnabled":false,"salary":"","sponsorAccountBranch":"","title":"","openAdvertUrl":"","advertId":"","tags":{},"cpcInEur":0,"isFromExpandedSearch":false,"companyForTitle":"","company":"","location":"","onmousedown":"","tag":"","isSponsored":false},"salary":"","showNewMarker":false,"sponsorAccount":"","sponsorAccountBranch":"","tag":"","tags":{},"title":"","titleSlug":"","trackClickAd":"","website":"","websiteCategory":"UNQUALIFIED","websiteNoWWW":""},"serpPosition":11,"sponsoredOrOrganicItem":false}],
+    dfpItems: [{"adsenseAtfItem":false,"adsenseItem":false,"advertItem":false,"itemId":"dfp","itemProperties":{"adUnit":"textad_desktop_1","cssClass":"native","size":"[[1,1], \u0027fluid\u0027]","slotId":"partnership-result-top","type":"affiliate"},"promotedItem":false,"searchResult":{"actionType":"","advertId":"","advertPosition":0,"advertType":"","autoExpandRadiusDistance":null,"autoExpandRadiusLayout":null,"bodyHighlighted":"","budgetId":0,"company":"","companyForTitle":"","cpcInEur":0,"date":"","enumAdvertType":null,"fromSponsoredSearch":false,"index":-1,"isCpaEnabled":false,"isFromExpandedSearch":false,"isSponsored":false,"location":"","locations":null,"locationsLabel":null,"onMouseDown":"","openAdvertUrl":"","pageItemId":-1206639070,"parameterMap":{"date":"","website":"","trackClickAd":"","showNewMarker":false,"fromSponsoredSearch":false,"sponsorAccount":"","budgetId":0,"isCpaEnabled":false,"salary":"","sponsorAccountBranch":"","title":"","openAdvertUrl":"","advertId":"","tags":{},"cpcInEur":0,"isFromExpandedSearch":false,"companyForTitle":"","company":"","location":"","onmousedown":"","tag":"","isSponsored":false},"salary":"","showNewMarker":false,"sponsorAccount":"","sponsorAccountBranch":"","tag":"","tags":{},"title":"","titleSlug":"","trackClickAd":"","website":"","websiteCategory":"UNQUALIFIED","websiteNoWWW":""},"serpPosition":4,"sponsoredOrOrganicItem":false},{"adsenseAtfItem":false,"adsenseItem":false,"advertItem":false,"itemId":"dfp","itemProperties":{"adUnit":"textad_desktop_2","cssClass":"native","size":"[[1,1], \u0027fluid\u0027]","slotId":"partnership-result-bottom","type":"affiliate"},"promotedItem":false,"searchResult":{"actionType":"","advertId":"","advertPosition":0,"advertType":"","autoExpandRadiusDistance":null,"autoExpandRadiusLayout":null,"bodyHighlighted":"","budgetId":0,"company":"","companyForTitle":"","cpcInEur":0,"date":"","enumAdvertType":null,"fromSponsoredSearch":false,"index":-1,"isCpaEnabled":false,"isFromExpandedSearch":false,"isSponsored":false,"location":"","locations":null,"locationsLabel":null,"onMouseDown":"","openAdvertUrl":"","pageItemId":-1249053853,"parameterMap":{"date":"","website":"","trackClickAd":"","showNewMarker":false,"fromSponsoredSearch":false,"sponsorAccount":"","budgetId":0,"isCpaEnabled":false,"salary":"","sponsorAccountBranch":"","title":"","openAdvertUrl":"","advertId":"","tags":{},"cpcInEur":0,"isFromExpandedSearch":false,"companyForTitle":"","company":"","location":"","onmousedown":"","tag":"","isSponsored":false},"salary":"","showNewMarker":false,"sponsorAccount":"","sponsorAccountBranch":"","tag":"","tags":{},"title":"","titleSlug":"","trackClickAd":"","website":"","websiteCategory":"UNQUALIFIED","websiteNoWWW":""},"serpPosition":11,"sponsoredOrOrganicItem":false}],
     anchorAdParameters: [],
     anchorEnabled: false
   };
@@ -216,11 +463,11 @@
       email: '',
       confirmed:false
   };
-  jrConfigGlobal.user = {"gclid":null,"hostJustCreated":false,"hostPostgresId":"185126929935","hostRegistered":false,"id":"185126929935","isJobSeeker":false,"isNotConfirmed":true,"mail":null,"md5EncodedEmail":null,"msclkid":null,"sha256EncodedEmail":null,"shortId":null,"subscribedEmail":null,"uuid":"185126929935"},
+  jrConfigGlobal.user = {"gclid":null,"hostJustCreated":false,"hostPostgresId":"185131694976","hostRegistered":false,"id":"185131694976","isJobSeeker":false,"isNotConfirmed":true,"mail":null,"md5EncodedEmail":null,"msclkid":null,"sha256EncodedEmail":null,"shortId":null,"subscribedEmail":null,"uuid":"185131694976"},
   jrConfigGlobal.jobletter = {
     jobseeker: {
       parentShardId: '',
-      parentUserId: '185126929935',
+      parentUserId: '185131694976',
         registrationConfirmed: false,
     }
   };
@@ -237,63 +484,63 @@
   };
   jrConfigGlobal.searchResults = {
       
-      '7733334767466184704': {
-        'location': 'Comisión De Fomento De Perú'
+      '6610970377843638272': {
+        'location': 'Rosario'
       }
       ,
-      '1663349297250304000': {
-        'location': 'Rincón De Los Sauces'
+      '1041091380610334720': {
+        'location': 'Rosario'
       }
       ,
-      '7215684418231336960': {
-        'location': 'Comisión De Fomento De Perú'
+      '1083868533323988992': {
+        'location': 'Rosario'
       }
       ,
-      '6476288961953136640': {
-        'location': 'Capital Federal'
+      '992287564146671616': {
+        'location': 'Rosario'
       }
       ,
-      '8454252659182927872': {
-        'location': 'Villa Sarmiento'
+      '8862848428653150208': {
+        'location': 'Rosario'
       }
       ,
-      '5611597833498001408': {
-        'location': 'Comisión De Fomento De Perú'
+      '952437483184848896': {
+        'location': 'Rosario'
       }
       ,
-      '3387671739088502784': {
-        'location': 'Vicente López'
+      '3015584466165825536': {
+        'location': 'Rosario'
       }
       ,
-      '7983250187046879232': {
-        'location': 'Comisión De Fomento De Perú'
+      '7492000798843338752': {
+        'location': 'Rosario'
       }
       ,
-      '7267004123457781760': {
-        'location': 'Capital Federal'
+      '3477430752000344064': {
+        'location': 'Rosario'
       }
       ,
-      '6340234705937367040': {
-        'location': 'Comisión De Fomento De Perú'
+      '4431451359056756736': {
+        'location': 'Rosario'
       }
       ,
-      '1078373377145569280': {
-        'location': 'Córdoba Capital'
+      '7850633454277361664': {
+        'location': 'Rosario'
       }
       ,
-      '8047277635350298624': {
-        'location': 'Comisión De Fomento De Perú'
+      '2183592195045457920': {
+        'location': 'Rosario'
       }
       ,
-      '4719108439752572928': {
-        'location': 'Comisión De Fomento De Perú'
+      '7305174703629402112': {
+        'location': 'Rosario'
       }
       ,
-      '2695227834498023424': {
-        'location': 'Comisión De Fomento De Perú'
+      '2773743378943180800': {
+        'location': 'Rosario'
       }
       ,
-      '5600490360875778048': {
+      '1742023274449076224': {
         'location': 'Rosario'
       }
   };
@@ -326,7 +573,7 @@
     {value: 30, label: '30 mi'},
     {value: 40, label: '40 mi'}];
   jrConfigGlobal.canShowSubscriptionPopup = true;
-  jrConfigGlobal.correlationId = '971f769d-6b92-4019-b594-8db72a4290e6';
+  jrConfigGlobal.correlationId = '3fd46b38-8632-424d-84fa-b3823f825681';
   jrConfigGlobal.showActivateProfileConfirmDialog = false;
   jrConfigGlobal.onboardingTooltipEnabled = false;
   jrConfigGlobal.gdprAccepted = false;
@@ -509,14 +756,14 @@
                                                         .setTargeting('what', gpt.config.what.replace(/&#x27;/g, "\u0060"))
                                                         .setTargeting('where', gpt.config.where.replace(/&#x27;/g, "\u0060"))
                                                         .setTargeting('language', 'es')
-                                                        .setTargeting('jobtomeFormattedUrl', '%2F%3Fl%3D%26k%3Dgerente%20operaciones%26t%3D1791989934132%26v%3De6298dba72bb824cdd4cead79952ebb7')
+                                                        .setTargeting('jobtomeFormattedUrl', '%2F%3Fl%3D%26k%3Dgerente%20operaciones%26t%3D1795677806636%26v%3D18eeb73006e4060d0593ef5317e8e3a7')
                                                         .setTargeting('zeroResults',  'false' )
                                                         .setTargeting('what_set', '1')
                                                         .setTargeting('where_set', '0')
                                                           .setTargeting('UserType', 'Anonymous')
                                                           .setTargeting('keyword', 'gerente operaciones')
                                                         .setTargeting('pageItemId', slotParams.pageItemId)
-                                                        .setTargeting('jobseekerId', 185126929935 ? 185126929935 : '')
+                                                        .setTargeting('jobseekerId', 185131694976 ? 185131694976 : '')
                                                         .setTargeting('taxonomyCode', '')
                                                         .setTargeting('attributionToken', '')
                                                         .setTargeting('dyn_const_ar', 'br_other_no-test_no-t-what')
@@ -726,6 +973,9 @@
                                                                                                                                                                                                                                  });
                                                                                                                                                                                                                            
                                                                                                                                                                                                                                  pbjs.que.push(function() {
+                                                                                                                                                                                                                                     // Add ad units / request bids only once per page view
+                                                                                                                                                                                                                                     if (pbjs.jrAuctionRequested) return;
+                                                                                                                                                                                                                                     pbjs.jrAuctionRequested = true;
                                                                                                                                                                                                                                      pbjs.addAdUnits(adUnits);
                                                                                                                                                                                                                                      pbjs.requestBids({
                                                                                                                                                                                                                                          bidsBackHandler: sendAdserverRequest
@@ -796,7 +1046,7 @@ if (dfpParametersConfig.length > 0) {
                                                                                                                                                                                                                                          wrapperId: 'partnership-result-top',
                                                                                                                                                                                                                                          hasNotStaticSize: true,
                                                                                                                                                                                                                                          isSerpListing: true,
-                                                                                                                                                                                                                                         pageItemId: -1863280642
+                                                                                                                                                                                                                                         pageItemId: -1206639070
                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                        });
@@ -806,7 +1056,7 @@ if (dfpParametersConfig.length > 0) {
                                                                                                                                                                                                                                          wrapperId: 'partnership-result-bottom',
                                                                                                                                                                                                                                          hasNotStaticSize: true,
                                                                                                                                                                                                                                          isSerpListing: true,
-                                                                                                                                                                                                                                         pageItemId: 290017381
+                                                                                                                                                                                                                                         pageItemId: -1249053853
                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                        });
@@ -836,7 +1086,7 @@ if (dfpParametersConfig.length > 0) {
                                                                                                                                                                                                                              });
                                                                                                                                                                                                                            </script>
 
-  <meta name="keywords" content="Gerente,Gerente Operativo,Gerente Servicio,Gerente Calidad,Gerente Desarrollo,Comercial,Gerente Comercial,Operaciones Comerciales,Ventas,Gerente Ventas">
+  <meta name="keywords" content="Gerente,Gerente Servicio,Gerente Desarrollo,Gerente Calidad,Comercial,Operaciones Comerciales,Gerente Comercial,Servicio Clientes,Administración Del Estado,Gerente Administración">
   <link rel="canonical" href="https://ar.jobrapido.com/Ofertas-de-trabajo-para-Gerente-Operaciones?p=4">
   <link rel="prev" href="https://ar.jobrapido.com/Ofertas-de-trabajo-para-Gerente-Operaciones?p=3">
   <link rel="next" href="https://ar.jobrapido.com/Ofertas-de-trabajo-para-Gerente-Operaciones?p=5">
@@ -870,7 +1120,7 @@ if (dfpParametersConfig.length > 0) {
 <![endif]-->
    
         <script>
-            dataLayer = [{"deviceType":"desktop","searchWhat":"gerente operaciones","conversionOwner":"","visitSource":"","visitType":"brand","pageUUID":"arF001a13b23552179b5","pageType":"results","vstUUID":"arF001a13b0060af4ace","trackingOrderId":0,"zeroResults":false,"zeroResultContext":false,"searchWhere":"","jsUUID":185126929935,"acquisitionSource":"","jsMD5":null}];
+            dataLayer = [{"deviceType":"desktop","searchWhat":"gerente operaciones","conversionOwner":"","visitSource":"","visitType":"brand","pageUUID":"arF001a216bcded5253b","pageType":"results","vstUUID":"arF001a2169cd8653f35","trackingOrderId":0,"zeroResults":false,"zeroResultContext":false,"searchWhere":"","jsUUID":185131694976,"acquisitionSource":"","jsMD5":null}];
         </script>
 
   <link rel="apple-touch-icon" sizes="57x57" href="//resources.jobrapido.com/static/img/favicon/apple-icon-57x57.png">
@@ -989,7 +1239,7 @@ if (dfpParametersConfig.length > 0) {
                                                                                                                                                                                                                'personalizedAds': true,
                                                                                                                                                                                                                'adLoadedCallback': googleCsaRequestDone,
                                                                                                                                                                                                                
-                                                                                                                                                                                                               'clicktrackUrl': 'https://ar.jobrapido.com/track/adsense/arF001a13b23552179b5/' + jrConfigGlobal.search.page.number,
+                                                                                                                                                                                                               'clicktrackUrl': 'https://ar.jobrapido.com/track/adsense/arF001a216bcded5253b/' + jrConfigGlobal.search.page.number,
                                                                                                                                                                                                                'longerHeadlines': true,
                                                                                                                                                                                                                'detailedAttribution': false,
                                                                                                                                                                                                                'plusOnes': false,
@@ -1139,20 +1389,20 @@ if (dfpParametersConfig.length > 0) {
     </div>
   </form>
   <div class="shinfo" shlast="" sh=""></div>
-                                                                                        <div class="serp-tips-wrapper incomplete-statement-suggestion empty-where-suggestions js-empty-where js-tips">
-                                                                                          <i class="icon-close js-tip-close"></i>
-                                                                                          <div class="serp-tips-innerbox">
-                                                                                            <ul>
-                                                                                                <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
-                                                                                                    href="https://ar.jobrapido.com/?w=gerente operaciones&l=gran buenos aires&shm=all">Gran Buenos Aires</a></li>
-                                                                                                <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
-                                                                                                    href="https://ar.jobrapido.com/?w=gerente operaciones&l=capital federal&shm=all">Capital Federal</a></li>
-                                                                                                <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
-                                                                                                    href="https://ar.jobrapido.com/?w=gerente operaciones&l=la pampa&shm=all">La Pampa</a></li>
-                                                                                            </ul>
-                                                                                          </div>
-                                                                                        </div>
-                                           </div>
+  <div class="serp-tips-wrapper incomplete-statement-suggestion empty-where-suggestions js-empty-where js-tips">
+    <i class="icon-close js-tip-close"></i>
+    <div class="serp-tips-innerbox">
+      <ul>
+          <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
+              href="https://ar.jobrapido.com/?w=gerente operaciones&l=gran buenos aires&shm=all">Gran Buenos Aires</a></li>
+          <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
+              href="https://ar.jobrapido.com/?w=gerente operaciones&l=capital federal&shm=all">Capital Federal</a></li>
+          <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
+              href="https://ar.jobrapido.com/?w=gerente operaciones&l=mendoza&shm=all">Mendoza</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 </header>
 
 
@@ -1160,29 +1410,29 @@ if (dfpParametersConfig.length > 0) {
         <div class="jr-modal-wrapper"></div>
         <div class="main-container-row serp-content" 
           ng-controller="FavouriteJobsSerpController as favouriteJobsCtrl" >
-                      <aside class="left-column left-sidebar">
-                        <div class="search-filters">
+<aside class="left-column left-sidebar">
+  <div class="search-filters">
 
-                                                            <h1 class="jobs-h1 sr-only">
-                                                              Ofertas de trabajo para Gerente Operaciones
-                                                            </h1>
-                                                                                      
-                                                                                      
-                                                                                      <div class="nav-breadcrumbs">
-                                                                                        <a href="?l=ar" data-google-interstitial=false itemprop="item">
-                                                                                          Trabajos
-                                                                                        </a>
-                                                                                          &gt; 
-                                                                                          <a href="?w=gerente operaciones" data-google-interstitial=false itemprop="item">
-                                                                                            Gerente Operaciones
-                                                                                          </a>
-                                                                                      
-                                                                                      </div>
-                          <div class="js-my-searches-wrapper">
-                          </div>
-                      
-                                <div class="serp-filters"></div>
-                      
+                <h1 class="jobs-h1 sr-only">
+                  Ofertas de trabajo para Gerente Operaciones
+                </h1>
+                    
+                    
+                    <div class="nav-breadcrumbs">
+                      <a href="?l=ar" data-google-interstitial=false itemprop="item">
+                        Trabajos
+                      </a>
+                        &gt; 
+                        <a href="?w=gerente operaciones" data-google-interstitial=false itemprop="item">
+                          Gerente Operaciones
+                        </a>
+                    
+                    </div>
+    <div class="js-my-searches-wrapper">
+    </div>
+
+          <div class="serp-filters"></div>
+
 <div>
     <h3 class="h6 filter-title"><i class="location" aria-hidden="true"></i>Localidad</h3>
     <ul class="filter-list top-locations-filter">
@@ -1198,37 +1448,37 @@ if (dfpParametersConfig.length > 0) {
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="2" href="/Ofertas-de-trabajo-para-Gerente-Operaciones-en-La-Pampa?shm=all" class="top-locations-link" data-google-interstitial=false>La Pampa</a>
+          <a index="2" href="/Ofertas-de-trabajo-para-Gerente-Operaciones-en-Mendoza?shm=all" class="top-locations-link" data-google-interstitial=false>Mendoza</a>
           
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="3" href="/Ofertas-de-trabajo-para-Gerente-Operaciones-en-C%C3%B3rdoba?shm=all" class="top-locations-link" data-google-interstitial=false>Córdoba</a>
+          <a index="3" href="/Ofertas-de-trabajo-para-Gerente-Operaciones-en-Santa-F%C3%A9?shm=all" class="top-locations-link" data-google-interstitial=false>Santa Fé</a>
           
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="4" href="/Ofertas-de-trabajo-para-Gerente-Operaciones-en-Santa-F%C3%A9?shm=all" class="top-locations-link" data-google-interstitial=false>Santa Fé</a>
+          <a index="4" href="/Ofertas-de-trabajo-para-Gerente-Operaciones-en-Neuqu%C3%A9n?shm=all" class="top-locations-link" data-google-interstitial=false>Neuquén</a>
           
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="5" href="/Ofertas-de-trabajo-para-Gerente-Operaciones-en-Gba-Norte?shm=all" class="top-locations-link" data-google-interstitial=false>Gba Norte</a>
+          <a index="5" href="/Ofertas-de-trabajo-para-Gerente-Operaciones-en-C%C3%B3rdoba?shm=all" class="top-locations-link" data-google-interstitial=false>Córdoba</a>
           
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="6" href="/Ofertas-de-trabajo-para-Gerente-Operaciones-en-Neuqu%C3%A9n?shm=all" class="top-locations-link" data-google-interstitial=false>Neuquén</a>
+          <a index="6" href="/Ofertas-de-trabajo-para-Gerente-Operaciones-en-Gba-Norte?shm=all" class="top-locations-link" data-google-interstitial=false>Gba Norte</a>
           
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="7" href="/Ofertas-de-trabajo-para-Gerente-Operaciones-en-Gba-Oeste?shm=all" class="top-locations-link" data-google-interstitial=false>Gba Oeste</a>
+          <a index="7" href="/Ofertas-de-trabajo-para-Gerente-Operaciones-en-Rosario?shm=all" class="top-locations-link" data-google-interstitial=false>Rosario</a>
           
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="8" href="/Ofertas-de-trabajo-para-Gerente-Operaciones-en-Rosario?shm=all" class="top-locations-link" data-google-interstitial=false>Rosario</a>
+          <a index="8" href="/Ofertas-de-trabajo-para-Gerente-Operaciones-en-Tandil?shm=all" class="top-locations-link" data-google-interstitial=false>Tandil</a>
           
         </li>
         <li class="suggested-locations-item">
@@ -1242,35 +1492,35 @@ if (dfpParametersConfig.length > 0) {
       <ul class="filter-list suggested-jobs-filter">
           <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="0" href="/Ofertas-de-trabajo-para-Gerente?shm=all"
               class="top-locations-link" data-google-interstitial=false>Gerente</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="1" href="/Ofertas-de-trabajo-para-Gerente-Operativo?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Gerente Operativo</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="2" href="/Ofertas-de-trabajo-para-Gerente-Servicio?shm=all"
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="1" href="/Ofertas-de-trabajo-para-Gerente-Servicio?shm=all"
               class="top-locations-link" data-google-interstitial=false>Gerente Servicio</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="2" href="/Ofertas-de-trabajo-para-Gerente-Desarrollo?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Gerente Desarrollo</a></li>
           <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="3" href="/Ofertas-de-trabajo-para-Gerente-Calidad?shm=all"
               class="top-locations-link" data-google-interstitial=false>Gerente Calidad</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="4" href="/Ofertas-de-trabajo-para-Gerente-Desarrollo?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Gerente Desarrollo</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="5" href="/Ofertas-de-trabajo-para-Comercial?shm=all"
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="4" href="/Ofertas-de-trabajo-para-Comercial?shm=all"
               class="top-locations-link" data-google-interstitial=false>Comercial</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="5" href="/Ofertas-de-trabajo-para-Operaciones-Comerciales?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Operaciones Comerciales</a></li>
           <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="6" href="/Ofertas-de-trabajo-para-Gerente-Comercial?shm=all"
               class="top-locations-link" data-google-interstitial=false>Gerente Comercial</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="7" href="/Ofertas-de-trabajo-para-Operaciones-Comerciales?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Operaciones Comerciales</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="8" href="/Ofertas-de-trabajo-para-Ventas?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Ventas</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="9" href="/Ofertas-de-trabajo-para-Gerente-Ventas?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Gerente Ventas</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="7" href="/Ofertas-de-trabajo-para-Servicio-Clientes?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Servicio Clientes</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="8" href="/Ofertas-de-trabajo-para-Administraci%C3%B3n-Del-Estado?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Administración Del Estado</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="9" href="/Ofertas-de-trabajo-para-Gerente-Administraci%C3%B3n?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Gerente Administración</a></li>
       </ul>
 
 </div>
-                      
-                      
-                        </div>
-                      
+
+
+  </div>
+
     <div class="banner-box js-banner portrait" ng-non-bindable>
       <div id="banner-aside-left" class="banner"></div>
     </div>
-                      </aside>
+</aside>
           <div class="main-content-wrapper" >
             <section id="results" class="main-section">
                                                                                                                                               <script>
@@ -1301,42 +1551,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"7733334767466184704","advertPosition":0,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Acciona Group","companyForTitle":"Acciona Group","cpcInEur":0,"date":"09 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"locationsLabel":"Comisi\u00F3n De Fomento De Per\u00FA","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/7733334767466184704/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a13b23552179b5&page_item_id=-1401597117","pageItemId":-1401597117,"parameterMap":{"date":"09 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Coordinador/a de O&M de Redes de Agua \u2013 Internacional","openAdvertUrl":"https://open.app.jobrapido.com/ar/7733334767466184704/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a13b23552179b5&page_item_id=-1401597117","advertId":"7733334767466184704","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Acciona Group","company":"Acciona Group","location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Coordinador/a de O&M de Redes de Agua \u2013 Internacional","titleSlug":"coordinador-a-de-o-m-de-redes-de-agua-internacional","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='1' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"6610970377843638272","advertPosition":0,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Grassi Sa","companyForTitle":"Grassi Sa","cpcInEur":0,"date":"10 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/6610970377843638272/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a216bcded5253b&page_item_id=1983525812","pageItemId":1983525812,"parameterMap":{"date":"10 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Gerente De Negocio Log\u00EDstico","openAdvertUrl":"https://open.app.jobrapido.com/ar/6610970377843638272/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a216bcded5253b&page_item_id=1983525812","advertId":"6610970377843638272","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Grassi Sa","company":"Grassi Sa","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Gerente De Negocio Log\u00EDstico","titleSlug":"gerente-de-negocio-logistico","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='1' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Coordinador/a de O&M de Redes de Agua – Internacional  - Comisión De Fomento De Perú
+        Open job preview for: Gerente De Negocio Logístico  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Coordinador/a de O&M de Redes de Agua – Internacional
+      Gerente De Negocio Logístico
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Comisión De Fomento De Perú
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Acciona Group
+          Grassi Sa
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(7733334767466184704)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(7733334767466184704) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(6610970377843638272)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(6610970377843638272) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(7733334767466184704)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(6610970377843638272)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1346,12 +1596,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_7733334767466184704" tc="" ai="7733334767466184704"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/7733334767466184704/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a13b23552179b5&page_item_id=-1401597117"   target="_blank"  
+    <a class="result-item__link" id="a_6610970377843638272" tc="" ai="6610970377843638272"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/6610970377843638272/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a216bcded5253b&page_item_id=1983525812"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Coordinador/a de O&M de Redes de Agua – Internacional  - Comisión De Fomento De Perú
+        Open job preview for: Gerente De Negocio Logístico  - Rosario
       </span>
     </a>
   </div>
@@ -1360,42 +1610,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1663349297250304000","advertPosition":1,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Pedidosya","companyForTitle":"Pedidosya","cpcInEur":0,"date":"02 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rinc\u00F3n De Los Sauces","locations":["Rinc\u00F3n De Los Sauces"],"locationsLabel":"Rinc\u00F3n De Los Sauces","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1663349297250304000/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a13b23552179b5&page_item_id=-670937715","pageItemId":-670937715,"parameterMap":{"date":"02 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Strategic Remote Recruitment Partnerships Lead","openAdvertUrl":"https://open.app.jobrapido.com/ar/1663349297250304000/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a13b23552179b5&page_item_id=-670937715","advertId":"1663349297250304000","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Pedidosya","company":"Pedidosya","location":"Rinc\u00F3n De Los Sauces","locations":["Rinc\u00F3n De Los Sauces"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Strategic Remote Recruitment Partnerships Lead","titleSlug":"strategic-remote-recruitment-partnerships-lead","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='2' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1041091380610334720","advertPosition":1,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Singular.H","companyForTitle":"Singular.H","cpcInEur":0,"date":"20 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1041091380610334720/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a216bcded5253b&page_item_id=-702570400","pageItemId":-702570400,"parameterMap":{"date":"20 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Controller - Advanced English (Remote)","openAdvertUrl":"https://open.app.jobrapido.com/ar/1041091380610334720/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a216bcded5253b&page_item_id=-702570400","advertId":"1041091380610334720","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Singular.H","company":"Singular.H","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Controller - Advanced English (Remote)","titleSlug":"controller-advanced-english-remote","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='2' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Strategic Remote Recruitment Partnerships Lead  - Rincón De Los Sauces
+        Open job preview for: Controller - Advanced English (Remote)  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Strategic Remote Recruitment Partnerships Lead
+      Controller - Advanced English (Remote)
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Rincón De Los Sauces
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Pedidosya
+          Singular.H
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(1663349297250304000)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(1663349297250304000) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(1041091380610334720)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(1041091380610334720) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1663349297250304000)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1041091380610334720)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1405,12 +1655,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_1663349297250304000" tc="" ai="1663349297250304000"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1663349297250304000/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a13b23552179b5&page_item_id=-670937715"   target="_blank"  
+    <a class="result-item__link" id="a_1041091380610334720" tc="" ai="1041091380610334720"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1041091380610334720/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a216bcded5253b&page_item_id=-702570400"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Strategic Remote Recruitment Partnerships Lead  - Rincón De Los Sauces
+        Open job preview for: Controller - Advanced English (Remote)  - Rosario
       </span>
     </a>
   </div>
@@ -1419,42 +1669,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"7215684418231336960","advertPosition":2,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Geovictoria group","companyForTitle":"Geovictoria group","cpcInEur":0,"date":"06 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"locationsLabel":"Comisi\u00F3n De Fomento De Per\u00FA","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/7215684418231336960/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a13b23552179b5&page_item_id=1264260397","pageItemId":1264260397,"parameterMap":{"date":"06 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"L\u00EDder de Posventa SaaS B2B \u2013 Retenci\u00F3n y Crecimiento","openAdvertUrl":"https://open.app.jobrapido.com/ar/7215684418231336960/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a13b23552179b5&page_item_id=1264260397","advertId":"7215684418231336960","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Geovictoria group","company":"Geovictoria group","location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"L\u00EDder de Posventa SaaS B2B \u2013 Retenci\u00F3n y Crecimiento","titleSlug":"lider-de-posventa-saas-b2b-retencion-y-crecimiento","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='3' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1083868533323988992","advertPosition":2,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"3M","companyForTitle":"3M","cpcInEur":0,"date":"03 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1083868533323988992/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a216bcded5253b&page_item_id=-9253830","pageItemId":-9253830,"parameterMap":{"date":"03 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Gerente Regional De Cuentas Claves - B2B Industrial Remoto","openAdvertUrl":"https://open.app.jobrapido.com/ar/1083868533323988992/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a216bcded5253b&page_item_id=-9253830","advertId":"1083868533323988992","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"3M","company":"3M","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Gerente Regional De Cuentas Claves - B2B Industrial Remoto","titleSlug":"gerente-regional-de-cuentas-claves-b2b-industrial-remoto","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='3' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Líder de Posventa SaaS B2B – Retención y Crecimiento  - Comisión De Fomento De Perú
+        Open job preview for: Gerente Regional De Cuentas Claves - B2B Industrial Remoto  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Líder de Posventa SaaS B2B – Retención y Crecimiento
+      Gerente Regional De Cuentas Claves - B2B Industrial Remoto
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Comisión De Fomento De Perú
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Geovictoria group
+          3M
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(7215684418231336960)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(7215684418231336960) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(1083868533323988992)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(1083868533323988992) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(7215684418231336960)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1083868533323988992)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1464,12 +1714,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_7215684418231336960" tc="" ai="7215684418231336960"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/7215684418231336960/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a13b23552179b5&page_item_id=1264260397"   target="_blank"  
+    <a class="result-item__link" id="a_1083868533323988992" tc="" ai="1083868533323988992"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1083868533323988992/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a216bcded5253b&page_item_id=-9253830"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Líder de Posventa SaaS B2B – Retención y Crecimiento  - Comisión De Fomento De Perú
+        Open job preview for: Gerente Regional De Cuentas Claves - B2B Industrial Remoto  - Rosario
       </span>
     </a>
   </div>
@@ -1482,42 +1732,42 @@ if (dfpParametersConfig.length > 0) {
   
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"6476288961953136640","advertPosition":3,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"RH Master - Recursos Humanos","companyForTitle":"RH Master - Recursos Humanos","cpcInEur":0,"date":"08 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal","locations":["Capital Federal"],"locationsLabel":"Capital Federal","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/6476288961953136640/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a13b23552179b5&page_item_id=392220777","pageItemId":392220777,"parameterMap":{"date":"08 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Gerente De Log\u00EDstica","openAdvertUrl":"https://open.app.jobrapido.com/ar/6476288961953136640/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a13b23552179b5&page_item_id=392220777","advertId":"6476288961953136640","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"RH Master - Recursos Humanos","company":"RH Master - Recursos Humanos","location":"Capital Federal","locations":["Capital Federal"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Gerente De Log\u00EDstica","titleSlug":"gerente-de-logistica","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='5' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"992287564146671616","advertPosition":3,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Linkup","companyForTitle":"Linkup","cpcInEur":0,"date":"10 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/992287564146671616/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a216bcded5253b&page_item_id=117978680","pageItemId":117978680,"parameterMap":{"date":"10 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Gerente Comercial B2B: Lidera Ventas Y Estrategia","openAdvertUrl":"https://open.app.jobrapido.com/ar/992287564146671616/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a216bcded5253b&page_item_id=117978680","advertId":"992287564146671616","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Linkup","company":"Linkup","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Gerente Comercial B2B: Lidera Ventas Y Estrategia","titleSlug":"gerente-comercial-b2b-lidera-ventas-y-estrategia","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='5' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Gerente De Logística  - Capital Federal
+        Open job preview for: Gerente Comercial B2B: Lidera Ventas Y Estrategia  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Gerente De Logística
+      Gerente Comercial B2B: Lidera Ventas Y Estrategia
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Capital Federal
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          RH Master - Recursos Humanos
+          Linkup
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(6476288961953136640)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(6476288961953136640) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(992287564146671616)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(992287564146671616) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(6476288961953136640)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(992287564146671616)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1527,12 +1777,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_6476288961953136640" tc="" ai="6476288961953136640"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/6476288961953136640/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a13b23552179b5&page_item_id=392220777"   target="_blank"  
+    <a class="result-item__link" id="a_992287564146671616" tc="" ai="992287564146671616"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/992287564146671616/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a216bcded5253b&page_item_id=117978680"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Gerente De Logística  - Capital Federal
+        Open job preview for: Gerente Comercial B2B: Lidera Ventas Y Estrategia  - Rosario
       </span>
     </a>
   </div>
@@ -1541,42 +1791,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8454252659182927872","advertPosition":4,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Miniso Argentina","companyForTitle":"Miniso Argentina","cpcInEur":0,"date":"11 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Villa Sarmiento","locations":["Villa Sarmiento"],"locationsLabel":"Villa Sarmiento","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8454252659182927872/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a13b23552179b5&page_item_id=-390146088","pageItemId":-390146088,"parameterMap":{"date":"11 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Gerente de Tienda Retail: Liderazgo, Ventas y Experiencia","openAdvertUrl":"https://open.app.jobrapido.com/ar/8454252659182927872/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a13b23552179b5&page_item_id=-390146088","advertId":"8454252659182927872","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Miniso Argentina","company":"Miniso Argentina","location":"Villa Sarmiento","locations":["Villa Sarmiento"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Gerente de Tienda Retail: Liderazgo, Ventas y Experiencia","titleSlug":"gerente-de-tienda-retail-liderazgo-ventas-y-experiencia","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='6' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8862848428653150208","advertPosition":4,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Travelwithjess04","companyForTitle":"Travelwithjess04","cpcInEur":0,"date":"03 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8862848428653150208/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a216bcded5253b&page_item_id=-900948513","pageItemId":-900948513,"parameterMap":{"date":"03 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Gestor De Cuentas Clave \u2013 Rosario","openAdvertUrl":"https://open.app.jobrapido.com/ar/8862848428653150208/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a216bcded5253b&page_item_id=-900948513","advertId":"8862848428653150208","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Travelwithjess04","company":"Travelwithjess04","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Gestor De Cuentas Clave \u2013 Rosario","titleSlug":"gestor-de-cuentas-clave-rosario","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='6' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Gerente de Tienda Retail: Liderazgo, Ventas y Experiencia  - Villa Sarmiento
+        Open job preview for: Gestor De Cuentas Clave – Rosario  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Gerente de Tienda Retail: Liderazgo, Ventas y Experiencia
+      Gestor De Cuentas Clave – Rosario
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Villa Sarmiento
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Miniso Argentina
+          Travelwithjess04
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(8454252659182927872)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(8454252659182927872) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(8862848428653150208)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(8862848428653150208) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(8454252659182927872)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(8862848428653150208)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1586,12 +1836,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_8454252659182927872" tc="" ai="8454252659182927872"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8454252659182927872/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a13b23552179b5&page_item_id=-390146088"   target="_blank"  
+    <a class="result-item__link" id="a_8862848428653150208" tc="" ai="8862848428653150208"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8862848428653150208/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a216bcded5253b&page_item_id=-900948513"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Gerente de Tienda Retail: Liderazgo, Ventas y Experiencia  - Villa Sarmiento
+        Open job preview for: Gestor De Cuentas Clave – Rosario  - Rosario
       </span>
     </a>
   </div>
@@ -1600,42 +1850,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"5611597833498001408","advertPosition":5,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"BBVA","companyForTitle":"BBVA","cpcInEur":0,"date":"08 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"locationsLabel":"Comisi\u00F3n De Fomento De Per\u00FA","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/5611597833498001408/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a13b23552179b5&page_item_id=-218610172","pageItemId":-218610172,"parameterMap":{"date":"08 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Ejecutivo de Negocios - Banca Responsable","openAdvertUrl":"https://open.app.jobrapido.com/ar/5611597833498001408/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a13b23552179b5&page_item_id=-218610172","advertId":"5611597833498001408","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"BBVA","company":"BBVA","location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Ejecutivo de Negocios - Banca Responsable","titleSlug":"ejecutivo-de-negocios-banca-responsable","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='7' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"952437483184848896","advertPosition":5,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Grupo Ceta Argentina","companyForTitle":"Grupo Ceta Argentina","cpcInEur":0,"date":"26 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/952437483184848896/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a216bcded5253b&page_item_id=1638779521","pageItemId":1638779521,"parameterMap":{"date":"26 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Jefe/a de C\u00E1maras, Cargas y Despacho \u2013 Industria Frigor\u00EDfica - Rosario y alrededores, Santa Fe","openAdvertUrl":"https://open.app.jobrapido.com/ar/952437483184848896/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a216bcded5253b&page_item_id=1638779521","advertId":"952437483184848896","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Grupo Ceta Argentina","company":"Grupo Ceta Argentina","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Jefe/a de C\u00E1maras, Cargas y Despacho \u2013 Industria Frigor\u00EDfica - Rosario y alrededores, Santa Fe","titleSlug":"jefe-a-de-camaras-cargas-y-despacho-industria-frigorifica-rosario-y-alrededores-santa-fe","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='7' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Ejecutivo de Negocios - Banca Responsable  - Comisión De Fomento De Perú
+        Open job preview for: Jefe/a de Cámaras, Cargas y Despacho – Industria Frigorífica - Rosario y alrededores, Santa Fe  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Ejecutivo de Negocios - Banca Responsable
+      Jefe/a de Cámaras, Cargas y Despacho – Industria Frigorífica - Rosario y alrededores, Santa Fe
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Comisión De Fomento De Perú
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          BBVA
+          Grupo Ceta Argentina
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(5611597833498001408)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(5611597833498001408) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(952437483184848896)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(952437483184848896) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(5611597833498001408)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(952437483184848896)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1645,12 +1895,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_5611597833498001408" tc="" ai="5611597833498001408"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/5611597833498001408/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a13b23552179b5&page_item_id=-218610172"   target="_blank"  
+    <a class="result-item__link" id="a_952437483184848896" tc="" ai="952437483184848896"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/952437483184848896/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a216bcded5253b&page_item_id=1638779521"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Ejecutivo de Negocios - Banca Responsable  - Comisión De Fomento De Perú
+        Open job preview for: Jefe/a de Cámaras, Cargas y Despacho – Industria Frigorífica - Rosario y alrededores, Santa Fe  - Rosario
       </span>
     </a>
   </div>
@@ -1659,42 +1909,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"3387671739088502784","advertPosition":6,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"DIA","companyForTitle":"DIA","cpcInEur":0,"date":"08 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Vicente L\u00F3pez","locations":["Vicente L\u00F3pez"],"locationsLabel":"Vicente L\u00F3pez","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/3387671739088502784/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a13b23552179b5&page_item_id=786428012","pageItemId":786428012,"parameterMap":{"date":"08 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"L\u00EDder de Ventas Retail - Estrategia y Operaciones","openAdvertUrl":"https://open.app.jobrapido.com/ar/3387671739088502784/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a13b23552179b5&page_item_id=786428012","advertId":"3387671739088502784","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"DIA","company":"DIA","location":"Vicente L\u00F3pez","locations":["Vicente L\u00F3pez"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"L\u00EDder de Ventas Retail - Estrategia y Operaciones","titleSlug":"lider-de-ventas-retail-estrategia-y-operaciones","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='8' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"3015584466165825536","advertPosition":6,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Ezequiel Pereyra - B\u00FAsqueda y Selecci\u00F3n","companyForTitle":"Ezequiel Pereyra - B\u00FAsqueda y Selecci\u00F3n","cpcInEur":0,"date":"19 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/3015584466165825536/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a216bcded5253b&page_item_id=1696680444","pageItemId":1696680444,"parameterMap":{"date":"19 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Coordinador/a general","openAdvertUrl":"https://open.app.jobrapido.com/ar/3015584466165825536/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a216bcded5253b&page_item_id=1696680444","advertId":"3015584466165825536","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Ezequiel Pereyra - B\u00FAsqueda y Selecci\u00F3n","company":"Ezequiel Pereyra - B\u00FAsqueda y Selecci\u00F3n","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Coordinador/a general","titleSlug":"coordinador-a-general","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='8' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Líder de Ventas Retail - Estrategia y Operaciones  - Vicente López
+        Open job preview for: Coordinador/a general  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Líder de Ventas Retail - Estrategia y Operaciones
+      Coordinador/a general
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Vicente López
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          DIA
+          Ezequiel Pereyra - Búsqueda y Selección
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(3387671739088502784)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(3387671739088502784) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(3015584466165825536)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(3015584466165825536) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(3387671739088502784)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(3015584466165825536)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1704,12 +1954,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_3387671739088502784" tc="" ai="3387671739088502784"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/3387671739088502784/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a13b23552179b5&page_item_id=786428012"   target="_blank"  
+    <a class="result-item__link" id="a_3015584466165825536" tc="" ai="3015584466165825536"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/3015584466165825536/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a216bcded5253b&page_item_id=1696680444"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Líder de Ventas Retail - Estrategia y Operaciones  - Vicente López
+        Open job preview for: Coordinador/a general  - Rosario
       </span>
     </a>
   </div>
@@ -1718,42 +1968,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"7983250187046879232","advertPosition":7,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Somos Sinergia","companyForTitle":"Somos Sinergia","cpcInEur":0,"date":"07 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"locationsLabel":"Comisi\u00F3n De Fomento De Per\u00FA","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/7983250187046879232/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a13b23552179b5&page_item_id=-350711245","pageItemId":-350711245,"parameterMap":{"date":"07 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Director de Operaciones y Cadena de Suministro","openAdvertUrl":"https://open.app.jobrapido.com/ar/7983250187046879232/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a13b23552179b5&page_item_id=-350711245","advertId":"7983250187046879232","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Somos Sinergia","company":"Somos Sinergia","location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Director de Operaciones y Cadena de Suministro","titleSlug":"director-de-operaciones-y-cadena-de-suministro","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='9' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"7492000798843338752","advertPosition":7,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"SINGULAR.H","companyForTitle":"SINGULAR.H","cpcInEur":0,"date":"09 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/7492000798843338752/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a216bcded5253b&page_item_id=582909329","pageItemId":582909329,"parameterMap":{"date":"09 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Controller / Gerente de Contabilidad \u2013 US GAAP \u2013 Ingl\u00E9s avanzado (Remoto)","openAdvertUrl":"https://open.app.jobrapido.com/ar/7492000798843338752/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a216bcded5253b&page_item_id=582909329","advertId":"7492000798843338752","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"SINGULAR.H","company":"SINGULAR.H","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Controller / Gerente de Contabilidad \u2013 US GAAP \u2013 Ingl\u00E9s avanzado (Remoto)","titleSlug":"controller-gerente-de-contabilidad-us-gaap-ingles-avanzado-remoto","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='9' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Director de Operaciones y Cadena de Suministro  - Comisión De Fomento De Perú
+        Open job preview for: Controller / Gerente de Contabilidad – US GAAP – Inglés avanzado (Remoto)  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Director de Operaciones y Cadena de Suministro
+      Controller / Gerente de Contabilidad – US GAAP – Inglés avanzado (Remoto)
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Comisión De Fomento De Perú
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Somos Sinergia
+          SINGULAR.H
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(7983250187046879232)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(7983250187046879232) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(7492000798843338752)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(7492000798843338752) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(7983250187046879232)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(7492000798843338752)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1763,12 +2013,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_7983250187046879232" tc="" ai="7983250187046879232"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/7983250187046879232/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a13b23552179b5&page_item_id=-350711245"   target="_blank"  
+    <a class="result-item__link" id="a_7492000798843338752" tc="" ai="7492000798843338752"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/7492000798843338752/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a216bcded5253b&page_item_id=582909329"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Director de Operaciones y Cadena de Suministro  - Comisión De Fomento De Perú
+        Open job preview for: Controller / Gerente de Contabilidad – US GAAP – Inglés avanzado (Remoto)  - Rosario
       </span>
     </a>
   </div>
@@ -1777,42 +2027,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"7267004123457781760","advertPosition":8,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Aesa (A-Evangelista Sa)","companyForTitle":"Aesa (A-Evangelista Sa)","cpcInEur":0,"date":"07 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal","locations":["Capital Federal"],"locationsLabel":"Capital Federal","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/7267004123457781760/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a13b23552179b5&page_item_id=636753226","pageItemId":636753226,"parameterMap":{"date":"07 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"L\u00EDder de Compras y Log\u00EDstica | Licitaciones Estrat\u00E9gicas","openAdvertUrl":"https://open.app.jobrapido.com/ar/7267004123457781760/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a13b23552179b5&page_item_id=636753226","advertId":"7267004123457781760","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Aesa (A-Evangelista Sa)","company":"Aesa (A-Evangelista Sa)","location":"Capital Federal","locations":["Capital Federal"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"L\u00EDder de Compras y Log\u00EDstica | Licitaciones Estrat\u00E9gicas","titleSlug":"lider-de-compras-y-logistica-licitaciones-estrategicas","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='10' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"3477430752000344064","advertPosition":8,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Tuttolomondo Consultores","companyForTitle":"Tuttolomondo Consultores","cpcInEur":0,"date":"25 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/3477430752000344064/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a216bcded5253b&page_item_id=2066730747","pageItemId":2066730747,"parameterMap":{"date":"25 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Subgerente Comercial Para - Empresa Log\u00EDstica e Industrial De Rosario","openAdvertUrl":"https://open.app.jobrapido.com/ar/3477430752000344064/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a216bcded5253b&page_item_id=2066730747","advertId":"3477430752000344064","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Tuttolomondo Consultores","company":"Tuttolomondo Consultores","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Subgerente Comercial Para - Empresa Log\u00EDstica e Industrial De Rosario","titleSlug":"subgerente-comercial-para-empresa-logistica-e-industrial-de-rosario","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='10' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Líder de Compras y Logística | Licitaciones Estratégicas  - Capital Federal
+        Open job preview for: Subgerente Comercial Para - Empresa Logística e Industrial De Rosario  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Líder de Compras y Logística | Licitaciones Estratégicas
+      Subgerente Comercial Para - Empresa Logística e Industrial De Rosario
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Capital Federal
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Aesa (A-Evangelista Sa)
+          Tuttolomondo Consultores
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(7267004123457781760)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(7267004123457781760) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(3477430752000344064)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(3477430752000344064) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(7267004123457781760)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(3477430752000344064)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1822,12 +2072,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_7267004123457781760" tc="" ai="7267004123457781760"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/7267004123457781760/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a13b23552179b5&page_item_id=636753226"   target="_blank"  
+    <a class="result-item__link" id="a_3477430752000344064" tc="" ai="3477430752000344064"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/3477430752000344064/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a216bcded5253b&page_item_id=2066730747"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Líder de Compras y Logística | Licitaciones Estratégicas  - Capital Federal
+        Open job preview for: Subgerente Comercial Para - Empresa Logística e Industrial De Rosario  - Rosario
       </span>
     </a>
   </div>
@@ -1841,315 +2091,20 @@ if (dfpParametersConfig.length > 0) {
   
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"6340234705937367040","advertPosition":9,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Cornerstone Per\u00FA","companyForTitle":"Cornerstone Per\u00FA","cpcInEur":0,"date":"03 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"locationsLabel":"Comisi\u00F3n De Fomento De Per\u00FA","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/6340234705937367040/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a13b23552179b5&page_item_id=-1423948048","pageItemId":-1423948048,"parameterMap":{"date":"03 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Gerente de Finanzas y Admin: Lidera Tesorer\u00EDa y Presupuestos","openAdvertUrl":"https://open.app.jobrapido.com/ar/6340234705937367040/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a13b23552179b5&page_item_id=-1423948048","advertId":"6340234705937367040","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Cornerstone Per\u00FA","company":"Cornerstone Per\u00FA","location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Gerente de Finanzas y Admin: Lidera Tesorer\u00EDa y Presupuestos","titleSlug":"gerente-de-finanzas-y-admin-lidera-tesoreria-y-presupuestos","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='13' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"4431451359056756736","advertPosition":9,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"3M","companyForTitle":"3M","cpcInEur":0,"date":"10 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/4431451359056756736/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a216bcded5253b&page_item_id=150913738","pageItemId":150913738,"parameterMap":{"date":"10 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Gerente Regional De Cuentas Claves - Argentina","openAdvertUrl":"https://open.app.jobrapido.com/ar/4431451359056756736/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a216bcded5253b&page_item_id=150913738","advertId":"4431451359056756736","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"3M","company":"3M","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Gerente Regional De Cuentas Claves - Argentina","titleSlug":"gerente-regional-de-cuentas-claves-argentina","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='13' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Gerente de Finanzas y Admin: Lidera Tesorería y Presupuestos  - Comisión De Fomento De Perú
+        Open job preview for: Gerente Regional De Cuentas Claves - Argentina  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Gerente de Finanzas y Admin: Lidera Tesorería y Presupuestos
-    </h3>
-    <div class="result-item__location" >
-      <i class="icon-location" aria-hidden="true"></i>
-      <span class="result-item__location-label" >
-        <span >
-          Comisión De Fomento De Perú
-        </span>
-      </span>
-    </div>
-      <div class="result-item__company">
-        <i class="icon-company" aria-hidden="true"></i>
-        <span class="result-item__company-label" >
-          Cornerstone Perú
-        </span>
-      </div>
-        <div class="result-item__cta">
-        <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
-          ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(6340234705937367040)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(6340234705937367040) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
-          <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(6340234705937367040)}">
-            <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
-          </div>
-    </div>
-
-    <!--- mobile like cta --->
-
-
-    <!--- mobile like cta end --->
-
-    <a class="result-item__link" id="a_6340234705937367040" tc="" ai="6340234705937367040"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/6340234705937367040/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a13b23552179b5&page_item_id=-1423948048"   target="_blank"  
-      rel="nofollow"
-    >
-      <span class="sr-only">
-        Open job preview for: Gerente de Finanzas y Admin: Lidera Tesorería y Presupuestos  - Comisión De Fomento De Perú
-      </span>
-    </a>
-  </div>
-</div>
-
-
-
-<div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1078373377145569280","advertPosition":10,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"MS Coach","companyForTitle":"MS Coach","cpcInEur":0,"date":"03 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"C\u00F3rdoba Capital","locations":["C\u00F3rdoba Capital"],"locationsLabel":"C\u00F3rdoba Capital","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1078373377145569280/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a13b23552179b5&page_item_id=610187417","pageItemId":610187417,"parameterMap":{"date":"03 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"L\u00EDder Industrial: Producci\u00F3n, Mantenimiento y Lean TPM","openAdvertUrl":"https://open.app.jobrapido.com/ar/1078373377145569280/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a13b23552179b5&page_item_id=610187417","advertId":"1078373377145569280","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"MS Coach","company":"MS Coach","location":"C\u00F3rdoba Capital","locations":["C\u00F3rdoba Capital"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"L\u00EDder Industrial: Producci\u00F3n, Mantenimiento y Lean TPM","titleSlug":"lider-industrial-produccion-mantenimiento-y-lean-tpm","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='14' x-jr-advert
-  ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
-  <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
-    <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
-      class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
-      <span class="sr-only">
-        Open job preview for: Líder Industrial: Producción, Mantenimiento y Lean TPM  - Córdoba Capital
-      </span>
-    </a>
-    <div class="result-item__head result-item__head--no-date"
-      ng-hide="proposalVisible">
-    </div>
-    <h3 class="result-item__title  result-item__title--no-date" >
-      Líder Industrial: Producción, Mantenimiento y Lean TPM
-    </h3>
-    <div class="result-item__location" >
-      <i class="icon-location" aria-hidden="true"></i>
-      <span class="result-item__location-label" >
-        <span >
-          Córdoba Capital
-        </span>
-      </span>
-    </div>
-      <div class="result-item__company">
-        <i class="icon-company" aria-hidden="true"></i>
-        <span class="result-item__company-label" >
-          MS Coach
-        </span>
-      </div>
-        <div class="result-item__cta">
-        <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
-          ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(1078373377145569280)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(1078373377145569280) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
-          <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1078373377145569280)}">
-            <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
-          </div>
-    </div>
-
-    <!--- mobile like cta --->
-
-
-    <!--- mobile like cta end --->
-
-    <a class="result-item__link" id="a_1078373377145569280" tc="" ai="1078373377145569280"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1078373377145569280/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a13b23552179b5&page_item_id=610187417"   target="_blank"  
-      rel="nofollow"
-    >
-      <span class="sr-only">
-        Open job preview for: Líder Industrial: Producción, Mantenimiento y Lean TPM  - Córdoba Capital
-      </span>
-    </a>
-  </div>
-</div>
-
-
-
-<div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8047277635350298624","advertPosition":11,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Cornerstone Per\u00FA","companyForTitle":"Cornerstone Per\u00FA","cpcInEur":0,"date":"01 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"locationsLabel":"Comisi\u00F3n De Fomento De Per\u00FA","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8047277635350298624/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a13b23552179b5&page_item_id=-360639862","pageItemId":-360639862,"parameterMap":{"date":"01 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Gerente Comercial de Carga - Lidera Estrategias y Equipo","openAdvertUrl":"https://open.app.jobrapido.com/ar/8047277635350298624/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a13b23552179b5&page_item_id=-360639862","advertId":"8047277635350298624","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Cornerstone Per\u00FA","company":"Cornerstone Per\u00FA","location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Gerente Comercial de Carga - Lidera Estrategias y Equipo","titleSlug":"gerente-comercial-de-carga-lidera-estrategias-y-equipo","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='15' x-jr-advert
-  ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
-  <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
-    <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
-      class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
-      <span class="sr-only">
-        Open job preview for: Gerente Comercial de Carga - Lidera Estrategias y Equipo  - Comisión De Fomento De Perú
-      </span>
-    </a>
-    <div class="result-item__head result-item__head--no-date"
-      ng-hide="proposalVisible">
-    </div>
-    <h3 class="result-item__title  result-item__title--no-date" >
-      Gerente Comercial de Carga - Lidera Estrategias y Equipo
-    </h3>
-    <div class="result-item__location" >
-      <i class="icon-location" aria-hidden="true"></i>
-      <span class="result-item__location-label" >
-        <span >
-          Comisión De Fomento De Perú
-        </span>
-      </span>
-    </div>
-      <div class="result-item__company">
-        <i class="icon-company" aria-hidden="true"></i>
-        <span class="result-item__company-label" >
-          Cornerstone Perú
-        </span>
-      </div>
-        <div class="result-item__cta">
-        <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
-          ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(8047277635350298624)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(8047277635350298624) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
-          <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(8047277635350298624)}">
-            <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
-          </div>
-    </div>
-
-    <!--- mobile like cta --->
-
-
-    <!--- mobile like cta end --->
-
-    <a class="result-item__link" id="a_8047277635350298624" tc="" ai="8047277635350298624"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8047277635350298624/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a13b23552179b5&page_item_id=-360639862"   target="_blank"  
-      rel="nofollow"
-    >
-      <span class="sr-only">
-        Open job preview for: Gerente Comercial de Carga - Lidera Estrategias y Equipo  - Comisión De Fomento De Perú
-      </span>
-    </a>
-  </div>
-</div>
-
-
-
-<div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"4719108439752572928","advertPosition":12,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Alicorp","companyForTitle":"Alicorp","cpcInEur":0,"date":"27 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"locationsLabel":"Comisi\u00F3n De Fomento De Per\u00FA","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/4719108439752572928/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a13b23552179b5&page_item_id=1412911927","pageItemId":1412911927,"parameterMap":{"date":"27 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Gerente de Soluciones y Valor de Negocio","openAdvertUrl":"https://open.app.jobrapido.com/ar/4719108439752572928/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a13b23552179b5&page_item_id=1412911927","advertId":"4719108439752572928","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Alicorp","company":"Alicorp","location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Gerente de Soluciones y Valor de Negocio","titleSlug":"gerente-de-soluciones-y-valor-de-negocio","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='16' x-jr-advert
-  ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
-  <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
-    <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
-      class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
-      <span class="sr-only">
-        Open job preview for: Gerente de Soluciones y Valor de Negocio  - Comisión De Fomento De Perú
-      </span>
-    </a>
-    <div class="result-item__head result-item__head--no-date"
-      ng-hide="proposalVisible">
-    </div>
-    <h3 class="result-item__title  result-item__title--no-date" >
-      Gerente de Soluciones y Valor de Negocio
-    </h3>
-    <div class="result-item__location" >
-      <i class="icon-location" aria-hidden="true"></i>
-      <span class="result-item__location-label" >
-        <span >
-          Comisión De Fomento De Perú
-        </span>
-      </span>
-    </div>
-      <div class="result-item__company">
-        <i class="icon-company" aria-hidden="true"></i>
-        <span class="result-item__company-label" >
-          Alicorp
-        </span>
-      </div>
-        <div class="result-item__cta">
-        <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
-          ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(4719108439752572928)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(4719108439752572928) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
-          <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(4719108439752572928)}">
-            <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
-          </div>
-    </div>
-
-    <!--- mobile like cta --->
-
-
-    <!--- mobile like cta end --->
-
-    <a class="result-item__link" id="a_4719108439752572928" tc="" ai="4719108439752572928"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/4719108439752572928/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a13b23552179b5&page_item_id=1412911927"   target="_blank"  
-      rel="nofollow"
-    >
-      <span class="sr-only">
-        Open job preview for: Gerente de Soluciones y Valor de Negocio  - Comisión De Fomento De Perú
-      </span>
-    </a>
-  </div>
-</div>
-
-
-
-<div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"2695227834498023424","advertPosition":13,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Financiera ProEmpresa","companyForTitle":"Financiera ProEmpresa","cpcInEur":0,"date":"25 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"locationsLabel":"Comisi\u00F3n De Fomento De Per\u00FA","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/2695227834498023424/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a13b23552179b5&page_item_id=-2134505270","pageItemId":-2134505270,"parameterMap":{"date":"25 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"L\u00EDder de Agencia Bancaria | Gesti\u00F3n de Cr\u00E9ditos","openAdvertUrl":"https://open.app.jobrapido.com/ar/2695227834498023424/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a13b23552179b5&page_item_id=-2134505270","advertId":"2695227834498023424","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Financiera ProEmpresa","company":"Financiera ProEmpresa","location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"L\u00EDder de Agencia Bancaria | Gesti\u00F3n de Cr\u00E9ditos","titleSlug":"lider-de-agencia-bancaria-gestion-de-creditos","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='17' x-jr-advert
-  ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
-  <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
-    <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
-      class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
-      <span class="sr-only">
-        Open job preview for: Líder de Agencia Bancaria | Gestión de Créditos  - Comisión De Fomento De Perú
-      </span>
-    </a>
-    <div class="result-item__head result-item__head--no-date"
-      ng-hide="proposalVisible">
-    </div>
-    <h3 class="result-item__title  result-item__title--no-date" >
-      Líder de Agencia Bancaria | Gestión de Créditos
-    </h3>
-    <div class="result-item__location" >
-      <i class="icon-location" aria-hidden="true"></i>
-      <span class="result-item__location-label" >
-        <span >
-          Comisión De Fomento De Perú
-        </span>
-      </span>
-    </div>
-      <div class="result-item__company">
-        <i class="icon-company" aria-hidden="true"></i>
-        <span class="result-item__company-label" >
-          Financiera ProEmpresa
-        </span>
-      </div>
-        <div class="result-item__cta">
-        <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
-          ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(2695227834498023424)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(2695227834498023424) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
-          <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(2695227834498023424)}">
-            <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
-          </div>
-    </div>
-
-    <!--- mobile like cta --->
-
-
-    <!--- mobile like cta end --->
-
-    <a class="result-item__link" id="a_2695227834498023424" tc="" ai="2695227834498023424"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/2695227834498023424/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a13b23552179b5&page_item_id=-2134505270"   target="_blank"  
-      rel="nofollow"
-    >
-      <span class="sr-only">
-        Open job preview for: Líder de Agencia Bancaria | Gestión de Créditos  - Comisión De Fomento De Perú
-      </span>
-    </a>
-  </div>
-</div>
-
-
-
-<div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"5600490360875778048","advertPosition":14,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Hodelpa Nicolas de Ovando","companyForTitle":"Hodelpa Nicolas de Ovando","cpcInEur":0,"date":"17 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/5600490360875778048/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a13b23552179b5&page_item_id=1005574412","pageItemId":1005574412,"parameterMap":{"date":"17 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Gerente de Planificaci\u00F3n Financiera | Lidera Proyecciones Financieras","openAdvertUrl":"https://open.app.jobrapido.com/ar/5600490360875778048/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a13b23552179b5&page_item_id=1005574412","advertId":"5600490360875778048","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Hodelpa Nicolas de Ovando","company":"Hodelpa Nicolas de Ovando","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Gerente de Planificaci\u00F3n Financiera | Lidera Proyecciones Financieras","titleSlug":"gerente-de-planificacion-financiera-lidera-proyecciones-financieras","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='18' x-jr-advert
-  ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
-  <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
-    <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
-      class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
-      <span class="sr-only">
-        Open job preview for: Gerente de Planificación Financiera | Lidera Proyecciones Financieras  - Rosario
-      </span>
-    </a>
-    <div class="result-item__head result-item__head--no-date"
-      ng-hide="proposalVisible">
-    </div>
-    <h3 class="result-item__title  result-item__title--no-date" >
-      Gerente de Planificación Financiera | Lidera Proyecciones Financieras
+      Gerente Regional De Cuentas Claves - Argentina
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
@@ -2162,16 +2117,16 @@ if (dfpParametersConfig.length > 0) {
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Hodelpa Nicolas de Ovando
+          3M
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(5600490360875778048)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(5600490360875778048) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(4431451359056756736)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(4431451359056756736) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(5600490360875778048)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(4431451359056756736)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -2181,12 +2136,307 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_5600490360875778048" tc="" ai="5600490360875778048"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/5600490360875778048/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a13b23552179b5&page_item_id=1005574412"   target="_blank"  
+    <a class="result-item__link" id="a_4431451359056756736" tc="" ai="4431451359056756736"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/4431451359056756736/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a216bcded5253b&page_item_id=150913738"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Gerente de Planificación Financiera | Lidera Proyecciones Financieras  - Rosario
+        Open job preview for: Gerente Regional De Cuentas Claves - Argentina  - Rosario
+      </span>
+    </a>
+  </div>
+</div>
+
+
+
+<div class="result-item js-result-item" data-sponsored="true"
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"7850633454277361664","advertPosition":10,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Deliveryhero","companyForTitle":"Deliveryhero","cpcInEur":0,"date":"10 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/7850633454277361664/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a216bcded5253b&page_item_id=1547796038","pageItemId":1547796038,"parameterMap":{"date":"10 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Arquitecto/A De Retail \u2013 Lidera Proyectos Regionales","openAdvertUrl":"https://open.app.jobrapido.com/ar/7850633454277361664/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a216bcded5253b&page_item_id=1547796038","advertId":"7850633454277361664","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Deliveryhero","company":"Deliveryhero","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Arquitecto/A De Retail \u2013 Lidera Proyectos Regionales","titleSlug":"arquitecto-a-de-retail-lidera-proyectos-regionales","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='14' x-jr-advert
+  ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
+  <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
+    <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
+      class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
+      <span class="sr-only">
+        Open job preview for: Arquitecto/A De Retail – Lidera Proyectos Regionales  - Rosario
+      </span>
+    </a>
+    <div class="result-item__head result-item__head--no-date"
+      ng-hide="proposalVisible">
+    </div>
+    <h3 class="result-item__title  result-item__title--no-date" >
+      Arquitecto/A De Retail – Lidera Proyectos Regionales
+    </h3>
+    <div class="result-item__location" >
+      <i class="icon-location" aria-hidden="true"></i>
+      <span class="result-item__location-label" >
+        <span >
+          Rosario
+        </span>
+      </span>
+    </div>
+      <div class="result-item__company">
+        <i class="icon-company" aria-hidden="true"></i>
+        <span class="result-item__company-label" >
+          Deliveryhero
+        </span>
+      </div>
+        <div class="result-item__cta">
+        <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
+          ng-click="[[advert.openAdvertUrl]]">View Salary</button>
+          <i ng-click="favouriteJobsCtrl.updateJob(7850633454277361664)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(7850633454277361664) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <div class="result-item__save-job-box" ng-cloak
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(7850633454277361664)}">
+            <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
+          </div>
+    </div>
+
+    <!--- mobile like cta --->
+
+
+    <!--- mobile like cta end --->
+
+    <a class="result-item__link" id="a_7850633454277361664" tc="" ai="7850633454277361664"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/7850633454277361664/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a216bcded5253b&page_item_id=1547796038"   target="_blank"  
+      rel="nofollow"
+    >
+      <span class="sr-only">
+        Open job preview for: Arquitecto/A De Retail – Lidera Proyectos Regionales  - Rosario
+      </span>
+    </a>
+  </div>
+</div>
+
+
+
+<div class="result-item js-result-item" data-sponsored="true"
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"2183592195045457920","advertPosition":11,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"RH Master - Recursos Humanos","companyForTitle":"RH Master - Recursos Humanos","cpcInEur":0,"date":"10 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/2183592195045457920/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a216bcded5253b&page_item_id=322138621","pageItemId":322138621,"parameterMap":{"date":"10 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Gerente de Ventas con experiencia en Consumo Masivo. Para Tucum\u00E1n","openAdvertUrl":"https://open.app.jobrapido.com/ar/2183592195045457920/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a216bcded5253b&page_item_id=322138621","advertId":"2183592195045457920","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"RH Master - Recursos Humanos","company":"RH Master - Recursos Humanos","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Gerente de Ventas con experiencia en Consumo Masivo. Para Tucum\u00E1n","titleSlug":"gerente-de-ventas-con-experiencia-en-consumo-masivo-para-tucuman","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='15' x-jr-advert
+  ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
+  <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
+    <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
+      class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
+      <span class="sr-only">
+        Open job preview for: Gerente de Ventas con experiencia en Consumo Masivo. Para Tucumán  - Rosario
+      </span>
+    </a>
+    <div class="result-item__head result-item__head--no-date"
+      ng-hide="proposalVisible">
+    </div>
+    <h3 class="result-item__title  result-item__title--no-date" >
+      Gerente de Ventas con experiencia en Consumo Masivo. Para Tucumán
+    </h3>
+    <div class="result-item__location" >
+      <i class="icon-location" aria-hidden="true"></i>
+      <span class="result-item__location-label" >
+        <span >
+          Rosario
+        </span>
+      </span>
+    </div>
+      <div class="result-item__company">
+        <i class="icon-company" aria-hidden="true"></i>
+        <span class="result-item__company-label" >
+          RH Master - Recursos Humanos
+        </span>
+      </div>
+        <div class="result-item__cta">
+        <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
+          ng-click="[[advert.openAdvertUrl]]">View Salary</button>
+          <i ng-click="favouriteJobsCtrl.updateJob(2183592195045457920)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(2183592195045457920) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <div class="result-item__save-job-box" ng-cloak
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(2183592195045457920)}">
+            <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
+          </div>
+    </div>
+
+    <!--- mobile like cta --->
+
+
+    <!--- mobile like cta end --->
+
+    <a class="result-item__link" id="a_2183592195045457920" tc="" ai="2183592195045457920"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/2183592195045457920/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a216bcded5253b&page_item_id=322138621"   target="_blank"  
+      rel="nofollow"
+    >
+      <span class="sr-only">
+        Open job preview for: Gerente de Ventas con experiencia en Consumo Masivo. Para Tucumán  - Rosario
+      </span>
+    </a>
+  </div>
+</div>
+
+
+
+<div class="result-item js-result-item" data-sponsored="true"
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"7305174703629402112","advertPosition":12,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Savvital","companyForTitle":"Savvital","cpcInEur":0,"date":"03 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/7305174703629402112/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a216bcded5253b&page_item_id=-1535611061","pageItemId":-1535611061,"parameterMap":{"date":"03 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Remote Spanish-Speaking Saas Support Associate","openAdvertUrl":"https://open.app.jobrapido.com/ar/7305174703629402112/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a216bcded5253b&page_item_id=-1535611061","advertId":"7305174703629402112","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Savvital","company":"Savvital","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Remote Spanish-Speaking Saas Support Associate","titleSlug":"remote-spanish-speaking-saas-support-associate","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='16' x-jr-advert
+  ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
+  <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
+    <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
+      class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
+      <span class="sr-only">
+        Open job preview for: Remote Spanish-Speaking Saas Support Associate  - Rosario
+      </span>
+    </a>
+    <div class="result-item__head result-item__head--no-date"
+      ng-hide="proposalVisible">
+    </div>
+    <h3 class="result-item__title  result-item__title--no-date" >
+      Remote Spanish-Speaking Saas Support Associate
+    </h3>
+    <div class="result-item__location" >
+      <i class="icon-location" aria-hidden="true"></i>
+      <span class="result-item__location-label" >
+        <span >
+          Rosario
+        </span>
+      </span>
+    </div>
+      <div class="result-item__company">
+        <i class="icon-company" aria-hidden="true"></i>
+        <span class="result-item__company-label" >
+          Savvital
+        </span>
+      </div>
+        <div class="result-item__cta">
+        <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
+          ng-click="[[advert.openAdvertUrl]]">View Salary</button>
+          <i ng-click="favouriteJobsCtrl.updateJob(7305174703629402112)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(7305174703629402112) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <div class="result-item__save-job-box" ng-cloak
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(7305174703629402112)}">
+            <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
+          </div>
+    </div>
+
+    <!--- mobile like cta --->
+
+
+    <!--- mobile like cta end --->
+
+    <a class="result-item__link" id="a_7305174703629402112" tc="" ai="7305174703629402112"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/7305174703629402112/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a216bcded5253b&page_item_id=-1535611061"   target="_blank"  
+      rel="nofollow"
+    >
+      <span class="sr-only">
+        Open job preview for: Remote Spanish-Speaking Saas Support Associate  - Rosario
+      </span>
+    </a>
+  </div>
+</div>
+
+
+
+<div class="result-item js-result-item" data-sponsored="true"
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"2773743378943180800","advertPosition":13,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Bbva Sa","companyForTitle":"Bbva Sa","cpcInEur":0,"date":"16 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/2773743378943180800/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a216bcded5253b&page_item_id=-184257262","pageItemId":-184257262,"parameterMap":{"date":"16 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Administrador De Contratos Remoto | Bi Y Sql Avanzado","openAdvertUrl":"https://open.app.jobrapido.com/ar/2773743378943180800/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a216bcded5253b&page_item_id=-184257262","advertId":"2773743378943180800","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Bbva Sa","company":"Bbva Sa","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Administrador De Contratos Remoto | Bi Y Sql Avanzado","titleSlug":"administrador-de-contratos-remoto-bi-y-sql-avanzado","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='17' x-jr-advert
+  ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
+  <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
+    <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
+      class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
+      <span class="sr-only">
+        Open job preview for: Administrador De Contratos Remoto | Bi Y Sql Avanzado  - Rosario
+      </span>
+    </a>
+    <div class="result-item__head result-item__head--no-date"
+      ng-hide="proposalVisible">
+    </div>
+    <h3 class="result-item__title  result-item__title--no-date" >
+      Administrador De Contratos Remoto | Bi Y Sql Avanzado
+    </h3>
+    <div class="result-item__location" >
+      <i class="icon-location" aria-hidden="true"></i>
+      <span class="result-item__location-label" >
+        <span >
+          Rosario
+        </span>
+      </span>
+    </div>
+      <div class="result-item__company">
+        <i class="icon-company" aria-hidden="true"></i>
+        <span class="result-item__company-label" >
+          Bbva Sa
+        </span>
+      </div>
+        <div class="result-item__cta">
+        <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
+          ng-click="[[advert.openAdvertUrl]]">View Salary</button>
+          <i ng-click="favouriteJobsCtrl.updateJob(2773743378943180800)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(2773743378943180800) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <div class="result-item__save-job-box" ng-cloak
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(2773743378943180800)}">
+            <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
+          </div>
+    </div>
+
+    <!--- mobile like cta --->
+
+
+    <!--- mobile like cta end --->
+
+    <a class="result-item__link" id="a_2773743378943180800" tc="" ai="2773743378943180800"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/2773743378943180800/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a216bcded5253b&page_item_id=-184257262"   target="_blank"  
+      rel="nofollow"
+    >
+      <span class="sr-only">
+        Open job preview for: Administrador De Contratos Remoto | Bi Y Sql Avanzado  - Rosario
+      </span>
+    </a>
+  </div>
+</div>
+
+
+
+<div class="result-item js-result-item" data-sponsored="true"
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1742023274449076224","advertPosition":14,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Persona","companyForTitle":"Persona","cpcInEur":0,"date":"05 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1742023274449076224/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a216bcded5253b&page_item_id=-488327639","pageItemId":-488327639,"parameterMap":{"date":"05 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Executive Administrative Assistant (Work From Home)","openAdvertUrl":"https://open.app.jobrapido.com/ar/1742023274449076224/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a216bcded5253b&page_item_id=-488327639","advertId":"1742023274449076224","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Persona","company":"Persona","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Executive Administrative Assistant (Work From Home)","titleSlug":"executive-administrative-assistant-work-from-home","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='18' x-jr-advert
+  ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
+  <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
+    <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
+      class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
+      <span class="sr-only">
+        Open job preview for: Executive Administrative Assistant (Work From Home)  - Rosario
+      </span>
+    </a>
+    <div class="result-item__head result-item__head--no-date"
+      ng-hide="proposalVisible">
+    </div>
+    <h3 class="result-item__title  result-item__title--no-date" >
+      Executive Administrative Assistant (Work From Home)
+    </h3>
+    <div class="result-item__location" >
+      <i class="icon-location" aria-hidden="true"></i>
+      <span class="result-item__location-label" >
+        <span >
+          Rosario
+        </span>
+      </span>
+    </div>
+      <div class="result-item__company">
+        <i class="icon-company" aria-hidden="true"></i>
+        <span class="result-item__company-label" >
+          Persona
+        </span>
+      </div>
+        <div class="result-item__cta">
+        <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
+          ng-click="[[advert.openAdvertUrl]]">View Salary</button>
+          <i ng-click="favouriteJobsCtrl.updateJob(1742023274449076224)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(1742023274449076224) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <div class="result-item__save-job-box" ng-cloak
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1742023274449076224)}">
+            <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
+          </div>
+    </div>
+
+    <!--- mobile like cta --->
+
+
+    <!--- mobile like cta end --->
+
+    <a class="result-item__link" id="a_1742023274449076224" tc="" ai="1742023274449076224"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1742023274449076224/?w=gerente%20operaciones&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a216bcded5253b&page_item_id=-488327639"   target="_blank"  
+      rel="nofollow"
+    >
+      <span class="sr-only">
+        Open job preview for: Executive Administrative Assistant (Work From Home)  - Rosario
       </span>
     </a>
   </div>
@@ -3110,11 +3360,11 @@ if (dfpParametersConfig.length > 0) {
                                     	}();
                                     </script>
 
-          <script>
-          _gaq.push(['_deleteCustomVar',5],['_trackPageview','/?w=Python&q=/Python//w-/&p=004&sa=00&ta=15&re=all&o=typein&n=24']);
-          (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;g.src=('https:' == location.protocol
-          ? '//ssl' : '//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))
-          </script>
+  <script>
+  _gaq.push(['_deleteCustomVar',5],['_trackPageview','/?w=Python&q=/Python//w-/&p=004&sa=00&ta=15&re=all&o=typein&n=24']);
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;g.src=('https:' == location.protocol
+  ? '//ssl' : '//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))
+  </script>
 
         <script>
         

@@ -1,0 +1,51 @@
+{
+  "fuente": "jobrapido",
+  "fecha": "2026-11-26T05:10:06.365764",
+  "total": 746,
+  "detalle": [
+    {
+      "keyword": "Data Scientist",
+      "ofertas": 65
+    },
+    {
+      "keyword": "BI / Analytics",
+      "ofertas": 90
+    },
+    {
+      "keyword": "Python Developer",
+      "ofertas": 64
+    },
+    {
+      "keyword": "Control de Gestión",
+      "ofertas": 50
+    },
+    {
+      "keyword": "Gerente de Operaciones",
+      "ofertas": 55
+    },
+    {
+      "keyword": "Compras / Procurement",
+      "ofertas": 72
+    },
+    {
+      "keyword": "Ingeniero Industrial",
+      "ofertas": 83
+    },
+    {
+      "keyword": "Finanzas / CAPEX",
+      "ofertas": 84
+    },
+    {
+      "keyword": "Excel / VBA",
+      "ofertas": 63
+    },
+    {
+      "keyword": "Supply Chain",
+      "ofertas": 72
+    },
+    {
+      "keyword": "Continuous Improvement",
+      "ofertas": 48
+    }
+  ]
+}

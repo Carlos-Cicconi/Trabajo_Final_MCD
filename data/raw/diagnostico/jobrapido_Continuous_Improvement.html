@@ -54,12 +54,222 @@
                                                                                                                                   }, g[o]['t'] = 1 * new Date
                                                                                                                                 })(window, '_googCsa');
                                                                                                                               </script>
-                                  <script src="https://resources.jobrapido.com/static/js/prebid.bundle.680c3eb44b1d6e143e4f.js" async></script><script>var iid="13407767",
-                                    p=location.protocol,url=("https:"===p?p:"http:")+"//ap.lijit.com/www/sovrn_beacon_standalone/sovrn_standalone_beacon.js?iid="+iid,scr=document.createElement("script");scr.id="sBeacon",scr.src=url,scr.async=!1;var s0=document.getElementsByTagName("script")[0];s0.parentNode.insertBefore(scr,s0);</script><script>var adUnits = [{"bids":[{"bidder":"appnexus","params":{"placementId":"12484625"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846706"}},{"bidder":"ix","params":{"size":[300,250],"siteId":"350496"}},{"bidder":"criteo","params":{"zoneId":"1082855"}}],"code":"b_gtp_middle","mediaTypes":{"banner":{"sizes":[[300,250]]}},"sizes":[[300,250]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484628"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[728,90],"siteId":"350497"}},{"bidder":"criteo","params":{"zoneId":"1114753"}}],"code":"b_gtp_leaderboard","mediaTypes":{"banner":{"sizes":[[728,90]]}},"sizes":[[728,90]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484631"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846706"}},{"bidder":"ix","params":{"size":[160,600],"siteId":"350505"}},{"bidder":"criteo","params":{"zoneId":"1082854"}}],"code":"banner-aside-left","mediaTypes":{"banner":{"sizes":[[160,600]]}},"sizes":[[160,600]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484633"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[300,250],"siteId":"350494"}},{"bidder":"criteo","params":{"zoneId":"1091230"}}],"code":"b_gtp_top","mediaTypes":{"banner":{"sizes":[[300,250]]}},"sizes":[[300,250]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484624"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[300,600],"siteId":"350494"}},{"bidder":"criteo","params":{"zoneId":"1398668"}}],"code":"b_gtp_top","mediaTypes":{"banner":{"sizes":[[300,600]]}},"sizes":[[300,600]]}];
-                                    var pbjs = pbjs || { que: [] };
+                                  <script src="https://resources.jobrapido.com/static/js/prebid.bundle.b7de232af73031e3658b.js" async></script><script>var iid="13407767",
+                                    p=location.protocol,url=("https:"===p?p:"http:")+"//ap.lijit.com/www/sovrn_beacon_standalone/sovrn_standalone_beacon.js?iid="+iid,scr=document.createElement("script");scr.id="sBeacon",scr.src=url,scr.async=!1;var s0=document.getElementsByTagName("script")[0];s0.parentNode.insertBefore(scr,s0);</script><script>var pbjs = pbjs || { que: [] };
                                     var customConfigObject = {
                                      'buckets' : [{"increment":0.01,"max":5,"min":0,"precision":2},{"increment":0.05,"max":20,"min":5,"precision":2},{"increment":0.1,"max":40,"min":20,"precision":2}]
                                     };
+                                  
+                                    // Ad units coming from the datastore can contain the same code more than once
+                                    // (e.g. 'b_gtp_top'): Prebid would then run two auctions for the same slot.
+                                    // Merge duplicated codes into a single ad unit, keeping every distinct bid.
+                                    function jrPbDedupeAdUnits(units) {
+                                      var byCode = {};
+                                      var result = [];
+                                  
+                                      (units || []).forEach(function(unit) {
+                                        if (!unit || !unit.code) {
+                                          return;
+                                        }
+                                  
+                                        var existing = byCode[unit.code];
+                                        if (!existing) {
+                                          existing = byCode[unit.code] = Object.assign({}, unit, { bids: (unit.bids || []).slice() });
+                                          result.push(existing);
+                                          return;
+                                        }
+                                  
+                                        (unit.bids || []).forEach(function(bid) {
+                                          var key = JSON.stringify(bid);
+                                          var isDuplicated = existing.bids.some(function(b) { return JSON.stringify(b) === key; });
+                                          if (!isDuplicated) {
+                                            existing.bids.push(bid);
+                                          }
+                                        });
+                                      });
+                                  
+                                      return result;
+                                    }
+                                  
+                                    var adUnits = jrPbDedupeAdUnits([{"bids":[{"bidder":"appnexus","params":{"placementId":"12484625"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846706"}},{"bidder":"ix","params":{"size":[300,250],"siteId":"350496"}},{"bidder":"criteo","params":{"zoneId":"1082855"}}],"code":"b_gtp_middle","mediaTypes":{"banner":{"sizes":[[300,250]]}},"sizes":[[300,250]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484628"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[728,90],"siteId":"350497"}},{"bidder":"criteo","params":{"zoneId":"1114753"}}],"code":"b_gtp_leaderboard","mediaTypes":{"banner":{"sizes":[[728,90]]}},"sizes":[[728,90]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484631"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846706"}},{"bidder":"ix","params":{"size":[160,600],"siteId":"350505"}},{"bidder":"criteo","params":{"zoneId":"1082854"}}],"code":"banner-aside-left","mediaTypes":{"banner":{"sizes":[[160,600]]}},"sizes":[[160,600]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484633"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[300,250],"siteId":"350494"}},{"bidder":"criteo","params":{"zoneId":"1091230"}}],"code":"b_gtp_top","mediaTypes":{"banner":{"sizes":[[300,250]]}},"sizes":[[300,250]]},{"bids":[{"bidder":"appnexus","params":{"placementId":"12484624"}},{"bidder":"rubicon","params":{"accountId":"17602","siteId":"175300","zoneId":"846700"}},{"bidder":"ix","params":{"size":[300,600],"siteId":"350494"}},{"bidder":"criteo","params":{"zoneId":"1398668"}}],"code":"b_gtp_top","mediaTypes":{"banner":{"sizes":[[300,600]]}},"sizes":[[300,600]]}]);
+                                  
+                                    // SHA-256 (hex) of the logged user's email. Rendered server side so it doesn't
+                                    // depend on 'jrConfigGlobal', which is defined after this script: when prebid.js
+                                    // is cached/preloaded the queue below can run before it ("Error processing command").
+                                    var jrPbEmailHash = '' ||
+                                      (window.jrConfigGlobal && window.jrConfigGlobal.user && window.jrConfigGlobal.user.sha256EncodedEmail) || '';
+                                  
+                                    // UID2 expects the email hash as base64-encoded SHA-256
+                                    // @see https://unifiedid.com/docs/getting-started/gs-normalization-encoding
+                                    function jrPbHexToBase64(hex) {
+                                      if (!/^[0-9a-f]{64}$/i.test(hex)) {
+                                        return null;
+                                      }
+                                      var bin = '';
+                                      for (var i = 0; i < hex.length; i += 2) {
+                                        bin += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+                                      }
+                                      return window.btoa(bin);
+                                    }
+                                  
+                                    // On GDPR pages without TCF CMP the consent is stored in the 'JEC' cookie (same
+                                    // logic used in dfp-no-cmp.hbs): no consent -> no user IDs are generated/stored.
+                                    var jrPbUserIdsAllowed = true;
+                                  
+                                    // Prebid.js User ID sub-modules
+                                    // @see https://docs.prebid.org/dev-docs/modules/userId.html
+                                    //
+                                    // SharedID is always on (no vendor agreement needed). Every partner sub-module has
+                                    // its own switch below and is OFF by default: to enable a partner set 'enabled: true'
+                                    // and fill its credentials. A sub-module is added only when its switch is on AND all
+                                    // its required credentials are set: a missing/partial configuration only logs a
+                                    // warning and never breaks the auction.
+                                    // NOTE: static configuration handled only within website-static-layout (temporary,
+                                    // until the vendor agreements are signed and the values can come from the backend).
+                                    var jrPbUserIdPartners = {
+                                      id5:       { enabled: false, partnerId: null },
+                                      liveRamp:  { enabled: false, pid: '' },
+                                      lotame:    { enabled: false, clientId: '' },
+                                      uid2:      { enabled: false, subscriptionId: '', serverPublicKey: '' },
+                                      unifiedId: { enabled: false, partner: '' }
+                                    };
+                                  
+                                    // How every partner switch maps to its Prebid sub-module configuration
+                                    var jrPbUserIdModules = {
+                                      // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/id5.html
+                                      id5: {
+                                        required: ['partnerId'],
+                                        build: function(cfg) {
+                                          return {
+                                            name: 'id5Id',
+                                            params: {
+                                              partner: Number(cfg.partnerId)
+                                            },
+                                            storage: {
+                                              type: 'html5',
+                                              name: 'id5id',
+                                              expires: 90,
+                                              refreshInSeconds: 7200
+                                            }
+                                          };
+                                        }
+                                      },
+                                  
+                                      // LiveRamp RampID (ATS)
+                                      // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/ramp.html
+                                      liveRamp: {
+                                        required: ['pid'],
+                                        build: function(cfg) {
+                                          return {
+                                            name: 'identityLink',
+                                            params: {
+                                              pid: String(cfg.pid),
+                                              notUse3P: false
+                                            },
+                                            storage: {
+                                              type: 'html5',
+                                              name: 'idl_env',
+                                              expires: 15,
+                                              refreshInSeconds: 1800
+                                            }
+                                          };
+                                        }
+                                      },
+                                  
+                                      // Lotame Panorama ID
+                                      // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/lotame.html
+                                      lotame: {
+                                        required: ['clientId'],
+                                        build: function(cfg) {
+                                          return {
+                                            name: 'lotamePanoramaId',
+                                            params: {
+                                              clientId: String(cfg.clientId)
+                                            }
+                                          };
+                                        }
+                                      },
+                                  
+                                      // UID2 client-side token generation: logged users only (needs the email hash)
+                                      // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/unified2.html
+                                      uid2: {
+                                        required: ['subscriptionId', 'serverPublicKey'],
+                                        build: function(cfg) {
+                                          var emailHash = jrPbHexToBase64(jrPbEmailHash);
+                                          if (!emailHash) {
+                                            return null;
+                                          }
+                                          return {
+                                            name: 'uid2',
+                                            params: {
+                                              uid2ApiBase: 'https://prod.uidapi.com',
+                                              subscriptionId: String(cfg.subscriptionId),
+                                              serverPublicKey: String(cfg.serverPublicKey),
+                                              emailHash: emailHash
+                                            }
+                                          };
+                                        }
+                                      },
+                                  
+                                      // The Trade Desk Unified ID 1.0
+                                      // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/unified.html
+                                      unifiedId: {
+                                        required: ['partner'],
+                                        build: function(cfg) {
+                                          return {
+                                            name: 'unifiedId',
+                                            params: {
+                                              partner: String(cfg.partner)
+                                            },
+                                            storage: {
+                                              type: 'cookie',
+                                              name: 'pbjs-unifiedid',
+                                              expires: 60
+                                            }
+                                          };
+                                        }
+                                      }
+                                    };
+                                  
+                                    function jrPbGetUserIds() {
+                                      if (!jrPbUserIdsAllowed) {
+                                        return [];
+                                      }
+                                  
+                                      var userIds = [{
+                                        // @see https://docs.prebid.org/dev-docs/modules/userid-submodules/sharedid.html
+                                        name: 'sharedId',
+                                        storage: {
+                                          type: 'cookie',
+                                          name: '_sharedid',
+                                          expires: 365
+                                        }
+                                      }];
+                                  
+                                      Object.keys(jrPbUserIdModules).forEach(function(partner) {
+                                        var cfg = jrPbUserIdPartners[partner];
+                                        if (!cfg || cfg.enabled !== true) {
+                                          return;
+                                        }
+                                  
+                                        var missing = jrPbUserIdModules[partner].required.filter(function(key) {
+                                          return cfg[key] === undefined || cfg[key] === null || cfg[key] === '';
+                                        });
+                                        if (missing.length > 0) {
+                                          if (window.console && console.warn) {
+                                            console.warn('[JR Prebid] User ID partner "' + partner + '" is enabled but its credentials are missing (' + missing.join(', ') + '): skipped.');
+                                          }
+                                          return;
+                                        }
+                                  
+                                        var userIdModule = jrPbUserIdModules[partner].build(cfg);
+                                        if (userIdModule) {
+                                          userIds.push(userIdModule);
+                                        }
+                                      });
+                                  
+                                      return userIds;
+                                    }
                                   
                                     pbjs.que.push(function() {
                                   
@@ -71,6 +281,20 @@
                                         }
                                       }
                                   
+                                      var consentManagement = {
+                                        // @see https://docs.prebid.org/dev-docs/modules/consentManagementUsp.html
+                                        usp: {
+                                          cmpApi: 'static',
+                                          timeout: 50,
+                                          consentData: {
+                                            getUSPData: {
+                                              uspString: '1---'
+                                            }
+                                          }
+                                        }
+                                      };
+                                  
+                                  
                                       pbjs.setConfig({
                                         bidderTimeout: 1000,
                                         debug: false,
@@ -80,7 +304,7 @@
 
                                             conversionRateFile: 'https://currency.prebid.org/latest.json'
                                         },
-                                        
+                                  
                                         // General permissions settings: Device access
                                         // @see https://docs.prebid.org/dev-docs/publisher-api-reference/setConfig.html#device-access
                                         deviceAccess: true,
@@ -97,49 +321,72 @@
                                           },
                                           transmitTid: {
                                             default: true
+                                          },
+                                          enrichEids: {
+                                            default: true
+                                          },
+                                          transmitEids: {
+                                            default: true
                                           }
                                         },
-                                        
-                                        consentManagement: {
-                                          // @see https://docs.prebid.org/dev-docs/modules/consentManagementUsp.html
-                                          usp: {
-                                            cmpApi: 'static',
-                                            timeout: 50,
-                                            consentData: {
-                                              getUSPData: {
-                                                uspString: '1---'
-                                              }
-                                            }
-                                          }
                                   
+                                        // Prebid.js User ID Module Configuration
+                                        // @see https://docs.prebid.org/dev-docs/modules/userId.html
+                                        userSync: {
+                                          syncDelay: 3000,
+                                          userIds: jrPbGetUserIds(),
+                                          // Secure signals shared with GAM (only for the providers set as
+                                          // "Prebid UserID Module" in GAM > Admin > Secure signals)
+                                          // @see https://docs.prebid.org/dev-docs/modules/userId.html#esp-configurations
+                                          encryptedSignalSources: {
+                                            sources: [
+                                              {
+                                                source: ['sharedid.org', 'pubcid.org', 'criteo.com', 'id5-sync.com', 'liveramp.com', 'crwdcntrl.net', 'adserver.org', 'uidapi.com'],
+                                                encrypt: false
+                                              }
+                                            ],
+                                            registerDelay: 3000
+                                          }
+                                        },
+                                  
+                                        consentManagement: consentManagement
+                                      });
+                                  
+                                      // Register Secure Signal sources for Google Ad Manager (ESP)
+                                      window.googletag = window.googletag || { cmd: [] };
+                                      googletag.cmd.push(function() {
+                                        if (typeof pbjs.registerSignalSources === 'function') {
+                                          pbjs.registerSignalSources();
                                         }
                                       });
                                   
-                                        pbjs.setBidderConfig({
-                                          bidders: ['criteo'],
-                                          config: {
-                                              ortb2: {
-                                                  user: {
-                                                      ext: {
-                                                          data: {
-                                                              eids: [{
-                                                                  source: "domain_here",
-                                                                  uids: [
-                                                                      {
-                                                                          id: window.jrConfigGlobal.user.sha256EncodedEmail,
-                                                                          atype: 3,
-                                                                          ext: {
-                                                                              stype: "hemsha256"
-                                                                          }
-                                                                      }
-                                                                  ]
-                                                              }]
-                                                          }
-                                                      }
-                                                  }
-                                              }
-                                          }
-                                        }, true);
+                                        if (jrPbEmailHash) {
+                                          pbjs.setBidderConfig({
+                                            bidders: ['criteo'],
+                                            config: {
+                                                ortb2: {
+                                                    user: {
+                                                        ext: {
+                                                            data: {
+                                                                eids: [{
+                                                                    source: "domain_here",
+                                                                    uids: [
+                                                                        {
+                                                                            id: jrPbEmailHash,
+                                                                            atype: 3,
+                                                                            ext: {
+                                                                                stype: "hemsha256"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }]
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                          }, true);
+                                        }
                                     });</script>    <script type="text/javascript" src="/api/siteconfig"></script>
 <script>
   if(!jrConfigGlobal) {
@@ -161,12 +408,12 @@
     isSearch: true,
     isJobPreviewPage: false,
     isErrorPage: false,
-    uuid: 'arF001a13b4c9b469e45'
+    uuid: 'arF001a216e7778f6871'
   };
   jrConfigGlobal.visit = {
     requestComingFromAdWords: false,
     sessionComingFromPaidSource: false,
-    uuid: 'arF001a13b0060af4ace',
+    uuid: 'arF001a2169cd8653f35',
     isOneTapConfirmationFlow: false,
     requestComingFromWelcomeEmailAddPassword: false,
     requestComingFromWelcomeEmailIncreaseSearch: false
@@ -195,7 +442,7 @@
       numberOfItems: 18
     },
     inlineProposal: {"advertTypeWithInlineProposal":"organic","deviceType":"DESKTOP","forSponsoredAdvertEnabled":false,"fromPaidSourceEnabled":true,"impressionsRemainingCountEnabled":false,"maxImpressionsAllTime":2147483647,"maxImpressionsVisit":3,"metadataKey":{},"visitType":"BRAND"},
-    totalResults: 6292,
+    totalResults: 35831,
     sortBy: '',
     geoCoordinatesNotPresent: true,
     taxonomyCode: '',
@@ -206,7 +453,7 @@
     globalParameters: {"promoted":{"position":"listing"},"dfp":{"hideNative":"true"}},
     itemsEnabled: {"dfp":true,"promoted":true},
     structuredDataEnabled: false,
-    dfpItems: [{"adsenseAtfItem":false,"adsenseItem":false,"advertItem":false,"itemId":"dfp","itemProperties":{"adUnit":"textad_desktop_1","cssClass":"native","size":"[[1,1], \u0027fluid\u0027]","slotId":"partnership-result-top","type":"affiliate"},"promotedItem":false,"searchResult":{"actionType":"","advertId":"","advertPosition":0,"advertType":"","autoExpandRadiusDistance":null,"autoExpandRadiusLayout":null,"bodyHighlighted":"","budgetId":0,"company":"","companyForTitle":"","cpcInEur":0,"date":"","enumAdvertType":null,"fromSponsoredSearch":false,"index":-1,"isCpaEnabled":false,"isFromExpandedSearch":false,"isSponsored":false,"location":"","locations":null,"locationsLabel":null,"onMouseDown":"","openAdvertUrl":"","pageItemId":-683456206,"parameterMap":{"date":"","website":"","trackClickAd":"","showNewMarker":false,"fromSponsoredSearch":false,"sponsorAccount":"","budgetId":0,"isCpaEnabled":false,"salary":"","sponsorAccountBranch":"","title":"","openAdvertUrl":"","advertId":"","tags":{},"cpcInEur":0,"isFromExpandedSearch":false,"companyForTitle":"","company":"","location":"","onmousedown":"","tag":"","isSponsored":false},"salary":"","showNewMarker":false,"sponsorAccount":"","sponsorAccountBranch":"","tag":"","tags":{},"title":"","titleSlug":"","trackClickAd":"","website":"","websiteCategory":"UNQUALIFIED","websiteNoWWW":""},"serpPosition":4,"sponsoredOrOrganicItem":false},{"adsenseAtfItem":false,"adsenseItem":false,"advertItem":false,"itemId":"dfp","itemProperties":{"adUnit":"textad_desktop_2","cssClass":"native","size":"[[1,1], \u0027fluid\u0027]","slotId":"partnership-result-bottom","type":"affiliate"},"promotedItem":false,"searchResult":{"actionType":"","advertId":"","advertPosition":0,"advertType":"","autoExpandRadiusDistance":null,"autoExpandRadiusLayout":null,"bodyHighlighted":"","budgetId":0,"company":"","companyForTitle":"","cpcInEur":0,"date":"","enumAdvertType":null,"fromSponsoredSearch":false,"index":-1,"isCpaEnabled":false,"isFromExpandedSearch":false,"isSponsored":false,"location":"","locations":null,"locationsLabel":null,"onMouseDown":"","openAdvertUrl":"","pageItemId":1559828409,"parameterMap":{"date":"","website":"","trackClickAd":"","showNewMarker":false,"fromSponsoredSearch":false,"sponsorAccount":"","budgetId":0,"isCpaEnabled":false,"salary":"","sponsorAccountBranch":"","title":"","openAdvertUrl":"","advertId":"","tags":{},"cpcInEur":0,"isFromExpandedSearch":false,"companyForTitle":"","company":"","location":"","onmousedown":"","tag":"","isSponsored":false},"salary":"","showNewMarker":false,"sponsorAccount":"","sponsorAccountBranch":"","tag":"","tags":{},"title":"","titleSlug":"","trackClickAd":"","website":"","websiteCategory":"UNQUALIFIED","websiteNoWWW":""},"serpPosition":11,"sponsoredOrOrganicItem":false}],
+    dfpItems: [{"adsenseAtfItem":false,"adsenseItem":false,"advertItem":false,"itemId":"dfp","itemProperties":{"adUnit":"textad_desktop_1","cssClass":"native","size":"[[1,1], \u0027fluid\u0027]","slotId":"partnership-result-top","type":"affiliate"},"promotedItem":false,"searchResult":{"actionType":"","advertId":"","advertPosition":0,"advertType":"","autoExpandRadiusDistance":null,"autoExpandRadiusLayout":null,"bodyHighlighted":"","budgetId":0,"company":"","companyForTitle":"","cpcInEur":0,"date":"","enumAdvertType":null,"fromSponsoredSearch":false,"index":-1,"isCpaEnabled":false,"isFromExpandedSearch":false,"isSponsored":false,"location":"","locations":null,"locationsLabel":null,"onMouseDown":"","openAdvertUrl":"","pageItemId":554126344,"parameterMap":{"date":"","website":"","trackClickAd":"","showNewMarker":false,"fromSponsoredSearch":false,"sponsorAccount":"","budgetId":0,"isCpaEnabled":false,"salary":"","sponsorAccountBranch":"","title":"","openAdvertUrl":"","advertId":"","tags":{},"cpcInEur":0,"isFromExpandedSearch":false,"companyForTitle":"","company":"","location":"","onmousedown":"","tag":"","isSponsored":false},"salary":"","showNewMarker":false,"sponsorAccount":"","sponsorAccountBranch":"","tag":"","tags":{},"title":"","titleSlug":"","trackClickAd":"","website":"","websiteCategory":"UNQUALIFIED","websiteNoWWW":""},"serpPosition":4,"sponsoredOrOrganicItem":false},{"adsenseAtfItem":false,"adsenseItem":false,"advertItem":false,"itemId":"dfp","itemProperties":{"adUnit":"textad_desktop_2","cssClass":"native","size":"[[1,1], \u0027fluid\u0027]","slotId":"partnership-result-bottom","type":"affiliate"},"promotedItem":false,"searchResult":{"actionType":"","advertId":"","advertPosition":0,"advertType":"","autoExpandRadiusDistance":null,"autoExpandRadiusLayout":null,"bodyHighlighted":"","budgetId":0,"company":"","companyForTitle":"","cpcInEur":0,"date":"","enumAdvertType":null,"fromSponsoredSearch":false,"index":-1,"isCpaEnabled":false,"isFromExpandedSearch":false,"isSponsored":false,"location":"","locations":null,"locationsLabel":null,"onMouseDown":"","openAdvertUrl":"","pageItemId":-190272808,"parameterMap":{"date":"","website":"","trackClickAd":"","showNewMarker":false,"fromSponsoredSearch":false,"sponsorAccount":"","budgetId":0,"isCpaEnabled":false,"salary":"","sponsorAccountBranch":"","title":"","openAdvertUrl":"","advertId":"","tags":{},"cpcInEur":0,"isFromExpandedSearch":false,"companyForTitle":"","company":"","location":"","onmousedown":"","tag":"","isSponsored":false},"salary":"","showNewMarker":false,"sponsorAccount":"","sponsorAccountBranch":"","tag":"","tags":{},"title":"","titleSlug":"","trackClickAd":"","website":"","websiteCategory":"UNQUALIFIED","websiteNoWWW":""},"serpPosition":11,"sponsoredOrOrganicItem":false}],
     anchorAdParameters: [],
     anchorEnabled: false
   };
@@ -216,11 +463,11 @@
       email: '',
       confirmed:false
   };
-  jrConfigGlobal.user = {"gclid":null,"hostJustCreated":false,"hostPostgresId":"185126929935","hostRegistered":false,"id":"185126929935","isJobSeeker":false,"isNotConfirmed":true,"mail":null,"md5EncodedEmail":null,"msclkid":null,"sha256EncodedEmail":null,"shortId":null,"subscribedEmail":null,"uuid":"185126929935"},
+  jrConfigGlobal.user = {"gclid":null,"hostJustCreated":false,"hostPostgresId":"185131694976","hostRegistered":false,"id":"185131694976","isJobSeeker":false,"isNotConfirmed":true,"mail":null,"md5EncodedEmail":null,"msclkid":null,"sha256EncodedEmail":null,"shortId":null,"subscribedEmail":null,"uuid":"185131694976"},
   jrConfigGlobal.jobletter = {
     jobseeker: {
       parentShardId: '',
-      parentUserId: '185126929935',
+      parentUserId: '185131694976',
         registrationConfirmed: false,
     }
   };
@@ -237,64 +484,64 @@
   };
   jrConfigGlobal.searchResults = {
       
-      '7934834570128523264': {
-        'location': 'Capital Federal'
+      '1978975348859076608': {
+        'location': 'Rosario'
       }
       ,
-      '1370692977701158912': {
-        'location': 'Capital Federal'
+      '623249749142667264': {
+        'location': 'Rosario'
       }
       ,
-      '68171921019109376': {
-        'location': 'Remoto'
+      '3335393915778891776': {
+        'location': 'Rosario'
       }
       ,
-      '5482745516083118080': {
-        'location': 'Comisión De Fomento De Perú'
+      '1471714559872991232': {
+        'location': 'Rosario'
       }
       ,
-      '3249030469651529728': {
-        'location': 'Capital Federal'
+      '7262322577966628864': {
+        'location': 'Rosario'
       }
       ,
-      '719320299174100992': {
-        'location': 'Ciudad Evita'
+      '5533064772028727296': {
+        'location': 'Rosario'
       }
       ,
-      '458220369216536576': {
-        'location': 'Remoto'
+      '2358871803260043264': {
+        'location': 'Rosario'
       }
       ,
-      '7631795693274791936': {
-        'location': 'Capital Federal'
+      '8489839074570403840': {
+        'location': 'Rosario'
       }
       ,
-      '5349315107128082432': {
-        'location': 'Capital Federal'
+      '2691806398051778560': {
+        'location': 'Rosario'
       }
       ,
-      '4693957248706150400': {
-        'location': 'Capital Federal'
+      '1551481998164361216': {
+        'location': 'Rosario'
       }
       ,
-      '6255370000459104256': {
-        'location': 'San Carlos De Bariloche'
+      '6444824550159941632': {
+        'location': 'Rosario'
       }
       ,
-      '8143888423548092416': {
-        'location': 'Santiago Del Estero Capital'
+      '5363948544963117056': {
+        'location': 'Rosario'
       }
       ,
-      '1562044968791441408': {
-        'location': 'Rincón De Los Sauces'
+      '3520088435903692800': {
+        'location': 'Rosario'
       }
       ,
-      '3092543164423077888': {
-        'location': 'Capital Federal'
+      '6291345646184038400': {
+        'location': 'Rosario'
       }
       ,
-      '424330809508364288': {
-        'location': 'Mar Del Plata'
+      '5839799310400618496': {
+        'location': 'Rosario'
       }
   };
   jrConfigGlobal.myProfile = {
@@ -326,7 +573,7 @@
     {value: 30, label: '30 mi'},
     {value: 40, label: '40 mi'}];
   jrConfigGlobal.canShowSubscriptionPopup = true;
-  jrConfigGlobal.correlationId = '5a987755-2b23-47a7-8e11-1a432a1048ad';
+  jrConfigGlobal.correlationId = '8e8b31c6-15bc-478b-a8e9-11ed860042fd';
   jrConfigGlobal.showActivateProfileConfirmDialog = false;
   jrConfigGlobal.onboardingTooltipEnabled = false;
   jrConfigGlobal.gdprAccepted = false;
@@ -509,14 +756,14 @@
                                                         .setTargeting('what', gpt.config.what.replace(/&#x27;/g, "\u0060"))
                                                         .setTargeting('where', gpt.config.where.replace(/&#x27;/g, "\u0060"))
                                                         .setTargeting('language', 'es')
-                                                        .setTargeting('jobtomeFormattedUrl', '%2F%3Fl%3D%26k%3Dcontinuous%20improvement%26t%3D1791992638996%26v%3D86a4b2f7c2fa154dd8c5b23abbcb74c1')
+                                                        .setTargeting('jobtomeFormattedUrl', '%2F%3Fl%3D%26k%3Dcontinuous%20improvement%26t%3D1795680598265%26v%3D7b5200fc7e6168ee2c036577154cd78e')
                                                         .setTargeting('zeroResults',  'false' )
                                                         .setTargeting('what_set', '1')
                                                         .setTargeting('where_set', '0')
                                                           .setTargeting('UserType', 'Anonymous')
                                                           .setTargeting('keyword', 'continuous improvement')
                                                         .setTargeting('pageItemId', slotParams.pageItemId)
-                                                        .setTargeting('jobseekerId', 185126929935 ? 185126929935 : '')
+                                                        .setTargeting('jobseekerId', 185131694976 ? 185131694976 : '')
                                                         .setTargeting('taxonomyCode', '')
                                                         .setTargeting('attributionToken', '')
                                                         .setTargeting('dyn_const_ar', 'br_other_no-test_no-t-what')
@@ -726,6 +973,9 @@
                                                                                                                                                                                                                                  });
                                                                                                                                                                                                                            
                                                                                                                                                                                                                                  pbjs.que.push(function() {
+                                                                                                                                                                                                                                     // Add ad units / request bids only once per page view
+                                                                                                                                                                                                                                     if (pbjs.jrAuctionRequested) return;
+                                                                                                                                                                                                                                     pbjs.jrAuctionRequested = true;
                                                                                                                                                                                                                                      pbjs.addAdUnits(adUnits);
                                                                                                                                                                                                                                      pbjs.requestBids({
                                                                                                                                                                                                                                          bidsBackHandler: sendAdserverRequest
@@ -796,7 +1046,7 @@ if (dfpParametersConfig.length > 0) {
                                                                                                                                                                                                                                          wrapperId: 'partnership-result-top',
                                                                                                                                                                                                                                          hasNotStaticSize: true,
                                                                                                                                                                                                                                          isSerpListing: true,
-                                                                                                                                                                                                                                         pageItemId: -683456206
+                                                                                                                                                                                                                                         pageItemId: 554126344
                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                        });
@@ -806,7 +1056,7 @@ if (dfpParametersConfig.length > 0) {
                                                                                                                                                                                                                                          wrapperId: 'partnership-result-bottom',
                                                                                                                                                                                                                                          hasNotStaticSize: true,
                                                                                                                                                                                                                                          isSerpListing: true,
-                                                                                                                                                                                                                                         pageItemId: 1559828409
+                                                                                                                                                                                                                                         pageItemId: -190272808
                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                        });
@@ -836,7 +1086,7 @@ if (dfpParametersConfig.length > 0) {
                                                                                                                                                                                                                              });
                                                                                                                                                                                                                            </script>
 
-  <meta name="keywords" content="Management,Team Lead,Software,Manager,Technical Lead,Monitor,Customer Management,Security,Product Engineering,Customer Service">
+  <meta name="keywords" content="Management,Manager,Monitor,Team Lead,Technical Lead,Operations Manager,CRM,Creativo,Marketing Manager,Technical Support Manager">
   <link rel="canonical" href="https://ar.jobrapido.com/Ofertas-de-trabajo-para-Continuous-Improvement?p=4">
   <link rel="prev" href="https://ar.jobrapido.com/Ofertas-de-trabajo-para-Continuous-Improvement?p=3">
   <link rel="next" href="https://ar.jobrapido.com/Ofertas-de-trabajo-para-Continuous-Improvement?p=5">
@@ -870,7 +1120,7 @@ if (dfpParametersConfig.length > 0) {
 <![endif]-->
    
         <script>
-            dataLayer = [{"deviceType":"desktop","searchWhat":"continuous improvement","conversionOwner":"","visitSource":"","visitType":"brand","pageUUID":"arF001a13b4c9b469e45","pageType":"results","vstUUID":"arF001a13b0060af4ace","trackingOrderId":0,"zeroResults":false,"zeroResultContext":false,"searchWhere":"","jsUUID":185126929935,"acquisitionSource":"","jsMD5":null}];
+            dataLayer = [{"deviceType":"desktop","searchWhat":"continuous improvement","conversionOwner":"","visitSource":"","visitType":"brand","pageUUID":"arF001a216e7778f6871","pageType":"results","vstUUID":"arF001a2169cd8653f35","trackingOrderId":0,"zeroResults":false,"zeroResultContext":false,"searchWhere":"","jsUUID":185131694976,"acquisitionSource":"","jsMD5":null}];
         </script>
 
   <link rel="apple-touch-icon" sizes="57x57" href="//resources.jobrapido.com/static/img/favicon/apple-icon-57x57.png">
@@ -989,7 +1239,7 @@ if (dfpParametersConfig.length > 0) {
                                                                                                                                                                                                                'personalizedAds': true,
                                                                                                                                                                                                                'adLoadedCallback': googleCsaRequestDone,
                                                                                                                                                                                                                
-                                                                                                                                                                                                               'clicktrackUrl': 'https://ar.jobrapido.com/track/adsense/arF001a13b4c9b469e45/' + jrConfigGlobal.search.page.number,
+                                                                                                                                                                                                               'clicktrackUrl': 'https://ar.jobrapido.com/track/adsense/arF001a216e7778f6871/' + jrConfigGlobal.search.page.number,
                                                                                                                                                                                                                'longerHeadlines': true,
                                                                                                                                                                                                                'detailedAttribution': false,
                                                                                                                                                                                                                'plusOnes': false,
@@ -1139,20 +1389,20 @@ if (dfpParametersConfig.length > 0) {
     </div>
   </form>
   <div class="shinfo" shlast="" sh=""></div>
-                                                                                        <div class="serp-tips-wrapper incomplete-statement-suggestion empty-where-suggestions js-empty-where js-tips">
-                                                                                          <i class="icon-close js-tip-close"></i>
-                                                                                          <div class="serp-tips-innerbox">
-                                                                                            <ul>
-                                                                                                <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
-                                                                                                    href="https://ar.jobrapido.com/?w=continuous improvement&l=gran buenos aires&shm=all">Gran Buenos Aires</a></li>
-                                                                                                <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
-                                                                                                    href="https://ar.jobrapido.com/?w=continuous improvement&l=capital federal&shm=all">Capital Federal</a></li>
-                                                                                                <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
-                                                                                                    href="https://ar.jobrapido.com/?w=continuous improvement&l=santa fé&shm=all">Santa Fé</a></li>
-                                                                                            </ul>
-                                                                                          </div>
-                                                                                        </div>
-                                           </div>
+  <div class="serp-tips-wrapper incomplete-statement-suggestion empty-where-suggestions js-empty-where js-tips">
+    <i class="icon-close js-tip-close"></i>
+    <div class="serp-tips-innerbox">
+      <ul>
+          <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
+              href="https://ar.jobrapido.com/?w=continuous improvement&l=gran buenos aires&shm=all">Gran Buenos Aires</a></li>
+          <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
+              href="https://ar.jobrapido.com/?w=continuous improvement&l=capital federal&shm=all">Capital Federal</a></li>
+          <li><a class="empty-where-suggestion" data-tip-event="empty_where" data-google-interstitial=false
+              href="https://ar.jobrapido.com/?w=continuous improvement&l=santa fé&shm=all">Santa Fé</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 </header>
 
 
@@ -1160,29 +1410,29 @@ if (dfpParametersConfig.length > 0) {
         <div class="jr-modal-wrapper"></div>
         <div class="main-container-row serp-content" 
           ng-controller="FavouriteJobsSerpController as favouriteJobsCtrl" >
-                      <aside class="left-column left-sidebar">
-                        <div class="search-filters">
+<aside class="left-column left-sidebar">
+  <div class="search-filters">
 
-                                                            <h1 class="jobs-h1 sr-only">
-                                                              Ofertas de trabajo para Continuous Improvement
-                                                            </h1>
-                                                                                      
-                                                                                      
-                                                                                      <div class="nav-breadcrumbs">
-                                                                                        <a href="?l=ar" data-google-interstitial=false itemprop="item">
-                                                                                          Trabajos
-                                                                                        </a>
-                                                                                          &gt; 
-                                                                                          <a href="?w=continuous improvement" data-google-interstitial=false itemprop="item">
-                                                                                            Continuous Improvement
-                                                                                          </a>
-                                                                                      
-                                                                                      </div>
-                          <div class="js-my-searches-wrapper">
-                          </div>
-                      
-                                <div class="serp-filters"></div>
-                      
+                <h1 class="jobs-h1 sr-only">
+                  Ofertas de trabajo para Continuous Improvement
+                </h1>
+                    
+                    
+                    <div class="nav-breadcrumbs">
+                      <a href="?l=ar" data-google-interstitial=false itemprop="item">
+                        Trabajos
+                      </a>
+                        &gt; 
+                        <a href="?w=continuous improvement" data-google-interstitial=false itemprop="item">
+                          Continuous Improvement
+                        </a>
+                    
+                    </div>
+    <div class="js-my-searches-wrapper">
+    </div>
+
+          <div class="serp-filters"></div>
+
 <div>
     <h3 class="h6 filter-title"><i class="location" aria-hidden="true"></i>Localidad</h3>
     <ul class="filter-list top-locations-filter">
@@ -1213,27 +1463,27 @@ if (dfpParametersConfig.length > 0) {
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="5" href="/Ofertas-de-trabajo-para-Continuous-Improvement-en-La-Pampa?shm=all" class="top-locations-link" data-google-interstitial=false>La Pampa</a>
+          <a index="5" href="/Ofertas-de-trabajo-para-Continuous-Improvement-en-Tandil?shm=all" class="top-locations-link" data-google-interstitial=false>Tandil</a>
           
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="6" href="/Ofertas-de-trabajo-para-Continuous-Improvement-en-C%C3%B3rdoba?shm=all" class="top-locations-link" data-google-interstitial=false>Córdoba</a>
+          <a index="6" href="/Ofertas-de-trabajo-para-Continuous-Improvement-en-Rosario?shm=all" class="top-locations-link" data-google-interstitial=false>Rosario</a>
           
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="7" href="/Ofertas-de-trabajo-para-Continuous-Improvement-en-Rosario?shm=all" class="top-locations-link" data-google-interstitial=false>Rosario</a>
+          <a index="7" href="/Ofertas-de-trabajo-para-Continuous-Improvement-en-Gba-Sur?shm=all" class="top-locations-link" data-google-interstitial=false>Gba Sur</a>
           
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="8" href="/Ofertas-de-trabajo-para-Continuous-Improvement-en-Rinc%C3%B3n-De-Los-Sauces?shm=all" class="top-locations-link" data-google-interstitial=false>Rincón De Los Sauces</a>
+          <a index="8" href="/Ofertas-de-trabajo-para-Continuous-Improvement-en-Chaco?shm=all" class="top-locations-link" data-google-interstitial=false>Chaco</a>
           
         </li>
         <li class="suggested-locations-item">
           <i class="icon-angle-right"></i>
-          <a index="9" href="/Ofertas-de-trabajo-para-Continuous-Improvement-en-Gba-Sur?shm=all" class="top-locations-link" data-google-interstitial=false>Gba Sur</a>
+          <a index="9" href="/Ofertas-de-trabajo-para-Continuous-Improvement-en-Quilmes?shm=all" class="top-locations-link" data-google-interstitial=false>Quilmes</a>
           
         </li>
     </ul>
@@ -1242,35 +1492,35 @@ if (dfpParametersConfig.length > 0) {
       <ul class="filter-list suggested-jobs-filter">
           <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="0" href="/Ofertas-de-trabajo-para-Management?shm=all"
               class="top-locations-link" data-google-interstitial=false>Management</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="1" href="/Ofertas-de-trabajo-para-Team-Lead?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Team Lead</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="2" href="/Ofertas-de-trabajo-para-Software?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Software</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="3" href="/Ofertas-de-trabajo-para-Manager?shm=all"
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="1" href="/Ofertas-de-trabajo-para-Manager?shm=all"
               class="top-locations-link" data-google-interstitial=false>Manager</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="2" href="/Ofertas-de-trabajo-para-Monitor?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Monitor</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="3" href="/Ofertas-de-trabajo-para-Team-Lead?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Team Lead</a></li>
           <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="4" href="/Ofertas-de-trabajo-para-Technical-Lead?shm=all"
               class="top-locations-link" data-google-interstitial=false>Technical Lead</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="5" href="/Ofertas-de-trabajo-para-Monitor?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Monitor</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="6" href="/Ofertas-de-trabajo-para-Customer-Management?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Customer Management</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="7" href="/Ofertas-de-trabajo-para-Security?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Security</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="8" href="/Ofertas-de-trabajo-para-Product-Engineering?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Product Engineering</a></li>
-          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="9" href="/Ofertas-de-trabajo-para-Customer-Service?shm=all"
-              class="top-locations-link" data-google-interstitial=false>Customer Service</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="5" href="/Ofertas-de-trabajo-para-Operations-Manager?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Operations Manager</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="6" href="/Ofertas-de-trabajo-para-Crm?shm=all"
+              class="top-locations-link" data-google-interstitial=false>CRM</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="7" href="/Ofertas-de-trabajo-para-Creativo?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Creativo</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="8" href="/Ofertas-de-trabajo-para-Marketing-Manager?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Marketing Manager</a></li>
+          <li class="suggested-jobs-item"><i class="icon-angle-right" aria-hidden="true"></i><a index="9" href="/Ofertas-de-trabajo-para-Technical-Support-Manager?shm=all"
+              class="top-locations-link" data-google-interstitial=false>Technical Support Manager</a></li>
       </ul>
 
 </div>
-                      
-                      
-                        </div>
-                      
+
+
+  </div>
+
     <div class="banner-box js-banner portrait" ng-non-bindable>
       <div id="banner-aside-left" class="banner"></div>
     </div>
-                      </aside>
+</aside>
           <div class="main-content-wrapper" >
             <section id="results" class="main-section">
                                                                                                                                               <script>
@@ -1301,42 +1551,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"7934834570128523264","advertPosition":0,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Payoneer Inc.","companyForTitle":"Payoneer Inc.","cpcInEur":0,"date":"12 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal","locations":["Capital Federal"],"locationsLabel":"Capital Federal","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/7934834570128523264/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a13b4c9b469e45&page_item_id=148497880","pageItemId":148497880,"parameterMap":{"date":"12 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Global Total Rewards Strategy Director","openAdvertUrl":"https://open.app.jobrapido.com/ar/7934834570128523264/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a13b4c9b469e45&page_item_id=148497880","advertId":"7934834570128523264","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Payoneer Inc.","company":"Payoneer Inc.","location":"Capital Federal","locations":["Capital Federal"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Global Total Rewards Strategy Director","titleSlug":"global-total-rewards-strategy-director","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='1' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1978975348859076608","advertPosition":0,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"The Wrap","companyForTitle":"The Wrap","cpcInEur":0,"date":"23 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1978975348859076608/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a216e7778f6871&page_item_id=-1370925836","pageItemId":-1370925836,"parameterMap":{"date":"23 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Global Onboarding Ops Manager - AMER (Remote)","openAdvertUrl":"https://open.app.jobrapido.com/ar/1978975348859076608/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a216e7778f6871&page_item_id=-1370925836","advertId":"1978975348859076608","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"The Wrap","company":"The Wrap","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Global Onboarding Ops Manager - AMER (Remote)","titleSlug":"global-onboarding-ops-manager-amer-remote","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='1' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Global Total Rewards Strategy Director  - Capital Federal
+        Open job preview for: Global Onboarding Ops Manager - AMER (Remote)  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Global Total Rewards Strategy Director
+      Global Onboarding Ops Manager - AMER (Remote)
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Capital Federal
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Payoneer Inc.
+          The Wrap
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(7934834570128523264)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(7934834570128523264) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(1978975348859076608)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(1978975348859076608) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(7934834570128523264)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1978975348859076608)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1346,12 +1596,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_7934834570128523264" tc="" ai="7934834570128523264"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/7934834570128523264/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a13b4c9b469e45&page_item_id=148497880"   target="_blank"  
+    <a class="result-item__link" id="a_1978975348859076608" tc="" ai="1978975348859076608"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1978975348859076608/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.0&uuid=arF001a216e7778f6871&page_item_id=-1370925836"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Global Total Rewards Strategy Director  - Capital Federal
+        Open job preview for: Global Onboarding Ops Manager - AMER (Remote)  - Rosario
       </span>
     </a>
   </div>
@@ -1360,42 +1610,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1370692977701158912","advertPosition":1,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Placements24","companyForTitle":"Placements24","cpcInEur":0,"date":"12 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal","locations":["Capital Federal"],"locationsLabel":"Capital Federal","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1370692977701158912/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a13b4c9b469e45&page_item_id=1113344174","pageItemId":1113344174,"parameterMap":{"date":"12 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Chemical Plant Engineer: Lead Operations & Improvement","openAdvertUrl":"https://open.app.jobrapido.com/ar/1370692977701158912/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a13b4c9b469e45&page_item_id=1113344174","advertId":"1370692977701158912","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Placements24","company":"Placements24","location":"Capital Federal","locations":["Capital Federal"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Chemical Plant Engineer: Lead Operations & Improvement","titleSlug":"senior-chemical-plant-engineer-lead-operations-improvement","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='2' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"623249749142667264","advertPosition":1,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Advanced Energy","companyForTitle":"Advanced Energy","cpcInEur":0,"date":"23 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/623249749142667264/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a216e7778f6871&page_item_id=-540555550","pageItemId":-540555550,"parameterMap":{"date":"23 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Facilities Supervisor: Reliability, Safety & Ops Lead","openAdvertUrl":"https://open.app.jobrapido.com/ar/623249749142667264/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a216e7778f6871&page_item_id=-540555550","advertId":"623249749142667264","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Advanced Energy","company":"Advanced Energy","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Facilities Supervisor: Reliability, Safety & Ops Lead","titleSlug":"facilities-supervisor-reliability-safety-ops-lead","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='2' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Senior Chemical Plant Engineer: Lead Operations & Improvement  - Capital Federal
+        Open job preview for: Facilities Supervisor: Reliability, Safety & Ops Lead  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Senior Chemical Plant Engineer: Lead Operations & Improvement
+      Facilities Supervisor: Reliability, Safety & Ops Lead
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Capital Federal
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Placements24
+          Advanced Energy
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(1370692977701158912)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(1370692977701158912) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(623249749142667264)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(623249749142667264) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1370692977701158912)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(623249749142667264)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1405,12 +1655,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_1370692977701158912" tc="" ai="1370692977701158912"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1370692977701158912/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a13b4c9b469e45&page_item_id=1113344174"   target="_blank"  
+    <a class="result-item__link" id="a_623249749142667264" tc="" ai="623249749142667264"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/623249749142667264/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.1&uuid=arF001a216e7778f6871&page_item_id=-540555550"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Senior Chemical Plant Engineer: Lead Operations & Improvement  - Capital Federal
+        Open job preview for: Facilities Supervisor: Reliability, Safety & Ops Lead  - Rosario
       </span>
     </a>
   </div>
@@ -1419,42 +1669,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"68171921019109376","advertPosition":2,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Kiwi Financial Inc.","companyForTitle":"Kiwi Financial Inc.","cpcInEur":0,"date":"12 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Remoto","locations":["Remoto"],"locationsLabel":"Remoto","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/68171921019109376/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a13b4c9b469e45&page_item_id=65686381","pageItemId":65686381,"parameterMap":{"date":"12 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Remote Product Insights Analyst","openAdvertUrl":"https://open.app.jobrapido.com/ar/68171921019109376/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a13b4c9b469e45&page_item_id=65686381","advertId":"68171921019109376","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Kiwi Financial Inc.","company":"Kiwi Financial Inc.","location":"Remoto","locations":["Remoto"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Remote Product Insights Analyst","titleSlug":"remote-product-insights-analyst","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='3' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"3335393915778891776","advertPosition":2,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"F\u00E9lix","companyForTitle":"F\u00E9lix","cpcInEur":0,"date":"20 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/3335393915778891776/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a216e7778f6871&page_item_id=-550692044","pageItemId":-550692044,"parameterMap":{"date":"20 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Analytics Manager: Data-Driven Growth for Universities","openAdvertUrl":"https://open.app.jobrapido.com/ar/3335393915778891776/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a216e7778f6871&page_item_id=-550692044","advertId":"3335393915778891776","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"F\u00E9lix","company":"F\u00E9lix","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Analytics Manager: Data-Driven Growth for Universities","titleSlug":"analytics-manager-data-driven-growth-for-universities","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='3' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Remote Product Insights Analyst  - Remoto
+        Open job preview for: Analytics Manager: Data-Driven Growth for Universities  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Remote Product Insights Analyst
+      Analytics Manager: Data-Driven Growth for Universities
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Remoto
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Kiwi Financial Inc.
+          Félix
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(68171921019109376)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(68171921019109376) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(3335393915778891776)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(3335393915778891776) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(68171921019109376)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(3335393915778891776)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1464,12 +1714,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_68171921019109376" tc="" ai="68171921019109376"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/68171921019109376/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a13b4c9b469e45&page_item_id=65686381"   target="_blank"  
+    <a class="result-item__link" id="a_3335393915778891776" tc="" ai="3335393915778891776"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/3335393915778891776/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.2&uuid=arF001a216e7778f6871&page_item_id=-550692044"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Remote Product Insights Analyst  - Remoto
+        Open job preview for: Analytics Manager: Data-Driven Growth for Universities  - Rosario
       </span>
     </a>
   </div>
@@ -1482,42 +1732,42 @@ if (dfpParametersConfig.length > 0) {
   
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"5482745516083118080","advertPosition":3,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"UOH UPS Inc (Ohio)","companyForTitle":"UOH UPS Inc (Ohio)","cpcInEur":0,"date":"11 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"locationsLabel":"Comisi\u00F3n De Fomento De Per\u00FA","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/5482745516083118080/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a13b4c9b469e45&page_item_id=659632132","pageItemId":659632132,"parameterMap":{"date":"11 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Seasonal Warehouse Lead: Train, Elevate Safety","openAdvertUrl":"https://open.app.jobrapido.com/ar/5482745516083118080/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a13b4c9b469e45&page_item_id=659632132","advertId":"5482745516083118080","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"UOH UPS Inc (Ohio)","company":"UOH UPS Inc (Ohio)","location":"Comisi\u00F3n De Fomento De Per\u00FA","locations":["Comisi\u00F3n De Fomento De Per\u00FA"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Seasonal Warehouse Lead: Train, Elevate Safety","titleSlug":"seasonal-warehouse-lead-train-elevate-safety","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='5' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1471714559872991232","advertPosition":3,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"1801 Haleon Argentina S.A.","companyForTitle":"1801 Haleon Argentina S.A.","cpcInEur":0,"date":"20 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1471714559872991232/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a216e7778f6871&page_item_id=-1436552583","pageItemId":-1436552583,"parameterMap":{"date":"20 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Remote QA Automation Engineer - Playwright, API & Mobile","openAdvertUrl":"https://open.app.jobrapido.com/ar/1471714559872991232/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a216e7778f6871&page_item_id=-1436552583","advertId":"1471714559872991232","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"1801 Haleon Argentina S.A.","company":"1801 Haleon Argentina S.A.","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Remote QA Automation Engineer - Playwright, API & Mobile","titleSlug":"remote-qa-automation-engineer-playwright-api-mobile","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='5' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Seasonal Warehouse Lead: Train, Elevate Safety  - Comisión De Fomento De Perú
+        Open job preview for: Remote QA Automation Engineer - Playwright, API & Mobile  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Seasonal Warehouse Lead: Train, Elevate Safety
+      Remote QA Automation Engineer - Playwright, API & Mobile
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Comisión De Fomento De Perú
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          UOH UPS Inc (Ohio)
+          1801 Haleon Argentina S.A.
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(5482745516083118080)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(5482745516083118080) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(1471714559872991232)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(1471714559872991232) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(5482745516083118080)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1471714559872991232)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1527,12 +1777,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_5482745516083118080" tc="" ai="5482745516083118080"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/5482745516083118080/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a13b4c9b469e45&page_item_id=659632132"   target="_blank"  
+    <a class="result-item__link" id="a_1471714559872991232" tc="" ai="1471714559872991232"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1471714559872991232/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.3&uuid=arF001a216e7778f6871&page_item_id=-1436552583"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Seasonal Warehouse Lead: Train, Elevate Safety  - Comisión De Fomento De Perú
+        Open job preview for: Remote QA Automation Engineer - Playwright, API & Mobile  - Rosario
       </span>
     </a>
   </div>
@@ -1541,42 +1791,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"3249030469651529728","advertPosition":4,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Worldwide","companyForTitle":"Worldwide","cpcInEur":0,"date":"11 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal","locations":["Capital Federal"],"locationsLabel":"Capital Federal","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/3249030469651529728/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a13b4c9b469e45&page_item_id=-462034576","pageItemId":-462034576,"parameterMap":{"date":"11 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Remote Clinical Data Manager \u2014 Drive Trial Data Excellence","openAdvertUrl":"https://open.app.jobrapido.com/ar/3249030469651529728/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a13b4c9b469e45&page_item_id=-462034576","advertId":"3249030469651529728","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Worldwide","company":"Worldwide","location":"Capital Federal","locations":["Capital Federal"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Remote Clinical Data Manager \u2014 Drive Trial Data Excellence","titleSlug":"remote-clinical-data-manager-drive-trial-data-excellence","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='6' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"7262322577966628864","advertPosition":4,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"SustenTalent","companyForTitle":"SustenTalent","cpcInEur":0,"date":"19 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/7262322577966628864/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a216e7778f6871&page_item_id=-1783698538","pageItemId":-1783698538,"parameterMap":{"date":"19 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Especialista Ambiental - Lidera Mejora y Cumplimiento","openAdvertUrl":"https://open.app.jobrapido.com/ar/7262322577966628864/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a216e7778f6871&page_item_id=-1783698538","advertId":"7262322577966628864","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"SustenTalent","company":"SustenTalent","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Especialista Ambiental - Lidera Mejora y Cumplimiento","titleSlug":"especialista-ambiental-lidera-mejora-y-cumplimiento","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='6' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Remote Clinical Data Manager — Drive Trial Data Excellence  - Capital Federal
+        Open job preview for: Especialista Ambiental - Lidera Mejora y Cumplimiento  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Remote Clinical Data Manager — Drive Trial Data Excellence
+      Especialista Ambiental - Lidera Mejora y Cumplimiento
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Capital Federal
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Worldwide
+          SustenTalent
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(3249030469651529728)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(3249030469651529728) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(7262322577966628864)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(7262322577966628864) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(3249030469651529728)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(7262322577966628864)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1586,12 +1836,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_3249030469651529728" tc="" ai="3249030469651529728"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/3249030469651529728/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a13b4c9b469e45&page_item_id=-462034576"   target="_blank"  
+    <a class="result-item__link" id="a_7262322577966628864" tc="" ai="7262322577966628864"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/7262322577966628864/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.4&uuid=arF001a216e7778f6871&page_item_id=-1783698538"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Remote Clinical Data Manager — Drive Trial Data Excellence  - Capital Federal
+        Open job preview for: Especialista Ambiental - Lidera Mejora y Cumplimiento  - Rosario
       </span>
     </a>
   </div>
@@ -1600,42 +1850,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"719320299174100992","advertPosition":5,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"IBM","companyForTitle":"IBM","cpcInEur":0,"date":"11 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Ciudad Evita","locations":["Ciudad Evita"],"locationsLabel":"Ciudad Evita","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/719320299174100992/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a13b4c9b469e45&page_item_id=495012292","pageItemId":495012292,"parameterMap":{"date":"11 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Quality Engineer Intern: Test Automation & Metrics","openAdvertUrl":"https://open.app.jobrapido.com/ar/719320299174100992/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a13b4c9b469e45&page_item_id=495012292","advertId":"719320299174100992","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"IBM","company":"IBM","location":"Ciudad Evita","locations":["Ciudad Evita"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Quality Engineer Intern: Test Automation & Metrics","titleSlug":"quality-engineer-intern-test-automation-metrics","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='7' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"5533064772028727296","advertPosition":5,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Kiusys","companyForTitle":"Kiusys","cpcInEur":0,"date":"19 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/5533064772028727296/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a216e7778f6871&page_item_id=950286222","pageItemId":950286222,"parameterMap":{"date":"19 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Technical Ops Lead, QSE & Innovation","openAdvertUrl":"https://open.app.jobrapido.com/ar/5533064772028727296/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a216e7778f6871&page_item_id=950286222","advertId":"5533064772028727296","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Kiusys","company":"Kiusys","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Technical Ops Lead, QSE & Innovation","titleSlug":"technical-ops-lead-qse-innovation","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='7' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Quality Engineer Intern: Test Automation & Metrics  - Ciudad Evita
+        Open job preview for: Technical Ops Lead, QSE & Innovation  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Quality Engineer Intern: Test Automation & Metrics
+      Technical Ops Lead, QSE & Innovation
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Ciudad Evita
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          IBM
+          Kiusys
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(719320299174100992)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(719320299174100992) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(5533064772028727296)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(5533064772028727296) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(719320299174100992)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(5533064772028727296)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1645,12 +1895,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_719320299174100992" tc="" ai="719320299174100992"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/719320299174100992/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a13b4c9b469e45&page_item_id=495012292"   target="_blank"  
+    <a class="result-item__link" id="a_5533064772028727296" tc="" ai="5533064772028727296"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/5533064772028727296/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.5&uuid=arF001a216e7778f6871&page_item_id=950286222"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Quality Engineer Intern: Test Automation & Metrics  - Ciudad Evita
+        Open job preview for: Technical Ops Lead, QSE & Innovation  - Rosario
       </span>
     </a>
   </div>
@@ -1659,42 +1909,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"458220369216536576","advertPosition":6,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Learntastic Group","companyForTitle":"Learntastic Group","cpcInEur":0,"date":"10 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Remoto","locations":["Remoto"],"locationsLabel":"Remoto","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/458220369216536576/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a13b4c9b469e45&page_item_id=-821208583","pageItemId":-821208583,"parameterMap":{"date":"10 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Remote Scrum Master & Agile Delivery Lead","openAdvertUrl":"https://open.app.jobrapido.com/ar/458220369216536576/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a13b4c9b469e45&page_item_id=-821208583","advertId":"458220369216536576","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Learntastic Group","company":"Learntastic Group","location":"Remoto","locations":["Remoto"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Remote Scrum Master & Agile Delivery Lead","titleSlug":"remote-scrum-master-agile-delivery-lead","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='8' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"2358871803260043264","advertPosition":6,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Clubshop | Us","companyForTitle":"Clubshop | Us","cpcInEur":0,"date":"16 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/2358871803260043264/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a216e7778f6871&page_item_id=-1790677575","pageItemId":-1790677575,"parameterMap":{"date":"16 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Especialista en Validaci\u00F3n de Sistemas Remoto \u2013 Ensayos Cl\u00EDnicos","openAdvertUrl":"https://open.app.jobrapido.com/ar/2358871803260043264/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a216e7778f6871&page_item_id=-1790677575","advertId":"2358871803260043264","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Clubshop | Us","company":"Clubshop | Us","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Especialista en Validaci\u00F3n de Sistemas Remoto \u2013 Ensayos Cl\u00EDnicos","titleSlug":"especialista-en-validacion-de-sistemas-remoto-ensayos-clinicos","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='8' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Remote Scrum Master & Agile Delivery Lead  - Remoto
+        Open job preview for: Especialista en Validación de Sistemas Remoto – Ensayos Clínicos  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Remote Scrum Master & Agile Delivery Lead
+      Especialista en Validación de Sistemas Remoto – Ensayos Clínicos
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Remoto
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Learntastic Group
+          Clubshop | Us
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(458220369216536576)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(458220369216536576) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(2358871803260043264)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(2358871803260043264) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(458220369216536576)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(2358871803260043264)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1704,12 +1954,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_458220369216536576" tc="" ai="458220369216536576"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/458220369216536576/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a13b4c9b469e45&page_item_id=-821208583"   target="_blank"  
+    <a class="result-item__link" id="a_2358871803260043264" tc="" ai="2358871803260043264"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/2358871803260043264/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.6&uuid=arF001a216e7778f6871&page_item_id=-1790677575"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Remote Scrum Master & Agile Delivery Lead  - Remoto
+        Open job preview for: Especialista en Validación de Sistemas Remoto – Ensayos Clínicos  - Rosario
       </span>
     </a>
   </div>
@@ -1718,42 +1968,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"7631795693274791936","advertPosition":7,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Agileengine","companyForTitle":"Agileengine","cpcInEur":0,"date":"07 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal","locations":["Capital Federal"],"locationsLabel":"Capital Federal","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/7631795693274791936/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a13b4c9b469e45&page_item_id=2007163464","pageItemId":2007163464,"parameterMap":{"date":"07 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Scrum Master \u2014 Agile Delivery Leader","openAdvertUrl":"https://open.app.jobrapido.com/ar/7631795693274791936/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a13b4c9b469e45&page_item_id=2007163464","advertId":"7631795693274791936","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Agileengine","company":"Agileengine","location":"Capital Federal","locations":["Capital Federal"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Scrum Master \u2014 Agile Delivery Leader","titleSlug":"senior-scrum-master-agile-delivery-leader","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='9' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8489839074570403840","advertPosition":7,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Pavago","companyForTitle":"Pavago","cpcInEur":0,"date":"14 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8489839074570403840/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a216e7778f6871&page_item_id=-375668090","pageItemId":-375668090,"parameterMap":{"date":"14 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Remote Quality Systems Analyst - Food Safety & Compliance","openAdvertUrl":"https://open.app.jobrapido.com/ar/8489839074570403840/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a216e7778f6871&page_item_id=-375668090","advertId":"8489839074570403840","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Pavago","company":"Pavago","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Remote Quality Systems Analyst - Food Safety & Compliance","titleSlug":"remote-quality-systems-analyst-food-safety-compliance","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='9' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Senior Scrum Master — Agile Delivery Leader  - Capital Federal
+        Open job preview for: Remote Quality Systems Analyst - Food Safety & Compliance  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Senior Scrum Master — Agile Delivery Leader
+      Remote Quality Systems Analyst - Food Safety & Compliance
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Capital Federal
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Agileengine
+          Pavago
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(7631795693274791936)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(7631795693274791936) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(8489839074570403840)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(8489839074570403840) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(7631795693274791936)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(8489839074570403840)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1763,12 +2013,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_7631795693274791936" tc="" ai="7631795693274791936"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/7631795693274791936/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a13b4c9b469e45&page_item_id=2007163464"   target="_blank"  
+    <a class="result-item__link" id="a_8489839074570403840" tc="" ai="8489839074570403840"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8489839074570403840/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.7&uuid=arF001a216e7778f6871&page_item_id=-375668090"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Senior Scrum Master — Agile Delivery Leader  - Capital Federal
+        Open job preview for: Remote Quality Systems Analyst - Food Safety & Compliance  - Rosario
       </span>
     </a>
   </div>
@@ -1777,42 +2027,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"5349315107128082432","advertPosition":8,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Empat\u00EDa Laboral","companyForTitle":"Empat\u00EDa Laboral","cpcInEur":0,"date":"07 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal","locations":["Capital Federal"],"locationsLabel":"Capital Federal","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/5349315107128082432/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a13b4c9b469e45&page_item_id=-697310127","pageItemId":-697310127,"parameterMap":{"date":"07 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Data Center Engineer","openAdvertUrl":"https://open.app.jobrapido.com/ar/5349315107128082432/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a13b4c9b469e45&page_item_id=-697310127","advertId":"5349315107128082432","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Empat\u00EDa Laboral","company":"Empat\u00EDa Laboral","location":"Capital Federal","locations":["Capital Federal"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Data Center Engineer","titleSlug":"senior-data-center-engineer","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='10' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"2691806398051778560","advertPosition":8,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Talan","companyForTitle":"Talan","cpcInEur":0,"date":"14 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/2691806398051778560/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a216e7778f6871&page_item_id=-876228956","pageItemId":-876228956,"parameterMap":{"date":"14 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Data Center Operations & Networking Engineer","openAdvertUrl":"https://open.app.jobrapido.com/ar/2691806398051778560/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a216e7778f6871&page_item_id=-876228956","advertId":"2691806398051778560","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Talan","company":"Talan","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Data Center Operations & Networking Engineer","titleSlug":"senior-data-center-operations-networking-engineer","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='10' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Senior Data Center Engineer  - Capital Federal
+        Open job preview for: Senior Data Center Operations & Networking Engineer  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Senior Data Center Engineer
+      Senior Data Center Operations & Networking Engineer
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Capital Federal
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Empatía Laboral
+          Talan
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(5349315107128082432)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(5349315107128082432) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(2691806398051778560)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(2691806398051778560) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(5349315107128082432)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(2691806398051778560)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1822,12 +2072,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_5349315107128082432" tc="" ai="5349315107128082432"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/5349315107128082432/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a13b4c9b469e45&page_item_id=-697310127"   target="_blank"  
+    <a class="result-item__link" id="a_2691806398051778560" tc="" ai="2691806398051778560"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/2691806398051778560/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.8&uuid=arF001a216e7778f6871&page_item_id=-876228956"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Senior Data Center Engineer  - Capital Federal
+        Open job preview for: Senior Data Center Operations & Networking Engineer  - Rosario
       </span>
     </a>
   </div>
@@ -1841,42 +2091,42 @@ if (dfpParametersConfig.length > 0) {
   
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"4693957248706150400","advertPosition":9,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Chevron Corporation","companyForTitle":"Chevron Corporation","cpcInEur":0,"date":"05 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal","locations":["Capital Federal"],"locationsLabel":"Capital Federal","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/4693957248706150400/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a13b4c9b469e45&page_item_id=850294449","pageItemId":850294449,"parameterMap":{"date":"05 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Global Exploration & MCPs Finance Team Lead","openAdvertUrl":"https://open.app.jobrapido.com/ar/4693957248706150400/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a13b4c9b469e45&page_item_id=850294449","advertId":"4693957248706150400","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Chevron Corporation","company":"Chevron Corporation","location":"Capital Federal","locations":["Capital Federal"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Global Exploration & MCPs Finance Team Lead","titleSlug":"global-exploration-mcps-finance-team-lead","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='13' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1551481998164361216","advertPosition":9,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Pavago","companyForTitle":"Pavago","cpcInEur":0,"date":"13 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1551481998164361216/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a216e7778f6871&page_item_id=-1663341005","pageItemId":-1663341005,"parameterMap":{"date":"13 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Quality Systems Analyst - Food Safety & Compliance","openAdvertUrl":"https://open.app.jobrapido.com/ar/1551481998164361216/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a216e7778f6871&page_item_id=-1663341005","advertId":"1551481998164361216","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Pavago","company":"Pavago","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Quality Systems Analyst - Food Safety & Compliance","titleSlug":"quality-systems-analyst-food-safety-compliance","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='13' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Global Exploration & MCPs Finance Team Lead  - Capital Federal
+        Open job preview for: Quality Systems Analyst - Food Safety & Compliance  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Global Exploration & MCPs Finance Team Lead
+      Quality Systems Analyst - Food Safety & Compliance
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Capital Federal
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Chevron Corporation
+          Pavago
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(4693957248706150400)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(4693957248706150400) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(1551481998164361216)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(1551481998164361216) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(4693957248706150400)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1551481998164361216)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1886,12 +2136,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_4693957248706150400" tc="" ai="4693957248706150400"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/4693957248706150400/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a13b4c9b469e45&page_item_id=850294449"   target="_blank"  
+    <a class="result-item__link" id="a_1551481998164361216" tc="" ai="1551481998164361216"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1551481998164361216/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.9&uuid=arF001a216e7778f6871&page_item_id=-1663341005"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Global Exploration & MCPs Finance Team Lead  - Capital Federal
+        Open job preview for: Quality Systems Analyst - Food Safety & Compliance  - Rosario
       </span>
     </a>
   </div>
@@ -1900,42 +2150,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"6255370000459104256","advertPosition":10,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"AgileEngine, LLC.","companyForTitle":"AgileEngine, LLC.","cpcInEur":0,"date":"03 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"San Carlos De Bariloche","locations":["San Carlos De Bariloche"],"locationsLabel":"San Carlos De Bariloche","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/6255370000459104256/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a13b4c9b469e45&page_item_id=-265088405","pageItemId":-265088405,"parameterMap":{"date":"03 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Agile Scrum Master \u2014 Remote + Flexible Hours & Growth","openAdvertUrl":"https://open.app.jobrapido.com/ar/6255370000459104256/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a13b4c9b469e45&page_item_id=-265088405","advertId":"6255370000459104256","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"AgileEngine, LLC.","company":"AgileEngine, LLC.","location":"San Carlos De Bariloche","locations":["San Carlos De Bariloche"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Agile Scrum Master \u2014 Remote + Flexible Hours & Growth","titleSlug":"agile-scrum-master-remote-+-flexible-hours-growth","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='14' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"6444824550159941632","advertPosition":10,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Fullstack","companyForTitle":"Fullstack","cpcInEur":0,"date":"12 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/6444824550159941632/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a216e7778f6871&page_item_id=-658554280","pageItemId":-658554280,"parameterMap":{"date":"12 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Remote AML/CFT Investigator \u2013 Blockchain Compliance","openAdvertUrl":"https://open.app.jobrapido.com/ar/6444824550159941632/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a216e7778f6871&page_item_id=-658554280","advertId":"6444824550159941632","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Fullstack","company":"Fullstack","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Remote AML/CFT Investigator \u2013 Blockchain Compliance","titleSlug":"remote-aml-cft-investigator-blockchain-compliance","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='14' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Agile Scrum Master — Remote + Flexible Hours & Growth  - San Carlos De Bariloche
+        Open job preview for: Remote AML/CFT Investigator – Blockchain Compliance  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Agile Scrum Master — Remote + Flexible Hours & Growth
+      Remote AML/CFT Investigator – Blockchain Compliance
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          San Carlos De Bariloche
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          AgileEngine, LLC.
+          Fullstack
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(6255370000459104256)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(6255370000459104256) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(6444824550159941632)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(6444824550159941632) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(6255370000459104256)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(6444824550159941632)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -1945,12 +2195,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_6255370000459104256" tc="" ai="6255370000459104256"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/6255370000459104256/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a13b4c9b469e45&page_item_id=-265088405"   target="_blank"  
+    <a class="result-item__link" id="a_6444824550159941632" tc="" ai="6444824550159941632"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/6444824550159941632/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.10&uuid=arF001a216e7778f6871&page_item_id=-658554280"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Agile Scrum Master — Remote + Flexible Hours & Growth  - San Carlos De Bariloche
+        Open job preview for: Remote AML/CFT Investigator – Blockchain Compliance  - Rosario
       </span>
     </a>
   </div>
@@ -1959,42 +2209,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"8143888423548092416","advertPosition":11,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Core Code Io","companyForTitle":"Core Code Io","cpcInEur":0,"date":"02 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Santiago Del Estero Capital","locations":["Santiago Del Estero Capital"],"locationsLabel":"Santiago Del Estero Capital","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/8143888423548092416/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a13b4c9b469e45&page_item_id=-1854929544","pageItemId":-1854929544,"parameterMap":{"date":"02 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Remote Centralized Monitoring Lead \u2013 LATAM","openAdvertUrl":"https://open.app.jobrapido.com/ar/8143888423548092416/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a13b4c9b469e45&page_item_id=-1854929544","advertId":"8143888423548092416","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Core Code Io","company":"Core Code Io","location":"Santiago Del Estero Capital","locations":["Santiago Del Estero Capital"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Remote Centralized Monitoring Lead \u2013 LATAM","titleSlug":"remote-centralized-monitoring-lead-latam","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='15' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"5363948544963117056","advertPosition":11,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"GyanSys Inc.","companyForTitle":"GyanSys Inc.","cpcInEur":0,"date":"12 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/5363948544963117056/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a216e7778f6871&page_item_id=673126360","pageItemId":673126360,"parameterMap":{"date":"12 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Quality Systems Analyst \u2014 IBMS Compliance & Data Platform","openAdvertUrl":"https://open.app.jobrapido.com/ar/5363948544963117056/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a216e7778f6871&page_item_id=673126360","advertId":"5363948544963117056","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"GyanSys Inc.","company":"GyanSys Inc.","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Quality Systems Analyst \u2014 IBMS Compliance & Data Platform","titleSlug":"quality-systems-analyst-ibms-compliance-data-platform","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='15' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Remote Centralized Monitoring Lead – LATAM  - Santiago Del Estero Capital
+        Open job preview for: Quality Systems Analyst — IBMS Compliance & Data Platform  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Remote Centralized Monitoring Lead – LATAM
+      Quality Systems Analyst — IBMS Compliance & Data Platform
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Santiago Del Estero Capital
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Core Code Io
+          GyanSys Inc.
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(8143888423548092416)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(8143888423548092416) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(5363948544963117056)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(5363948544963117056) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(8143888423548092416)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(5363948544963117056)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -2004,12 +2254,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_8143888423548092416" tc="" ai="8143888423548092416"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/8143888423548092416/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a13b4c9b469e45&page_item_id=-1854929544"   target="_blank"  
+    <a class="result-item__link" id="a_5363948544963117056" tc="" ai="5363948544963117056"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/5363948544963117056/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.11&uuid=arF001a216e7778f6871&page_item_id=673126360"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Remote Centralized Monitoring Lead – LATAM  - Santiago Del Estero Capital
+        Open job preview for: Quality Systems Analyst — IBMS Compliance & Data Platform  - Rosario
       </span>
     </a>
   </div>
@@ -2018,42 +2268,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"1562044968791441408","advertPosition":12,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"BM Global Services Buenos Aires","companyForTitle":"BM Global Services Buenos Aires","cpcInEur":0,"date":"01 oct","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rinc\u00F3n De Los Sauces","locations":["Rinc\u00F3n De Los Sauces"],"locationsLabel":"Rinc\u00F3n De Los Sauces","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/1562044968791441408/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a13b4c9b469e45&page_item_id=1729999920","pageItemId":1729999920,"parameterMap":{"date":"01 oct","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Global Proposals Analyst: Pitch & Content Specialist","openAdvertUrl":"https://open.app.jobrapido.com/ar/1562044968791441408/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a13b4c9b469e45&page_item_id=1729999920","advertId":"1562044968791441408","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"BM Global Services Buenos Aires","company":"BM Global Services Buenos Aires","location":"Rinc\u00F3n De Los Sauces","locations":["Rinc\u00F3n De Los Sauces"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Global Proposals Analyst: Pitch & Content Specialist","titleSlug":"global-proposals-analyst-pitch-content-specialist","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='16' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"3520088435903692800","advertPosition":12,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"LE001 Welocalize, Inc.","companyForTitle":"LE001 Welocalize, Inc.","cpcInEur":0,"date":"12 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/3520088435903692800/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a216e7778f6871&page_item_id=2142651221","pageItemId":2142651221,"parameterMap":{"date":"12 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior Global Translation Program Manager","openAdvertUrl":"https://open.app.jobrapido.com/ar/3520088435903692800/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a216e7778f6871&page_item_id=2142651221","advertId":"3520088435903692800","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"LE001 Welocalize, Inc.","company":"LE001 Welocalize, Inc.","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior Global Translation Program Manager","titleSlug":"senior-global-translation-program-manager","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='16' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Global Proposals Analyst: Pitch & Content Specialist  - Rincón De Los Sauces
+        Open job preview for: Senior Global Translation Program Manager  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Global Proposals Analyst: Pitch & Content Specialist
+      Senior Global Translation Program Manager
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Rincón De Los Sauces
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          BM Global Services Buenos Aires
+          LE001 Welocalize, Inc.
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(1562044968791441408)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(1562044968791441408) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(3520088435903692800)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(3520088435903692800) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(1562044968791441408)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(3520088435903692800)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -2063,12 +2313,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_1562044968791441408" tc="" ai="1562044968791441408"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/1562044968791441408/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a13b4c9b469e45&page_item_id=1729999920"   target="_blank"  
+    <a class="result-item__link" id="a_3520088435903692800" tc="" ai="3520088435903692800"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/3520088435903692800/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.12&uuid=arF001a216e7778f6871&page_item_id=2142651221"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Global Proposals Analyst: Pitch & Content Specialist  - Rincón De Los Sauces
+        Open job preview for: Senior Global Translation Program Manager  - Rosario
       </span>
     </a>
   </div>
@@ -2077,42 +2327,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"3092543164423077888","advertPosition":13,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Belong","companyForTitle":"Belong","cpcInEur":0,"date":"30 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Capital Federal","locations":["Capital Federal"],"locationsLabel":"Capital Federal","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/3092543164423077888/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a13b4c9b469e45&page_item_id=1826760321","pageItemId":1826760321,"parameterMap":{"date":"30 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Head of Member Experience & Operations","openAdvertUrl":"https://open.app.jobrapido.com/ar/3092543164423077888/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a13b4c9b469e45&page_item_id=1826760321","advertId":"3092543164423077888","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Belong","company":"Belong","location":"Capital Federal","locations":["Capital Federal"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Head of Member Experience & Operations","titleSlug":"head-of-member-experience-operations","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='17' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"6291345646184038400","advertPosition":13,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Hubclub Go","companyForTitle":"Hubclub Go","cpcInEur":0,"date":"10 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/6291345646184038400/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a216e7778f6871&page_item_id=968670440","pageItemId":968670440,"parameterMap":{"date":"10 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Senior LatAm TA\u00B2 Ops & Innovation Specialist","openAdvertUrl":"https://open.app.jobrapido.com/ar/6291345646184038400/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a216e7778f6871&page_item_id=968670440","advertId":"6291345646184038400","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Hubclub Go","company":"Hubclub Go","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Senior LatAm TA\u00B2 Ops & Innovation Specialist","titleSlug":"senior-latam-ta-ops-innovation-specialist","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='17' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Head of Member Experience & Operations  - Capital Federal
+        Open job preview for: Senior LatAm TA² Ops & Innovation Specialist  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Head of Member Experience & Operations
+      Senior LatAm TA² Ops & Innovation Specialist
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Capital Federal
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Belong
+          Hubclub Go
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(3092543164423077888)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(3092543164423077888) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(6291345646184038400)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(6291345646184038400) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(3092543164423077888)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(6291345646184038400)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -2122,12 +2372,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_3092543164423077888" tc="" ai="3092543164423077888"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/3092543164423077888/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a13b4c9b469e45&page_item_id=1826760321"   target="_blank"  
+    <a class="result-item__link" id="a_6291345646184038400" tc="" ai="6291345646184038400"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/6291345646184038400/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.13&uuid=arF001a216e7778f6871&page_item_id=968670440"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Head of Member Experience & Operations  - Capital Federal
+        Open job preview for: Senior LatAm TA² Ops & Innovation Specialist  - Rosario
       </span>
     </a>
   </div>
@@ -2136,42 +2386,42 @@ if (dfpParametersConfig.length > 0) {
 
 
 <div class="result-item js-result-item" data-sponsored="true"
-  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"424330809508364288","advertPosition":14,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Agileengine, Llc.","companyForTitle":"Agileengine, Llc.","cpcInEur":0,"date":"30 sep","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Mar Del Plata","locations":["Mar Del Plata"],"locationsLabel":"Mar Del Plata","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/424330809508364288/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a13b4c9b469e45&page_item_id=548982601","pageItemId":548982601,"parameterMap":{"date":"30 sep","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"Remote Centralized Monitoring Lead - LATAM","openAdvertUrl":"https://open.app.jobrapido.com/ar/424330809508364288/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a13b4c9b469e45&page_item_id=548982601","advertId":"424330809508364288","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Agileengine, Llc.","company":"Agileengine, Llc.","location":"Mar Del Plata","locations":["Mar Del Plata"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"Remote Centralized Monitoring Lead - LATAM","titleSlug":"remote-centralized-monitoring-lead-latam","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='18' x-jr-advert
+  data-product-type='serp' data-advert='{"actionType":"paid","advertId":"5839799310400618496","advertPosition":14,"advertType":"s","autoExpandRadiusDistance":"50km","autoExpandRadiusLayout":"default","bodyHighlighted":"","budgetId":null,"company":"Maxit Consulting - Max Corporate Group","companyForTitle":"Maxit Consulting - Max Corporate Group","cpcInEur":0,"date":"10 nov","enumAdvertType":"SPONSORED","fromSponsoredSearch":true,"index":-1,"isCpaEnabled":null,"isFromExpandedSearch":false,"isSponsored":true,"location":"Rosario","locations":["Rosario"],"locationsLabel":"Rosario","onMouseDown":null,"openAdvertUrl":"https://open.app.jobrapido.com/ar/5839799310400618496/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a216e7778f6871&page_item_id=-1999436917","pageItemId":-1999436917,"parameterMap":{"date":"10 nov","website":"www.publisher.sourcingsquare.com","showNewMarker":false,"fromSponsoredSearch":true,"sponsorAccount":"dynamic_sourcingsquare_ar","autoExpandRadiusDistance":"50km","sponsorAccountBranch":null,"title":"TBM Office Lead \u2014 Apptio & IT Financial Strategy","openAdvertUrl":"https://open.app.jobrapido.com/ar/5839799310400618496/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a216e7778f6871&page_item_id=-1999436917","advertId":"5839799310400618496","tags":{},"autoExpandRadiusLayout":"default","isFromExpandedSearch":false,"companyForTitle":"Maxit Consulting - Max Corporate Group","company":"Maxit Consulting - Max Corporate Group","location":"Rosario","locations":["Rosario"],"tag":"","isSponsored":true},"salary":null,"showNewMarker":false,"sponsorAccount":"dynamic_sourcingsquare_ar","sponsorAccountBranch":null,"tag":"","tags":{},"title":"TBM Office Lead \u2014 Apptio & IT Financial Strategy","titleSlug":"tbm-office-lead-apptio-it-financial-strategy","trackClickAd":null,"website":"www.publisher.sourcingsquare.com","websiteCategory":"UNQUALIFIED","websiteNoWWW":"publisher.sourcingsquare.com"}' data-position='18' x-jr-advert
   ng-class="{'inline-proposal-full-page': proposalVisible || proposalSubscriptionSentVisible, 'inline-proposal-full-page--yellow': (proposalVisible || proposalSubscriptionSentVisible) && inlineProposalBackgroundYellowEnabled}">
   <div ng-hide="proposalSubscriptionSentVisible" class="result-item__wrapper">
     <a ng-show="proposalVisible" href="[[advert.openAdvertUrl]]" ng-click="!isMobile ? skipProposal($event) : ''"
       class="icon-cancel result-item__subscribe-skip" target="[[skipTarget]]" rel="nofollow" ng-cloak>
       <span class="sr-only">
-        Open job preview for: Remote Centralized Monitoring Lead - LATAM  - Mar Del Plata
+        Open job preview for: TBM Office Lead — Apptio & IT Financial Strategy  - Rosario
       </span>
     </a>
     <div class="result-item__head result-item__head--no-date"
       ng-hide="proposalVisible">
     </div>
     <h3 class="result-item__title  result-item__title--no-date" >
-      Remote Centralized Monitoring Lead - LATAM
+      TBM Office Lead — Apptio & IT Financial Strategy
     </h3>
     <div class="result-item__location" >
       <i class="icon-location" aria-hidden="true"></i>
       <span class="result-item__location-label" >
         <span >
-          Mar Del Plata
+          Rosario
         </span>
       </span>
     </div>
       <div class="result-item__company">
         <i class="icon-company" aria-hidden="true"></i>
         <span class="result-item__company-label" >
-          Agileengine, Llc.
+          Maxit Consulting - Max Corporate Group
         </span>
       </div>
         <div class="result-item__cta">
         <button type="button" ng-show="viewSalaryEnabled" ng-cloak class="jr-button--rounded"
           ng-click="[[advert.openAdvertUrl]]">View Salary</button>
-          <i ng-click="favouriteJobsCtrl.updateJob(424330809508364288)" class="result-item__save-job save-job-desktop"
-            ng-class="favouriteJobsCtrl.isSaved(424330809508364288) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
+          <i ng-click="favouriteJobsCtrl.updateJob(5839799310400618496)" class="result-item__save-job save-job-desktop"
+            ng-class="favouriteJobsCtrl.isSaved(5839799310400618496) && favouriteJobsCtrl.isJobseekerLogged() ? 'icon-save-filled' : 'icon-save'"></i>
           <div class="result-item__save-job-box" ng-cloak
-            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(424330809508364288)}">
+            ng-class="{'result-item__save-job-box--open': favouriteJobsCtrl.isFirst(5839799310400618496)}">
             <a href="/favouritejobs" data-google-interstitial=false>¿Quieres volver a ver tus ofertas guardadas? Click aquí</a>
           </div>
     </div>
@@ -2181,12 +2431,12 @@ if (dfpParametersConfig.length > 0) {
 
     <!--- mobile like cta end --->
 
-    <a class="result-item__link" id="a_424330809508364288" tc="" ai="424330809508364288"
-      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/424330809508364288/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a13b4c9b469e45&page_item_id=548982601"   target="_blank"  
+    <a class="result-item__link" id="a_5839799310400618496" tc="" ai="5839799310400618496"
+      ng-click="advertClick($event, 'SPONSORED')" href="https://open.app.jobrapido.com/ar/5839799310400618496/?w=continuous%20improvement&l=&oc=sponsored&k=web.1.4.14&uuid=arF001a216e7778f6871&page_item_id=-1999436917"   target="_blank"  
       rel="nofollow"
     >
       <span class="sr-only">
-        Open job preview for: Remote Centralized Monitoring Lead - LATAM  - Mar Del Plata
+        Open job preview for: TBM Office Lead — Apptio & IT Financial Strategy  - Rosario
       </span>
     </a>
   </div>
@@ -3110,11 +3360,11 @@ if (dfpParametersConfig.length > 0) {
                                     	}();
                                     </script>
 
-          <script>
-          _gaq.push(['_deleteCustomVar',5],['_trackPageview','/?w=Python&q=/Python//w-/&p=004&sa=00&ta=15&re=all&o=typein&n=51']);
-          (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;g.src=('https:' == location.protocol
-          ? '//ssl' : '//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))
-          </script>
+  <script>
+  _gaq.push(['_deleteCustomVar',5],['_trackPageview','/?w=Python&q=/Python//w-/&p=004&sa=00&ta=15&re=all&o=typein&n=53']);
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;g.src=('https:' == location.protocol
+  ? '//ssl' : '//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))
+  </script>
 
         <script>
         
